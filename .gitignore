@@ -1,0 +1,33 @@
+# Dépendances et caches
+node_modules/
+.remotion/
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# Rendus et exports (médias lourds hors Git, voir docs/journal.md)
+out/
+**/exports/*
+!**/exports/.gitkeep
+**/renders/
+
+# Médias lourds
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.wav
+*.aif
+*.aiff
+*.flac
+*.exr
+*.psd
+
+# Blender : sauvegardes automatiques
+*.blend1
+*.blend2
+
+# Secrets
+.env
+.env.*
