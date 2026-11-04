@@ -10,9 +10,12 @@
 
 ## Références
 
-| Référence | Lien ou fichier | Ce qui plaît |
-|---|---|---|
-| | | |
+| Réf. | Vidéo | Analyse | Ce qui plaît |
+|---|---|---|---|
+| 01 | [Le diable s'habille en Yoda](https://www.youtube.com/watch?v=5zQ8Yn11Kp8) | [`analyses/ref01-mareko-scarla.md`](analyses/ref01-mareko-scarla.md) | *à compléter par Bruno* |
+| 02 | [Le Panoptique](https://www.youtube.com/watch?v=K8Ugw48gnNk) | [`analyses/ref02-panoptique.md`](analyses/ref02-panoptique.md) | *à compléter par Bruno* |
+
+Synthèse croisée : [`analyses/synthese-ref01-ref02.md`](analyses/synthese-ref01-ref02.md)
 
 ## À définir ensuite
 

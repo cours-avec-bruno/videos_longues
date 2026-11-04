@@ -18,8 +18,17 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - **Le repo GitHub fait le lien** : `git pull` en début de session, commit et push après chaque étape. Fins de ligne normalisées en LF par `.gitattributes`. Node 22 fixé par `.nvmrc`.
 - Guide d'installation : `installation-pc.md`.
 
+## 2026-11-04 · Premières références DA analysées
+
+- Réf. 01 (true crime en figurines 3D) et réf. 02 (essai sur le panoptique), analysées dans `direction-artistique/analyses/`.
+- Sources : transcriptions complètes (vidIQ, 2 × 5 crédits), analyses vidIQ de la vidéo entière (2 × 25 crédits), analyses plan par plan Higgsfield (gratuites, mais seulement sur le début des vidéos), miniatures vues et mesurées.
+- Il reste **50 crédits vidIQ**, rechargés le 27/11.
+- Limite : pas d'images de la vidéo elle-même, car YouTube bloque le téléchargement depuis le cloud. Il faut l'outil d'extraction d'images sur le PC pour un plan par plan complet.
+- Les transcriptions complètes ne sont pas versionnées (droits d'auteur) : seules des analyses et de courtes citations sont dans le repo.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
 - [ ] Voix off : la voix de Bruno ou une voix générée (ElevenLabs) ?
 - [ ] Specs définitives (4K ?) une fois la DA définie.
+- [ ] Construire l'outil d'extraction d'images de référence (yt-dlp + détection de plans FFmpeg), à utiliser sur le PC.
