@@ -71,11 +71,30 @@ Les principaux outils du projet sont :
 
 Tu peux proposer ou utiliser d'autres outils lorsqu'ils apportent un avantage concret. Vérifie simplement que les intégrations, API ou fonctionnalités dont tu dépends sont réellement disponibles.
 
-**Où tourne quoi** (à vérifier en début de session, l'environnement peut changer) :
+### Répartition cloud / PC fixe
 
-- Remotion, Node et FFmpeg tournent dans l'environnement cloud de Claude Code. Commandes : `npm run studio`, `npm run render -- <id-composition> <sortie.mp4>`.
-- Blender n'est pas installé dans le cloud. Les scènes Blender passent par mon Blender local : via le plugin Higgsfield (outils `bl_*`) quand il est connecté, sinon via des scripts Python (`shared/blender/`, `videos/<slug>/scenes/<id>/`) que je lance moi-même.
-- Le conteneur cloud est éphémère : tout ce qui doit être conservé est commité et poussé.
+Le travail se fait à deux endroits, reliés par le repo GitHub, qui est la **référence pour tout ce qui est texte et code** :
+
+| Cloud (Claude Code web) | PC fixe Windows (Claude Code local) |
+|---|---|
+| Recherches, storyboard, script, fiches scène, prompts | Rendus Remotion en qualité finale |
+| Code des scènes Remotion, scripts Blender | Blender (modélisation, rendu, GPU) |
+| Tests de rendu rapides (Remotion, FFmpeg) | Assemblage, montage, export final |
+| | Stockage des médias lourds (hors Git) |
+
+Pour savoir où tu tournes : le cloud est sous Linux (`/home/user/...`), le PC sous Windows (`C:\Studio\videos_longues`). Vérifie aussi quels outils sont réellement disponibles en début de session.
+
+**Routine de synchronisation** (à appliquer toi-même, où que tu tournes) :
+
+- En début de session : `git pull`. Si `package-lock.json` a changé, `npm install`.
+- Après chaque étape terminée qui modifie du texte ou du code : commit et push, avec un message clair. Ne laisse jamais de travail non poussé en fin de session : le conteneur cloud est éphémère, et le PC doit pouvoir reprendre là où le cloud s'est arrêté (et inversement).
+- Évite de modifier le même fichier aux deux endroits en parallèle. En cas de conflit, ne choisis jamais une version à l'aveugle : montre-moi les deux.
+
+**Médias** : jamais dans Git. Ils vivent sur le PC, au même emplacement relatif que dans le repo (`videos/<slug>/medias/`, `exports/`), pour que le code fonctionne sans modification des deux côtés. Dans le cloud, tu ne vois pas ces médias : pour les relire, demande-moi une capture ou un extrait basse définition. Le fichier de prompts de chaque vidéo garde l'identifiant de chaque génération Higgsfield, pour pouvoir la retélécharger.
+
+**Blender** n'existe que sur le PC. Il se pilote soit par le plugin Higgsfield (outils `bl_*`, quand il est connecté), soit par des scripts Python versionnés (`shared/blender/`, `videos/<slug>/scenes/<id>/`) lancés sur le PC.
+
+Commandes Remotion (identiques des deux côtés) : `npm run studio`, `npm run render -- <id-composition> <sortie.mp4>`. Installation du PC : `docs/installation-pc.md`.
 
 Les specs techniques (résolution, cadence, codec, niveau sonore) sont dans `docs/specs-techniques.md` et, côté code, dans `shared/remotion/specs.ts`. Tout plan, quel que soit l'outil, doit être livré à ces specs.
 
