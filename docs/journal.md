@@ -44,6 +44,13 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - **PC fixe** : carte NVIDIA. C'est la machine de production (Blender en OptiX, rendus finaux, analyses de références avec séparation Demucs sur GPU). Le guide d'installation inclut PyTorch en version GPU (CUDA).
 - **Machine de discussion** : sans carte graphique. Bruno y échange avec Claude, mais rien de lourd ne doit y tourner.
 
+## 2026-11-05 · Projet déplacé sur le disque D
+
+- Le disque C du PC fixe n'avait plus que 22 Go libres sur 214, contre 147 Go libres sur D.
+- Le projet est maintenant dans `D:\Studio\videos_longues`. `C:\Studio\videos_longues` est une **jonction** vers D : le script d'installation, les sessions Claude et la mémoire de Claude gardent le même chemin.
+- Le projet ne pesait que ≈ 760 Mo (surtout `node_modules`) : le déplacement libère peu sur C. L'intérêt est que les médias à venir (rushes, générations, rendus, extractions) iront sur D.
+- Le reste de C est occupé par autre chose : Windows, logiciels, PyTorch, caches. C'est à surveiller.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
