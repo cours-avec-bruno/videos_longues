@@ -1,6 +1,6 @@
 # Installation du PC fixe (Windows)
 
-Le PC fixe sert à la **production lourde** : rendus Remotion en qualité finale, Blender, montage et stockage des médias. L'écriture (recherches, storyboard, scripts, code des scènes) peut se faire dans le cloud. Les deux travaillent sur le même repo GitHub (voir la section « Répartition cloud / PC » du `CLAUDE.md`).
+Le PC fixe (avec sa **carte NVIDIA**) sert à la **production lourde** : rendus Remotion en qualité finale, Blender, analyse des références avec séparation du son, montage et stockage des médias. Ce guide ne concerne que lui : l'autre machine, sans carte graphique, n'a besoin de rien de tout ça pour discuter avec Claude. L'écriture (recherches, storyboard, scripts, code des scènes) peut se faire dans le cloud. Les deux travaillent sur le même repo GitHub (voir la section « Répartition cloud / PC » du `CLAUDE.md`).
 
 Toutes les commandes ci-dessous se lancent dans **PowerShell**.
 
@@ -90,7 +90,49 @@ Pour vérifier que l'outil fonctionne sur le PC, sans rien télécharger :
 npm run tester-analyse
 ```
 
-**Optionnel : séparation voix / musique (Demucs)**, pour une analyse plus fine du son. Voir `shared/outils/analyser-reference/README.md`, section « Installer Demucs ». Il faut Python, puis `py -m pip install demucs soundfile`.
+### Séparation voix / musique (Demucs, sur la carte NVIDIA)
+
+Pour une analyse fine du son. Avec la carte graphique, la séparation d'une vidéo de 70 min prend quelques minutes, contre environ 25 min sur processeur seul.
+
+1. Vérifier que la carte est reconnue. La commande affiche son nom et la version CUDA en haut à droite :
+
+```powershell
+nvidia-smi
+```
+
+2. Installer Python :
+
+```powershell
+winget install --id Python.Python.3.12 -e
+```
+
+3. Fermer et rouvrir PowerShell, puis installer PyTorch **version GPU**. Cela fait environ 2,5 Go à télécharger :
+
+```powershell
+py -m pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu124
+```
+
+4. Installer Demucs :
+
+```powershell
+py -m pip install demucs soundfile
+```
+
+5. Vérifier que PyTorch voit la carte. La commande doit afficher `True` :
+
+```powershell
+py -c "import torch; print(torch.cuda.is_available())"
+```
+
+6. Tester toute la chaîne :
+
+```powershell
+npm run tester-analyse -- --separer --demucs "py -m demucs"
+```
+
+Ensuite, pour analyser une référence avec la séparation, ajoute `--separer --demucs "py -m demucs"` à la commande. Demucs utilise la carte NVIDIA automatiquement.
+
+Si l'étape 5 affiche `False`, mets à jour le pilote NVIDIA (application NVIDIA ou nvidia.com), puis recommence à partir de l'étape 3.
 
 ## 4. Claude Code sur le PC
 

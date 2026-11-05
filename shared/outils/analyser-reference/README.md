@@ -69,7 +69,7 @@ Demucs est gratuit et tourne en local. Il nécessite Python :
 winget install --id Python.Python.3.12 -e
 ```
 
-Si le PC a une carte graphique **NVIDIA**, installer d'abord la version GPU de PyTorch. La séparation est alors environ 10 fois plus rapide :
+Sur le **PC fixe (carte NVIDIA)**, installer d'abord la version GPU de PyTorch. La séparation est alors environ 10 fois plus rapide. La procédure complète, avec les vérifications, est dans `docs/installation-pc.md` :
 
 ```powershell
 py -m pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu124

@@ -39,9 +39,13 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Les 5 crédits vidIQ de transcription ne servent pas au son : les sous-titres YouTube récupérés par l'outil les remplacent. L'analyse vidIQ à 25 crédits reste la seule qui « écoute » le style (genre, instruments, timbre) : à garder pour quelques références clés.
 - Autotest : `npm run tester-analyse`, qui valide l'installation sur le PC.
 
+## 2026-11-05 · Machines
+
+- **PC fixe** : carte NVIDIA. C'est la machine de production (Blender en OptiX, rendus finaux, analyses de références avec séparation Demucs sur GPU). Le guide d'installation inclut PyTorch en version GPU (CUDA).
+- **Machine de discussion** : sans carte graphique. Bruno y échange avec Claude, mais rien de lourd ne doit y tourner.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
 - [ ] Voix off : la voix de Bruno ou une voix générée (ElevenLabs) ?
-- [ ] Le PC a-t-il une carte graphique NVIDIA ? (Demucs est environ 10 fois plus rapide avec.)
 - [ ] Specs définitives (4K ?) une fois la DA définie.

@@ -75,14 +75,17 @@ Tu peux proposer ou utiliser d'autres outils lorsqu'ils apportent un avantage co
 
 Le travail se fait à deux endroits, reliés par le repo GitHub, qui est la **référence pour tout ce qui est texte et code** :
 
-| Cloud (Claude Code web) | PC fixe Windows (Claude Code local) |
+| Cloud (Claude Code web) | PC fixe Windows, carte NVIDIA (Claude Code local) |
 |---|---|
 | Recherches, storyboard, script, fiches scène, prompts | Rendus Remotion en qualité finale |
-| Code des scènes Remotion, scripts Blender | Blender (modélisation, rendu, GPU) |
-| Tests de rendu rapides (Remotion, FFmpeg) | Assemblage, montage, export final |
+| Code des scènes Remotion, scripts Blender | Blender (modélisation, rendu GPU OptiX) |
+| Tests de rendu rapides (Remotion, FFmpeg) | Analyse des références, avec séparation Demucs sur GPU |
+| | Assemblage, montage, export final |
 | | Stockage des médias lourds (hors Git) |
 
-Pour savoir où tu tournes : le cloud est sous Linux (`/home/user/...`), le PC sous Windows (`C:\Studio\videos_longues`). Vérifie aussi quels outils sont réellement disponibles en début de session.
+**Le PC fixe est la machine de production** : c'est lui qui a la carte graphique NVIDIA. Bruno échange aussi avec Claude depuis une autre machine, **sans carte graphique** : n'y lance rien de lourd (séparation Demucs, rendus Blender, rendus finaux). Si une tâche lourde est demandée depuis cette machine, propose de la faire sur le PC fixe.
+
+Pour savoir où tu tournes : le cloud est sous Linux (`/home/user/...`), le PC fixe sous Windows (`C:\Studio\videos_longues`). Sur une machine Windows, `nvidia-smi` indique si une carte NVIDIA est présente. Vérifie aussi quels outils sont réellement disponibles en début de session.
 
 **Routine de synchronisation** (à appliquer toi-même, où que tu tournes) :
 
