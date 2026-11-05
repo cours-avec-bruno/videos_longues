@@ -61,6 +61,16 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Point de vigilance : la réf. 03 repose sur de nombreux extraits de films et d'animés. On garde le procédé d'unification, mais avec une autre matière (droits).
 - Aucun crédit dépensé.
 
+## 2026-11-05 · Tri des procédés et storyboard
+
+- Bruno a trié un par un les procédés extraits. **Couche 1** (proposés d'office) : 55, dont **toutes les images**. **Couche 2** (sur besoin précis) : N06 refrain retourné, N08 pictogramme-personnage, N12 confession du narrateur. **Écarté** : N13 sponsor tissé dans la métaphore. Skills, améliorations de l'outil et ressources : tout est retenu.
+- Exigence de Bruno : chaque procédé **défini correctement**, et un usage **cohérent et raisonné**. En avoir beaucoup ne doit pas créer de confusion. D'où :
+  - le catalogue réécrit en fiches complètes (définition, fonction, quand, éviter si, recette, exemple, compatibilités) ;
+  - un mode d'emploi (`procedes/README.md`) : fonctions narratives, 10 règles d'usage, grammaire de vidéo ;
+  - les modèles `storyboard.md` et `scene.md` : grammaire, fonction, procédé principal justifié, bilan des procédés ;
+  - la skill `storyboard-procedes` : au storyboard, je propose pour chaque scène les 2 ou 3 procédés les plus pertinents, et Bruno arbitre ;
+  - `CLAUDE.md` (section 4) mis à jour.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

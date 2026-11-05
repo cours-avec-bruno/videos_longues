@@ -1,12 +1,13 @@
 # Outillage : propositions (skills, connecteurs, outils)
 
-État au 05/11/2026, établi pendant l'analyse des réf. 03 et 04. Chaque ligne indique ce qui est **vérifié** et ce qui est **à vérifier**. Priorités : 🔴 haute · 🟠 moyenne · ⚪ plus tard.
+État au 05/11/2026, établi pendant l'analyse des réf. 03 et 04. **Tri de Bruno** : tout est retenu (« intéressant »). L'ordre de réalisation suit les priorités ci-dessous. Chaque ligne indique ce qui est **vérifié** et ce qui est **à vérifier**. Priorités : 🔴 haute · 🟠 moyenne · ⚪ plus tard.
 
 ## 1. Skills
 
 | Skill | État | Pourquoi |
 |---|---|---|
 | `retro-ingenierie-video` (projet, `.claude/skills/`) | ✅ **créée** | Méthode complète d'analyse d'une référence → catalogue de procédés → reconstruction vérifiée |
+| `storyboard-procedes` (projet, `.claude/skills/`) | ✅ **créée** | Lier chaque scène du storyboard à un procédé choisi par fonction, avec les règles d'usage (cohérence avant abondance) |
 | `remotion-best-practices` | ✅ déjà disponible | À charger avant d'écrire une scène Remotion complexe |
 | `critique-rendu-motion` | ✅ déjà disponible, ⚠️ pensée pour le 9:16 | 🟠 L'**adapter au 16:9 long format** : zones sûres YouTube, durée, rythme mesuré par l'outil d'analyse au lieu de règles TikTok |
 | `motion-design-premium` | ✅ disponible, ⚠️ orientée 9:16 et 60 i/s | ⚪ Utile pour le craft (easing, glow, caméra), en ignorant les règles verticales |

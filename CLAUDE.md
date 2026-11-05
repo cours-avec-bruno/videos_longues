@@ -39,7 +39,9 @@ Le travail s'organise généralement autour des étapes suivantes. Elles constit
 
 Ces étapes peuvent se préciser progressivement. Aide-moi à structurer les idées, signale les incohérences et suggère des améliorations au fil du processus. Ne transforme pas ce workflow en procédure rigide : certaines scènes nécessiteront une préparation approfondie, d'autres pourront être réalisées directement.
 
-Chaque scène a sa **fiche scène** (`videos/<slug>/scenes/<id>/scene.md`, modèle dans `videos/_modele/`). Elle regroupe en un seul endroit l'intention, le script, le cadrage, le mode de fabrication et le statut. C'est la référence quand on construit ou reprend une scène.
+Chaque scène a sa **fiche scène** (`videos/<slug>/scenes/<id>/scene.md`, modèle dans `videos/_modele/`). Elle regroupe en un seul endroit l'intention, le script, le cadrage, le procédé, le mode de fabrication et le statut. C'est la référence quand on construit ou reprend une scène.
+
+**Procédés** : le studio dispose d'un catalogue de procédés validés par Bruno (`docs/direction-artistique/procedes/`). Au storyboard (skill `storyboard-procedes`), on fixe d'abord la **grammaire** de la vidéo. Ensuite, chaque scène reçoit une **fonction**, puis un **procédé principal mûrement choisi et justifié** : je propose les 2 ou 3 plus pertinents (couche 1 d'abord), et Bruno arbitre. Ils sont tous bons, mais leur usage doit rester **cohérent et raisonné** : une fonction par scène, 3 à 5 signatures par vidéo, une même forme garde le même sens, pas d'empilement. L'abondance ne doit jamais devenir une source de confusion.
 
 ## 5. Construction des scènes
 
