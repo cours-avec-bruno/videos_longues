@@ -20,7 +20,7 @@ Le diplôme selon l'origine sociale (Insee), un graphique qui se construit, la p
 
 ## Découpage en plans
 
-Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** image générée Higgsfield, animée dans Remotion · **NOIR**.
+Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** vraie photo (banque libre ou archive, voir `../../references/photos.md`), animée dans Remotion · **NOIR**.
 
 | Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
 |---|---|---|---|---|---|---|
@@ -28,7 +28,7 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 | S14-P02 | 30 s | MD | Graphique : diplôme du supérieur selon l'origine sociale (Insee), construit en un plan | Tracé progressif | I03 | Voix |
 | S14-P03 | 10 s | MD | La page Insee en perspective : seul le passage utile est net | Lent travelling | I05 |  |
 | S14-P04 | 10 s | MD | 100 points : la tendance, et des parcours individuels qui la contredisent | Points qui migrent | N11 | Voix |
-| S14-P05 | 6 s | IMG | Une école en France, en lumière chaude | Parallaxe | I04, H01 |  |
+| S14-P05 | 6 s | IMG | Une école en France, en lumière chaude | Lent mouvement | I04 |  |
 | S14-P06 | 6 s | 3D | L'opérateur, dans la pénombre | Fixe |  |  |
 
 ## Cadrage et mise en scène

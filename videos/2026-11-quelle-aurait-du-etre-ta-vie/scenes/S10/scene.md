@@ -20,7 +20,7 @@ On montre les écarts et les ressemblances, puis la nuance : « une trajectoire 
 
 ## Découpage en plans
 
-Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** image générée Higgsfield, animée dans Remotion · **NOIR**.
+Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** vraie photo (banque libre ou archive, voir `../../references/photos.md`), animée dans Remotion · **NOIR**.
 
 | Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
 |---|---|---|---|---|---|---|

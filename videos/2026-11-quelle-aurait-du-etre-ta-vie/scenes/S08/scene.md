@@ -20,7 +20,7 @@ L'opérateur choisit (les études). Le site rappelle que le choix change des pro
 
 ## Découpage en plans
 
-Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** image générée Higgsfield, animée dans Remotion · **NOIR**.
+Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** vraie photo (banque libre ou archive, voir `../../references/photos.md`), animée dans Remotion · **NOIR**.
 
 | Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
 |---|---|---|---|---|---|---|
@@ -32,7 +32,7 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 | S08-P06 | 8 s | MD | Deux barres de probabilité, avant et après le choix : elles bougent, mais peu | Barres animées, écart souligné |  | Une note |
 | S08-P07 | 8 s | 3D | L'opérateur recule dans sa chaise. Réaction spontanée (« … ah. ») | Fixe | N15 | Voix, aparté |
 | S08-P08 | 5 s | UI | Le portrait gagne un cran de netteté | Mosaïque, cran suivant | I13 |  |
-| S08-P09 | 6 s | IMG | L'adolescente de dos, dans un lieu de son pays | Parallaxe | I04 | Musique |
+| S08-P09 | 6 s | IMG | L'adolescente de dos, dans un lieu de son pays | Lent mouvement | I04 | Musique |
 
 ## Cadrage et mise en scène
 

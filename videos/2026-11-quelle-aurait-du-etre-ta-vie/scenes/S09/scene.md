@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Durée** | ≈ 1:00 |
-| **Fabrication** | Higgsfield + Remotion |
+| **Fabrication** | Photos + Remotion |
 | **Fonction** | RESSENTIR |
 | **Procédé principal** | M03 : de courtes grappes d'images sur 3 ou 4 événements, entre deux temps d'interface |
 | **Procédés secondaires** | T01, I13 |
@@ -20,13 +20,13 @@ Travail, relations, ce qui arrive sans qu'on l'ait choisi. Pas plus de 4 événe
 
 ## Découpage en plans
 
-Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** image générée Higgsfield, animée dans Remotion · **NOIR**.
+Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** vraie photo (banque libre ou archive, voir `../../references/photos.md`), animée dans Remotion · **NOIR**.
 
 | Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
 |---|---|---|---|---|---|---|
 | S09-P01 | 3 s | UI | Carton d'âge : 30 ANS | Barre à à-coups | T01 |  |
 | S09-P02 | 5 s | UI | Les événements de l'année qui s'impriment | Texte tapé |  | Frappe |
-| S09-P03 | 9 s | IMG | Grappe de 3 images (3 s chacune) : le travail, une rencontre, un enfant | Coupes franches, légère parallaxe | M03, I04 | Musique qui monte |
+| S09-P03 | 9 s | IMG | Grappe de 3 images (3 s chacune) : le travail, une rencontre, un enfant | Coupes franches, léger mouvement | M03, I04 | Musique qui monte |
 | S09-P04 | 7 s | MD | La frise de vie se remplit d'événements (icônes sobres en monospace) | Icônes posées sur la frise |  |  |
 | S09-P05 | 6 s | 3D | L'opérateur. Voix : ce qui est arrivé sans être choisi | Fixe |  | Voix |
 | S09-P06 | 3 s | UI | Carton d'âge : 50 ANS | Barre à à-coups | T01 |  |

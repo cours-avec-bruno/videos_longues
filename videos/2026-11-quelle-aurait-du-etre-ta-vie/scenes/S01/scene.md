@@ -11,7 +11,7 @@
 
 ## Intention
 
-Carton sobre, serif sur noir : « Cette vie est simulée par 1 sur 8 milliards (1in8b.life) à partir de statistiques réelles. Les images sont des illustrations générées. »
+Carton sobre, serif sur noir : « Cette vie est simulée par 1 sur 8 milliards (1in8b.life) à partir de statistiques réelles. »
 
 ## Script / son
 
@@ -20,11 +20,11 @@ Carton sobre, serif sur noir : « Cette vie est simulée par 1 sur 8 milliards (
 
 ## Découpage en plans
 
-Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** image générée Higgsfield, animée dans Remotion · **NOIR**.
+Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** vraie photo (banque libre ou archive, voir `../../references/photos.md`), animée dans Remotion · **NOIR**.
 
 | Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
 |---|---|---|---|---|---|---|
-| S01-P01 | 6 s | MD | Carton serif sur noir : « Cette vie est simulée par 1 sur 8 milliards (1in8b.life) à partir de statistiques réelles. Les images sont des illustrations générées. » | Texte révélé mot à mot (TexteRevele) | H06 | Silence, puis l'ambiance du bureau monte |
+| S01-P01 | 6 s | MD | Carton serif sur noir : « Cette vie est simulée par 1 sur 8 milliards (1in8b.life) à partir de statistiques réelles. » | Texte révélé mot à mot (TexteRevele) | H06 | Silence, puis l'ambiance du bureau monte |
 
 ## Cadrage et mise en scène
 
