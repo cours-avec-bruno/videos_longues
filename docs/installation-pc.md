@@ -82,7 +82,15 @@ Pour tester l'outil d'analyse des références :
 npm run analyser-reference -- https://www.youtube.com/watch?v=K8Ugw48gnNk
 ```
 
-Les planches apparaissent dans `docs/direction-artistique/extractions/`. Si YouTube demande une vérification, relance en ajoutant `--cookies-navigateur firefox`.
+Les planches et l'analyse du son apparaissent dans `docs/direction-artistique/extractions/`. Si YouTube demande une vérification, relance en ajoutant `--cookies-navigateur firefox`.
+
+Pour vérifier que l'outil fonctionne sur le PC, sans rien télécharger :
+
+```powershell
+npm run tester-analyse
+```
+
+**Optionnel : séparation voix / musique (Demucs)**, pour une analyse plus fine du son. Voir `shared/outils/analyser-reference/README.md`, section « Installer Demucs ». Il faut Python, puis `py -m pip install demucs soundfile`.
 
 ## 4. Claude Code sur le PC
 

@@ -32,8 +32,16 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Testé ici sur des vidéos synthétiques (9/9 et 300/300 coupes, 0 fausse) et sur la bande-annonce de Sintel (18 plans sur ≈ 20). Le téléchargement YouTube reste **à valider sur le PC**, puisque le cloud est bloqué par YouTube.
 - Prochaine étape : relancer les réf. 01 et 02 avec l'outil pour compléter leurs analyses (plan par plan sur toute la durée, couleurs mesurées).
 
+## 2026-11-05 · Module son de l'outil d'analyse
+
+- Le son est **très important** pour la chaîne (décision de Bruno).
+- Le module mesure : sonie EBU R128 et dynamique, voix (séparation Demucs optionnelle, sinon sous-titres), respirations, silences, tempo, événements sonores (impacts, whooshes), synchronisation des coupes avec le son. Il produit aussi des frises (sonie, voix, spectrogramme, coupes et impacts alignés sur le temps).
+- Les 5 crédits vidIQ de transcription ne servent pas au son : les sous-titres YouTube récupérés par l'outil les remplacent. L'analyse vidIQ à 25 crédits reste la seule qui « écoute » le style (genre, instruments, timbre) : à garder pour quelques références clés.
+- Autotest : `npm run tester-analyse`, qui valide l'installation sur le PC.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
 - [ ] Voix off : la voix de Bruno ou une voix générée (ElevenLabs) ?
+- [ ] Le PC a-t-il une carte graphique NVIDIA ? (Demucs est environ 10 fois plus rapide avec.)
 - [ ] Specs définitives (4K ?) une fois la DA définie.

@@ -16,11 +16,11 @@
 import {spawn} from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
-
-const ICI = path.dirname(fileURLToPath(import.meta.url));
-const RACINE = path.resolve(ICI, '../../..');
-const POLICE = path.join(ICI, 'police', 'JetBrainsMono-Bold.ttf');
+import {
+  RACINE, POLICE, arreter, etape, info, lancer, verifierOutil, tc, hex, luma, saturation,
+  quantile, enParallele, slug, idYouTube, ecrireImage, barre,
+} from './commun.mjs';
+import {analyserSon} from './audio.mjs';
 
 // ───────────────────────── Options ─────────────────────────
 
@@ -39,6 +39,13 @@ Options :
   --cookies-navigateur <nom> Passe les cookies d'un navigateur à yt-dlp si YouTube demande
                              une connexion (firefox recommandé ; ex. --cookies-navigateur firefox)
   --paralleles <n>           Extractions simultanées (défaut 4)
+
+Son :
+  --sans-son                 N'analyse pas la bande sonore
+  --separer                  Sépare la voix de l'accompagnement avec Demucs (IA, gratuit, à installer) :
+                             présence de la voix, ducking, événements mesurés sans la voix
+  --demucs "<commande>"      Commande pour lancer Demucs (défaut : demucs ; ex. "py -m demucs")
+  --tranche-son <s>          Durée couverte par une frise sonore (défaut : 60 s, ou 120 s au-delà de 15 min)
   --aide                     Affiche cette aide
 `;
 
@@ -46,6 +53,7 @@ function lireOptions(argv) {
   const o = {
     source: null, id: null, seuil: 0.3, seuilBas: 0.08, colonnes: 4, lignes: 5, largeur: 400,
     hauteurMax: 720, cookies: null, paralleles: 4,
+    son: true, separer: false, demucs: 'demucs', trancheSon: null,
   };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -64,6 +72,10 @@ function lireOptions(argv) {
       case '--hauteur-max': o.hauteurMax = parseInt(val(), 10); break;
       case '--cookies-navigateur': o.cookies = val(); break;
       case '--paralleles': o.paralleles = parseInt(val(), 10); break;
+      case '--sans-son': o.son = false; break;
+      case '--separer': o.separer = true; break;
+      case '--demucs': o.demucs = val(); break;
+      case '--tranche-son': o.trancheSon = Number(val()); break;
       default:
         if (a.startsWith('--')) arreter(`Option inconnue : ${a}\n${AIDE}`);
         if (o.source) arreter(`Une seule source à la fois (reçu « ${o.source} » et « ${a} »).`);
@@ -73,109 +85,11 @@ function lireOptions(argv) {
   if (!o.source) arreter(`Il manque le lien ou le fichier à analyser.\n${AIDE}`);
   if (!(o.seuil > 0 && o.seuil < 1)) arreter('--seuil doit être compris entre 0 et 1.');
   if (!(o.seuilBas > 0 && o.seuilBas <= o.seuil)) arreter('--seuil-bas doit être compris entre 0 et --seuil.');
+  if (o.trancheSon !== null && !(o.trancheSon >= 5)) arreter('--tranche-son doit être d\'au moins 5 secondes.');
   for (const k of ['colonnes', 'lignes', 'largeur', 'hauteurMax', 'paralleles']) {
     if (!(o[k] > 0)) arreter(`--${k} doit être un entier positif.`);
   }
   return o;
-}
-
-// ───────────────────────── Utilitaires ─────────────────────────
-
-function arreter(message) {
-  console.error(`\n✖ ${message}\n`);
-  process.exit(1);
-}
-
-const etape = (m) => console.log(`\n▸ ${m}`);
-const info = (m) => console.log(`  ${m}`);
-
-/** Lance une commande sans shell (pas de problème d'échappement, Windows compris). */
-function lancer(cmd, args, {cwd, onStderr, binaire = false} = {}) {
-  return new Promise((resolve, reject) => {
-    let p;
-    try {
-      p = spawn(cmd, args, {cwd, windowsHide: true});
-    } catch (e) {
-      reject(e);
-      return;
-    }
-    const out = [];
-    let err = '';
-    p.stdout.on('data', (d) => out.push(d));
-    p.stderr.on('data', (d) => {
-      const s = d.toString();
-      err += s;
-      if (err.length > 200_000) err = err.slice(-100_000);
-      if (onStderr) onStderr(s);
-    });
-    p.on('error', reject);
-    p.on('close', (code) => {
-      const stdout = binaire ? Buffer.concat(out) : Buffer.concat(out).toString();
-      if (code === 0) resolve({stdout, stderr: err});
-      else reject(Object.assign(new Error(`${cmd} a échoué (code ${code})\n${err.slice(-2000)}`), {code, stderr: err}));
-    });
-  });
-}
-
-async function verifierOutil(cmd, args, conseil) {
-  try {
-    await lancer(cmd, args);
-  } catch (e) {
-    if (e.code === 'ENOENT') arreter(`« ${cmd} » est introuvable.\n  ${conseil}`);
-    throw e;
-  }
-}
-
-/** Secondes → "mm:ss.d" (ou "h:mm:ss.d"). */
-function tc(s, decimales = 1) {
-  const neg = s < 0;
-  const f = 10 ** decimales;
-  s = Math.round(Math.abs(s) * f) / f; // arrondi d'abord : évite « 00:60 »
-  const h = Math.floor(s / 3600);
-  const m = Math.floor((s % 3600) / 60);
-  const sec = (s % 60).toFixed(decimales).padStart(decimales ? 3 + decimales : 2, '0');
-  const mm = String(m).padStart(2, '0');
-  return (neg ? '-' : '') + (h ? `${h}:${mm}:${sec}` : `${mm}:${sec}`);
-}
-
-const hex = ([r, g, b]) => '#' + [r, g, b].map((v) => Math.round(v).toString(16).padStart(2, '0')).join('');
-const luma = ([r, g, b]) => (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
-function saturation([r, g, b]) {
-  const mx = Math.max(r, g, b), mn = Math.min(r, g, b);
-  return mx === 0 ? 0 : (mx - mn) / mx;
-}
-
-function quantile(tri, q) {
-  if (!tri.length) return 0;
-  const pos = (tri.length - 1) * q;
-  const b = Math.floor(pos);
-  return tri[b] + (tri[Math.min(b + 1, tri.length - 1)] - tri[b]) * (pos - b);
-}
-
-/** Exécute des tâches asynchrones avec un nombre limité en parallèle. */
-async function enParallele(taches, n, surProgression) {
-  const resultats = new Array(taches.length);
-  let suivant = 0, faits = 0;
-  async function ouvrier() {
-    while (suivant < taches.length) {
-      const i = suivant++;
-      resultats[i] = await taches[i]();
-      faits++;
-      if (surProgression) surProgression(faits, taches.length);
-    }
-  }
-  await Promise.all(Array.from({length: Math.min(n, taches.length)}, ouvrier));
-  return resultats;
-}
-
-function slug(s) {
-  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'reference';
-}
-
-function idYouTube(url) {
-  const m = url.match(/(?:youtu\.be\/|[?&]v=|\/shorts\/|\/embed\/|\/live\/)([A-Za-z0-9_-]{11})/);
-  return m ? m[1] : null;
 }
 
 // ───────────────────────── Étape 1 : source ─────────────────────────
@@ -512,20 +426,6 @@ function analyserCouleurs(plans, vignettes) {
   return P.length ? kmeans(P, W, 8) : [];
 }
 
-/** Écrit une image PPM (P6) puis la convertit en PNG avec FFmpeg. */
-async function ecrireImage(fichierPng, largeur, hauteur, pixel) {
-  const entete = Buffer.from(`P6\n${largeur} ${hauteur}\n255\n`);
-  const corps = Buffer.alloc(largeur * hauteur * 3);
-  for (let y = 0; y < hauteur; y++) for (let x = 0; x < largeur; x++) {
-    const [r, g, b] = pixel(x, y);
-    const i = (y * largeur + x) * 3; corps[i] = r; corps[i + 1] = g; corps[i + 2] = b;
-  }
-  const ppm = fichierPng.replace(/\.png$/, '.ppm');
-  fs.writeFileSync(ppm, Buffer.concat([entete, corps]));
-  await lancer('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-i', ppm, '-y', fichierPng]);
-  fs.rmSync(ppm, {force: true});
-}
-
 async function imagesCouleurs(plans, palette, duree, dossierSortie) {
   // « Barcode » : chaque plan est une bande de sa couleur moyenne, largeur ∝ durée.
   const W = 1600, Hb = 140;
@@ -549,12 +449,7 @@ async function imagesCouleurs(plans, palette, duree, dossierSortie) {
 
 // ───────────────────────── Étape 6 : rapport ─────────────────────────
 
-function barre(valeur, max, largeur = 30) {
-  const n = max ? Math.round(valeur / max * largeur) : 0;
-  return '█'.repeat(n) + '·'.repeat(Math.max(0, largeur - n));
-}
-
-function rapport({o, meta, sonde, plans, palette, planches, parPlanche, vignettes, idRef, sousTitres}) {
+function rapport({o, meta, sonde, plans, palette, planches, parPlanche, vignettes, idRef, sousTitres, sectionSon}) {
   const durees = plans.map((p) => p.duree).sort((a, b) => a - b);
   const total = sonde.duree;
   const moy = total / plans.length;
@@ -638,6 +533,8 @@ function rapport({o, meta, sonde, plans, palette, planches, parPlanche, vignette
   lignes.push('Évolution de la couleur dans le temps (chaque plan = sa couleur moyenne, largeur ∝ durée) :', '');
   lignes.push('![Barcode](barcode.png)', '');
 
+  if (sectionSon) lignes.push(sectionSon, '');
+
   lignes.push('## Planches contact', '');
   lignes.push(`${vignettes.length} vignettes pour ${plans.length} plans : une par plan, plus une toutes les ~5 s dans les plans longs (notées \`2/3\`…), pour voir le mouvement.`);
   lignes.push('Étiquette de chaque vignette : `numéro de plan · timecode de l\'image · (durée du plan)`.', '');
@@ -704,6 +601,10 @@ async function principal() {
   const palette = analyserCouleurs(plans, vignettes);
   await imagesCouleurs(plans, palette, sonde.duree, dossierSortie);
 
+  const sectionSon = o.son
+    ? await analyserSon({o, estUrl, video, dossierCache, dossierSortie, duree: sonde.duree, plans, sousTitres})
+    : null;
+
   etape('Écriture des résultats…');
   const csv = ['plan;debut;fin;duree_s;debut_s;transition_entree;couleur_moyenne;luminance;saturation'];
   for (const p of plans) {
@@ -712,7 +613,7 @@ async function principal() {
   }
   fs.writeFileSync(path.join(dossierSortie, 'plans.csv'), csv.join('\n') + '\n');
   fs.writeFileSync(path.join(dossierSortie, 'resume.md'),
-    rapport({o, meta, sonde, plans, palette, planches, parPlanche, vignettes, idRef, sousTitres}));
+    rapport({o, meta, sonde, plans, palette, planches, parPlanche, vignettes, idRef, sousTitres, sectionSon}));
   fs.rmSync(dossierTravail, {recursive: true, force: true});
 
   const rel = path.relative(RACINE, dossierSortie).replace(/\\/g, '/');

@@ -74,6 +74,88 @@ Palette dominante de la vidéo entière (k-means sur les vignettes, pondéré pa
 
 ![Barcode](barcode.png)
 
+## Son
+
+> Mesures objectives de la bande sonore. Claude ne peut pas écouter : il lit ces mesures, les frises et la transcription.
+
+![Son global](son-global.png)
+
+*Sonie court terme sur toute la vidéo (ligne jaune pointillée = sonie intégrée), voix en bleu, événements marquants en rouge.*
+
+### Niveau et dynamique
+
+| Mesure | Valeur | Repère |
+|---|---|---|
+| Sonie intégrée | **-12.8 LUFS** | YouTube normalise à −14 LUFS (plus fort : sera baissé) |
+| Plage dynamique (LRA) | **14.6 LU** | < 5 : très compressé · 5-10 : typique YouTube · > 12 : cinéma, très nuancé |
+| Crête vraie | 1.2 dBTP | ≤ −1 dBTP recommandé |
+
+Sonie médiane par tranche de 1 min (où ça monte, où ça respire) :
+
+```
+   00:00  ███████████████████████·······  -16.2 LUFS
+```
+
+### Voix
+
+Source : séparation IA (Demucs).
+
+| Mesure | Valeur |
+|---|---|
+| Temps de parole | **38 %** de la vidéo |
+| Voix au-dessus de l'accompagnement (médiane) | **5.2 dB** |
+| Ducking (l'accompagnement baisse quand la voix parle) | **11.2 dB** (-28.4 dBFS sous la voix, -17.2 dBFS sans) |
+
+**Respirations** (passages sans voix ≥ 2,5 s), les plus longues :
+
+| Début | Durée | Ce que fait le son pendant ce temps |
+|---|---|---|
+| 00:00.0 | 12.0 s | son à -15 LUFS, 2 événement(s) |
+| 00:26.2 | 5.3 s | son à -8 LUFS |
+| 00:38.9 | 2.9 s | son à -19 LUFS |
+| 00:43.8 | 8.4 s | son à -20 LUFS |
+
+### Silences
+
+2 silence(s) ≥ 0,6 s (niveau < -53 dBFS) :
+
+| Début | Durée |
+|---|---|
+| 00:00.0 | 1.2 s |
+| 00:51.3 | 0.7 s |
+
+### Musique et rythme
+
+| Mesure | Valeur |
+|---|---|
+| Tempo dominant estimé | **143 BPM** |
+| Part du temps avec une pulsation nette | 43 % |
+| Attaques sonores (tous sons confondus) | 117 par minute |
+| Coupes franches tombant sur une attaque sonore (± 70 ms) | **33 %** (hasard : 27 %) |
+
+> Tempo : estimation automatique (une erreur d'un facteur 2 est possible). Synchronisation : nettement au-dessus du hasard = montage calé sur le son.
+
+### Événements sonores marquants
+
+3 événements (3.4 par minute) : sons soudains et « bruités » (impacts, whooshes, chocs, souffles), hors pulsation musicale, détectés sur l'accompagnement (voix retirée).
+
+| Timecode | Saut d'énergie | Niveau |
+|---|---|---|
+| 00:09.4 | +20 dB | -5 dBFS |
+| 00:09.7 | +15 dB | -8 dBFS |
+| 00:16.9 | +11 dB | -5 dBFS |
+
+### Frises
+
+De haut en bas : **sonie** (pointillé jaune = sonie intégrée) · **voix** (bleu) et **accompagnement** (orange, si séparation) · **spectrogramme** (grave en bas, aigu en haut ; la voix forme des bandes horizontales serrées, les impacts des traits verticaux) · **coupes** image (blanc = franche, gris = fondu) et **événements** (rouge) · temps.
+
+| Frise | Tranche |
+|---|---|
+| [frise-001.jpg](frises/frise-001.jpg) | 00:00 → 00:52 |
+
+Détail seconde par seconde : [`son.csv`](son.csv).
+
+
 ## Planches contact
 
 20 vignettes pour 18 plans : une par plan, plus une toutes les ~5 s dans les plans longs (notées `2/3`…), pour voir le mouvement.
