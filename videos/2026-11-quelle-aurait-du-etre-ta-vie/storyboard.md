@@ -11,6 +11,7 @@ Procédés choisis avec le [mode d'emploi](../../docs/direction-artistique/proce
 - **Voix off** : l'opérateur, à la première personne.
 - **Images de la vie** : de **vraies photos** d'illustration (banques libres de droits, archives), retravaillées dans Remotion.
 - **La vidéo ne doit jamais être reconnaissable comme faite à l'IA** : aucune mention d'IA à l'écran, et les règles anti-« look IA » ci-dessous s'appliquent à toute la fabrication.
+- **Priorité à l'animation** : on privilégie les moments d'animation, de motion design et de 3D. Les photos restent un **complément**, pas la matière principale. À appliquer en affinant le découpage : quand un plan peut être raconté en motion design ou en 3D plutôt qu'en photo, on choisit l'animation.
 
 ## Règles anti-« look IA »
 

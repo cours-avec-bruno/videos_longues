@@ -89,6 +89,8 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
   - Higgsfield jamais visible tel quel ;
   - voix humaine, musique composée par un humain.
 - Conséquence sur la question ouverte de la voix off : une **voix humaine** est recommandée.
+- Précision de Bruno : on **privilégie l'animation, le motion design et la 3D**. Les photos ne sont qu'un complément.
+- **Reprise prévue le 06/11/2026** : affiner le storyboard et commencer la création des scènes.
 
 ## Questions ouvertes
 
