@@ -71,6 +71,13 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
   - la skill `storyboard-procedes` : au storyboard, je propose pour chaque scène les 2 ou 3 procédés les plus pertinents, et Bruno arbitre ;
   - `CLAUDE.md` (section 4) mis à jour.
 
+## 2026-11-05 · Première vidéo : « Quelle aurait dû être ta vie ? »
+
+- Concept de Bruno, autour du simulateur *1 sur 8 milliards* (1in8b.life). Dossier `videos/2026-11-quelle-aurait-du-etre-ta-vie/`.
+- Le site autorise les vidéos, même monétisées, à condition de citer « 1 sur 8 milliards, 1in8b.life ». Ses règles sont vérifiées et consignées dans `references/sources.md` : choix qui changent des probabilités mais pas le résultat, arrêts à 5, 15, 30, 50 et 70 ans, 4 autres bébés nés à la même seconde, comparaison avec son vrai lieu de naissance. France : 0,48 % des naissances, soit 1 sur 207.
+- Décisions de Bruno : **tout est fabriqué** (Blender, Remotion, couche Higgsfield), rien n'est filmé ; voix off = l'opérateur à la 1re personne ; images de la vie générées.
+- Premier storyboard construit avec la skill `storyboard-procedes` : grammaire (un bureau en huis clos dont la lumière suit l'âge, ambre = l'humain, mono = dans la simulation, serif = hors de la simulation), 15 scènes, 24 procédés, 5 signatures. À arbitrer par Bruno.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
