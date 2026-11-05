@@ -82,6 +82,51 @@ Contraintes du concept : pas de twist « simulation dans la simulation », pas d
 - **Couche 2** : aucune. N12 est proposée seulement comme alternative en S15.
 - **Écartés ou exclus par le concept** : N13 (écarté), T02 (pas de glitch), N02 (pas de twist : le concept l'exclut).
 
+## Découpage en plans : vue d'ensemble
+
+**Une scène n'est pas un plan.** Chaque fiche scène contient son découpage plan par plan (identifiants `S05-P03`…) : durée, matière, contenu, animation, procédé, son.
+
+Les quatre matières de plan, toutes fabriquées. Elles restent dans les 3 matières de la grammaire, car UI et MD sont deux usages de Remotion :
+- **3D** : Blender (le bureau, l'opérateur) ;
+- **UI** : l'interface du simulateur recréée (Remotion, monospace) ;
+- **MD** : le motion design et les animations Remotion (cartes, jauges, frises, graphiques, textes) : en monospace dans la simulation, en serif hors de la simulation ;
+- **IMG** : les illustrations générées par Higgsfield, animées dans Remotion (parallaxe 2.5D, lents mouvements, filtre chaud, mention « illustration générée »).
+
+| | Plans | Temps | Part |
+|---|---|---|---|
+| 3D | 23 | 150 s | 24 % |
+| UI | 28 | 162 s | 26 % |
+| MD | 24 | 232 s | 37 % |
+| IMG | 12 + 6 vignettes par interlude | 74 s + 18 s d'interludes | ≈ 14 % |
+| Noir | 5 | 13 s | 2 % |
+
+- **92 plans**, plus 3 retours de l'interlude S06 et les grappes d'images : **environ 125 coupes** pour ≈ 11 min. La médiane visée est de 3 à 5 s par plan : entre la réf. 03 (3,3 s) et une vidéo plus contemplative. Les plans longs sont réservés aux graphiques (I03) et à la respiration (M05).
+- **Point à arbitrer** : l'interface (UI) occupe 26 % du temps. C'est cohérent avec le dispositif, mais si tu veux plus d'illustrations, on peut remplacer une partie des plans UI de S07 à S09 (les événements de l'année) par des images générées sur lesquelles le texte s'imprime.
+
+### Motion design à créer (Remotion)
+
+| Élément | Scènes | Base existante |
+|---|---|---|
+| Interface du simulateur (réglages, fiche, choix, événements, acte de décès, comparaison) | S02-S13 | 🧪 nouveau, le plus gros chantier Remotion |
+| Carton d'âge sobre | S04, S07-S09, S11 | ✅ `TerminalChargement`, à décliner |
+| Compteur de naissances | S02 | 🧪 simple |
+| Curseur 0-100 (la consigne au spectateur) | S02, S15 | 🧪 simple |
+| Carte du monde : tirage pondéré des naissances | S04 | 🧪 moyen (données ONU du site) |
+| Jauges des conditions de départ | S05 | 🧪 simple |
+| Frise d'âge (curseur, événements, icônes) | S06, S09 | 🧪 moyen |
+| Barres de probabilité avant et après un choix | S08 | 🧪 simple |
+| Graphique de trajectoires (I03), réutilisé en S14 | S10, S14 | 🧪 moyen |
+| Mur de 207 pays (I11) | S13 | 🧪 simple (`TexteBrouille` en base) |
+| Schéma territoire / nationalité | S13 | 🧪 simple |
+| 100 points : tendance contre parcours individuels | S14 | 🧪 moyen |
+| Portrait en mosaïque par crans (I13) | S05, S08, S09, S11 | ✅ `Mosaique` |
+| Unification des images générées (I04), réglage chaud et sobre | partout | ✅ `FiltreArchive`, à régler |
+| Animation des images fixes (parallaxe 2.5D) | partout | 🧪 composant à créer |
+
+### Images à générer (Higgsfield)
+
+Environ **15 illustrations de la vie** (S05, S07, S08, S09, S11, S14), plus **24 vignettes** pour les interludes, plus **4 portraits** (un par âge, pour la mosaïque qui se précise) : **≈ 43 images**. Règles de cohérence : une fiche personnage, une image de référence, le même modèle et les mêmes réglages ; la personne de dos ou partielle, et son visage seulement dans le portrait. **Estimation des crédits et prompts à te soumettre avant toute génération.**
+
 ## Ce qu'il faut fabriquer
 
 | Élément | État | Coût |

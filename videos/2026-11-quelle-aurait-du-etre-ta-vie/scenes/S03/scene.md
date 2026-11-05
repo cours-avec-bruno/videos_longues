@@ -18,6 +18,18 @@ Interface recréée (monospace) : le monde d'aujourd'hui, le tirage selon les na
 - **Voix off** : (repris de `script.md`)
 - **Sons / musique** :
 
+## Découpage en plans
+
+Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** image générée Higgsfield, animée dans Remotion · **NOIR**.
+
+| Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
+|---|---|---|---|---|---|---|
+| S03-P01 | 6 s | UI | Réglages : « Le monde où vous naîtrez », sur le monde d'aujourd'hui | Curseur, sélection | H02 | Clics |
+| S03-P02 | 7 s | UI | « Comment votre lieu est tiré » : histogramme des naissances (Inde 17,6 %, Chine 6,7 %, Nigeria 5,7 %…) | Barres qui poussent |  |  |
+| S03-P03 | 5 s | 3D | Insert : la main sur la souris | Fixe |  |  |
+| S03-P04 | 9 s | UI | « Votre vrai lieu de naissance (facultatif) » : la liste défile jusqu'à « France » | Défilement, sélection | N05 | Clic |
+| S03-P05 | 8 s | 3D | Par-dessus l'épaule : l'écran, « France » sélectionné. Voix : « Gardez ça en tête, on y reviendra. » | Lent travelling avant | N05 | Voix |
+
 ## Cadrage et mise en scène
 
 - **Plan(s)** : large, moyen, serré, insert…
