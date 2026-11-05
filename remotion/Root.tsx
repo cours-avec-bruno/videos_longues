@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition, Folder} from 'remotion';
 import {SPECS, sec} from '../shared/remotion/specs';
 import {TestPipeline} from '../shared/remotion/TestPipeline';
+import {BibliothequeProcedes} from '../shared/remotion/BibliothequeProcedes';
 
 /**
  * Point d'entrée Remotion du studio.
@@ -17,6 +18,12 @@ export const RemotionRoot: React.FC = () => {
           id="Test-Pipeline"
           component={TestPipeline}
           durationInFrames={sec(6)}
+          {...SPECS}
+        />
+        <Composition
+          id="Bibliotheque-Procedes"
+          component={BibliothequeProcedes}
+          durationInFrames={sec(19)}
           {...SPECS}
         />
       </Folder>
