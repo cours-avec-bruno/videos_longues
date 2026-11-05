@@ -93,6 +93,13 @@ Pour savoir où tu tournes : le cloud est sous Linux (`/home/user/...`), le PC f
 - Après chaque étape terminée qui modifie du texte ou du code : commit et push, avec un message clair. Ne laisse jamais de travail non poussé en fin de session : le conteneur cloud est éphémère, et le PC doit pouvoir reprendre là où le cloud s'est arrêté (et inversement).
 - Évite de modifier le même fichier aux deux endroits en parallèle. En cas de conflit, ne choisis jamais une version à l'aveugle : montre-moi les deux.
 
+**Branches** :
+
+- **`main` est la référence** : c'est la branche par défaut sur GitHub, celle que suit le PC fixe et d'où partent les sessions cloud.
+- **Sur le PC fixe** : travaille directement sur `main` (`git pull`, puis commit et push sur `main`).
+- **Dans le cloud** : chaque session travaille sur sa propre branche `claude/...`, la pousse et ouvre une pull request vers `main`. Ce travail n'arrive sur le PC qu'une fois la PR fusionnée : à la fin d'une étape, rappelle-moi de la fusionner, ou fusionne-la si je te le demande. Avant de commencer, vérifie que la branche part du dernier `main`.
+- Une branche `claude/...` fusionnée peut être supprimée. N'en garde pas qui traînent.
+
 **Médias** : jamais dans Git. Ils vivent sur le PC, au même emplacement relatif que dans le repo (`videos/<slug>/medias/`, `exports/`), pour que le code fonctionne sans modification des deux côtés. Dans le cloud, tu ne vois pas ces médias : pour les relire, demande-moi une capture ou un extrait basse définition. Le fichier de prompts de chaque vidéo garde l'identifiant de chaque génération Higgsfield, pour pouvoir la retélécharger.
 
 **Blender** n'existe que sur le PC. Il se pilote soit par le plugin Higgsfield (outils `bl_*`, quand il est connecté), soit par des scripts Python versionnés (`shared/blender/`, `videos/<slug>/scenes/<id>/`) lancés sur le PC.
@@ -121,6 +128,7 @@ videos/
     remotion/              compositions Remotion propres à la vidéo
     prompts/, references/, medias/, exports/
 remotion/                  point d'entrée Remotion (enregistre les compositions de toutes les vidéos)
+scripts/                   scripts d'installation et d'entretien (ex. installer-pc-fixe.ps1)
 ```
 
 - Avant de créer une nouvelle ressource, regarde si quelque chose d'existant peut être réutilisé ou amélioré. Quand un élément conçu pour une vidéo devient réutilisable, déplace-le dans `shared/`.

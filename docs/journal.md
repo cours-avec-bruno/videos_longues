@@ -44,6 +44,13 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - **PC fixe** : carte NVIDIA. C'est la machine de production (Blender en OptiX, rendus finaux, analyses de références avec séparation Demucs sur GPU). Le guide d'installation inclut PyTorch en version GPU (CUDA).
 - **Machine de discussion** : sans carte graphique. Bruno y échange avec Claude, mais rien de lourd ne doit y tourner.
 
+## 2026-11-05 · Branche `main`
+
+- Création de **`main`**, la référence du projet. Avant, la branche par défaut était une branche de session cloud (`claude/wizardly-archimedes-sapbhh`), au nom généré automatiquement.
+- Le PC fixe travaille directement sur `main`. Chaque session cloud travaille sur sa branche `claude/...` et ouvre une PR vers `main`.
+- Le script d'installation du PC bascule maintenant sur `main`.
+- Reste à faire par Bruno : définir `main` comme branche par défaut dans les réglages GitHub, puis supprimer les anciennes branches `claude/...`.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

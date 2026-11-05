@@ -29,8 +29,8 @@ if (-not (Test-Path C:\Studio\videos_longues\.git)) {
 }
 Set-Location C:\Studio\videos_longues
 git fetch origin
-git checkout claude/wizardly-archimedes-sapbhh
-git pull
+git checkout main
+git pull origin main
 if (Test-Path package.json) { Ok 'projet dans C:\Studio\videos_longues' } else { Ko 'le projet n''a pas ete recupere (connexion GitHub ?)' }
 
 Etape '3/7 Dependances du projet (npm)'

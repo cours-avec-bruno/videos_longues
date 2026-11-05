@@ -72,6 +72,12 @@ git clone https://github.com/cours-avec-bruno/videos_longues.git
 cd videos_longues; npm install
 ```
 
+Le PC travaille sur la branche **`main`**, qui est la référence du projet (voir `CLAUDE.md`, section Branches). Si le repo avait déjà été cloné sur une autre branche :
+
+```powershell
+git fetch origin; git checkout main; git pull origin main
+```
+
 Le premier rendu Remotion télécharge automatiquement son navigateur de rendu (Chrome Headless Shell), puis le garde pour les fois suivantes. Pour tester :
 
 ```powershell

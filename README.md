@@ -8,6 +8,7 @@ Studio de production des vidéos longues YouTube : storyboard, script, scènes (
 - **Décisions et questions ouvertes** : [`docs/journal.md`](docs/journal.md)
 - **Direction artistique** : [`docs/direction-artistique/`](docs/direction-artistique/)
 - **Démarrer une vidéo** : copier [`videos/_modele/`](videos/_modele/)
+- **Branches** : `main` est la référence. Le PC fixe y travaille directement, et les sessions cloud passent par une pull request (voir [`CLAUDE.md`](CLAUDE.md)).
 
 ## Remotion
 
