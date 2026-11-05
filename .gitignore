@@ -1,6 +1,7 @@
 # Dépendances et caches
 node_modules/
 .remotion/
+.cache/
 __pycache__/
 .DS_Store
 Thumbs.db

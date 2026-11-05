@@ -6,7 +6,8 @@
     "studio": "remotion studio remotion/index.ts",
     "render": "remotion render remotion/index.ts",
     "still": "remotion still remotion/index.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "analyser-reference": "node shared/outils/analyser-reference/index.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.540",

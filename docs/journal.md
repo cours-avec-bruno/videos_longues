@@ -26,9 +26,14 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Limite : pas d'images de la vidéo elle-même, car YouTube bloque le téléchargement depuis le cloud. Il faut l'outil d'extraction d'images sur le PC pour un plan par plan complet.
 - Les transcriptions complètes ne sont pas versionnées (droits d'auteur) : seules des analyses et de courtes citations sont dans le repo.
 
+## 2026-11-05 · Outil d'analyse des références
+
+- `npm run analyser-reference -- <lien>` : téléchargement (yt-dlp), détection des coupes franches et des fondus, planches contact horodatées, rythme et couleurs mesurés. Sorties dans `docs/direction-artistique/extractions/`.
+- Testé ici sur des vidéos synthétiques (9/9 et 300/300 coupes, 0 fausse) et sur la bande-annonce de Sintel (18 plans sur ≈ 20). Le téléchargement YouTube reste **à valider sur le PC**, puisque le cloud est bloqué par YouTube.
+- Prochaine étape : relancer les réf. 01 et 02 avec l'outil pour compléter leurs analyses (plan par plan sur toute la durée, couleurs mesurées).
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
 - [ ] Voix off : la voix de Bruno ou une voix générée (ElevenLabs) ?
 - [ ] Specs définitives (4K ?) une fois la DA définie.
-- [ ] Construire l'outil d'extraction d'images de référence (yt-dlp + détection de plans FFmpeg), à utiliser sur le PC.

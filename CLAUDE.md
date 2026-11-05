@@ -96,17 +96,20 @@ Pour savoir où tu tournes : le cloud est sous Linux (`/home/user/...`), le PC s
 
 Commandes Remotion (identiques des deux côtés) : `npm run studio`, `npm run render -- <id-composition> <sortie.mp4>`. Installation du PC : `docs/installation-pc.md`.
 
+**Analyser une vidéo de référence** : `npm run analyser-reference -- <lien YouTube>` (sur le PC, car YouTube bloque le cloud). L'outil produit des planches contact horodatées, le découpage plan par plan, le rythme et les couleurs mesurés dans `docs/direction-artistique/extractions/<id>/`. Regarde réellement les planches avant d'analyser, et privilégie ces mesures aux descriptions d'IA (vidIQ, Higgsfield). Distingue toujours ce qui est observé, ce qui est rapporté par un outil et ce qui est une hypothèse. Détails : `shared/outils/analyser-reference/README.md`.
+
 Les specs techniques (résolution, cadence, codec, niveau sonore) sont dans `docs/specs-techniques.md` et, côté code, dans `shared/remotion/specs.ts`. Tout plan, quel que soit l'outil, doit être livré à ces specs.
 
 ## 7. Organisation du projet
 
 ```
 CLAUDE.md                  ce document
-docs/                      fonctionnement général : specs, journal des décisions, direction artistique
+docs/                      fonctionnement général : specs, journal, direction artistique (références, analyses, extractions)
 shared/                    ressources communes à toutes les vidéos
   remotion/                composants, specs et utilitaires Remotion
   blender/                 scripts Python, modèles et scènes types
   assets/                  polices, musiques, effets sonores, textures
+  outils/                  outils du studio (ex. analyser-reference)
 videos/
   _modele/                 gabarit à copier pour démarrer une vidéo
   <slug>/                  une vidéo (ex. 2026-11-pourquoi-on-procrastine)

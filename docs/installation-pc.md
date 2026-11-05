@@ -22,10 +22,16 @@ winget install --id Gyan.FFmpeg -e
 winget install --id BlenderFoundation.Blender -e
 ```
 
+```powershell
+winget install --id yt-dlp.yt-dlp -e
+```
+
+`yt-dlp` sert à l'outil d'analyse des vidéos de référence (`npm run analyser-reference`). YouTube change souvent : mets-le à jour de temps en temps avec `yt-dlp -U`.
+
 Fermer puis rouvrir PowerShell, puis vérifier :
 
 ```powershell
-git --version; node --version; ffmpeg -version; blender --version
+git --version; node --version; ffmpeg -version; blender --version; yt-dlp --version
 ```
 
 `node --version` doit afficher une **v22**. C'est la même version que dans le cloud, fixée par `.nvmrc`.
@@ -69,6 +75,14 @@ Le premier rendu Remotion télécharge automatiquement son navigateur de rendu (
 ```powershell
 npm run render -- Test-Pipeline out/test.mp4
 ```
+
+Pour tester l'outil d'analyse des références :
+
+```powershell
+npm run analyser-reference -- https://www.youtube.com/watch?v=K8Ugw48gnNk
+```
+
+Les planches apparaissent dans `docs/direction-artistique/extractions/`. Si YouTube demande une vérification, relance en ajoutant `--cookies-navigateur firefox`.
 
 ## 4. Claude Code sur le PC
 

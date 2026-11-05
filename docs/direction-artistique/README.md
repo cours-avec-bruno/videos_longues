@@ -2,6 +2,11 @@
 
 > En construction. La DA sera définie à partir des références que Bruno fournira.
 
+## Analyser une référence
+
+1. Sur le PC : `npm run analyser-reference -- <lien YouTube>`. Cela produit des planches contact et des mesures dans `extractions/<id>/`.
+2. Pousser le dossier généré, puis demander l'analyse à Claude, dans le cloud ou en local. L'analyse se rédige dans `analyses/`.
+
 ## Comment déposer des références
 
 - Les images vont dans `references/`, avec un nom explicite (ex. `lumiere-clair-obscur-film-x.jpg`).
