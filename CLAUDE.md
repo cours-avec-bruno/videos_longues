@@ -97,7 +97,7 @@ Pour savoir où tu tournes : le cloud est sous Linux (`/home/user/...`), le PC f
 
 **Blender** n'existe que sur le PC. Il se pilote soit par le plugin Higgsfield (outils `bl_*`, quand il est connecté), soit par des scripts Python versionnés (`shared/blender/`, `videos/<slug>/scenes/<id>/`) lancés sur le PC.
 
-Commandes Remotion (identiques des deux côtés) : `npm run studio`, `npm run render -- <id-composition> <sortie.mp4>`. Installation du PC : `docs/installation-pc.md`.
+Commandes Remotion (identiques des deux côtés) : `npm run studio`, `npm run render -- <id-composition> <sortie.mp4>`. Installation du PC : `docs/installation-pc.md` (script automatique : `scripts/installer-pc-fixe.ps1`).
 
 **Analyser une vidéo de référence** : `npm run analyser-reference -- <lien YouTube>` (sur le PC, car YouTube bloque le cloud). L'outil produit des planches contact horodatées, le découpage plan par plan, le rythme et les couleurs mesurés, ainsi que l'analyse du son (sonie, voix, respirations, silences, tempo, événements sonores, frises sonores), dans `docs/direction-artistique/extractions/<id>/`. Le son est très important pour la chaîne : tu ne peux pas écouter, alors appuie-toi sur ces mesures et ces frises, et utilise `--separer` (Demucs) quand le son compte. Regarde réellement les planches avant d'analyser, et privilégie ces mesures aux descriptions d'IA (vidIQ, Higgsfield). Distingue toujours ce qui est observé, ce qui est rapporté par un outil et ce qui est une hypothèse. Détails : `shared/outils/analyser-reference/README.md`.
 

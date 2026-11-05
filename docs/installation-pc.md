@@ -4,6 +4,8 @@ Le PC fixe (avec sa **carte NVIDIA**) sert à la **production lourde** : rendus 
 
 Toutes les commandes ci-dessous se lancent dans **PowerShell**.
 
+> **Installation automatique** : le script [`scripts/installer-pc-fixe.ps1`](../scripts/installer-pc-fixe.ps1) fait tout ce guide d'un coup (logiciels, projet, PyTorch GPU, Demucs, autotest, rendu de test). À coller dans PowerShell. Il est relançable sans risque. Les sections ci-dessous détaillent ce qu'il fait, utile en cas de problème.
+
 ## 1. Logiciels
 
 ```powershell
@@ -34,7 +36,7 @@ Fermer puis rouvrir PowerShell, puis vérifier :
 git --version; node --version; ffmpeg -version; blender --version; yt-dlp --version
 ```
 
-`node --version` doit afficher une **v22**. C'est la même version que dans le cloud, fixée par `.nvmrc`.
+`node --version` doit afficher une **v22 ou plus récente** (le cloud est en v22).
 
 ## 2. Réglages Git (une seule fois)
 
@@ -106,31 +108,31 @@ nvidia-smi
 winget install --id Python.Python.3.12 -e
 ```
 
-3. Fermer et rouvrir PowerShell, puis installer PyTorch **version GPU**. Cela fait environ 2,5 Go à télécharger :
+3. Fermer et rouvrir PowerShell, puis installer PyTorch **version GPU**. Cela fait environ 2,5 Go à télécharger. La version CUDA 12.8 couvre les cartes RTX 20 à 50 et demande un pilote NVIDIA récent (≥ 572) :
 
 ```powershell
-py -m pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu124
+py -3.12 -m pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu128
 ```
 
 4. Installer Demucs :
 
 ```powershell
-py -m pip install demucs soundfile
+py -3.12 -m pip install demucs soundfile
 ```
 
 5. Vérifier que PyTorch voit la carte. La commande doit afficher `True` :
 
 ```powershell
-py -c "import torch; print(torch.cuda.is_available())"
+py -3.12 -c "import torch; print(torch.cuda.is_available())"
 ```
 
 6. Tester toute la chaîne :
 
 ```powershell
-npm run tester-analyse -- --separer --demucs "py -m demucs"
+npm run tester-analyse -- --separer --demucs "py -3.12 -m demucs"
 ```
 
-Ensuite, pour analyser une référence avec la séparation, ajoute `--separer --demucs "py -m demucs"` à la commande. Demucs utilise la carte NVIDIA automatiquement.
+Ensuite, pour analyser une référence avec la séparation, ajoute `--separer --demucs "py -3.12 -m demucs"` à la commande. Demucs utilise la carte NVIDIA automatiquement.
 
 Si l'étape 5 affiche `False`, mets à jour le pilote NVIDIA (application NVIDIA ou nvidia.com), puis recommence à partir de l'étape 3.
 

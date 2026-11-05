@@ -11,7 +11,7 @@ npm run analyser-reference -- https://www.youtube.com/watch?v=XXXXXXXXXXX
 Avec la séparation voix / accompagnement, recommandée quand le son compte :
 
 ```powershell
-npm run analyser-reference -- https://www.youtube.com/watch?v=XXXXXXXXXXX --separer --demucs "py -m demucs"
+npm run analyser-reference -- https://www.youtube.com/watch?v=XXXXXXXXXXX --separer --demucs "py -3.12 -m demucs"
 ```
 
 Vérifier que tout fonctionne sur une machine (sans rien télécharger) :
@@ -72,16 +72,16 @@ winget install --id Python.Python.3.12 -e
 Sur le **PC fixe (carte NVIDIA)**, installer d'abord la version GPU de PyTorch. La séparation est alors environ 10 fois plus rapide. La procédure complète, avec les vérifications, est dans `docs/installation-pc.md` :
 
 ```powershell
-py -m pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu124
+py -3.12 -m pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu128
 ```
 
 Puis :
 
 ```powershell
-py -m pip install demucs soundfile
+py -3.12 -m pip install demucs soundfile
 ```
 
-Ensuite, ajouter `--separer --demucs "py -m demucs"` à la commande. Le modèle (environ 80 Mo) se télécharge au premier usage.
+Ensuite, ajouter `--separer --demucs "py -3.12 -m demucs"` à la commande. Le modèle (environ 80 Mo) se télécharge au premier usage.
 
 **Durée** : sur processeur seul, environ 1/3 de la durée de la vidéo (≈ 25 min pour 70 min). Avec une carte NVIDIA, quelques minutes. Le résultat est gardé en cache : une relance ne refait pas la séparation.
 
@@ -109,7 +109,7 @@ Versions testées ici : Python 3.13, torch 2.15 (CPU), torchaudio 2.11, demucs 4
 --paralleles <n>           Extractions simultanées (défaut 4)
 --sans-son                 N'analyse pas la bande sonore
 --separer                  Sépare voix / accompagnement avec Demucs
---demucs "<commande>"      Commande Demucs (défaut demucs ; sous Windows : "py -m demucs")
+--demucs "<commande>"      Commande Demucs (défaut demucs ; sous Windows : "py -3.12 -m demucs")
 --tranche-son <s>          Durée couverte par une frise sonore
 ```
 
