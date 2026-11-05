@@ -40,7 +40,10 @@ Lancer en arrière-plan (3 à 4 min pour 25 min de vidéo). S'il y a plusieurs r
 
 ## 4. Extraire les procédés
 
-Ajouter ou enrichir les entrées de `docs/direction-artistique/procedes/catalogue.md` : un identifiant (famille N, I, M, T, H ou S + numéro), la source avec ses timecodes, l'effet recherché, la recette dans nos outils, l'effort et l'état. Si un procédé existe déjà, ajouter la nouvelle référence à sa ligne plutôt que de créer un doublon.
+Ajouter ou enrichir les fiches de `docs/direction-artistique/procedes/catalogue.md`, **au format des fiches existantes** : définition, fonction, quand l'utiliser, éviter si, recette, exemple, va avec / évite avec, source, effort, état.
+- Si le procédé existe déjà, ajouter la nouvelle référence à sa fiche plutôt que de créer un doublon.
+- Ne jamais réintroduire un procédé de la section « Écartés ».
+- Un **nouveau** procédé est d'abord proposé à Bruno, avec les boutons « intéressant » (couche 1), « moyennement » (couche 2) et « pas intéressant » (écarté). Il n'entre dans le catalogue qu'après ce tri. Mettre aussi à jour le tableau des fonctions de `procedes/README.md`.
 
 ## 5. Reconstruire et vérifier
 

@@ -4,7 +4,9 @@
 |---|---|
 | **Durée** | ≈ s |
 | **Fabrication** | Remotion · Blender · Génératif (Higgsfield) · Hybride (préciser) |
-| **Procédés** | identifiants du catalogue (`docs/direction-artistique/procedes/catalogue.md`), ex. `N05, I16, T01` |
+| **Fonction** | ACCROCHER · PROMETTRE · EXPLIQUER · PROUVER · RESSENTIR · RESPIRER · TRANSITIONNER · RELIER · RÉVÉLER · HABILLER · INCARNER |
+| **Procédé principal** | un identifiant du catalogue (`docs/direction-artistique/procedes/catalogue.md`), et **pourquoi** en une phrase |
+| **Procédés secondaires** | 2 au maximum |
 | **Statut** | à faire · en cours · à valider · validée |
 
 ## Intention
