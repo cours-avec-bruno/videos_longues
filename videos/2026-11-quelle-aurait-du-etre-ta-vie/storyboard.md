@@ -101,7 +101,7 @@ Les quatre matières de plan, toutes fabriquées. Elles restent dans les 3 mati�
 | Noir | 5 | 13 s | 2 % |
 
 - **92 plans**, plus 3 retours de l'interlude S06 et les grappes d'images : **environ 125 coupes** pour ≈ 11 min. La médiane visée est de 3 à 5 s par plan : entre la réf. 03 (3,3 s) et une vidéo plus contemplative. Les plans longs sont réservés aux graphiques (I03) et à la respiration (M05).
-- **Point à arbitrer** : l'interface (UI) occupe 26 % du temps. C'est cohérent avec le dispositif, mais si tu veux plus d'illustrations, on peut remplacer une partie des plans UI de S07 à S09 (les événements de l'année) par des images générées sur lesquelles le texte s'imprime.
+- **Équilibre des matières validé par Bruno (05/11/2026)** : on garde la répartition ci-dessus (3D 24 %, UI 26 %, MD 37 %, IMG ≈ 14 %).
 
 ### Motion design à créer (Remotion)
 
