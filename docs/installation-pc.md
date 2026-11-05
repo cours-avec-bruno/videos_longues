@@ -58,7 +58,15 @@ git config --global pull.rebase true
 
 ## 3. Récupérer le repo
 
-**Important : ne pas mettre le repo dans un dossier OneDrive** (Documents, Bureau, Images sont souvent synchronisés). OneDrive et Git se marchent dessus : fichiers verrouillés, doublons « -PC », `node_modules` synchronisé inutilement. Un chemin court hors OneDrive est idéal :
+**Important : ne pas mettre le repo dans un dossier OneDrive** (Documents, Bureau, Images sont souvent synchronisés). OneDrive et Git se marchent dessus : fichiers verrouillés, doublons « -PC », `node_modules` synchronisé inutilement. Un chemin court hors OneDrive est idéal.
+
+**Sur le PC fixe actuel**, le projet est dans `D:\Studio\videos_longues`, le disque qui a de la place pour les médias. `C:\Studio\videos_longues` est une jonction vers D, si bien que les anciens chemins (script d'installation, sessions Claude) continuent de fonctionner. Sur une installation neuve, clone de préférence sur D, puis recrée la jonction :
+
+```powershell
+New-Item -ItemType Junction -Path C:\Studio\videos_longues -Target D:\Studio\videos_longues
+```
+
+Les commandes ci-dessous montrent l'installation d'origine, sur C :
 
 ```powershell
 mkdir C:\Studio; cd C:\Studio

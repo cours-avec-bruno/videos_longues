@@ -44,6 +44,23 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - **PC fixe** : carte NVIDIA. C'est la machine de production (Blender en OptiX, rendus finaux, analyses de références avec séparation Demucs sur GPU). Le guide d'installation inclut PyTorch en version GPU (CUDA).
 - **Machine de discussion** : sans carte graphique. Bruno y échange avec Claude, mais rien de lourd ne doit y tourner.
 
+## 2026-11-05 · Projet déplacé sur le disque D
+
+- Le disque C du PC fixe n'avait plus que 22 Go libres sur 214, contre 147 Go libres sur D.
+- Le projet est maintenant dans `D:\Studio\videos_longues`. `C:\Studio\videos_longues` est une **jonction** vers D : le script d'installation, les sessions Claude et la mémoire de Claude gardent le même chemin.
+- Le projet ne pesait que ≈ 760 Mo (surtout `node_modules`) : le déplacement libère peu sur C. L'intérêt est que les médias à venir (rushes, générations, rendus, extractions) iront sur D.
+- Le reste de C est occupé par autre chose : Windows, logiciels, PyTorch, caches. C'est à surveiller.
+
+## 2026-11-05 · Réf. 03 et 04, catalogue de procédés
+
+- Analyse complète de la réf. 03 (CroustiJu, *Le paradoxe de l'intelligence*) et de la réf. 04 (ASTRE, *La Bibliothèque de Babel*) avec `analyser-reference --separer` : toutes les planches regardées, frises, transcriptions, images en pleine résolution.
+- **REA** (github.com/morluto/rea) est un outil de rétro-ingénierie de logiciels, inutilisable sur une vidéo. On a repris **sa méthode** : preuves étiquetées, registre des inconnues, reconstruction vérifiée. → `docs/direction-artistique/methode-retro-ingenierie.md` et la skill `retro-ingenierie-video`.
+- Création du **catalogue de procédés** (`docs/direction-artistique/procedes/catalogue.md`, 59 procédés en 6 familles) et d'un champ « Procédés » dans le modèle de fiche scène.
+- 5 composants Remotion reproduisent les procédés les plus transposables (`FondPoussiere`, `TexteBrouille`, `TerminalChargement`, `FiltreArchive`, `Mosaique`). Ils sont vérifiés par des rendus fixes.
+- Propositions de skills, de connecteurs et d'améliorations de l'outil d'analyse : `docs/outillage-propositions.md`. ElevenLabs est **déjà connecté**, et n'a pas encore servi.
+- Point de vigilance : la réf. 03 repose sur de nombreux extraits de films et d'animés. On garde le procédé d'unification, mais avec une autre matière (droits).
+- Aucun crédit dépensé.
+
 ## 2026-11-05 · Branche `main`
 
 - Création de **`main`**, la référence du projet. Avant, la branche par défaut était une branche de session cloud (`claude/wizardly-archimedes-sapbhh`), au nom généré automatiquement.

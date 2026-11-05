@@ -4,6 +4,7 @@
 |---|---|
 | **Durée** | ≈ s |
 | **Fabrication** | Remotion · Blender · Génératif (Higgsfield) · Hybride (préciser) |
+| **Procédés** | identifiants du catalogue (`docs/direction-artistique/procedes/catalogue.md`), ex. `N05, I16, T01` |
 | **Statut** | à faire · en cours · à valider · validée |
 
 ## Intention

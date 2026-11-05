@@ -19,8 +19,16 @@
 |---|---|---|---|
 | 01 | [Le diable s'habille en Yoda](https://www.youtube.com/watch?v=5zQ8Yn11Kp8) | [`analyses/ref01-mareko-scarla.md`](analyses/ref01-mareko-scarla.md) | *à compléter par Bruno* |
 | 02 | [Le Panoptique](https://www.youtube.com/watch?v=K8Ugw48gnNk) | [`analyses/ref02-panoptique.md`](analyses/ref02-panoptique.md) | *à compléter par Bruno* |
+| 03 | [Le paradoxe de l'intelligence (CroustiJu)](https://www.youtube.com/watch?v=CG2jTExMv88) | [`analyses/ref03-paradoxe-intelligence.md`](analyses/ref03-paradoxe-intelligence.md) | *à compléter par Bruno* |
+| 04 | [Le Vertige Infini de la Bibliothèque de Babel (ASTRE)](https://www.youtube.com/watch?v=J3JsyxABi0g) | [`analyses/ref04-bibliotheque-babel.md`](analyses/ref04-bibliotheque-babel.md) | *à compléter par Bruno* |
 
-Synthèse croisée : [`analyses/synthese-ref01-ref02.md`](analyses/synthese-ref01-ref02.md)
+Synthèse croisée : [`analyses/synthese-ref01-ref02.md`](analyses/synthese-ref01-ref02.md). Les convergences des 4 références sont en fin de catalogue.
+
+## Procédés et méthode
+
+- **Catalogue des procédés réutilisables** : [`procedes/catalogue.md`](procedes/catalogue.md). Chaque fiche scène cite les identifiants qu'elle utilise.
+- **Méthode de rétro-ingénierie** (inspirée de REA) : [`methode-retro-ingenierie.md`](methode-retro-ingenierie.md), appliquée par la skill `.claude/skills/retro-ingenierie-video/`.
+- **Composants prêts** : `shared/remotion/components/` (démo `Outils/Bibliotheque-Procedes`).
 
 ## À définir ensuite
 

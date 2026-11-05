@@ -85,7 +85,7 @@ Le travail se fait à deux endroits, reliés par le repo GitHub, qui est la **r�
 
 **Le PC fixe est la machine de production** : c'est lui qui a la carte graphique NVIDIA. Bruno échange aussi avec Claude depuis une autre machine, **sans carte graphique** : n'y lance rien de lourd (séparation Demucs, rendus Blender, rendus finaux). Si une tâche lourde est demandée depuis cette machine, propose de la faire sur le PC fixe.
 
-Pour savoir où tu tournes : le cloud est sous Linux (`/home/user/...`), le PC fixe sous Windows (`C:\Studio\videos_longues`). Sur une machine Windows, `nvidia-smi` indique si une carte NVIDIA est présente. Vérifie aussi quels outils sont réellement disponibles en début de session.
+Pour savoir où tu tournes : le cloud est sous Linux (`/home/user/...`), le PC fixe sous Windows (`D:\Studio\videos_longues`, aussi accessible par `C:\Studio\videos_longues`, qui est une jonction vers D:). Le disque D (≈ 250 Go) accueille le projet et ses médias, et le disque C est presque plein : n'y stocke rien de lourd. Sur une machine Windows, `nvidia-smi` indique si une carte NVIDIA est présente. Vérifie aussi quels outils sont réellement disponibles en début de session.
 
 **Routine de synchronisation** (à appliquer toi-même, où que tu tournes) :
 
