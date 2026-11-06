@@ -9,48 +9,94 @@ Légende : **[MOTEUR]** = donné par le moteur (récit, chiffres, citations) · 
 | Niveau | Règle | Comment |
 |---|---|---|
 | **La naissance** | Les conditions les plus probables | Pays : **l'Inde** (17,6 % des naissances, 1 sur 6) **[MOTEUR, page du site]**. Lieu : **la campagne** (68 % des bébés indiens simulés, 41 sur 60) **[MOTEUR]**. Sexe : **garçon** (en Inde, il naît environ 107 à 110 garçons pour 100 filles ; **[À VÉRIFIER]**, ONU WPP 2024). Cinquième de revenus : chacun fait 20 % par définition, donc aucun n'est « le plus probable » ; on prend **celui du milieu** (le 3e). Religion et caste : **les plus fréquentes, mesurées par le moteur** (script, option `--mesurer faith,caste`) |
-| **Les décisions** | L'option que prend la majorité dans la même situation | La politique `auto` du moteur, « ce que la plupart des gens choisissent ». Statistiquement, c'est l'option qui avait le plus de chances d'être prise |
+| **Les décisions** | L'option que prend la majorité dans la même situation | **Décidée par nous, pas à pas** : à chaque décision, l'option la plus fréquente parmi 200 vies nées dans les mêmes conditions. La politique `auto` du moteur ne convient pas, parce qu'elle tire au sort selon les parts (voir plus bas) |
 | **Les événements** | Impossible à choisir | Les maladies, les rencontres et la mort sont tirées au sort par le moteur. On situe chacun d'eux par rapport aux médianes de vies simulées |
 
 **[CALCUL]** Inde × campagne × garçon × 3e cinquième ≈ 17,6 % × 68 % × 52 % × 20 % ≈ **1,2 % des naissances**, soit environ 1 sur 80. C'est peu, mais aucune autre combinaison n'est plus fréquente. C'est le paradoxe à dire dans la vidéo : même la vie la plus probable est rare.
 
-## Où on en est
+## Comment la vie définitive a été jouée
 
-1. **Khadija Ibrahim**, jouée en premier : naissance **tirée au sort** (Algérie), décisions `auto`. Elle **n'est plus la vie principale**. Elle devient une vie de comparaison : « la vie tirée au sort ».
-2. **Yash Gupta**, jouée ensuite par le connecteur : Inde, campagne, garçon, 3e cinquième, décisions `auto`. Mais la religion (hindou) et la caste (« catégorie générale ») ont été **tirées par le moteur**, parce que le connecteur ne permet pas de les fixer. Or la catégorie la plus nombreuse en Inde est sans doute celle des « autres classes défavorisées » (OBC), et pas la catégorie générale **[À VÉRIFIER]**. **Yash est donc une version provisoire.**
-3. **La vie définitive** viendra du script : conditions ci-dessus, religion et caste mesurées par le moteur, puis la même vie en politique `ambitious`, et chaque décision avec ses options. Si la caste mesurée est bien la catégorie générale, la vie définitive sera Yash, puisque la seed et les conditions sont les mêmes.
+1. **Les conditions de naissance les plus fréquentes, mesurées par le moteur** (`0-mesures-naissance.json`, 60 bébés indiens simulés, garçons, campagne, 3e cinquième) **[MOTEUR]** :
+   - religion **hindoue** pour 47 sur 60 (devant musulmane 8, chrétienne 2, aucune 2, autre 1) ;
+   - caste **OBC, les « autres classes défavorisées »**, pour 28 sur 60 (devant la catégorie générale 16, les castes répertoriées, ou dalits, 11, et sans catégorie 5).
+2. **Découverte qui change la méthode** : la politique `auto` du moteur ne prend **pas** toujours l'option majoritaire. Elle **tire au sort selon les parts réelles**. Par exemple, au carrefour après le lycée, 71 % des vies tentent l'université et 25 % prennent un emploi (`6-parts-decisions.json`). Yash, la version provisoire, avait pris l'emploi : l'option minoritaire. Bruno avait raison de le soupçonner, et « ce que la plupart des gens choisissent » n'était pas « toujours le plus probable ».
+3. **On a donc décidé nous-mêmes, pas à pas** (`/live`, script `shared/outils/1in8b/jouer_plus_probable.py`) :
+   - à chaque décision, on prend **l'option la plus fréquente**, estimée sur **200 vies nées dans les mêmes conditions** ;
+   - on la mesure, quand c'est possible, sur les rencontres où **exactement les mêmes options** étaient proposées ;
+   - sur 37 décisions, toutes ont pu être estimées.
+4. **Ce que valent ces pourcentages** : ce sont des **parts observées sur des vies simulées** (un échantillon), et non des probabilités publiées par le moteur, qui n'en publie aucune. Ils serviront pour les encarts « À VOUS », avec la mention « part des vies simulées nées dans les mêmes conditions ».
+   - Quelques décisions sont des **quasi-égalités** : 7 ans (34 % contre 33 %), 12 ans (51 % contre 49 %), 16 ans (51 % contre 49 %), 40 ans (44 % contre 43 %), 57 et 73 ans (38 % contre 37 %). Avec ces échantillons, ce sont des égalités statistiques. On a pris la plus haute observée et on le dira.
+   - Deux décisions reposent sur très peu de cas : 25 ans (l'étranger, 7 cas) et 61 ans (l'argent de poche des petits-enfants, 5 cas).
 
-## Yash Gupta (version provisoire)
+Les étapes intermédiaires sont gardées dans l'archive : Khadija (tirée au sort), Yash (naissance la plus probable, caste tirée par le moteur), et `1-vie-auto.json` (même naissance que la vie définitive, mais choix laissés à la politique `auto`, qui tire au sort).
 
-Seed 20261106, moteur 0.9.52. **[MOTEUR]** Né en 2026 dans un village indien, hindou, catégorie générale, 3e cinquième. Ses parents ont 28 et 32 ans ; il a 1 frère aîné, et 3 petits frères naîtront ensuite. Mort à **74 ans**, de bronchopneumopathie chronique obstructive (BPCO).
+## La vie définitive : Manoj Mohanty
 
-- **L'enfance (0 à 10 ans)** :
-  - pas de vaccins, parce que le centre de santé était trop loin ; une pneumonie à 1 an ;
-  - la queue au puits pour remplir la cruche ;
-  - à 6 ans, pas d'acte de naissance : il faut régler les papiers avant l'école ;
-  - **à 6 ans, quand on lui demande ce qu'il veut faire plus tard : « chef d'entreprise »** ;
-  - des coups de baguette sur la paume, « après cela, vous n'avez plus levé la main en classe » ;
-  - le cricket, qui sera la passion de sa vie ;
-  - **à 10 ans, une image très forte : les enfants dont la famille a donné une enveloppe à l'enseignant sont assis sous le ventilateur ; lui, au fond, s'essuie le front** (le moteur cite Transparency International : 22 % des usagers disent avoir versé un pot-de-vin à l'école publique).
-- **L'école** : à 11 ans, décision « Continuer à étudier » (le collège) ; à 14 ans, « Aller au lycée » ; à 17 ans, « Rester à l'école ». Il finit le lycée à 18 ans. Le moteur cite les 2 276 069 inscrits au concours de médecine NEET-UG 2025.
-- **18 ans · le carrefour** : décision **« Prendre un emploi tout de suite » plutôt que l'université**. Il devient éleveur. Décision : « Boire moins et trouver d'autres façons de tenir ».
-- **23 ans** : décision **« Partir à Kanpur »**, où il devient électricien. 1 h 30 d'embouteillages par jour. À 25 ans, le chantier s'arrête et il n'a plus de travail ; il reprend comme électricien à 26 ans.
-- **27 à 34 ans · l'amour qui n'aboutit pas** : à 27, 29 et 32 ans, la même décision, **« Prendre le temps de mieux se connaître »** avec Rashmi. À 34 ans : « Le projet de mariage avec Rashmi n'a finalement pas abouti. » **Il ne se mariera pas et n'aura pas d'enfant.** Pourtant, environ 93 % des hommes indiens simulés vivent en couple avant 50 ans **[MOTEUR]**. Le choix le plus fréquent, répété trois fois, a mené à une issue rare.
-- **28 ans** : une moto à crédit. **31 ans** : la mort de son père, à 64 ans. **37 ans** : décision **« Appeler maintenant pour le dire »** : « Au bout du fil, vos mots ont laissé votre mère sans voix un long moment. »
-- **43 ans** : décision « Acheter avec un prêt immobilier » : avec l'aide de sa mère, il achète son logement, et il a 18 900 € de dette.
-- **55 ans** : un chat, Max. **56 ans** : licencié après 30 ans de travail, avec une indemnité de 18 900 € ; il devient ouvrier d'usine et rembourse toutes ses dettes.
-- **60 ans** : la retraite. **61 ans** : la première télévision et le premier réfrigérateur.
-- **62 ans** : la mort de sa mère, à 91 ans. **63 ans** : « Après des années sans rien gagner, vous avez cessé d'acheter des billets de loterie. »
-- **64 ans** : « Quand vous rentriez dans la maison où vous viviez seul, le premier bonjour venait de Max. »
-- **71 ans** : Max meurt ; ses poumons sont très affaiblis (le moteur cite la pollution, 56 µg/m³ de particules fines, soit 11 fois la valeur guide de l'OMS). **72 ans** : il vend sa maison et rembourse tout. **73 ans** : décision « Rester chez vous ».
-- **74 ans** : « Vous avez confié à un frère ce que vous n'aviez pu dire à personne. Pour toute réponse, une présence silencieuse à vos côtés. » Le bénévolat à la soupe populaire. La mort.
+`7-vie-la-plus-probable.json` · seed 20261106 · moteur 0.9.52 · **[MOTEUR]** sauf mention.
 
-**[CALCUL] Une vie très proche de la médiane** : il meurt à 74 ans, quand l'âge médian au décès des hommes indiens simulés est de 72 ans. À 40 ans, il travaille, comme 93 % d'entre eux. Il sort de la statistique sur deux points. Ses études d'abord : il finit le lycée, alors qu'à 40 ans seuls 21 % des hommes indiens simulés ont ce niveau (le plus fréquent est le collège, 45 %), sans doute grâce au 3e cinquième et à la catégorie générale, à vérifier avec la caste mesurée. Et le célibat.
+**Né en 2026 dans un village indien**, garçon, hindou, OBC, 3e cinquième. Il est le petit dernier, après deux grandes sœurs et deux grands frères. Mort à **75 ans**, d'une pneumonie, en Inde. Pour comparer : l'âge médian au décès des hommes indiens simulés est de 72 ans.
 
-> **[IDÉE]**
-> - « Chef d'entreprise » à 6 ans, électricien toute sa vie : c'est l'écho du rêve d'enfant, à reprendre dans l'aveu.
-> - Le ventilateur est une image parfaite pour la vidéo, et faisable en motion design : une salle de classe en plan, des pupitres, un ventilateur, des points qui s'écartent.
-> - Le grand « À VOUS » devient celui de **18 ans : l'université ou un emploi tout de suite**. Le spectateur choisira l'université, et l'opérateur cliquera « emploi ».
+| Âge | Ce qui arrive | Décision : l'option la plus fréquente (part estimée) |
+|---|---|---|
+| 0-4 | Les vaccins ; le premier mot, « Maman » ; l'eau qu'on va chercher toujours plus loin les mois sans pluie ; la cuisine au feu de bois, la fumée qui pique les yeux | 2 ans : courir partout devant le visiteur (30 %, contre 25, 23 et 22 %) |
+| 5 | Ses parents l'inscrivent dans une école privée, « les frais étaient loin d'être négligeables » | Une pause : le garder pour soi (100 %) |
+| 6-10 | L'école ; le bidon d'eau avant l'aube ; la case « caste : OBC » sur le dossier ; **à 8 ans, il veut être « ingénieur »** ; à 9 ans, les coups de baguette (« vous n'avez plus levé la main en classe »), et la famille s'endette ; à 10 ans, la viande seulement aux fêtes | 7 ans : les rencontres religieuses (34 %, quasi-égalité avec la danse et le cricket) |
+| **11** | **Il finit le primaire. Décision : continuer à étudier. Puis : « Votre famille n'a pas pu payer les frais de scolarité ; vous avez dû renoncer à poursuivre vos études. » Il passe ses journées à s'occuper des bêtes.** | **Continuer à étudier : 97 %** (contre 3 % pour travailler) |
+| 12-14 | Les champs, l'eau. Un cyclone. **« Vous enviiez vos amis qui allaient à l'école. »** | 12 ans : faire le premier pas vers une amitié (51 %) |
+| **15** | **Premier emploi : pêcheur.** | Pêcheur 33 %, éleveur 32 %, paysan 30 %, attendre 5 % |
+| 16-23 | Le premier salaire, un cadeau à sa mère, « seulement un long regard silencieux ». La nuit en mer, bredouille. Preeti, une grande amitié à 17 ans. À 21 ans, il confie à une sœur « ce que vous n'aviez pu dire à personne » | 16 ans : emmener à l'hôpital quelqu'un qui s'effondre (51 %) |
+| 24 | Une toux qui ne s'arrête pas : **la tuberculose**, guérie, mais endetté | Se faire soigner à l'hôpital (70 %) |
+| 25 | Une occasion de partir aux États-Unis | Rester (71 %, sur 7 cas seulement) |
+| **26** | **Il épouse Preeti.** La famille de la mariée verse une dot. Ils vivent chez ses parents | Se marier (61 %, contre 29 % pour prendre le temps et 10 % pour refuser) |
+| 27 | Le théâtre devient sa passion | Théâtre (28 %, quasi-égalité) |
+| 28, 31 | Pradeep naît, puis **Usha** (le prénom de son amie d'enfance) | Avoir un enfant (74 %), deux fois |
+| 29 | Preeti s'arrête de travailler pour s'occuper du bébé. **Son deuxième frère meurt de la tuberculose, à 32 ans** | Confier le bébé à sa partenaire (66 %) |
+| 30 | Avec Preeti, il construit une maison sur la terre de la famille | — |
+| 33 | La mort de son père (maladie diarrhéique) | L'école publique pour Pradeep (61 %) |
+| 35 | La dengue : « votre corps n'est plus ce qu'il était » | L'hôpital (70 %) |
+| 37 | **Son frère aîné meurt de la tuberculose, à 49 ans** | Dire oui à Pradeep, qui veut apprendre un instrument (59 %) |
+| 39-41 | Usha, la typhoïde, guérie. **Une liaison** : « Les mensonges se sont accumulés », puis « Preeti a tout découvert ». Il demande pardon, et elle lui fait confiance « une fois encore » | 39 ans : le grand hôpital, quitte à emprunter (75 %) · 40 ans : demander de l'aide à la famille pour la dette (44 %, contre 43 % pour l'usurier) · 41 ans : se reparler à cœur ouvert (92 %, sur 12 cas) |
+| 46-49 | L'alcool, qu'il réduit, puis qui revient, puis qu'il réduit encore. Une moto à crédit. Sa mère vit avec lui | 46 ans : boire moins (58 %) · 48 ans : la moto à crédit (52 %) · 49 ans : s'occuper lui-même de sa mère (41 %) |
+| 50 | La mort de sa mère (septicémie) | Le football (28 %) |
+| 52-58 | Les mariages de Pradeep et d'Usha, et la dot qu'il verse à son tour. Six petits-enfants. **À 53 ans, au théâtre, le premier rôle, « les applaudissements n'en finissaient plus »**. À 57 ans, il saute des repas, avec 18 300 € de dette | Donner un peu, selon ses moyens (42 %), deux fois · 57 ans : l'aide de la famille (38 %) |
+| 60 | — | Continuer à travailler (55 %) |
+| 65 | Pradeep devient responsable de l'hébergement dans un hôtel | — |
+| 66-73 | Les 40 ans de mariage, une lettre de Preeti. La jeune recrue qu'il a écoutée l'invite à son mariage, « c'était grâce à vous ». L'hypertension. La dette : encore 9 682 € à 73 ans | Écouter la recrue (57 %) · suivre le traitement (51 %) · l'aide de la famille (38 %) |
+| 74 | **Son petit-fils entre à l'université.** | — |
+| **75** | Usha achète un logement. Puis : « À 75 ans, votre vie a pris fin (pneumonie ou autre infection respiratoire basse). » | — |
+
+**Bilan [MOTEUR]** :
+- l'école primaire seulement ;
+- pêcheur toute sa vie ;
+- marié à Preeti pendant 49 ans ;
+- 2 enfants et 6 petits-enfants ;
+- une dette jamais soldée ;
+- deux frères emportés par la tuberculose ;
+- un patrimoine d'environ 8 600 € (en parité de pouvoir d'achat) à sa mort.
+
+### Pourquoi c'est la vie idéale pour la vidéo
+
+- **11 ans, c'est le cœur de la thèse.** L'option la plus probable, choisie par 97 % des vies, était de continuer l'école. Il la choisit, et le monde lui dit non : la famille ne peut pas payer. C'est la phrase du site, *« les choix changent les probabilités mais ne décident jamais du résultat »*, rendue visible. **C'est le grand « À VOUS » de la vidéo** : le spectateur choisit l'école, l'opérateur aussi, et c'est raté quand même.
+- **Le rêve d'enfant** : « ingénieur » à 8 ans, pêcheur à 15 ans. À reprendre dans l'aveu.
+- **Une vie ordinaire et pleine** : la mer, Preeti, le théâtre, les enfants, la faute pardonnée, les applaudissements à 53 ans. Elle n'est ni misérable ni enviable, et c'est exactement le registre du « plus probable ».
+- **Un écho entre générations** : lui quitte l'école à 11 ans, et **son petit-fils entre à l'université** l'année avant sa mort ; sa fille achète un logement. La pente sociale existe aussi vers le haut, lentement, sur trois générations. C'est la nuance anti-fatalisme (N11), trouvée dans la vie elle-même.
+- **La tuberculose** : elle le touche et tue deux de ses frères. Le moteur la rend banale, et c'est un vrai sujet (l'Inde est le pays qui compte le plus de cas au monde, **[À VÉRIFIER]**, OMS).
+
+### La variante « pour réussir » (même naissance, même seed, politique `ambitious`)
+
+`1-vie-auto.json` (choix tirés au sort selon les parts) et `2-vie-ambitieuse.json` (choix ambitieux) : **[MOTEUR]**
+
+| | Choix tirés au sort (`auto`) | Choix ambitieux |
+|---|---|---|
+| Études | lycée | **master ou doctorat** |
+| Travail | éleveur, électricien, mécanicien | **professeur** |
+| Rang de revenu dans le pays, à 40 ans | 78e centile | **97e centile** |
+| Enfants | 2 | 4 |
+| Mort | 80 ans, AVC | **89 ans**, AVC |
+
+⚠️ **L'hypothèse qu'on voulait tester est infirmée.** Dans le moteur, des choix ambitieux, dès l'enfance, **changent beaucoup** la vie. L'aveu (S13) ne doit donc **pas** dire « vos choix n'auraient rien changé ». Proposition :
+- **ce qu'on peut dire honnêtement** : « Les choix comptent. Mais à chaque carrefour, la plupart des gens prennent le même chemin, celui que leur point de départ rend le plus probable. Le déterminisme, ce n'est pas une interdiction. C'est une pente. » Et le cas des 11 ans montre l'autre face : même le bon choix peut être refusé par le monde ;
+- **ce qu'il faut vérifier avant de montrer la variante** : la vie ambitieuse vient d'un autre chemin aléatoire (ses événements divergent après le premier choix différent). Pour la montrer à l'écran, il faudrait comparer sur beaucoup de vies (`/simulate` en politique `ambitious` contre `auto`), et non sur une seule. **[À FAIRE]**
 
 ## Partie 1 · Khadija Ibrahim (la vie tirée au sort, pour comparaison)
 

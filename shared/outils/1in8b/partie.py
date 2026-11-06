@@ -50,7 +50,7 @@ class Api:
     def _req(self, req):
         req.add_header("Authorization", "Bearer " + self.cle)
         req.add_header("User-Agent", UA)
-        for essai in range(4):
+        for essai in range(8):
             try:
                 with urllib.request.urlopen(req, timeout=120) as r:
                     self.appels += 1
@@ -58,11 +58,13 @@ class Api:
                     return json.loads(r.read().decode("utf-8"))
             except urllib.error.HTTPError as e:
                 corps = e.read().decode("utf-8", "replace")
-                if e.code == 429 and essai < 3:
-                    time.sleep(30)
+                if e.code in (429, 502, 503, 504) and essai < 7:
+                    attente = 30 if e.code == 429 else 10 * (essai + 1)
+                    print(f"   (serveur : {e.code}, nouvel essai dans {attente} s)")
+                    time.sleep(attente)
                     continue
                 sys.exit(f"Erreur {e.code} sur {req.full_url.split('?')[0]} : {corps[:500]}")
-        sys.exit("Trop d'erreurs 429.")
+        sys.exit("Trop d'erreurs du serveur.")
 
     def get(self, chemin, **params):
         q = urllib.parse.urlencode({k: v for k, v in params.items() if v is not None})
@@ -157,7 +159,10 @@ def main():
     ap.add_argument("--caste")
     ap.add_argument("--mesurer", default="", help="traits à fixer à leur valeur la plus fréquente, mesurée par /simulate (ex. faith,caste)")
     ap.add_argument("--sans-live", action="store_true", help="ne pas rejouer pas à pas avec /live")
+    ap.add_argument("--etapes", default="mesures,auto,ambitieuse,live,autres,tiree",
+                    help="étapes à faire ; les autres sont relues dans le dossier de sortie (ex. live,autres,tiree)")
     a = ap.parse_args()
+    etapes = {e.strip() for e in a.etapes.split(",")}
 
     dossier = pathlib.Path(a.sortie)
     dossier.mkdir(parents=True, exist_ok=True)
@@ -167,7 +172,10 @@ def main():
     print(f"Partie seed {a.seed}, conditions {cond} → {dossier}")
 
     mesures = {}
-    for trait in [t.strip() for t in a.mesurer.split(",") if t.strip()]:
+    if "mesures" not in etapes and (dossier / "0-mesures-naissance.json").exists():
+        cond = json.loads((dossier / "0-mesures-naissance.json").read_text(encoding="utf-8"))["conditions_finales"]
+        print(f"   conditions relues : {cond}")
+    for trait in [t.strip() for t in a.mesurer.split(",") if t.strip() and "mesures" in etapes]:
         print(f"0. Mesure du trait le plus fréquent : {trait}")
         valeur, detail = le_plus_frequent(api, cond, trait, a.seed)
         mesures[trait] = {"retenu": valeur, **(detail if isinstance(detail, dict) and "parts" in detail else {"reponse": detail})}
@@ -177,27 +185,33 @@ def main():
     if mesures:
         ecrire(dossier, "0-mesures-naissance.json", {"conditions_finales": cond, "mesures": mesures})
 
-    print("1. La vie au plus fréquent (politique auto)")
-    auto = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1, trace=1, **cond)
-    ecrire(dossier, "1-vie-auto.json", auto)
+    if "auto" in etapes:
+        print("1. La vie au plus fréquent (politique auto)")
+        auto = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1, trace=1, **cond)
+        ecrire(dossier, "1-vie-auto.json", auto)
+    else:
+        auto = json.loads((dossier / "1-vie-auto.json").read_text(encoding="utf-8"))
 
-    print("2. La même vie, politique ambitieuse")
-    ambi = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1, trace=1, policy="ambitious", **cond)
-    ecrire(dossier, "2-vie-ambitieuse.json", ambi)
+    if "ambitieuse" in etapes:
+        print("2. La même vie, politique ambitieuse")
+        ambi = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1, trace=1, policy="ambitious", **cond)
+        ecrire(dossier, "2-vie-ambitieuse.json", ambi)
 
-    if not a.sans_live:
+    if not a.sans_live and "live" in etapes:
         print("3. La vie rejouée pas à pas (/live)")
         vie = (auto.get("lives") or [{}])[0]
         pas = rejouer_live(api, a.seed, a.lang, vie.get("decisions"), cond)
         ecrire(dossier, "3-live-pas-a-pas.json", {"meta": auto.get("meta"), "seed": a.seed, "conditions": cond, "pas": pas})
 
-    print("4. Les 4 autres bébés (tirés au sort, sans condition)")
-    autres = [api.get("/life", seed=a.seed + i, lang=a.lang, record=0, decisions=1) for i in range(1, 5)]
-    ecrire(dossier, "4-autres-bebes.json", autres)
+    if "autres" in etapes:
+        print("4. Les 4 autres bébés (tirés au sort, sans condition)")
+        autres = [api.get("/life", seed=a.seed + i, lang=a.lang, record=0, decisions=1) for i in range(1, 5)]
+        ecrire(dossier, "4-autres-bebes.json", autres)
 
-    print("5. La vie tirée au sort avec la même seed (Khadija, pour comparaison)")
-    tiree = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1)
-    ecrire(dossier, "5-vie-tiree-au-sort.json", tiree)
+    if "tiree" in etapes:
+        print("5. La vie tirée au sort avec la même seed (Khadija, pour comparaison)")
+        tiree = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1)
+        ecrire(dossier, "5-vie-tiree-au-sort.json", tiree)
 
     ecrire(dossier, "0-meta.json", {
         "seed": a.seed,

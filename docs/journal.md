@@ -126,6 +126,14 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Version provisoire jouée par le connecteur : **Yash Gupta** (caste tirée par le moteur). La vie définitive sortira du script `shared/outils/1in8b/partie.py`, qui a maintenant les options `--country`, `--sex`, `--place`, `--fifth` et `--mesurer faith,caste`.
 - Khadija (Algérie, tirée au sort) devient une vie de comparaison.
 
+## 2026-11-06 · Vie définitive : Manoj Mohanty
+
+- Le moteur a mesuré la religion et la caste les plus fréquentes pour un garçon indien de la campagne, 3e cinquième : hindoue (47 sur 60) et OBC (28 sur 60).
+- **Découverte** : la politique `auto` tire au sort selon les parts réelles. Elle ne prend pas toujours l'option majoritaire. La vie définitive a donc été jouée pas à pas (`/live`) en prenant à chaque décision l'option la plus fréquente, estimée sur 200 vies nées dans les mêmes conditions. Les scripts sont `parts_decisions.py` et `jouer_plus_probable.py`.
+- L'API ne publie aucune probabilité par option : les pourcentages des encarts « À VOUS » seront des **parts observées**, à présenter comme telles.
+- La variante ambitieuse de la même naissance réussit beaucoup mieux (professeur, 89 ans). L'aveu doit dire « une pente, pas une interdiction ».
+- Environ 800 unités sur 2 000 consommées ce mois-ci.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

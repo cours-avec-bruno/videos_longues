@@ -1,0 +1,5100 @@
+{
+ "meta": {
+  "api": "1in8b-engine",
+  "version": "v1",
+  "status": "beta",
+  "kind": "life",
+  "engine": "0.9.52",
+  "simulated": "simulated lives that follow real statistics: not real people, records, measurements or forecasts",
+  "docs": "https://1in8b.life/en/api/",
+  "terms": "https://1in8b.life/en/api/#terms",
+  "credit": "1in8b Engine (1in8b.life)",
+  "tier": "free"
+ },
+ "query": {
+  "country": "IND",
+  "sex": "M",
+  "year": null,
+  "future": false,
+  "n": 1,
+  "seed": 20261106,
+  "fifth": 3,
+  "place": "village",
+  "faith": "hindu",
+  "caste": "obc",
+  "policy": "ambitious",
+  "lang": "fr"
+ },
+ "lives": [
+  {
+   "seed": 20261106,
+   "country": "IND",
+   "born_year": 2026,
+   "sex": "M",
+   "name": "Manoj Mohanty",
+   "born_in_city": false,
+   "education": "graduate",
+   "education_at_25": "graduate",
+   "jobs": [
+    {
+     "id": "prof",
+     "from": 23,
+     "to": 60
+    }
+   ],
+   "first_partner_age": 25,
+   "children": 4,
+   "first_child_age": 28,
+   "siblings": 4,
+   "moves": [],
+   "age_at_death": 89,
+   "cause_of_death": "str",
+   "died_in": "IND",
+   "who": {
+    "faith": "hindu",
+    "group": null,
+    "orientation": "straight",
+    "disability": [],
+    "caste": {
+     "id": "obc",
+     "name": "Autres classes défavorisées (OBC)"
+    }
+   },
+   "family_at_birth": {
+    "parents": "mother_and_father",
+    "mother_age": 35,
+    "father_age": 40,
+    "father_there": true,
+    "older_siblings": 4,
+    "family_fifth": 3
+   },
+   "met": [
+    {
+     "age": 30,
+     "year": 2056,
+     "kind": "flood",
+     "severe": false,
+     "near": true
+    },
+    {
+     "age": 35,
+     "year": 2061,
+     "kind": "economic_crisis"
+    },
+    {
+     "age": 49,
+     "year": 2075,
+     "kind": "economic_crisis"
+    },
+    {
+     "age": 59,
+     "year": 2085,
+     "kind": "economic_crisis"
+    },
+    {
+     "age": 76,
+     "year": 2102,
+     "kind": "economic_crisis"
+    },
+    {
+     "age": 83,
+     "year": 2109,
+     "kind": "economic_crisis"
+    },
+    {
+     "age": 89,
+     "year": 2115,
+     "kind": "economic_crisis"
+    }
+   ],
+   "decisions": [
+    {
+     "age": 2,
+     "id": "temper",
+     "question": "Deux ans, un visiteur inconnu",
+     "about": "Manoj marche maintenant plutôt bien. Quand un visiteur inconnu arrive à la maison, que fait l’enfant en premier ? Votre choix fait pencher le tempérament de l’enfant de ce côté ; ces moments s’additionnent, et il se dessine vers cinq ans.",
+     "fact": "Le tempérament naît à la fois de ce que l’on reçoit à la naissance et de ce que l’on vit en grandissant. D’après l’ensemble des études sur les jumeaux, environ 40 % des différences de personnalité s’expliquent par les gènes (Vukasović & Bratko 2015)",
+     "choices": [
+      {
+       "key": "cur",
+       "label": "Examiner longuement le sac et les chaussures du visiteur",
+       "note": null
+      },
+      {
+       "key": "act",
+       "label": "Courir dans tous les sens devant le visiteur",
+       "note": null
+      },
+      {
+       "key": "warm",
+       "label": "S’approcher du visiteur et lui tendre ce qu’on a dans la main",
+       "note": null
+      },
+      {
+       "key": "grit",
+       "label": "Vouloir ouvrir tout seul le paquet du visiteur et s’y tenir jusqu’au bout",
+       "note": null
+      }
+     ],
+     "chose": "act"
+    },
+    {
+     "age": 5,
+     "id": "reflect",
+     "question": "Une pause · 5 ans",
+     "about": "En Inde, 3,0 % des enfants n’atteignent pas leur cinquième anniversaire. Cet enfant l’a atteint.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "write",
+       "label": "Le noter et continuer à vivre",
+       "note": "Ce que vous écrivez reste dans le récit de cette vie"
+      },
+      {
+       "key": "skip",
+       "label": "Le garder pour soi et continuer à vivre",
+       "note": null
+      }
+     ],
+     "chose": "skip"
+    },
+    {
+     "age": 7,
+     "id": "hobby",
+     "question": "Ce que vous aimez faire",
+     "about": "Que ferez-vous de votre temps libre ?",
+     "fact": null,
+     "choices": [
+      {
+       "key": "dance",
+       "label": "Danse",
+       "note": "Bonheur+ Santé+ Relations+"
+      },
+      {
+       "key": "faith",
+       "label": "Rencontres religieuses",
+       "note": "Bonheur+ Relations+"
+      },
+      {
+       "key": "sp_cricket",
+       "label": "Cricket",
+       "note": "Bonheur+ Santé+ Relations+"
+      }
+     ],
+     "chose": "sp_cricket"
+    },
+    {
+     "age": 8,
+     "id": "sm_wallet",
+     "question": "Un portefeuille dans la rue",
+     "about": "Vous avez trouvé un portefeuille dans la rue. Il y a pas mal d’argent dedans.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "return",
+       "label": "En parler à un adulte et retrouver le propriétaire",
+       "note": null
+      },
+      {
+       "key": "keep",
+       "label": "Le garder en douce",
+       "note": null
+      }
+     ],
+     "chose": "return"
+    },
+    {
+     "age": 11,
+     "id": "school2",
+     "question": "Aller au collège ?",
+     "about": "Vous avez terminé l’école primaire. Pour continuer, il faut payer les frais de scolarité, l’uniforme et le transport.",
+     "fact": "En Inde, environ 86 % des enfants terminent le collège (UNESCO UIS)",
+     "choices": [
+      {
+       "key": "go",
+       "label": "Continuer à étudier",
+       "note": "Vos chances dépendent des moyens de votre famille et de vos notes"
+      },
+      {
+       "key": "work",
+       "label": "Commencer à travailler pour aider votre famille",
+       "note": "Un petit revenu, la fin de l’école"
+      }
+     ],
+     "chose": "go"
+    },
+    {
+     "age": 14,
+     "id": "school3",
+     "question": "Aller au lycée ?",
+     "about": "Vous avez terminé le collège. Certains de vos amis ont commencé à travailler.",
+     "fact": "En Inde, environ 51 % des jeunes terminent le lycée (UNESCO UIS)",
+     "choices": [
+      {
+       "key": "go",
+       "label": "Aller au lycée",
+       "note": "Vos chances dépendent de vos moyens et de vos notes"
+      },
+      {
+       "key": "arts",
+       "label": "Postuler à un lycée sportif",
+       "note": "Épreuves pratiques · chances d’admission : plutôt faibles · sinon, un lycée ordinaire"
+      },
+      {
+       "key": "voc_tech",
+       "label": "Aller en école professionnelle, filière mécanique et électricité",
+       "note": "Apprendre un métier, travailler plus tôt"
+      },
+      {
+       "key": "voc_office",
+       "label": "Aller en école professionnelle, filière commerce et informatique",
+       "note": "Apprendre un métier, travailler plus tôt"
+      },
+      {
+       "key": "work",
+       "label": "Commencer à travailler",
+       "note": "Un revenu tout de suite"
+      }
+     ],
+     "chose": "go"
+    },
+    {
+     "age": 15,
+     "id": "reflect",
+     "question": "Une pause · 15 ans",
+     "about": "Cet enfant va à l’école en ce moment. Durée de scolarité attendue : 13 ans en Inde.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "write",
+       "label": "Le noter et continuer à vivre",
+       "note": "Ce que vous écrivez reste dans le récit de cette vie"
+      },
+      {
+       "key": "skip",
+       "label": "Le garder pour soi et continuer à vivre",
+       "note": null
+      }
+     ],
+     "chose": "skip"
+    },
+    {
+     "age": 15,
+     "id": "hobby",
+     "question": "Commencer un nouveau loisir ?",
+     "about": "Vos loisirs actuels : cricket",
+     "fact": null,
+     "choices": [
+      {
+       "key": "garden",
+       "label": "Jardinage",
+       "note": "Bonheur+ Santé+"
+      },
+      {
+       "key": "hiking",
+       "label": "Randonnée et promenade",
+       "note": "Bonheur+ Santé+"
+      },
+      {
+       "key": "sp_football",
+       "label": "Football",
+       "note": "Bonheur+ Santé+ Relations+"
+      },
+      {
+       "key": "none",
+       "label": "Vos loisirs actuels suffisent",
+       "note": null
+      }
+     ],
+     "chose": "hiking"
+    },
+    {
+     "age": 16,
+     "id": "stranger",
+     "question": "Quelqu’un s’effondre dans la rue",
+     "about": "Une personne que vous ne connaissez pas s’est effondrée dans la rue. Tout le monde passe sans s’arrêter.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "help",
+       "label": "L’emmener à l’hôpital",
+       "note": "Cela demande un peu de temps"
+      },
+      {
+       "key": "pass",
+       "label": "Se dire que quelqu’un d’autre aidera, et passer son chemin",
+       "note": null
+      }
+     ],
+     "chose": "help"
+    },
+    {
+     "age": 17,
+     "id": "petq",
+     "question": "Accueillir un animal ?",
+     "about": "Au refuge, vous avez vu des animaux qui attendent une famille.",
+     "fact": "En Inde, environ 8 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+     "choices": [
+      {
+       "key": "dog",
+       "label": "Accueillir un chien",
+       "note": "Environ 46 € par an · de 10 à 15 ans ensemble"
+      },
+      {
+       "key": "cat",
+       "label": "Accueillir un chat",
+       "note": "Environ 31 € par an · de 12 à 18 ans ensemble"
+      },
+      {
+       "key": "pk_b",
+       "label": "Adopter un perroquet",
+       "note": "Environ 12 € par an · de 6 à 12 ans ensemble"
+      },
+      {
+       "key": "pk_f",
+       "label": "Installer un aquarium",
+       "note": "Environ 12 € par an · de 4 à 9 ans ensemble"
+      },
+      {
+       "key": "pk_r",
+       "label": "Adopter un lapin",
+       "note": "Environ 15 € par an · de 8 à 12 ans ensemble"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      }
+     ],
+     "chose": "no"
+    },
+    {
+     "age": 18,
+     "id": "college",
+     "question": "Le carrefour après le diplôme",
+     "about": "Vous avez terminé le lycée. Et ensuite ?",
+     "fact": "Dans ce pays, on estime qu’environ 25 % de cette génération terminera l’université. Le Savoir indique où vous vous situez parmi les personnes de votre âge : plus il est élevé, plus l’admission est probable, mais les places sont limitées, donc rien n’est garanti",
+     "choices": [
+      {
+       "key": "uni",
+       "label": "Tenter l’entrée à l’université",
+       "note": "Chances d’admission : plutôt faibles · savoir 29 · selon vos moyens et les places"
+      },
+      {
+       "key": "job",
+       "label": "Prendre un emploi tout de suite",
+       "note": "Gagner de l’argent plus tôt"
+      }
+     ],
+     "chose": "uni"
+    },
+    {
+     "age": 18,
+     "id": "major",
+     "question": "Que voulez-vous étudier ?",
+     "about": "Pour entrer à l’université, il faut choisir la filière où vous allez étudier. Elle pèsera beaucoup sur votre premier emploi. Il existe aussi une filière dans le prolongement du loisir que vous pratiquez depuis des années (cricket).",
+     "fact": "La médecine est la filière la plus difficile d’accès dans tous les pays. Aux États-Unis, sur environ 2 millions de nouveaux diplômés de premier cycle chaque année, un peu plus de 22 000 entrent en faculté de médecine (AAMC 2024)",
+     "choices": [
+      {
+       "key": "art",
+       "label": "Arts et design",
+       "note": "Artiste, designer"
+      },
+      {
+       "key": "sci",
+       "label": "Sciences naturelles",
+       "note": "Chercheur(euse), enseignant(e), ingénieur(e)"
+      },
+      {
+       "key": "edu",
+       "label": "Sciences de l’éducation",
+       "note": "Enseignant(e)"
+      },
+      {
+       "key": "biz",
+       "label": "Économie-gestion",
+       "note": "Employé(e) de bureau, finance, création d’entreprise"
+      },
+      {
+       "key": "pe",
+       "label": "Sport et éducation physique",
+       "note": "Professeur(e) d’EPS, entraîneur(euse), préparateur(trice) physique"
+      }
+     ],
+     "chose": "edu"
+    },
+    {
+     "age": 21,
+     "id": "afterUni",
+     "question": "Après le diplôme",
+     "about": "Vous avez obtenu votre licence. Poursuivre vos études, ou commencer à travailler ?",
+     "fact": "Dans le monde, environ 15 à 20 % des personnes de 25 ans et plus sont titulaires d’une licence ou d’un diplôme supérieur (estimations UNESCO·Barro-Lee)",
+     "choices": [
+      {
+       "key": "job",
+       "label": "Entrer dans la vie active",
+       "note": "Chercher du travail avec votre licence"
+      },
+      {
+       "key": "grad",
+       "label": "Poursuivre en master",
+       "note": "Deux ans d’études en plus, accès aux professions qualifiées"
+      },
+      {
+       "key": "gradabroad",
+       "label": "Partir faire un master à l’étranger",
+       "note": "Environ 85 500 € · admission et visa nécessaires"
+      }
+     ],
+     "chose": "grad"
+    },
+    {
+     "age": 21,
+     "id": "drink",
+     "question": "Vous buvez davantage",
+     "about": "Rien ne semble aussi efficace qu’un verre pour oublier ce qui est dur. Le verre d’avant le coucher est devenu, sans que vous le voyiez venir, trois ou quatre verres.",
+     "fact": "Environ 7 % des adultes dans le monde ont un trouble lié à l’usage de l’alcool, et 3,7 % une dépendance à l’alcool (OMS 2024)",
+     "choices": [
+      {
+       "key": "stop",
+       "label": "Boire moins et trouver d’autres façons de tenir",
+       "note": "Marche · entourage · aide"
+      },
+      {
+       "key": "drink",
+       "label": "Tenir grâce à l’alcool",
+       "note": "Plus facile pour l’instant · peut mener à la dépendance"
+      }
+     ],
+     "chose": "stop"
+    },
+    {
+     "age": 23,
+     "id": "job",
+     "question": "Choisissez votre premier emploi",
+     "about": "Niveau d’études : master ou doctorat. Voici les emplois que l’on peut trouver en Inde (ville).",
+     "fact": "En Inde, environ 82 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 43 % travaillent dans l’agriculture",
+     "choices": [
+      {
+       "key": "o0",
+       "label": "Vendeur",
+       "note": "5 980 $ US PPP par an · 349 € par mois aux prix français · emploi informel · par votre ami Aarav"
+      },
+      {
+       "key": "o1",
+       "label": "Chercheur ou professeur",
+       "note": "12 991 $ US PPP par an · 758 € par mois aux prix français · emploi formel (retraite, assurance)"
+      },
+      {
+       "key": "o2",
+       "label": "Artisan (menuiserie, couture)",
+       "note": "5 199 $ US PPP par an · 303 € par mois aux prix français · emploi informel"
+      },
+      {
+       "key": "wait",
+       "label": "Attendre un meilleur emploi",
+       "note": "Une année de plus à chercher"
+      }
+     ],
+     "chose": "o1"
+    },
+    {
+     "age": 25,
+     "id": "partner",
+     "question": "Une proposition d’union",
+     "about": "Rencontre proposée par les aînés de la famille : Sita Raut (femme, 21 ans, fiable). Métier : ouvrière d’usine. Sita a environ 519 € d’économies.",
+     "fact": "En Inde, l’âge moyen des hommes au premier mariage est estimé à environ 25 ans",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Se marier",
+       "note": "Relations↑ Bonheur↑"
+      },
+      {
+       "key": "date",
+       "label": "Prendre le temps de mieux se connaître",
+       "note": "Remettre la décision à plus tard"
+      },
+      {
+       "key": "no",
+       "label": "Refuser",
+       "note": "Peut créer des tensions avec votre famille"
+      }
+     ],
+     "chose": "yes"
+    },
+    {
+     "age": 27,
+     "id": "buy",
+     "question": "Rouler à moto ?",
+     "about": "Le prix est d’environ 2 778 € (aux prix français). Les trajets pour le travail et les courses deviennent bien plus faciles, mais le risque d’accident augmente aussi. Vos économies ne suffisent pas : il faudrait l’acheter à crédit.",
+     "fact": "Dans le monde, environ 21 % des personnes tuées sur la route circulaient à moto ou sur un autre deux-roues ou trois-roues motorisé (OMS 2023) · Mortalité routière en Inde : environ 15,4 décès pour 100 000 habitants · Un casque sûr et de qualité réduit le risque de mourir dans un accident à moins d’un sixième, et celui de lésion cérébrale jusqu’à 74 % (OMS 2023)",
+     "choices": [
+      {
+       "key": "loan",
+       "label": "Acheter une moto à crédit",
+       "note": "Crédit sur 4 ans · Dette d’environ 1 197 € · Avec intérêts"
+      },
+      {
+       "key": "never",
+       "label": "Ne jamais rouler à moto",
+       "note": "Cette question ne reviendra pas"
+      },
+      {
+       "key": "no",
+       "label": "Y réfléchir plus tard",
+       "note": null
+      }
+     ],
+     "chose": "loan"
+    },
+    {
+     "age": 28,
+     "id": "kids",
+     "question": "Avoir un enfant ?",
+     "about": "Vous parlez avec votre partenaire d’avoir des enfants. Sita espère un enfant depuis longtemps.",
+     "fact": "Indice de fécondité en Inde : 1,98 enfant par femme (ONU, WPP 2024)",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Avoir un enfant",
+       "note": "Bonheur↑ Dépenses pour l’enfant↑"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "stop",
+       "label": "Décider de vivre sans enfants",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "yes"
+    },
+    {
+     "age": 28,
+     "id": "movenear",
+     "question": "Déménager plus près du travail ?",
+     "about": "À Mumbai, vos trajets entre domicile et travail vous prennent 3 h 20 min par jour. En vous rapprochant de votre travail, vous paieriez un loyer plus élevé, mais vous gagneriez ce temps chaque jour.",
+     "fact": "Sur un an, cela fait environ 800 heures rien qu’en trajets, soit 100 journées de travail de huit heures",
+     "choices": [
+      {
+       "key": "move",
+       "label": "Déménager près du travail",
+       "note": "Déménagement : environ 559 € · Coût du logement ↑ chaque année"
+      },
+      {
+       "key": "stay",
+       "label": "Continuer à faire les trajets depuis chez vous",
+       "note": null
+      }
+     ],
+     "chose": "move"
+    },
+    {
+     "age": 29,
+     "id": "babycare",
+     "question": "Qui va s’occuper de Meera ?",
+     "about": "Le premier anniversaire de Meera approche. Votre partenaire et vous travaillez : il faut décider qui s’occupera du bébé. Votre partenaire, Sita, propose de faire une pause de quelques années dans son travail pour s’occuper du bébé.",
+     "fact": "En Inde, environ 22 % des femmes de 15 à 64 ans sont actives (estimation de l'OIT, 2019)",
+     "choices": [
+      {
+       "key": "me",
+       "label": "Arrêter de travailler et s’occuper soi-même du bébé",
+       "note": "Le revenu s’arrête · Du temps avec votre enfant"
+      },
+      {
+       "key": "partner",
+       "label": "Confier le bébé à votre partenaire, qui fait une pause dans son travail",
+       "note": "Le revenu de votre partenaire s’arrête quelques années"
+      },
+      {
+       "key": "gp",
+       "label": "Confier le bébé à vos parents, dans votre région d’origine",
+       "note": "Presque gratuit · Vivre loin de votre enfant"
+      },
+      {
+       "key": "pay",
+       "label": "Confier le bébé à une crèche ou à une nounou",
+       "note": "Environ 699 € par an"
+      }
+     ],
+     "chose": "pay"
+    },
+    {
+     "age": 29,
+     "id": "rankup",
+     "question": "Devenir chercheur principal ?",
+     "about": "Après 6 ans comme chercheur, vos compétences sont reconnues. Si vous deveniez chercheur principal, vous gagneriez davantage, mais avec plus de responsabilités et de travail.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "up",
+       "label": "Accepter",
+       "note": "Revenu↑ · responsabilités↑"
+      },
+      {
+       "key": "no",
+       "label": "Rester à votre poste",
+       "note": null
+      }
+     ],
+     "chose": "up"
+    },
+    {
+     "age": 30,
+     "id": "reflect",
+     "question": "Une pause · 30 ans",
+     "about": "Le revenu annuel de cette personne la place dans les 29 % les plus aisés à l’échelle mondiale. En Inde, 60 % de la population utilise Internet et 35 % vit en ville.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "write",
+       "label": "Le noter et continuer à vivre",
+       "note": "Ce que vous écrivez reste dans le récit de cette vie"
+      },
+      {
+       "key": "skip",
+       "label": "Le garder pour soi et continuer à vivre",
+       "note": null
+      }
+     ],
+     "chose": "skip"
+    },
+    {
+     "age": 31,
+     "id": "kids",
+     "question": "Avoir un 2e enfant ?",
+     "about": "Vous avez 1 enfant aujourd’hui. Sita aimerait avoir un enfant de plus.",
+     "fact": "Indice de fécondité en Inde : 1,98 enfant par femme (ONU, WPP 2024)",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Avoir un enfant",
+       "note": "Bonheur↑ Dépenses pour l’enfant↑"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "stop",
+       "label": "Ne plus avoir d’enfants",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "yes"
+    },
+    {
+     "age": 31,
+     "id": "illness",
+     "question": "Une douleur qui serre le haut du ventre",
+     "about": "Après chaque repas gras, une douleur serrée sous les côtes, à droite, vous empêche de dormir la nuit. Votre part des frais d’hôpital s’élève à environ 758 € (aux prix français). Vos économies : 1 303 €.",
+     "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+     "choices": [
+      {
+       "key": "hospital",
+       "label": "Se faire soigner à l’hôpital",
+       "note": "Environ 758 €"
+      },
+      {
+       "key": "cheap",
+       "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+       "note": "Économique, mais risqué"
+      }
+     ],
+     "chose": "hospital"
+    },
+    {
+     "age": 32,
+     "id": "sm_tidy",
+     "question": "Une maison pleine d’objets",
+     "about": "La maison déborde d’objets gardés au cas où ils serviraient un jour.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "tidy",
+       "label": "Trier ce qui ne sert plus et le donner",
+       "note": null
+      },
+      {
+       "key": "keep",
+       "label": "Ça pourrait toujours servir",
+       "note": null
+      }
+     ],
+     "chose": "tidy"
+    },
+    {
+     "age": 36,
+     "id": "kids",
+     "question": "Avoir un 3e enfant ?",
+     "about": "Vous avez 2 enfants aujourd’hui. Sita pense plutôt que les enfants que vous avez suffisent.",
+     "fact": "Indice de fécondité en Inde : 1,98 enfant par femme (ONU, WPP 2024)",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Avoir un enfant",
+       "note": "Bonheur↑ Dépenses pour l’enfant↑"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "stop",
+       "label": "Ne plus avoir d’enfants",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "yes"
+    },
+    {
+     "age": 36,
+     "id": "abroad",
+     "question": "Une occasion de partir à l’étranger",
+     "about": "Une possibilité de travailler en Royaume-Uni s’est présentée. Vous pouvez demander un visa de travailleur qualifié. Par cette voie, vous pouvez emmener votre partenaire et les enfants avec vous. Coût : environ 6 410 € (aux prix français).",
+     "fact": "Le PIB par habitant (PPA) en Royaume-Uni est environ 6,0 fois celui mesuré en Inde · Environ 281 millions de migrants internationaux dans le monde (OIM 2024)",
+     "choices": [
+      {
+       "key": "go",
+       "label": "Partir en Royaume-Uni",
+       "note": "Revenu↑ · avec la famille"
+      },
+      {
+       "key": "stay",
+       "label": "Rester",
+       "note": null
+      }
+     ],
+     "chose": "go"
+    },
+    {
+     "age": 37,
+     "id": "babycare",
+     "question": "Qui va s’occuper de Sandeep ?",
+     "about": "Le premier anniversaire de Sandeep approche. Avec un enfant de plus dans la famille, il faut de nouveau décider qui s’occupera des enfants. Plusieurs années ont passé depuis votre dernière décision. Votre partenaire, Sita, propose de faire une pause de quelques années dans son travail pour s’occuper du bébé.",
+     "fact": "En Inde, environ 22 % des femmes de 15 à 64 ans sont actives (estimation de l'OIT, 2019)",
+     "choices": [
+      {
+       "key": "pay",
+       "label": "Confier le bébé à une crèche ou à une nounou",
+       "note": "Comme la dernière fois · Environ 699 € par an"
+      },
+      {
+       "key": "me",
+       "label": "Arrêter de travailler et s’occuper soi-même du bébé",
+       "note": "Le revenu s’arrête · Du temps avec votre enfant"
+      },
+      {
+       "key": "partner",
+       "label": "Confier le bébé à votre partenaire, qui fait une pause dans son travail",
+       "note": "Le revenu de votre partenaire s’arrête quelques années"
+      },
+      {
+       "key": "gp",
+       "label": "Confier le bébé à votre mère, dans votre région d’origine",
+       "note": "Presque gratuit · Vivre loin de votre enfant"
+      }
+     ],
+     "chose": "pay"
+    },
+    {
+     "age": 39,
+     "id": "speakup",
+     "question": "Moqueries au travail",
+     "about": "Une personne de votre équipe est la cible de moqueries devant tout le monde, à cause de ses origines et de sa façon de parler.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "speak",
+       "label": "Leur dire d’arrêter",
+       "note": "L’ambiance risque de devenir pesante"
+      },
+      {
+       "key": "silent",
+       "label": "Faire semblant de ne rien voir",
+       "note": null
+      }
+     ],
+     "chose": "silent"
+    },
+    {
+     "age": 40,
+     "id": "sm_volunteer",
+     "question": "Un groupe de bénévoles du quartier",
+     "about": "Une affiche a été posée : le groupe de bénévoles du quartier cherche des volontaires.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "join",
+       "label": "Y aller, ne serait-ce qu’une fois par mois",
+       "note": null
+      },
+      {
+       "key": "pass",
+       "label": "Pas le temps pour l’instant",
+       "note": null
+      }
+     ],
+     "chose": "join"
+    },
+    {
+     "age": 42,
+     "id": "kids",
+     "question": "Avoir un 4e enfant ?",
+     "about": "Vous avez 3 enfants aujourd’hui. Sita pense plutôt que les enfants que vous avez suffisent.",
+     "fact": "Indice de fécondité en Inde : 1,98 enfant par femme (ONU, WPP 2024)",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Avoir un enfant",
+       "note": "Bonheur↑ Dépenses pour l’enfant↑"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "stop",
+       "label": "Ne plus avoir d’enfants",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "yes"
+    },
+    {
+     "age": 45,
+     "id": "mentor",
+     "question": "Les soucis d’une jeune recrue",
+     "about": "Une jeune recrue de votre travail vous confie ses doutes : l’avenir lui semble bouché.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "help",
+       "label": "Prendre le temps d’écouter",
+       "note": null
+      },
+      {
+       "key": "busy",
+       "label": "Prétexter le travail et remettre à plus tard",
+       "note": null
+      }
+     ],
+     "chose": "help"
+    },
+    {
+     "age": 46,
+     "id": "diag",
+     "question": "Diagnostic : hypertension",
+     "about": "Il faut prendre un traitement régulièrement et suivre son état de près. Les médicaments restant à votre charge coûtent environ 45 € par an (aux prix français).",
+     "fact": "Dans le monde, environ 1,3 milliard d’adultes de 30 à 79 ans ont de l’hypertension, et près de la moitié d’entre eux l’ignorent (OMS 2023)",
+     "choices": [
+      {
+       "key": "treat",
+       "label": "Suivre le traitement avec régularité",
+       "note": "Santé préservée, mais coûteux"
+      },
+      {
+       "key": "life",
+       "label": "Prendre le traitement, mieux manger et bouger davantage",
+       "note": "Coûteux · Risque ↓"
+      },
+      {
+       "key": "ignore",
+       "label": "Se dire que ça ira, et tenir le coup",
+       "note": "Économique, mais risqué"
+      }
+     ],
+     "chose": "ignore"
+    },
+    {
+     "age": 47,
+     "id": "kiduni",
+     "question": "Meera a obtenu une place à l’université",
+     "about": "Sur quatre ans, frais d’inscription et vie étudiante coûteront environ 4 661 € (aux prix français). Vos économies : 0 €.",
+     "fact": "Scolarisation dans l’enseignement supérieur en Inde (taux brut) : 33 % (UNESCO)",
+     "choices": [
+      {
+       "key": "pay",
+       "label": "Tout payer vous-même",
+       "note": "Environ 4 661 €"
+      },
+      {
+       "key": "half",
+       "label": "Payer la moitié ; un prêt étudiant couvre le reste",
+       "note": "Environ 2 330 €"
+      },
+      {
+       "key": "self",
+       "label": "Laisser votre enfant se débrouiller avec des bourses et des petits boulots",
+       "note": "Rien à payer, mais dur pour votre enfant"
+      }
+     ],
+     "chose": "pay"
+    },
+    {
+     "age": 47,
+     "id": "rankup",
+     "question": "Devenir directeur d’institut de recherche ?",
+     "about": "Après 24 ans comme chercheur principal, vos compétences sont reconnues. Si vous deveniez directeur d’institut de recherche, vous gagneriez davantage, mais avec plus de responsabilités et de travail.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "up",
+       "label": "Accepter",
+       "note": "Revenu↑ · responsabilités↑"
+      },
+      {
+       "key": "no",
+       "label": "Rester à votre poste",
+       "note": null
+      }
+     ],
+     "chose": "up"
+    },
+    {
+     "age": 50,
+     "id": "kiduni",
+     "question": "Vinod a obtenu une place à l’université",
+     "about": "Sur quatre ans, frais d’inscription et vie étudiante coûteront environ 4 661 € (aux prix français). Vos économies : rien (dette : 439 €).",
+     "fact": "Scolarisation dans l’enseignement supérieur en Inde (taux brut) : 33 % (UNESCO)",
+     "choices": [
+      {
+       "key": "pay",
+       "label": "Tout payer vous-même",
+       "note": "Environ 4 661 €"
+      },
+      {
+       "key": "half",
+       "label": "Payer la moitié ; un prêt étudiant couvre le reste",
+       "note": "Environ 2 330 €"
+      },
+      {
+       "key": "self",
+       "label": "Laisser votre enfant se débrouiller avec des bourses et des petits boulots",
+       "note": "Rien à payer, mais dur pour votre enfant"
+      }
+     ],
+     "chose": "pay"
+    },
+    {
+     "age": 50,
+     "id": "reflect",
+     "question": "Une pause · 50 ans",
+     "about": "Parmi les personnes nées la même année en Inde, 90 % atteignent l’âge de cinquante ans.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "write",
+       "label": "Le noter et continuer à vivre",
+       "note": "Ce que vous écrivez reste dans le récit de cette vie"
+      },
+      {
+       "key": "skip",
+       "label": "Le garder pour soi et continuer à vivre",
+       "note": null
+      }
+     ],
+     "chose": "skip"
+    },
+    {
+     "age": 52,
+     "id": "buy",
+     "question": "Acheter une voiture à crédit ?",
+     "about": "Le prix est d’environ 10 800 € (aux prix français). Vos économies actuelles : 200 € ; vous ne pouvez donc pas tout payer en une fois. En achetant à crédit sur 4 ans, vous garderez une dette pendant tout ce temps, avec des intérêts.",
+     "fact": "Aux États-Unis, plus de 80 % des voitures neuves sont achetées à crédit ou en leasing (Experian, 3e trimestre 2025)",
+     "choices": [
+      {
+       "key": "loan",
+       "label": "Acheter à crédit",
+       "note": "Crédit sur 4 ans · Dette d’environ 10 600 € · Avec intérêts · Bonheur +8"
+      },
+      {
+       "key": "no",
+       "label": "Économiser d’abord, acheter ensuite",
+       "note": "Sans dette"
+      }
+     ],
+     "chose": "loan"
+    },
+    {
+     "age": 53,
+     "id": "thanks",
+     "question": "Dire merci",
+     "about": "Vous ne vous souvenez plus de la dernière fois où vous avez dit merci à votre mère.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "call",
+       "label": "Appeler maintenant pour le dire",
+       "note": null
+      },
+      {
+       "key": "next",
+       "label": "Le dire à la prochaine visite",
+       "note": null
+      }
+     ],
+     "chose": "call"
+    },
+    {
+     "age": 55,
+     "id": "kiduni",
+     "question": "Sandeep a obtenu une place à l’université",
+     "about": "Sur quatre ans, frais d’inscription et vie étudiante coûteront environ 4 661 € (aux prix français). Vos économies : 1 238 €.",
+     "fact": "Scolarisation dans l’enseignement supérieur en Inde (taux brut) : 33 % (UNESCO)",
+     "choices": [
+      {
+       "key": "pay",
+       "label": "Tout payer vous-même",
+       "note": "Environ 4 661 €"
+      },
+      {
+       "key": "half",
+       "label": "Payer la moitié ; un prêt étudiant couvre le reste",
+       "note": "Environ 2 330 €"
+      },
+      {
+       "key": "self",
+       "label": "Laisser votre enfant se débrouiller avec des bourses et des petits boulots",
+       "note": "Rien à payer, mais dur pour votre enfant"
+      }
+     ],
+     "chose": "pay"
+    },
+    {
+     "age": 55,
+     "id": "care",
+     "question": "Qui va s’occuper de votre mère ?",
+     "about": "Votre mère a désormais du mal à se déplacer.",
+     "fact": "Dans les pays à revenu faible et intermédiaire, l’essentiel des soins aux personnes âgées est assuré par la famille, surtout par les femmes (OMS)",
+     "choices": [
+      {
+       "key": "home",
+       "label": "L’accueillir chez vous",
+       "note": "Relations↑ Revenu↓"
+      },
+      {
+       "key": "near",
+       "label": "Vivre chacun chez soi et passer souvent aider",
+       "note": "Relations↑ · demande du temps et des efforts"
+      },
+      {
+       "key": "pay",
+       "label": "Engager une aide à domicile",
+       "note": "Des frais"
+      },
+      {
+       "key": "sib",
+       "label": "Demander à vos frères et sœurs",
+       "note": "Relations↓"
+      }
+     ],
+     "chose": "near"
+    },
+    {
+     "age": 56,
+     "id": "kidwed",
+     "question": "Vinod se marie",
+     "about": "Vinod, 25 ans, a amené à la maison la personne de sa vie. Dans ce pays, il est courant que les parents prennent en charge une grande partie des frais du mariage.",
+     "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 4 661 € (aux prix français). Vos économies : 2 727 €.",
+     "choices": [
+      {
+       "key": "help",
+       "label": "Participer généreusement aux frais du mariage",
+       "note": "Environ 4 661 €"
+      },
+      {
+       "key": "little",
+       "label": "Donner un peu, selon vos moyens",
+       "note": "Environ 1 165 €"
+      },
+      {
+       "key": "none",
+       "label": "Offrir seulement vos vœux de bonheur",
+       "note": null
+      }
+     ],
+     "chose": "none"
+    },
+    {
+     "age": 56,
+     "id": "kinask",
+     "question": "Un membre de la famille vous demande de l’argent",
+     "about": "Un proche de votre région natale doit payer d’urgence une facture d’hôpital et vous demande 884 €. Vos économies : 2 727 €.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "give",
+       "label": "Donner ce qui est demandé",
+       "note": "Environ 884 € · Relations↑"
+      },
+      {
+       "key": "some",
+       "label": "Donner une partie, selon vos moyens",
+       "note": "Environ 265 €"
+      },
+      {
+       "key": "no",
+       "label": "Dire que cette fois, ce n’est pas possible",
+       "note": "Relations↓"
+      }
+     ],
+     "chose": "some"
+    },
+    {
+     "age": 60,
+     "id": "mandret",
+     "question": "Vous avez atteint l’âge de la retraite",
+     "about": "60 ans. Vous travaillez comme chercheur ou professeur, et vous avez atteint l’âge où votre employeur met son personnel à la retraite.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "retire",
+       "label": "Partir à la retraite à l’âge prévu",
+       "note": "Pension de 466 € par mois aux prix français"
+      },
+      {
+       "key": "rehire",
+       "label": "Signer un nouveau contrat et continuer le même travail",
+       "note": "841 € par mois aux prix français · pendant 5 ans"
+      },
+      {
+       "key": "other",
+       "label": "Chercher un autre travail",
+       "note": "Toucher votre pension de 466 € par mois aux prix français · moins de salaire"
+      }
+     ],
+     "chose": "retire"
+    },
+    {
+     "age": 61,
+     "id": "invest",
+     "question": "Que faire de vos économies ?",
+     "about": "Vos économies atteignent 1 299 € (aux prix français). Où placer l’argent dont vous n’avez pas besoin tout de suite ? Vous pourrez changer ce choix à tout moment dans « Dépenser et investir ». Les obligations, les actions choisies vous-même et les logements à louer s’y trouvent aussi.",
+     "fact": "Sur le long terme, les rendements réels sont d’environ 1 à 2 % pour l’épargne bancaire, de 5 % par an environ pour les actions et de 3 % environ pour l’immobilier. Les actions des pays émergents fluctuent davantage, d’environ ±22 % d’une année à l’autre (UBS Global Investment Returns Yearbook, indice MSCI Emerging Markets)",
+     "choices": [
+      {
+       "key": "cash",
+       "label": "Placer l’argent sur un compte d’épargne",
+       "note": "1 à 1,5 % par an, inflation déduite · presque sans risque"
+      },
+      {
+       "key": "mix",
+       "label": "Placer l’argent dans un fonds mixte actions-obligations",
+       "note": "Environ 3,5 % par an en moyenne, inflation déduite · variations moyennes"
+      },
+      {
+       "key": "stock",
+       "label": "Investir en actions",
+       "note": "5 % par an en moyenne, inflation déduite · risque de krach"
+      }
+     ],
+     "chose": "stock"
+    },
+    {
+     "age": 64,
+     "id": "lend",
+     "question": "Un prêt entre amis",
+     "about": "Une amie ou un ami de longue date, dans une passe difficile, vous demande de lui prêter 699 €. Vos économies : 4 221 €.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "lend",
+       "label": "Prêter la somme",
+       "note": "Environ 699 €"
+      },
+      {
+       "key": "gift",
+       "label": "Ne donner que ce que vous pouvez vous permettre de ne jamais revoir",
+       "note": "Environ 210 €"
+      },
+      {
+       "key": "no",
+       "label": "Refuser : vous n’en avez pas les moyens",
+       "note": null
+      }
+     ],
+     "chose": "lend"
+    },
+    {
+     "age": 66,
+     "id": "illness",
+     "question": "Une fièvre qui ne baisse pas",
+     "about": "Depuis plus d’une semaine, la fièvre ne baisse pas ; vous avez mal au ventre et plus aucune force. Votre part des frais d’hôpital s’élève à environ 758 € (aux prix français). Vos économies : 6 040 €.",
+     "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+     "choices": [
+      {
+       "key": "hospital",
+       "label": "Se faire soigner à l’hôpital",
+       "note": "Environ 758 €"
+      },
+      {
+       "key": "cheap",
+       "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+       "note": "Économique, mais risqué"
+      }
+     ],
+     "chose": "hospital"
+    },
+    {
+     "age": 67,
+     "id": "kidwed",
+     "question": "Sandeep se marie",
+     "about": "Sandeep, 31 ans, a amené à la maison la personne de sa vie. Dans ce pays, il est courant que les parents prennent en charge une grande partie des frais du mariage.",
+     "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 4 661 € (aux prix français). Vos économies : 7 107 €.",
+     "choices": [
+      {
+       "key": "help",
+       "label": "Participer généreusement aux frais du mariage",
+       "note": "Environ 4 661 €"
+      },
+      {
+       "key": "little",
+       "label": "Donner un peu, selon vos moyens",
+       "note": "Environ 1 165 €"
+      },
+      {
+       "key": "none",
+       "label": "Offrir seulement vos vœux de bonheur",
+       "note": null
+      }
+     ],
+     "chose": "little"
+    },
+    {
+     "age": 67,
+     "id": "petq",
+     "question": "Accueillir un animal ?",
+     "about": "Vous pensez sans cesse à un chat errant que vous croisez souvent dans le quartier.",
+     "fact": "En Inde, environ 8 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+     "choices": [
+      {
+       "key": "dog",
+       "label": "Accueillir un chien",
+       "note": "Environ 97 € par an · de 10 à 15 ans ensemble"
+      },
+      {
+       "key": "cat",
+       "label": "Accueillir un chat",
+       "note": "Environ 65 € par an · de 12 à 18 ans ensemble"
+      },
+      {
+       "key": "pk_b",
+       "label": "Adopter un perroquet",
+       "note": "Environ 26 € par an · de 6 à 12 ans ensemble"
+      },
+      {
+       "key": "pk_f",
+       "label": "Installer un aquarium",
+       "note": "Environ 26 € par an · de 4 à 9 ans ensemble"
+      },
+      {
+       "key": "pk_r",
+       "label": "Adopter un lapin",
+       "note": "Environ 32 € par an · de 8 à 12 ans ensemble"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "never",
+       "label": "Ne pas avoir d’animal",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "pk_r"
+    },
+    {
+     "age": 70,
+     "id": "reflect",
+     "question": "Une pause · 70 ans",
+     "about": "Parmi les personnes nées la même année en Inde, seulement 65 % atteignent soixante-dix ans.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "write",
+       "label": "Le noter et continuer à vivre",
+       "note": "Ce que vous écrivez reste dans le récit de cette vie"
+      },
+      {
+       "key": "skip",
+       "label": "Le garder pour soi et continuer à vivre",
+       "note": null
+      }
+     ],
+     "chose": "skip"
+    },
+    {
+     "age": 77,
+     "id": "petsick",
+     "question": "Luna est malade",
+     "about": "À 10 ans, Luna ne mange plus depuis des jours. Le vétérinaire dit qu’un traitement pourrait aider.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "treat",
+       "label": "Soigner",
+       "note": "Environ 269 € · cela peut aider, ou pas"
+      },
+      {
+       "key": "comfort",
+       "label": "Rester tout près et l’accompagner en douceur",
+       "note": null
+      }
+     ],
+     "chose": "comfort"
+    },
+    {
+     "age": 85,
+     "id": "illness",
+     "question": "Une fièvre qui ne baisse pas",
+     "about": "Depuis plus d’une semaine, la fièvre ne baisse pas ; vous avez mal au ventre et plus aucune force. Votre part des frais d’hôpital s’élève à environ 758 € (aux prix français). Vos économies : 8 698 €.",
+     "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+     "choices": [
+      {
+       "key": "hospital",
+       "label": "Se faire soigner à l’hôpital",
+       "note": "Environ 758 €"
+      },
+      {
+       "key": "cheap",
+       "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+       "note": "Économique, mais risqué"
+      }
+     ],
+     "chose": "hospital"
+    }
+   ],
+   "trace": [
+    {
+     "age": 1,
+     "year": 2027,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 0,
+     "health": 79,
+     "happiness": 60,
+     "knowledge": 43,
+     "bonds": 57,
+     "education": "none",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 2,
+     "year": 2028,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 0,
+     "health": 79,
+     "happiness": 60,
+     "knowledge": 43,
+     "bonds": 57,
+     "education": "none",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 3,
+     "year": 2029,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 0,
+     "health": 79,
+     "happiness": 60,
+     "knowledge": 43,
+     "bonds": 57,
+     "education": "none",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 4,
+     "year": 2030,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 0,
+     "health": 80,
+     "happiness": 63,
+     "knowledge": 43,
+     "bonds": 60,
+     "education": "none",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 5,
+     "year": 2031,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 0,
+     "health": 87,
+     "happiness": 63,
+     "knowledge": 41,
+     "bonds": 63,
+     "education": "none",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 6,
+     "year": 2032,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 0,
+     "health": 87,
+     "happiness": 63,
+     "knowledge": 40,
+     "bonds": 63,
+     "education": "none",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 7,
+     "year": 2033,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 27,
+     "health": 89,
+     "happiness": 63,
+     "knowledge": 40,
+     "bonds": 65,
+     "education": "none",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 8,
+     "year": 2034,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 27,
+     "health": 90,
+     "happiness": 63,
+     "knowledge": 38,
+     "bonds": 68,
+     "education": "none",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 9,
+     "year": 2035,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 27,
+     "health": 92,
+     "happiness": 70,
+     "knowledge": 36,
+     "bonds": 72,
+     "education": "none",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 10,
+     "year": 2036,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 27,
+     "health": 92,
+     "happiness": 71,
+     "knowledge": 34,
+     "bonds": 76,
+     "education": "none",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 11,
+     "year": 2037,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 27,
+     "health": 95,
+     "happiness": 64,
+     "knowledge": 33,
+     "bonds": 72,
+     "education": "primary",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 12,
+     "year": 2038,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 27,
+     "health": 95,
+     "happiness": 68,
+     "knowledge": 31,
+     "bonds": 75,
+     "education": "primary",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 13,
+     "year": 2039,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 27,
+     "health": 95,
+     "happiness": 68,
+     "knowledge": 29,
+     "bonds": 78,
+     "education": "primary",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 14,
+     "year": 2040,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 27,
+     "health": 95,
+     "happiness": 69,
+     "knowledge": 27,
+     "bonds": 78,
+     "education": "lower_secondary",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 15,
+     "year": 2041,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 27,
+     "health": 95,
+     "happiness": 71,
+     "knowledge": 25,
+     "bonds": 79,
+     "education": "lower_secondary",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 16,
+     "year": 2042,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 27,
+     "health": 94,
+     "happiness": 73,
+     "knowledge": 24,
+     "bonds": 80,
+     "education": "lower_secondary",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 17,
+     "year": 2043,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 8,
+     "health": 95,
+     "happiness": 75,
+     "knowledge": 26,
+     "bonds": 84,
+     "education": "lower_secondary",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 18,
+     "year": 2044,
+     "country": "IND",
+     "place": "village",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": 0,
+     "health": 96,
+     "happiness": 69,
+     "knowledge": 29,
+     "bonds": 81,
+     "education": "upper_secondary",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 19,
+     "year": 2045,
+     "country": "IND",
+     "place": "town",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": -1275,
+     "health": 96,
+     "happiness": 71,
+     "knowledge": 31,
+     "bonds": 80,
+     "education": "upper_secondary",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 20,
+     "year": 2046,
+     "country": "IND",
+     "place": "town",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": -1352,
+     "health": 93,
+     "happiness": 65,
+     "knowledge": 34,
+     "bonds": 78,
+     "education": "upper_secondary",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 21,
+     "year": 2047,
+     "country": "IND",
+     "place": "town",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": -1975,
+     "health": 91,
+     "happiness": 46,
+     "knowledge": 36,
+     "bonds": 67,
+     "education": "university",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 22,
+     "year": 2048,
+     "country": "IND",
+     "place": "town",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": -2234,
+     "health": 90,
+     "happiness": 49,
+     "knowledge": 38,
+     "bonds": 67,
+     "education": "university",
+     "in_school": true,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 23,
+     "year": 2049,
+     "country": "IND",
+     "place": "town",
+     "job": "student",
+     "working": false,
+     "income_ppp": 0,
+     "income_percentile": null,
+     "net_worth_ppp": -2492,
+     "health": 86,
+     "happiness": 45,
+     "knowledge": 41,
+     "bonds": 62,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 24,
+     "year": 2050,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 13149,
+     "income_percentile": 0.871,
+     "net_worth_ppp": 1265,
+     "health": 89,
+     "happiness": 51,
+     "knowledge": 40,
+     "bonds": 63,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 25,
+     "year": 2051,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 13480,
+     "income_percentile": 0.879,
+     "net_worth_ppp": 3955,
+     "health": 91,
+     "happiness": 52,
+     "knowledge": 39,
+     "bonds": 65,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": false,
+     "married": false,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 26,
+     "year": 2052,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 13748,
+     "income_percentile": 0.886,
+     "net_worth_ppp": 1404,
+     "health": 93,
+     "happiness": 66,
+     "knowledge": 39,
+     "bonds": 81,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 27,
+     "year": 2053,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 13998,
+     "income_percentile": 0.891,
+     "net_worth_ppp": 2258,
+     "health": 94,
+     "happiness": 66,
+     "knowledge": 38,
+     "bonds": 83,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 28,
+     "year": 2054,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 14198,
+     "income_percentile": 0.896,
+     "net_worth_ppp": 1503,
+     "health": 93,
+     "happiness": 75,
+     "knowledge": 38,
+     "bonds": 86,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 0,
+     "electricity_at_home": true
+    },
+    {
+     "age": 29,
+     "year": 2055,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 16368,
+     "income_percentile": 0.932,
+     "net_worth_ppp": 1122,
+     "health": 97,
+     "happiness": 85,
+     "knowledge": 38,
+     "bonds": 90,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 1,
+     "electricity_at_home": true
+    },
+    {
+     "age": 30,
+     "year": 2056,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 19540,
+     "income_percentile": 0.963,
+     "net_worth_ppp": 1171,
+     "health": 96,
+     "happiness": 76,
+     "knowledge": 37,
+     "bonds": 84,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 1,
+     "electricity_at_home": true
+    },
+    {
+     "age": 31,
+     "year": 2057,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 19822,
+     "income_percentile": 0.965,
+     "net_worth_ppp": 1861,
+     "health": 97,
+     "happiness": 76,
+     "knowledge": 37,
+     "bonds": 86,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 1,
+     "electricity_at_home": true
+    },
+    {
+     "age": 32,
+     "year": 2058,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 19772,
+     "income_percentile": 0.965,
+     "net_worth_ppp": 0,
+     "health": 94,
+     "happiness": 80,
+     "knowledge": 37,
+     "bonds": 91,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 2,
+     "electricity_at_home": true
+    },
+    {
+     "age": 33,
+     "year": 2059,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20798,
+     "income_percentile": 0.971,
+     "net_worth_ppp": 0,
+     "health": 93,
+     "happiness": 81,
+     "knowledge": 37,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 2,
+     "electricity_at_home": true
+    },
+    {
+     "age": 34,
+     "year": 2060,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20865,
+     "income_percentile": 0.971,
+     "net_worth_ppp": -92,
+     "health": 94,
+     "happiness": 79,
+     "knowledge": 36,
+     "bonds": 90,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 2,
+     "electricity_at_home": true
+    },
+    {
+     "age": 35,
+     "year": 2061,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 19836,
+     "income_percentile": 0.965,
+     "net_worth_ppp": 0,
+     "health": 95,
+     "happiness": 79,
+     "knowledge": 36,
+     "bonds": 91,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 2,
+     "electricity_at_home": true
+    },
+    {
+     "age": 36,
+     "year": 2062,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20414,
+     "income_percentile": 0.968,
+     "net_worth_ppp": 0,
+     "health": 95,
+     "happiness": 76,
+     "knowledge": 36,
+     "bonds": 90,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 2,
+     "electricity_at_home": true
+    },
+    {
+     "age": 37,
+     "year": 2063,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20593,
+     "income_percentile": 0.97,
+     "net_worth_ppp": -258,
+     "health": 95,
+     "happiness": 68,
+     "knowledge": 36,
+     "bonds": 88,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 3,
+     "electricity_at_home": true
+    },
+    {
+     "age": 38,
+     "year": 2064,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 19806,
+     "income_percentile": 0.965,
+     "net_worth_ppp": 0,
+     "health": 95,
+     "happiness": 64,
+     "knowledge": 35,
+     "bonds": 87,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 3,
+     "electricity_at_home": true
+    },
+    {
+     "age": 39,
+     "year": 2065,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20690,
+     "income_percentile": 0.97,
+     "net_worth_ppp": 0,
+     "health": 92,
+     "happiness": 68,
+     "knowledge": 35,
+     "bonds": 90,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 3,
+     "electricity_at_home": true
+    },
+    {
+     "age": 40,
+     "year": 2066,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20699,
+     "income_percentile": 0.97,
+     "net_worth_ppp": 0,
+     "health": 91,
+     "happiness": 70,
+     "knowledge": 35,
+     "bonds": 90,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 3,
+     "electricity_at_home": true
+    },
+    {
+     "age": 41,
+     "year": 2067,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20116,
+     "income_percentile": 0.967,
+     "net_worth_ppp": 0,
+     "health": 89,
+     "happiness": 72,
+     "knowledge": 35,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 3,
+     "electricity_at_home": true
+    },
+    {
+     "age": 42,
+     "year": 2068,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20647,
+     "income_percentile": 0.97,
+     "net_worth_ppp": 0,
+     "health": 88,
+     "happiness": 66,
+     "knowledge": 35,
+     "bonds": 90,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 3,
+     "electricity_at_home": true
+    },
+    {
+     "age": 43,
+     "year": 2069,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20194,
+     "income_percentile": 0.967,
+     "net_worth_ppp": 0,
+     "health": 88,
+     "happiness": 77,
+     "knowledge": 34,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 44,
+     "year": 2070,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 19422,
+     "income_percentile": 0.962,
+     "net_worth_ppp": 0,
+     "health": 87,
+     "happiness": 78,
+     "knowledge": 34,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 45,
+     "year": 2071,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 18622,
+     "income_percentile": 0.956,
+     "net_worth_ppp": 0,
+     "health": 87,
+     "happiness": 81,
+     "knowledge": 34,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 46,
+     "year": 2072,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 17910,
+     "income_percentile": 0.95,
+     "net_worth_ppp": 0,
+     "health": 87,
+     "happiness": 80,
+     "knowledge": 34,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 47,
+     "year": 2073,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 18055,
+     "income_percentile": 0.951,
+     "net_worth_ppp": 0,
+     "health": 80,
+     "happiness": 76,
+     "knowledge": 34,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 48,
+     "year": 2074,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 21980,
+     "income_percentile": 0.976,
+     "net_worth_ppp": -2083,
+     "health": 80,
+     "happiness": 85,
+     "knowledge": 33,
+     "bonds": 94,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 49,
+     "year": 2075,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 21562,
+     "income_percentile": 0.974,
+     "net_worth_ppp": 0,
+     "health": 81,
+     "happiness": 81,
+     "knowledge": 33,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 50,
+     "year": 2076,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20568,
+     "income_percentile": 0.969,
+     "net_worth_ppp": 159,
+     "health": 81,
+     "happiness": 75,
+     "knowledge": 33,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 51,
+     "year": 2077,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 20963,
+     "income_percentile": 0.971,
+     "net_worth_ppp": -1465,
+     "health": 81,
+     "happiness": 77,
+     "knowledge": 33,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 52,
+     "year": 2078,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 21524,
+     "income_percentile": 0.974,
+     "net_worth_ppp": 286,
+     "health": 82,
+     "happiness": 78,
+     "knowledge": 33,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 53,
+     "year": 2079,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 22000,
+     "income_percentile": 0.976,
+     "net_worth_ppp": -8105,
+     "health": 79,
+     "happiness": 76,
+     "knowledge": 32,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 54,
+     "year": 2080,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 21705,
+     "income_percentile": 0.975,
+     "net_worth_ppp": -2838,
+     "health": 79,
+     "happiness": 72,
+     "knowledge": 32,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 55,
+     "year": 2081,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 21093,
+     "income_percentile": 0.972,
+     "net_worth_ppp": 1768,
+     "health": 79,
+     "happiness": 70,
+     "knowledge": 32,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 56,
+     "year": 2082,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 30013,
+     "income_percentile": 0.994,
+     "net_worth_ppp": 3896,
+     "health": 78,
+     "happiness": 82,
+     "knowledge": 32,
+     "bonds": 94,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 57,
+     "year": 2083,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 28522,
+     "income_percentile": 0.992,
+     "net_worth_ppp": 6784,
+     "health": 76,
+     "happiness": 71,
+     "knowledge": 32,
+     "bonds": 86,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 58,
+     "year": 2084,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 25297,
+     "income_percentile": 0.987,
+     "net_worth_ppp": 8735,
+     "health": 76,
+     "happiness": 72,
+     "knowledge": 32,
+     "bonds": 90,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 59,
+     "year": 2085,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 23794,
+     "income_percentile": 0.983,
+     "net_worth_ppp": 11361,
+     "health": 77,
+     "happiness": 72,
+     "knowledge": 31,
+     "bonds": 91,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 60,
+     "year": 2086,
+     "country": "IND",
+     "place": "town",
+     "job": "prof",
+     "working": true,
+     "income_ppp": 22182,
+     "income_percentile": 0.977,
+     "net_worth_ppp": 9936,
+     "health": 75,
+     "happiness": 74,
+     "knowledge": 31,
+     "bonds": 93,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 61,
+     "year": 2087,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 8833,
+     "health": 75,
+     "happiness": 83,
+     "knowledge": 31,
+     "bonds": 93,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 62,
+     "year": 2088,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 3491,
+     "health": 74,
+     "happiness": 83,
+     "knowledge": 31,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 63,
+     "year": 2089,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 6680,
+     "health": 75,
+     "happiness": 79,
+     "knowledge": 31,
+     "bonds": 90,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 64,
+     "year": 2090,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 6030,
+     "health": 74,
+     "happiness": 75,
+     "knowledge": 31,
+     "bonds": 88,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 65,
+     "year": 2091,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 7747,
+     "health": 73,
+     "happiness": 75,
+     "knowledge": 31,
+     "bonds": 91,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 66,
+     "year": 2092,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 8629,
+     "health": 72,
+     "happiness": 76,
+     "knowledge": 31,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 67,
+     "year": 2093,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 10153,
+     "health": 68,
+     "happiness": 74,
+     "knowledge": 31,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 68,
+     "year": 2094,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 10952,
+     "health": 66,
+     "happiness": 78,
+     "knowledge": 30,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 69,
+     "year": 2095,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 12105,
+     "health": 67,
+     "happiness": 85,
+     "knowledge": 30,
+     "bonds": 95,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 70,
+     "year": 2096,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 3018,
+     "health": 67,
+     "happiness": 92,
+     "knowledge": 30,
+     "bonds": 96,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 71,
+     "year": 2097,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 5448,
+     "health": 64,
+     "happiness": 95,
+     "knowledge": 30,
+     "bonds": 99,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 72,
+     "year": 2098,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 8818,
+     "health": 64,
+     "happiness": 87,
+     "knowledge": 30,
+     "bonds": 94,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 73,
+     "year": 2099,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 8308,
+     "health": 64,
+     "happiness": 84,
+     "knowledge": 30,
+     "bonds": 95,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 74,
+     "year": 2100,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 9635,
+     "health": 63,
+     "happiness": 77,
+     "knowledge": 30,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 75,
+     "year": 2101,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 12929,
+     "health": 63,
+     "happiness": 78,
+     "knowledge": 29,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 76,
+     "year": 2102,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 16115,
+     "health": 62,
+     "happiness": 82,
+     "knowledge": 28,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 77,
+     "year": 2103,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 13127,
+     "health": 60,
+     "happiness": 81,
+     "knowledge": 27,
+     "bonds": 92,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 78,
+     "year": 2104,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 21507,
+     "health": 60,
+     "happiness": 74,
+     "knowledge": 27,
+     "bonds": 91,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 79,
+     "year": 2105,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 19340,
+     "health": 59,
+     "happiness": 62,
+     "knowledge": 26,
+     "bonds": 86,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 80,
+     "year": 2106,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 21235,
+     "health": 57,
+     "happiness": 60,
+     "knowledge": 26,
+     "bonds": 85,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 81,
+     "year": 2107,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 27502,
+     "health": 56,
+     "happiness": 67,
+     "knowledge": 26,
+     "bonds": 90,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 82,
+     "year": 2108,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 26333,
+     "health": 56,
+     "happiness": 64,
+     "knowledge": 26,
+     "bonds": 88,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 83,
+     "year": 2109,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 25559,
+     "health": 54,
+     "happiness": 62,
+     "knowledge": 25,
+     "bonds": 87,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 84,
+     "year": 2110,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 12254,
+     "health": 55,
+     "happiness": 64,
+     "knowledge": 25,
+     "bonds": 86,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 85,
+     "year": 2111,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 13011,
+     "health": 54,
+     "happiness": 64,
+     "knowledge": 24,
+     "bonds": 84,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 86,
+     "year": 2112,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 16305,
+     "health": 50,
+     "happiness": 68,
+     "knowledge": 24,
+     "bonds": 86,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 87,
+     "year": 2113,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 13502,
+     "health": 50,
+     "happiness": 69,
+     "knowledge": 24,
+     "bonds": 87,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 88,
+     "year": 2114,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 14330,
+     "health": 50,
+     "happiness": 71,
+     "knowledge": 24,
+     "bonds": 86,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    },
+    {
+     "age": 89,
+     "year": 2115,
+     "country": "IND",
+     "place": "town",
+     "job": "retired",
+     "working": false,
+     "income_ppp": 7982,
+     "income_percentile": 0.618,
+     "net_worth_ppp": 22450,
+     "health": 48,
+     "happiness": 65,
+     "knowledge": 23,
+     "bonds": 85,
+     "education": "graduate",
+     "in_school": false,
+     "partnered": true,
+     "married": true,
+     "children": 4,
+     "electricity_at_home": true
+    }
+   ],
+   "record": [
+    [
+     0,
+     "Vous avez reçu vos vaccins de base (DTC et rougeole).",
+     "En 2023, 84 % des nourrissons dans le monde ont reçu les trois doses du vaccin DTC (OMS et UNICEF)"
+    ],
+    [
+     1,
+     "1 an. Parmi les garçons qui ont vu le jour en Inde la même année que vous, environ 97 % sont encore en vie."
+    ],
+    [
+     1,
+     "Vous avez dit votre premier mot : un mot qui voulait dire « Maman »."
+    ],
+    [
+     1,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     2,
+     "En jouant dans la boue, vous avez complètement sali vos vêtements."
+    ],
+    [
+     2,
+     "Décision : Courir dans tous les sens devant le visiteur"
+    ],
+    [
+     2,
+     "Vous avez couru partout devant le visiteur, puis vous vous êtes endormi sur ses genoux."
+    ],
+    [
+     3,
+     "Vous avez longuement regardé de vieilles photos aux côtés de votre grand-mère maternelle."
+    ],
+    [
+     3,
+     "Votre grand-mère maternelle vous racontait des histoires d’autrefois."
+    ],
+    [
+     3,
+     "Vous demandiez « C’est quoi ? » et « Pourquoi ? » des dizaines de fois par jour."
+    ],
+    [
+     4,
+     "Les mois sans pluie, vous alliez chercher l’eau encore plus loin.",
+     "En 2022, 2,2 milliards de personnes dans le monde n’avaient pas accès à une eau potable gérée en toute sécurité (OMS/UNICEF JMP)"
+    ],
+    [
+     4,
+     "En jouant dans la boue, vous avez complètement sali vos vêtements."
+    ],
+    [
+     4,
+     "Vous ne teniez pas en place et couriez partout toute la journée."
+    ],
+    [
+     4,
+     "Vers cinq ans, les adultes disaient de Manoj que c’était un enfant plein de vie.",
+     "Le tempérament de l’enfance se prolonge souvent à l’âge adulte. La persévérance et la maîtrise de soi vers cinq ans étaient liées, modestement mais nettement, à la scolarité, à la santé et aux finances des décennies plus tard (Moffitt et al. 2011, étude de Dunedin, Nouvelle-Zélande)"
+    ],
+    [
+     4,
+     "À la maison, on cuisinait sur un feu de bois ou de charbon. Quand la fumée envahissait la cuisine, vous aviez les yeux qui piquaient et vous toussiez.",
+     "En Inde, 34 % des habitants des campagnes cuisinent avec des combustibles comme le bois, le charbon de bois, le charbon ou le kérosène (2023 ; OMS, Banque mondiale)"
+    ],
+    [
+     5,
+     "Vous avez eu cinq ans."
+    ],
+    [
+     5,
+     "La chaleur s’est prolongée, et pendant un temps, votre corps vous a paru lourd."
+    ],
+    [
+     5,
+     "Vous avez couru et joué avec les enfants du quartier jusqu’au coucher du soleil."
+    ],
+    [
+     5,
+     "À la course, vous arriviez toujours en tête.",
+     "Prises ensemble, les études de jumeaux montrent que la plupart des traits humains sont, pour moitié environ, innés et, pour moitié, façonnés au fil de l’enfance et de la jeunesse (Polderman et al. 2015)"
+    ],
+    [
+     5,
+     "À l’initiative de vos parents, vous avez été inscrit dans une école privée. Les frais de scolarité étaient loin d’être négligeables."
+    ],
+    [
+     6,
+     "Vous avez commencé l’école primaire."
+    ],
+    [
+     6,
+     "Avant le lever du soleil, vous alliez chercher de l’eau au puits, loin de la maison, un bidon à la main. Le chemin du retour semblait toujours plus long.",
+     "Dans 7 foyers sur 10 qui n’ont pas l’eau à domicile, ce sont les femmes et les filles qui vont la chercher (OMS/UNICEF JMP 2023)"
+    ],
+    [
+     6,
+     "Sur le dossier d’inscription à l’école, la case « catégorie de caste » indiquait : Autres classes défavorisées (OBC).",
+     "L’Inde réserve une part des places à l’université et des emplois publics aux castes répertoriées (SC), aux tribus répertoriées (ST) et aux autres classes défavorisées (OBC). La catégorie générale regroupe toutes les autres familles ; depuis 2019, 10 % des places sont aussi réservées aux familles modestes de cette catégorie"
+    ],
+    [
+     6,
+     "Votre grand-mère maternelle vous a glissé un peu d’argent de poche en cachette. (+19 €)"
+    ],
+    [
+     7,
+     "Un jour où vous n’aviez pas fait vos devoirs, l’enseignant vous a donné une gifle devant toute la classe. Ce jour-là, à la maison, vous n’avez pas pu dire un mot.",
+     "Si l’on vous frappe ou vous blesse à l’école, vous n’avez pas à le supporter seul : en France, appelez le 119, Allô Enfance en Danger (24 h/24, gratuit) ; findahelpline.com recense les lignes d’écoute gratuites d’autres pays."
+    ],
+    [
+     7,
+     "Décision : Cricket"
+    ],
+    [
+     7,
+     "Cricket : c’est devenu une vraie passion."
+    ],
+    [
+     7,
+     "Le soir de Diwali, vous avez allumé avec vos voisins de petites lampes le long de chaque ruelle."
+    ],
+    [
+     8,
+     "À la saison des pluies, les ruelles se changeaient en rivières. Avec les enfants du quartier, vous faisiez flotter des bateaux en papier sur l’eau boueuse."
+    ],
+    [
+     8,
+     "Décision : En parler à un adulte et retrouver le propriétaire"
+    ],
+    [
+     8,
+     "La propriétaire, une dame âgée, vous a dit merci encore et encore."
+    ],
+    [
+     8,
+     "Pour la première fois, vous avez navigué sur Internet. Votre monde s’est agrandi.",
+     "Utilisation d’Internet en Inde : 60 % de la population (UIT, Banque mondiale)"
+    ],
+    [
+     8,
+     "Vous jouiez à imiter les champions de cricket."
+    ],
+    [
+     9,
+     "La viande, on n’en mangeait qu’aux fêtes et aux grandes occasions.",
+     "En 2017, l’offre de viande de Inde était d’environ 4 kg par personne et par an (bilans alimentaires de la FAO)"
+    ],
+    [
+     9,
+     "Vous avez terminé l’année scolaire avec des notes moyennes."
+    ],
+    [
+     9,
+     "Une grande amitié est née entre vous et Ritu : vous ne vous quittiez plus."
+    ],
+    [
+     10,
+     "Vous avez rassemblé les enfants du quartier pour taper dans un ballon et transpirer un bon coup."
+    ],
+    [
+     10,
+     "À l’école, vous avez subi du harcèlement."
+    ],
+    [
+     11,
+     "Vous avez terminé l’école primaire."
+    ],
+    [
+     11,
+     "Quand la première pluie tant attendue est enfin tombée, tout le village est sorti en riant."
+    ],
+    [
+     11,
+     "Décision : Continuer à étudier"
+    ],
+    [
+     11,
+     "Vous êtes entré au collège."
+    ],
+    [
+     11,
+     "Vous avez passé les vacances scolaires chez votre grand-mère maternelle."
+    ],
+    [
+     12,
+     "Le goût du dal avec des rotis que vous préparait votre mère, vous ne l’oublierez sans doute jamais."
+    ],
+    [
+     12,
+     "Vous avez porté les courses de la vieille dame d’à côté jusqu’à sa porte."
+    ],
+    [
+     13,
+     "Vous vous êtes fait des amis parmi vos partenaires de cricket."
+    ],
+    [
+     13,
+     "Après l’école, vous aidiez à vous occuper des bêtes."
+    ],
+    [
+     13,
+     "Chaque matin, vous faisiez un long chemin à pied pour aller chercher de l’eau.",
+     "En 2022, 2,2 milliards de personnes dans le monde n’avaient pas accès à une eau potable gérée en toute sécurité (OMS/UNICEF JMP)"
+    ],
+    [
+     13,
+     "Vous avez eu votre premier smartphone."
+    ],
+    [
+     14,
+     "Vous avez terminé le collège."
+    ],
+    [
+     14,
+     "À une fête de quartier, vous avez chanté et dansé jusque tard dans la nuit."
+    ],
+    [
+     14,
+     "Décision : Aller au lycée"
+    ],
+    [
+     14,
+     "Vous êtes entré au lycée."
+    ],
+    [
+     14,
+     "Votre voix a commencé à muer. En un an, vous avez beaucoup grandi, et vos pantalons sont vite devenus trop courts."
+    ],
+    [
+     14,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     15,
+     "15 ans. Parmi les garçons qui ont vu le jour en Inde la même année que vous, environ 97 % sont encore en vie."
+    ],
+    [
+     15,
+     "Lors d’une courte sortie sous la chaleur de midi, vous avez eu un étourdissement et avez dû vous reposer longtemps."
+    ],
+    [
+     15,
+     "Vous avez eu le béguin pour quelqu’un de votre classe."
+    ],
+    [
+     15,
+     "Décision : Randonnée et promenade"
+    ],
+    [
+     15,
+     "Randonnée et promenade : c’est devenu une vraie passion."
+    ],
+    [
+     15,
+     "En chahutant avec votre sœur aînée, vous avez ri aux éclats, à vous en tenir les côtes."
+    ],
+    [
+     16,
+     "Une grande amitié est née entre vous et Mukesh : vous ne vous quittiez plus."
+    ],
+    [
+     16,
+     "Décision : L’emmener à l’hôpital"
+    ],
+    [
+     16,
+     "Vous avez accompagné cette personne jusqu’à l’hôpital. Quelques jours plus tard, sa famille est venue vous remercier."
+    ],
+    [
+     16,
+     "Grâce à un bon professeur, vous avez pris goût aux cours de mathématiques."
+    ],
+    [
+     16,
+     "Vous avez terminé l’année scolaire avec des notes moyennes."
+    ],
+    [
+     17,
+     "Toute la famille s’est réunie pour l’anniversaire de votre grand-mère paternelle."
+    ],
+    [
+     17,
+     "Grâce à un bon professeur, vous avez pris goût aux cours d’histoire."
+    ],
+    [
+     17,
+     "Les examens du Class 12 et les concours d’entrée tombaient la même année, et vous faisiez des exercices tard dans la nuit.",
+     "Rien que le concours d’entrée en médecine NEET-UG 2025 a compté 2 276 069 inscrits en Inde (National Testing Agency)"
+    ],
+    [
+     17,
+     "Votre deuxième grande sœur a quitté la maison pour se marier."
+    ],
+    [
+     18,
+     "Vous avez terminé le lycée."
+    ],
+    [
+     18,
+     "Une grosse dispute a éclaté avec une sœur ; la réconciliation est venue quelques mois plus tard."
+    ],
+    [
+     18,
+     "Décision : Tenter l’entrée à l’université"
+    ],
+    [
+     18,
+     "Vous avez été admis à l’université !"
+    ],
+    [
+     18,
+     "Pour aller à l’université, vous avez déménagé à Mumbai."
+    ],
+    [
+     18,
+     "Décision : Sciences de l’éducation"
+    ],
+    [
+     18,
+     "Vous avez décidé de faire des études de sciences de l’éducation."
+    ],
+    [
+     18,
+     "Vous avez aidé l’enfant des voisins à faire ses devoirs. Quelques jours plus tard, l’enfant a accouru pour vous dire que l’examen s’était très bien passé."
+    ],
+    [
+     18,
+     "Vous avez eu le béguin pour quelqu’un de votre classe."
+    ],
+    [
+     19,
+     "Vos voisins ont partagé leurs repas avec vous, à tour de rôle. Vous espérez bien leur rendre la pareille un jour."
+    ],
+    [
+     19,
+     "Une grande amitié est née entre vous et Rahul : vous ne vous quittiez plus."
+    ],
+    [
+     19,
+     "N’ayant plus personne à qui emprunter, vous avez tenu en mangeant moins et en réduisant toutes vos dépenses.",
+     "Dans les pays à faible revenu, la plupart des gens qui empruntent prennent de petites sommes à leur famille et à leurs amis (Banque mondiale, Findex)"
+    ],
+    [
+     20,
+     "La pollution a duré des jours : la gorge qui gratte, les yeux qui piquent.",
+     "En Inde, l’air extérieur que respirent les citadins contient en moyenne 56 µg/m³ de particules fines (PM2,5) par an, environ 11 fois la valeur guide de l’OMS (5 µg/m³) (2019 ; OMS)"
+    ],
+    [
+     20,
+     "Vous avez perdu le sommeil à cause d’une dette de 946 € (aux prix français)."
+    ],
+    [
+     20,
+     "Votre loyer a augmenté, et les fins de mois sont devenues difficiles. (−255 €)"
+    ],
+    [
+     20,
+     "Pendant des années, vous avez souvent sauté des repas, et votre corps s’est visiblement affaibli.",
+     "En 2023, environ 733 millions de personnes dans le monde ont souffert de la faim (FAO, SOFI 2024)"
+    ],
+    [
+     20,
+     "Votre grand-mère maternelle a quitté ce monde à 81 ans. (Cancer colorectal)"
+    ],
+    [
+     20,
+     "Selon la coutume, le corps a été incinéré et les cendres confiées aux eaux du fleuve."
+    ],
+    [
+     21,
+     "Vous avez terminé l’université ! Vous avez obtenu une licence."
+    ],
+    [
+     21,
+     "Vous vous êtes fait des amis avec qui partir en montagne chaque week-end."
+    ],
+    [
+     21,
+     "Décision : Poursuivre en master"
+    ],
+    [
+     21,
+     "Vous avez poursuivi en master."
+    ],
+    [
+     21,
+     "Une amitié s’est nouée avec quelqu’un d’une autre religion. À chaque fête de l’un ou de l’autre, vous vous invitiez mutuellement."
+    ],
+    [
+     21,
+     "Décision : Boire moins et trouver d’autres façons de tenir"
+    ],
+    [
+     21,
+     "Vous avez posé le verre et commencé à marcher chaque soir."
+    ],
+    [
+     21,
+     "Au mariage d’amis, vous avez aidé à préparer le repas."
+    ],
+    [
+     22,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     22,
+     "Vous avez terminé l’année scolaire avec des notes moyennes."
+    ],
+    [
+     22,
+     "Les nuits tropicales se sont enchaînées, et vous avez mal dormi pendant des jours."
+    ],
+    [
+     23,
+     "Vous avez terminé vos études supérieures et obtenu un master."
+    ],
+    [
+     23,
+     "Vous avez essayé de boire moins, mais quelques mois plus tard, les verres se sont de nouveau multipliés. Au bout d’un moment, vous avez recommencé à réduire.",
+     "Même parmi les personnes sorties d’une dépendance à l’alcool et qui buvaient peu, 27 % ont vu revenir des signes de consommation problématique en trois ans, et 4 % sont redevenues dépendantes (Dawson et al., Alcohol Clin Exp Res 2007)"
+    ],
+    [
+     23,
+     "Un jour où vous étiez perdu, une personne inconnue a longuement marché avec vous jusqu’à ce que vous retrouviez votre chemin."
+    ],
+    [
+     23,
+     "Décision : Chercheur ou professeur"
+    ],
+    [
+     23,
+     "Vous avez commencé à travailler comme chercheur ou professeur."
+    ],
+    [
+     23,
+     "Votre grand-mère paternelle vous a fait repartir avec de grands paquets de plats faits maison."
+    ],
+    [
+     24,
+     "Votre sœur aînée a célébré son mariage. Toute la famille a posé pour une photo à la cérémonie."
+    ],
+    [
+     24,
+     "Avec votre premier salaire, vous avez offert un petit cadeau à votre mère. Pas un mot en retour, seulement un long regard silencieux."
+    ],
+    [
+     24,
+     "Vous avez reçu une prime inattendue. (+920 €)"
+    ],
+    [
+     24,
+     "Votre grand-mère paternelle a quitté ce monde à 87 ans. (Maladie soudaine de cause inconnue)"
+    ],
+    [
+     24,
+     "Vous avez rangé les affaires de votre grand-mère paternelle, patinées par les années."
+    ],
+    [
+     25,
+     "Avec vos frères et sœurs, vous avez partagé le coût de l’opération de votre père. (−318 €)"
+    ],
+    [
+     25,
+     "La contribution de vos parents aux frais du mariage s’est élevée à 2 237 €."
+    ],
+    [
+     25,
+     "La famille de la mariée a remis 5 633 € de dot à votre famille.",
+     "En Inde, la loi de 1961 sur l’interdiction de la dot interdit de donner ou de recevoir une dot, mais dans 95 % des mariages ruraux de 1960 à 2008, la famille de la mariée en a versé une (REDS 2006, Anukriti, Kwon et Prakash 2021). En moyenne, environ 32 000 roupies aux prix de 2005, soit à peu près 1,4 fois le revenu annuel médian d’un ménage rural (IHDS 2005)."
+    ],
+    [
+     25,
+     "Décision : Se marier"
+    ],
+    [
+     25,
+     "Vous vous êtes marié !"
+    ],
+    [
+     25,
+     "Vous avez retrouvé de vieux amis et vous avez parlé toute la nuit."
+    ],
+    [
+     25,
+     "Vous avez participé, sur place, à la reconstruction d’une région frappée par une catastrophe.",
+     "Un peu plus d’un adulte sur cinq dans le monde dit avoir fait du bénévolat au cours du mois écoulé (CAF World Giving Index)"
+    ],
+    [
+     25,
+     "Sita a apporté au foyer 519 € d’économies."
+    ],
+    [
+     25,
+     "Le jour anniversaire de la mort de votre grand-mère paternelle, la famille s’est réunie pour partager des souvenirs.",
+     "La plupart des personnes qui perdent un proche continuent à mener leur vie au milieu du chagrin, ou retrouvent leurs repères en un an ou deux (Bonanno 2004)"
+    ],
+    [
+     25,
+     "Cette année, votre patrimoine a baissé de 1 786 €. Frais de mariage −3 356 € · Frais médicaux des parents −318 € · Frais de loisirs −87 € · Mis de côté sur vos revenus +1 049 €"
+    ],
+    [
+     26,
+     "Votre logement a été cambriolé."
+    ],
+    [
+     26,
+     "Au mariage d’amis de longue date, vous avez adressé vos vœux aux mariés. (−46 €)"
+    ],
+    [
+     26,
+     "Pour la première fois depuis longtemps, Sita et vous avez marché tranquillement, rien que vous deux. Même sans beaucoup de mots, c’était bien."
+    ],
+    [
+     27,
+     "Vous avez commencé à souffrir du dos."
+    ],
+    [
+     27,
+     "Décision : Acheter une moto à crédit"
+    ],
+    [
+     27,
+     "Vous avez acheté une moto à crédit. Vous allez la rembourser au cours des prochaines années."
+    ],
+    [
+     27,
+     "Votre niveau en cricket est devenu remarquable. Vous avez remporté un prix lors d’une compétition locale !"
+    ],
+    [
+     27,
+     "Vous avez remis une enveloppe de condoléances pour les funérailles d’un membre de la famille. (−59 €)"
+    ],
+    [
+     27,
+     "Le week-end, vous jouiez au cricket dans un club du coin.",
+     "12 % des habitants de l’Union européenne sont membres d’un club sportif (Commission européenne, Eurobaromètre 2022)"
+    ],
+    [
+     28,
+     "Vous avez obtenu une bonne évaluation, et votre salaire a augmenté."
+    ],
+    [
+     28,
+     "Votre fille, Meera Mohanty, a vu le jour."
+    ],
+    [
+     28,
+     "Vous passez 3 h 20 min par jour dans les trajets entre chez vous et le travail. Une bonne partie de chaque journée s’écoule sur la route, à l’aller et au retour."
+    ],
+    [
+     28,
+     "Décision : Déménager près du travail"
+    ],
+    [
+     28,
+     "Vous avez emménagé dans un quartier proche du travail. Vos soirées sont enfin à vous."
+    ],
+    [
+     29,
+     "Dans le miroir, vous avez découvert votre premier cheveu blanc."
+    ],
+    [
+     29,
+     "Décision : Confier le bébé à une crèche ou à une nounou"
+    ],
+    [
+     29,
+     "Vous avez confié Meera à la crèche et vous avez repris le travail."
+    ],
+    [
+     29,
+     "Meera vous a appelé « Papa » pour la première fois."
+    ],
+    [
+     29,
+     "Décision : Accepter"
+    ],
+    [
+     29,
+     "Vous êtes devenu chercheur principal."
+    ],
+    [
+     29,
+     "Un matin tranquille, sans rien de prévu, une tasse de thé chaud vous a fait un bien particulier."
+    ],
+    [
+     29,
+     "Votre deuxième grand frère a quitté ce monde à 32 ans. (Maladie soudaine de cause inconnue)"
+    ],
+    [
+     30,
+     "De fortes pluies ont inondé le quartier. Vous n’avez pas pu aller travailler pendant quelques jours. (−410 €)",
+     "Rien qu’en 2023, environ 93 millions de personnes ont été touchées par des catastrophes naturelles comme les inondations, les tempêtes, les sécheresses et les séismes (EM-DAT)"
+    ],
+    [
+     30,
+     "30 ans. Parmi les garçons qui ont vu le jour en Inde la même année que vous, environ 95 % sont encore en vie."
+    ],
+    [
+     30,
+     "Le ciel est resté voilé pendant des jours. Vous avez mis un masque pour aller travailler.",
+     "En Inde, l’air extérieur que respirent les citadins contient en moyenne 56 µg/m³ de particules fines (PM2,5) par an, environ 11 fois la valeur guide de l’OMS (5 µg/m³) (2019 ; OMS)"
+    ],
+    [
+     30,
+     "Vous avez parlé au téléphone avec vos frères et sœurs tard dans la nuit, et les souvenirs d’enfance vous ont fait rire longtemps."
+    ],
+    [
+     30,
+     "Meera vous a sauté au cou et a dit : « Je t’aime plus que tout au monde. »"
+    ],
+    [
+     31,
+     "Une sœur a eu un bébé. Pour la première fois, vous avez tenu votre neveu ou votre nièce dans vos bras."
+    ],
+    [
+     31,
+     "Votre fils, Vinod Mohanty, a vu le jour."
+    ],
+    [
+     31,
+     "Vous avez atteint le sommet d’une haute montagne dont vous rêviez depuis longtemps."
+    ],
+    [
+     31,
+     "Décision : Se faire soigner à l’hôpital"
+    ],
+    [
+     31,
+     "À l’hôpital, le diagnostic a été posé : calculs biliaires. Grâce aux soins, vous avez retrouvé la santé."
+    ],
+    [
+     31,
+     "Comme votre mère était malade, vous avez participé aux frais d’hôpital. (−468 €)"
+    ],
+    [
+     31,
+     "Cette année, votre patrimoine a baissé de 1 303 €. Frais liés aux enfants −1 277 € · Frais médicaux −758 € · Frais de garde −699 € · Mis de côté sur vos revenus +2 097 €"
+    ],
+    [
+     32,
+     "Vous avez fait refaire entièrement le moteur de votre moto. (−370 €)"
+    ],
+    [
+     32,
+     "Décision : Trier ce qui ne sert plus et le donner"
+    ],
+    [
+     32,
+     "Vous avez passé le week-end à trier et donné aux voisins ce qui pouvait encore servir. La maison a paru plus grande."
+    ],
+    [
+     32,
+     "La chaleur s’est prolongée, et pendant un temps, votre corps vous a paru lourd."
+    ],
+    [
+     32,
+     "Les photos laissées par votre deuxième grand frère vous ont rappelé la ruelle où vous couriez ensemble quand vous étiez enfants."
+    ],
+    [
+     33,
+     "Vous avez collé au mur le dessin de famille que Meera vous a fait. Tout le monde y avait un grand sourire."
+    ],
+    [
+     33,
+     "Vous avez inscrit Meera dans une école privée."
+    ],
+    [
+     33,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     33,
+     "Vous avez remis une enveloppe de condoléances pour les funérailles d’un membre de la famille. (−87 €)"
+    ],
+    [
+     33,
+     "Une molaire est devenue sensible, et chez le dentiste c'était une carie. La dent a été fraisée puis plombée. (−64 €)",
+     "La carie est la maladie la plus répandue au monde : environ 2 milliards de personnes ont des caries sur leurs dents définitives. Les soins dentaires échappent le plus souvent à l'assurance publique et restent à la charge des patients (OMS, Rapport sur la situation mondiale de la santé bucco-dentaire 2022)"
+    ],
+    [
+     34,
+     "Meera a fait sa rentrée dans une école privée."
+    ],
+    [
+     34,
+     "Un message est arrivé de quelqu'un perdu de vue depuis longtemps, juste pour prendre de vos nouvelles. Vous l'avez relu encore et encore."
+    ],
+    [
+     34,
+     "Vous avez partagé de la nourriture avec des voisins dans le besoin."
+    ],
+    [
+     34,
+     "Il a fallu plus de temps à Meera qu’aux autres enfants pour apprendre à lire et à compter. Au bout des examens, le diagnostic a été posé : déficience intellectuelle.",
+     "Environ 2 % des enfants dans le monde ont une déficience intellectuelle (GBD 2019)"
+    ],
+    [
+     35,
+     "10 ans de mariage. Sita vous a remis une lettre écrite à la main."
+    ],
+    [
+     35,
+     "L’économie mondiale est entrée en récession. Les commandes des usines se sont taries et les emplois se sont raréfiés.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     35,
+     "Votre loyer a augmenté. Le budget du foyer n’en a pas beaucoup souffert. (−538 €)"
+    ],
+    [
+     35,
+     "Lors de l’hospitalisation de votre père, vous avez participé aux frais. (−469 €)"
+    ],
+    [
+     35,
+     "À l’école où allait Meera, aucun enseignant n’était là pour l’aider en plus."
+    ],
+    [
+     36,
+     "Vous avez assisté à la journée sportive de l’école de Meera. Après une chute, Meera a repris la course jusqu’à la ligne d’arrivée, et vous avez crié vos encouragements à en perdre la voix."
+    ],
+    [
+     36,
+     "Votre fils, Sandeep Mohanty, a vu le jour."
+    ],
+    [
+     36,
+     "Vinod vous a murmuré « Je t’aime » avant de s’endormir."
+    ],
+    [
+     36,
+     "Décision : Partir en Royaume-Uni"
+    ],
+    [
+     36,
+     "Votre visa a été refusé. Seuls les frais de demande ont été perdus. (−427 €)"
+    ],
+    [
+     36,
+     "Votre père a quitté ce monde à 77 ans. (Septicémie)"
+    ],
+    [
+     36,
+     "Selon la coutume, le corps a été incinéré et les cendres confiées aux eaux du fleuve. Vous avez partagé les frais d’obsèques avec vos frères et sœurs. (−180 €)"
+    ],
+    [
+     36,
+     "Après les matchs du club, tout le monde dînait ensemble."
+    ],
+    [
+     37,
+     "Le jour de votre anniversaire, Meera vous a tendu une lettre écrite à la main et un gâteau tout de travers."
+    ],
+    [
+     37,
+     "Décision : Confier le bébé à une crèche ou à une nounou"
+    ],
+    [
+     37,
+     "Vous avez confié Sandeep à la crèche et vous avez repris le travail."
+    ],
+    [
+     37,
+     "Vous avez rassemblé les gens du quartier pour taper dans un ballon et transpirer un bon coup."
+    ],
+    [
+     37,
+     "On vous a volé votre téléphone dans un marché bondé."
+    ],
+    [
+     37,
+     "Votre frère aîné a quitté ce monde à 49 ans. (Tuberculose)"
+    ],
+    [
+     37,
+     "Le jour anniversaire de la mort de votre père, la famille s’est réunie autour de ses plats préférés. C’était un jour de nostalgie plus que de tristesse."
+    ],
+    [
+     38,
+     "Une sœur a eu un bébé. Pour la première fois, vous avez tenu votre neveu ou votre nièce dans vos bras."
+    ],
+    [
+     38,
+     "L’alcool a failli reprendre de la place, mais une fois de plus, vous avez posé le verre."
+    ],
+    [
+     38,
+     "Vous avez passé plusieurs jours au lit avec un mauvais rhume."
+    ],
+    [
+     38,
+     "Vous avez formé une nouvelle recrue. Cela vous a rappelé vos propres débuts."
+    ],
+    [
+     39,
+     "Dans les moments difficiles, votre passion (cricket) a été votre point d’appui."
+    ],
+    [
+     39,
+     "Décision : Faire semblant de ne rien voir"
+    ],
+    [
+     39,
+     "Ce soir-là, vous avez gardé longtemps le cœur lourd."
+    ],
+    [
+     39,
+     "Le jour anniversaire de la mort de votre frère aîné, la famille s’est réunie pour parler de votre frère aîné. Les souvenirs d’enfance ont fait rire tout le monde."
+    ],
+    [
+     40,
+     "Vinod vous a offert un cadeau d’anniversaire, acheté avec son argent de poche mis de côté pendant longtemps."
+    ],
+    [
+     40,
+     "Décision : Y aller, ne serait-ce qu’une fois par mois"
+    ],
+    [
+     40,
+     "Grâce au groupe de bénévoles, vous avez fait la connaissance de nouvelles personnes du quartier."
+    ],
+    [
+     40,
+     "Vous avez collé au mur le dessin de famille que Sandeep vous a fait. Tout le monde y avait un grand sourire."
+    ],
+    [
+     40,
+     "Les nuits tropicales se sont enchaînées, et vous avez mal dormi pendant des jours."
+    ],
+    [
+     40,
+     "Votre partenaire, Sita, a perdu son emploi."
+    ],
+    [
+     41,
+     "L’école vous a fait venir au sujet de Meera : une grosse dispute avec quelqu’un de sa classe. Sur le chemin du retour, vous avez longuement parlé ensemble."
+    ],
+    [
+     41,
+     "Avec vos frères et sœurs, vous avez partagé le coût de l’opération de votre mère. (−475 €)"
+    ],
+    [
+     41,
+     "Votre partenaire, Sita, a retrouvé un emploi."
+    ],
+    [
+     41,
+     "Les petits caractères devenaient flous de près. Faute de lunettes de lecture adaptées, vous lisiez les petits caractères en plein soleil, à bout de bras.",
+     "Environ 1,8 milliard de personnes sont presbytes, et 826 millions d'entre elles voient mal de près faute de lunettes de lecture adaptées (OMS, Rapport mondial sur la vision 2019)"
+    ],
+    [
+     42,
+     "Vous avez remis une enveloppe de condoléances pour les funérailles d’un membre de la famille. (−87 €)"
+    ],
+    [
+     42,
+     "Votre fille, Asha Mohanty, a vu le jour."
+    ],
+    [
+     42,
+     "Sandeep a fait sa rentrée dans une école privée."
+    ],
+    [
+     42,
+     "Vous passiez souvent voir une personne âgée du voisinage qui vivait seule."
+    ],
+    [
+     42,
+     "Meera disait toujours bonjour à tout le quartier, si bien qu’au marché, beaucoup de gens reconnaissaient Meera."
+    ],
+    [
+     43,
+     "Vous avez parlé d’avenir avec Meera jusque tard dans la nuit. Sans que vous l’ayez vu venir, l’enfant avait bien grandi."
+    ],
+    [
+     43,
+     "Vous avez aussi assisté à la journée sportive de l’école de Vinod, et applaudi pendant le relais, le témoin serré bien fort dans la main."
+    ],
+    [
+     43,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     44,
+     "Vinod a tenu son rôle jusqu’au bout au spectacle de l’école. Depuis la salle, vous lui faisiez signe de la main."
+    ],
+    [
+     44,
+     "Asha vous a appelé « Papa » pour la première fois, à son tour. À côté, Sandeep a compris avant tout le monde et a applaudi."
+    ],
+    [
+     44,
+     "Vous avez emmené Sandeep au zoo ; impossible de l’arracher aux girafes avant un long moment."
+    ],
+    [
+     44,
+     "Sandeep avait particulièrement du mal à lire. Chaque soir, vous vous asseyiez à côté de votre enfant et vous lisiez ensemble, ligne par ligne.",
+     "Environ 7 % des enfants d’école primaire sont dyslexiques, les garçons environ deux fois plus souvent que les filles (Yang et al. 2022)"
+    ],
+    [
+     45,
+     "Au téléphone, une sœur débordait de joie : son enfant venait d’entrer à l’université."
+    ],
+    [
+     45,
+     "Décision : Prendre le temps d’écouter"
+    ],
+    [
+     45,
+     "Le visage plus léger, cette personne vous a dit merci."
+    ],
+    [
+     45,
+     "Votre ami Aarav était à l’hôpital, et vous lui avez rendu visite. Vous avez ri de vos cheveux blancs respectifs."
+    ],
+    [
+     45,
+     "Vous avez fait un bilan de santé de routine. Rien d’anormal."
+    ],
+    [
+     45,
+     "Votre partenaire, Sita, a réussi dans son travail, et ses revenus ont augmenté."
+    ],
+    [
+     46,
+     "Vous avez collé au mur le dessin de famille qu’Asha vous a fait. Tout le monde y avait un grand sourire."
+    ],
+    [
+     46,
+     "Le ciel est resté voilé pendant des jours. Vous avez mis un masque pour aller travailler.",
+     "En Inde, l’air extérieur que respirent les citadins contient en moyenne 56 µg/m³ de particules fines (PM2,5) par an, environ 11 fois la valeur guide de l’OMS (5 µg/m³) (2019 ; OMS)"
+    ],
+    [
+     46,
+     "Une canicule record s’est abattue sur la région."
+    ],
+    [
+     47,
+     "On dirait que Vinod a le béguin pour quelqu’un. Vous avez souri, en faisant mine de ne rien remarquer."
+    ],
+    [
+     47,
+     "Décision : Tout payer vous-même"
+    ],
+    [
+     47,
+     "Vous avez payé les études de Meera. Le jour de la rentrée, vous lui avez longtemps fait signe de la main."
+    ],
+    [
+     47,
+     "Quelqu’un que vous aviez aidé il y a quelques années s’en souvenait encore, et vous a fait parvenir un mot de remerciement."
+    ],
+    [
+     47,
+     "Vous avez parlé d’avenir avec Vinod jusque tard dans la nuit. Sans que vous l’ayez vu venir, l’enfant avait bien grandi."
+    ],
+    [
+     47,
+     "Décision : Accepter"
+    ],
+    [
+     47,
+     "Vous êtes devenu directeur d’institut de recherche."
+    ],
+    [
+     47,
+     "La jeune recrue qui vous avait confié ses doutes il y a quelques années vous a envoyé une invitation à son mariage, en disant que c’était grâce à vous."
+    ],
+    [
+     47,
+     "Cette année, votre patrimoine a baissé de 1 458 €. Frais de scolarité des enfants −4 661 € · Frais liés aux enfants −2 255 € · Frais d’école privée des enfants −466 € · Dette remboursée en réduisant les dépenses +3 846 €"
+    ],
+    [
+     48,
+     "Sandeep avait raté un examen et refusait de sortir de sa chambre. Vous avez déposé son plat préféré devant la porte."
+    ],
+    [
+     48,
+     "Au parc, vous avez aidé Asha à apprendre à faire du vélo. Après chaque chute, l’enfant se relevait et se remettait à pédaler."
+    ],
+    [
+     48,
+     "Une grosse dispute a éclaté avec une sœur ; la réconciliation est venue quelques mois plus tard."
+    ],
+    [
+     48,
+     "Vous avez remboursé toutes vos dettes !"
+    ],
+    [
+     49,
+     "Vous avez remis une enveloppe de condoléances pour les funérailles d’un membre de la famille. (−91 €)"
+    ],
+    [
+     49,
+     "Lors de l’hospitalisation de votre mère, vous avez participé aux frais. (−509 €)"
+    ],
+    [
+     49,
+     "Vous avez formé une nouvelle recrue. Cela vous a rappelé vos propres débuts."
+    ],
+    [
+     49,
+     "Une crise financière a éclaté. Les banques ont vacillé et les entreprises ont réduit leurs effectifs.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     50,
+     "Vous avez eu cinquante ans."
+    ],
+    [
+     50,
+     "Votre loyer a augmenté. Le budget du foyer n’en a pas beaucoup souffert. (−550 €)"
+    ],
+    [
+     50,
+     "Décision : Tout payer vous-même"
+    ],
+    [
+     50,
+     "Vous avez payé les études de Vinod. Le jour de la rentrée, vous lui avez longtemps fait signe de la main."
+    ],
+    [
+     50,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     50,
+     "Vous avez gardé pendant une journée l’enfant d’un voisin, retenu par un imprévu."
+    ],
+    [
+     50,
+     "Une dette de 1 026 € est revenue, alors que vous aviez tout remboursé. Frais de scolarité des enfants −4 661 € · Frais liés aux enfants −1 407 € · Hausse du loyer −550 €"
+    ],
+    [
+     51,
+     "Le jour de votre anniversaire, Sandeep vous attendait avec le petit-déjeuner servi sur la table."
+    ],
+    [
+     51,
+     "Vous avez revu vos amis d’enfance après des années, et vous avez longtemps ri en évoquant le passé."
+    ],
+    [
+     51,
+     "Vous avez fait un bilan de santé de routine. Rien d’anormal."
+    ],
+    [
+     51,
+     "Vous avez remboursé toutes vos dettes !"
+    ],
+    [
+     51,
+     "Meera a terminé ses études universitaires et a commencé à travailler comme ouvrière d’usine."
+    ],
+    [
+     52,
+     "Vous avez parlé d’avenir avec Sandeep jusque tard dans la nuit. Sans que vous l’ayez vu venir, l’enfant avait bien grandi."
+    ],
+    [
+     52,
+     "Maintenant que vous aviez une voiture, vous avez vendu votre moto."
+    ],
+    [
+     52,
+     "Décision : Acheter à crédit"
+    ],
+    [
+     52,
+     "Vous avez acheté une voiture à crédit. Vous allez la rembourser au cours des prochaines années."
+    ],
+    [
+     52,
+     "En travaillant sous la chaleur de midi, vous avez eu un étourdissement et dû vous arrêter pour vous reposer."
+    ],
+    [
+     52,
+     "Meera a commencé à verser chaque mois une partie de son salaire au foyer. Vous en ressentiez de la gratitude, et un peu de gêne aussi."
+    ],
+    [
+     52,
+     "Votre partenaire, Sita, a perdu son emploi."
+    ],
+    [
+     52,
+     "Cette année, votre patrimoine a baissé de 5 874 €. Achat : voiture −9 922 € · Frais liés aux enfants −1 512 € · Frais d’école privée des enfants −466 € · Dette remboursée en réduisant les dépenses +3 850 €"
+    ],
+    [
+     53,
+     "Votre ami Aarav n’a pas oublié votre anniversaire et vous a envoyé un petit cadeau."
+    ],
+    [
+     53,
+     "Décision : Appeler maintenant pour le dire"
+    ],
+    [
+     53,
+     "Au bout du fil, vos mots ont laissé votre mère sans voix un long moment."
+    ],
+    [
+     53,
+     "Vous avez perdu le sommeil à cause d’une dette de 5 673 € (aux prix français)."
+    ],
+    [
+     53,
+     "Comme votre mère était malade, vous avez participé aux frais d’hôpital. (−520 €)"
+    ],
+    [
+     53,
+     "Votre partenaire, Sita, a retrouvé un emploi."
+    ],
+    [
+     54,
+     "Vous avez aussi assisté à la journée sportive de l’école d’Asha. Sandeep, qui était là aussi, encourageait encore plus fort que vous."
+    ],
+    [
+     54,
+     "Quelqu’un a brisé une vitre de votre voiture garée et a pris le sac qui était à l’intérieur."
+    ],
+    [
+     54,
+     "Vous avez remboursé toutes vos dettes !"
+    ],
+    [
+     54,
+     "Vinod a terminé ses études universitaires et a commencé à travailler comme producteur télé et vidéo."
+    ],
+    [
+     55,
+     "Avec sa première paie, Vinod vous a acheté un cadeau. Vous l’avez gardé précieusement pendant des années."
+    ],
+    [
+     55,
+     "Décision : Tout payer vous-même"
+    ],
+    [
+     55,
+     "Vous avez payé les études de Sandeep. Le jour de la rentrée, vous lui avez longtemps fait signe de la main."
+    ],
+    [
+     55,
+     "Vos compétences ont été reconnues, et votre salaire annuel a augmenté."
+    ],
+    [
+     55,
+     "Décision : Vivre chacun chez soi et passer souvent aider"
+    ],
+    [
+     55,
+     "Vous habitiez tout près et passiez souvent vous occuper de votre mère : vous faisiez les courses et l’accompagniez chez le médecin."
+    ],
+    [
+     55,
+     "30 ans de mariage. Sita et vous avez dîné en toute simplicité."
+    ],
+    [
+     55,
+     "Vinod a commencé à verser chaque mois une partie de son salaire au foyer. Vous en ressentiez de la gratitude, et un peu de gêne aussi."
+    ],
+    [
+     55,
+     "Vous avez remboursé toutes vos dettes !"
+    ],
+    [
+     55,
+     "Vous avez obtenu de bons résultats à un tournoi disputé avec votre club."
+    ],
+    [
+     56,
+     "Vous avez eu la grippe pendant une semaine."
+    ],
+    [
+     56,
+     "Décision : Offrir seulement vos vœux de bonheur"
+    ],
+    [
+     56,
+     "Vinod a célébré son mariage. Vous avez serré bien fort les mains des mariés et vous leur avez donné votre bénédiction."
+    ],
+    [
+     56,
+     "Après leur mariage, Vinod et la personne qui partage sa vie ont décidé de s’installer chez vous."
+    ],
+    [
+     56,
+     "Votre ami de longue date Aarav a quitté ce monde."
+    ],
+    [
+     56,
+     "Décision : Donner une partie, selon vos moyens"
+    ],
+    [
+     56,
+     "Vous avez donné ce que vous pouviez."
+    ],
+    [
+     56,
+     "Votre mère a quitté ce monde à 92 ans. (Maladie d’Alzheimer ou autre démence)"
+    ],
+    [
+     56,
+     "Désormais, vos deux parents ne sont plus là. Vous avez partagé les frais d’obsèques avec vos frères et sœurs. (−233 €)"
+    ],
+    [
+     56,
+     "La maison où vivaient vos parents est revenue à l’un de vos frères et sœurs, et il ne restait presque rien d’autre."
+    ],
+    [
+     56,
+     "Votre partenaire, Sita, a réussi dans son travail, et ses revenus ont augmenté."
+    ],
+    [
+     57,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     57,
+     "Avec de vieux amis enfin réunis, vous avez parlé du bon vieux temps jusque tard dans la nuit."
+    ],
+    [
+     57,
+     "Quand la Bourse s’est effondrée, ceux qui avaient des liquidités étaient partagés : pour les uns, c’était le moment d’acheter ; pour les autres, les cours allaient encore baisser."
+    ],
+    [
+     58,
+     "Une sœur a subi une grosse opération. Vous avez passé la nuit à son chevet, à l’hôpital."
+    ],
+    [
+     58,
+     "Vous avez fait un bilan de santé de routine. Rien d’anormal."
+    ],
+    [
+     58,
+     "Vous avez formé une nouvelle recrue. Cela vous a rappelé vos propres débuts."
+    ],
+    [
+     59,
+     "Vous avez fait les courses à la place d’un voisin malade."
+    ],
+    [
+     59,
+     "Une crise financière a éclaté. Les banques ont vacillé et les entreprises ont réduit leurs effectifs.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     59,
+     "La monnaie s’est effondrée : avec vos économies, vous pouvez désormais acheter 15 % de moins. (−1 193 €)"
+    ],
+    [
+     59,
+     "Une canicule record s’est abattue sur la région."
+    ],
+    [
+     59,
+     "Sandeep a terminé ses études universitaires et a commencé à travailler comme ingénieur."
+    ],
+    [
+     59,
+     "Le jour anniversaire de la mort de votre mère, vous avez passé une guirlande de fleurs autour de sa photo et allumé une lampe."
+    ],
+    [
+     60,
+     "Chez vous, il y a désormais une télévision et un réfrigérateur."
+    ],
+    [
+     60,
+     "On dirait qu’Asha a le béguin pour quelqu’un. Vous avez souri, en faisant mine de ne rien remarquer."
+    ],
+    [
+     60,
+     "Décision : Partir à la retraite à l’âge prévu"
+    ],
+    [
+     60,
+     "Vous avez pris votre retraite à l’âge prévu. Vos collègues ont organisé une petite fête de départ."
+    ],
+    [
+     60,
+     "Vous avez parlé au téléphone avec vos frères et sœurs tard dans la nuit, et les souvenirs d’enfance vous ont fait rire longtemps."
+    ],
+    [
+     60,
+     "Vos enfants qui vivent avec vous ont commencé à participer chaque mois aux dépenses du foyer."
+    ],
+    [
+     60,
+     "Une chanson qu’aimait votre ami(e) disparu(e), Aarav, est passée, et vous l’avez écoutée jusqu’au bout."
+    ],
+    [
+     61,
+     "Vous avez eu votre propre ordinateur."
+    ],
+    [
+     61,
+     "Vous avez payé les études d’Asha. Le jour de la rentrée, vous lui avez longtemps fait signe de la main."
+    ],
+    [
+     61,
+     "Votre logement a été cambriolé."
+    ],
+    [
+     61,
+     "En repensant à votre vie, vous avez vu revenir un à un les visages des personnes à qui vous deviez tant."
+    ],
+    [
+     61,
+     "Décision : Investir en actions"
+    ],
+    [
+     61,
+     "Vous avez retiré votre épargne pour la placer dans des actions."
+    ],
+    [
+     61,
+     "Cette année, votre patrimoine a baissé de 5 235 €. Frais de scolarité des enfants −4 661 € · Achat : ordinateur fixe ou portable −1 496 € · Coût de la vie à la retraite −1 322 € · Contribution d’un enfant vivant avec vous +1 302 €"
+    ],
+    [
+     62,
+     "Promenade au petit matin : ce jour-là, le lever du soleil était d’une beauté particulière."
+    ],
+    [
+     62,
+     "Les actions ont fortement monté, et votre placement a progressé de 29 %."
+    ],
+    [
+     63,
+     "Vous avez fait un bilan de santé de routine. Rien d’anormal."
+    ],
+    [
+     64,
+     "La personne qui tient la boutique où vous allez toujours se souvenait de votre nom et vous a demandé de vos nouvelles la première."
+    ],
+    [
+     64,
+     "Décision : Prêter la somme"
+    ],
+    [
+     64,
+     "Vous avez prêté l’argent et choisi de croire à la promesse qu’il vous serait rendu."
+    ],
+    [
+     64,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     65,
+     "65 ans. Parmi les garçons qui ont vu le jour en Inde la même année que vous, environ 75 % sont encore en vie."
+    ],
+    [
+     65,
+     "Vous avez suivi des cours à la maison de quartier et appris de nouvelles choses.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     65,
+     "Avec vos frères et sœurs, vous avez décidé de vous retrouver chaque année à une date fixée. À chaque fois, les souvenirs d’enfance étaient intarissables."
+    ],
+    [
+     65,
+     "40 ans de mariage. Sita vous a remis une lettre écrite à la main."
+    ],
+    [
+     65,
+     "Votre partenaire, Sita, a cessé de travailler et a pris sa retraite."
+    ],
+    [
+     65,
+     "Asha a terminé ses études universitaires et a commencé à travailler comme journaliste."
+    ],
+    [
+     66,
+     "Avec sa première paie, Asha vous a acheté un cadeau. Vous l’avez gardé précieusement pendant des années."
+    ],
+    [
+     66,
+     "Décision : Se faire soigner à l’hôpital"
+    ],
+    [
+     66,
+     "À l’hôpital, le diagnostic a été posé : fièvre typhoïde. Grâce aux soins, vous avez retrouvé la santé."
+    ],
+    [
+     66,
+     "Vous avez gardé pendant une journée l’enfant d’un voisin, retenu par un imprévu."
+    ],
+    [
+     66,
+     "L’argent prêté ne vous a jamais été rendu. Mais l’amitié, elle, est restée."
+    ],
+    [
+     67,
+     "Vous avez lancé votre propre groupe de cricket et réuni du monde chaque week-end."
+    ],
+    [
+     67,
+     "Décision : Donner un peu, selon vos moyens"
+    ],
+    [
+     67,
+     "Sandeep a célébré son mariage. Vous avez contribué selon vos moyens."
+    ],
+    [
+     67,
+     "Sandeep a quitté la maison pour fonder son propre foyer."
+    ],
+    [
+     67,
+     "Les nuits tropicales se sont enchaînées, et vous avez mal dormi pendant des jours."
+    ],
+    [
+     67,
+     "Décision : Adopter un lapin"
+    ],
+    [
+     67,
+     "Un lapin, Luna, a rejoint la famille."
+    ],
+    [
+     67,
+     "Votre amie de longue date Sunita a quitté ce monde."
+    ],
+    [
+     68,
+     "Pour votre anniversaire, Asha vous a offert un bon dîner au restaurant."
+    ],
+    [
+     68,
+     "Vous avez fait un bilan de santé de routine. On vous a dit que votre glycémie était un peu élevée, et conseillé de limiter les boissons sucrées, le riz blanc et le pain blanc, et de bouger souvent."
+    ],
+    [
+     68,
+     "Votre vieux réfrigérateur est tombé en panne, et vous en avez acheté un nouveau. (−154 €)"
+    ],
+    [
+     68,
+     "Votre premier petit-enfant est né ! Votre fils Vinod a eu un bébé (garçon)."
+    ],
+    [
+     68,
+     "Au travail, Meera a obtenu le poste de chef d’équipe de production. Le soir même, toute la famille l’a fêté autour de la table."
+    ],
+    [
+     69,
+     "Vous avez fait un bilan de santé de routine. Rien d’anormal."
+    ],
+    [
+     69,
+     "Asha a célébré son mariage. Vous avez contribué selon vos moyens. Vous avez remis 5 814 € de dot à la famille du marié.",
+     "En Inde, la loi de 1961 sur l’interdiction de la dot interdit de donner ou de recevoir une dot, mais dans 95 % des mariages ruraux de 1960 à 2008, la famille de la mariée en a versé une (REDS 2006, Anukriti, Kwon et Prakash 2021). En moyenne, environ 32 000 roupies aux prix de 2005, soit à peu près 1,4 fois le revenu annuel médian d’un ménage rural (IHDS 2005)."
+    ],
+    [
+     69,
+     "Asha a emménagé chez ses beaux-parents."
+    ],
+    [
+     69,
+     "Sandeep a réparé sans un mot ce qui était cassé dans la maison avant de repartir."
+    ],
+    [
+     69,
+     "Vous avez passé du temps avec votre petit-enfant."
+    ],
+    [
+     69,
+     "Votre fille Asha a eu un bébé (garçon). Vous avez maintenant 2 petits-enfants."
+    ],
+    [
+     69,
+     "Cette année, votre patrimoine a baissé de 6 361 €. Dot −5 814 € · Coût de la vie à la retraite −2 121 € · Aide au mariage des enfants −1 165 € · Aide de vos enfants pour vivre +2 121 €"
+    ],
+    [
+     70,
+     "Vous avez retrouvé de vieux amis perdus de vue depuis un moment, et chacun a raconté ce qu’il devenait."
+    ],
+    [
+     70,
+     "Vous avez eu la grippe pendant une semaine."
+    ],
+    [
+     70,
+     "L’enfant des voisins vous fait toujours un grand signe de la main quand vous vous croisez dans la rue."
+    ],
+    [
+     70,
+     "3 nouveaux petits-enfants sont nés. Vous avez maintenant 5 petits-enfants."
+    ],
+    [
+     70,
+     "Votre famille s’est réunie pour vos 70 ans. Sur la photo de groupe, vous étiez au beau milieu."
+    ],
+    [
+     71,
+     "Vous avez raconté à votre petit-enfant des histoires du village, là où vous êtes né."
+    ],
+    [
+     71,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     71,
+     "Les actions ont fortement monté, et votre placement a progressé de 25 %."
+    ],
+    [
+     71,
+     "Cela fait dix ans que votre argent est placé dans des actions : au total, il a rapporté 2 552 €. Sur un compte d’épargne, il aurait rapporté environ 1 994 € de moins."
+    ],
+    [
+     71,
+     "Votre sœur aînée a quitté ce monde à 79 ans. (Infarctus ou autre cardiopathie ischémique)"
+    ],
+    [
+     71,
+     "Votre fille Asha a eu un bébé (garçon). Vous avez maintenant 6 petits-enfants."
+    ],
+    [
+     72,
+     "Une proposition d’investissement convaincante s’est révélée être une escroquerie, et l’argent a disparu. (−926 €)"
+    ],
+    [
+     72,
+     "Vous voyez du monde dans le voisinage et vous bavardez chaque jour. Vous avez l’esprit clair et le cœur serein.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     72,
+     "Votre fille Asha a eu un bébé (fille). Vous avez maintenant 7 petits-enfants."
+    ],
+    [
+     73,
+     "Votre ami de longue date Mukesh a quitté ce monde."
+    ],
+    [
+     73,
+     "Une grosse dispute a éclaté avec votre deuxième grande sœur ; la réconciliation est venue quelques mois plus tard."
+    ],
+    [
+     74,
+     "Sandeep vous a demandé de garder votre petit-enfant pendant ses heures de travail. Pendant quelques années, vous avez assuré la garde plusieurs jours par semaine. Votre dos vous faisait souffrir, mais les journées passaient vite."
+    ],
+    [
+     74,
+     "Vous avez partagé de la nourriture avec des voisins dans le besoin."
+    ],
+    [
+     74,
+     "Vous avez fait un bilan de santé de routine. Rien d’anormal."
+    ],
+    [
+     74,
+     "Sandeep a acheté un logement. À la pendaison de crémaillère, vous en avez longuement fait le tour."
+    ],
+    [
+     75,
+     "Votre partenaire a pris goût à son tour à votre passion (cricket), et les journées passées à deux se sont multipliées."
+    ],
+    [
+     75,
+     "50 ans de mariage. Vos enfants ont organisé une petite fête."
+    ],
+    [
+     75,
+     "Votre mémoire n’est plus ce qu’elle était."
+    ],
+    [
+     75,
+     "Le fils d’Asha a commencé l’école. Vous lui avez acheté un cartable."
+    ],
+    [
+     75,
+     "Dans ses bons moments, Luna bondissait en l’air en se tortillant. Chaque soir, vous vous asseyiez par terre au salon pour admirer ce spectacle."
+    ],
+    [
+     76,
+     "Lors d’une courte sortie sous la chaleur de midi, vous avez eu un étourdissement et avez dû vous reposer longtemps."
+    ],
+    [
+     76,
+     "L’économie mondiale est entrée en récession. Les commandes des usines se sont taries et les emplois se sont raréfiés.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     76,
+     "La Bourse s’est effondrée : votre placement a perdu 24 % de sa valeur."
+    ],
+    [
+     76,
+     "Vous avez appris qu’au travail, Sandeep était désormais ingénieur principal."
+    ],
+    [
+     76,
+     "Cette année, votre patrimoine a baissé de 2 092 €. Actions −2 923 € · Coût de la vie à la retraite −2 121 € · Coût de la vie (pris sur l’épargne) −337 € · Aide de vos enfants pour vivre +2 121 €"
+    ],
+    [
+     77,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     77,
+     "On vous a demandé 658 € pour les frais d’hôpital d’un proche de votre région natale et, cette fois encore, vous avez donné ce que vous pouviez."
+    ],
+    [
+     77,
+     "Votre amie de longue date Rashmi a quitté ce monde."
+    ],
+    [
+     77,
+     "Décision : Rester tout près et l’accompagner en douceur"
+    ],
+    [
+     77,
+     "Vous avez tenu Luna dans vos bras et l’avez laissé partir en douceur."
+    ],
+    [
+     77,
+     "Les actions ont fortement monté, et votre placement a progressé de 51 %."
+    ],
+    [
+     77,
+     "La fille de Sandeep a commencé l’école. Vous lui avez acheté un cartable."
+    ],
+    [
+     78,
+     "Votre ami de longue date Ashok vous a téléphoné à l’improviste, et vous avez bavardé pendant une heure."
+    ],
+    [
+     78,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     78,
+     "Chaque week-end, vous avez fait du bénévolat en servant des repas dans une soupe populaire.",
+     "Un peu plus d’un adulte sur cinq dans le monde dit avoir fait du bénévolat au cours du mois écoulé (CAF World Giving Index)"
+    ],
+    [
+     78,
+     "Votre enfant Meera a quitté ce monde à 50 ans. (Accident vasculaire cérébral)"
+    ],
+    [
+     78,
+     "Vous n’aviez jamais su que perdre un enfant avant soi pouvait faire aussi mal. Quand vous fermiez les yeux, c’était d’abord le visage d’enfant de Meera qui vous revenait."
+    ],
+    [
+     78,
+     "Pendant un moment, vous n’avez pas eu le cœur de ranger les affaires de Luna."
+    ],
+    [
+     79,
+     "Vous avez fait un bilan de santé de routine. Rien d’anormal."
+    ],
+    [
+     79,
+     "Vous avez suivi des cours à la maison de quartier et appris de nouvelles choses.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     79,
+     "Vous aviez perdu presque toutes vos dents. Sans dentiste à proximité pour faire un dentier, vous choisissiez des aliments tendres et mous.",
+     "Environ 7 % des adultes de 20 ans et plus n'ont plus aucune dent, et 23 % des 60 ans et plus (OMS, Rapport sur la situation mondiale de la santé bucco-dentaire 2022)"
+    ],
+    [
+     80,
+     "80 ans. Parmi les garçons qui ont vu le jour en Inde la même année que vous, environ 34 % sont encore en vie."
+    ],
+    [
+     80,
+     "Vous avez aidé des voisins à porter leurs cartons le jour de leur déménagement. Le soir, ils vous ont fait porter un plat."
+    ],
+    [
+     80,
+     "Asha n’a pas oublié votre anniversaire et a fait le déplacement pour vous voir."
+    ],
+    [
+     80,
+     "Votre famille s’est réunie pour vos 80 ans. Sur la photo de groupe, vous étiez au beau milieu."
+    ],
+    [
+     81,
+     "Vous avez partagé de la nourriture avec des voisins dans le besoin."
+    ],
+    [
+     81,
+     "Votre ami de longue date Amit a quitté ce monde."
+    ],
+    [
+     82,
+     "Les nuits tropicales se sont enchaînées, et vous avez mal dormi pendant des jours."
+    ],
+    [
+     82,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     82,
+     "Votre deuxième grande sœur a quitté ce monde à 88 ans. (Maladie soudaine de cause inconnue)"
+    ],
+    [
+     83,
+     "L’économie mondiale est entrée en récession. Les commandes des usines se sont taries et les emplois se sont raréfiés.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     83,
+     "Un jour que vous étiez tombé dans la rue, un élève qui passait par là vous a tendu la main pour vous relever."
+    ],
+    [
+     83,
+     "La Bourse s’est effondrée : votre placement a perdu 54 % de sa valeur."
+    ],
+    [
+     83,
+     "Cette année, votre patrimoine a baissé de 9 313 €. Actions −9 862 € · Coût de la vie à la retraite −1 735 € · Coût de la vie (pris sur l’épargne) −532 € · Aide de vos enfants pour vivre +1 735 €"
+    ],
+    [
+     84,
+     "Désormais, vous savourez les compétitions de cricket depuis les tribunes, en encourageant."
+    ],
+    [
+     84,
+     "Une histoire de bruit a tourné à la dispute avec les voisins, puis la paix est revenue autour d’un plat partagé."
+    ],
+    [
+     84,
+     "Votre ami de longue date Vijay a quitté ce monde."
+    ],
+    [
+     85,
+     "Décision : Se faire soigner à l’hôpital"
+    ],
+    [
+     85,
+     "À l’hôpital, le diagnostic a été posé : fièvre typhoïde. Grâce aux soins, vous avez retrouvé la santé."
+    ],
+    [
+     85,
+     "60 ans de mariage. Vos enfants ont organisé une petite fête."
+    ],
+    [
+     85,
+     "Vous marchez et lisez chaque jour. On vous dit que vous avez meilleure mémoire que la plupart des gens de votre âge.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     85,
+     "Au travail, Vinod a obtenu le poste de producteur délégué. Le soir même, toute la famille l’a fêté autour de la table."
+    ],
+    [
+     85,
+     "Marcher devenait plus difficile, et vous avez commencé à vous déplacer avec une canne. (−64 €)",
+     "Aux États-Unis, 16,4 % des 65 ans et plus utilisent une canne et 11,6 % un déambulateur (Gell et al. 2015, NHATS)"
+    ],
+    [
+     86,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     86,
+     "Vous avez fait un bilan de santé de routine. Rien d’anormal."
+    ],
+    [
+     86,
+     "La Bourse s’est effondrée : votre placement a perdu 21 % de sa valeur."
+    ],
+    [
+     86,
+     "Cette année, votre patrimoine a baissé de 1 962 €. Actions −2 441 € · Coût de la vie à la retraite −1 735 € · Coût de la vie (pris sur l’épargne) −444 € · Aide de vos enfants pour vivre +1 735 €"
+    ],
+    [
+     87,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     87,
+     "Par un après-midi de pluie, vous avez regardé par la fenêtre en laissant passer les heures, sans rien faire."
+    ],
+    [
+     88,
+     "Lors d’une courte sortie sous la chaleur de midi, vous avez eu un étourdissement et avez dû vous reposer longtemps."
+    ],
+    [
+     88,
+     "Avec un voisin qui vivait seul, vous preniez régulièrement des nouvelles l’un de l’autre."
+    ],
+    [
+     88,
+     "Les actions ont fortement monté, et votre placement a progressé de 64 %."
+    ],
+    [
+     88,
+     "Votre partenaire, Sita, a reçu un diagnostic de bronchopneumopathie chronique obstructive. Le traitement a commencé, et vous avez fait ensemble les allers-retours à l’hôpital. (−2 166 €)"
+    ],
+    [
+     88,
+     "Vous avez appris qu’au travail, Asha était désormais chef(fe) de rubrique."
+    ],
+    [
+     89,
+     "Vous avez eu la grippe pendant une semaine."
+    ],
+    [
+     89,
+     "L’économie mondiale est entrée en récession. Les commandes des usines se sont taries et les emplois se sont raréfiés.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     89,
+     "Sandeep, qui vit désormais de son côté, a appelé pour prendre de vos nouvelles."
+    ],
+    [
+     89,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     89,
+     "Vous avez pris soin de Sita, votre partenaire, jusqu’au bout. (−2 166 €)"
+    ],
+    [
+     89,
+     "Votre partenaire, Sita, a quitté ce monde à 86 ans. (Bronchopneumopathie chronique obstructive)"
+    ],
+    [
+     89,
+     "Vous avez organisé les obsèques de votre partenaire. (−559 €)"
+    ],
+    [
+     89,
+     "Votre enfant Sandeep a quitté ce monde à 53 ans. (Pancréatite)"
+    ],
+    [
+     89,
+     "On dit que le chagrin d’un parent qui a perdu son enfant n’a même pas de nom. Bien des nuits, vous auriez voulu entendre la voix de Sandeep."
+    ],
+    [
+     89,
+     "En apprenant l’admission du fils d’Asha à l’université, vous avez envoyé une carte de félicitations avec un cadeau."
+    ],
+    [
+     89,
+     "Cette année, votre patrimoine a baissé de 5 363 €. Actions −3 122 € · Frais médicaux de votre partenaire −2 166 € · Coût de la vie à la retraite −1 735 € · Aide de vos enfants pour vivre +1 735 €"
+    ],
+    [
+     89,
+     "À 89 ans, votre vie s’est achevée paisiblement dans votre sommeil (accident vasculaire cérébral)."
+    ]
+   ]
+  }
+ ],
+ "usage": {
+  "month": "2026-11",
+  "unit": "life units",
+  "used": 278,
+  "quota": 2000,
+  "this_call": 1
+ }
+}

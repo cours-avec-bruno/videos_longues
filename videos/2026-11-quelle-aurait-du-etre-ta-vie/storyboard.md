@@ -18,15 +18,19 @@ Procédés choisis avec le [mode d'emploi](../../docs/direction-artistique/proce
 
 **Décision de Bruno : la vie de la vidéo est la vie la plus probable, à la naissance comme aux décisions.** On ne prend pas seulement les choix les plus probables : on impose aussi la naissance la plus probable. Elle est donc **en Inde, à la campagne, d'un garçon, dans le cinquième du milieu**, avec la religion et la caste les plus fréquentes, mesurées par le moteur. Le détail est dans [`references/partie.md`](references/partie.md).
 
-- **Version provisoire : Yash Gupta.**
-  - Il veut être « chef d'entreprise » à 6 ans.
-  - Il va au fond de la classe, loin du ventilateur, réservé aux familles qui ont payé.
-  - Il finit le lycée, puis prend un emploi plutôt que l'université.
-  - Il devient électricien à Kanpur.
-  - Il « prend le temps de mieux se connaître » trois fois, et le mariage n'aboutit jamais.
-  - Il vit seul avec son chat Max et meurt à 74 ans, les poumons usés par la pollution.
-  
-  La caste a été tirée par le moteur (catégorie générale), d'où la version définitive à faire par le script.
+- **La vie définitive : Manoj Mohanty**, hindou, OBC. À chaque décision, l'option la plus fréquente, mesurée sur 200 vies nées dans les mêmes conditions :
+  - à 8 ans, il veut être « ingénieur » ;
+  - **à 11 ans, il choisit de continuer l'école, comme 97 % des vies, mais sa famille ne peut pas payer**, et il garde les bêtes ;
+  - à 15 ans, il devient pêcheur ;
+  - il guérit de la tuberculose, qui emporte deux de ses frères ;
+  - il épouse Preeti à 26 ans, et ils ont 2 enfants ;
+  - il découvre le théâtre, puis il y a une liaison, et le pardon ;
+  - à 53 ans, il est applaudi pour un premier rôle ;
+  - il ne solde jamais sa dette ;
+  - son petit-fils entre à l'université ;
+  - il meurt à 75 ans.
+- **Découverte de méthode** : la politique `auto` du moteur tire au sort selon les parts. Elle ne prend pas toujours l'option majoritaire, d'où la partie jouée pas à pas. Les pourcentages des encarts « À VOUS » sont les parts observées.
+- **La variante ambitieuse** (même naissance) donne un professeur, dans le top 3 % des revenus, mort à 89 ans. **Les choix comptent donc, dans le moteur.** L'aveu dira « une pente, pas une interdiction », et non « vos choix n'auraient rien changé ».
 - **Khadija Ibrahim** (Algérie, tirée au sort) devient une vie de comparaison : « la vie tirée au sort ».
 - **L'aveu (S13) gagne une phrase** : « Je n'ai rien choisi. Pas même son pays. » Le paradoxe à dire : même la vie la plus probable ne concerne qu'environ 1 bébé sur 80.
 
