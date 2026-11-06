@@ -92,6 +92,13 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Précision de Bruno : on **privilégie l'animation, le motion design et la 3D**. Les photos ne sont qu'un complément.
 - **Reprise prévue le 06/11/2026** : affiner le storyboard et commencer la création des scènes.
 
+## 2026-11-06 · « Quelle aurait dû être ta vie ? » : le spectateur croit jouer
+
+- Décision de Bruno : **le spectateur croit jouer, mais il ne joue pas.** À chaque grande décision, la vidéo affiche les options et leurs pourcentages (« À VOUS ») et laisse le spectateur choisir. En secret, l'opérateur prend **toujours l'option la plus probable**. Il l'avoue à la fin (nouvelle scène **S13 · L'aveu**, procédé N02), avant la France et le déterminisme social.
+- Les scènes S13-S15 deviennent **S14-S16**. Le storyboard compte 16 scènes et 98 plans, pour ≈ 11 min 15.
+- Pour que « le plus probable » soit mesuré et non deviné : l'**API officielle** du site (`/api/v1/live`) donne les probabilités de chaque décision, et une `seed` permet de rejouer la même vie (voir `references/sources.md` de la vidéo). La clé gratuite est à demander par Bruno.
+- Le storyboard reste à arbitrer scène par scène.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

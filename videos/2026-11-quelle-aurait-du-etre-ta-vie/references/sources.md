@@ -17,10 +17,22 @@ Vérifié le 05/11/2026. **[VÉRIFIÉ]** = lu sur la source ; **[À VÉRIFIER]**
 | Questions | « À 5, 15, 30, 50 et 70 ans, le temps s'arrête et vous pose une question » | Structure des cartons d'âge (T01) |
 | Autres vies | « À côté de la vôtre, les vies de **quatre autres bébés nés à la même seconde** suivent les mêmes statistiques » | S10 (comparaison) · [À VÉRIFIER] même pays ou pays différents ? |
 | Fin de vie | Âge du décès tiré chaque année selon les tables de mortalité du lieu et du sexe ; causes selon l'OMS (GHE). Un **acte de décès** clôt la vie | S11 |
-| Vrai lieu de naissance | Facultatif, « pour comparer, côte à côte, la vie vécue avec la vôtre » | S03 (plant) → S13 (payoff) |
+| Vrai lieu de naissance | Facultatif, « pour comparer, côte à côte, la vie vécue avec la vôtre » | S03 (plant) → S14 (payoff) |
 | Époques | Le passé (1950-2025), le monde d'aujourd'hui, l'avenir (projections), au hasard | Non utilisé (option) |
 | Durée | Environ 30 min, 1 h ou 1 h 30 pour une vie entière ; pause, accélération jusqu'à 16 fois ; mode automatique | Production : partie à jouer et à noter |
-| Mise en garde du site | « Les vies (…) ne disent rien d'une vraie vie passée, d'un destin (…). Deux bébés nés au même endroit la même année vivent pourtant des vies différentes » | S10, S14 (nuance N11) |
+| Mise en garde du site | « Les vies (…) ne disent rien d'une vraie vie passée, d'un destin (…). Deux bébés nés au même endroit la même année vivent pourtant des vies différentes » | S10, S15 (nuance N11) |
+
+### L'API officielle : 1in8b Engine (https://1in8b.life/fr/api/, lue le 06/11/2026)
+
+Indispensable pour la règle secrète (toujours l'option la plus probable, révélée en S13) :
+
+- **`POST /api/v1/live`** : « une vie vécue de l'extérieur, un pas à la fois : vous prenez chaque décision ». Et pour les applis : « /live envoie chaque décision avec les probabilités que le monde lui donne ». → On peut donc prendre, à chaque décision, l'option la plus probable, de façon **mesurée et prouvable**. [VÉRIFIÉ sur la page ; format exact des réponses à lire dans la doc anglaise et dans `/api/v1/openapi.json`]
+- **`seed`** : « la même seed et la même version du moteur donnent les mêmes vies ». Pour reproduire une partie, il faut conserver la version du moteur (`meta.engine`) et la date. [VÉRIFIÉ]
+- Sans `country`, le lieu est tiré selon la part des naissances, comme sur le site. Le paramètre `lang` donne le récit et les choix en français. [VÉRIFIÉ]
+- **Clé gratuite** : envoyer un e-mail à api@1in8b.life (la clé, qui commence par `k8b_`, arrive en réponse). 2 000 unités de vie par mois, une vie du monde d'aujourd'hui = 1 unité, 30 appels par minute. Largement suffisant. **C'est Bruno qui la demande et la garde** : elle ne va ni dans Git ni dans une conversation. [VÉRIFIÉ]
+- Il existe aussi un connecteur MCP officiel (`https://1in8b.life/mcp`), à ajouter dans les réglages de Claude. Il permettrait de jouer la partie directement en discutant, sans que la clé me soit transmise. [VÉRIFIÉ sur la page, non testé]
+- **Citer la source** : « 1in8b Engine (1in8b.life) ». [VÉRIFIÉ]
+- **À vérifier** : est-ce que le **site web** affiche aussi les probabilités des options pendant une partie ? Si oui, l'encart « À VOUS » peut reprendre l'interface réelle ; sinon, on l'affiche à partir des données de l'API, en le disant honnêtement à l'écran ou en description.
 
 ### Sources des chiffres du site
 

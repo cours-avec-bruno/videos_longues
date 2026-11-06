@@ -4,7 +4,11 @@
 
 ## Pitch
 
-Un opérateur, seul dans un bureau, lance une simulation de vie (le simulateur *1 sur 8 milliards*) et regarde une existence se dérouler à partir de probabilités réelles. Il croit la piloter, mais il découvre que l'essentiel tient à ce que personne ne choisit : le lieu, la famille, le milieu. Puis la question se retourne vers le spectateur : naître en France, c'était 1 chance sur 207. Et même en France, le point de départ pèse.
+Un opérateur, seul dans un bureau, lance une simulation de vie (le simulateur *1 sur 8 milliards*) et invite le spectateur à jouer avec lui. À chaque grande étape, les options s'affichent avec leurs pourcentages : « Vous, vous prendriez quoi ? » Le spectateur anticipe et essaie de bien choisir pour cette personne. L'opérateur clique.
+
+**Le spectateur croit jouer, mais il ne joue pas.** En secret, l'opérateur a toujours pris l'option la plus probable. Après la mort et le silence, il l'avoue (S13) : la vie qu'on vient de voir n'a jamais été choisie, c'est celle qu'elle « aurait dû » vivre, le chemin le plus fréquenté à chaque carrefour. Et personne n'a vu la différence. Le titre prend alors tout son sens, et la question se retourne vers le spectateur : naître en France, c'était 1 chance sur 207. Et même en France, le point de départ pèse (le déterminisme social).
+
+**Règle du jeu (décisions de Bruno, 06/11/2026)** : la partie est jouée en prenant **uniquement les choix les plus probables**, et ce n'est **pas dit avant l'aveu**. Le détail (ce que « le plus probable » veut dire, comment on le mesure, les indices laissés en route) est dans [`storyboard.md`](storyboard.md), section « Règle du jeu ».
 
 **Thèse** : nos choix comptent, mais ils s'exercent dans un cadre que nous n'avons pas choisi. On surestime la part de notre vie qu'on choisit.
 **Ce que la vidéo n'est pas** : une preuve du déterminisme, ni une prédiction. Une probabilité n'est pas un destin.
@@ -14,7 +18,7 @@ Un opérateur, seul dans un bureau, lance une simulation de vie (le simulateur *
 - Concept d'origine de Bruno : [`references/concept-bruno.md`](references/concept-bruno.md)
 - Faits vérifiés et sources : [`references/sources.md`](references/sources.md)
 - Storyboard (grammaire, scènes, procédés) : [`storyboard.md`](storyboard.md)
-- Fiches scène : `scenes/S01` à `scenes/S15`
+- Fiches scène : `scenes/S01` à `scenes/S16`
 
 ## Fabrication
 

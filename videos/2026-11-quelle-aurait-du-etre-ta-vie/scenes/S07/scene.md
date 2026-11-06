@@ -31,7 +31,7 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 | S07-P05 | 6 s | MD | L'école dans ce pays : un chiffre de scolarisation (donnée du site) | Compteur, barre |  |  |
 | S07-P06 | 5 s | IMG | Le chemin de l'école, de dos | Lent mouvement | I04 |  |
 | S07-P07 | 8 s | 3D | L'opérateur penché vers l'écran. Voix | Lent travelling avant |  | Voix |
-| S07-P08 | 6 s | UI | Le choix de la priorité de l'année | Clic |  | Clic |
+| S07-P08 | 6 s | UI | **Premier encart « À VOUS »** : les options (priorité de l'année) et leurs pourcentages, figés 3 s avec un compte à rebours, puis le clic de l'opérateur (en secret, l'option la plus haute) | Compte à rebours, puis clic | N02 (plant) | Tic du compte à rebours, clic |
 | S07-P09 | 6 s | IMG | Un plan large et calme de la ville | Fixe, lumière qui bouge | I04 | Musique seule |
 
 ## Cadrage et mise en scène

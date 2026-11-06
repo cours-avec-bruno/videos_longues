@@ -1,17 +1,17 @@
-# S14 · Le déterminisme social en France
+# S14 · Et nous ? Naître en France
 
 | | |
 |---|---|
-| **Durée** | ≈ 1:10 |
+| **Durée** | ≈ 1:00 |
 | **Fabrication** | Remotion |
-| **Fonction** | PROUVER |
-| **Procédé principal** | I03 : même forme, même sens qu'en S10 (comparer des trajectoires), cette fois en France |
-| **Procédés secondaires** | I05, N11 |
+| **Fonction** | RÉVÉLER |
+| **Procédé principal** | I11 : un mur de 207 noms de pays tirés au sort, où la France n'apparaît qu'une fois ; « 1 sur 207 » devient visible |
+| **Procédés secondaires** | S01, I15 |
 | **Statut** | à valider (proposition de storyboard) |
 
 ## Intention
 
-Le diplôme selon l'origine sociale (Insee), un graphique qui se construit, la page source. « Une tendance n'est pas un destin. »
+Payoff du plant de S03. Passage en serif (hors simulation). Distinguer naître sur le territoire et avoir la nationalité. Source à l'écran (ONU WPP 2024, via 1in8b.life).
 
 ## Script / son
 
@@ -24,12 +24,14 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 
 | Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
 |---|---|---|---|---|---|---|
-| S14-P01 | 8 s | MD | « Même ici… » : une carte de France sobre, en serif | Apparition |  | Voix |
-| S14-P02 | 30 s | MD | Graphique : diplôme du supérieur selon l'origine sociale (Insee), construit en un plan | Tracé progressif | I03 | Voix |
-| S14-P03 | 10 s | MD | La page Insee en perspective : seul le passage utile est net | Lent travelling | I05 |  |
-| S14-P04 | 10 s | MD | 100 points : la tendance, et des parcours individuels qui la contredisent | Points qui migrent | N11 | Voix |
-| S14-P05 | 6 s | IMG | Une école en France, en lumière chaude | Lent mouvement | I04 |  |
-| S14-P06 | 6 s | 3D | L'opérateur, dans la pénombre | Fixe |  |  |
+| S14-P01 | 4 s | MD | « Et nous ? » en serif sur noir | Apparition | H02 | Voix |
+| S14-P02 | 8 s | UI | La comparaison du site, côte à côte : sa vie / la vie qu'on aurait eue en France | Deux colonnes | N05 |  |
+| S14-P03 | 15 s | MD | Le mur de 207 noms de pays, en proportion des naissances. La caméra le traverse, et « France » n'apparaît qu'une fois | Lent travelling, faible profondeur de champ | I11 | Musique tendue |
+| S14-P04 | 1 s | NOIR | Écran vide | — | S01 | Silence total |
+| S14-P05 | 5 s | MD | « 1 sur 207 » en serif | Apparition sèche | I15 |  |
+| S14-P06 | 12 s | MD | Naître sur le territoire ≠ avoir la nationalité : schéma simple en serif | Deux ensembles qui se séparent |  | Voix |
+| S14-P07 | 8 s | MD | Comparaison et source : Inde 1 sur 6 · Nigeria 1 sur 18 · France 1 sur 207 (ONU WPP 2024, via 1in8b.life) | Barres | H01 |  |
+| S14-P08 | 7 s | 3D | Le bureau la nuit, l'écran éteint | Fixe | I18 | Ambiance |
 
 ## Cadrage et mise en scène
 
