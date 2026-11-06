@@ -101,7 +101,7 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 
 ## 2026-11-06 · Skills de production vidéo
 
-- Panel établi d'après l'annuaire skills.sh et GitHub, avec le contenu des skills lu : `docs/skills-production-video.md`.
+- Panel établi d'après l'annuaire skills.sh et GitHub, avec le contenu des skills lu : `docs/skills.md`.
 - Le Tier 1 est installé dans le projet (`.claude/skills/`, `skills-lock.json`), donc disponible aussi dans le cloud :
   - les 13 skills Remotion officielles ;
   - `yt-script`, `yt-retention`, `yt-edit`, `yt-package` ;
@@ -109,6 +109,8 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
   - 8 skills de production documentaire (montage, son, mixage, musique, étalonnage, typographie, motion graphics).
 - L'ancienne `remotion-best-practices` globale est archivée dans `~/.claude/skills-archive/`.
 - Manque repéré : une skill d'écriture de voix off en français, façon essai narratif. On la créera au moment du script.
+- Tri demandé par Bruno (le dossier doit rester court) : **13 skills gardées** sur 30. Les 12 sous-skills Remotion faisaient doublon avec le routeur. Retirées aussi : `yt-edit`, `music-supervision-scoring`, `color-grading-finishing`, `title-kinetic-typography`, `motion-graphics-direction`.
+- **Règle** (ajoutée à `CLAUDE.md`) : comme pour les procédés, Claude choisit lui-même la skill adaptée à chaque tâche (une principale, deux au maximum) et l'annonce. La table « tâche → skill » est dans `docs/skills.md`.
 
 ## Questions ouvertes
 
