@@ -1,10 +1,60 @@
-# La partie : la vie de Khadija Ibrahim
+# La partie
 
-Partie jouée le 06/11/2026 avec le **1in8b Engine** (l'API officielle de 1 sur 8 milliards), par le connecteur Claude. C'est **la matière de la vidéo**.
+Parties jouées le 06/11/2026 avec le **1in8b Engine** (l'API officielle de 1 sur 8 milliards). C'est **la matière de la vidéo**.
 
 Légende : **[MOTEUR]** = donné par le moteur (récit, chiffres, citations) · **[CALCUL]** = calculé par nous à partir des sorties du moteur · **[IDÉE]** = proposition de mise en scène · **[À COMPLÉTER]** = attend le script `shared/outils/1in8b/partie.py`.
 
-## Fiche technique
+## Ce qu'on entend par « la vie la plus probable » (décision de Bruno, 06/11/2026)
+
+| Niveau | Règle | Comment |
+|---|---|---|
+| **La naissance** | Les conditions les plus probables | Pays : **l'Inde** (17,6 % des naissances, 1 sur 6) **[MOTEUR, page du site]**. Lieu : **la campagne** (68 % des bébés indiens simulés, 41 sur 60) **[MOTEUR]**. Sexe : **garçon** (en Inde, il naît environ 107 à 110 garçons pour 100 filles ; **[À VÉRIFIER]**, ONU WPP 2024). Cinquième de revenus : chacun fait 20 % par définition, donc aucun n'est « le plus probable » ; on prend **celui du milieu** (le 3e). Religion et caste : **les plus fréquentes, mesurées par le moteur** (script, option `--mesurer faith,caste`) |
+| **Les décisions** | L'option que prend la majorité dans la même situation | La politique `auto` du moteur, « ce que la plupart des gens choisissent ». Statistiquement, c'est l'option qui avait le plus de chances d'être prise |
+| **Les événements** | Impossible à choisir | Les maladies, les rencontres et la mort sont tirées au sort par le moteur. On situe chacun d'eux par rapport aux médianes de vies simulées |
+
+**[CALCUL]** Inde × campagne × garçon × 3e cinquième ≈ 17,6 % × 68 % × 52 % × 20 % ≈ **1,2 % des naissances**, soit environ 1 sur 80. C'est peu, mais aucune autre combinaison n'est plus fréquente. C'est le paradoxe à dire dans la vidéo : même la vie la plus probable est rare.
+
+## Où on en est
+
+1. **Khadija Ibrahim**, jouée en premier : naissance **tirée au sort** (Algérie), décisions `auto`. Elle **n'est plus la vie principale**. Elle devient une vie de comparaison : « la vie tirée au sort ».
+2. **Yash Gupta**, jouée ensuite par le connecteur : Inde, campagne, garçon, 3e cinquième, décisions `auto`. Mais la religion (hindou) et la caste (« catégorie générale ») ont été **tirées par le moteur**, parce que le connecteur ne permet pas de les fixer. Or la catégorie la plus nombreuse en Inde est sans doute celle des « autres classes défavorisées » (OBC), et pas la catégorie générale **[À VÉRIFIER]**. **Yash est donc une version provisoire.**
+3. **La vie définitive** viendra du script : conditions ci-dessus, religion et caste mesurées par le moteur, puis la même vie en politique `ambitious`, et chaque décision avec ses options. Si la caste mesurée est bien la catégorie générale, la vie définitive sera Yash, puisque la seed et les conditions sont les mêmes.
+
+## Yash Gupta (version provisoire)
+
+Seed 20261106, moteur 0.9.52. **[MOTEUR]** Né en 2026 dans un village indien, hindou, catégorie générale, 3e cinquième. Ses parents ont 28 et 32 ans ; il a 1 frère aîné, et 3 petits frères naîtront ensuite. Mort à **74 ans**, de bronchopneumopathie chronique obstructive (BPCO).
+
+- **L'enfance (0 à 10 ans)** :
+  - pas de vaccins, parce que le centre de santé était trop loin ; une pneumonie à 1 an ;
+  - la queue au puits pour remplir la cruche ;
+  - à 6 ans, pas d'acte de naissance : il faut régler les papiers avant l'école ;
+  - **à 6 ans, quand on lui demande ce qu'il veut faire plus tard : « chef d'entreprise »** ;
+  - des coups de baguette sur la paume, « après cela, vous n'avez plus levé la main en classe » ;
+  - le cricket, qui sera la passion de sa vie ;
+  - **à 10 ans, une image très forte : les enfants dont la famille a donné une enveloppe à l'enseignant sont assis sous le ventilateur ; lui, au fond, s'essuie le front** (le moteur cite Transparency International : 22 % des usagers disent avoir versé un pot-de-vin à l'école publique).
+- **L'école** : à 11 ans, décision « Continuer à étudier » (le collège) ; à 14 ans, « Aller au lycée » ; à 17 ans, « Rester à l'école ». Il finit le lycée à 18 ans. Le moteur cite les 2 276 069 inscrits au concours de médecine NEET-UG 2025.
+- **18 ans · le carrefour** : décision **« Prendre un emploi tout de suite » plutôt que l'université**. Il devient éleveur. Décision : « Boire moins et trouver d'autres façons de tenir ».
+- **23 ans** : décision **« Partir à Kanpur »**, où il devient électricien. 1 h 30 d'embouteillages par jour. À 25 ans, le chantier s'arrête et il n'a plus de travail ; il reprend comme électricien à 26 ans.
+- **27 à 34 ans · l'amour qui n'aboutit pas** : à 27, 29 et 32 ans, la même décision, **« Prendre le temps de mieux se connaître »** avec Rashmi. À 34 ans : « Le projet de mariage avec Rashmi n'a finalement pas abouti. » **Il ne se mariera pas et n'aura pas d'enfant.** Pourtant, environ 93 % des hommes indiens simulés vivent en couple avant 50 ans **[MOTEUR]**. Le choix le plus fréquent, répété trois fois, a mené à une issue rare.
+- **28 ans** : une moto à crédit. **31 ans** : la mort de son père, à 64 ans. **37 ans** : décision **« Appeler maintenant pour le dire »** : « Au bout du fil, vos mots ont laissé votre mère sans voix un long moment. »
+- **43 ans** : décision « Acheter avec un prêt immobilier » : avec l'aide de sa mère, il achète son logement, et il a 18 900 € de dette.
+- **55 ans** : un chat, Max. **56 ans** : licencié après 30 ans de travail, avec une indemnité de 18 900 € ; il devient ouvrier d'usine et rembourse toutes ses dettes.
+- **60 ans** : la retraite. **61 ans** : la première télévision et le premier réfrigérateur.
+- **62 ans** : la mort de sa mère, à 91 ans. **63 ans** : « Après des années sans rien gagner, vous avez cessé d'acheter des billets de loterie. »
+- **64 ans** : « Quand vous rentriez dans la maison où vous viviez seul, le premier bonjour venait de Max. »
+- **71 ans** : Max meurt ; ses poumons sont très affaiblis (le moteur cite la pollution, 56 µg/m³ de particules fines, soit 11 fois la valeur guide de l'OMS). **72 ans** : il vend sa maison et rembourse tout. **73 ans** : décision « Rester chez vous ».
+- **74 ans** : « Vous avez confié à un frère ce que vous n'aviez pu dire à personne. Pour toute réponse, une présence silencieuse à vos côtés. » Le bénévolat à la soupe populaire. La mort.
+
+**[CALCUL] Une vie très proche de la médiane** : il meurt à 74 ans, quand l'âge médian au décès des hommes indiens simulés est de 72 ans. À 40 ans, il travaille, comme 93 % d'entre eux. Il sort de la statistique sur deux points. Ses études d'abord : il finit le lycée, alors qu'à 40 ans seuls 21 % des hommes indiens simulés ont ce niveau (le plus fréquent est le collège, 45 %), sans doute grâce au 3e cinquième et à la catégorie générale, à vérifier avec la caste mesurée. Et le célibat.
+
+> **[IDÉE]**
+> - « Chef d'entreprise » à 6 ans, électricien toute sa vie : c'est l'écho du rêve d'enfant, à reprendre dans l'aveu.
+> - Le ventilateur est une image parfaite pour la vidéo, et faisable en motion design : une salle de classe en plan, des pupitres, un ventilateur, des points qui s'écartent.
+> - Le grand « À VOUS » devient celui de **18 ans : l'université ou un emploi tout de suite**. Le spectateur choisira l'université, et l'opérateur cliquera « emploi ».
+
+## Partie 1 · Khadija Ibrahim (la vie tirée au sort, pour comparaison)
+
+### Fiche technique
 
 | | |
 |---|---|
@@ -16,7 +66,7 @@ Légende : **[MOTEUR]** = donné par le moteur (récit, chiffres, citations) · 
 | Crédit obligatoire | « 1in8b Engine (1in8b.life) » ; vies simulées, pas des personnes réelles |
 | Reproduire | Même seed + même version du moteur = même vie. **Si le moteur change de version, la vie peut changer** : d'où l'archive JSON (`../prompts/partie/`) |
 
-## Qui est-elle
+### Qui est-elle
 
 **Khadija Ibrahim**, née en **2026 en Algérie, à la campagne**, fille. **[MOTEUR]**
 
@@ -130,7 +180,7 @@ Chaque **décision** est celle que la politique `auto` a prise. **[MOTEUR]** Les
 - le dernier emploi déclaré à 14 ans ;
 - elle n'a jamais quitté l'Algérie.
 
-## Les décisions de la vie, à documenter
+## Les décisions de la vie de Khadija
 
 | Âge | Décision retenue (politique `auto`) **[MOTEUR]** | Autres options et probabilités | Pour la vidéo |
 |---|---|---|---|
@@ -203,6 +253,8 @@ Tirés avec les seeds suivantes (20261107 à 20261110), avec la même politique 
 > **[IDÉE] Nuance anti-fatalisme (N11)** : Khadija a vécu jusqu'à **94 ans**. C'est plus que l'âge médian des Algériennes simulées (87 ans), et même que celui des Françaises (88 ans). La statistique pèse sur la vie, mais elle ne la dicte pas.
 
 ## Ce que la partie change pour la vidéo (propositions)
+
+⚠️ Écrit pour Khadija, avant la décision du 06/11/2026 sur la naissance la plus probable. Le pays de la vie principale est désormais l'**Inde**, et Khadija devient une vie de comparaison. Les points 3 à 6 restent valables en les transposant (le rêve d'enfant, l'animal, le portrait, la preuve de l'aveu).
 
 1. **Le pays : l'Algérie.** Cela rapproche la vidéo du spectateur français : les liens entre la France et l'Algérie sont forts, et c'est un vrai sujet. Il faudra le traiter **sans cliché**. Les photos (S05, S07, S09) seront des photos de l'Algérie rurale et d'Alger.
 2. **Les étapes d'âge se recalent sur la vraie vie** : 0-10 ans (S07), **11 ans** (S08, l'école ou le travail), 16-49 ans (S09 : Alger, le mariage, la boutique, les années lourdes), puis 80 ans (le pèlerinage) et 94 ans (S11).

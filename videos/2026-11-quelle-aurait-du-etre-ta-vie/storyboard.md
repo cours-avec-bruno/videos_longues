@@ -16,14 +16,21 @@ Procédés choisis avec le [mode d'emploi](../../docs/direction-artistique/proce
 
 ## La partie jouée (06/11/2026)
 
-**Khadija Ibrahim**, née en 2026 en Algérie, à la campagne, dans le cinquième le plus pauvre :
-- elle quitte l'école à 11 ans pour travailler ;
-- elle part à Alger à 16 ans et se marie à 24 ans ;
-- elle a 3 enfants, dont un meurt bébé ;
-- elle connaît des années de dettes et de violences à la maison ;
-- elle part en pèlerinage à 80 ans et meurt à 94 ans.
+**Décision de Bruno : la vie de la vidéo est la vie la plus probable, à la naissance comme aux décisions.** On ne prend pas seulement les choix les plus probables : on impose aussi la naissance la plus probable. Elle est donc **en Inde, à la campagne, d'un garçon, dans le cinquième du milieu**, avec la religion et la caste les plus fréquentes, mesurées par le moteur. Le détail est dans [`references/partie.md`](references/partie.md).
 
-À 6 ans, elle voulait être « youtubeuse ». Tout est dans [`references/partie.md`](references/partie.md) : chaque décision, le contexte, les 4 autres bébés, les comparaisons, les points sensibles et les propositions de recalage des scènes. **À arbitrer par Bruno avant de reprendre les fiches S04 à S13.**
+- **Version provisoire : Yash Gupta.**
+  - Il veut être « chef d'entreprise » à 6 ans.
+  - Il va au fond de la classe, loin du ventilateur, réservé aux familles qui ont payé.
+  - Il finit le lycée, puis prend un emploi plutôt que l'université.
+  - Il devient électricien à Kanpur.
+  - Il « prend le temps de mieux se connaître » trois fois, et le mariage n'aboutit jamais.
+  - Il vit seul avec son chat Max et meurt à 74 ans, les poumons usés par la pollution.
+  
+  La caste a été tirée par le moteur (catégorie générale), d'où la version définitive à faire par le script.
+- **Khadija Ibrahim** (Algérie, tirée au sort) devient une vie de comparaison : « la vie tirée au sort ».
+- **L'aveu (S13) gagne une phrase** : « Je n'ai rien choisi. Pas même son pays. » Le paradoxe à dire : même la vie la plus probable ne concerne qu'environ 1 bébé sur 80.
+
+**À arbitrer par Bruno avant de reprendre les fiches S04 à S13** : le recalage des âges sur la vie définitive, et le traitement des passages sensibles.
 
 ## Règle du jeu : le spectateur croit jouer, mais il ne joue pas
 
@@ -215,5 +222,6 @@ Règles :
 
 ## À faire avant le script
 
-- ✅ **Partie jouée le 06/11/2026** (seed 20261106, moteur 0.9.52) : voir [`references/partie.md`](references/partie.md). Il reste à lancer `shared/outils/1in8b/partie.py`, avec la clé de Bruno, pour archiver les options et les probabilités de chaque décision, et la variante « ambitieuse ».
+- ✅ **Parties jouées le 06/11/2026** (seed 20261106, moteur 0.9.52) : voir [`references/partie.md`](references/partie.md). Il reste à lancer le script, avec la clé de Bruno, pour obtenir la vie définitive. Il fixe la caste et la religion les plus fréquentes, archive les options et les probabilités de chaque décision, et produit la variante « ambitieuse » :
+  `python shared/outils/1in8b/partie.py --seed 20261106 --country IND --sex male --place village --fifth 3 --mesurer faith,caste --sortie videos/2026-11-quelle-aurait-du-etre-ta-vie/prompts/partie`
 - Sourcer précisément les chiffres de S14 et S15 (`references/sources.md`).

@@ -120,6 +120,12 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Le connecteur ne donne pas les options ni leurs probabilités. Le script `shared/outils/1in8b/partie.py` les récupère par l'API HTTP, avec la variante « ambitieuse ». **À lancer par Bruno avec sa clé.**
 - À arbitrer : le recalage des étapes d'âge sur la vraie vie (11 ans au lieu de 15), le traitement des passages sensibles (violences, enfant mort).
 
+## 2026-11-06 · La vie la plus probable, naissance comprise
+
+- Précision de Bruno : « les choix les plus probables » vaut aussi pour la **naissance**. La vie de la vidéo naît donc en Inde (17,6 % des naissances), à la campagne (68 % des bébés indiens simulés), garçon, dans le 3e cinquième (les cinquièmes sont équiprobables). La religion et la caste sont les plus fréquentes, mesurées par le moteur.
+- Version provisoire jouée par le connecteur : **Yash Gupta** (caste tirée par le moteur). La vie définitive sortira du script `shared/outils/1in8b/partie.py`, qui a maintenant les options `--country`, `--sex`, `--place`, `--fifth` et `--mesurer faith,caste`.
+- Khadija (Algérie, tirée au sort) devient une vie de comparaison.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

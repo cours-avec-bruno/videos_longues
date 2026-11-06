@@ -13,8 +13,8 @@ La clé n'est jamais affichée. Elle est lue, dans l'ordre, dans :
   - la variable d'environnement K8B_KEY ;
   - le fichier ~/.1in8b-cle (une seule ligne : k8b_...).
 
-Usage :
-  python shared/outils/1in8b/partie.py --seed 20261106 --sortie videos/<slug>/prompts/partie
+Usage (la vie la plus probable : Inde, campagne, garçon, cinquième du milieu ; caste et religion mesurées) :
+  python shared/outils/1in8b/partie.py --seed 20261106 --country IND --sex male --place village --fifth 3       --mesurer faith,caste --sortie videos/<slug>/prompts/partie
 """
 import argparse
 import json
@@ -89,7 +89,7 @@ def proba(choix):
     return None
 
 
-def rejouer_live(api, seed, lang, decisions_auto, max_pas=600):
+def rejouer_live(api, seed, lang, decisions_auto, conditions=None, max_pas=600):
     """Rejoue la vie pas à pas. À chaque décision : l'option la plus probable si le moteur donne les
     probabilités ; sinon l'option que la politique auto a prise au même âge pour la même question."""
     auto_par_age = {}
@@ -97,7 +97,7 @@ def rejouer_live(api, seed, lang, decisions_auto, max_pas=600):
         cle = (d.get("age"), d.get("id") or d.get("card"))
         auto_par_age.setdefault(cle, d)
     pas = []
-    r = api.post("/live", {"seed": seed, "lang": lang})
+    r = api.post("/live", dict(conditions or {}, seed=seed, lang=lang))
     for _ in range(max_pas):
         d = r.get("decision")
         entree = {"age": (r.get("state") or {}).get("age"), "events": r.get("events"), "decision": d}
@@ -131,39 +131,77 @@ def rejouer_live(api, seed, lang, decisions_auto, max_pas=600):
     return pas
 
 
+def le_plus_frequent(api, conditions, par, seed, n=60):
+    """Mesure, avec /simulate, la valeur la plus fréquente d'un trait de naissance (caste, religion…)
+    parmi les naissances qui ont déjà les conditions données. Renvoie (valeur, tableau des parts)."""
+    sexe = conditions.get("sex")
+    r = api.get("/simulate", n=n, by=par, seed=seed, **conditions)
+    bloc = r.get("male" if sexe == "male" else "female") or {}
+    groupes = bloc.get("groups") or {}
+    parts = {k: (v.get("lives") if isinstance(v, dict) else v) for k, v in groupes.items()}
+    if not parts:
+        return None, r
+    return max(parts, key=lambda k: parts[k] or 0), {"parts": parts, "reponse": r}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", type=int, required=True)
     ap.add_argument("--sortie", required=True)
     ap.add_argument("--lang", default="fr")
+    ap.add_argument("--country", help="ISO alpha-3 (ex. IND) ; absent = tiré au sort")
+    ap.add_argument("--sex", choices=["male", "female"])
+    ap.add_argument("--place", choices=["town", "village"])
+    ap.add_argument("--fifth", type=int, choices=[1, 2, 3, 4, 5])
+    ap.add_argument("--faith")
+    ap.add_argument("--caste")
+    ap.add_argument("--mesurer", default="", help="traits à fixer à leur valeur la plus fréquente, mesurée par /simulate (ex. faith,caste)")
     ap.add_argument("--sans-live", action="store_true", help="ne pas rejouer pas à pas avec /live")
     a = ap.parse_args()
 
     dossier = pathlib.Path(a.sortie)
     dossier.mkdir(parents=True, exist_ok=True)
     api = Api(lire_cle())
-    print(f"Partie seed {a.seed} → {dossier}")
+    cond = {k: v for k, v in dict(country=a.country, sex=a.sex, place=a.place, fifth=a.fifth,
+                                  faith=a.faith, caste=a.caste).items() if v is not None}
+    print(f"Partie seed {a.seed}, conditions {cond} → {dossier}")
+
+    mesures = {}
+    for trait in [t.strip() for t in a.mesurer.split(",") if t.strip()]:
+        print(f"0. Mesure du trait le plus fréquent : {trait}")
+        valeur, detail = le_plus_frequent(api, cond, trait, a.seed)
+        mesures[trait] = {"retenu": valeur, **(detail if isinstance(detail, dict) and "parts" in detail else {"reponse": detail})}
+        print(f"   {trait} le plus fréquent : {valeur}  {mesures[trait].get('parts')}")
+        if valeur and valeur not in ("none", "majority", "null"):
+            cond[trait] = valeur
+    if mesures:
+        ecrire(dossier, "0-mesures-naissance.json", {"conditions_finales": cond, "mesures": mesures})
 
     print("1. La vie au plus fréquent (politique auto)")
-    auto = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1, trace=1)
+    auto = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1, trace=1, **cond)
     ecrire(dossier, "1-vie-auto.json", auto)
 
     print("2. La même vie, politique ambitieuse")
-    ambi = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1, trace=1, policy="ambitious")
+    ambi = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1, trace=1, policy="ambitious", **cond)
     ecrire(dossier, "2-vie-ambitieuse.json", ambi)
 
     if not a.sans_live:
         print("3. La vie rejouée pas à pas (/live)")
         vie = (auto.get("lives") or [{}])[0]
-        pas = rejouer_live(api, a.seed, a.lang, vie.get("decisions"))
-        ecrire(dossier, "3-live-pas-a-pas.json", {"meta": auto.get("meta"), "seed": a.seed, "pas": pas})
+        pas = rejouer_live(api, a.seed, a.lang, vie.get("decisions"), cond)
+        ecrire(dossier, "3-live-pas-a-pas.json", {"meta": auto.get("meta"), "seed": a.seed, "conditions": cond, "pas": pas})
 
-    print("4. Les 4 autres bébés")
+    print("4. Les 4 autres bébés (tirés au sort, sans condition)")
     autres = [api.get("/life", seed=a.seed + i, lang=a.lang, record=0, decisions=1) for i in range(1, 5)]
     ecrire(dossier, "4-autres-bebes.json", autres)
 
+    print("5. La vie tirée au sort avec la même seed (Khadija, pour comparaison)")
+    tiree = api.get("/life", seed=a.seed, lang=a.lang, record=1, decisions=1)
+    ecrire(dossier, "5-vie-tiree-au-sort.json", tiree)
+
     ecrire(dossier, "0-meta.json", {
         "seed": a.seed,
+        "conditions": cond,
         "engine": (auto.get("meta") or {}).get("engine"),
         "date": time.strftime("%Y-%m-%d %H:%M"),
         "appels": api.appels,
