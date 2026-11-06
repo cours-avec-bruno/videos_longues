@@ -23,7 +23,7 @@ Légende : ✅ recommandé · 🟡 utile selon le besoin · ⛔ à éviter.
 | Skill | Où | Remarque |
 |---|---|---|
 | `remotion-best-practices` | global | ⚠️ **Version ancienne.** L'officielle est devenue un « routeur » vers 12 skills spécialisées (voir plus bas) |
-| `motion-design-premium`, `critique-rendu-motion` | global | Les nôtres |
+| `motion-design-premium`, `critique-rendu-motion` | global + projet (copiées le 06/11/2026, pour le cloud) | Les nôtres. ⚠️ Écrites pour le **vertical 9:16** (TikTok, Reels) : les zones sûres et le cadrage ne s'appliquent pas tels quels à nos vidéos longues en 16:9. Le reste (easing, caméra, lumière, grille de critique, script d'analyse) reste valable |
 | `retro-ingenierie-video`, `storyboard-procedes` | projet | Les nôtres |
 | `find-skills` | global | Recherche dans l'annuaire |
 
