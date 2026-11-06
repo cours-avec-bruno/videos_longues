@@ -36,7 +36,7 @@ def lire_cle():
     if not cle:
         f = pathlib.Path.home() / ".1in8b-cle"
         if f.exists():
-            cle = f.read_text(encoding="utf-8").strip()
+            cle = f.read_text(encoding="utf-8-sig").strip()
     if not cle.startswith("k8b_"):
         sys.exit("Clé introuvable : mettez-la dans la variable K8B_KEY ou dans le fichier ~/.1in8b-cle (une ligne k8b_...).")
     return cle
