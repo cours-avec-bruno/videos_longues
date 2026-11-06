@@ -1,0 +1,406 @@
+{
+ "conditions_finales": {
+  "country": "IND",
+  "sex": "male",
+  "place": "village",
+  "fifth": 3,
+  "faith": "hindu",
+  "caste": "obc"
+ },
+ "mesures": {
+  "faith": {
+   "retenu": "hindu",
+   "parts": {
+    "christian": 2,
+    "hindu": 47,
+    "muslim": 8,
+    "none": 2,
+    "other": 1
+   },
+   "reponse": {
+    "meta": {
+     "api": "1in8b-engine",
+     "version": "v1",
+     "status": "beta",
+     "kind": "simulate",
+     "engine": "0.9.52",
+     "simulated": "simulated lives that follow real statistics: not real people, records, measurements or forecasts",
+     "docs": "https://1in8b.life/en/api/",
+     "terms": "https://1in8b.life/en/api/#terms",
+     "credit": "1in8b Engine (1in8b.life)",
+     "tier": "free"
+    },
+    "query": {
+     "country": "IND",
+     "sex": "M",
+     "year": null,
+     "future": false,
+     "n": 60,
+     "seed": 20261106,
+     "fifth": 3,
+     "place": "village",
+     "by": "faith"
+    },
+    "male": {
+     "seed": 20261107,
+     "lives": 60,
+     "age_at_death": {
+      "mean": 72.1,
+      "p10": 54,
+      "p25": 65,
+      "median": 78,
+      "p75": 84,
+      "p90": 92
+     },
+     "survival": {
+      "1": 0.967,
+      "5": 0.967,
+      "18": 0.967,
+      "40": 0.917,
+      "65": 0.767,
+      "80": 0.433,
+      "90": 0.15
+     },
+     "causes_of_death": {
+      "ihd": 0.25,
+      "copd": 0.233,
+      "str": 0.083,
+      "dia": 0.067,
+      "ocd": 0.05,
+      "can": 0.033,
+      "cir": 0.033,
+      "dem": 0.033,
+      "lri": 0.033,
+      "neo": 0.033,
+      "road": 0.033,
+      "tb": 0.033,
+      "drown": 0.017,
+      "hom": 0.017,
+      "inj": 0.017,
+      "kid": 0.017,
+      "nut": 0.017
+     },
+     "at_40": {
+      "alive": 55,
+      "education": {
+       "none": 0.055,
+       "primary": 0.109,
+       "lower_secondary": 0.4,
+       "upper_secondary": 0.273,
+       "university": 0.127,
+       "graduate": 0.036
+      },
+      "working": 1,
+      "sector": {
+       "agriculture": 0.545,
+       "industry": 0.255,
+       "services": 0.2
+      },
+      "national_income_percentile_median": 0.468,
+      "world_income_top10": 0,
+      "world_income_bottom50": 0.836,
+      "owns_home": 0.636
+     },
+     "partnered_by_50": 0.87,
+     "children_by_46": 1.9,
+     "ever_moved_abroad": 0.033,
+     "ever_refugee": 0,
+     "born_in_a_city": 0,
+     "first_partner_age_median": 24,
+     "first_child_age_median": 28,
+     "moved_to": {
+      "ARE": 0.5,
+      "GBR": 0.5
+     },
+     "met": {
+      "economic_crisis": {
+       "share": 0.967,
+       "first_age_median": 18
+      },
+      "storm": {
+       "share": 0.767,
+       "first_age_median": 31
+      },
+      "heatwave": {
+       "share": 0.7,
+       "first_age_median": 28
+      },
+      "flood": {
+       "share": 0.533,
+       "first_age_median": 34
+      }
+     },
+     "groups": {
+      "christian": {
+       "lives": 2,
+       "age_at_death_mean": 60,
+       "age_at_death_median": 65,
+       "survival_65": 0.5,
+       "children_mean": 1,
+       "ever_moved_abroad": 0,
+       "causes_of_death": {
+        "ihd": 0.5,
+        "ocd": 0.5
+       }
+      },
+      "hindu": {
+       "lives": 47,
+       "age_at_death_mean": 73.6,
+       "age_at_death_median": 78,
+       "survival_65": 0.787,
+       "children_mean": 2,
+       "ever_moved_abroad": 0.021,
+       "causes_of_death": {
+        "copd": 0.234,
+        "ihd": 0.234,
+        "str": 0.085,
+        "dia": 0.064,
+        "can": 0.043
+       }
+      },
+      "muslim": {
+       "lives": 8,
+       "age_at_death_mean": 76.1,
+       "age_at_death_median": 78,
+       "survival_65": 0.875,
+       "children_mean": 2.1,
+       "ever_moved_abroad": 0.125,
+       "causes_of_death": {
+        "copd": 0.375,
+        "ihd": 0.375,
+        "hom": 0.125,
+        "str": 0.125
+       }
+      },
+      "none": {
+       "lives": 2,
+       "age_at_death_mean": 56,
+       "age_at_death_median": 84,
+       "survival_65": 0.5,
+       "children_mean": 2,
+       "ever_moved_abroad": 0,
+       "causes_of_death": {
+        "dia": 0.5,
+        "road": 0.5
+       }
+      },
+      "other": {
+       "lives": 1,
+       "age_at_death_mean": 27,
+       "age_at_death_median": 27,
+       "survival_65": 0,
+       "children_mean": null,
+       "ever_moved_abroad": 0,
+       "causes_of_death": {
+        "tb": 1
+       }
+      }
+     }
+    },
+    "usage": {
+     "month": "2026-11",
+     "unit": "life units",
+     "used": 216,
+     "quota": 2000,
+     "this_call": 60
+    }
+   }
+  },
+  "caste": {
+   "retenu": "obc",
+   "parts": {
+    "general": 16,
+    "none": 5,
+    "obc": 28,
+    "scheduled_caste": 11
+   },
+   "reponse": {
+    "meta": {
+     "api": "1in8b-engine",
+     "version": "v1",
+     "status": "beta",
+     "kind": "simulate",
+     "engine": "0.9.52",
+     "simulated": "simulated lives that follow real statistics: not real people, records, measurements or forecasts",
+     "docs": "https://1in8b.life/en/api/",
+     "terms": "https://1in8b.life/en/api/#terms",
+     "credit": "1in8b Engine (1in8b.life)",
+     "tier": "free"
+    },
+    "query": {
+     "country": "IND",
+     "sex": "M",
+     "year": null,
+     "future": false,
+     "n": 60,
+     "seed": 20261106,
+     "fifth": 3,
+     "place": "village",
+     "faith": "hindu",
+     "by": "caste"
+    },
+    "male": {
+     "seed": 20261107,
+     "lives": 60,
+     "age_at_death": {
+      "mean": 69.4,
+      "p10": 38,
+      "p25": 64,
+      "median": 75,
+      "p75": 84,
+      "p90": 91
+     },
+     "survival": {
+      "1": 0.967,
+      "5": 0.95,
+      "18": 0.933,
+      "40": 0.883,
+      "65": 0.7,
+      "80": 0.4,
+      "90": 0.133
+     },
+     "causes_of_death": {
+      "ihd": 0.25,
+      "copd": 0.133,
+      "str": 0.133,
+      "ocd": 0.083,
+      "can": 0.05,
+      "dia": 0.05,
+      "lri": 0.05,
+      "cir": 0.033,
+      "fall": 0.033,
+      "kid": 0.033,
+      "neo": 0.033,
+      "oinf": 0.033,
+      "diar": 0.017,
+      "drown": 0.017,
+      "inj": 0.017,
+      "road": 0.017,
+      "tb": 0.017
+     },
+     "at_40": {
+      "alive": 53,
+      "education": {
+       "none": 0.075,
+       "primary": 0.094,
+       "lower_secondary": 0.358,
+       "upper_secondary": 0.264,
+       "university": 0.189,
+       "graduate": 0.019
+      },
+      "working": 0.962,
+      "sector": {
+       "agriculture": 0.451,
+       "industry": 0.196,
+       "services": 0.353
+      },
+      "national_income_percentile_median": 0.548,
+      "world_income_top10": 0,
+      "world_income_bottom50": 0.679,
+      "owns_home": 0.679
+     },
+     "partnered_by_50": 0.885,
+     "children_by_46": 1.7,
+     "ever_moved_abroad": 0.017,
+     "ever_refugee": 0,
+     "born_in_a_city": 0,
+     "first_partner_age_median": 26,
+     "first_child_age_median": 28,
+     "moved_to": {
+      "ARE": 1
+     },
+     "met": {
+      "economic_crisis": {
+       "share": 0.9,
+       "first_age_median": 21
+      },
+      "flood": {
+       "share": 0.683,
+       "first_age_median": 27
+      },
+      "heatwave": {
+       "share": 0.683,
+       "first_age_median": 27
+      },
+      "storm": {
+       "share": 0.583,
+       "first_age_median": 33
+      },
+      "earthquake": {
+       "share": 0.017,
+       "first_age_median": 0
+      }
+     },
+     "groups": {
+      "general": {
+       "lives": 16,
+       "age_at_death_mean": 79.4,
+       "age_at_death_median": 84,
+       "survival_65": 0.875,
+       "children_mean": 1.8,
+       "ever_moved_abroad": 0.063,
+       "causes_of_death": {
+        "copd": 0.25,
+        "str": 0.25,
+        "ihd": 0.188,
+        "cir": 0.063,
+        "dia": 0.063
+       }
+      },
+      "none": {
+       "lives": 5,
+       "age_at_death_mean": 59,
+       "age_at_death_median": 70,
+       "survival_65": 0.6,
+       "children_mean": 2,
+       "ever_moved_abroad": 0,
+       "causes_of_death": {
+        "ihd": 0.4,
+        "fall": 0.2,
+        "ocd": 0.2,
+        "oinf": 0.2
+       }
+      },
+      "obc": {
+       "lives": 28,
+       "age_at_death_mean": 65.8,
+       "age_at_death_median": 72,
+       "survival_65": 0.643,
+       "children_mean": 2.1,
+       "ever_moved_abroad": 0,
+       "causes_of_death": {
+        "ihd": 0.25,
+        "copd": 0.107,
+        "str": 0.107,
+        "can": 0.071,
+        "dia": 0.071
+       }
+      },
+      "scheduled_caste": {
+       "lives": 11,
+       "age_at_death_mean": 68.8,
+       "age_at_death_median": 75,
+       "survival_65": 0.636,
+       "children_mean": 1.4,
+       "ever_moved_abroad": 0,
+       "causes_of_death": {
+        "ihd": 0.273,
+        "ocd": 0.182,
+        "can": 0.091,
+        "copd": 0.091,
+        "diar": 0.091
+       }
+      }
+     }
+    },
+    "usage": {
+     "month": "2026-11",
+     "unit": "life units",
+     "used": 276,
+     "quota": 2000,
+     "this_call": 60
+    }
+   }
+  }
+ }
+}

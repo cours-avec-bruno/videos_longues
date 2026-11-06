@@ -1,0 +1,2803 @@
+{
+ "meta": {
+  "api": "1in8b-engine",
+  "version": "v1",
+  "status": "beta",
+  "kind": "life",
+  "engine": "0.9.52",
+  "simulated": "simulated lives that follow real statistics: not real people, records, measurements or forecasts",
+  "docs": "https://1in8b.life/en/api/",
+  "terms": "https://1in8b.life/en/api/#terms",
+  "credit": "1in8b Engine (1in8b.life)",
+  "tier": "free"
+ },
+ "query": {
+  "country": null,
+  "sex": null,
+  "year": null,
+  "future": false,
+  "n": 1,
+  "seed": 20261106,
+  "lang": "fr"
+ },
+ "lives": [
+  {
+   "seed": 20261106,
+   "country": "DZA",
+   "born_year": 2026,
+   "sex": "F",
+   "name": "Khadija Ibrahim",
+   "born_in_city": false,
+   "education": "primary",
+   "education_at_25": "primary",
+   "jobs": [],
+   "first_partner_age": 24,
+   "children": 3,
+   "first_child_age": 29,
+   "siblings": 2,
+   "moves": [],
+   "age_at_death": 94,
+   "cause_of_death": "fall",
+   "died_in": "DZA",
+   "who": {
+    "faith": "muslim",
+    "group": null,
+    "orientation": "straight",
+    "disability": [],
+    "caste": null
+   },
+   "family_at_birth": {
+    "parents": "mother_and_father",
+    "mother_age": 38,
+    "father_age": 44,
+    "father_there": true,
+    "older_siblings": 2,
+    "family_fifth": 1
+   },
+   "met": [
+    {
+     "age": 17,
+     "year": 2043,
+     "kind": "economic_crisis"
+    },
+    {
+     "age": 29,
+     "year": 2055,
+     "kind": "economic_crisis"
+    },
+    {
+     "age": 35,
+     "year": 2061,
+     "kind": "economic_crisis"
+    },
+    {
+     "age": 48,
+     "year": 2074,
+     "kind": "economic_crisis"
+    },
+    {
+     "age": 60,
+     "year": 2086,
+     "kind": "economic_crisis"
+    },
+    {
+     "age": 76,
+     "year": 2102,
+     "kind": "economic_crisis"
+    }
+   ],
+   "decisions": [
+    {
+     "age": 2,
+     "id": "temper",
+     "question": "Deux ans, un nouveau jouet",
+     "about": "Khadija marche maintenant plutôt bien. Avec un nouveau jouet, que fait l’enfant en premier ? Votre choix fait pencher le tempérament de l’enfant de ce côté ; ces moments s’additionnent, et il se dessine vers cinq ans.",
+     "fact": "Le tempérament naît à la fois de ce que l’on reçoit à la naissance et de ce que l’on vit en grandissant. D’après l’ensemble des études sur les jumeaux, environ 40 % des différences de personnalité s’expliquent par les gènes (Vukasović & Bratko 2015)",
+     "choices": [
+      {
+       "key": "cur",
+       "label": "Le tourner dans tous les sens et l’observer longuement",
+       "note": null
+      },
+      {
+       "key": "act",
+       "label": "Courir dans toute la maison, le jouet à la main",
+       "note": null
+      },
+      {
+       "key": "warm",
+       "label": "Tendre le jouet à quelqu’un à côté pour jouer ensemble",
+       "note": null
+      },
+      {
+       "key": "grit",
+       "label": "Recommencer encore et encore, même quand ça ne marche pas",
+       "note": null
+      }
+     ],
+     "chose": "act"
+    },
+    {
+     "age": 5,
+     "id": "reflect",
+     "question": "Une pause · 5 ans",
+     "about": "En Algérie, 2,0 % des enfants n’atteignent pas leur cinquième anniversaire. Cette enfant l’a atteint.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "write",
+       "label": "Le noter et continuer à vivre",
+       "note": "Ce que vous écrivez reste dans le récit de cette vie"
+      },
+      {
+       "key": "skip",
+       "label": "Le garder pour soi et continuer à vivre",
+       "note": null
+      }
+     ],
+     "chose": "skip"
+    },
+    {
+     "age": 7,
+     "id": "hobby",
+     "question": "Ce que vous aimez faire",
+     "about": "Que ferez-vous de votre temps libre ?",
+     "fact": null,
+     "choices": [
+      {
+       "key": "screen",
+       "label": "Regarder des séries télévisées",
+       "note": "Bonheur+ Santé−"
+      },
+      {
+       "key": "faith",
+       "label": "Rencontres religieuses",
+       "note": "Bonheur+ Relations+"
+      },
+      {
+       "key": "fishing",
+       "label": "Pêche",
+       "note": "Bonheur+ Santé+"
+      }
+     ],
+     "chose": "faith"
+    },
+    {
+     "age": 8,
+     "id": "sm_pocket",
+     "question": "Votre premier gros argent de poche",
+     "about": "Pendant les fêtes, les adultes de la famille vous ont donné pas mal d’argent de poche.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "save",
+       "label": "Le mettre dans votre tirelire",
+       "note": null
+      },
+      {
+       "key": "snack",
+       "label": "Acheter de bonnes choses à grignoter avec vos amis",
+       "note": null
+      },
+      {
+       "key": "gift",
+       "label": "Acheter un cadeau à vos parents",
+       "note": null
+      }
+     ],
+     "chose": "snack"
+    },
+    {
+     "age": 11,
+     "id": "school2",
+     "question": "Aller au collège ?",
+     "about": "Vous avez terminé l’école primaire. Pour continuer, il faut payer les frais de scolarité, l’uniforme et le transport.",
+     "fact": "En Algérie, environ 73 % des enfants terminent le collège (UNESCO UIS)",
+     "choices": [
+      {
+       "key": "go",
+       "label": "Continuer à étudier",
+       "note": "Vos chances dépendent des moyens de votre famille et de vos notes"
+      },
+      {
+       "key": "work",
+       "label": "Commencer à travailler pour aider votre famille",
+       "note": "Un petit revenu, la fin de l’école"
+      }
+     ],
+     "chose": "work"
+    },
+    {
+     "age": 15,
+     "id": "reflect",
+     "question": "Une pause · 15 ans",
+     "about": "Cette enfant travaille au lieu d’aller à l’école. Durée de scolarité attendue : 15,5 ans en Algérie.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "write",
+       "label": "Le noter et continuer à vivre",
+       "note": "Ce que vous écrivez reste dans le récit de cette vie"
+      },
+      {
+       "key": "skip",
+       "label": "Le garder pour soi et continuer à vivre",
+       "note": null
+      }
+     ],
+     "chose": "skip"
+    },
+    {
+     "age": 15,
+     "id": "job",
+     "question": "Votre premier emploi",
+     "about": "Niveau d’études : école primaire. Voici les emplois que l’on peut trouver en Algérie (campagne).",
+     "fact": "En Algérie, environ 50 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 10 % travaillent dans l’agriculture",
+     "choices": [
+      {
+       "key": "o0",
+       "label": "Ouvrière agricole",
+       "note": "3 276 $ US PPP par an · 191 € par mois aux prix français · emploi formel (retraite, assurance)"
+      },
+      {
+       "key": "o1",
+       "label": "Agente d’entretien",
+       "note": "3 922 $ US PPP par an · 229 € par mois aux prix français · emploi formel (retraite, assurance)"
+      },
+      {
+       "key": "o2",
+       "label": "Paysanne (agriculture vivrière)",
+       "note": "3 961 $ US PPP par an · 231 € par mois aux prix français · emploi formel (retraite, assurance)"
+      },
+      {
+       "key": "wait",
+       "label": "Attendre un meilleur emploi",
+       "note": "Une année de plus à chercher"
+      },
+      {
+       "key": "home",
+       "label": "Aider aux tâches ménagères",
+       "note": "Aucun revenu"
+      }
+     ],
+     "chose": "home"
+    },
+    {
+     "age": 16,
+     "id": "city",
+     "question": "Partir pour la ville ?",
+     "about": "Il y a plus de travail dans les villes de Algérie. Mais vous n’y connaissez personne.",
+     "fact": "Part de la population vivant en ville en Algérie : 75 % (ONU-Habitat 2023)",
+     "choices": [
+      {
+       "key": "go",
+       "label": "Partir à Alger",
+       "note": "Revenu↑ Relations↓"
+      },
+      {
+       "key": "stay",
+       "label": "Rester là où vous avez grandi",
+       "note": null
+      }
+     ],
+     "chose": "go"
+    },
+    {
+     "age": 16,
+     "id": "job",
+     "question": "Votre premier emploi",
+     "about": "Niveau d’études : école primaire. Voici les emplois que l’on peut trouver en Algérie (ville).",
+     "fact": "En Algérie, environ 50 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 10 % travaillent dans l’agriculture",
+     "choices": [
+      {
+       "key": "o0",
+       "label": "Cuisinière ou serveuse",
+       "note": "5 238 $ US PPP par an · 306 € par mois aux prix français · emploi informel · par votre amie Noha"
+      },
+      {
+       "key": "o1",
+       "label": "Ouvrière du bâtiment",
+       "note": "4 991 $ US PPP par an · 291 € par mois aux prix français · emploi formel (retraite, assurance)"
+      },
+      {
+       "key": "o2",
+       "label": "Employée d’entrepôt",
+       "note": "6 230 $ US PPP par an · 363 € par mois aux prix français · emploi formel (retraite, assurance)"
+      },
+      {
+       "key": "wait",
+       "label": "Attendre un meilleur emploi",
+       "note": "Une année de plus à chercher"
+      },
+      {
+       "key": "home",
+       "label": "Aider aux tâches ménagères",
+       "note": "Aucun revenu"
+      }
+     ],
+     "chose": "wait"
+    },
+    {
+     "age": 17,
+     "id": "job",
+     "question": "Votre premier emploi",
+     "about": "Niveau d’études : école primaire. Voici les emplois que l’on peut trouver en Algérie (ville).",
+     "fact": "En Algérie, environ 50 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 10 % travaillent dans l’agriculture",
+     "choices": [
+      {
+       "key": "o0",
+       "label": "Ouvrière d’usine",
+       "note": "5 608 $ US PPP par an · 327 € par mois aux prix français · emploi formel (retraite, assurance)"
+      },
+      {
+       "key": "o1",
+       "label": "Vendeuse de rue ou petite commerçante",
+       "note": "4 683 $ US PPP par an · 273 € par mois aux prix français · emploi informel"
+      },
+      {
+       "key": "o2",
+       "label": "Employée d’entrepôt",
+       "note": "5 207 $ US PPP par an · 304 € par mois aux prix français · emploi formel (retraite, assurance)"
+      },
+      {
+       "key": "wait",
+       "label": "Attendre un meilleur emploi",
+       "note": "Une année de plus à chercher"
+      },
+      {
+       "key": "home",
+       "label": "Aider aux tâches ménagères",
+       "note": "Aucun revenu"
+      }
+     ],
+     "chose": "home"
+    },
+    {
+     "age": 19,
+     "id": "loan",
+     "question": "Votre dette s’est alourdie",
+     "about": "Vous devez 4 242 € (aux prix français).",
+     "fact": null,
+     "choices": [
+      {
+       "key": "family",
+       "label": "Demander de l’aide à votre famille",
+       "note": "Relations↓"
+      },
+      {
+       "key": "lender",
+       "label": "Refinancer vos emprunts",
+       "note": "Des intérêts à payer"
+      }
+     ],
+     "chose": "lender"
+    },
+    {
+     "age": 22,
+     "id": "loan",
+     "question": "Votre dette s’est alourdie",
+     "about": "Vous devez 6 955 € (aux prix français).",
+     "fact": null,
+     "choices": [
+      {
+       "key": "family",
+       "label": "Demander de l’aide à votre famille",
+       "note": "Relations↓"
+      },
+      {
+       "key": "lender",
+       "label": "Refinancer vos emprunts",
+       "note": "Des intérêts à payer"
+      }
+     ],
+     "chose": "lender"
+    },
+    {
+     "age": 24,
+     "id": "partner",
+     "question": "Une proposition d’union",
+     "about": "Rencontre proposée par les aînés de la famille : Amr Najjar (homme, 28 ans, calme). Métier : ouvrier du bâtiment. Amr a environ 1 069 € d’économies.",
+     "fact": "En Algérie, l’âge moyen des femmes au premier mariage est estimé à environ 26 ans",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Se marier",
+       "note": "Relations↑ Bonheur↑"
+      },
+      {
+       "key": "date",
+       "label": "Prendre le temps de mieux se connaître",
+       "note": "Remettre la décision à plus tard"
+      },
+      {
+       "key": "no",
+       "label": "Refuser",
+       "note": "Peut créer des tensions avec votre famille"
+      }
+     ],
+     "chose": "yes"
+    },
+    {
+     "age": 24,
+     "id": "adultedu",
+     "question": "Reprendre des études ?",
+     "about": "Vous n’avez pas achevé vos études (collège). Tout en travaillant, vous pourriez suivre des cours du soir ou préparer un examen d’équivalence pour obtenir le diplôme.",
+     "fact": "Beaucoup de pays ont des écoles du soir et des examens d’équivalence pour les personnes qui travaillent (UNESCO, Rapport mondial sur l’apprentissage et l’éducation des adultes)",
+     "choices": [
+      {
+       "key": "go",
+       "label": "Essayer l’école du soir",
+       "note": "1 an · environ 311 € · fatigant"
+      },
+      {
+       "key": "no",
+       "label": "Se concentrer sur le travail pour l’instant",
+       "note": null
+      }
+     ],
+     "chose": "go"
+    },
+    {
+     "age": 25,
+     "id": "kids",
+     "question": "Avoir un enfant ?",
+     "about": "Vous parlez avec votre partenaire d’avoir des enfants. Amr espère un enfant depuis longtemps.",
+     "fact": "Indice de fécondité en Algérie : 2,77 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 62 décès pour 100 000 naissances vivantes (OMS 2023)",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Avoir un enfant",
+       "note": "Bonheur↑ Dépenses pour l’enfant↑"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "stop",
+       "label": "Décider de vivre sans enfants",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "no"
+    },
+    {
+     "age": 25,
+     "id": "hmwork",
+     "question": "La dette ne diminue pas",
+     "about": "Le seul salaire d’Amr ne suffit pas à rembourser votre dette de 8 625 €. Allez-vous chercher le travail que vous pourrez trouver, petit commerce ou travail à la journée ?",
+     "fact": "Environ la moitié des femmes dans le monde travaillent ou cherchent du travail. Les écarts sont grands : en Asie du Sud et au Moyen-Orient, c’est un peu plus d’une sur quatre (OIT 2024)",
+     "choices": [
+      {
+       "key": "work",
+       "label": "Chercher du travail",
+       "note": "Revenu ↑ · partager les tâches ménagères"
+      },
+      {
+       "key": "wait",
+       "label": "Continuer ainsi",
+       "note": "La dette reste"
+      }
+     ],
+     "chose": "work"
+    },
+    {
+     "age": 25,
+     "id": "job",
+     "question": "Votre premier emploi",
+     "about": "Niveau d’études : école primaire. Voici les emplois que l’on peut trouver en Algérie (ville).",
+     "fact": "En Algérie, environ 50 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 10 % travaillent dans l’agriculture",
+     "choices": [
+      {
+       "key": "o0",
+       "label": "Vendeuse de rue ou petite commerçante",
+       "note": "4 785 $ US PPP par an · 279 € par mois aux prix français · emploi formel (retraite, assurance)"
+      },
+      {
+       "key": "o1",
+       "label": "Ouvrière d’usine",
+       "note": "6 430 $ US PPP par an · 375 € par mois aux prix français · emploi formel (retraite, assurance)"
+      },
+      {
+       "key": "o2",
+       "label": "Agente d’entretien",
+       "note": "3 746 $ US PPP par an · 219 € par mois aux prix français · emploi formel (retraite, assurance) · par la famille de votre conjoint"
+      },
+      {
+       "key": "wait",
+       "label": "Attendre un meilleur emploi",
+       "note": "Une année de plus à chercher"
+      },
+      {
+       "key": "home",
+       "label": "Se consacrer au foyer et aux enfants",
+       "note": "Aucun revenu"
+      }
+     ],
+     "chose": "home"
+    },
+    {
+     "age": 27,
+     "id": "kids",
+     "question": "Avoir un enfant ?",
+     "about": "Vous parlez avec votre partenaire d’avoir des enfants. Amr espère un enfant depuis longtemps.",
+     "fact": "Indice de fécondité en Algérie : 2,77 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 62 décès pour 100 000 naissances vivantes (OMS 2023)",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Avoir un enfant",
+       "note": "Bonheur↑ Dépenses pour l’enfant↑"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "stop",
+       "label": "Décider de vivre sans enfants",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "no"
+    },
+    {
+     "age": 27,
+     "id": "petq",
+     "question": "Accueillir un animal ?",
+     "about": "Vous pensez sans cesse à un chat errant que vous croisez souvent dans le quartier.",
+     "fact": "En Algérie, environ 12 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+     "choices": [
+      {
+       "key": "dog",
+       "label": "Accueillir un chien",
+       "note": "Environ 118 € par an · de 10 à 15 ans ensemble"
+      },
+      {
+       "key": "cat",
+       "label": "Accueillir un chat",
+       "note": "Environ 78 € par an · de 12 à 18 ans ensemble"
+      },
+      {
+       "key": "pk_b",
+       "label": "Adopter un perroquet",
+       "note": "Environ 31 € par an · de 6 à 12 ans ensemble"
+      },
+      {
+       "key": "pk_f",
+       "label": "Installer un aquarium",
+       "note": "Environ 31 € par an · de 4 à 9 ans ensemble"
+      },
+      {
+       "key": "pk_r",
+       "label": "Adopter un lapin",
+       "note": "Environ 39 € par an · de 8 à 12 ans ensemble"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      }
+     ],
+     "chose": "cat"
+    },
+    {
+     "age": 29,
+     "id": "kids",
+     "question": "Avoir un enfant ?",
+     "about": "Vous parlez avec votre partenaire d’avoir des enfants. Amr espère un enfant depuis longtemps.",
+     "fact": "Indice de fécondité en Algérie : 2,77 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 62 décès pour 100 000 naissances vivantes (OMS 2023)",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Avoir un enfant",
+       "note": "Bonheur↑ Dépenses pour l’enfant↑"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "stop",
+       "label": "Décider de vivre sans enfants",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "yes"
+    },
+    {
+     "age": 30,
+     "id": "reflect",
+     "question": "Une pause · 30 ans",
+     "about": "Cette personne n’a pas de revenu pour l’instant. En Algérie, 76 % de la population utilise Internet et 75 % vit en ville.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "write",
+       "label": "Le noter et continuer à vivre",
+       "note": "Ce que vous écrivez reste dans le récit de cette vie"
+      },
+      {
+       "key": "skip",
+       "label": "Le garder pour soi et continuer à vivre",
+       "note": null
+      }
+     ],
+     "chose": "skip"
+    },
+    {
+     "age": 32,
+     "id": "sm_cook",
+     "question": "Apprendre à cuisiner ?",
+     "about": "La plupart du temps, vous mangez sur le pouce.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "learn",
+       "label": "Apprendre à cuisiner",
+       "note": null
+      },
+      {
+       "key": "buy",
+       "label": "Acheter tout prêt, c’est plus simple",
+       "note": null
+      }
+     ],
+     "chose": "buy"
+    },
+    {
+     "age": 33,
+     "id": "kids",
+     "question": "Avoir un 2e enfant ?",
+     "about": "Vous avez 1 enfant aujourd’hui. Amr pense plutôt qu’un enfant, c’est assez.",
+     "fact": "Indice de fécondité en Algérie : 2,77 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 62 décès pour 100 000 naissances vivantes (OMS 2023)",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Avoir un enfant",
+       "note": "Bonheur↑ Dépenses pour l’enfant↑"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "stop",
+       "label": "Ne plus avoir d’enfants",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "yes"
+    },
+    {
+     "age": 33,
+     "id": "pbiz",
+     "question": "Votre partenaire veut ouvrir une boutique",
+     "about": "Votre partenaire, Amr, voudrait ouvrir sa propre boutique, un rêve de longue date. Il faudrait y consacrer environ 7 773 € de vos économies (aux prix français).",
+     "fact": "Environ la moitié des petites entreprises nouvellement créées ferment dans les cinq ans (Bureau des statistiques du travail des États-Unis)",
+     "choices": [
+      {
+       "key": "go",
+       "label": "Proposer de se lancer ensemble",
+       "note": "Revenus↑ si ça marche · dettes sinon"
+      },
+      {
+       "key": "no",
+       "label": "Dire que ce n’est pas le moment",
+       "note": "Relations↓"
+      }
+     ],
+     "chose": "go"
+    },
+    {
+     "age": 34,
+     "id": "loan",
+     "question": "Votre dette s’est alourdie",
+     "about": "Vous devez 4 334 € (aux prix français).",
+     "fact": null,
+     "choices": [
+      {
+       "key": "family",
+       "label": "Demander de l’aide à votre famille",
+       "note": "Relations↓"
+      },
+      {
+       "key": "lender",
+       "label": "Refinancer vos emprunts",
+       "note": "Des intérêts à payer"
+      }
+     ],
+     "chose": "lender"
+    },
+    {
+     "age": 35,
+     "id": "kids",
+     "question": "Avoir un 3e enfant ?",
+     "about": "Vous avez 1 enfant aujourd’hui. Amr pense plutôt qu’un enfant, c’est assez.",
+     "fact": "Indice de fécondité en Algérie : 2,77 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 62 décès pour 100 000 naissances vivantes (OMS 2023)",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Avoir un enfant",
+       "note": "Bonheur↑ Dépenses pour l’enfant↑"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "stop",
+       "label": "Ne plus avoir d’enfants",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "yes"
+    },
+    {
+     "age": 36,
+     "id": "kidq",
+     "question": "Le rêve de Khaled",
+     "about": "Khaled, 7 ans, vous a demandé, les yeux brillants : « Maman, plus tard, je pourrai devenir mécanicien auto ? »",
+     "fact": "Les attentes et les encouragements des parents influencent longtemps la scolarité et le parcours professionnel de l’enfant (Davis-Kean 2005)",
+     "choices": [
+      {
+       "key": "yes",
+       "label": "Bien sûr, essaie tout ce que tu as envie de faire",
+       "note": null
+      },
+      {
+       "key": "look",
+       "label": "Cherchons ensemble comment tu pourrais y arriver",
+       "note": null
+      },
+      {
+       "key": "real",
+       "label": "Pense plutôt à un métier plus stable",
+       "note": null
+      }
+     ],
+     "chose": "yes"
+    },
+    {
+     "age": 37,
+     "id": "care",
+     "question": "Qui va s’occuper de votre mère ?",
+     "about": "Votre mère a désormais du mal à se déplacer.",
+     "fact": "Dans les pays à revenu faible et intermédiaire, l’essentiel des soins aux personnes âgées est assuré par la famille, surtout par les femmes (OMS)",
+     "choices": [
+      {
+       "key": "home",
+       "label": "L’accueillir chez vous",
+       "note": "Relations↑"
+      },
+      {
+       "key": "near",
+       "label": "Vivre chacun chez soi et passer souvent aider",
+       "note": "Relations↑ · demande du temps et des efforts"
+      },
+      {
+       "key": "pay",
+       "label": "Engager une aide à domicile",
+       "note": "Des frais"
+      },
+      {
+       "key": "sib",
+       "label": "Demander à vos frères et sœurs",
+       "note": "Relations↓"
+      }
+     ],
+     "chose": "home"
+    },
+    {
+     "age": 41,
+     "id": "thanks",
+     "question": "Dire merci",
+     "about": "Vous ne vous souvenez plus de la dernière fois où vous avez dit merci à votre mère.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "call",
+       "label": "Le dire ce soir, en face",
+       "note": null
+      },
+      {
+       "key": "next",
+       "label": "Une autre fois",
+       "note": null
+      }
+     ],
+     "chose": "next"
+    },
+    {
+     "age": 45,
+     "id": "adultedu",
+     "question": "Reprendre des études ?",
+     "about": "Vous n’avez pas achevé vos études (collège). Tout en travaillant, vous pourriez suivre des cours du soir ou préparer un examen d’équivalence pour obtenir le diplôme.",
+     "fact": "Beaucoup de pays ont des écoles du soir et des examens d’équivalence pour les personnes qui travaillent (UNESCO, Rapport mondial sur l’apprentissage et l’éducation des adultes)",
+     "choices": [
+      {
+       "key": "go",
+       "label": "Essayer l’école du soir",
+       "note": "1 an · environ 311 € · fatigant"
+      },
+      {
+       "key": "no",
+       "label": "Se concentrer sur le travail pour l’instant",
+       "note": null
+      }
+     ],
+     "chose": "no"
+    },
+    {
+     "age": 46,
+     "id": "mind",
+     "question": "Une grande lassitude",
+     "about": "Ces derniers temps, vous avez le cœur lourd sans savoir pourquoi. Vous dormez mal, et ce que vous aimiez ne vous attire plus.",
+     "fact": "Avoir le cœur lourd longtemps n’a rien de rare, et l’on peut aller mieux avec de l’aide. Environ 5 % des adultes dans le monde vivent avec une dépression (OMS 2026) · Si vous avez besoin de soutien : en France, appelez le 3114 (24 h/24, gratuit) ; findahelpline.com recense les lignes d’écoute gratuites d’autres pays",
+     "choices": [
+      {
+       "key": "talk",
+       "label": "Se confier à votre partenaire",
+       "note": "Le seul fait d’en parler peut soulager"
+      },
+      {
+       "key": "counsel",
+       "label": "Demander l’aide d’un professionnel",
+       "note": "Coût : environ 319 €"
+      },
+      {
+       "key": "alone",
+       "label": "Essayer de tenir le coup par vous-même",
+       "note": "Cela peut prendre du temps"
+      }
+     ],
+     "chose": "alone"
+    },
+    {
+     "age": 47,
+     "id": "stranger",
+     "question": "Quelqu’un s’effondre dans la rue",
+     "about": "Une personne que vous ne connaissez pas s’est effondrée dans la rue. Tout le monde passe sans s’arrêter.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "help",
+       "label": "L’emmener à l’hôpital",
+       "note": "Cela demande un peu de temps et d’argent"
+      },
+      {
+       "key": "pass",
+       "label": "Se dire que quelqu’un d’autre aidera, et passer son chemin",
+       "note": null
+      }
+     ],
+     "chose": "help"
+    },
+    {
+     "age": 49,
+     "id": "kidteen",
+     "question": "Un appel de l’école",
+     "about": "Tarek manque l’école depuis plusieurs jours.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "talk",
+       "label": "S’asseoir et écouter",
+       "note": "Cela prend du temps"
+      },
+      {
+       "key": "strict",
+       "label": "Se montrer sévère",
+       "note": null
+      }
+     ],
+     "chose": "talk"
+    },
+    {
+     "age": 50,
+     "id": "reflect",
+     "question": "Une pause · 50 ans",
+     "about": "Parmi les personnes nées la même année en Algérie, 93 % atteignent l’âge de cinquante ans.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "write",
+       "label": "Le noter et continuer à vivre",
+       "note": "Ce que vous écrivez reste dans le récit de cette vie"
+      },
+      {
+       "key": "skip",
+       "label": "Le garder pour soi et continuer à vivre",
+       "note": null
+      }
+     ],
+     "chose": "skip"
+    },
+    {
+     "age": 51,
+     "id": "hmwork",
+     "question": "Le foyer n’a plus de revenu",
+     "about": "Depuis que votre partenaire Amr a perdu son emploi, plus aucun argent ne rentre. Tenir la maison ne suffira pas à faire vivre le foyer.",
+     "fact": "Quand les maris perdent leur emploi, davantage d’épouses se mettent à travailler, surtout dans les pays plus pauvres (Bhalotra & Umaña-Aponte 2010)",
+     "choices": [
+      {
+       "key": "work",
+       "label": "Chercher de nouveau du travail",
+       "note": "Revenu ↑ · partager les tâches ménagères"
+      },
+      {
+       "key": "wait",
+       "label": "Tenir encore un peu",
+       "note": "Avec vos économies et des dettes"
+      }
+     ],
+     "chose": "wait"
+    },
+    {
+     "age": 58,
+     "id": "kidwed",
+     "question": "Khaled se marie",
+     "about": "Khaled, 29 ans, a amené à la maison la personne de sa vie. Dans ce pays, il est courant que les parents prennent en charge une grande partie des frais du mariage.",
+     "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 7 773 € (aux prix français). Vos économies : 1 399 €.",
+     "choices": [
+      {
+       "key": "help",
+       "label": "Participer généreusement aux frais du mariage",
+       "note": "Environ 7 773 €"
+      },
+      {
+       "key": "little",
+       "label": "Donner un peu, selon vos moyens",
+       "note": "Environ 1 943 €"
+      },
+      {
+       "key": "none",
+       "label": "Offrir seulement vos vœux de bonheur",
+       "note": null
+      }
+     ],
+     "chose": "help"
+    },
+    {
+     "age": 59,
+     "id": "forgive",
+     "question": "Une vieille dispute",
+     "about": "Il y a quelques années, après une grosse dispute, vous avez coupé les ponts avec votre frère aîné. Aujourd’hui, c’est l’autre qui fait le premier pas.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "meet",
+       "label": "Se voir et l’écouter",
+       "note": null
+      },
+      {
+       "key": "later",
+       "label": "Pas encore : le cœur n’y est pas",
+       "note": null
+      }
+     ],
+     "chose": "later"
+    },
+    {
+     "age": 64,
+     "id": "petq",
+     "question": "Accueillir un animal ?",
+     "about": "Vous pensez sans cesse à un chat errant que vous croisez souvent dans le quartier.",
+     "fact": "En Algérie, environ 12 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+     "choices": [
+      {
+       "key": "dog",
+       "label": "Accueillir un chien",
+       "note": "Environ 119 € par an · de 10 à 15 ans ensemble"
+      },
+      {
+       "key": "cat",
+       "label": "Accueillir un chat",
+       "note": "Environ 79 € par an · de 12 à 18 ans ensemble"
+      },
+      {
+       "key": "pk_b",
+       "label": "Adopter un perroquet",
+       "note": "Environ 32 € par an · de 6 à 12 ans ensemble"
+      },
+      {
+       "key": "pk_f",
+       "label": "Installer un aquarium",
+       "note": "Environ 32 € par an · de 4 à 9 ans ensemble"
+      },
+      {
+       "key": "pk_r",
+       "label": "Adopter un lapin",
+       "note": "Environ 40 € par an · de 8 à 12 ans ensemble"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "never",
+       "label": "Ne pas avoir d’animal",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "no"
+    },
+    {
+     "age": 68,
+     "id": "illness",
+     "question": "Une mauvaise chute",
+     "about": "Depuis votre chute, l’un de vos membres a beaucoup enflé et vous fait mal au moindre mouvement. Votre part des frais d’hôpital s’élève à environ 1 599 € (aux prix français). Vos économies : 18 700 €.",
+     "fact": "Part des dépenses de santé restant à la charge des patients en Algérie : 41 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+     "choices": [
+      {
+       "key": "hospital",
+       "label": "Se faire soigner à l’hôpital",
+       "note": "Environ 1 599 €"
+      },
+      {
+       "key": "cheap",
+       "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+       "note": "Économique, mais risqué"
+      }
+     ],
+     "chose": "hospital"
+    },
+    {
+     "age": 69,
+     "id": "diag",
+     "question": "Diagnostic : diabète",
+     "about": "Il faut prendre un traitement régulièrement et suivre son état de près. Les médicaments restant à votre charge coûtent environ 150 € par an (aux prix français).",
+     "fact": "Environ 10,5 % des adultes dans le monde vivent avec un diabète (FID 2021)",
+     "choices": [
+      {
+       "key": "treat",
+       "label": "Suivre le traitement avec régularité",
+       "note": "Santé préservée, mais coûteux"
+      },
+      {
+       "key": "life",
+       "label": "Prendre le traitement, mieux manger et bouger davantage",
+       "note": "Coûteux · Risque ↓"
+      },
+      {
+       "key": "ignore",
+       "label": "Se dire que ça ira, et tenir le coup",
+       "note": "Économique, mais risqué"
+      }
+     ],
+     "chose": "treat"
+    },
+    {
+     "age": 70,
+     "id": "reflect",
+     "question": "Une pause · 70 ans",
+     "about": "Parmi les personnes nées la même année en Algérie, seulement 79 % atteignent soixante-dix ans.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "write",
+       "label": "Le noter et continuer à vivre",
+       "note": "Ce que vous écrivez reste dans le récit de cette vie"
+      },
+      {
+       "key": "skip",
+       "label": "Le garder pour soi et continuer à vivre",
+       "note": null
+      }
+     ],
+     "chose": "skip"
+    },
+    {
+     "age": 71,
+     "id": "petq",
+     "question": "Accueillir un animal ?",
+     "about": "Au refuge, vous avez vu des animaux qui attendent une famille.",
+     "fact": "En Algérie, environ 12 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+     "choices": [
+      {
+       "key": "dog",
+       "label": "Accueillir un chien",
+       "note": "Environ 77 € par an · de 10 à 15 ans ensemble"
+      },
+      {
+       "key": "cat",
+       "label": "Accueillir un chat",
+       "note": "Environ 51 € par an · de 12 à 18 ans ensemble"
+      },
+      {
+       "key": "pk_b",
+       "label": "Adopter un perroquet",
+       "note": "Environ 21 € par an · de 6 à 12 ans ensemble"
+      },
+      {
+       "key": "pk_f",
+       "label": "Installer un aquarium",
+       "note": "Environ 21 € par an · de 4 à 9 ans ensemble"
+      },
+      {
+       "key": "pk_r",
+       "label": "Adopter un lapin",
+       "note": "Environ 26 € par an · de 8 à 12 ans ensemble"
+      },
+      {
+       "key": "no",
+       "label": "Pas maintenant",
+       "note": null
+      },
+      {
+       "key": "never",
+       "label": "Ne pas avoir d’animal",
+       "note": "Cette question ne reviendra pas"
+      }
+     ],
+     "chose": "no"
+    },
+    {
+     "age": 77,
+     "id": "kinask",
+     "question": "Khaled vous demande de l’argent",
+     "about": "Khaled veut solder une dette et repartir de zéro, et vous demande 2 974 €. Vos économies : 17 900 €.",
+     "fact": null,
+     "choices": [
+      {
+       "key": "give",
+       "label": "Donner ce qui est demandé",
+       "note": "Environ 2 974 € · Relations↑"
+      },
+      {
+       "key": "some",
+       "label": "Donner une partie, selon vos moyens",
+       "note": "Environ 892 €"
+      },
+      {
+       "key": "no",
+       "label": "Dire que cette fois, ce n’est pas possible",
+       "note": "Relations↓"
+      }
+     ],
+     "chose": "some"
+    },
+    {
+     "age": 80,
+     "id": "hajj",
+     "question": "Partir pour le hajj ?",
+     "about": "Vous avez toujours voulu faire le pèlerinage à La Mecque au moins une fois dans votre vie.",
+     "fact": "En 2024, environ 1,83 million de personnes ont accompli le hajj (Autorité générale saoudienne des statistiques)",
+     "choices": [
+      {
+       "key": "go",
+       "label": "Partir en pèlerinage",
+       "note": "Coût : environ 11 400 €"
+      },
+      {
+       "key": "no",
+       "label": "Y aller une autre fois",
+       "note": null
+      }
+     ],
+     "chose": "go"
+    },
+    {
+     "age": 94,
+     "id": "illness",
+     "question": "Une mauvaise chute",
+     "about": "Depuis votre chute, l’un de vos membres a beaucoup enflé et vous fait mal au moindre mouvement. Votre part des frais d’hôpital s’élève à environ 1 599 € (aux prix français). Vos économies : 16 100 €.",
+     "fact": "Part des dépenses de santé restant à la charge des patients en Algérie : 41 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+     "choices": [
+      {
+       "key": "hospital",
+       "label": "Se faire soigner à l’hôpital",
+       "note": "Environ 1 599 €"
+      },
+      {
+       "key": "cheap",
+       "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+       "note": "Économique, mais risqué"
+      }
+     ],
+     "chose": "cheap"
+    }
+   ],
+   "record": [
+    [
+     0,
+     "Vous avez reçu vos vaccins de base (DTC et rougeole).",
+     "En 2023, 84 % des nourrissons dans le monde ont reçu les trois doses du vaccin DTC (OMS et UNICEF)"
+    ],
+    [
+     1,
+     "1 an. Parmi les filles qui ont vu le jour en Algérie la même année que vous, environ 98 % sont encore en vie."
+    ],
+    [
+     1,
+     "Vous avez attrapé une pneumonie et vous aviez du mal à respirer."
+    ],
+    [
+     1,
+     "Vous avez fait vos premiers pas. Toute la famille a applaudi."
+    ],
+    [
+     2,
+     "Vous avez couru et joué avec les enfants du quartier jusqu’au coucher du soleil."
+    ],
+    [
+     2,
+     "Décision : Courir dans toute la maison, le jouet à la main"
+    ],
+    [
+     2,
+     "Toute la journée, vous avez promené le jouet d’un bout à l’autre de la maison."
+    ],
+    [
+     2,
+     "Vous avez dit votre premier mot : un mot qui voulait dire « Maman »."
+    ],
+    [
+     3,
+     "En jouant dans la boue, vous avez complètement sali vos vêtements."
+    ],
+    [
+     3,
+     "Vous avez passé l’Aïd al-Adha (la fête du Sacrifice) en famille."
+    ],
+    [
+     3,
+     "Quand un autre enfant pleurait, vous alliez lui tendre votre jouet."
+    ],
+    [
+     4,
+     "Vous avez longuement regardé de vieilles photos aux côtés de votre grand-père paternel."
+    ],
+    [
+     4,
+     "Vous avez commencé l’école maternelle."
+    ],
+    [
+     4,
+     "Vous vous asseyiez près d’un membre de la famille malade et faisiez mine de lui tâter le front."
+    ],
+    [
+     4,
+     "Vers cinq ans, les adultes disaient de Khadija que c’était une enfant affectueuse.",
+     "Le tempérament de l’enfance se prolonge souvent à l’âge adulte. La persévérance et la maîtrise de soi vers cinq ans étaient liées, modestement mais nettement, à la scolarité, à la santé et aux finances des décennies plus tard (Moffitt et al. 2011, étude de Dunedin, Nouvelle-Zélande)"
+    ],
+    [
+     5,
+     "Vous avez eu cinq ans."
+    ],
+    [
+     5,
+     "Vous avez couru et joué avec les enfants du quartier jusqu’au coucher du soleil."
+    ],
+    [
+     5,
+     "À côté de vos parents, vous avez regardé une vidéo sur Internet pour la première fois.",
+     "Utilisation d’Internet en Algérie : 76 % de la population (UIT, Banque mondiale)"
+    ],
+    [
+     6,
+     "Vous avez commencé l’école primaire."
+    ],
+    [
+     6,
+     "Quand les grands vous demandaient ce que vous vouliez faire plus tard, vous répondiez toujours : youtubeuse."
+    ],
+    [
+     6,
+     "Un jour où vous n’aviez pas fait vos devoirs, l’enseignant vous a donné une gifle devant toute la classe. Ce jour-là, à la maison, vous n’avez pas pu dire un mot.",
+     "Si l’on vous frappe ou vous blesse à l’école, vous n’avez pas à le supporter seule : en France, appelez le 119, Allô Enfance en Danger (24 h/24, gratuit) ; findahelpline.com recense les lignes d’écoute gratuites d’autres pays."
+    ],
+    [
+     6,
+     "Vous jouiez à imiter les champions de football."
+    ],
+    [
+     7,
+     "Chaque matin, à la mosquée du quartier, vous appreniez à lire le Coran."
+    ],
+    [
+     7,
+     "Vous avez longuement regardé de vieilles photos aux côtés de votre grand-mère paternelle."
+    ],
+    [
+     7,
+     "Décision : Rencontres religieuses"
+    ],
+    [
+     7,
+     "Vous avez commencé à fréquenter régulièrement des rassemblements religieux."
+    ],
+    [
+     7,
+     "Un soir de ramadan, vous avez partagé l’iftar avec vos voisins."
+    ],
+    [
+     8,
+     "Une grande amitié est née entre vous et Rami : vous ne vous quittiez plus."
+    ],
+    [
+     8,
+     "Décision : Acheter de bonnes choses à grignoter avec vos amis"
+    ],
+    [
+     8,
+     "Vous avez grignoté avec vos amis en riant longtemps."
+    ],
+    [
+     8,
+     "À la saison des travaux, vous filiez aux champs dès la sortie de l’école pour donner un coup de main."
+    ],
+    [
+     8,
+     "En jouant dans la boue, vous avez complètement sali vos vêtements."
+    ],
+    [
+     9,
+     "Avec un ballon fait de sacs plastique enroulés, vous avez joué au foot pieds nus jusqu’au coucher du soleil."
+    ],
+    [
+     9,
+     "Le goût du couscous que vous préparait votre mère, vous ne l’oublierez sans doute jamais."
+    ],
+    [
+     9,
+     "Grâce à un bon professeur, vous avez pris goût aux cours de mathématiques."
+    ],
+    [
+     10,
+     "Vous avez terminé l’année scolaire avec des notes moyennes."
+    ],
+    [
+     10,
+     "Pour les fêtes, toute la famille s’est réunie chez votre grand-père paternel."
+    ],
+    [
+     10,
+     "Les vêtements neufs n’arrivaient qu’une fois par an, pour les fêtes."
+    ],
+    [
+     10,
+     "Vous avez eu votre premier smartphone."
+    ],
+    [
+     11,
+     "Vous avez terminé l’école primaire."
+    ],
+    [
+     11,
+     "Vous avez passé l’Aïd el-Fitr (la fête qui suit le ramadan) en famille."
+    ],
+    [
+     11,
+     "Décision : Commencer à travailler pour aider votre famille"
+    ],
+    [
+     11,
+     "Vous avez quitté l’école et commencé à travailler.",
+     "Dans le monde, environ 160 millions d’enfants sont astreints au travail (OIT et UNICEF 2020)"
+    ],
+    [
+     11,
+     "À la saison des travaux, vous travailliez aux champs du lever au coucher du soleil."
+    ],
+    [
+     11,
+     "Vous avez passé plusieurs jours au lit avec un mauvais rhume."
+    ],
+    [
+     11,
+     "Le travail de vos parents a fini par se stabiliser, et la famille a vécu bien plus à l’aise.",
+     "Dans les pays de l’OCDE, environ 60 % des personnes qui faisaient partie des 20 % aux revenus les plus modestes s’y trouvaient encore quatre ans plus tard, de même qu’environ 70 % de celles qui faisaient partie des 20 % les plus aisés (OCDE 2018)"
+    ],
+    [
+     12,
+     "En chahutant avec votre deuxième grand frère, vous avez ri aux éclats, à vous en tenir les côtes."
+    ],
+    [
+     12,
+     "Vous gagniez de l’argent en portant des charges au marché.",
+     "Dans le monde, environ 160 millions d’enfants sont astreints au travail (OIT et UNICEF 2020)"
+    ],
+    [
+     13,
+     "Vous gagniez de l’argent en portant des charges au marché.",
+     "Dans le monde, environ 160 millions d’enfants sont astreints au travail (OIT et UNICEF 2020)"
+    ],
+    [
+     13,
+     "Vous avez eu le béguin pour quelqu’un du quartier."
+    ],
+    [
+     13,
+     "Votre grand-mère paternelle vous a glissé un peu d’argent de poche en cachette. (+22 €)"
+    ],
+    [
+     14,
+     "Vous avez eu vos premières règles. Ce corps qui changeait vous semblait étrange, mais vous y avez vu une étape du passage à l’âge adulte."
+    ],
+    [
+     14,
+     "Vous gagniez de l’argent en portant des charges au marché.",
+     "Dans le monde, environ 160 millions d’enfants sont astreints au travail (OIT et UNICEF 2020)"
+    ],
+    [
+     14,
+     "Toute la journée, vous vous occupiez des bêtes et vous aidiez aux champs."
+    ],
+    [
+     14,
+     "Votre grand-mère paternelle a quitté ce monde à 89 ans. (Infarctus ou autre cardiopathie ischémique)"
+    ],
+    [
+     14,
+     "Selon la coutume islamique, le corps a été lavé, enveloppé d’un linceul blanc et inhumé le jour même."
+    ],
+    [
+     15,
+     "15 ans. Parmi les filles qui ont vu le jour en Algérie la même année que vous, environ 98 % sont encore en vie."
+    ],
+    [
+     15,
+     "Sur le chemin du travail, à l’aube, vous avez trouvé le lever du soleil particulièrement beau ce jour-là."
+    ],
+    [
+     15,
+     "Vous avez fait des courses pour une personne âgée du voisinage qui se déplaçait difficilement."
+    ],
+    [
+     15,
+     "Décision : Aider aux tâches ménagères"
+    ],
+    [
+     15,
+     "Vous avez décidé de rester à la maison pour aider aux tâches ménagères."
+    ],
+    [
+     15,
+     "Vous avez eu le béguin pour quelqu’un du quartier."
+    ],
+    [
+     15,
+     "Votre grand-père paternel a quitté ce monde à 97 ans. (Infarctus ou autre cardiopathie ischémique)"
+    ],
+    [
+     15,
+     "Aux obsèques de votre grand-père paternel, vous avez revu des proches que vous n’aviez pas vus depuis des années."
+    ],
+    [
+     15,
+     "Le travail de vos parents a fini par se stabiliser, et la famille a vécu bien plus à l’aise."
+    ],
+    [
+     16,
+     "À une fête de quartier, vous avez chanté et dansé jusque tard dans la nuit."
+    ],
+    [
+     16,
+     "Une grande amitié est née entre vous et Abdelrahman : vous ne vous quittiez plus."
+    ],
+    [
+     16,
+     "Décision : Partir à Alger"
+    ],
+    [
+     16,
+     "Vous avez déménagé à Alger."
+    ],
+    [
+     16,
+     "Décision : Attendre un meilleur emploi"
+    ],
+    [
+     16,
+     "Vous avez décidé d’attendre encore un peu."
+    ],
+    [
+     16,
+     "Vous avez eu le béguin pour quelqu’un du quartier."
+    ],
+    [
+     17,
+     "Vous avez cherché du travail, mais ce n’était pas facile."
+    ],
+    [
+     17,
+     "Décision : Aider aux tâches ménagères"
+    ],
+    [
+     17,
+     "Vous avez décidé de rester à la maison pour aider aux tâches ménagères."
+    ],
+    [
+     17,
+     "Un jour où vous étiez perdue, une personne inconnue a longuement marché avec vous jusqu’à ce que vous retrouviez votre chemin."
+    ],
+    [
+     17,
+     "L’économie mondiale est entrée en récession. Les commandes des usines se sont taries et les emplois se sont raréfiés.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     17,
+     "Vous avez participé, sur place, à la reconstruction d’une région frappée par une catastrophe.",
+     "Un peu plus d’un adulte sur cinq dans le monde dit avoir fait du bénévolat au cours du mois écoulé (CAF World Giving Index)"
+    ],
+    [
+     18,
+     "Vous avez passé l’Aïd el-Fitr (la fête qui suit le ramadan) en famille."
+    ],
+    [
+     18,
+     "Vous avez eu le béguin pour quelqu’un du quartier."
+    ],
+    [
+     18,
+     "Tous les frères se sont réunis chez vos parents."
+    ],
+    [
+     18,
+     "Pendant des années, vous avez souvent sauté des repas, et votre corps s’est visiblement affaibli.",
+     "En 2023, environ 733 millions de personnes dans le monde ont souffert de la faim (FAO, SOFI 2024)"
+    ],
+    [
+     18,
+     "Le jour anniversaire de la mort de votre grand-mère paternelle, la famille s’est réunie pour partager des souvenirs.",
+     "La plupart des personnes qui perdent un proche continuent à mener leur vie au milieu du chagrin, ou retrouvent leurs repères en un an ou deux (Bonanno 2004)"
+    ],
+    [
+     19,
+     "Dans votre communauté de foi, vous avez rencontré des personnes qui partagent votre sensibilité."
+    ],
+    [
+     19,
+     "Une grande amitié est née entre vous et Mahmoud : vous ne vous quittiez plus."
+    ],
+    [
+     19,
+     "Décision : Refinancer vos emprunts"
+    ],
+    [
+     19,
+     "Vous avez refinancé vos emprunts. Les intérêts ont alourdi votre dette de 424 €."
+    ],
+    [
+     20,
+     "Dans les moments difficiles, votre passion (rencontres religieuses) a été votre point d’appui."
+    ],
+    [
+     20,
+     "Vous avez revu votre amie Yasmin après bien longtemps, et vous avez parlé jusque tard dans la nuit."
+    ],
+    [
+     20,
+     "Vous avez perdu le sommeil à cause d’une dette de 6 010 € (aux prix français)."
+    ],
+    [
+     20,
+     "Votre famille et vos proches ont pris à leur charge 2 165 € d’une dette que vous n’arriviez plus à rembourser depuis des années, selon leurs moyens. Il vous reste 5 188 € à rembourser."
+    ],
+    [
+     21,
+     "Votre loyer a augmenté, et les fins de mois sont devenues difficiles. (−423 €)"
+    ],
+    [
+     21,
+     "Vous avez eu la grippe pendant une semaine."
+    ],
+    [
+     22,
+     "À chaque réunion, c’était toujours vous qui vous occupiez des nouveaux venus."
+    ],
+    [
+     22,
+     "Décision : Refinancer vos emprunts"
+    ],
+    [
+     22,
+     "Vous avez refinancé vos emprunts. Les intérêts ont alourdi votre dette de 695 €."
+    ],
+    [
+     22,
+     "On vous a volé votre téléphone dans un bus bondé."
+    ],
+    [
+     22,
+     "Vous n’aviez pas d’argent, mais vous avez prêté main-forte aux funérailles d’un voisin."
+    ],
+    [
+     22,
+     "Cette année, votre patrimoine a baissé de 2 039 €. Coût de la vie (sans revenu) −2 432 € · Règlement de dettes −695 € · Intérêts de la dette −78 € · Dépenses réduites (plus personne ne voulait vous prêter) +1 166 €"
+    ],
+    [
+     23,
+     "Vous avez remis une enveloppe de condoléances pour les funérailles d’un membre de la famille. (−40 €)"
+    ],
+    [
+     23,
+     "Au mariage d’amis, vous avez aidé à préparer le repas."
+    ],
+    [
+     23,
+     "Votre père a quitté ce monde à 68 ans. (Cancer du poumon)"
+    ],
+    [
+     23,
+     "Selon la coutume islamique, le corps a été lavé, enveloppé d’un linceul blanc et inhumé le jour même. Vous avez partagé les frais d’obsèques avec vos frères et sœurs. (−259 €)"
+    ],
+    [
+     24,
+     "Par un après-midi de pluie, vous avez regardé par la fenêtre en laissant passer les heures, sans rien faire."
+    ],
+    [
+     24,
+     "La contribution de votre mère aux frais du mariage s’est élevée à 1 244 €."
+    ],
+    [
+     24,
+     "Décision : Se marier"
+    ],
+    [
+     24,
+     "Vous vous êtes mariée !"
+    ],
+    [
+     24,
+     "Décision : Essayer l’école du soir"
+    ],
+    [
+     24,
+     "Vous avez commencé à suivre des cours du soir pour préparer l’examen d’équivalence de fin de collège."
+    ],
+    [
+     24,
+     "Vous avez échoué à l’examen d’équivalence de fin de collège. Vous pourrez le repasser l’an prochain."
+    ],
+    [
+     24,
+     "Amr a apporté au foyer 1 069 € d’économies."
+    ],
+    [
+     24,
+     "Les revenus d’Amr, votre partenaire, font vivre le foyer."
+    ],
+    [
+     25,
+     "Lors de l’hospitalisation de votre mère, vous avez participé aux frais. (−171 €)"
+    ],
+    [
+     25,
+     "Vous avez passé l’Aïd el-Fitr (la fête qui suit le ramadan) en famille."
+    ],
+    [
+     25,
+     "Décision : Chercher du travail"
+    ],
+    [
+     25,
+     "Vous avez commencé à chercher du travail pour rembourser la dette."
+    ],
+    [
+     25,
+     "Vous avez retrouvé de vieux amis et vous avez parlé toute la nuit."
+    ],
+    [
+     25,
+     "Décision : Se consacrer au foyer et aux enfants"
+    ],
+    [
+     25,
+     "Vous avez pris en charge les tâches ménagères et la garde des enfants."
+    ],
+    [
+     25,
+     "N’ayant plus personne à qui emprunter, vous avez tenu en mangeant moins et en réduisant toutes vos dépenses."
+    ],
+    [
+     26,
+     "Au mariage d’amis, vous avez dansé et fait la fête jusque tard dans la nuit."
+    ],
+    [
+     26,
+     "Vous avez perdu le sommeil à cause d’une dette de 5 290 € (aux prix français)."
+    ],
+    [
+     26,
+     "Pour la première fois depuis longtemps, Amr et vous avez marché tranquillement, rien que vous deux. Même sans beaucoup de mots, c’était bien."
+    ],
+    [
+     26,
+     "Votre famille et vos proches ont pris à leur charge 726 € d’une dette que vous n’arriviez plus à rembourser depuis des années, selon leurs moyens. Il vous reste 2 354 € à rembourser."
+    ],
+    [
+     27,
+     "Votre loyer a augmenté, et les fins de mois sont devenues difficiles. (−423 €)"
+    ],
+    [
+     27,
+     "Décision : Accueillir un chat"
+    ],
+    [
+     27,
+     "Un chat, Luna, a rejoint la famille."
+    ],
+    [
+     27,
+     "Les premiers jours, Luna se cachait sous le canapé, puis un soir a grimpé sans bruit sur vos genoux."
+    ],
+    [
+     28,
+     "Vous avez pris les devants pour parler à quelqu’un qui semblait aller mal. Plus tard, cette personne vous a dit merci."
+    ],
+    [
+     28,
+     "Une histoire de bruit a tourné à la dispute avec les voisins, puis la paix est revenue autour d’un plat partagé."
+    ],
+    [
+     28,
+     "Vous avez remis une enveloppe de condoléances pour les funérailles d’un membre de la famille. (−40 €)"
+    ],
+    [
+     29,
+     "Vous n’aviez pas d’argent, mais vous avez prêté main-forte aux funérailles d’un voisin."
+    ],
+    [
+     29,
+     "Une crise de change a fait s’effondrer la monnaie. Les produits importés sont devenus bien plus chers.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     29,
+     "Votre fils, Khaled Najjar, a vu le jour."
+    ],
+    [
+     29,
+     "Au mariage d’amis, vous avez aidé à préparer le repas."
+    ],
+    [
+     30,
+     "30 ans. Parmi les filles qui ont vu le jour en Algérie la même année que vous, environ 96 % sont encore en vie."
+    ],
+    [
+     30,
+     "Khaled vous a appelée « Maman » pour la première fois."
+    ],
+    [
+     30,
+     "Dans le miroir, vous avez découvert votre premier cheveu blanc."
+    ],
+    [
+     30,
+     "Avec de vieux amis enfin réunis, vous avez parlé du bon vieux temps jusque tard dans la nuit."
+    ],
+    [
+     30,
+     "Dès que vous ouvriez un livre ou un journal, Luna venait s’asseoir pile dessus. Demander gentiment n’a jamais marché."
+    ],
+    [
+     31,
+     "Avec vos frères et sœurs, vous avez partagé le coût de l’opération de votre mère. (−171 €)"
+    ],
+    [
+     31,
+     "Khaled vous a murmuré « Je t’aime » avant de s’endormir."
+    ],
+    [
+     31,
+     "Vous avez parlé au téléphone avec vos frères tard dans la nuit, et les souvenirs d’enfance vous ont fait rire longtemps."
+    ],
+    [
+     31,
+     "Votre partenaire, Amr, a réussi dans son travail, et ses revenus ont augmenté."
+    ],
+    [
+     31,
+     "Il y a encore eu des violences à la maison. Vous n’avez pu en parler à personne.",
+     "Aide : en France, le 3919 (24 h/24, gratuit) · ailleurs, findahelpline.com"
+    ],
+    [
+     32,
+     "Vous avez passé l’Aïd al-Adha (la fête du Sacrifice) en famille."
+    ],
+    [
+     32,
+     "Au mariage d’amis, vous avez dansé et fait la fête jusque tard dans la nuit."
+    ],
+    [
+     32,
+     "Un pickpocket vous a volé votre portefeuille dans une rue bondée."
+    ],
+    [
+     33,
+     "Vous avez passé plusieurs jours au lit avec un mauvais rhume."
+    ],
+    [
+     33,
+     "Votre fils, Hussein Najjar, a vu le jour."
+    ],
+    [
+     33,
+     "Décision : Proposer de se lancer ensemble"
+    ],
+    [
+     33,
+     "La boutique de votre partenaire a ouvert ses portes. (−7 773 €)"
+    ],
+    [
+     33,
+     "N’ayant plus personne à qui emprunter, vous avez tenu en mangeant moins et en réduisant toutes vos dépenses."
+    ],
+    [
+     33,
+     "Votre enfant Hussein a quitté ce monde avant son premier anniversaire. (Prématurité ou complications à la naissance)",
+     "Mortalité des moins de 5 ans en Algérie : 22 décès pour 1 000 naissances (UN IGME)"
+    ],
+    [
+     33,
+     "Cette année, votre patrimoine a baissé de 4 308 €. Commerce de votre partenaire −7 773 € · Frais liés aux enfants −385 € · Intérêts de la dette −174 € · Dépenses réduites (plus personne ne voulait vous prêter) +3 091 €"
+    ],
+    [
+     34,
+     "10 ans de mariage. Le jour est passé sans rien de particulier."
+    ],
+    [
+     34,
+     "Décision : Refinancer vos emprunts"
+    ],
+    [
+     34,
+     "Vous avez refinancé vos emprunts. Les intérêts ont alourdi votre dette de 433 €."
+    ],
+    [
+     34,
+     "Votre loyer a augmenté, et les fins de mois sont devenues difficiles. (−423 €)"
+    ],
+    [
+     34,
+     "Vous avez perdu le sommeil à cause d’une dette de 5 191 € (aux prix français)."
+    ],
+    [
+     34,
+     "C’était une année difficile. Chaque nuit, Luna montait sur votre poitrine pour ronronner, et vous vous endormiez au son de ce ronronnement."
+    ],
+    [
+     34,
+     "Le jour de l’anniversaire de Hussein, la famille se réunit et parle de Hussein. Cette année, pour la première fois, vous avez pu sourire en en parlant."
+    ],
+    [
+     35,
+     "Khaled a commencé l’école."
+    ],
+    [
+     35,
+     "Une crise financière a éclaté. Les banques ont vacillé et les entreprises ont réduit leurs effectifs.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     35,
+     "Votre mère a fait une chute, et pendant un temps, vous êtes passée régulièrement l’aider. (−171 €)"
+    ],
+    [
+     35,
+     "Votre fils, Tarek Najjar, a vu le jour."
+    ],
+    [
+     35,
+     "La boutique de votre partenaire a fermé en moins de deux ans."
+    ],
+    [
+     35,
+     "Votre partenaire, Amr, a retrouvé un emploi."
+    ],
+    [
+     36,
+     "Vous avez collé au mur le dessin de famille que Khaled vous a fait. Tout le monde y avait un grand sourire."
+    ],
+    [
+     36,
+     "Décision : Bien sûr, essaie tout ce que tu as envie de faire"
+    ],
+    [
+     36,
+     "Khaled a passé toute la soirée à parler avec enthousiasme de son futur métier."
+    ],
+    [
+     36,
+     "Tarek vous a appelée « Maman » pour la première fois, à son tour. À côté, Khaled a compris avant tout le monde et a applaudi."
+    ],
+    [
+     36,
+     "Pour la première fois depuis longtemps, vous êtes partie au loin et vous avez longuement contemplé un paysage à perte de vue."
+    ],
+    [
+     36,
+     "Votre famille et vos proches ont pris à leur charge 678 € d’une dette que vous n’arriviez plus à rembourser depuis des années, selon leurs moyens. Il vous reste 2 450 € à rembourser."
+    ],
+    [
+     36,
+     "Il y a encore eu des violences à la maison. Vous n’avez pu en parler à personne.",
+     "Aide : en France, le 3919 (24 h/24, gratuit) · ailleurs, findahelpline.com"
+    ],
+    [
+     37,
+     "Autour d’une table avec vos frères, vous avez discuté de la façon de prendre soin de vos parents vieillissants."
+    ],
+    [
+     37,
+     "Décision : L’accueillir chez vous"
+    ],
+    [
+     37,
+     "Vous avez accueilli votre mère sous votre toit."
+    ],
+    [
+     37,
+     "Tarek vous a sauté au cou et a dit : « Je t’aime plus que tout au monde. »"
+    ],
+    [
+     37,
+     "Luna ne pouvait plus sauter bien haut. Vous avez posé une petite marche près de la fenêtre, et la place au soleil est redevenue accessible."
+    ],
+    [
+     38,
+     "Au sein de votre communauté de foi, on vous a confié le soin des voisins dans le besoin."
+    ],
+    [
+     38,
+     "Vous avez remis une enveloppe de condoléances pour les funérailles d’un membre de la famille. (−40 €)"
+    ],
+    [
+     38,
+     "Vous avez fait les courses à la place d’un voisin malade."
+    ],
+    [
+     39,
+     "Khaled a déboulé à la maison en brandissant une récompense reçue à l’école."
+    ],
+    [
+     39,
+     "Vous avez assisté à la journée sportive de l’école de Khaled. Après une chute, Khaled a repris la course jusqu’à la ligne d’arrivée, et vous avez crié vos encouragements à en perdre la voix."
+    ],
+    [
+     39,
+     "Vous avez collé au mur le dessin de famille que Tarek vous a fait. Tout le monde y avait un grand sourire."
+    ],
+    [
+     40,
+     "À chaque réunion, c’était toujours vous qui vous occupiez des nouveaux venus."
+    ],
+    [
+     40,
+     "Votre loyer a augmenté, et les fins de mois sont devenues difficiles. (−423 €)"
+    ],
+    [
+     40,
+     "Vous avez revu vos amis d’enfance après des années, et vous avez longtemps ri en évoquant le passé."
+    ],
+    [
+     40,
+     "Khaled a grandi en courant après la queue de Luna. L’air agacé, Luna ne quittait pourtant jamais l’enfant."
+    ],
+    [
+     41,
+     "Un frère a eu un bébé. Pour la première fois, vous avez tenu votre neveu ou votre nièce dans vos bras."
+    ],
+    [
+     41,
+     "Tarek a commencé l’école."
+    ],
+    [
+     41,
+     "Les frais de médicaments et d’hôpital de votre mère, qui vit avec vous, ont augmenté. (−171 €)"
+    ],
+    [
+     41,
+     "Il y a encore eu des violences à la maison. Vous n’avez pu en parler à personne.",
+     "Aide : en France, le 3919 (24 h/24, gratuit) · ailleurs, findahelpline.com"
+    ],
+    [
+     42,
+     "Dans les moments difficiles, votre passion (rencontres religieuses) a été votre point d’appui."
+    ],
+    [
+     42,
+     "Il y a encore eu des violences à la maison. Vous n’avez pu en parler à personne.",
+     "Aide : en France, le 3919 (24 h/24, gratuit) · ailleurs, findahelpline.com"
+    ],
+    [
+     42,
+     "Luna a franchi le pont de l’arc-en-ciel à 15 ans."
+    ],
+    [
+     43,
+     "Une année où tout allait mal, votre amie Noha a débarqué sans un mot et vous a offert un repas."
+    ],
+    [
+     43,
+     "Votre amie Yasmin n’a pas oublié votre anniversaire et vous a envoyé un petit cadeau."
+    ],
+    [
+     43,
+     "Vous avez perdu le sommeil à cause d’une dette de 1 818 € (aux prix français)."
+    ],
+    [
+     43,
+     "Tarek avait particulièrement du mal à lire. Chaque soir, vous vous asseyiez à côté de votre enfant et vous lisiez ensemble, ligne par ligne.",
+     "Environ 7 % des enfants d’école primaire sont dyslexiques, les garçons environ deux fois plus souvent que les filles (Yang et al. 2022)"
+    ],
+    [
+     44,
+     "20 ans de mariage. Le jour est passé sans rien de particulier."
+    ],
+    [
+     44,
+     "Vous avez passé l’Aïd el-Fitr (la fête qui suit le ramadan) en famille."
+    ],
+    [
+     44,
+     "Vous avez remis une enveloppe de condoléances pour les funérailles d’un membre de la famille. (−40 €)"
+    ],
+    [
+     44,
+     "Votre mère a quitté ce monde à 83 ans. (Accident vasculaire cérébral)"
+    ],
+    [
+     44,
+     "Vous auriez voulu lui dire merci, à l’époque."
+    ],
+    [
+     44,
+     "Désormais, vos deux parents ne sont plus là. Vous avez partagé les frais d’obsèques avec vos frères et sœurs. (−259 €)"
+    ],
+    [
+     44,
+     "La maison où vivaient vos parents est revenue à l’un de vos frères et sœurs, et il ne restait presque rien d’autre."
+    ],
+    [
+     44,
+     "Il y a encore eu des violences à la maison. Vous n’avez pu en parler à personne.",
+     "Aide : en France, le 3919 (24 h/24, gratuit) · ailleurs, findahelpline.com"
+    ],
+    [
+     44,
+     "Les petits caractères devenaient flous de près. Faute de lunettes de lecture adaptées, vous lisiez les petits caractères en plein soleil, à bout de bras.",
+     "Environ 1,8 milliard de personnes sont presbytes, et 826 millions d'entre elles voient mal de près faute de lunettes de lecture adaptées (OMS, Rapport mondial sur la vision 2019)"
+    ],
+    [
+     45,
+     "À cause d’un petit malentendu, vous avez coupé les ponts un moment avec votre amie Noha, puis vous avez fait le premier pas pour vous excuser, et l’amitié est revenue."
+    ],
+    [
+     45,
+     "Une grosse dispute a éclaté avec un frère ; la réconciliation est venue quelques mois plus tard."
+    ],
+    [
+     45,
+     "La personne qui tient la boutique où vous allez toujours se souvenait de votre nom et vous a demandé de vos nouvelles la première."
+    ],
+    [
+     46,
+     "Décision : Essayer de tenir le coup par vous-même"
+    ],
+    [
+     46,
+     "Vous avez décidé de n’en parler à personne et de tenir le coup par vous-même."
+    ],
+    [
+     46,
+     "Vous avez partagé de la nourriture avec des voisins dans le besoin."
+    ],
+    [
+     46,
+     "Le jour anniversaire de la mort de votre mère, la famille s’est réunie autour de ses plats préférés. C’était un jour de nostalgie plus que de tristesse."
+    ],
+    [
+     46,
+     "Il y avait de bons jours, mais votre cœur restait lourd."
+    ],
+    [
+     47,
+     "Le vent soulevait le sable, et le ciel est resté jaune et voilé pendant des jours.",
+     "En Algérie, l’air extérieur que respirent les citadins contient en moyenne 23 µg/m³ de particules fines (PM2,5) par an, environ 5 fois la valeur guide de l’OMS (5 µg/m³) (2019 ; OMS)"
+    ],
+    [
+     47,
+     "Décision : L’emmener à l’hôpital"
+    ],
+    [
+     47,
+     "Vous avez accompagné cette personne jusqu’à l’hôpital. Quelques jours plus tard, sa famille est venue vous remercier."
+    ],
+    [
+     47,
+     "Vous avez traversé la ménopause, avec moins de désagréments que vous ne le pensiez.",
+     "La plupart des femmes atteignent la ménopause entre 45 et 55 ans (OMS 2024)"
+    ],
+    [
+     47,
+     "Vous avez aussi assisté à la journée sportive de l’école de Tarek. Khaled, qui était là aussi, encourageait encore plus fort que vous."
+    ],
+    [
+     47,
+     "Il y a encore eu des violences à la maison. Vous n’avez pu en parler à personne.",
+     "Aide : en France, le 3919 (24 h/24, gratuit) · ailleurs, findahelpline.com"
+    ],
+    [
+     47,
+     "Un jour, vous vous êtes rendu compte que cette période pesante était passée.",
+     "Même dans les pays à revenu élevé, seule une personne sur trois environ parmi celles qui souffrent de dépression reçoit un traitement (OMS 2026)"
+    ],
+    [
+     48,
+     "L’économie mondiale est entrée en récession. Les commandes des usines se sont taries et les emplois se sont raréfiés.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     48,
+     "Vous avez parlé d’avenir avec Khaled jusque tard dans la nuit. Sans que vous l’ayez vu venir, l’enfant avait bien grandi."
+    ],
+    [
+     48,
+     "Khaled a terminé l’école et commencé à travailler."
+    ],
+    [
+     49,
+     "Vous avez passé plusieurs jours au lit avec un mauvais rhume."
+    ],
+    [
+     49,
+     "Décision : S’asseoir et écouter"
+    ],
+    [
+     49,
+     "Vous avez écouté Tarek jusque tard dans la nuit. Depuis un moment, quelque chose lui pesait en silence. Peu à peu, les choses se sont arrangées."
+    ],
+    [
+     49,
+     "Pour votre anniversaire, Khaled vous a offert un bon dîner au restaurant."
+    ],
+    [
+     49,
+     "Khaled travaille comme vendeur de rue ou petit commerçant."
+    ],
+    [
+     50,
+     "Vous avez eu cinquante ans."
+    ],
+    [
+     50,
+     "Avec sa première paie, Khaled vous a acheté un cadeau. Vous l’avez gardé précieusement pendant des années."
+    ],
+    [
+     50,
+     "Tarek vous a offert un cadeau d’anniversaire, acheté avec son argent de poche mis de côté pendant longtemps."
+    ],
+    [
+     50,
+     "Khaled a commencé à verser chaque mois une partie de son salaire au foyer. Vous en ressentiez de la gratitude, et un peu de gêne aussi."
+    ],
+    [
+     50,
+     "Votre partenaire, Amr, a perdu son emploi. Le foyer n’a plus aucun revenu."
+    ],
+    [
+     50,
+     "Il y a encore eu des violences à la maison. Vous n’avez pu en parler à personne.",
+     "Aide : en France, le 3919 (24 h/24, gratuit) · ailleurs, findahelpline.com"
+    ],
+    [
+     51,
+     "Le commissariat a téléphoné : Tarek s’était fait prendre à voler dans un magasin avec des amis. Vous avez emmené Tarek chez le commerçant pour lui présenter vos excuses ensemble.",
+     "Parmi les hommes britanniques nés en 1953, 20 % avaient déjà été condamnés à 20 ans, mais seulement 3 % l’ont été pour la première fois entre 30 et 40 ans (Home Office)"
+    ],
+    [
+     51,
+     "On dirait que Tarek a le béguin pour quelqu’un. Vous avez souri, en faisant mine de ne rien remarquer."
+    ],
+    [
+     51,
+     "Vous avez passé l’Aïd al-Adha (la fête du Sacrifice) en famille."
+    ],
+    [
+     51,
+     "L’argent n’a pas suffi pour l’année : vous avez maintenant une dette de 1 276 €. Coût de la vie (sans revenu) −1 399 € · Intérêts de la dette −61 € · Dépenses scolaires des enfants −58 €"
+    ],
+    [
+     52,
+     "Un message est arrivé de quelqu'un perdu de vue depuis longtemps, juste pour prendre de vos nouvelles. Vous l'avez relu encore et encore."
+    ],
+    [
+     52,
+     "N’ayant plus personne à qui emprunter, vous avez tenu en mangeant moins et en réduisant toutes vos dépenses."
+    ],
+    [
+     52,
+     "Votre partenaire, Amr, a retrouvé un emploi."
+    ],
+    [
+     53,
+     "Vous avez perdu le sommeil à cause d’une dette de 1 555 € (aux prix français)."
+    ],
+    [
+     53,
+     "Vous avez parlé d’avenir avec Tarek jusque tard dans la nuit. Sans que vous l’ayez vu venir, l’enfant avait bien grandi."
+    ],
+    [
+     53,
+     "Une histoire de bruit a tourné à la dispute avec les voisins, puis la paix est revenue autour d’un plat partagé."
+    ],
+    [
+     54,
+     "30 ans de mariage. Le jour est passé sans rien de particulier."
+    ],
+    [
+     54,
+     "Vous avez gardé les enfants des voisins pendant quelques jours."
+    ],
+    [
+     54,
+     "Tarek a terminé l’école et commencé à travailler."
+    ],
+    [
+     55,
+     "Tarek travaille comme militaire de carrière."
+    ],
+    [
+     56,
+     "Une petite dispute avec votre frère aîné s’est envenimée, et vous avez cessé de vous parler."
+    ],
+    [
+     56,
+     "Tarek a commencé à verser chaque mois une partie de son salaire au foyer. Vous en ressentiez de la gratitude, et un peu de gêne aussi."
+    ],
+    [
+     57,
+     "Vous avez parlé au téléphone avec vos frères tard dans la nuit, et les souvenirs d’enfance vous ont fait rire longtemps."
+    ],
+    [
+     57,
+     "Vous avez retrouvé de vieux amis et vous avez parlé toute la nuit."
+    ],
+    [
+     57,
+     "Votre partenaire, Amr, n’a pas de pension de retraite et a décidé de continuer à travailler.",
+     "Dans le monde, environ 77 % des personnes ayant dépassé l’âge de la retraite perçoivent une pension, mais seulement 23 % environ dans les pays à faible revenu (OIT 2021)"
+    ],
+    [
+     58,
+     "Un plat que vous faisiez pour la première fois était plutôt réussi, et vous l'avez partagé avec les vôtres. On vous a demandé d'en refaire."
+    ],
+    [
+     58,
+     "Décision : Participer généreusement aux frais du mariage"
+    ],
+    [
+     58,
+     "Au mariage de Khaled, vous avez salué tant d’invités que vous en avez perdu la voix."
+    ],
+    [
+     58,
+     "Après leur mariage, Khaled et la personne qui partage sa vie ont décidé de s’installer chez vous."
+    ],
+    [
+     58,
+     "Vous avez passé l’Aïd el-Fitr (la fête qui suit le ramadan) en famille."
+    ],
+    [
+     58,
+     "Votre premier petit-enfant est né ! Votre fils Khaled a eu un bébé (fille)."
+    ],
+    [
+     58,
+     "Cette année, votre patrimoine a baissé de 4 574 €. Aide au mariage des enfants −7 773 € · Intérêts de la dette −159 € · Dépenses réduites (plus personne ne voulait vous prêter) +2 156 €"
+    ],
+    [
+     59,
+     "Vous avez perdu le sommeil à cause d’une dette de 3 175 € (aux prix français)."
+    ],
+    [
+     59,
+     "Votre fils Khaled a eu un bébé (fille). Vous avez maintenant 2 petits-enfants."
+    ],
+    [
+     60,
+     "À cause d’un petit malentendu, vous avez coupé les ponts un moment avec votre amie Noha, puis vous avez fait le premier pas pour vous excuser, et l’amitié est revenue."
+    ],
+    [
+     60,
+     "L’économie mondiale est entrée en récession. Les commandes des usines se sont taries et les emplois se sont raréfiés.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     60,
+     "Vous avez passé plusieurs jours au lit avec un mauvais rhume."
+    ],
+    [
+     60,
+     "En repensant à votre vie, vous avez vu revenir un à un les visages des personnes à qui vous deviez tant."
+    ],
+    [
+     60,
+     "Vos enfants qui vivent avec vous ont commencé à participer chaque mois aux dépenses du foyer."
+    ],
+    [
+     61,
+     "Vous avez commencé à souffrir du dos."
+    ],
+    [
+     61,
+     "Vous avez raconté à votre petit-enfant des histoires du village, là où vous êtes née."
+    ],
+    [
+     62,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     63,
+     "Un frère a subi une grosse opération. Vous avez passé la nuit à son chevet, à l’hôpital."
+    ],
+    [
+     63,
+     "Vous avez partagé de la nourriture avec des voisins dans le besoin."
+    ],
+    [
+     63,
+     "Votre amie de longue date Noha a quitté ce monde."
+    ],
+    [
+     63,
+     "Votre fils Khaled a eu un bébé (fille). Vous avez maintenant 3 petits-enfants."
+    ],
+    [
+     64,
+     "Un matin tranquille, sans rien de prévu, une tasse de thé chaud vous a fait un bien particulier."
+    ],
+    [
+     64,
+     "40 ans de mariage. Le jour est passé sans rien de particulier."
+    ],
+    [
+     64,
+     "Vous avez pris les devants pour parler à quelqu’un qui semblait aller mal. Plus tard, cette personne vous a dit merci."
+    ],
+    [
+     64,
+     "Votre fils Khaled a eu un bébé (garçon). Vous avez maintenant 4 petits-enfants."
+    ],
+    [
+     65,
+     "65 ans. Parmi les filles qui ont vu le jour en Algérie la même année que vous, environ 85 % sont encore en vie."
+    ],
+    [
+     65,
+     "Vous voyez du monde dans le voisinage et vous bavardez chaque jour. Vous avez l’esprit clair et le cœur serein.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     65,
+     "Vous avez passé l’Aïd el-Fitr (la fête qui suit le ramadan) en famille."
+    ],
+    [
+     65,
+     "Chaque week-end, vous avez fait du bénévolat en servant des repas dans une soupe populaire.",
+     "Un peu plus d’un adulte sur cinq dans le monde dit avoir fait du bénévolat au cours du mois écoulé (CAF World Giving Index)"
+    ],
+    [
+     65,
+     "Votre partenaire, Amr, a cessé de travailler et a pris sa retraite."
+    ],
+    [
+     66,
+     "Votre compte en banque est bien garni. Vos économies atteignent 16 300 € (aux prix français)."
+    ],
+    [
+     66,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     67,
+     "Quelqu’un que vous ne connaissiez pas a porté vos lourds sacs jusqu’à votre porte."
+    ],
+    [
+     67,
+     "Une chanson qu’aimait votre ami(e) disparu(e), Noha, est passée, et vous l’avez écoutée jusqu’au bout."
+    ],
+    [
+     68,
+     "Vous avez fait un voyage avec la famille d’un frère. Les cousins sont vite devenus amis. (−155 €)"
+    ],
+    [
+     68,
+     "Décision : Se faire soigner à l’hôpital"
+    ],
+    [
+     68,
+     "À l’hôpital, le diagnostic a été posé : fracture. Grâce aux soins, vous avez retrouvé la santé."
+    ],
+    [
+     69,
+     "Toute la maisonnée s’est attablée autour d’un repas préparé avec soin. Tout le monde a ri ensemble pour des riens."
+    ],
+    [
+     69,
+     "Vous vous êtes retrouvés entre frères pour évoquer le souvenir de vos parents disparus."
+    ],
+    [
+     69,
+     "Quand la Bourse s’est effondrée, ceux qui avaient des liquidités étaient partagés : pour les uns, c’était le moment d’acheter ; pour les autres, les cours allaient encore baisser."
+    ],
+    [
+     70,
+     "Chez vous, il y a désormais une télévision et un réfrigérateur."
+    ],
+    [
+     70,
+     "Votre compte en banque est bien garni. Vos économies atteignent 18 900 € (aux prix français)."
+    ],
+    [
+     70,
+     "Vous passiez souvent voir une personne âgée du voisinage qui vivait seule."
+    ],
+    [
+     70,
+     "Au mariage de Tarek, vous avez salué tant d’invités que vous en avez perdu la voix."
+    ],
+    [
+     70,
+     "Tarek a quitté la maison pour fonder son propre foyer."
+    ],
+    [
+     70,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     70,
+     "La fille de Khaled a commencé l’école. Vous lui avez acheté un cartable."
+    ],
+    [
+     70,
+     "Votre famille s’est réunie pour vos 70 ans. Sur la photo de groupe, vous étiez au beau milieu."
+    ],
+    [
+     70,
+     "Cette année, votre patrimoine a baissé de 7 482 €. Aide au mariage des enfants −7 773 € · Coût de la vie (sans revenu) −1 399 € · Achat : téléviseur et réfrigérateur −981 € · Argent envoyé par vos enfants +1 866 €"
+    ],
+    [
+     71,
+     "Vous marchez et lisez chaque jour. On vous dit que vous avez meilleure mémoire que la plupart des gens de votre âge.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     71,
+     "Tarek n’a pas oublié votre anniversaire et a fait le déplacement pour vous voir."
+    ],
+    [
+     71,
+     "Vous avez passé plusieurs jours au lit avec un mauvais rhume."
+    ],
+    [
+     72,
+     "Vous avez passé l’Aïd el-Fitr (la fête qui suit le ramadan) en famille."
+    ],
+    [
+     72,
+     "Vous avez retrouvé de vieux amis perdus de vue depuis un moment, et chacun a raconté ce qu’il devenait."
+    ],
+    [
+     72,
+     "Votre fils Tarek a eu un bébé (fille). Vous avez maintenant 5 petits-enfants."
+    ],
+    [
+     73,
+     "Vous avez eu votre propre ordinateur."
+    ],
+    [
+     73,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     74,
+     "Votre enfant qui vit ailleurs vous a téléphoné sans raison particulière : « Je voulais juste entendre ta voix. »"
+    ],
+    [
+     74,
+     "Nouveau diagnostic : angine de poitrine. Cette fois encore, vous avez pris votre traitement avec régularité."
+    ],
+    [
+     74,
+     "Votre fils Tarek a eu un bébé (fille). Vous avez maintenant 6 petits-enfants."
+    ],
+    [
+     75,
+     "Votre amie de longue date Yasmin a quitté ce monde."
+    ],
+    [
+     75,
+     "Nouveau diagnostic : hypertension. Cette fois encore, vous avez pris votre traitement avec régularité."
+    ],
+    [
+     75,
+     "Une histoire de bruit a tourné à la dispute avec les voisins, puis la paix est revenue autour d’un plat partagé."
+    ],
+    [
+     75,
+     "Votre deuxième grand frère a quitté ce monde à 79 ans. (Complications du diabète)"
+    ],
+    [
+     76,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     76,
+     "L’économie mondiale est entrée en récession. Les commandes des usines se sont taries et les emplois se sont raréfiés.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     76,
+     "Avec vos vieux amis, vous avez pris l’habitude de vous retrouver une fois par mois. Prendre des nouvelles les uns des autres suffisait à vous porter tout le mois."
+    ],
+    [
+     77,
+     "Vous avez gardé pendant une journée l’enfant d’un voisin, retenu par un imprévu."
+    ],
+    [
+     77,
+     "Décision : Donner une partie, selon vos moyens"
+    ],
+    [
+     77,
+     "Vous avez donné ce que vous pouviez."
+    ],
+    [
+     77,
+     "Vous avez suivi des cours à la maison de quartier et appris de nouvelles choses.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     77,
+     "La fille de Khaled a obtenu une place à l’université. Vous lui avez glissé un peu d’argent dans la main pour fêter ça."
+    ],
+    [
+     77,
+     "Le jour anniversaire de la mort de votre deuxième grand frère, la famille s’est réunie pour parler de votre deuxième grand frère. Les souvenirs d’enfance ont fait rire tout le monde."
+    ],
+    [
+     78,
+     "Votre amie de longue date Reem vous a téléphoné à l’improviste, et vous avez bavardé pendant une heure."
+    ],
+    [
+     78,
+     "Votre vieux réfrigérateur est tombé en panne, et vous en avez acheté un nouveau. (−233 €)"
+    ],
+    [
+     78,
+     "La fille de Tarek a commencé l’école. Vous lui avez acheté un cartable."
+    ],
+    [
+     78,
+     "Le jour anniversaire de la mort de votre amie de longue date Yasmin, la bande d’autrefois s’est réunie et a parlé de Yasmin toute la nuit."
+    ],
+    [
+     79,
+     "Vous avez passé l’Aïd el-Fitr (la fête qui suit le ramadan) en famille."
+    ],
+    [
+     79,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     80,
+     "80 ans. Parmi les filles qui ont vu le jour en Algérie la même année que vous, environ 56 % sont encore en vie."
+    ],
+    [
+     80,
+     "Quelqu’un que vous aviez aidé il y a quelques années s’en souvenait encore, et vous a fait parvenir un mot de remerciement."
+    ],
+    [
+     80,
+     "Décision : Partir en pèlerinage"
+    ],
+    [
+     80,
+     "Vous avez fait le pèlerinage à La Mecque. Désormais, on vous appelle « Hajja »."
+    ],
+    [
+     80,
+     "Tarek, qui vit désormais de son côté, a appelé pour prendre de vos nouvelles."
+    ],
+    [
+     80,
+     "Votre famille s’est réunie pour vos 80 ans. Sur la photo de groupe, vous étiez au beau milieu."
+    ],
+    [
+     80,
+     "Cette année, votre patrimoine a baissé de 10 800 €. Pèlerinage −11 400 € · Coût de la vie (sans revenu) −1 399 € · Médicaments d’une maladie chronique −437 € · Argent envoyé par vos enfants +1 866 €"
+    ],
+    [
+     81,
+     "Une grosse dispute a éclaté avec votre frère aîné ; la réconciliation est venue quelques mois plus tard."
+    ],
+    [
+     81,
+     "Votre ami de longue date Anas a quitté ce monde."
+    ],
+    [
+     81,
+     "La fille de Khaled a touché son premier salaire et vous a offert le dîner."
+    ],
+    [
+     82,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     82,
+     "La fille de Khaled a obtenu une place à l’université. Vous lui avez glissé un peu d’argent dans la main pour fêter ça."
+    ],
+    [
+     83,
+     "Votre mémoire n’est plus ce qu’elle était."
+    ],
+    [
+     83,
+     "Un jour que vous étiez tombée dans la rue, un élève qui passait par là vous a tendu la main pour vous relever."
+    ],
+    [
+     83,
+     "Vous voyez du monde dans le voisinage et vous bavardez chaque jour. Vous avez l’esprit clair et le cœur serein.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     83,
+     "Votre frère aîné a quitté ce monde à 90 ans. (Complications du diabète)"
+    ],
+    [
+     83,
+     "Tarek a acheté un logement. À la pendaison de crémaillère, vous en avez longuement fait le tour."
+    ],
+    [
+     84,
+     "60 ans de mariage. Le jour est passé sans rien de particulier."
+    ],
+    [
+     84,
+     "Vous avez passé plusieurs jours au lit avec un mauvais rhume."
+    ],
+    [
+     84,
+     "Vous avez partagé de la nourriture avec des voisins dans le besoin."
+    ],
+    [
+     85,
+     "Votre amie de longue date Reem a quitté ce monde."
+    ],
+    [
+     85,
+     "L’enfant des voisins vous fait toujours un grand signe de la main quand vous vous croisez dans la rue."
+    ],
+    [
+     85,
+     "Vous avez assisté au mariage de la fille de Khaled. Vous n’auriez jamais cru voir un jour le mariage d’un de vos petits-enfants."
+    ],
+    [
+     86,
+     "Vous avez passé l’Aïd el-Fitr (la fête qui suit le ramadan) en famille."
+    ],
+    [
+     86,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     86,
+     "Votre premier arrière-petit-enfant est né ! Quatre générations étaient réunies."
+    ],
+    [
+     86,
+     "La fille de Khaled a touché son premier salaire et vous a offert le dîner."
+    ],
+    [
+     87,
+     "La fille de votre fils Khaled a eu un bébé. Vous avez maintenant 2 arrière-petits-enfants."
+    ],
+    [
+     89,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     89,
+     "Tarek n’a pas oublié votre anniversaire et a fait le déplacement pour vous voir."
+    ],
+    [
+     89,
+     "Vous avez suivi des cours à la maison de quartier et appris de nouvelles choses.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     89,
+     "Khaled a cessé de travailler et pris sa retraite. Vous aviez du mal à croire que votre enfant ait atteint l’âge de la retraite."
+    ],
+    [
+     89,
+     "Chaque matin, vous faites le même chemin et vous saluez la même personne à la boutique du coin. Ces journées où il ne se passe rien de spécial vous remplissent de gratitude."
+    ],
+    [
+     89,
+     "Marcher devenait plus difficile, et vous avez commencé à utiliser une canne. Vous avez fait poser des barres d'appui dans la salle de bain et dans l'escalier. (−294 €)",
+     "Aux États-Unis, 16,4 % des 65 ans et plus utilisent une canne et 11,6 % un déambulateur (Gell et al. 2015, NHATS)"
+    ],
+    [
+     90,
+     "90 ans. Parmi les filles qui ont vu le jour en Algérie la même année que vous, environ 20 % sont encore en vie."
+    ],
+    [
+     90,
+     "Votre amie de longue date Mona a quitté ce monde."
+    ],
+    [
+     90,
+     "2 nouveaux arrière-petits-enfants sont nés. Vous avez maintenant 4 arrière-petits-enfants."
+    ],
+    [
+     90,
+     "Vous avez fait un AVC, mais l’hôpital a pu vous prendre en charge à temps. En rééducation, vous avez réappris à marcher et à parler. (−1 371 €)",
+     "Environ une personne de plus de 25 ans sur quatre fait un AVC au cours de sa vie (GBD 2016, NEJM 2018)"
+    ],
+    [
+     91,
+     "Vous avez partagé de la nourriture avec des voisins dans le besoin."
+    ],
+    [
+     91,
+     "Votre partenaire, Amr, a quitté ce monde à 96 ans. (Accident vasculaire cérébral)"
+    ],
+    [
+     91,
+     "Vous avez organisé les obsèques de votre partenaire. (−622 €)"
+    ],
+    [
+     91,
+     "Les voix devenaient difficiles à distinguer, et vous faisiez souvent répéter. Vous n'aviez pas encore d'appareils auditifs et suiviez les gens en lisant sur leurs lèvres.",
+     "Une perte auditive modérée ou plus touche 12,7 % des personnes à 60 ans et plus de 58 % à 90 ans. Parmi celles qu'un appareil auditif aiderait, environ 17 % seulement en portent un (OMS, Rapport mondial sur l'audition 2021)"
+    ],
+    [
+     92,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     92,
+     "Vous avez assisté au mariage du fils de Khaled. Vous n’auriez jamais cru voir un jour le mariage d’un de vos petits-enfants."
+    ],
+    [
+     93,
+     "Vous avez passé l’Aïd al-Adha (la fête du Sacrifice) en famille."
+    ],
+    [
+     93,
+     "Vous avez eu la grippe pendant une semaine."
+    ],
+    [
+     93,
+     "Le fils de votre fils Khaled a eu un bébé. Vous avez maintenant 5 arrière-petits-enfants."
+    ],
+    [
+     94,
+     "Votre mémoire n’est plus ce qu’elle était."
+    ],
+    [
+     94,
+     "À 94 ans, vous avez perdu la vie (complications d’une fracture)."
+    ]
+   ]
+  }
+ ],
+ "usage": {
+  "month": "2026-11",
+  "unit": "life units",
+  "used": 345,
+  "quota": 2000,
+  "this_call": 1
+ }
+}

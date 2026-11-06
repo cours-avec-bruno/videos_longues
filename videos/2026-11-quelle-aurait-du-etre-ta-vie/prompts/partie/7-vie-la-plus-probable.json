@@ -1,0 +1,2798 @@
+{
+ "meta": {
+  "api": "1in8b-engine",
+  "version": "v1",
+  "status": "beta",
+  "kind": "live",
+  "engine": "0.9.52",
+  "simulated": "simulated lives that follow real statistics: not real people, records, measurements or forecasts",
+  "docs": "https://1in8b.life/en/api/",
+  "terms": "https://1in8b.life/en/api/#terms",
+  "credit": "1in8b Engine (1in8b.life)",
+  "tier": "free"
+ },
+ "seed": 20261106,
+ "conditions": {
+  "country": "IND",
+  "sex": "male",
+  "place": "village",
+  "fifth": 3,
+  "faith": "hindu",
+  "caste": "obc"
+ },
+ "regle": "à chaque décision, l'option la plus fréquente (estimée)",
+ "parts_depuis": "videos/2026-11-quelle-aurait-du-etre-ta-vie/prompts/partie/6-parts-decisions.json",
+ "pas": [
+  {
+   "age": 2,
+   "year": 2028,
+   "events": [
+    [
+     0,
+     "Vous avez reçu vos vaccins de base (DTC et rougeole).",
+     "En 2023, 84 % des nourrissons dans le monde ont reçu les trois doses du vaccin DTC (OMS et UNICEF)"
+    ],
+    [
+     1,
+     "1 an. Parmi les garçons qui ont vu le jour en Inde la même année que vous, environ 97 % sont encore en vie."
+    ],
+    [
+     1,
+     "Vous avez dit votre premier mot : un mot qui voulait dire « Maman »."
+    ],
+    [
+     1,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     2,
+     "En jouant dans la boue, vous avez complètement sali vos vêtements."
+    ]
+   ],
+   "decision": {
+    "id": "temper",
+    "question": "Deux ans, un visiteur inconnu",
+    "about": "Manoj marche maintenant plutôt bien. Quand un visiteur inconnu arrive à la maison, que fait l’enfant en premier ? Votre choix fait pencher le tempérament de l’enfant de ce côté ; ces moments s’additionnent, et il se dessine vers cinq ans.",
+    "fact": "Le tempérament naît à la fois de ce que l’on reçoit à la naissance et de ce que l’on vit en grandissant. D’après l’ensemble des études sur les jumeaux, environ 40 % des différences de personnalité s’expliquent par les gènes (Vukasović & Bratko 2015)",
+    "choices": [
+     {
+      "key": "cur",
+      "label": "Examiner longuement le sac et les chaussures du visiteur",
+      "note": null
+     },
+     {
+      "key": "act",
+      "label": "Courir dans tous les sens devant le visiteur",
+      "note": null
+     },
+     {
+      "key": "warm",
+      "label": "S’approcher du visiteur et lui tendre ce qu’on a dans la main",
+      "note": null
+     },
+     {
+      "key": "grit",
+      "label": "Vouloir ouvrir tout seul le paquet du visiteur et s’y tenir jusqu’au bout",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "cur": 0.246,
+    "act": 0.303,
+    "warm": 0.221,
+    "grit": 0.231
+   },
+   "methode": "même menu",
+   "base": 195,
+   "choisi": "act"
+  },
+  {
+   "age": 5,
+   "year": 2031,
+   "events": [
+    [
+     2,
+     "Décision : Courir dans tous les sens devant le visiteur"
+    ],
+    [
+     2,
+     "Vous avez couru partout devant le visiteur, puis vous vous êtes endormi sur ses genoux."
+    ],
+    [
+     3,
+     "Votre grand-mère paternelle vous racontait des histoires d’autrefois."
+    ],
+    [
+     3,
+     "Vous avez longuement regardé de vieilles photos aux côtés de votre grand-mère paternelle."
+    ],
+    [
+     3,
+     "Quand un autre enfant pleurait, vous alliez lui tendre votre jouet."
+    ],
+    [
+     4,
+     "Le goût du dal avec des rotis que vous préparait votre mère, vous ne l’oublierez sans doute jamais."
+    ],
+    [
+     4,
+     "Les mois sans pluie, vous alliez chercher l’eau encore plus loin.",
+     "En 2022, 2,2 milliards de personnes dans le monde n’avaient pas accès à une eau potable gérée en toute sécurité (OMS/UNICEF JMP)"
+    ],
+    [
+     4,
+     "Vous ne teniez pas en place et couriez partout toute la journée."
+    ],
+    [
+     4,
+     "Vers cinq ans, les adultes disaient de Manoj que c’était un enfant plein de vie.",
+     "Le tempérament de l’enfance se prolonge souvent à l’âge adulte. La persévérance et la maîtrise de soi vers cinq ans étaient liées, modestement mais nettement, à la scolarité, à la santé et aux finances des décennies plus tard (Moffitt et al. 2011, étude de Dunedin, Nouvelle-Zélande)"
+    ],
+    [
+     4,
+     "À la maison, on cuisinait sur un feu de bois ou de charbon. Quand la fumée envahissait la cuisine, vous aviez les yeux qui piquaient et vous toussiez.",
+     "En Inde, 34 % des habitants des campagnes cuisinent avec des combustibles comme le bois, le charbon de bois, le charbon ou le kérosène (2023 ; OMS, Banque mondiale)"
+    ],
+    [
+     5,
+     "Vous avez eu cinq ans."
+    ]
+   ],
+   "decision": {
+    "id": "reflect",
+    "question": "Une pause · 5 ans",
+    "about": "En Inde, 3,0 % des enfants n’atteignent pas leur cinquième anniversaire. Cet enfant l’a atteint.",
+    "fact": null,
+    "choices": [
+     {
+      "key": "write",
+      "label": "Le noter et continuer à vivre",
+      "note": "Ce que vous écrivez reste dans le récit de cette vie"
+     },
+     {
+      "key": "skip",
+      "label": "Le garder pour soi et continuer à vivre",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "write": 0.0,
+    "skip": 1.0
+   },
+   "methode": "même menu",
+   "base": 878,
+   "choisi": "skip"
+  },
+  {
+   "age": 7,
+   "year": 2033,
+   "events": [
+    [
+     5,
+     "Les nuits tropicales se sont enchaînées, et vous avez mal dormi pendant des jours."
+    ],
+    [
+     5,
+     "Vous avez couru et joué avec les enfants du quartier jusqu’au coucher du soleil."
+    ],
+    [
+     5,
+     "À la course, vous arriviez toujours en tête.",
+     "Prises ensemble, les études de jumeaux montrent que la plupart des traits humains sont, pour moitié environ, innés et, pour moitié, façonnés au fil de l’enfance et de la jeunesse (Polderman et al. 2015)"
+    ],
+    [
+     5,
+     "À l’initiative de vos parents, vous avez été inscrit dans une école privée. Les frais de scolarité étaient loin d’être négligeables."
+    ],
+    [
+     6,
+     "Vous avez commencé l’école primaire."
+    ],
+    [
+     6,
+     "Avant le lever du soleil, vous alliez chercher de l’eau au puits, loin de la maison, un bidon à la main. Le chemin du retour semblait toujours plus long.",
+     "Dans 7 foyers sur 10 qui n’ont pas l’eau à domicile, ce sont les femmes et les filles qui vont la chercher (OMS/UNICEF JMP 2023)"
+    ],
+    [
+     6,
+     "Sur le dossier d’inscription à l’école, la case « catégorie de caste » indiquait : Autres classes défavorisées (OBC).",
+     "L’Inde réserve une part des places à l’université et des emplois publics aux castes répertoriées (SC), aux tribus répertoriées (ST) et aux autres classes défavorisées (OBC). La catégorie générale regroupe toutes les autres familles ; depuis 2019, 10 % des places sont aussi réservées aux familles modestes de cette catégorie"
+    ],
+    [
+     6,
+     "Votre grand-mère maternelle vous a glissé un peu d’argent de poche en cachette. (+19 €)"
+    ],
+    [
+     7,
+     "Le soir de Diwali, vous avez allumé avec vos voisins de petites lampes le long de chaque ruelle."
+    ]
+   ],
+   "decision": {
+    "id": "hobby",
+    "question": "Ce que vous aimez faire",
+    "about": "Que ferez-vous de votre temps libre ?",
+    "fact": null,
+    "choices": [
+     {
+      "key": "dance",
+      "label": "Danse",
+      "note": "Bonheur+ Santé+ Relations+"
+     },
+     {
+      "key": "faith",
+      "label": "Rencontres religieuses",
+      "note": "Bonheur+ Relations+"
+     },
+     {
+      "key": "sp_cricket",
+      "label": "Cricket",
+      "note": "Bonheur+ Santé+ Relations+"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "dance": 0.331,
+    "faith": 0.338,
+    "sp_cricket": 0.331
+   },
+   "methode": "taux quand proposée",
+   "base": 480,
+   "choisi": "faith"
+  },
+  {
+   "age": 11,
+   "year": 2037,
+   "events": [
+    [
+     7,
+     "Décision : Rencontres religieuses"
+    ],
+    [
+     7,
+     "Vous avez commencé à fréquenter régulièrement des rassemblements religieux."
+    ],
+    [
+     7,
+     "Votre grand-mère paternelle vous racontait des histoires d’autrefois."
+    ],
+    [
+     7,
+     "Grâce à un bon professeur, vous avez pris goût aux cours d’anglais."
+    ],
+    [
+     8,
+     "Après l’école, vous aidiez à vous occuper des bêtes."
+    ],
+    [
+     8,
+     "Quand les grands vous demandaient ce que vous vouliez faire plus tard, vous répondiez toujours : ingénieur."
+    ],
+    [
+     8,
+     "Vous avez couru et joué avec les enfants du quartier jusqu’au coucher du soleil."
+    ],
+    [
+     8,
+     "Votre grand-mère paternelle a quitté ce monde à 71 ans. (Complications du diabète)"
+    ],
+    [
+     8,
+     "Selon la coutume, le corps a été incinéré et les cendres confiées aux eaux du fleuve."
+    ],
+    [
+     9,
+     "Une grande amitié est née entre vous et Geeta : vous ne vous quittiez plus."
+    ],
+    [
+     9,
+     "Parce que vous aviez bavardé, l’enseignant vous a donné des coups de baguette sur la paume. Après cela, vous n’avez plus levé la main en classe.",
+     "Si l’on vous frappe ou vous blesse à l’école, vous n’avez pas à le supporter seul : en France, appelez le 119, Allô Enfance en Danger (24 h/24, gratuit) ; findahelpline.com recense les lignes d’écoute gratuites d’autres pays."
+    ],
+    [
+     9,
+     "Quand la première pluie tant attendue est enfin tombée, tout le village est sorti en riant."
+    ],
+    [
+     9,
+     "La famille s’est endettée, et pendant un temps, la vie a été difficile.",
+     "Dans les pays de l’OCDE, environ 60 % des personnes qui faisaient partie des 20 % aux revenus les plus modestes s’y trouvaient encore quatre ans plus tard, de même qu’environ 70 % de celles qui faisaient partie des 20 % les plus aisés (OCDE 2018)"
+    ],
+    [
+     10,
+     "La viande, on n’en mangeait qu’aux fêtes et aux grandes occasions.",
+     "En 2017, l’offre de viande de Inde était d’environ 4 kg par personne et par an (bilans alimentaires de la FAO)"
+    ],
+    [
+     10,
+     "Les nuits où l’on s’allongeait dans la cour sous un ciel plein d’étoiles, votre grand-père paternel vous racontait des histoires d’autrefois."
+    ],
+    [
+     10,
+     "Chaque matin, vous faisiez un long chemin à pied pour aller chercher de l’eau.",
+     "En 2022, 2,2 milliards de personnes dans le monde n’avaient pas accès à une eau potable gérée en toute sécurité (OMS/UNICEF JMP)"
+    ],
+    [
+     10,
+     "Votre grand-père paternel a quitté ce monde à 86 ans. (Cancer colorectal)"
+    ],
+    [
+     10,
+     "Vous avez longtemps regardé les adultes pleurer."
+    ],
+    [
+     10,
+     "Vous avez eu votre premier smartphone."
+    ],
+    [
+     11,
+     "Vous avez terminé l’école primaire."
+    ],
+    [
+     11,
+     "Pour la première fois, vous avez navigué sur Internet. Votre monde s’est agrandi.",
+     "Utilisation d’Internet en Inde : 60 % de la population (UIT, Banque mondiale)"
+    ]
+   ],
+   "decision": {
+    "id": "school2",
+    "question": "Aller au collège ?",
+    "about": "Vous avez terminé l’école primaire. Pour continuer, il faut payer les frais de scolarité, l’uniforme et le transport.",
+    "fact": "En Inde, environ 86 % des enfants terminent le collège (UNESCO UIS)",
+    "choices": [
+     {
+      "key": "go",
+      "label": "Continuer à étudier",
+      "note": "Vos chances dépendent des moyens de votre famille et de vos notes"
+     },
+     {
+      "key": "work",
+      "label": "Commencer à travailler pour aider votre famille",
+      "note": "Un petit revenu, la fin de l’école"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "go": 0.972,
+    "work": 0.028
+   },
+   "methode": "même menu",
+   "base": 181,
+   "choisi": "go"
+  },
+  {
+   "age": 12,
+   "year": 2038,
+   "events": [
+    [
+     11,
+     "Décision : Continuer à étudier"
+    ],
+    [
+     11,
+     "Votre famille n’a pas pu payer les frais de scolarité ; vous avez dû renoncer à poursuivre vos études."
+    ],
+    [
+     11,
+     "Vous passiez toute la journée à vous occuper des bêtes."
+    ],
+    [
+     11,
+     "En chahutant avec votre deuxième grand frère, vous avez ri aux éclats, à vous en tenir les côtes."
+    ],
+    [
+     12,
+     "Une amitié s’est nouée avec quelqu’un d’une autre religion. À chaque fête de l’un ou de l’autre, vous vous invitiez mutuellement."
+    ]
+   ],
+   "decision": {
+    "id": "sm_friend",
+    "question": "Une nouvelle amitié ?",
+    "about": "Usha, qui a votre âge et vient d’emménager dans le quartier, traîne à l’écart dans la ruelle une fois le travail fini. Quand vos regards se croisent, un petit sourire gêné vous répond.",
+    "fact": null,
+    "choices": [
+     {
+      "key": "close",
+      "label": "Faire le premier pas vers une amitié",
+      "note": null
+     },
+     {
+      "key": "keep",
+      "label": "S’en tenir aux bonjours",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "close": 0.509,
+    "keep": 0.491
+   },
+   "methode": "même menu",
+   "base": 53,
+   "choisi": "close"
+  },
+  {
+   "age": 15,
+   "year": 2041,
+   "events": [
+    [
+     12,
+     "Décision : Faire le premier pas vers une amitié"
+    ],
+    [
+     12,
+     "Une grande amitié est née entre Usha et vous. Une fois le travail fini, vous ne vous quittiez plus."
+    ],
+    [
+     12,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     12,
+     "Vous aidiez aux champs près de la maison et alliez chercher de l’eau."
+    ],
+    [
+     13,
+     "Vous avez fait le tour du quartier jusqu’à retrouver le chiot des voisins, qui s’était sauvé."
+    ],
+    [
+     13,
+     "Vous avez passé plusieurs jours au lit avec un mauvais rhume."
+    ],
+    [
+     13,
+     "Vous aidiez aux champs près de la maison et alliez chercher de l’eau."
+    ],
+    [
+     13,
+     "Vous vous souvenez encore des histoires que racontait votre grand-père paternel. Parfois, vous vous les racontez de nouveau, rien que pour vous.",
+     "La plupart des personnes qui perdent un proche continuent à mener leur vie au milieu du chagrin, ou retrouvent leurs repères en un an ou deux (Bonanno 2004)"
+    ],
+    [
+     14,
+     "Le passage d’un cyclone a endommagé le toit et coupé l’électricité pendant plusieurs jours.",
+     "Rien qu’en 2023, environ 93 millions de personnes ont été touchées par des catastrophes naturelles comme les inondations, les tempêtes, les sécheresses et les séismes (EM-DAT)"
+    ],
+    [
+     14,
+     "Votre voix a commencé à muer. En un an, vous avez beaucoup grandi, et vos pantalons sont vite devenus trop courts."
+    ],
+    [
+     14,
+     "Vous enviiez vos amis qui allaient à l’école."
+    ],
+    [
+     14,
+     "Vous avez eu le béguin pour quelqu’un du quartier."
+    ],
+    [
+     15,
+     "15 ans. Parmi les garçons qui ont vu le jour en Inde la même année que vous, environ 97 % sont encore en vie."
+    ],
+    [
+     15,
+     "Lors d’une courte sortie sous la chaleur de midi, vous avez eu un étourdissement et avez dû vous reposer longtemps."
+    ]
+   ],
+   "decision": {
+    "id": "reflect",
+    "question": "Une pause · 15 ans",
+    "about": "Cet enfant travaille au lieu d’aller à l’école. Durée de scolarité attendue : 13 ans en Inde.",
+    "fact": null,
+    "choices": [
+     {
+      "key": "write",
+      "label": "Le noter et continuer à vivre",
+      "note": "Ce que vous écrivez reste dans le récit de cette vie"
+     },
+     {
+      "key": "skip",
+      "label": "Le garder pour soi et continuer à vivre",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "write": 0.0,
+    "skip": 1.0
+   },
+   "methode": "même menu",
+   "base": 878,
+   "choisi": "skip"
+  },
+  {
+   "age": 15,
+   "year": 2041,
+   "events": [
+    [
+     15,
+     "Une grande amitié est née entre vous et Jyoti : vous ne vous quittiez plus."
+    ]
+   ],
+   "decision": {
+    "id": "job",
+    "question": "Votre premier emploi",
+    "about": "Niveau d’études : école primaire. Voici les emplois que l’on peut trouver en Inde (campagne).",
+    "fact": "En Inde, environ 82 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 43 % travaillent dans l’agriculture",
+    "choices": [
+     {
+      "key": "o0",
+      "label": "Pêcheur",
+      "note": "3 979 $ US PPP par an · 232 € par mois aux prix français · emploi informel"
+     },
+     {
+      "key": "o1",
+      "label": "Éleveur",
+      "note": "3 821 $ US PPP par an · 223 € par mois aux prix français · emploi informel"
+     },
+     {
+      "key": "o2",
+      "label": "Paysan (agriculture vivrière)",
+      "note": "3 028 $ US PPP par an · 177 € par mois aux prix français · emploi informel"
+     },
+     {
+      "key": "wait",
+      "label": "Attendre un meilleur emploi",
+      "note": "Une année de plus à chercher"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "o0": 0.331,
+    "o1": 0.324,
+    "o2": 0.295,
+    "wait": 0.05
+   },
+   "methode": "même menu",
+   "base": 438,
+   "choisi": "o0"
+  },
+  {
+   "age": 16,
+   "year": 2042,
+   "events": [
+    [
+     15,
+     "Décision : Pêcheur"
+    ],
+    [
+     15,
+     "Vous avez commencé à travailler comme pêcheur."
+    ],
+    [
+     15,
+     "À une fête de quartier, vous avez chanté et dansé jusque tard dans la nuit."
+    ],
+    [
+     16,
+     "Avec votre premier salaire, vous avez offert un petit cadeau à votre mère. Pas un mot en retour, seulement un long regard silencieux."
+    ]
+   ],
+   "decision": {
+    "id": "stranger",
+    "question": "Quelqu’un s’effondre dans la rue",
+    "about": "Une personne que vous ne connaissez pas s’est effondrée dans la rue. Tout le monde passe sans s’arrêter.",
+    "fact": null,
+    "choices": [
+     {
+      "key": "help",
+      "label": "L’emmener à l’hôpital",
+      "note": "Cela demande un peu de temps"
+     },
+     {
+      "key": "pass",
+      "label": "Se dire que quelqu’un d’autre aidera, et passer son chemin",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "help": 0.514,
+    "pass": 0.486
+   },
+   "methode": "même menu",
+   "base": 177,
+   "choisi": "help"
+  },
+  {
+   "age": 24,
+   "year": 2050,
+   "events": [
+    [
+     16,
+     "Décision : L’emmener à l’hôpital"
+    ],
+    [
+     16,
+     "Vous avez accompagné cette personne jusqu’à l’hôpital. Quelques jours plus tard, sa famille est venue vous remercier."
+    ],
+    [
+     16,
+     "Après un long silence, vous avez appelé votre grand-mère maternelle. Sa voix s’était beaucoup affaiblie."
+    ],
+    [
+     16,
+     "Vous avez jeté vos filets toute la nuit, mais vous êtes rentré presque bredouille."
+    ],
+    [
+     17,
+     "Dans votre communauté de foi, vous avez rencontré des personnes qui partagent votre sensibilité."
+    ],
+    [
+     17,
+     "Une grande amitié est née entre vous et Preeti : vous ne vous quittiez plus."
+    ],
+    [
+     17,
+     "Sur le chemin du travail, à l’aube, vous avez trouvé le lever du soleil particulièrement beau ce jour-là."
+    ],
+    [
+     17,
+     "Votre deuxième grande sœur a quitté la maison pour se marier."
+    ],
+    [
+     18,
+     "Tous les frères et sœurs se sont réunis à la maison."
+    ],
+    [
+     18,
+     "Il vous manquait de quoi payer le trajet, et la personne derrière vous dans la file a payé à votre place sans un mot."
+    ],
+    [
+     18,
+     "Vous avez eu le béguin pour quelqu’un du quartier."
+    ],
+    [
+     18,
+     "Votre sœur aînée a quitté la maison pour se marier."
+    ],
+    [
+     18,
+     "Quelques années après son mariage, votre frère aîné a quitté la maison pour fonder son propre foyer."
+    ],
+    [
+     19,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     19,
+     "Une grande amitié est née entre vous et Arjun : vous ne vous quittiez plus."
+    ],
+    [
+     20,
+     "Vous avez aidé aux tâches ménagères d’un voisin malade."
+    ],
+    [
+     20,
+     "Au mariage d’amis de longue date, vous avez adressé vos vœux aux mariés. (−33 €)"
+    ],
+    [
+     20,
+     "Vous avez remis une enveloppe de condoléances pour les funérailles d’un membre de la famille. (−24 €)"
+    ],
+    [
+     20,
+     "Votre grand-mère maternelle a quitté ce monde à 81 ans. (Bronchopneumopathie chronique obstructive)"
+    ],
+    [
+     20,
+     "Toute la famille s’est réunie pour dire adieu à votre grand-mère maternelle."
+    ],
+    [
+     21,
+     "Vous avez confié à une sœur ce que vous n’aviez pu dire à personne. Pour toute réponse, une présence silencieuse à vos côtés."
+    ],
+    [
+     21,
+     "Une canicule record s’est abattue sur la région."
+    ],
+    [
+     21,
+     "Pour la première fois depuis longtemps, vous êtes parti au loin et vous avez longuement contemplé un paysage à perte de vue."
+    ],
+    [
+     21,
+     "Sur le bateau qui rentrait les cales pleines, tout le monde a chanté en chœur."
+    ],
+    [
+     22,
+     "Vous avez aidé à prendre soin d’une personne malade du voisinage.",
+     "Un peu plus d’un adulte sur cinq dans le monde dit avoir fait du bénévolat au cours du mois écoulé (CAF World Giving Index)"
+    ],
+    [
+     23,
+     "Vous avez assisté au mariage d’amis. (−33 €)"
+    ],
+    [
+     23,
+     "Quelques années après son mariage, votre deuxième grand frère a quitté la maison pour fonder son propre foyer."
+    ],
+    [
+     23,
+     "Une molaire vous faisait très mal, mais il n'y avait aucun dentiste à proximité ; vous avez enduré longtemps, et la dent a fini par être arrachée.",
+     "La carie est la maladie la plus répandue au monde : environ 2 milliards de personnes ont des caries sur leurs dents définitives. Les soins dentaires échappent le plus souvent à l'assurance publique et restent à la charge des patients (OMS, Rapport sur la situation mondiale de la santé bucco-dentaire 2022)"
+    ]
+   ],
+   "decision": {
+    "id": "illness",
+    "question": "La toux ne s’arrête pas",
+    "about": "Vous toussez sans arrêt depuis des semaines, vous vous réveillez chaque nuit en sueur, et vous avez perdu du poids. Votre part des frais d’hôpital s’élève à environ 1 263 € (aux prix français). Vos économies : 351 €.",
+    "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+    "choices": [
+     {
+      "key": "hospital",
+      "label": "Se faire soigner à l’hôpital",
+      "note": "Quitte à s’endetter"
+     },
+     {
+      "key": "cheap",
+      "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+      "note": "Économique, mais risqué"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "hospital": 0.699,
+    "cheap": 0.301
+   },
+   "methode": "même menu",
+   "base": 459,
+   "choisi": "hospital"
+  },
+  {
+   "age": 25,
+   "year": 2051,
+   "events": [
+    [
+     24,
+     "Décision : Se faire soigner à l’hôpital"
+    ],
+    [
+     24,
+     "À l’hôpital, le diagnostic a été posé : tuberculose. Grâce aux soins, vous avez retrouvé la santé."
+    ],
+    [
+     24,
+     "Vos économies se sont épuisées : vous avez maintenant une dette de 473 €. Frais médicaux −1 263 € · Frais de loisirs −38 €"
+    ],
+    [
+     25,
+     "Vous avez retrouvé de vieux amis et vous avez parlé toute la nuit."
+    ]
+   ],
+   "decision": {
+    "id": "abroad",
+    "question": "Une occasion de partir à l’étranger",
+    "about": "Une possibilité de travailler en États-Unis s’est présentée. Un visa en règle est hors de portée ; la seule voie est irrégulière, par un intermédiaire. Coût : environ 17 100 € (aux prix français).",
+    "fact": "Le PIB par habitant (PPA) en États-Unis est environ 8,4 fois celui mesuré en Inde · Environ 281 millions de migrants internationaux dans le monde (OIM 2024)",
+    "choices": [
+     {
+      "key": "go",
+      "label": "Partir en États-Unis",
+      "note": "Voie risquée, revenu↑ · Vous quittez votre travail actuel"
+     },
+     {
+      "key": "stay",
+      "label": "Rester",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "go": 0.286,
+    "stay": 0.714
+   },
+   "methode": "même menu",
+   "base": 7,
+   "choisi": "stay"
+  },
+  {
+   "age": 26,
+   "year": 2052,
+   "events": [
+    [
+     25,
+     "Vous avez accompagné votre père, qui vit avec vous, dans ses allers-retours à l’hôpital. (−115 €)"
+    ],
+    [
+     26,
+     "Vous avez partagé avec les voisins des légumes que vous aviez fait pousser vous-même."
+    ]
+   ],
+   "decision": {
+    "id": "partner",
+    "question": "Une proposition d’union",
+    "about": "Rencontre proposée par les aînés de la famille : Preeti Naik (femme, 24 ans, fiable). Cette personne vient d’une famille d’une autre caste. Métier : paysanne (agriculture vivrière). Preeti n’a presque ni économies ni dettes.",
+    "fact": "En Inde, environ 5 % des femmes mariées ont épousé une personne d’une autre caste (enquête indienne sur le développement humain IHDS-II, 2011-12)",
+    "choices": [
+     {
+      "key": "yes",
+      "label": "Se marier",
+      "note": "Relations↑ Bonheur↑"
+     },
+     {
+      "key": "date",
+      "label": "Prendre le temps de mieux se connaître",
+      "note": "Remettre la décision à plus tard"
+     },
+     {
+      "key": "no",
+      "label": "Refuser",
+      "note": "Peut créer des tensions avec votre famille"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "yes": 0.612,
+    "date": 0.292,
+    "no": 0.096
+   },
+   "methode": "même menu",
+   "base": 250,
+   "choisi": "yes"
+  },
+  {
+   "age": 27,
+   "year": 2053,
+   "events": [
+    [
+     26,
+     "La contribution de vos parents aux frais du mariage s’est élevée à 1 119 €."
+    ],
+    [
+     26,
+     "La famille de la mariée a remis 2 474 € de dot à votre famille.",
+     "En Inde, la loi de 1961 sur l’interdiction de la dot interdit de donner ou de recevoir une dot, mais dans 95 % des mariages ruraux de 1960 à 2008, la famille de la mariée en a versé une (REDS 2006, Anukriti, Kwon et Prakash 2021). En moyenne, environ 32 000 roupies aux prix de 2005, soit à peu près 1,4 fois le revenu annuel médian d’un ménage rural (IHDS 2005)."
+    ],
+    [
+     26,
+     "Décision : Se marier"
+    ],
+    [
+     26,
+     "Vous vous êtes marié !"
+    ],
+    [
+     26,
+     "Après le mariage, vous avez continué à vivre sous le même toit que vos parents."
+    ],
+    [
+     26,
+     "N’ayant plus personne à qui emprunter, vous avez tenu en mangeant moins et en réduisant toutes vos dépenses.",
+     "Dans les pays à faible revenu, la plupart des gens qui empruntent prennent de petites sommes à leur famille et à leurs amis (Banque mondiale, Findex)"
+    ],
+    [
+     26,
+     "Votre partenaire, Preeti, a perdu son emploi."
+    ],
+    [
+     26,
+     "Cette année, votre patrimoine a baissé de 2 213 €. Frais de mariage −4 474 € · Intérêts de la dette −98 € · Dépenses réduites (plus personne ne voulait vous prêter) +1 823 €"
+    ],
+    [
+     26,
+     "Dans la cuisine, où l’on cuisinait au feu de bois, la fumée était toujours épaisse.",
+     "En Inde, 34 % des habitants des campagnes cuisinent avec des combustibles comme le bois, le charbon de bois, le charbon ou le kérosène (2023 ; OMS, Banque mondiale)"
+    ],
+    [
+     27,
+     "Le passage d’un cyclone a endommagé le toit et coupé l’électricité pendant plusieurs jours. (−102 €)",
+     "Rien qu’en 2023, environ 93 millions de personnes ont été touchées par des catastrophes naturelles comme les inondations, les tempêtes, les sécheresses et les séismes (EM-DAT)"
+    ],
+    [
+     27,
+     "Une crise de change a fait s’effondrer la monnaie. Les produits importés sont devenus bien plus chers.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     27,
+     "Pour la première fois depuis longtemps, Preeti et vous avez marché tranquillement, rien que vous deux. Même sans beaucoup de mots, c’était bien."
+    ]
+   ],
+   "decision": {
+    "id": "hobby",
+    "question": "Commencer un nouveau loisir ?",
+    "about": "Vos loisirs actuels : rencontres religieuses",
+    "fact": null,
+    "choices": [
+     {
+      "key": "drama",
+      "label": "Théâtre",
+      "note": "Bonheur+ Relations+"
+     },
+     {
+      "key": "sp_cricket",
+      "label": "Cricket",
+      "note": "Bonheur+ Santé+ Relations+"
+     },
+     {
+      "key": "cooking",
+      "label": "Cuisine",
+      "note": "Bonheur+ Santé+ Relations+"
+     },
+     {
+      "key": "none",
+      "label": "Vos loisirs actuels suffisent",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "drama": 0.283,
+    "sp_cricket": 0.271,
+    "cooking": 0.209,
+    "none": 0.238
+   },
+   "methode": "taux quand proposée",
+   "base": 480,
+   "choisi": "drama"
+  },
+  {
+   "age": 28,
+   "year": 2054,
+   "events": [
+    [
+     27,
+     "Décision : Théâtre"
+    ],
+    [
+     27,
+     "Théâtre : c’est devenu une vraie passion."
+    ],
+    [
+     27,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     27,
+     "Vous avez perdu le sommeil à cause d’une dette de 2 492 € (aux prix français)."
+    ],
+    [
+     27,
+     "Votre partenaire, Preeti, a retrouvé un emploi."
+    ],
+    [
+     28,
+     "Quand un ami n’a pas pu louer une chambre à cause de sa caste, vous l’avez accompagné chez le propriétaire."
+    ]
+   ],
+   "decision": {
+    "id": "kids",
+    "question": "Avoir un enfant ?",
+    "about": "Vous parlez avec votre partenaire d’avoir des enfants. Preeti espère un enfant depuis longtemps.",
+    "fact": "Indice de fécondité en Inde : 1,98 enfant par femme (ONU, WPP 2024)",
+    "choices": [
+     {
+      "key": "yes",
+      "label": "Avoir un enfant",
+      "note": "Bonheur↑ Dépenses pour l’enfant↑"
+     },
+     {
+      "key": "no",
+      "label": "Pas maintenant",
+      "note": null
+     },
+     {
+      "key": "stop",
+      "label": "Décider de vivre sans enfants",
+      "note": "Cette question ne reviendra pas"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "yes": 0.743,
+    "no": 0.257,
+    "stop": 0.0
+   },
+   "methode": "même menu",
+   "base": 506,
+   "choisi": "yes"
+  },
+  {
+   "age": 29,
+   "year": 2055,
+   "events": [
+    [
+     28,
+     "Votre fils, Pradeep Mohanty, a vu le jour."
+    ],
+    [
+     28,
+     "La pollution a duré des jours : la gorge qui gratte, les yeux qui piquent.",
+     "En Inde, l’air extérieur que respirent les habitants des campagnes contient en moyenne 48 µg/m³ de particules fines (PM2,5) par an, environ 10 fois la valeur guide de l’OMS (5 µg/m³) (2019 ; OMS)"
+    ],
+    [
+     28,
+     "Vous passiez souvent voir une personne âgée du voisinage qui vivait seule."
+    ],
+    [
+     29,
+     "En soulevant une lourde charge, vous vous êtes bloqué le dos ; c’est là qu’ont commencé vos douleurs lombaires."
+    ]
+   ],
+   "decision": {
+    "id": "babycare",
+    "question": "Qui va s’occuper de Pradeep ?",
+    "about": "Le premier anniversaire de Pradeep approche. Votre partenaire et vous travaillez : il faut décider qui s’occupera du bébé. Votre partenaire, Preeti, propose de faire une pause de quelques années dans son travail pour s’occuper du bébé.",
+    "fact": "En Inde, environ 22 % des femmes de 15 à 64 ans sont actives (estimation de l'OIT, 2019)",
+    "choices": [
+     {
+      "key": "me",
+      "label": "Arrêter de travailler et s’occuper soi-même du bébé",
+      "note": "Le revenu s’arrête · Du temps avec votre enfant"
+     },
+     {
+      "key": "partner",
+      "label": "Confier le bébé à votre partenaire, qui fait une pause dans son travail",
+      "note": "Le revenu de votre partenaire s’arrête quelques années"
+     },
+     {
+      "key": "gp",
+      "label": "Confier le bébé à vos parents",
+      "note": "Presque gratuit · Vous comptez sur vos parents"
+     },
+     {
+      "key": "pay",
+      "label": "Confier le bébé à une crèche ou à une nounou",
+      "note": "Environ 699 € par an"
+     },
+     {
+      "key": "carry",
+      "label": "Emmener le bébé au travail",
+      "note": "Épuisant, mais le bébé reste près de vous"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "me": 0.027,
+    "partner": 0.658,
+    "gp": 0.141,
+    "pay": 0.074,
+    "carry": 0.101
+   },
+   "methode": "même menu",
+   "base": 149,
+   "choisi": "partner"
+  },
+  {
+   "age": 30,
+   "year": 2056,
+   "events": [
+    [
+     29,
+     "Décision : Confier le bébé à votre partenaire, qui fait une pause dans son travail"
+    ],
+    [
+     29,
+     "Votre partenaire, Preeti, a fait une pause dans son travail pour s’occuper de Pradeep.",
+     "En Inde, environ 22 % des femmes de 15 à 64 ans sont actives (estimation de l'OIT, 2019)"
+    ],
+    [
+     29,
+     "Au mariage d’amis, vous avez dansé et fait la fête jusque tard dans la nuit."
+    ],
+    [
+     29,
+     "Vous avez eu la grippe pendant une semaine."
+    ],
+    [
+     29,
+     "Votre deuxième grand frère a quitté ce monde à 32 ans. (Tuberculose)"
+    ],
+    [
+     30,
+     "30 ans. Parmi les garçons qui ont vu le jour en Inde la même année que vous, environ 95 % sont encore en vie."
+    ],
+    [
+     30,
+     "Une sœur a eu un bébé. Pour la première fois, vous avez tenu votre neveu ou votre nièce dans vos bras."
+    ]
+   ],
+   "decision": {
+    "id": "reflect",
+    "question": "Une pause · 30 ans",
+    "about": "Le revenu annuel de cette personne la place dans les 26 % les plus modestes à l’échelle mondiale. En Inde, 60 % de la population utilise Internet et 35 % vit en ville.",
+    "fact": null,
+    "choices": [
+     {
+      "key": "write",
+      "label": "Le noter et continuer à vivre",
+      "note": "Ce que vous écrivez reste dans le récit de cette vie"
+     },
+     {
+      "key": "skip",
+      "label": "Le garder pour soi et continuer à vivre",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "write": 0.0,
+    "skip": 1.0
+   },
+   "methode": "même menu",
+   "base": 878,
+   "choisi": "skip"
+  },
+  {
+   "age": 31,
+   "year": 2057,
+   "events": [
+    [
+     30,
+     "Les nuits tropicales se sont enchaînées, et vous avez mal dormi pendant des jours."
+    ],
+    [
+     30,
+     "Avec votre conjoint, vous avez construit une maison sur la terre de la famille. La famille est venue donner un coup de main."
+    ],
+    [
+     31,
+     "Vous avez trouvé une place sur un plus gros bateau, et vous gagnez davantage."
+    ]
+   ],
+   "decision": {
+    "id": "kids",
+    "question": "Avoir un 2e enfant ?",
+    "about": "Vous avez 1 enfant aujourd’hui. Preeti aimerait avoir un enfant de plus.",
+    "fact": "Indice de fécondité en Inde : 1,98 enfant par femme (ONU, WPP 2024)",
+    "choices": [
+     {
+      "key": "yes",
+      "label": "Avoir un enfant",
+      "note": "Bonheur↑ Dépenses pour l’enfant↑"
+     },
+     {
+      "key": "no",
+      "label": "Pas maintenant",
+      "note": null
+     },
+     {
+      "key": "stop",
+      "label": "Ne plus avoir d’enfants",
+      "note": "Cette question ne reviendra pas"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "yes": 0.743,
+    "no": 0.257,
+    "stop": 0.0
+   },
+   "methode": "même menu",
+   "base": 506,
+   "choisi": "yes"
+  },
+  {
+   "age": 33,
+   "year": 2059,
+   "events": [
+    [
+     31,
+     "Votre fille, Usha Mohanty, a vu le jour."
+    ],
+    [
+     31,
+     "Tôt le matin, le chant des oiseaux a mis fin à votre sommeil. Vous l'avez écouté un long moment sans bouger."
+    ],
+    [
+     32,
+     "Votre mère a été malade toute la nuit, et vous avez veillé à son chevet. Il y a eu aussi des frais d’hôpital. (−121 €)"
+    ],
+    [
+     32,
+     "Une grosse dispute a éclaté avec un frère ; la réconciliation est venue quelques mois plus tard."
+    ],
+    [
+     32,
+     "Au mariage d’amis, vous avez aidé à préparer le repas."
+    ],
+    [
+     33,
+     "Usha vous a appelé « Papa » pour la première fois."
+    ]
+   ],
+   "decision": {
+    "id": "kidschool",
+    "question": "L’heure de choisir une école pour Pradeep",
+    "about": "L’an prochain, ce sera la première rentrée des classes pour Pradeep. L’école publique du quartier ne coûte presque rien ; une école privée coûte environ 233 € par an et par enfant.",
+    "fact": "En Inde, environ 45 % des élèves du primaire vont dans une école privée (Banque mondiale, UNESCO)",
+    "choices": [
+     {
+      "key": "pub",
+      "label": "L’école publique",
+      "note": "Presque pas de frais"
+     },
+     {
+      "key": "priv",
+      "label": "Une école privée",
+      "note": "Environ 233 € par an et par enfant · un peu plus de chances d’aller à l’université"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "pub": 0.612,
+    "priv": 0.388
+   },
+   "methode": "même menu",
+   "base": 170,
+   "choisi": "pub"
+  },
+  {
+   "age": 35,
+   "year": 2061,
+   "events": [
+    [
+     33,
+     "Décision : L’école publique"
+    ],
+    [
+     33,
+     "Vous avez inscrit Pradeep à l’école publique du quartier."
+    ],
+    [
+     33,
+     "Le toit fuyait, et il a fallu le réparer. Cela a coûté cher. (−466 €)"
+    ],
+    [
+     33,
+     "Au sein de votre communauté de foi, on vous a confié le soin des voisins dans le besoin."
+    ],
+    [
+     33,
+     "Votre père a quitté ce monde à 74 ans. (Maladies diarrhéiques)"
+    ],
+    [
+     33,
+     "Selon la coutume, le corps a été incinéré et les cendres confiées aux eaux du fleuve. Vous avez partagé les frais d’obsèques avec vos frères et sœurs. (−180 €)"
+    ],
+    [
+     33,
+     "Maintenant que votre plus jeune enfant a un peu grandi, votre partenaire, Preeti, a repris le travail."
+    ],
+    [
+     34,
+     "Une année où tout allait mal, votre ami Kunal a débarqué sans un mot et vous a offert un repas."
+    ],
+    [
+     34,
+     "Pradeep a commencé l’école."
+    ],
+    [
+     34,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     34,
+     "Le jour anniversaire de la mort de votre père, vous avez passé une guirlande de fleurs autour de sa photo et allumé une lampe."
+    ],
+    [
+     34,
+     "Le vent était si fort que vous n'avez pas pu sortir le bateau pendant des jours."
+    ],
+    [
+     35,
+     "Vous avez collé au mur le dessin de famille que Pradeep vous a fait. Tout le monde y avait un grand sourire."
+    ]
+   ],
+   "decision": {
+    "id": "illness",
+    "question": "Une forte fièvre soudaine",
+    "about": "Une forte fièvre s’est déclarée d’un coup, avec des douleurs dans toutes les articulations et derrière les yeux. Des taches rouges sont apparues sur votre peau. Votre part des frais d’hôpital s’élève à environ 1 263 € (aux prix français). Vos économies : rien (dette : 13 800 €).",
+    "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+    "choices": [
+     {
+      "key": "hospital",
+      "label": "Se faire soigner à l’hôpital",
+      "note": "Quitte à s’endetter"
+     },
+     {
+      "key": "cheap",
+      "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+      "note": "Économique, mais risqué"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "hospital": 0.699,
+    "cheap": 0.301
+   },
+   "methode": "même menu",
+   "base": 459,
+   "choisi": "hospital"
+  },
+  {
+   "age": 37,
+   "year": 2063,
+   "events": [
+    [
+     35,
+     "Décision : Se faire soigner à l’hôpital"
+    ],
+    [
+     35,
+     "À l’hôpital, le diagnostic a été posé : dengue. Vous avez reçu des soins, mais le rétablissement a été lent. Votre corps n’est plus ce qu’il était.",
+     "Dans les pays à revenu faible ou intermédiaire, plus de la moitié des décès que de bons soins auraient pu éviter touchent des personnes qui ont bien atteint l’hôpital mais y ont reçu des soins de mauvaise qualité (Commission Lancet Global Health, Kruk et al. 2018)"
+    ],
+    [
+     35,
+     "Vous avez assisté à la journée sportive de l’école de Pradeep. Après une chute, Pradeep a repris la course jusqu’à la ligne d’arrivée, et vous avez crié vos encouragements à en perdre la voix."
+    ],
+    [
+     35,
+     "Cette année, votre patrimoine a baissé de 2 020 €. Frais médicaux −1 263 € · Intérêts de la dette −891 € · Frais liés aux enfants −241 € · Loyer économisé en vivant dans votre propre logement +481 €"
+    ],
+    [
+     36,
+     "10 ans de mariage. Preeti et vous avez ressorti les vieilles photos du mariage."
+    ],
+    [
+     36,
+     "Vous avez fait un voyage avec la famille d’une sœur. Les cousins sont vite devenus amis. (−93 €)"
+    ],
+    [
+     36,
+     "Dans le miroir, vous avez découvert votre premier cheveu blanc."
+    ],
+    [
+     37,
+     "La pollution a duré des jours : la gorge qui gratte, les yeux qui piquent.",
+     "En Inde, l’air extérieur que respirent les habitants des campagnes contient en moyenne 48 µg/m³ de particules fines (PM2,5) par an, environ 10 fois la valeur guide de l’OMS (5 µg/m³) (2019 ; OMS)"
+    ]
+   ],
+   "decision": {
+    "id": "kidwant",
+    "question": "Pradeep vous demande quelque chose",
+    "about": "Pradeep, 9 ans, aimerait apprendre un instrument de musique. Environ 233 € par an (aux prix français).",
+    "fact": null,
+    "choices": [
+     {
+      "key": "yes",
+      "label": "Dire oui",
+      "note": "Relations↑"
+     },
+     {
+      "key": "no",
+      "label": "Expliquer que le budget est serré et attendre",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "yes": 0.59,
+    "no": 0.41
+   },
+   "methode": "même menu",
+   "base": 39,
+   "choisi": "yes"
+  },
+  {
+   "age": 39,
+   "year": 2065,
+   "events": [
+    [
+     37,
+     "Décision : Dire oui"
+    ],
+    [
+     37,
+     "Pradeep a commencé à apprendre un instrument. Même les fausses notes étaient agréables à entendre. (−233 €)"
+    ],
+    [
+     37,
+     "Le jour de votre anniversaire, Pradeep vous a tendu une lettre écrite à la main et un gâteau tout de travers."
+    ],
+    [
+     37,
+     "Votre ami de longue date Kunal vous a téléphoné à l’improviste, et vous avez bavardé pendant une heure."
+    ],
+    [
+     37,
+     "N’ayant plus personne à qui emprunter, vous avez tenu en mangeant moins et en réduisant toutes vos dépenses.",
+     "Dans les pays à faible revenu, la plupart des gens qui empruntent prennent de petites sommes à leur famille et à leurs amis (Banque mondiale, Findex)"
+    ],
+    [
+     37,
+     "Votre frère aîné a quitté ce monde à 49 ans. (Tuberculose)"
+    ],
+    [
+     38,
+     "Usha vous a murmuré « Je t’aime » avant de s’endormir."
+    ],
+    [
+     38,
+     "Vous avez appris la pêche à un jeune du voisinage. Cela vous a rappelé vos propres débuts."
+    ],
+    [
+     38,
+     "Votre famille et vos proches ont pris à leur charge 801 € d’une dette que vous n’arriviez plus à rembourser depuis des années, selon leurs moyens. Il vous reste 15 700 € à rembourser."
+    ],
+    [
+     38,
+     "En réparant les filets, vous avez échangé des histoires de mer avec les pêcheurs du bateau voisin."
+    ],
+    [
+     39,
+     "Les frais de médicaments et d’hôpital de votre mère, qui vit avec vous, ont augmenté. (−126 €)"
+    ],
+    [
+     39,
+     "Vous avez fait les courses à la place d’un voisin malade."
+    ]
+   ],
+   "decision": {
+    "id": "kidsick",
+    "question": "Usha est gravement malade",
+    "about": "Usha, 8 ans, a de la fièvre depuis des jours et mal au ventre. Dans un grand hôpital, la part à votre charge serait d’environ 722 € (aux prix français). Vos économies : rien (dette : 15 900 €).",
+    "fact": "Une grande partie des décès d’enfants de moins de 5 ans sont dus à des maladies qui se soignent, comme la pneumonie, la diarrhée et le paludisme (OMS)",
+    "choices": [
+     {
+      "key": "hospital",
+      "label": "Aller dans un grand hôpital, quitte à emprunter",
+      "note": "Environ 722 €"
+     },
+     {
+      "key": "home",
+      "label": "Soigner l’enfant à la maison et attendre de voir",
+      "note": "Économique, mais risqué"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "hospital": 0.746,
+    "home": 0.254
+   },
+   "methode": "même menu",
+   "base": 173,
+   "choisi": "hospital"
+  },
+  {
+   "age": 40,
+   "year": 2066,
+   "events": [
+    [
+     39,
+     "Décision : Aller dans un grand hôpital, quitte à emprunter"
+    ],
+    [
+     39,
+     "À l’hôpital, le diagnostic est tombé : fièvre typhoïde. Les soins ont guéri Usha. Vous avez veillé à son chevet toute la nuit."
+    ],
+    [
+     39,
+     "Une crise financière a éclaté. Les banques ont vacillé et les entreprises ont réduit leurs effectifs.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     39,
+     "La chaleur s’est prolongée, et pendant un temps, votre corps vous a paru lourd."
+    ],
+    [
+     39,
+     "Le jour anniversaire de la mort de votre frère aîné, la famille s’est réunie pour parler de votre frère aîné. Les souvenirs d’enfance ont fait rire tout le monde."
+    ],
+    [
+     39,
+     "Les mensonges se sont accumulés. Vous avez pris l’habitude de poser votre téléphone écran contre la table."
+    ],
+    [
+     39,
+     "Cette année, votre patrimoine a baissé de 2 598 €. Variation de la valeur du logement −1 488 € · Intérêts de la dette −914 € · Frais médicaux d’un enfant −722 € · Loyer économisé en vivant dans votre propre logement +463 €"
+    ],
+    [
+     40,
+     "Dans une troupe de théâtre locale, vous vous êtes fait des amis avec qui monter des pièces."
+    ]
+   ],
+   "decision": {
+    "id": "loan",
+    "question": "Votre dette s’est alourdie",
+    "about": "Vous devez 16 900 € (aux prix français).",
+    "fact": "Dans le monde, environ 24 % des adultes n’ont pas de compte bancaire (Banque mondiale, Findex 2021)",
+    "choices": [
+     {
+      "key": "family",
+      "label": "Demander de l’aide à votre famille",
+      "note": "Relations↓"
+     },
+     {
+      "key": "lender",
+      "label": "Emprunter à un usurier",
+      "note": "Des intérêts à payer"
+     },
+     {
+      "key": "sellh",
+      "label": "Vendre la maison",
+      "note": "Une grosse somme · Vous perdez votre logement"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "family": 0.44,
+    "lender": 0.429,
+    "sellh": 0.131
+   },
+   "methode": "même menu",
+   "base": 84,
+   "choisi": "family"
+  },
+  {
+   "age": 41,
+   "year": 2067,
+   "events": [
+    [
+     40,
+     "Décision : Demander de l’aide à votre famille"
+    ],
+    [
+     40,
+     "Selon leurs moyens, votre famille et vos proches ont rassemblé 189 € pour vous, ce qui a permis de rembourser une partie de la dette. Il vous reste 16 700 € à rembourser."
+    ],
+    [
+     40,
+     "Vous avez revu vos amis d’enfance après des années, et vous avez longtemps ri en évoquant le passé."
+    ],
+    [
+     40,
+     "Vous avez eu la grippe pendant une semaine."
+    ],
+    [
+     40,
+     "Preeti a tout découvert. L’atmosphère à la maison a changé. Les enfants l’ont appris aussi."
+    ],
+    [
+     41,
+     "L’enfant des voisins vous fait toujours un grand signe de la main quand vous vous croisez dans la rue."
+    ]
+   ],
+   "decision": {
+    "id": "mcrisis",
+    "question": "La distance s’est installée entre Preeti et vous",
+    "about": "15 ans de mariage. Vous vous parlez moins et vous vous heurtez pour des riens. Preeti a découvert que vous voyiez quelqu’un d’autre en secret. Vous avez du mal à croiser le regard de Preeti.",
+    "fact": "Environ la moitié des mariages qui se terminent par un divorce prennent fin au cours des dix premières années. Le temps passé ensemble et le dialogue sont ce qui aide le plus à traverser les crises (base de données de l’OCDE sur la famille, CDC)",
+    "choices": [
+     {
+      "key": "talk",
+      "label": "Se reparler vraiment, à cœur ouvert",
+      "note": null
+     },
+     {
+      "key": "part",
+      "label": "Se rendre mutuellement sa liberté",
+      "note": "Divorce"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "talk": 0.917,
+    "part": 0.083
+   },
+   "methode": "même menu",
+   "base": 12,
+   "choisi": "talk"
+  },
+  {
+   "age": 46,
+   "year": 2072,
+   "events": [
+    [
+     41,
+     "Décision : Se reparler vraiment, à cœur ouvert"
+    ],
+    [
+     41,
+     "Vous avez demandé pardon, encore et encore. Preeti a décidé de vous faire confiance une fois encore. Il a fallu longtemps pour que les choses redeviennent comme avant."
+    ],
+    [
+     41,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     42,
+     "Vous avez accompagné votre mère, qui vit avec vous, dans ses allers-retours à l’hôpital. (−125 €)"
+    ],
+    [
+     43,
+     "Vous avez rassemblé les gens du quartier pour taper dans un ballon et transpirer un bon coup."
+    ],
+    [
+     43,
+     "Les petits caractères devenaient flous de près. Faute de lunettes de lecture adaptées, vous lisiez les petits caractères en plein soleil, à bout de bras.",
+     "Environ 1,8 milliard de personnes sont presbytes, et 826 millions d'entre elles voient mal de près faute de lunettes de lecture adaptées (OMS, Rapport mondial sur la vision 2019)"
+    ],
+    [
+     44,
+     "Pour la première fois, Usha a fait une course sans adulte, et vous a tendu fièrement la monnaie."
+    ],
+    [
+     44,
+     "Vous avez parlé d’avenir avec Pradeep jusque tard dans la nuit. Sans que vous l’ayez vu venir, l’enfant avait bien grandi."
+    ],
+    [
+     44,
+     "On dirait que Pradeep a le béguin pour quelqu’un. Vous avez souri, en faisant mine de ne rien remarquer."
+    ],
+    [
+     44,
+     "Votre famille et vos proches ont pris à leur charge 522 € d’une dette que vous n’arriviez plus à rembourser depuis des années, selon leurs moyens. Il vous reste 15 900 € à rembourser."
+    ],
+    [
+     45,
+     "Tous les frères et sœurs se sont réunis à la maison."
+    ],
+    [
+     45,
+     "Cette année, votre patrimoine a baissé de 1 547 €. Variation de la valeur du logement −912 € · Intérêts de la dette −899 € · Réparations du logement −466 € · Loyer économisé en vivant dans votre propre logement +454 €"
+    ],
+    [
+     46,
+     "L’école vous a fait venir au sujet d’Usha : une grosse dispute avec quelqu’un de sa classe. Sur le chemin du retour, vous avez longuement parlé ensemble."
+    ]
+   ],
+   "decision": {
+    "id": "drink",
+    "question": "Vous buvez davantage",
+    "about": "Rien ne semble aussi efficace qu’un verre pour oublier ce qui est dur. Le verre d’avant le coucher est devenu, sans que vous le voyiez venir, trois ou quatre verres.",
+    "fact": "Environ 7 % des adultes dans le monde ont un trouble lié à l’usage de l’alcool, et 3,7 % une dépendance à l’alcool (OMS 2024)",
+    "choices": [
+     {
+      "key": "stop",
+      "label": "Boire moins et trouver d’autres façons de tenir",
+      "note": "Marche · entourage · aide"
+     },
+     {
+      "key": "drink",
+      "label": "Tenir grâce à l’alcool",
+      "note": "Plus facile pour l’instant · peut mener à la dépendance"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "stop": 0.581,
+    "drink": 0.419
+   },
+   "methode": "même menu",
+   "base": 191,
+   "choisi": "stop"
+  },
+  {
+   "age": 48,
+   "year": 2074,
+   "events": [
+    [
+     46,
+     "Décision : Boire moins et trouver d’autres façons de tenir"
+    ],
+    [
+     46,
+     "Vous avez confié à un ami que les choses étaient dures ces derniers temps. Votre cœur s’est un peu allégé."
+    ],
+    [
+     46,
+     "20 ans de mariage. Preeti vous a remis une lettre écrite à la main."
+    ],
+    [
+     46,
+     "Vous avez appris où se rassemblent les poissons, et vous gagnez davantage."
+    ],
+    [
+     46,
+     "N’ayant plus personne à qui emprunter, vous avez tenu en mangeant moins et en réduisant toutes vos dépenses.",
+     "Dans les pays à faible revenu, la plupart des gens qui empruntent prennent de petites sommes à leur famille et à leurs amis (Banque mondiale, Findex)"
+    ],
+    [
+     47,
+     "Vous avez essayé de boire moins, mais quelques mois plus tard, les verres se sont de nouveau multipliés. Au bout d’un moment, vous avez recommencé à réduire.",
+     "Même parmi les personnes sorties d’une dépendance à l’alcool et qui buvaient peu, 27 % ont vu revenir des signes de consommation problématique en trois ans, et 4 % sont redevenues dépendantes (Dawson et al., Alcohol Clin Exp Res 2007)"
+    ],
+    [
+     47,
+     "Le jour de votre anniversaire, Usha vous attendait avec le petit-déjeuner servi sur la table."
+    ],
+    [
+     47,
+     "Vous avez revu votre ami Mahesh après bien longtemps, et vous avez parlé jusque tard dans la nuit."
+    ],
+    [
+     47,
+     "Les frais de médicaments et d’hôpital de votre mère, qui vit avec vous, ont augmenté. (−129 €)"
+    ],
+    [
+     47,
+     "Pradeep a terminé l’école et commencé à travailler."
+    ],
+    [
+     48,
+     "Vous avez partagé de la nourriture avec des voisins dans le besoin."
+    ],
+    [
+     48,
+     "Quelqu’un que vous ne connaissiez pas a retrouvé votre portefeuille perdu et vous l’a rendu. Le monde était plus bienveillant que vous ne le pensiez.",
+     "Lors d’une expérience où plus de 17 000 portefeuilles ont été « perdus » volontairement dans 40 pays, ceux qui contenaient de l’argent ont été rendus plus souvent, et non moins (Science, 2019)"
+    ]
+   ],
+   "decision": {
+    "id": "buy",
+    "question": "Rouler à moto ?",
+    "about": "Le prix est d’environ 2 778 € (aux prix français). Les trajets pour le travail et les courses deviennent bien plus faciles, mais le risque d’accident augmente aussi. Vos économies ne suffisent pas : il faudrait l’acheter à crédit.",
+    "fact": "Dans le monde, environ 21 % des personnes tuées sur la route circulaient à moto ou sur un autre deux-roues ou trois-roues motorisé (OMS 2023) · Mortalité routière en Inde : environ 15,4 décès pour 100 000 habitants · Un casque sûr et de qualité réduit le risque de mourir dans un accident à moins d’un sixième, et celui de lésion cérébrale jusqu’à 74 % (OMS 2023)",
+    "choices": [
+     {
+      "key": "loan",
+      "label": "Acheter une moto à crédit",
+      "note": "Crédit sur 4 ans · Dette d’environ 2 778 € · Avec intérêts"
+     },
+     {
+      "key": "never",
+      "label": "Ne jamais rouler à moto",
+      "note": "Cette question ne reviendra pas"
+     },
+     {
+      "key": "no",
+      "label": "Y réfléchir plus tard",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "loan": 0.523,
+    "never": 0.107,
+    "no": 0.371
+   },
+   "methode": "même menu",
+   "base": 197,
+   "choisi": "loan"
+  },
+  {
+   "age": 49,
+   "year": 2075,
+   "events": [
+    [
+     48,
+     "Décision : Acheter une moto à crédit"
+    ],
+    [
+     48,
+     "Vous avez acheté une moto à crédit. Vous allez la rembourser au cours des prochaines années."
+    ],
+    [
+     48,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     48,
+     "Pradeep travaille comme employé d'hôtel ou de tourisme."
+    ],
+    [
+     49,
+     "La pollution a duré des jours : la gorge qui gratte, les yeux qui piquent.",
+     "En Inde, l’air extérieur que respirent les habitants des campagnes contient en moyenne 48 µg/m³ de particules fines (PM2,5) par an, environ 10 fois la valeur guide de l’OMS (5 µg/m³) (2019 ; OMS)"
+    ]
+   ],
+   "decision": {
+    "id": "care",
+    "question": "Qui va s’occuper de votre mère ?",
+    "about": "Votre mère, qui vit avec vous, a désormais du mal à se déplacer.",
+    "fact": "Dans les pays à revenu faible et intermédiaire, l’essentiel des soins aux personnes âgées est assuré par la famille, surtout par les femmes (OMS)",
+    "choices": [
+     {
+      "key": "home",
+      "label": "Vous en occuper vous-même",
+      "note": "Relations↑ Revenu↓"
+     },
+     {
+      "key": "pay",
+      "label": "Engager une aide à domicile",
+      "note": "Des frais"
+     },
+     {
+      "key": "sib",
+      "label": "Demander à vos frères et sœurs",
+      "note": "Relations↓"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "home": 0.413,
+    "pay": 0.326,
+    "sib": 0.261
+   },
+   "methode": "même menu",
+   "base": 46,
+   "choisi": "home"
+  },
+  {
+   "age": 50,
+   "year": 2076,
+   "events": [
+    [
+     49,
+     "Décision : Vous en occuper vous-même"
+    ],
+    [
+     49,
+     "Vous avez décidé de vous occuper vous-même de votre mère, qui vit avec vous, et avez réduit vos heures de travail."
+    ],
+    [
+     49,
+     "Vous avez rassemblé les gens du quartier pour taper dans un ballon et transpirer un bon coup."
+    ],
+    [
+     49,
+     "Vous avez appris la pêche à un jeune du voisinage. Cela vous a rappelé vos propres débuts."
+    ],
+    [
+     50,
+     "Vous avez eu cinquante ans."
+    ],
+    [
+     50,
+     "Vous avez parlé d’avenir avec Usha jusque tard dans la nuit. Sans que vous l’ayez vu venir, l’enfant avait bien grandi."
+    ]
+   ],
+   "decision": {
+    "id": "reflect",
+    "question": "Une pause · 50 ans",
+    "about": "Parmi les personnes nées la même année en Inde, 90 % atteignent l’âge de cinquante ans.",
+    "fact": null,
+    "choices": [
+     {
+      "key": "write",
+      "label": "Le noter et continuer à vivre",
+      "note": "Ce que vous écrivez reste dans le récit de cette vie"
+     },
+     {
+      "key": "skip",
+      "label": "Le garder pour soi et continuer à vivre",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "write": 0.0,
+    "skip": 1.0
+   },
+   "methode": "même menu",
+   "base": 878,
+   "choisi": "skip"
+  },
+  {
+   "age": 50,
+   "year": 2076,
+   "events": [],
+   "decision": {
+    "id": "hobby",
+    "question": "Commencer un nouveau loisir ?",
+    "about": "Vos loisirs actuels : théâtre, rencontres religieuses",
+    "fact": null,
+    "choices": [
+     {
+      "key": "dance",
+      "label": "Danse",
+      "note": "Bonheur+ Santé+ Relations+"
+     },
+     {
+      "key": "reading",
+      "label": "Lecture",
+      "note": "Bonheur+ Savoir+"
+     },
+     {
+      "key": "sp_football",
+      "label": "Football",
+      "note": "Bonheur+ Santé+ Relations+"
+     },
+     {
+      "key": "none",
+      "label": "Vos loisirs actuels suffisent",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "dance": 0.26,
+    "reading": 0.229,
+    "sp_football": 0.283,
+    "none": 0.228
+   },
+   "methode": "taux quand proposée",
+   "base": 480,
+   "choisi": "sp_football"
+  },
+  {
+   "age": 52,
+   "year": 2078,
+   "events": [
+    [
+     50,
+     "Décision : Football"
+    ],
+    [
+     50,
+     "Football : c’est devenu une vraie passion."
+    ],
+    [
+     50,
+     "Votre famille et vos proches ont pris à leur charge 744 € d’une dette que vous n’arriviez plus à rembourser depuis des années, selon leurs moyens. Il vous reste 15 200 € à rembourser."
+    ],
+    [
+     50,
+     "Votre mère a quitté ce monde à 86 ans. (Septicémie)"
+    ],
+    [
+     50,
+     "Désormais, vos deux parents ne sont plus là. Vous avez partagé les frais d’obsèques avec vos frères et sœurs. (−233 €)"
+    ],
+    [
+     50,
+     "Usha a terminé l’école et commencé à travailler."
+    ],
+    [
+     51,
+     "Une canicule record s’est abattue sur la région."
+    ],
+    [
+     51,
+     "Avec de vieux amis enfin réunis, vous avez parlé du bon vieux temps jusque tard dans la nuit."
+    ],
+    [
+     51,
+     "Vous avez passé plusieurs jours au lit avec un mauvais rhume."
+    ],
+    [
+     51,
+     "Usha travaille comme éleveuse."
+    ],
+    [
+     52,
+     "Vous avez fait un voyage avec la famille d’une sœur. Les cousins sont vite devenus amis. (−93 €)"
+    ]
+   ],
+   "decision": {
+    "id": "kidwed",
+    "question": "Pradeep se marie",
+    "about": "Pradeep, 24 ans, a amené à la maison la personne de sa vie. Dans ce pays, il est courant que les parents prennent en charge une grande partie des frais du mariage.",
+    "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 4 661 € (aux prix français). Vos économies : rien (dette : 15 400 €).",
+    "choices": [
+     {
+      "key": "help",
+      "label": "Participer généreusement aux frais du mariage",
+      "note": "Environ 4 661 €"
+     },
+     {
+      "key": "little",
+      "label": "Donner un peu, selon vos moyens",
+      "note": "Environ 1 165 €"
+     },
+     {
+      "key": "none",
+      "label": "Offrir seulement vos vœux de bonheur",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "help": 0.37,
+    "little": 0.42,
+    "none": 0.21
+   },
+   "methode": "même menu",
+   "base": 238,
+   "choisi": "little"
+  },
+  {
+   "age": 54,
+   "year": 2080,
+   "events": [
+    [
+     52,
+     "Décision : Donner un peu, selon vos moyens"
+    ],
+    [
+     52,
+     "Pradeep a célébré son mariage. Vous avez contribué selon vos moyens."
+    ],
+    [
+     52,
+     "Après leur mariage, Pradeep et la personne qui partage sa vie ont décidé de s’installer chez vous."
+    ],
+    [
+     52,
+     "Vous avez fait refaire entièrement le moteur de votre moto. (−186 €)"
+    ],
+    [
+     52,
+     "Usha a commencé à verser chaque mois une partie de son salaire au foyer. Vous en ressentiez de la gratitude, et un peu de gêne aussi."
+    ],
+    [
+     53,
+     "Vous avez tenu le premier rôle sur une petite scène. Au rappel, les applaudissements n’en finissaient plus."
+    ]
+   ],
+   "decision": {
+    "id": "illness",
+    "question": "Une douleur qui serre le haut du ventre",
+    "about": "Après chaque repas gras, une douleur serrée sous les côtes, à droite, vous empêche de dormir la nuit. Votre part des frais d’hôpital s’élève à environ 1 263 € (aux prix français). Vos économies : rien (dette : 16 200 €).",
+    "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+    "choices": [
+     {
+      "key": "hospital",
+      "label": "Se faire soigner à l’hôpital",
+      "note": "Quitte à s’endetter"
+     },
+     {
+      "key": "cheap",
+      "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+      "note": "Économique, mais risqué"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "hospital": 0.699,
+    "cheap": 0.301
+   },
+   "methode": "même menu",
+   "base": 459,
+   "choisi": "hospital"
+  },
+  {
+   "age": 56,
+   "year": 2082,
+   "events": [
+    [
+     54,
+     "Décision : Se faire soigner à l’hôpital"
+    ],
+    [
+     54,
+     "À l’hôpital, le diagnostic a été posé : calculs biliaires. Grâce aux soins, vous avez retrouvé la santé."
+    ],
+    [
+     54,
+     "N’ayant plus personne à qui emprunter, vous avez tenu en mangeant moins et en réduisant toutes vos dépenses.",
+     "Dans les pays à faible revenu, la plupart des gens qui empruntent prennent de petites sommes à leur famille et à leurs amis (Banque mondiale, Findex)"
+    ],
+    [
+     55,
+     "Vous passiez souvent voir une personne âgée du voisinage qui vivait seule."
+    ],
+    [
+     55,
+     "Vous avez retrouvé de vieux amis et vous avez parlé toute la nuit."
+    ],
+    [
+     55,
+     "Votre premier petit-enfant est né ! Votre fils Pradeep a eu un bébé (garçon)."
+    ],
+    [
+     56,
+     "Un plat que vous faisiez pour la première fois était plutôt réussi, et vous l'avez partagé avec les vôtres. On vous a demandé d'en refaire."
+    ]
+   ],
+   "decision": {
+    "id": "kidwed",
+    "question": "Usha se marie",
+    "about": "Usha, 25 ans, a amené à la maison la personne de sa vie. Dans ce pays, il est courant que les parents prennent en charge une grande partie des frais du mariage. Il faut aussi réunir une dot d’environ 4 461 €.",
+    "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 4 661 € (aux prix français). Vos économies : rien (dette : 16 100 €).",
+    "choices": [
+     {
+      "key": "help",
+      "label": "Participer généreusement aux frais du mariage",
+      "note": "Environ 4 661 €"
+     },
+     {
+      "key": "little",
+      "label": "Donner un peu, selon vos moyens",
+      "note": "Environ 1 165 €"
+     },
+     {
+      "key": "none",
+      "label": "Offrir seulement vos vœux de bonheur",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "help": 0.37,
+    "little": 0.42,
+    "none": 0.21
+   },
+   "methode": "même menu",
+   "base": 238,
+   "choisi": "little"
+  },
+  {
+   "age": 57,
+   "year": 2083,
+   "events": [
+    [
+     56,
+     "Décision : Donner un peu, selon vos moyens"
+    ],
+    [
+     56,
+     "Usha a célébré son mariage. Vous avez contribué selon vos moyens. Vous avez remis 4 461 € de dot à la famille du marié.",
+     "En Inde, la loi de 1961 sur l’interdiction de la dot interdit de donner ou de recevoir une dot, mais dans 95 % des mariages ruraux de 1960 à 2008, la famille de la mariée en a versé une (REDS 2006, Anukriti, Kwon et Prakash 2021). En moyenne, environ 32 000 roupies aux prix de 2005, soit à peu près 1,4 fois le revenu annuel médian d’un ménage rural (IHDS 2005)."
+    ],
+    [
+     56,
+     "Usha a emménagé chez ses beaux-parents."
+    ],
+    [
+     56,
+     "30 ans de mariage. Preeti et vous avez dîné en toute simplicité."
+    ],
+    [
+     56,
+     "Votre famille et vos proches ont pris à leur charge 1 251 € d’une dette que vous n’arriviez plus à rembourser depuis des années, selon leurs moyens. Il vous reste 18 400 € à rembourser."
+    ],
+    [
+     56,
+     "Votre fils Pradeep a eu un bébé (fille). Vous avez maintenant 2 petits-enfants."
+    ],
+    [
+     56,
+     "Cette année, votre patrimoine a baissé de 2 327 €. Dot −4 461 € · Aide au mariage des enfants −1 165 € · Intérêts de la dette −913 € · Dépenses réduites (plus personne ne voulait vous prêter) +1 948 €"
+    ],
+    [
+     57,
+     "Vous avez passé Diwali en famille."
+    ]
+   ],
+   "decision": {
+    "id": "loan",
+    "question": "Votre dette s’est alourdie",
+    "about": "Vous devez 18 400 € (aux prix français).",
+    "fact": "Dans le monde, environ 24 % des adultes n’ont pas de compte bancaire (Banque mondiale, Findex 2021)",
+    "choices": [
+     {
+      "key": "family",
+      "label": "Demander de l’aide à votre famille",
+      "note": "Relations↓"
+     },
+     {
+      "key": "lender",
+      "label": "Emprunter à un usurier",
+      "note": "Des intérêts à payer"
+     },
+     {
+      "key": "sellv",
+      "label": "Vendre votre moto",
+      "note": "Patrimoine↓"
+     },
+     {
+      "key": "sellh",
+      "label": "Vendre la maison",
+      "note": "Une grosse somme · Vous perdez votre logement"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "family": 0.376,
+    "lender": 0.366,
+    "sellv": 0.158,
+    "sellh": 0.099
+   },
+   "methode": "même menu",
+   "base": 101,
+   "choisi": "family"
+  },
+  {
+   "age": 60,
+   "year": 2086,
+   "events": [
+    [
+     57,
+     "Décision : Demander de l’aide à votre famille"
+    ],
+    [
+     57,
+     "Selon leurs moyens, votre famille et vos proches ont rassemblé 32 € pour vous, ce qui a permis de rembourser une partie de la dette. Il vous reste 18 300 € à rembourser."
+    ],
+    [
+     57,
+     "Vous avez perdu le sommeil à cause d’une dette de 18 300 € (aux prix français), prêt immobilier compris."
+    ],
+    [
+     57,
+     "Vous avez fait remplacer toute la vieille plomberie. Cela a coûté cher. (−466 €)"
+    ],
+    [
+     57,
+     "Pendant des années, vous avez souvent sauté des repas, et votre corps s’est visiblement affaibli.",
+     "En 2023, environ 733 millions de personnes dans le monde ont souffert de la faim (FAO, SOFI 2024)"
+    ],
+    [
+     57,
+     "Votre fils Pradeep a eu un bébé (garçon). Vous avez maintenant 3 petits-enfants."
+    ],
+    [
+     58,
+     "Vous vous êtes fait des amis parmi vos partenaires de football."
+    ],
+    [
+     58,
+     "Vous avez appris la pêche à un jeune du voisinage. Cela vous a rappelé vos propres débuts."
+    ],
+    [
+     58,
+     "Une grosse dispute a éclaté avec une sœur ; la réconciliation est venue quelques mois plus tard."
+    ],
+    [
+     58,
+     "2 nouveaux petits-enfants sont nés. Vous avez maintenant 5 petits-enfants."
+    ],
+    [
+     59,
+     "Votre ami Kunal n’a pas oublié votre anniversaire et vous a envoyé un petit cadeau."
+    ],
+    [
+     59,
+     "Votre ami de longue date Kunal a quitté ce monde."
+    ],
+    [
+     59,
+     "En travaillant sous la chaleur de midi, vous avez eu un étourdissement et dû vous arrêter pour vous reposer."
+    ],
+    [
+     59,
+     "Votre fils Pradeep a eu un bébé (fille). Vous avez maintenant 6 petits-enfants."
+    ],
+    [
+     60,
+     "Avec vos frères et sœurs, vous avez décidé de vous retrouver chaque année à une date fixée. À chaque fois, les souvenirs d’enfance étaient intarissables."
+    ]
+   ],
+   "decision": {
+    "id": "retire",
+    "question": "L’heure de la retraite ?",
+    "about": "Vous n’avez pas de pension. Vos enfants devenus adultes pourraient vous envoyer environ 142 € par mois aux prix français. Avec ce que vos enfants vous envoient, vous pouvez vous en sortir en faisant attention.",
+    "fact": "Dans le monde, environ 77 % des personnes ayant dépassé l’âge de la retraite perçoivent une pension, mais seulement 23 % environ dans les pays à faible revenu (OIT 2021)",
+    "choices": [
+     {
+      "key": "retire",
+      "label": "Prendre votre retraite",
+      "note": "Temps libre↑ Revenu↓"
+     },
+     {
+      "key": "less",
+      "label": "Passer à temps partiel",
+      "note": "Environ la moitié du salaire · moins dur pour le corps"
+     },
+     {
+      "key": "work",
+      "label": "Continuer à travailler",
+      "note": "Garder votre revenu"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "retire": 0.271,
+    "less": 0.184,
+    "work": 0.546
+   },
+   "methode": "même menu",
+   "base": 207,
+   "choisi": "work"
+  },
+  {
+   "age": 61,
+   "year": 2087,
+   "events": [
+    [
+     60,
+     "En repensant à votre vie, vous avez vu revenir un à un les visages des personnes à qui vous deviez tant."
+    ],
+    [
+     60,
+     "Vos enfants, désormais adultes, ont commencé à se cotiser pour vous envoyer de l’argent chaque mois."
+    ],
+    [
+     61,
+     "Vous avez raconté à votre petit-enfant des histoires du village, là où vous êtes né."
+    ]
+   ],
+   "decision": {
+    "id": "sm_gkmoney",
+    "question": "De l’argent de poche pour les petits-enfants ?",
+    "about": "Vos petits-enfants sont venus vous voir. Que leur glisser dans la main au moment de partir ?",
+    "fact": null,
+    "choices": [
+     {
+      "key": "sneak",
+      "label": "Leur glisser un peu d’argent à l’insu de leurs parents",
+      "note": "Environ 47 €"
+     },
+     {
+      "key": "bank",
+      "label": "Leur ouvrir un compte d’épargne à leur nom",
+      "note": "Environ 233 €"
+     },
+     {
+      "key": "hug",
+      "label": "Simplement les serrer fort dans vos bras",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "sneak": 0.4,
+    "bank": 0.0,
+    "hug": 0.6
+   },
+   "methode": "même menu",
+   "base": 5,
+   "choisi": "hug"
+  },
+  {
+   "age": 66,
+   "year": 2092,
+   "events": [
+    [
+     61,
+     "Décision : Simplement les serrer fort dans vos bras"
+    ],
+    [
+     61,
+     "Vous avez serré chacun de vos petits-enfants fort dans vos bras."
+    ],
+    [
+     61,
+     "Usha, qui vit désormais de son côté, a appelé pour prendre de vos nouvelles."
+    ],
+    [
+     61,
+     "Vous avez passé plusieurs jours au lit avec un mauvais rhume."
+    ],
+    [
+     61,
+     "Le fils de Pradeep a commencé l’école. Vous lui avez acheté un cartable."
+    ],
+    [
+     62,
+     "Vous avez fait les courses à la place d’un voisin malade."
+    ],
+    [
+     62,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     62,
+     "Une crise financière a éclaté. Les banques ont vacillé et les entreprises ont réduit leurs effectifs.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     62,
+     "Votre famille et vos proches ont pris à leur charge 423 € d’une dette que vous n’arriviez plus à rembourser depuis des années, selon leurs moyens. Il vous reste 14 000 € à rembourser."
+    ],
+    [
+     63,
+     "Votre enfant qui vit ailleurs vous a téléphoné sans raison particulière : « Je voulais juste entendre ta voix. »"
+    ],
+    [
+     63,
+     "Le fils de Pradeep a commencé l’école. Vous lui avez acheté un cartable."
+    ],
+    [
+     64,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     64,
+     "L’alcool a failli reprendre de la place, mais une fois de plus, vous avez posé le verre."
+    ],
+    [
+     64,
+     "Vous avez prêté main-forte pour remettre en état le chemin du village.",
+     "Un peu plus d’un adulte sur cinq dans le monde dit avoir fait du bénévolat au cours du mois écoulé (CAF World Giving Index)"
+    ],
+    [
+     64,
+     "Depuis quelques années, les prix de l’immobilier baissent ici. Votre logement vaut moins, mais acheter coûte aussi moins cher."
+    ],
+    [
+     65,
+     "65 ans. Parmi les garçons qui ont vu le jour en Inde la même année que vous, environ 75 % sont encore en vie."
+    ],
+    [
+     65,
+     "Vous marchez et lisez chaque jour. On vous dit que vous avez meilleure mémoire que la plupart des gens de votre âge.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     65,
+     "La chaleur s’est prolongée, et pendant un temps, votre corps vous a paru lourd."
+    ],
+    [
+     65,
+     "Au travail, Pradeep a obtenu le poste de responsable de l'hébergement. Le soir même, toute la famille l’a fêté autour de la table."
+    ],
+    [
+     66,
+     "40 ans de mariage. Preeti vous a remis une lettre écrite à la main."
+    ]
+   ],
+   "decision": {
+    "id": "mentor",
+    "question": "Les soucis d’une jeune recrue",
+    "about": "Une jeune recrue de votre travail vous confie ses doutes : l’avenir lui semble bouché.",
+    "fact": null,
+    "choices": [
+     {
+      "key": "help",
+      "label": "Prendre le temps d’écouter",
+      "note": null
+     },
+     {
+      "key": "busy",
+      "label": "Prétexter le travail et remettre à plus tard",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "help": 0.567,
+    "busy": 0.433
+   },
+   "methode": "même menu",
+   "base": 127,
+   "choisi": "help"
+  },
+  {
+   "age": 70,
+   "year": 2096,
+   "events": [
+    [
+     66,
+     "Décision : Prendre le temps d’écouter"
+    ],
+    [
+     66,
+     "Le visage plus léger, cette personne vous a dit merci."
+    ],
+    [
+     66,
+     "Votre niveau en football est devenu remarquable. Au club, on disait de vous que l’âge n’avait pas de prise sur vous."
+    ],
+    [
+     66,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     67,
+     "Chaque matin, vous alliez marcher avec les gens du quartier, de quoi transpirer un bon coup."
+    ],
+    [
+     69,
+     "Par un après-midi de pluie, vous avez regardé par la fenêtre en laissant passer les heures, sans rien faire."
+    ],
+    [
+     69,
+     "Vous passiez souvent voir une personne âgée du voisinage qui vivait seule."
+    ],
+    [
+     70,
+     "Vous avez revu votre ami Ashok après bien longtemps, et vous avez parlé jusque tard dans la nuit."
+    ]
+   ],
+   "decision": {
+    "id": "reflect",
+    "question": "Une pause · 70 ans",
+    "about": "Parmi les personnes nées la même année en Inde, seulement 65 % atteignent soixante-dix ans.",
+    "fact": null,
+    "choices": [
+     {
+      "key": "write",
+      "label": "Le noter et continuer à vivre",
+      "note": "Ce que vous écrivez reste dans le récit de cette vie"
+     },
+     {
+      "key": "skip",
+      "label": "Le garder pour soi et continuer à vivre",
+      "note": null
+     }
+    ]
+   },
+   "parts_estimees": {
+    "write": 0.0,
+    "skip": 1.0
+   },
+   "methode": "même menu",
+   "base": 878,
+   "choisi": "skip"
+  },
+  {
+   "age": 72,
+   "year": 2098,
+   "events": [
+    [
+     70,
+     "Vous vous êtes retrouvés entre frères et sœurs pour évoquer le souvenir de vos parents disparus."
+    ],
+    [
+     70,
+     "Vous avez retrouvé de vieux amis perdus de vue depuis un moment, et chacun a raconté ce qu’il devenait."
+    ],
+    [
+     70,
+     "Votre famille s’est réunie pour vos 70 ans. Sur la photo de groupe, vous étiez au beau milieu."
+    ],
+    [
+     71,
+     "Votre ami de longue date Ashok a quitté ce monde."
+    ],
+    [
+     71,
+     "Usha a réparé sans un mot ce qui était cassé dans la maison avant de repartir."
+    ],
+    [
+     71,
+     "Vous avez passé Diwali en famille."
+    ],
+    [
+     71,
+     "L’économie mondiale est entrée en récession. Les commandes des usines se sont taries et les emplois se sont raréfiés.",
+     "Au cours des 60 dernières années, les économies avancées sont entrées en récession environ une fois par décennie, et chaque pays a connu une crise financière avec une probabilité d’environ 2 % par an (FMI ; Laeven et Valencia 2018)"
+    ],
+    [
+     71,
+     "Votre sœur aînée a quitté ce monde à 79 ans. (Accident vasculaire cérébral)"
+    ],
+    [
+     71,
+     "Votre partenaire, Preeti, a cessé de travailler et a pris sa retraite."
+    ],
+    [
+     71,
+     "La jeune recrue qui vous avait confié ses doutes il y a quelques années vous a envoyé une invitation à son mariage, en disant que c’était grâce à vous."
+    ],
+    [
+     71,
+     "Cette année, votre patrimoine a baissé de 1 184 €. Variation de la valeur du logement −1 602 € · Intérêts de la dette −545 € · Frais de loisirs −54 € · Aide de vos enfants pour vivre +582 €"
+    ],
+    [
+     72,
+     "Une année où tout allait mal, votre ami Mahesh a débarqué sans un mot et vous a offert un repas."
+    ]
+   ],
+   "decision": {
+    "id": "diag",
+    "question": "Diagnostic : hypertension",
+    "about": "Il faut prendre un traitement régulièrement et suivre son état de près. Les médicaments restant à votre charge coûtent environ 75 € par an (aux prix français).",
+    "fact": "Dans le monde, environ 1,3 milliard d’adultes de 30 à 79 ans ont de l’hypertension, et près de la moitié d’entre eux l’ignorent (OMS 2023)",
+    "choices": [
+     {
+      "key": "treat",
+      "label": "Suivre le traitement avec régularité",
+      "note": "Santé préservée, mais coûteux"
+     },
+     {
+      "key": "life",
+      "label": "Prendre le traitement, mieux manger et bouger davantage",
+      "note": "Coûteux · Risque ↓"
+     },
+     {
+      "key": "ignore",
+      "label": "Se dire que ça ira, et tenir le coup",
+      "note": "Économique, mais risqué"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "treat": 0.512,
+    "life": 0.131,
+    "ignore": 0.357
+   },
+   "methode": "même menu",
+   "base": 84,
+   "choisi": "treat"
+  },
+  {
+   "age": 73,
+   "year": 2099,
+   "events": [
+    [
+     72,
+     "Vous avez suivi des cours à la maison de quartier et appris de nouvelles choses.",
+     "Continuer d’apprendre, garder des liens avec les autres et faire de l’exercice réduisent le risque de démence (Commission du Lancet sur la démence, 2024)"
+    ],
+    [
+     72,
+     "Les photos laissées par votre sœur aînée vous ont rappelé la ruelle où vous couriez ensemble quand vous étiez enfants."
+    ]
+   ],
+   "decision": {
+    "id": "loan",
+    "question": "Votre dette s’est alourdie",
+    "about": "Vous devez 9 713 € (aux prix français).",
+    "fact": "Dans le monde, environ 24 % des adultes n’ont pas de compte bancaire (Banque mondiale, Findex 2021)",
+    "choices": [
+     {
+      "key": "family",
+      "label": "Demander de l’aide à votre famille",
+      "note": "Relations↓"
+     },
+     {
+      "key": "lender",
+      "label": "Emprunter à un usurier",
+      "note": "Des intérêts à payer"
+     },
+     {
+      "key": "sellv",
+      "label": "Vendre votre moto",
+      "note": "Patrimoine↓"
+     },
+     {
+      "key": "sellh",
+      "label": "Vendre la maison",
+      "note": "Une grosse somme · Vous perdez votre logement"
+     }
+    ]
+   },
+   "parts_estimees": {
+    "family": 0.376,
+    "lender": 0.366,
+    "sellv": 0.158,
+    "sellh": 0.099
+   },
+   "methode": "même menu",
+   "base": 101,
+   "choisi": "family"
+  },
+  {
+   "age": 75,
+   "year": 2101,
+   "events": [
+    [
+     73,
+     "Décision : Demander de l’aide à votre famille"
+    ],
+    [
+     73,
+     "Selon leurs moyens, votre famille et vos proches ont rassemblé 31 € pour vous, ce qui a permis de rembourser une partie de la dette. Il vous reste 9 682 € à rembourser."
+    ],
+    [
+     73,
+     "En travaillant sous la chaleur de midi, vous avez eu un étourdissement et dû vous arrêter pour vous reposer."
+    ],
+    [
+     73,
+     "Vous avez passé du temps avec vos petits-enfants."
+    ],
+    [
+     73,
+     "Depuis quelques années, les prix de l’immobilier baissent ici. Votre logement vaut moins, mais acheter coûte aussi moins cher."
+    ],
+    [
+     74,
+     "Ce que vous avez commencé à apprendre sur le tard devient peu à peu naturel."
+    ],
+    [
+     74,
+     "Vous avez eu la grippe pendant une semaine."
+    ],
+    [
+     74,
+     "Le fils de Pradeep a obtenu une place à l’université. Vous lui avez glissé un peu d’argent dans la main pour fêter ça."
+    ],
+    [
+     75,
+     "Usha a acheté un logement. À la pendaison de crémaillère, vous en avez longuement fait le tour."
+    ],
+    [
+     75,
+     "À 75 ans, votre vie a pris fin (pneumonie ou autre infection respiratoire basse)."
+    ]
+   ],
+   "fin": {
+    "age": 75,
+    "cause": "lri",
+    "where": "IND"
+   },
+   "etat": {
+    "age": 75,
+    "year": 2101,
+    "country": "IND",
+    "place": "village",
+    "job": "fisher",
+    "working": true,
+    "income_ppp": 2450,
+    "income_percentile": 0.049,
+    "net_worth_ppp": 8612,
+    "health": 55,
+    "happiness": 62,
+    "knowledge": 15,
+    "bonds": 88,
+    "education": "primary",
+    "in_school": false,
+    "partnered": true,
+    "married": true,
+    "children": 2,
+    "electricity_at_home": true,
+    "name": "Manoj Mohanty",
+    "sex": "M",
+    "born_in": "IND",
+    "born_year": 2026,
+    "city": null,
+    "job_name": "pêcheur(euse)",
+    "home_owned": true,
+    "abroad": false,
+    "refugee": false,
+    "partner": {
+     "name": "Preeti Naik",
+     "age": 74,
+     "sex": "F",
+     "married": true,
+     "job": null,
+     "faith": "hindu"
+    },
+    "kids": [
+     {
+      "name": "Pradeep Mohanty",
+      "sex": "M",
+      "age": 47,
+      "alive": true,
+      "at_home": true,
+      "abroad": false,
+      "married": true,
+      "job": "hotel"
+     },
+     {
+      "name": "Usha Mohanty",
+      "sex": "F",
+      "age": 44,
+      "alive": true,
+      "at_home": false,
+      "abroad": false,
+      "married": true,
+      "job": "herder"
+     }
+    ],
+    "mother": {
+     "alive": false,
+     "age": null,
+     "job": null,
+     "at_home": false
+    },
+    "father": {
+     "alive": false,
+     "age": null,
+     "job": null,
+     "at_home": false
+    },
+    "siblings": [
+     {
+      "age": 81,
+      "sex": "F",
+      "older": true,
+      "at_home": false
+     }
+    ],
+    "household": {
+     "size": 3,
+     "with": {
+      "mother": false,
+      "father": false,
+      "stepfather": false,
+      "partner": true,
+      "other_wife": false,
+      "siblings": 0,
+      "children": 1,
+      "stepchildren": 0
+     }
+    },
+    "who": {
+     "faith": "hindu",
+     "group": null,
+     "orientation": "straight",
+     "disability": [],
+     "caste": {
+      "id": "obc",
+      "name": "Autres classes défavorisées (OBC)"
+     }
+    }
+   }
+  }
+ ],
+ "appels": 38
+}

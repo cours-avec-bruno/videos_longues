@@ -1,0 +1,4867 @@
+[
+ {
+  "meta": {
+   "api": "1in8b-engine",
+   "version": "v1",
+   "status": "beta",
+   "kind": "life",
+   "engine": "0.9.52",
+   "simulated": "simulated lives that follow real statistics: not real people, records, measurements or forecasts",
+   "docs": "https://1in8b.life/en/api/",
+   "terms": "https://1in8b.life/en/api/#terms",
+   "credit": "1in8b Engine (1in8b.life)",
+   "tier": "free"
+  },
+  "query": {
+   "country": null,
+   "sex": null,
+   "year": null,
+   "future": false,
+   "n": 1,
+   "seed": 20261107,
+   "lang": "fr"
+  },
+  "lives": [
+   {
+    "seed": 20261107,
+    "country": "KEN",
+    "born_year": 2026,
+    "sex": "F",
+    "name": "Purity Ochieng",
+    "born_in_city": false,
+    "education": "upper_secondary",
+    "education_at_25": "upper_secondary",
+    "jobs": [
+     {
+      "id": "fisher",
+      "from": 18,
+      "to": 31
+     },
+     {
+      "id": "farm",
+      "from": 31,
+      "to": 66
+     }
+    ],
+    "first_partner_age": 19,
+    "children": 5,
+    "first_child_age": 20,
+    "siblings": 3,
+    "moves": [],
+    "age_at_death": 66,
+    "cause_of_death": "ihd",
+    "died_in": "KEN",
+    "who": {
+     "faith": "christian",
+     "group": null,
+     "orientation": "straight",
+     "disability": [],
+     "caste": null
+    },
+    "family_at_birth": {
+     "parents": "mother_and_father",
+     "mother_age": 28,
+     "father_age": 34,
+     "father_there": false,
+     "older_siblings": 2,
+     "family_fifth": 3
+    },
+    "met": [
+     {
+      "age": 5,
+      "year": 2031,
+      "kind": "drought",
+      "severe": true,
+      "near": true
+     },
+     {
+      "age": 12,
+      "year": 2038,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 22,
+      "year": 2048,
+      "kind": "power_cuts"
+     },
+     {
+      "age": 26,
+      "year": 2052,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 39,
+      "year": 2065,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 46,
+      "year": 2072,
+      "kind": "economic_crisis"
+     }
+    ],
+    "decisions": [
+     {
+      "age": 2,
+      "id": "temper",
+      "question": "Deux ans, un visiteur inconnu",
+      "about": "Purity marche maintenant plutôt bien. Quand un visiteur inconnu arrive à la maison, que fait l’enfant en premier ? Votre choix fait pencher le tempérament de l’enfant de ce côté ; ces moments s’additionnent, et il se dessine vers cinq ans.",
+      "fact": "Le tempérament naît à la fois de ce que l’on reçoit à la naissance et de ce que l’on vit en grandissant. D’après l’ensemble des études sur les jumeaux, environ 40 % des différences de personnalité s’expliquent par les gènes (Vukasović & Bratko 2015)",
+      "choices": [
+       {
+        "key": "cur",
+        "label": "Examiner longuement le sac et les chaussures du visiteur",
+        "note": null
+       },
+       {
+        "key": "act",
+        "label": "Courir dans tous les sens devant le visiteur",
+        "note": null
+       },
+       {
+        "key": "warm",
+        "label": "S’approcher du visiteur et lui tendre ce qu’on a dans la main",
+        "note": null
+       },
+       {
+        "key": "grit",
+        "label": "Vouloir ouvrir toute seule le paquet du visiteur et s’y tenir jusqu’au bout",
+        "note": null
+       }
+      ],
+      "chose": "act"
+     },
+     {
+      "age": 5,
+      "id": "reflect",
+      "question": "Une pause · 5 ans",
+      "about": "En Kenya, 3,6 % des enfants n’atteignent pas leur cinquième anniversaire. Cette enfant l’a atteint.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 7,
+      "id": "hobby",
+      "question": "Ce que vous aimez faire",
+      "about": "Que ferez-vous de votre temps libre ?",
+      "fact": null,
+      "choices": [
+       {
+        "key": "art",
+        "label": "Dessin et peinture",
+        "note": "Bonheur+ Savoir+"
+       },
+       {
+        "key": "games",
+        "label": "Jeux vidéo",
+        "note": "Bonheur+ Santé−"
+       },
+       {
+        "key": "music",
+        "label": "Chant et musique",
+        "note": "Bonheur+ Relations+"
+       }
+      ],
+      "chose": "art"
+     },
+     {
+      "age": 12,
+      "id": "school2",
+      "question": "Aller au collège ?",
+      "about": "Vous avez terminé l’école primaire. Pour continuer, il faut payer les frais de scolarité, l’uniforme et le transport.",
+      "fact": "En Kenya, environ 87 % des enfants terminent le collège (UNESCO UIS)",
+      "choices": [
+       {
+        "key": "go",
+        "label": "Continuer à étudier",
+        "note": "Vos chances dépendent des moyens de votre famille et de vos notes"
+       },
+       {
+        "key": "work",
+        "label": "Commencer à travailler pour aider votre famille",
+        "note": "Un petit revenu, la fin de l’école"
+       }
+      ],
+      "chose": "go"
+     },
+     {
+      "age": 14,
+      "id": "school3",
+      "question": "Aller au lycée ?",
+      "about": "Vous avez terminé le collège.",
+      "fact": "En Kenya, environ 65 % des jeunes terminent le lycée (UNESCO UIS)",
+      "choices": [
+       {
+        "key": "go",
+        "label": "Aller au lycée",
+        "note": "Vos chances dépendent de vos moyens et de vos notes"
+       },
+       {
+        "key": "voc_tech",
+        "label": "Aller en école professionnelle, filière mécanique et électricité",
+        "note": "Apprendre un métier, travailler plus tôt"
+       },
+       {
+        "key": "voc_office",
+        "label": "Aller en école professionnelle, filière commerce et informatique",
+        "note": "Apprendre un métier, travailler plus tôt"
+       },
+       {
+        "key": "work",
+        "label": "Commencer à travailler",
+        "note": "Un revenu tout de suite"
+       }
+      ],
+      "chose": "go"
+     },
+     {
+      "age": 15,
+      "id": "reflect",
+      "question": "Une pause · 15 ans",
+      "about": "Cette enfant va à l’école en ce moment. Durée de scolarité attendue : 11,5 ans en Kenya. Dans ce pays, 23 % des femmes se marient avant 18 ans.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 15,
+      "id": "hobby",
+      "question": "Commencer un nouveau loisir ?",
+      "about": "Vos loisirs actuels : dessin et peinture",
+      "fact": null,
+      "choices": [
+       {
+        "key": "fishing",
+        "label": "Pêche",
+        "note": "Bonheur+ Santé+"
+       },
+       {
+        "key": "music",
+        "label": "Chant et musique",
+        "note": "Bonheur+ Relations+"
+       },
+       {
+        "key": "board",
+        "label": "Bao",
+        "note": "Bonheur+ Relations+"
+       },
+       {
+        "key": "none",
+        "label": "Vos loisirs actuels suffisent",
+        "note": null
+       }
+      ],
+      "chose": "none"
+     },
+     {
+      "age": 17,
+      "id": "stranger",
+      "question": "Quelqu’un s’effondre dans la rue",
+      "about": "Une personne que vous ne connaissez pas s’est effondrée dans la rue. Tout le monde passe sans s’arrêter.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "help",
+        "label": "L’emmener à l’hôpital",
+        "note": "Cela demande un peu de temps"
+       },
+       {
+        "key": "pass",
+        "label": "Se dire que quelqu’un d’autre aidera, et passer son chemin",
+        "note": null
+       }
+      ],
+      "chose": "pass"
+     },
+     {
+      "age": 18,
+      "id": "college",
+      "question": "Le carrefour après le diplôme",
+      "about": "Vous avez terminé le lycée. Et ensuite ?",
+      "fact": "Dans ce pays, on estime qu’environ 7 % de cette génération terminera l’université. Le Savoir indique où vous vous situez parmi les personnes de votre âge : plus il est élevé, plus l’admission est probable, mais les places sont limitées, donc rien n’est garanti",
+      "choices": [
+       {
+        "key": "uni",
+        "label": "Tenter l’entrée à l’université",
+        "note": "Chances d’admission : environ une sur deux · savoir 87 · selon vos moyens et les places"
+       },
+       {
+        "key": "job",
+        "label": "Prendre un emploi tout de suite",
+        "note": "Gagner de l’argent plus tôt"
+       },
+       {
+        "key": "abroad",
+        "label": "Partir étudier à l’étranger",
+        "note": "Coûteux, mais les possibilités sont grandes aussi"
+       },
+       {
+        "key": "acad",
+        "label": "Postuler à une école militaire",
+        "note": "Chances d’admission : plutôt faibles · pas de frais · puis une carrière d’officier"
+       }
+      ],
+      "chose": "job"
+     },
+     {
+      "age": 18,
+      "id": "partner",
+      "question": "L’amour est là",
+      "about": "Une connaissance de longue date : Daniel Owino (homme, 23 ans, tendre). Métier : éleveur.",
+      "fact": "En Kenya, l’âge moyen des femmes au premier mariage est estimé à environ 23 ans",
+      "choices": [
+       {
+        "key": "date",
+        "label": "Accepter de se voir",
+        "note": "Le temps de faire connaissance · le mariage attendra"
+       },
+       {
+        "key": "no",
+        "label": "Le cœur n’y est pas",
+        "note": null
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 18,
+      "id": "job",
+      "question": "Votre premier emploi",
+      "about": "Niveau d’études : lycée. Voici les emplois que l’on peut trouver en Kenya (campagne).",
+      "fact": "En Kenya, environ 90 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 48 % travaillent dans l’agriculture",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Paysanne (agriculture vivrière)",
+        "note": "2 434 $ US PPP par an · 142 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "o1",
+        "label": "Pêcheuse",
+        "note": "3 781 $ US PPP par an · 221 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "o2",
+        "label": "Ouvrière agricole",
+        "note": "3 293 $ US PPP par an · 192 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "wait",
+        "label": "Attendre un meilleur emploi",
+        "note": "Une année de plus à chercher"
+       }
+      ],
+      "chose": "o1"
+     },
+     {
+      "age": 19,
+      "id": "partner",
+      "question": "L’amour est là",
+      "about": "Une connaissance de longue date : Francis Maina (homme, 34 ans, sociable). Métier : mineur. Il a déjà une épouse et 2 enfants. Francis a environ 6 691 € d’économies.",
+      "fact": "En Kenya, environ 11 % des femmes mariées ont un mari qui a une autre épouse (EDS)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Se marier",
+        "note": "Relations↑ Bonheur↑"
+       },
+       {
+        "key": "date",
+        "label": "Se fréquenter, sans plus pour l’instant",
+        "note": "Remettre la décision à plus tard"
+       },
+       {
+        "key": "no",
+        "label": "Le cœur n’y est pas",
+        "note": null
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 20,
+      "id": "kids",
+      "question": "Avoir un enfant ?",
+      "about": "Vous parlez avec votre partenaire d’avoir des enfants. Francis espère un enfant depuis longtemps.",
+      "fact": "Indice de fécondité en Kenya : 3,21 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 379 décès pour 100 000 naissances vivantes (OMS 2023)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Décider de vivre sans enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 21,
+      "id": "babycare",
+      "question": "Qui va s’occuper de Muthoni ?",
+      "about": "Le premier anniversaire de Muthoni approche. Votre partenaire et vous travaillez : il faut décider qui s’occupera du bébé. Votre partenaire, Francis, propose de demander de l’aide aux grands-parents.",
+      "fact": "En Kenya, environ 72 % des femmes de 15 à 64 ans sont actives (estimation de l'OIT, 2019)",
+      "choices": [
+       {
+        "key": "me",
+        "label": "Arrêter de travailler et s’occuper soi-même du bébé",
+        "note": "Le revenu s’arrête · Du temps avec votre enfant"
+       },
+       {
+        "key": "partner",
+        "label": "Confier le bébé à votre partenaire, qui fait une pause dans son travail",
+        "note": "Le revenu de votre partenaire s’arrête quelques années"
+       },
+       {
+        "key": "gp",
+        "label": "Confier le bébé à votre mère",
+        "note": "Presque gratuit · Vous comptez sur votre mère"
+       },
+       {
+        "key": "carry",
+        "label": "Emmener le bébé au travail",
+        "note": "Épuisant, mais le bébé reste près de vous"
+       }
+      ],
+      "chose": "carry"
+     },
+     {
+      "age": 22,
+      "id": "invest",
+      "question": "Que faire de vos économies ?",
+      "about": "Vos économies atteignent 8 163 € (aux prix français). Où placer l’argent dont vous n’avez pas besoin tout de suite ? Vous pourrez changer ce choix à tout moment dans « Dépenser et investir ». Les obligations, les actions choisies vous-même et les logements à louer s’y trouvent aussi.",
+      "fact": "Sur le long terme, les rendements réels sont d’environ 1 à 2 % pour l’épargne bancaire, de 5 % par an environ pour les actions et de 3 % environ pour l’immobilier. Les actions des pays émergents fluctuent davantage, d’environ ±22 % d’une année à l’autre (UBS Global Investment Returns Yearbook, indice MSCI Emerging Markets)",
+      "choices": [
+       {
+        "key": "cash",
+        "label": "Placer l’argent sur un compte d’épargne",
+        "note": "1 à 1,5 % par an, inflation déduite · presque sans risque"
+       },
+       {
+        "key": "mix",
+        "label": "Placer l’argent dans un fonds mixte actions-obligations",
+        "note": "Environ 3,5 % par an en moyenne, inflation déduite · variations moyennes"
+       },
+       {
+        "key": "stock",
+        "label": "Investir en actions",
+        "note": "5 % par an en moyenne, inflation déduite · risque de krach"
+       },
+       {
+        "key": "property",
+        "label": "Investir dans l’immobilier",
+        "note": "3,5 % par an en moyenne, inflation déduite · quelques variations"
+       }
+      ],
+      "chose": "cash"
+     },
+     {
+      "age": 23,
+      "id": "newneighbor",
+      "question": "Une famille s’installe à côté",
+      "about": "Une famille qui a fui un conflit vient d’emménager à côté de chez vous. Vous avez du mal à vous comprendre.",
+      "fact": "Environ 69 % des réfugiés du monde vivent dans un pays voisin du leur (HCR 2024)",
+      "choices": [
+       {
+        "key": "share",
+        "label": "Apporter un plat et aller dire bonjour",
+        "note": null
+       },
+       {
+        "key": "keep",
+        "label": "Garder une distance polie",
+        "note": null
+       }
+      ],
+      "chose": "keep"
+     },
+     {
+      "age": 24,
+      "id": "kids",
+      "question": "Avoir un 2e enfant ?",
+      "about": "Vous avez 1 enfant aujourd’hui. Francis aimerait avoir un enfant de plus.",
+      "fact": "Indice de fécondité en Kenya : 3,21 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 379 décès pour 100 000 naissances vivantes (OMS 2023)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Ne plus avoir d’enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 24,
+      "id": "buy",
+      "question": "Rouler à moto ?",
+      "about": "Le prix est d’environ 3 467 € (aux prix français). Les trajets pour le travail et les courses deviennent bien plus faciles, mais le risque d’accident augmente aussi.",
+      "fact": "Dans le monde, environ 21 % des personnes tuées sur la route circulaient à moto ou sur un autre deux-roues ou trois-roues motorisé (OMS 2023) · Mortalité routière en Kenya : environ 20 décès pour 100 000 habitants · Un casque sûr et de qualité réduit le risque de mourir dans un accident à moins d’un sixième, et celui de lésion cérébrale jusqu’à 74 % (OMS 2023)",
+      "choices": [
+       {
+        "key": "buy",
+        "label": "Acheter une moto",
+        "note": "Bonheur +7 · Risque d’accident de la route ↑"
+       },
+       {
+        "key": "never",
+        "label": "Ne jamais rouler à moto",
+        "note": "Cette question ne reviendra pas"
+       },
+       {
+        "key": "no",
+        "label": "Y réfléchir plus tard",
+        "note": null
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 25,
+      "id": "kidschool",
+      "question": "L’heure de choisir une école pour Muthoni",
+      "about": "L’an prochain, ce sera la première rentrée des classes pour Muthoni. L’école publique du quartier ne coûte presque rien ; une école privée coûte environ 123 € par an et par enfant.",
+      "fact": "En Kenya, environ 16 % des élèves du primaire vont dans une école privée (Banque mondiale, UNESCO)",
+      "choices": [
+       {
+        "key": "pub",
+        "label": "L’école publique",
+        "note": "Presque pas de frais"
+       },
+       {
+        "key": "priv",
+        "label": "Une école privée",
+        "note": "Environ 123 € par an et par enfant · un peu plus de chances d’aller à l’université"
+       }
+      ],
+      "chose": "pub"
+     },
+     {
+      "age": 26,
+      "id": "kids",
+      "question": "Avoir un 3e enfant ?",
+      "about": "Vous avez 2 enfants aujourd’hui. Francis aimerait avoir un enfant de plus.",
+      "fact": "Indice de fécondité en Kenya : 3,21 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 379 décès pour 100 000 naissances vivantes (OMS 2023)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Ne plus avoir d’enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 27,
+      "id": "kidsick",
+      "question": "Caroline est gravement malade",
+      "about": "Caroline, 1 an, a une fièvre qui monte et redescend et tremble de froid. Dans un grand hôpital, la part à votre charge serait d’environ 229 € (aux prix français). Vos économies : 8 481 €.",
+      "fact": "Une grande partie des décès d’enfants de moins de 5 ans sont dus à des maladies qui se soignent, comme la pneumonie, la diarrhée et le paludisme (OMS)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Aller dans un grand hôpital",
+        "note": "Environ 229 €"
+       },
+       {
+        "key": "home",
+        "label": "Soigner l’enfant à la maison et attendre de voir",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "hospital"
+     },
+     {
+      "age": 28,
+      "id": "kids",
+      "question": "Avoir un 5e enfant ?",
+      "about": "Vous avez 4 enfants aujourd’hui. Francis aimerait avoir un enfant de plus.",
+      "fact": "Indice de fécondité en Kenya : 3,21 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 379 décès pour 100 000 naissances vivantes (OMS 2023)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Ne plus avoir d’enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 28,
+      "id": "buy",
+      "question": "Achat envisagé : votre propre logement",
+      "about": "Le prix est d’environ 7 045 € (aux prix français). Vous avez 7 815 € d’économies. Vous pouvez l’acheter sans emprunter.",
+      "fact": "Prix des logements en Kenya : environ 4 fois le revenu annuel médian (hypothèse retenue)",
+      "choices": [
+       {
+        "key": "buy",
+        "label": "Acheter avec vos économies",
+        "note": "Bonheur +14"
+       },
+       {
+        "key": "no",
+        "label": "Remettre à plus tard",
+        "note": "Garder vos économies"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 29,
+      "id": "custody",
+      "question": "Qui aura la garde ?",
+      "about": "Après le divorce, il faut décider où grandiront vos 5 enfants.",
+      "fact": "Dans une grande partie de l’Afrique, la coutume veut que les enfants appartiennent à la famille du père, mais dans les faits, ils sont plus nombreux à vivre avec leur mère",
+      "choices": [
+       {
+        "key": "me",
+        "label": "Assurer la garde vous-même",
+        "note": "Vous pourriez recevoir une pension alimentaire"
+       },
+       {
+        "key": "them",
+        "label": "Confier la garde à Francis, avec des visites fréquentes",
+        "note": "Vous versez une pension alimentaire"
+       }
+      ],
+      "chose": "me"
+     },
+     {
+      "age": 30,
+      "id": "reflect",
+      "question": "Une pause · 30 ans",
+      "about": "Le revenu annuel de cette personne la place dans les 22 % les plus modestes à l’échelle mondiale. En Kenya, 32 % de la population utilise Internet et 32 % vit en ville.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 30,
+      "id": "petq",
+      "question": "Accueillir un animal ?",
+      "about": "Depuis des jours, Muthoni réclame un chiot.",
+      "fact": "En Kenya, environ 10 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+      "choices": [
+       {
+        "key": "dog",
+        "label": "Accueillir un chien",
+        "note": "Environ 48 € par an · de 10 à 15 ans ensemble"
+       },
+       {
+        "key": "cat",
+        "label": "Accueillir un chat",
+        "note": "Environ 32 € par an · de 12 à 18 ans ensemble"
+       },
+       {
+        "key": "pk_b",
+        "label": "Adopter un perroquet",
+        "note": "Environ 13 € par an · de 6 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_r",
+        "label": "Adopter un lapin",
+        "note": "Environ 16 € par an · de 8 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_f",
+        "label": "Installer un aquarium",
+        "note": "Environ 13 € par an · de 4 à 9 ans ensemble"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 31,
+      "id": "jobchange",
+      "question": "Une nouvelle offre",
+      "about": "Vous travaillez comme pêcheuse depuis 13 ans. Une autre offre d’emploi est arrivée.",
+      "fact": "Revenu actuel : 3 915 $ US PPP par an · 228 € par mois aux prix français",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Devenir paysanne à la place",
+        "note": "4 589 $ US PPP par an · 268 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "o1",
+        "label": "Devenir exploitante agricole à la place",
+        "note": "9 219 $ US PPP par an · 538 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "stay",
+        "label": "Garder votre emploi actuel",
+        "note": "Continuer à gagner en expérience"
+       }
+      ],
+      "chose": "o0"
+     },
+     {
+      "age": 32,
+      "id": "parback",
+      "question": "Le père qui était parti",
+      "about": "Votre père, qui avait quitté la maison dans votre enfance, a repris contact. Aujourd’hui âgé de 66 ans, il aimerait vous rencontrer, une fois.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "meet",
+        "label": "Le rencontrer",
+        "note": null
+       },
+       {
+        "key": "no",
+        "label": "Ne pas le rencontrer",
+        "note": null
+       }
+      ],
+      "chose": "meet"
+     },
+     {
+      "age": 33,
+      "id": "kidteen",
+      "question": "Un appel de l’école",
+      "about": "Muthoni a eu une grosse bagarre avec un camarade à l’école.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "talk",
+        "label": "S’asseoir et écouter",
+        "note": "Cela prend du temps"
+       },
+       {
+        "key": "strict",
+        "label": "Se montrer sévère",
+        "note": null
+       }
+      ],
+      "chose": "talk"
+     },
+     {
+      "age": 34,
+      "id": "partner",
+      "question": "Une proposition de remariage",
+      "about": "Rencontre proposée par les aînés de la famille : Abel Haule (homme, 39 ans, fiable). Métier : chauffeur (moto, camion). Abel a environ 230 € d’économies.",
+      "fact": "Aux États-Unis, quatre nouveaux mariages sur dix comptent au moins une personne qui a déjà été mariée (Pew Research Center 2014)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Se marier",
+        "note": "Relations↑ Bonheur↑"
+       },
+       {
+        "key": "date",
+        "label": "Prendre le temps de mieux se connaître",
+        "note": "Remettre la décision à plus tard"
+       },
+       {
+        "key": "no",
+        "label": "Refuser",
+        "note": "Peut créer des tensions avec votre famille"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 35,
+      "id": "buy",
+      "question": "Rouler à moto ?",
+      "about": "Le prix est d’environ 3 467 € (aux prix français). Les trajets pour le travail et les courses deviennent bien plus faciles, mais le risque d’accident augmente aussi. Vos économies ne suffisent pas : il faudrait l’acheter à crédit.",
+      "fact": "Dans le monde, environ 21 % des personnes tuées sur la route circulaient à moto ou sur un autre deux-roues ou trois-roues motorisé (OMS 2023) · Mortalité routière en Kenya : environ 20 décès pour 100 000 habitants · Un casque sûr et de qualité réduit le risque de mourir dans un accident à moins d’un sixième, et celui de lésion cérébrale jusqu’à 74 % (OMS 2023)",
+      "choices": [
+       {
+        "key": "loan",
+        "label": "Acheter une moto à crédit",
+        "note": "Crédit sur 4 ans · Dette d’environ 2 779 € · Avec intérêts"
+       },
+       {
+        "key": "never",
+        "label": "Ne jamais rouler à moto",
+        "note": "Cette question ne reviendra pas"
+       },
+       {
+        "key": "no",
+        "label": "Y réfléchir plus tard",
+        "note": null
+       }
+      ],
+      "chose": "loan"
+     },
+     {
+      "age": 36,
+      "id": "stepkids",
+      "question": "Devenir une nouvelle famille",
+      "about": "Un an ou deux que vous vivez avec Abel. Pour les enfants, accepter un beau-père ne va pas encore de soi.",
+      "fact": "Une famille recomposée met en général quatre à sept ans à trouver son équilibre. Cela se passe mieux quand le nouveau parent s’approche doucement, comme un ami, plutôt que de prendre en main la discipline dès le début (Papernow, recherches sur les familles recomposées)",
+      "choices": [
+       {
+        "key": "slow",
+        "label": "Ne rien brusquer et laisser le lien se faire à son rythme",
+        "note": "Vous vous chargez de la discipline"
+       },
+       {
+        "key": "together",
+        "label": "Créer des moments à passer ensemble",
+        "note": "Sorties du week-end, repas du soir ensemble"
+       },
+       {
+        "key": "side",
+        "label": "Prendre le parti des enfants et demander à Abel de prendre du recul",
+        "note": "Un froid pourrait s’installer dans votre couple"
+       }
+      ],
+      "chose": "side"
+     },
+     {
+      "age": 36,
+      "id": "loan",
+      "question": "Votre dette s’est alourdie",
+      "about": "Vous devez 1 540 € (aux prix français).",
+      "fact": "Dans le monde, environ 24 % des adultes n’ont pas de compte bancaire (Banque mondiale, Findex 2021)",
+      "choices": [
+       {
+        "key": "family",
+        "label": "Demander de l’aide à votre famille",
+        "note": "Relations↓"
+       },
+       {
+        "key": "lender",
+        "label": "Emprunter à un usurier",
+        "note": "Des intérêts à payer"
+       },
+       {
+        "key": "sellv",
+        "label": "Vendre votre moto",
+        "note": "Patrimoine↓"
+       }
+      ],
+      "chose": "lender"
+     },
+     {
+      "age": 37,
+      "id": "petq",
+      "question": "Accueillir un animal ?",
+      "about": "Depuis des jours, Omondi réclame un chiot.",
+      "fact": "En Kenya, environ 10 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+      "choices": [
+       {
+        "key": "dog",
+        "label": "Accueillir un chien",
+        "note": "Environ 61 € par an · de 10 à 15 ans ensemble"
+       },
+       {
+        "key": "cat",
+        "label": "Accueillir un chat",
+        "note": "Environ 40 € par an · de 12 à 18 ans ensemble"
+       },
+       {
+        "key": "pk_b",
+        "label": "Adopter un perroquet",
+        "note": "Environ 16 € par an · de 6 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_r",
+        "label": "Adopter un lapin",
+        "note": "Environ 20 € par an · de 8 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_f",
+        "label": "Installer un aquarium",
+        "note": "Environ 16 € par an · de 4 à 9 ans ensemble"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "never",
+        "label": "Ne pas avoir d’animal",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 39,
+      "id": "kidteen",
+      "question": "Un appel de l’école",
+      "about": "Caroline a eu une grosse bagarre avec un camarade à l’école.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "talk",
+        "label": "S’asseoir et écouter",
+        "note": "Cela prend du temps"
+       },
+       {
+        "key": "strict",
+        "label": "Se montrer sévère",
+        "note": null
+       }
+      ],
+      "chose": "talk"
+     },
+     {
+      "age": 40,
+      "id": "sm_friend",
+      "question": "Une nouvelle amitié ?",
+      "about": "Baraka, qui vient d’emménager à côté, vous salue et vous invite à prendre le thé.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "close",
+        "label": "Faire le premier pas vers une amitié",
+        "note": null
+       },
+       {
+        "key": "keep",
+        "label": "S’en tenir aux bonjours",
+        "note": null
+       }
+      ],
+      "chose": "close"
+     },
+     {
+      "age": 41,
+      "id": "jobchange",
+      "question": "Une nouvelle offre",
+      "about": "Vous travaillez comme paysanne depuis 10 ans. Une autre offre d’emploi est arrivée.",
+      "fact": "Revenu actuel : 4 614 $ US PPP par an · 269 € par mois aux prix français",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Devenir ouvrière agricole à la place",
+        "note": "4 930 $ US PPP par an · 288 € par mois aux prix français · emploi informel · expérience similaire prise en compte · par votre amie Nancy"
+       },
+       {
+        "key": "stay",
+        "label": "Garder votre emploi actuel",
+        "note": "Continuer à gagner en expérience"
+       }
+      ],
+      "chose": "stay"
+     },
+     {
+      "age": 42,
+      "id": "cosign",
+      "question": "Une demande de caution",
+      "about": "Votre deuxième grand frère vous demande de vous porter caution pour un prêt de 6 412 €. S’il n’est pas remboursé, c’est vous qui devrez payer.",
+      "fact": "Se porter caution, c’est promettre de rembourser toute la dette restante si la personne qui emprunte ne le peut pas",
+      "choices": [
+       {
+        "key": "sign",
+        "label": "Se porter caution",
+        "note": "Relations↑ · la dette pourrait vous revenir"
+       },
+       {
+        "key": "help",
+        "label": "Aider un peu, sans se porter caution",
+        "note": "Environ 641 €"
+       },
+       {
+        "key": "no",
+        "label": "Dire que vous ne pouvez pas vous porter caution",
+        "note": "Relations↓"
+       }
+      ],
+      "chose": "sign"
+     },
+     {
+      "age": 44,
+      "id": "kinask",
+      "question": "Muthoni vous demande de l’argent",
+      "about": "Muthoni veut solder une dette et repartir de zéro, et vous demande 493 €. Vos économies : 388 €.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "give",
+        "label": "Donner ce qui est demandé",
+        "note": "Environ 493 € · Relations↑"
+       },
+       {
+        "key": "some",
+        "label": "Donner une partie, selon vos moyens",
+        "note": "Environ 148 €"
+       },
+       {
+        "key": "no",
+        "label": "Dire que cette fois, ce n’est pas possible",
+        "note": "Relations↓"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 45,
+      "id": "runlocal",
+      "question": "Briguer un siège au conseil local ?",
+      "about": "Vos voisins savent combien les affaires du quartier vous tiennent à cœur depuis des années. On vous encourage à vous présenter au conseil de votre localité.",
+      "fact": "On compte environ 45 000 parlementaires nationaux dans le monde, et bien plus encore d’élus locaux. La plupart exercent leur mandat en parallèle d’un autre emploi (UIP 2026)",
+      "choices": [
+       {
+        "key": "run",
+        "label": "Se présenter",
+        "note": "Mandat de 4 ans en cas de victoire · frais de campagne"
+       },
+       {
+        "key": "no",
+        "label": "Remercier, mais décliner",
+        "note": null
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 47,
+      "id": "pbiz",
+      "question": "Votre partenaire veut ouvrir une boutique",
+      "about": "Votre partenaire, Abel, voudrait ouvrir sa propre boutique, un rêve de longue date. Il faudrait y consacrer environ 2 463 € de vos économies (aux prix français).",
+      "fact": "Environ la moitié des petites entreprises nouvellement créées ferment dans les cinq ans (Bureau des statistiques du travail des États-Unis)",
+      "choices": [
+       {
+        "key": "go",
+        "label": "Proposer de se lancer ensemble",
+        "note": "Revenus↑ si ça marche · dettes sinon"
+       },
+       {
+        "key": "no",
+        "label": "Dire que ce n’est pas le moment",
+        "note": "Relations↓"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 48,
+      "id": "kidwed",
+      "question": "Mwende se marie",
+      "about": "Mwende, 22 ans, a amené à la maison la personne de sa vie.",
+      "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 739 € (aux prix français). Vos économies : 936 €.",
+      "choices": [
+       {
+        "key": "help",
+        "label": "Participer généreusement aux frais du mariage",
+        "note": "Environ 739 €"
+       },
+       {
+        "key": "little",
+        "label": "Donner un peu, selon vos moyens",
+        "note": "Environ 185 €"
+       },
+       {
+        "key": "none",
+        "label": "Offrir seulement vos vœux de bonheur",
+        "note": null
+       }
+      ],
+      "chose": "help"
+     },
+     {
+      "age": 48,
+      "id": "illness",
+      "question": "Une forte fièvre qui ne tombe pas",
+      "about": "Frissons et forte fièvre alternent, et un mal de tête violent vous cloue au lit. Votre part des frais d’hôpital s’élève à environ 401 € (aux prix français). Vos économies : rien (dette : 82 €).",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Kenya : 23 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "hospital"
+     },
+     {
+      "age": 49,
+      "id": "growup",
+      "question": "Développer votre activité ?",
+      "about": "18 ans de travail comme paysanne vous ont apporté de l’expérience et un petit capital. En investissant environ 985 €, vous seriez agricultrice qui a agrandi ses terres. Si cela ne marche pas, l’argent investi sera perdu.",
+      "fact": "Moins d’un quart des petites entreprises des pays en développement embauchent un jour davantage de personnes, et seulement 1 % environ dépassent dix salariés (Mead & Liedholm 1998)",
+      "choices": [
+       {
+        "key": "up",
+        "label": "Développer",
+        "note": "Revenu↑ · risque de perdre la mise"
+       },
+       {
+        "key": "no",
+        "label": "Garder la taille actuelle",
+        "note": null
+       }
+      ],
+      "chose": "up"
+     },
+     {
+      "age": 50,
+      "id": "reflect",
+      "question": "Une pause · 50 ans",
+      "about": "Parmi les personnes nées la même année en Kenya, 86 % atteignent l’âge de cinquante ans.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 50,
+      "id": "kidwed",
+      "question": "Muthoni se marie",
+      "about": "Muthoni, 30 ans, a amené à la maison la personne de sa vie.",
+      "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 739 € (aux prix français). Vos économies : 284 €.",
+      "choices": [
+       {
+        "key": "help",
+        "label": "Participer généreusement aux frais du mariage",
+        "note": "Environ 739 €"
+       },
+       {
+        "key": "little",
+        "label": "Donner un peu, selon vos moyens",
+        "note": "Environ 185 €"
+       },
+       {
+        "key": "none",
+        "label": "Offrir seulement vos vœux de bonheur",
+        "note": null
+       }
+      ],
+      "chose": "little"
+     },
+     {
+      "age": 52,
+      "id": "kidwed",
+      "question": "Caroline se marie",
+      "about": "Caroline, 26 ans, a amené à la maison la personne de sa vie.",
+      "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 739 € (aux prix français). Vos économies : 74 €.",
+      "choices": [
+       {
+        "key": "help",
+        "label": "Participer généreusement aux frais du mariage",
+        "note": "Environ 739 €"
+       },
+       {
+        "key": "little",
+        "label": "Donner un peu, selon vos moyens",
+        "note": "Environ 185 €"
+       },
+       {
+        "key": "none",
+        "label": "Offrir seulement vos vœux de bonheur",
+        "note": null
+       }
+      ],
+      "chose": "little"
+     },
+     {
+      "age": 52,
+      "id": "jobchange",
+      "question": "Une nouvelle offre",
+      "about": "Vous travaillez comme paysanne depuis 21 ans. Une autre offre d’emploi est arrivée.",
+      "fact": "Revenu actuel : 3 949 $ US PPP par an · 230 € par mois aux prix français",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Devenir pêcheuse à la place",
+        "note": "4 071 $ US PPP par an · 237 € par mois aux prix français · emploi informel · 13 ans d’expérience pris en compte"
+       },
+       {
+        "key": "o1",
+        "label": "Devenir éleveuse à la place",
+        "note": "4 684 $ US PPP par an · 273 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "stay",
+        "label": "Garder votre emploi actuel",
+        "note": "Continuer à gagner en expérience"
+       }
+      ],
+      "chose": "stay"
+     },
+     {
+      "age": 53,
+      "id": "kidwed",
+      "question": "Omondi se marie",
+      "about": "Omondi, 29 ans, a amené à la maison la personne de sa vie.",
+      "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 739 € (aux prix français). Vos économies : 164 €.",
+      "choices": [
+       {
+        "key": "help",
+        "label": "Participer généreusement aux frais du mariage",
+        "note": "Environ 739 €"
+       },
+       {
+        "key": "little",
+        "label": "Donner un peu, selon vos moyens",
+        "note": "Environ 185 €"
+       },
+       {
+        "key": "none",
+        "label": "Offrir seulement vos vœux de bonheur",
+        "note": null
+       }
+      ],
+      "chose": "little"
+     },
+     {
+      "age": 58,
+      "id": "kinback",
+      "question": "Muthoni est de retour",
+      "about": "À sa sortie de prison, Muthoni a frappé à votre porte. Après une longue hésitation, la tête basse : « Pardon. Je voudrais recommencer. »",
+      "fact": "Les personnes détenues qui recevaient des visites avaient 13 % de risque en moins de récidiver après leur libération (Département des services correctionnels du Minnesota, 2011)",
+      "choices": [
+       {
+        "key": "hug",
+        "label": "Ouvrir les bras",
+        "note": "Redevenir une famille"
+       },
+       {
+        "key": "time",
+        "label": "Dire qu’il vous faut encore du temps",
+        "note": "Le temps que votre cœur s’apaise"
+       }
+      ],
+      "chose": "time"
+     },
+     {
+      "age": 58,
+      "id": "kidabroad",
+      "question": "Gladys veut partir à l’étranger",
+      "about": "Gladys voudrait étudier et travailler en Royaume-Uni. Les préparatifs du départ coûteraient environ 985 € (aux prix français).",
+      "fact": "En 2024, environ 304 millions de personnes vivaient hors du pays où elles étaient nées, soit 3,7 % de la population mondiale (DAES de l’ONU)",
+      "choices": [
+       {
+        "key": "go",
+        "label": "L’encourager et accepter son départ",
+        "note": "Argent↓ · vivre à distance"
+       },
+       {
+        "key": "stay",
+        "label": "Lui demander de rester près de vous",
+        "note": "Relations↓"
+       }
+      ],
+      "chose": "stay"
+     },
+     {
+      "age": 59,
+      "id": "growup",
+      "question": "Développer votre activité ?",
+      "about": "28 ans de travail comme paysanne vous ont apporté de l’expérience et un petit capital. En investissant environ 985 €, vous seriez agricultrice qui a agrandi ses terres. Si cela ne marche pas, l’argent investi sera perdu.",
+      "fact": "Moins d’un quart des petites entreprises des pays en développement embauchent un jour davantage de personnes, et seulement 1 % environ dépassent dix salariés (Mead & Liedholm 1998)",
+      "choices": [
+       {
+        "key": "up",
+        "label": "Développer",
+        "note": "Revenu↑ · risque de perdre la mise"
+       },
+       {
+        "key": "no",
+        "label": "Garder la taille actuelle",
+        "note": null
+       }
+      ],
+      "chose": "up"
+     },
+     {
+      "age": 60,
+      "id": "retire",
+      "question": "L’heure de la retraite ?",
+      "about": "Vous n’avez pas de pension. Vos enfants devenus adultes pourraient vous envoyer environ 89 € par mois aux prix français. Avec ce que vos enfants vous envoient, vous pouvez vous en sortir en faisant attention.",
+      "fact": "Dans le monde, environ 77 % des personnes ayant dépassé l’âge de la retraite perçoivent une pension, mais seulement 23 % environ dans les pays à faible revenu (OIT 2021)",
+      "choices": [
+       {
+        "key": "retire",
+        "label": "Prendre votre retraite",
+        "note": "Temps libre↑ Revenu↓"
+       },
+       {
+        "key": "less",
+        "label": "Passer à temps partiel",
+        "note": "Environ la moitié du salaire · moins dur pour le corps"
+       },
+       {
+        "key": "work",
+        "label": "Continuer à travailler",
+        "note": "Garder votre revenu"
+       }
+      ],
+      "chose": "work"
+     },
+     {
+      "age": 61,
+      "id": "mentor",
+      "question": "Les soucis d’une jeune recrue",
+      "about": "Une jeune recrue de votre travail vous confie ses doutes : l’avenir lui semble bouché.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "help",
+        "label": "Prendre le temps d’écouter",
+        "note": null
+       },
+       {
+        "key": "busy",
+        "label": "Prétexter le travail et remettre à plus tard",
+        "note": null
+       }
+      ],
+      "chose": "help"
+     },
+     {
+      "age": 62,
+      "id": "kinask",
+      "question": "Mwende vous demande de l’argent",
+      "about": "Mwende veut solder une dette et repartir de zéro, et vous demande 532 €. Vos économies : 2 002 €.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "give",
+        "label": "Donner ce qui est demandé",
+        "note": "Environ 532 € · Relations↑"
+       },
+       {
+        "key": "some",
+        "label": "Donner une partie, selon vos moyens",
+        "note": "Environ 160 €"
+       },
+       {
+        "key": "no",
+        "label": "Dire que cette fois, ce n’est pas possible",
+        "note": "Relations↓"
+       }
+      ],
+      "chose": "give"
+     }
+    ]
+   }
+  ],
+  "usage": {
+   "month": "2026-11",
+   "unit": "life units",
+   "used": 341,
+   "quota": 2000,
+   "this_call": 1
+  }
+ },
+ {
+  "meta": {
+   "api": "1in8b-engine",
+   "version": "v1",
+   "status": "beta",
+   "kind": "life",
+   "engine": "0.9.52",
+   "simulated": "simulated lives that follow real statistics: not real people, records, measurements or forecasts",
+   "docs": "https://1in8b.life/en/api/",
+   "terms": "https://1in8b.life/en/api/#terms",
+   "credit": "1in8b Engine (1in8b.life)",
+   "tier": "free"
+  },
+  "query": {
+   "country": null,
+   "sex": null,
+   "year": null,
+   "future": false,
+   "n": 1,
+   "seed": 20261108,
+   "lang": "fr"
+  },
+  "lives": [
+   {
+    "seed": 20261108,
+    "country": "GIN",
+    "born_year": 2026,
+    "sex": "F",
+    "name": "Fama Drammeh",
+    "born_in_city": false,
+    "education": "none",
+    "education_at_25": "none",
+    "jobs": [
+     {
+      "id": "cook",
+      "from": 13,
+      "to": 14
+     },
+     {
+      "id": "farm",
+      "from": 17,
+      "to": 28
+     },
+     {
+      "id": "herder",
+      "from": 28,
+      "to": 47
+     },
+     {
+      "id": "fisher",
+      "from": 47,
+      "to": 64
+     }
+    ],
+    "first_partner_age": 14,
+    "children": 5,
+    "first_child_age": 16,
+    "siblings": 2,
+    "moves": [],
+    "age_at_death": 64,
+    "cause_of_death": "lri",
+    "died_in": "GIN",
+    "who": {
+     "faith": "muslim",
+     "group": null,
+     "orientation": "straight",
+     "disability": [],
+     "caste": null
+    },
+    "family_at_birth": {
+     "parents": "mother_and_father",
+     "mother_age": 27,
+     "father_age": 39,
+     "father_there": true,
+     "older_siblings": 1,
+     "family_fifth": 3
+    },
+    "met": [
+     {
+      "age": 14,
+      "year": 2040,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 23,
+      "year": 2049,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 25,
+      "year": 2051,
+      "kind": "electricity"
+     },
+     {
+      "age": 30,
+      "year": 2056,
+      "kind": "power_cuts"
+     },
+     {
+      "age": 34,
+      "year": 2060,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 36,
+      "year": 2062,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 44,
+      "year": 2070,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 47,
+      "year": 2073,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 52,
+      "year": 2078,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 57,
+      "year": 2083,
+      "kind": "economic_crisis"
+     }
+    ],
+    "decisions": [
+     {
+      "age": 2,
+      "id": "temper",
+      "question": "Deux ans, un nouveau jouet",
+      "about": "Fama marche maintenant plutôt bien. Avec un nouveau jouet, que fait l’enfant en premier ? Votre choix fait pencher le tempérament de l’enfant de ce côté ; ces moments s’additionnent, et il se dessine vers cinq ans.",
+      "fact": "Le tempérament naît à la fois de ce que l’on reçoit à la naissance et de ce que l’on vit en grandissant. D’après l’ensemble des études sur les jumeaux, environ 40 % des différences de personnalité s’expliquent par les gènes (Vukasović & Bratko 2015)",
+      "choices": [
+       {
+        "key": "cur",
+        "label": "Le tourner dans tous les sens et l’observer longuement",
+        "note": null
+       },
+       {
+        "key": "act",
+        "label": "Courir dans toute la maison, le jouet à la main",
+        "note": null
+       },
+       {
+        "key": "warm",
+        "label": "Tendre le jouet à quelqu’un à côté pour jouer ensemble",
+        "note": null
+       },
+       {
+        "key": "grit",
+        "label": "Recommencer encore et encore, même quand ça ne marche pas",
+        "note": null
+       }
+      ],
+      "chose": "grit"
+     },
+     {
+      "age": 5,
+      "id": "reflect",
+      "question": "Une pause · 5 ans",
+      "about": "En Guinée, 8,7 % des enfants n’atteignent pas leur cinquième anniversaire. Cette enfant l’a atteint.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 7,
+      "id": "hobby",
+      "question": "Ce que vous aimez faire",
+      "about": "Que ferez-vous de votre temps libre ?",
+      "fact": null,
+      "choices": [
+       {
+        "key": "dance",
+        "label": "Danse",
+        "note": "Bonheur+ Santé+ Relations+"
+       },
+       {
+        "key": "music",
+        "label": "Chant et musique",
+        "note": "Bonheur+ Relations+"
+       },
+       {
+        "key": "faith",
+        "label": "Rencontres religieuses",
+        "note": "Bonheur+ Relations+"
+       }
+      ],
+      "chose": "dance"
+     },
+     {
+      "age": 8,
+      "id": "sm_wallet",
+      "question": "Un portefeuille dans la rue",
+      "about": "Vous avez trouvé un portefeuille dans la rue. Il y a pas mal d’argent dedans.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "return",
+        "label": "En parler à un adulte et retrouver le propriétaire",
+        "note": null
+       },
+       {
+        "key": "keep",
+        "label": "Le garder en douce",
+        "note": null
+       }
+      ],
+      "chose": "keep"
+     },
+     {
+      "age": 9,
+      "id": "noschool",
+      "question": "Je veux aller à l’école",
+      "about": "Certains enfants de votre âge vont à l’école. Vous, vous aidez aux champs et allez chercher l’eau.",
+      "fact": "Durée de scolarisation attendue en Guinée : 10,4 ans (PNUD, RDH 2022)",
+      "choices": [
+       {
+        "key": "beg",
+        "label": "Supplier qu’on vous envoie à l’école",
+        "note": "Selon la situation de votre famille, cela marchera ou non"
+       },
+       {
+        "key": "help",
+        "label": "Aider votre famille",
+        "note": "Relations +4"
+       }
+      ],
+      "chose": "help"
+     },
+     {
+      "age": 10,
+      "id": "petq",
+      "question": "Je veux un chaton",
+      "about": "Depuis que vous avez vu le chaton d’un ami, vous n’arrêtez pas de supplier vos parents.",
+      "fact": "En Guinée, environ 10 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+      "choices": [
+       {
+        "key": "beg",
+        "label": "Supplier encore et encore",
+        "note": "La réponse dépend de ce que la famille peut se permettre"
+       },
+       {
+        "key": "no",
+        "label": "Se faire une raison",
+        "note": null
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 13,
+      "id": "apprent",
+      "question": "Apprendre un métier ?",
+      "about": "Un artisan réputé du quartier cherche quelqu’un à former en apprentissage. Pendant deux ou trois ans, vous gagneriez peu, mais vous auriez un métier entre les mains.",
+      "fact": "En Afrique de l’Ouest, environ 80 % des compétences utilisées dans le travail informel se transmettent par l’apprentissage auprès d’un maître artisan (OIT 2008)",
+      "choices": [
+       {
+        "key": "cook",
+        "label": "Apprendre le métier de cuisinière",
+        "note": "2 à 3 ans d’apprentissage · un métier pour la vie"
+       },
+       {
+        "key": "hair",
+        "label": "Apprendre le métier de coiffeuse",
+        "note": "2 à 3 ans d’apprentissage · un métier pour la vie"
+       },
+       {
+        "key": "no",
+        "label": "Continuer ce que vous faites",
+        "note": null
+       }
+      ],
+      "chose": "cook"
+     },
+     {
+      "age": 15,
+      "id": "reflect",
+      "question": "Une pause · 15 ans",
+      "about": "Cette enfant est déjà mariée. Durée de scolarité attendue : 10,4 ans en Guinée. Dans ce pays, 47 % des femmes se marient avant 18 ans.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 15,
+      "id": "hmwork",
+      "question": "Le foyer n’a plus de revenu",
+      "about": "Depuis que votre partenaire Babacar a perdu son emploi, plus aucun argent ne rentre. Tenir la maison ne suffira pas à faire vivre le foyer.",
+      "fact": "Quand les maris perdent leur emploi, davantage d’épouses se mettent à travailler, surtout dans les pays plus pauvres (Bhalotra & Umaña-Aponte 2010)",
+      "choices": [
+       {
+        "key": "work",
+        "label": "Chercher de nouveau du travail",
+        "note": "Revenu ↑ · partager les tâches ménagères"
+       },
+       {
+        "key": "wait",
+        "label": "Tenir encore un peu",
+        "note": "Avec vos économies et des dettes"
+       }
+      ],
+      "chose": "work"
+     },
+     {
+      "age": 17,
+      "id": "job",
+      "question": "Choisissez un nouvel emploi",
+      "about": "Avant, vous travailliez comme cuisinière ou serveuse. Niveau d’études : aucune scolarité. Voici les emplois que l’on peut trouver en Guinée (campagne).",
+      "fact": "En Guinée, environ 93 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 50 % travaillent dans l’agriculture",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Paysanne (agriculture vivrière)",
+        "note": "1 862 $ US PPP par an · 109 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "o1",
+        "label": "Ouvrière agricole",
+        "note": "1 608 $ US PPP par an · 94 € par mois aux prix français · emploi formel (retraite, assurance)"
+       },
+       {
+        "key": "o2",
+        "label": "Éleveuse",
+        "note": "2 195 $ US PPP par an · 128 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "wait",
+        "label": "Attendre un meilleur emploi",
+        "note": "Une année de plus à chercher"
+       },
+       {
+        "key": "home",
+        "label": "Se consacrer au foyer et aux enfants",
+        "note": "Aucun revenu"
+       }
+      ],
+      "chose": "o0"
+     },
+     {
+      "age": 18,
+      "id": "babycare",
+      "question": "Qui va s’occuper d’Aïssata ?",
+      "about": "Maintenant que votre partenaire et vous travaillez, il faut décider qui s’occupera d’Aïssata. Votre partenaire, Babacar, propose de demander de l’aide aux grands-parents.",
+      "fact": "En Guinée, environ 65 % des femmes de 15 à 64 ans sont actives (estimation de l'OIT, 2019)",
+      "choices": [
+       {
+        "key": "me",
+        "label": "Arrêter de travailler et s’occuper soi-même du bébé",
+        "note": "Le revenu s’arrête · Du temps avec votre enfant"
+       },
+       {
+        "key": "partner",
+        "label": "Confier le bébé à votre partenaire, qui fait une pause dans son travail",
+        "note": "Le revenu de votre partenaire s’arrête quelques années"
+       },
+       {
+        "key": "gp",
+        "label": "Confier le bébé à vos parents",
+        "note": "Presque gratuit · Vous comptez sur vos parents"
+       },
+       {
+        "key": "carry",
+        "label": "Emmener le bébé au travail",
+        "note": "Épuisant, mais le bébé reste près de vous"
+       }
+      ],
+      "chose": "carry"
+     },
+     {
+      "age": 19,
+      "id": "kids",
+      "question": "Avoir un 2e enfant ?",
+      "about": "Vous avez 1 enfant aujourd’hui.",
+      "fact": "Indice de fécondité en Guinée : 4,22 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 494 décès pour 100 000 naissances vivantes (OMS 2023)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Ne plus avoir d’enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 21,
+      "id": "kidschool",
+      "question": "L’heure de choisir une école pour Aïssata",
+      "about": "L’an prochain, ce sera la première rentrée des classes pour Aïssata. L’école publique du quartier ne coûte presque rien ; une école privée coûte environ 98 € par an et par enfant.",
+      "fact": "En Guinée, environ 35 % des élèves du primaire vont dans une école privée (Banque mondiale, UNESCO)",
+      "choices": [
+       {
+        "key": "pub",
+        "label": "L’école publique",
+        "note": "Presque pas de frais"
+       },
+       {
+        "key": "priv",
+        "label": "Une école privée",
+        "note": "Environ 98 € par an et par enfant · un peu plus de chances d’aller à l’université"
+       }
+      ],
+      "chose": "priv"
+     },
+     {
+      "age": 22,
+      "id": "adultedu",
+      "question": "Reprendre des études ?",
+      "about": "Vous n’avez jamais pu aller à l’école. Tout en travaillant, vous pourriez apprendre à lire, écrire et compter dans une école du soir, puis passer l’examen de fin d’école primaire.",
+      "fact": "Beaucoup de pays ont des écoles du soir et des examens d’équivalence pour les personnes qui travaillent (UNESCO, Rapport mondial sur l’apprentissage et l’éducation des adultes)",
+      "choices": [
+       {
+        "key": "go",
+        "label": "Essayer l’école du soir",
+        "note": "1 an · environ 78 € · fatigant"
+       },
+       {
+        "key": "no",
+        "label": "Se concentrer sur le travail pour l’instant",
+        "note": null
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 23,
+      "id": "sm_friend",
+      "question": "Une nouvelle amitié ?",
+      "about": "Mariétou, qui vient d’emménager à côté, vous salue et vous invite à prendre le thé.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "close",
+        "label": "Faire le premier pas vers une amitié",
+        "note": null
+       },
+       {
+        "key": "keep",
+        "label": "S’en tenir aux bonjours",
+        "note": null
+       }
+      ],
+      "chose": "close"
+     },
+     {
+      "age": 24,
+      "id": "petq",
+      "question": "Accueillir un animal ?",
+      "about": "Depuis des jours, Aïssata réclame un chaton.",
+      "fact": "En Guinée, environ 10 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+      "choices": [
+       {
+        "key": "dog",
+        "label": "Accueillir un chien",
+        "note": "Environ 36 € par an · de 10 à 15 ans ensemble"
+       },
+       {
+        "key": "cat",
+        "label": "Accueillir un chat",
+        "note": "Environ 24 € par an · de 12 à 18 ans ensemble"
+       },
+       {
+        "key": "pk_b",
+        "label": "Adopter un perroquet",
+        "note": "Environ 10 € par an · de 6 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_r",
+        "label": "Adopter un lapin",
+        "note": "Environ 12 € par an · de 8 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_f",
+        "label": "Installer un aquarium",
+        "note": "Environ 10 € par an · de 4 à 9 ans ensemble"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "never",
+        "label": "Ne pas avoir d’animal",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 27,
+      "id": "kids",
+      "question": "Avoir un 4e enfant ?",
+      "about": "Vous avez 3 enfants aujourd’hui.",
+      "fact": "Indice de fécondité en Guinée : 4,22 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 494 décès pour 100 000 naissances vivantes (OMS 2023)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Ne plus avoir d’enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 27,
+      "id": "abroad",
+      "question": "Une occasion de partir à l’étranger",
+      "about": "Une possibilité de travailler en Sénégal s’est présentée. Le protocole de libre circulation de la Communauté économique des États de l’Afrique de l’Ouest (CEDEAO) vous permet d’y aller et d’y travailler sans visa. Par cette voie, vous pouvez emmener votre partenaire et les enfants avec vous. Coût : environ 2 545 € (aux prix français). Votre rémunération est plutôt élevée ici : en repartant de zéro en Sénégal, vos revenus baisseraient au début.",
+      "fact": "Le PIB par habitant (PPA) en Sénégal est environ 1,1 fois celui mesuré en Guinée · Environ 281 millions de migrants internationaux dans le monde (OIM 2024)",
+      "choices": [
+       {
+        "key": "go",
+        "label": "Partir en Sénégal",
+        "note": "Revenu↓ · avec la famille · Vous quittez votre travail actuel"
+       },
+       {
+        "key": "gop",
+        "label": "Partir en Sénégal avec vos parents",
+        "note": "Environ 7 636 € · si c’est aussi le souhait de vos parents"
+       },
+       {
+        "key": "stay",
+        "label": "Rester",
+        "note": null
+       }
+      ],
+      "chose": "stay"
+     },
+     {
+      "age": 28,
+      "id": "jobchange",
+      "question": "Une nouvelle offre",
+      "about": "Vous travaillez comme paysanne depuis 11 ans. Une autre offre d’emploi est arrivée.",
+      "fact": "Revenu actuel : 2 021 $ US PPP par an · 118 € par mois aux prix français",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Devenir éleveuse à la place",
+        "note": "2 507 $ US PPP par an · 146 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "o1",
+        "label": "Devenir ouvrière agricole à la place",
+        "note": "2 060 $ US PPP par an · 120 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "stay",
+        "label": "Garder votre emploi actuel",
+        "note": "Continuer à gagner en expérience"
+       }
+      ],
+      "chose": "o0"
+     },
+     {
+      "age": 29,
+      "id": "kidschool",
+      "question": "L’heure de choisir une école pour Idrissa",
+      "about": "Idrissa entre à l’école l’an prochain. Ses frères et sœurs vont dans une école privée ; avec Idrissa en plus, les frais du privé atteindraient environ 293 € par an.",
+      "fact": "En Guinée, environ 35 % des élèves du primaire vont dans une école privée (Banque mondiale, UNESCO)",
+      "choices": [
+       {
+        "key": "priv",
+        "label": "Inscrire Idrissa dans le privé aussi",
+        "note": "Environ 98 € de plus par an"
+       },
+       {
+        "key": "pub",
+        "label": "Inscrire Idrissa à l’école publique",
+        "note": "Presque pas de frais"
+       }
+      ],
+      "chose": "priv"
+     },
+     {
+      "age": 29,
+      "id": "jobchange",
+      "question": "Une nouvelle offre",
+      "about": "Vous travaillez comme éleveuse depuis 1 an. Une autre offre d’emploi est arrivée.",
+      "fact": "Revenu actuel : 2 507 $ US PPP par an · 146 € par mois aux prix français",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Devenir pêcheuse à la place",
+        "note": "2 563 $ US PPP par an · 150 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "stay",
+        "label": "Garder votre emploi actuel",
+        "note": "Continuer à gagner en expérience"
+       }
+      ],
+      "chose": "stay"
+     },
+     {
+      "age": 30,
+      "id": "reflect",
+      "question": "Une pause · 30 ans",
+      "about": "Le revenu annuel de cette personne la place dans les 14 % les plus modestes à l’échelle mondiale. En Guinée, 32 % de la population utilise Internet et 38 % vit en ville.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 32,
+      "id": "kidschool",
+      "question": "L’heure de choisir une école pour Ramatou",
+      "about": "Ramatou entre à l’école l’an prochain. Ses frères et sœurs vont dans une école privée ; avec Ramatou en plus, les frais du privé atteindraient environ 390 € par an.",
+      "fact": "En Guinée, environ 35 % des élèves du primaire vont dans une école privée (Banque mondiale, UNESCO)",
+      "choices": [
+       {
+        "key": "priv",
+        "label": "Inscrire Ramatou dans le privé aussi",
+        "note": "Environ 98 € de plus par an"
+       },
+       {
+        "key": "pub",
+        "label": "Inscrire Ramatou à l’école publique",
+        "note": "Presque pas de frais"
+       }
+      ],
+      "chose": "priv"
+     },
+     {
+      "age": 33,
+      "id": "kids",
+      "question": "Avoir un 5e enfant ?",
+      "about": "Vous avez 4 enfants aujourd’hui.",
+      "fact": "Indice de fécondité en Guinée : 4,22 enfants par femme (ONU, WPP 2024) · Mortalité maternelle : 494 décès pour 100 000 naissances vivantes (OMS 2023)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Ne plus avoir d’enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 35,
+      "id": "kidwed",
+      "question": "Aïssata se marie",
+      "about": "Aïssata, 19 ans, a amené à la maison la personne de sa vie.",
+      "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 585 € (aux prix français). Vos économies : rien (dette : 908 €).",
+      "choices": [
+       {
+        "key": "help",
+        "label": "Participer généreusement aux frais du mariage",
+        "note": "Environ 585 €"
+       },
+       {
+        "key": "little",
+        "label": "Donner un peu, selon vos moyens",
+        "note": "Environ 146 €"
+       },
+       {
+        "key": "none",
+        "label": "Offrir seulement vos vœux de bonheur",
+        "note": null
+       }
+      ],
+      "chose": "help"
+     },
+     {
+      "age": 35,
+      "id": "kidcm",
+      "question": "On parle de marier Mahawa",
+      "about": "Les aînés de la famille disent que Mahawa a déjà 14 ans et qu’il est temps de lui chercher un mari. Une à une, les filles du voisinage qui ont son âge ont été mariées.",
+      "fact": "En Guinée, environ 47 % des femmes se marient avant 18 ans. Rester à l’école est la meilleure protection contre le mariage précoce (UNICEF)",
+      "choices": [
+       {
+        "key": "school",
+        "label": "Leur demander d’attendre qu’elle ait fini l’école",
+        "note": "Les aînés pourraient s’y opposer"
+       },
+       {
+        "key": "later",
+        "label": "En reparler quand elle sera adulte",
+        "note": null
+       }
+      ],
+      "chose": "later"
+     },
+     {
+      "age": 37,
+      "id": "care",
+      "question": "Qui va s’occuper de votre père ?",
+      "about": "Votre père a désormais du mal à se déplacer.",
+      "fact": "Dans les pays à revenu faible et intermédiaire, l’essentiel des soins aux personnes âgées est assuré par la famille, surtout par les femmes (OMS)",
+      "choices": [
+       {
+        "key": "home",
+        "label": "L’accueillir chez vous",
+        "note": "Relations↑ Revenu↓"
+       },
+       {
+        "key": "near",
+        "label": "Vivre chacun chez soi et passer souvent aider",
+        "note": "Relations↑ · demande du temps et des efforts"
+       },
+       {
+        "key": "pay",
+        "label": "Engager une aide à domicile",
+        "note": "Des frais"
+       },
+       {
+        "key": "sib",
+        "label": "Demander à vos frères et sœurs",
+        "note": "Relations↓"
+       }
+      ],
+      "chose": "sib"
+     },
+     {
+      "age": 39,
+      "id": "sm_friend",
+      "question": "Une nouvelle amitié ?",
+      "about": "Kadiatou, qui vient d’emménager à côté, vous salue et vous invite à prendre le thé.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "close",
+        "label": "Faire le premier pas vers une amitié",
+        "note": null
+       },
+       {
+        "key": "keep",
+        "label": "S’en tenir aux bonjours",
+        "note": null
+       }
+      ],
+      "chose": "keep"
+     },
+     {
+      "age": 41,
+      "id": "kidwed",
+      "question": "Mahawa se marie",
+      "about": "Mahawa, 20 ans, a amené à la maison la personne de sa vie.",
+      "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 585 € (aux prix français). Vos économies : rien (dette : 1 042 €).",
+      "choices": [
+       {
+        "key": "help",
+        "label": "Participer généreusement aux frais du mariage",
+        "note": "Environ 585 €"
+       },
+       {
+        "key": "little",
+        "label": "Donner un peu, selon vos moyens",
+        "note": "Environ 146 €"
+       },
+       {
+        "key": "none",
+        "label": "Offrir seulement vos vœux de bonheur",
+        "note": null
+       }
+      ],
+      "chose": "little"
+     },
+     {
+      "age": 41,
+      "id": "kidcm",
+      "question": "On parle de marier Ramatou",
+      "about": "Les aînés de la famille disent que Ramatou a déjà 14 ans et qu’il est temps de lui chercher un mari. Une à une, les filles du voisinage qui ont son âge ont été mariées.",
+      "fact": "En Guinée, environ 47 % des femmes se marient avant 18 ans. Rester à l’école est la meilleure protection contre le mariage précoce (UNICEF)",
+      "choices": [
+       {
+        "key": "school",
+        "label": "Leur demander d’attendre qu’elle ait fini l’école",
+        "note": "Les aînés pourraient s’y opposer"
+       },
+       {
+        "key": "later",
+        "label": "En reparler quand elle sera adulte",
+        "note": null
+       }
+      ],
+      "chose": "later"
+     },
+     {
+      "age": 43,
+      "id": "loan",
+      "question": "Votre dette s’est alourdie",
+      "about": "Vous devez 1 198 € (aux prix français).",
+      "fact": "Dans le monde, environ 24 % des adultes n’ont pas de compte bancaire (Banque mondiale, Findex 2021)",
+      "choices": [
+       {
+        "key": "family",
+        "label": "Demander de l’aide à votre famille",
+        "note": "Relations↓"
+       },
+       {
+        "key": "lender",
+        "label": "Emprunter à un usurier",
+        "note": "Des intérêts à payer"
+       }
+      ],
+      "chose": "family"
+     },
+     {
+      "age": 44,
+      "id": "illness",
+      "question": "Une douleur atroce au ventre",
+      "about": "Une douleur partie du creux de l’estomac est descendue dans le bas du ventre, à droite, et vous avez du mal à marcher. Vous avez aussi de la fièvre. Votre part des frais d’hôpital s’élève à environ 839 € (aux prix français). Vos économies : rien (dette : 909 €).",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Guinée : 53 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "hospital"
+     },
+     {
+      "age": 46,
+      "id": "kidwed",
+      "question": "Ramatou se marie",
+      "about": "Ramatou, 19 ans, a amené à la maison la personne de sa vie.",
+      "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 585 € (aux prix français). Vos économies : rien (dette : 492 €).",
+      "choices": [
+       {
+        "key": "help",
+        "label": "Participer généreusement aux frais du mariage",
+        "note": "Environ 585 €"
+       },
+       {
+        "key": "little",
+        "label": "Donner un peu, selon vos moyens",
+        "note": "Environ 146 €"
+       },
+       {
+        "key": "none",
+        "label": "Offrir seulement vos vœux de bonheur",
+        "note": null
+       }
+      ],
+      "chose": "help"
+     },
+     {
+      "age": 47,
+      "id": "jobchange",
+      "question": "Une nouvelle offre",
+      "about": "Vous travaillez comme éleveuse depuis 19 ans. Une autre offre d’emploi est arrivée.",
+      "fact": "Revenu actuel : 2 641 $ US PPP par an · 154 € par mois aux prix français",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Devenir pêcheuse à la place",
+        "note": "2 784 $ US PPP par an · 162 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "stay",
+        "label": "Garder votre emploi actuel",
+        "note": "Continuer à gagner en expérience"
+       }
+      ],
+      "chose": "o0"
+     },
+     {
+      "age": 49,
+      "id": "biz",
+      "question": "Monter votre propre affaire ?",
+      "about": "De plus en plus, vous avez envie de travailler à votre compte plutôt que pour un salaire. Pour faire quoi ?",
+      "fact": "Environ la moitié des nouvelles entreprises ferment dans les cinq ans : davantage dans la restauration et le commerce de détail, moins dans les métiers qualifiés (OCDE, démographie des entreprises ; BLS des États-Unis)",
+      "choices": [
+       {
+        "key": "agri",
+        "label": "Se lancer dans l’achat et la revente de produits agricoles",
+        "note": "Environ 2 926 € · proche du travail que vous connaissez"
+       },
+       {
+        "key": "workshop",
+        "label": "Monter une petite usine",
+        "note": "Environ 7 315 € · beaucoup tiennent dans la durée"
+       },
+       {
+        "key": "food",
+        "label": "Ouvrir votre propre petit restaurant",
+        "note": "Environ 3 511 € · beaucoup ferment"
+       },
+       {
+        "key": "shop",
+        "label": "Ouvrir votre propre quincaillerie",
+        "note": "Environ 2 926 €"
+       },
+       {
+        "key": "no",
+        "label": "Choisir la stabilité",
+        "note": "Garder le travail que vous avez"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 50,
+      "id": "reflect",
+      "question": "Une pause · 50 ans",
+      "about": "Parmi les personnes nées la même année en Guinée, 77 % atteignent l’âge de cinquante ans.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 57,
+      "id": "petq",
+      "question": "Accueillir un animal ?",
+      "about": "Vous pensez sans cesse à un chat errant que vous croisez souvent dans le quartier.",
+      "fact": "En Guinée, environ 10 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+      "choices": [
+       {
+        "key": "dog",
+        "label": "Accueillir un chien",
+        "note": "Environ 41 € par an · de 10 à 15 ans ensemble"
+       },
+       {
+        "key": "cat",
+        "label": "Accueillir un chat",
+        "note": "Environ 28 € par an · de 12 à 18 ans ensemble"
+       },
+       {
+        "key": "pk_b",
+        "label": "Adopter un perroquet",
+        "note": "Environ 11 € par an · de 6 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_r",
+        "label": "Adopter un lapin",
+        "note": "Environ 14 € par an · de 8 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_f",
+        "label": "Installer un aquarium",
+        "note": "Environ 11 € par an · de 4 à 9 ans ensemble"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "never",
+        "label": "Ne pas avoir d’animal",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 58,
+      "id": "sm_tidy",
+      "question": "Une maison pleine d’objets",
+      "about": "La maison déborde d’objets gardés au cas où ils serviraient un jour.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "tidy",
+        "label": "Trier ce qui ne sert plus et le donner",
+        "note": null
+       },
+       {
+        "key": "keep",
+        "label": "Ça pourrait toujours servir",
+        "note": null
+       }
+      ],
+      "chose": "tidy"
+     },
+     {
+      "age": 60,
+      "id": "illness",
+      "question": "Une forte fièvre qui ne tombe pas",
+      "about": "Frissons et forte fièvre alternent, et un mal de tête violent vous cloue au lit. Votre part des frais d’hôpital s’élève à environ 839 € (aux prix français). Vos économies : 815 €.",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Guinée : 53 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "cheap"
+     },
+     {
+      "age": 61,
+      "id": "retire",
+      "question": "L’heure de la retraite ?",
+      "about": "Vous n’avez pas de pension. Vos enfants devenus adultes pourraient vous envoyer environ 57 € par mois aux prix français. Avec ce que vos enfants vous envoient, vous pouvez vous en sortir en faisant attention.",
+      "fact": "Dans le monde, environ 77 % des personnes ayant dépassé l’âge de la retraite perçoivent une pension, mais seulement 23 % environ dans les pays à faible revenu (OIT 2021)",
+      "choices": [
+       {
+        "key": "retire",
+        "label": "Prendre votre retraite",
+        "note": "Temps libre↑ Revenu↓"
+       },
+       {
+        "key": "less",
+        "label": "Passer à temps partiel",
+        "note": "Environ la moitié du salaire · moins dur pour le corps"
+       },
+       {
+        "key": "work",
+        "label": "Continuer à travailler",
+        "note": "Garder votre revenu"
+       }
+      ],
+      "chose": "work"
+     },
+     {
+      "age": 62,
+      "id": "mentor",
+      "question": "Les soucis d’une jeune recrue",
+      "about": "Une jeune recrue de votre travail vous confie ses doutes : l’avenir lui semble bouché.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "help",
+        "label": "Prendre le temps d’écouter",
+        "note": null
+       },
+       {
+        "key": "busy",
+        "label": "Prétexter le travail et remettre à plus tard",
+        "note": null
+       }
+      ],
+      "chose": "help"
+     },
+     {
+      "age": 63,
+      "id": "kinask",
+      "question": "Ramatou vous demande de l’argent",
+      "about": "Ramatou veut solder une dette et repartir de zéro, et vous demande 827 €. Vos économies : 1 730 €.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "give",
+        "label": "Donner ce qui est demandé",
+        "note": "Environ 827 € · Relations↑"
+       },
+       {
+        "key": "some",
+        "label": "Donner une partie, selon vos moyens",
+        "note": "Environ 248 €"
+       },
+       {
+        "key": "no",
+        "label": "Dire que cette fois, ce n’est pas possible",
+        "note": "Relations↓"
+       }
+      ],
+      "chose": "give"
+     }
+    ]
+   }
+  ],
+  "usage": {
+   "month": "2026-11",
+   "unit": "life units",
+   "used": 342,
+   "quota": 2000,
+   "this_call": 1
+  }
+ },
+ {
+  "meta": {
+   "api": "1in8b-engine",
+   "version": "v1",
+   "status": "beta",
+   "kind": "life",
+   "engine": "0.9.52",
+   "simulated": "simulated lives that follow real statistics: not real people, records, measurements or forecasts",
+   "docs": "https://1in8b.life/en/api/",
+   "terms": "https://1in8b.life/en/api/#terms",
+   "credit": "1in8b Engine (1in8b.life)",
+   "tier": "free"
+  },
+  "query": {
+   "country": null,
+   "sex": null,
+   "year": null,
+   "future": false,
+   "n": 1,
+   "seed": 20261109,
+   "lang": "fr"
+  },
+  "lives": [
+   {
+    "seed": 20261109,
+    "country": "KEN",
+    "born_year": 2026,
+    "sex": "M",
+    "name": "Andrew Kweka",
+    "born_in_city": false,
+    "education": "lower_secondary",
+    "education_at_25": "lower_secondary",
+    "jobs": [
+     {
+      "id": "herder",
+      "from": 15,
+      "to": 51
+     }
+    ],
+    "first_partner_age": 24,
+    "children": 2,
+    "first_child_age": 25,
+    "siblings": 3,
+    "moves": [],
+    "age_at_death": 51,
+    "cause_of_death": "lri",
+    "died_in": "KEN",
+    "who": {
+     "faith": "christian",
+     "group": null,
+     "orientation": "straight",
+     "disability": [],
+     "caste": null
+    },
+    "family_at_birth": {
+     "parents": "mother_and_father",
+     "mother_age": 21,
+     "father_age": 28,
+     "father_there": true,
+     "older_siblings": 0,
+     "family_fifth": 3
+    },
+    "met": [
+     {
+      "age": 14,
+      "year": 2040,
+      "kind": "electricity"
+     },
+     {
+      "age": 18,
+      "year": 2044,
+      "kind": "power_cuts"
+     },
+     {
+      "age": 19,
+      "year": 2045,
+      "kind": "drought",
+      "severe": false,
+      "near": true
+     },
+     {
+      "age": 22,
+      "year": 2048,
+      "kind": "drought",
+      "severe": false,
+      "near": true
+     },
+     {
+      "age": 38,
+      "year": 2064,
+      "kind": "drought",
+      "severe": true,
+      "near": true
+     },
+     {
+      "age": 44,
+      "year": 2070,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 49,
+      "year": 2075,
+      "kind": "economic_crisis"
+     }
+    ],
+    "decisions": [
+     {
+      "age": 2,
+      "id": "temper",
+      "question": "Deux ans, le monde du dehors",
+      "about": "Andrew marche maintenant plutôt bien. Dehors, tout est nouveau : que fait l’enfant en premier ? Votre choix fait pencher le tempérament de l’enfant de ce côté ; ces moments s’additionnent, et il se dessine vers cinq ans.",
+      "fact": "Le tempérament naît à la fois de ce que l’on reçoit à la naissance et de ce que l’on vit en grandissant. D’après l’ensemble des études sur les jumeaux, environ 40 % des différences de personnalité s’expliquent par les gènes (Vukasović & Bratko 2015)",
+      "choices": [
+       {
+        "key": "cur",
+        "label": "Observer longuement la terre et les cailloux",
+        "note": null
+       },
+       {
+        "key": "act",
+        "label": "Courir droit devant, de toutes vos forces",
+        "note": null
+       },
+       {
+        "key": "warm",
+        "label": "Aller vers un enfant qui pleure",
+        "note": null
+       },
+       {
+        "key": "grit",
+        "label": "Tomber, se relever tout seul et repartir",
+        "note": null
+       }
+      ],
+      "chose": "grit"
+     },
+     {
+      "age": 5,
+      "id": "reflect",
+      "question": "Une pause · 5 ans",
+      "about": "En Kenya, 4,3 % des enfants n’atteignent pas leur cinquième anniversaire. Cet enfant l’a atteint.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 7,
+      "id": "hobby",
+      "question": "Ce que vous aimez faire",
+      "about": "Que ferez-vous de votre temps libre ?",
+      "fact": null,
+      "choices": [
+       {
+        "key": "hiking",
+        "label": "Randonnée et promenade",
+        "note": "Bonheur+ Santé+"
+       },
+       {
+        "key": "drama",
+        "label": "Théâtre",
+        "note": "Bonheur+ Relations+"
+       },
+       {
+        "key": "sp_running",
+        "label": "Course à pied",
+        "note": "Bonheur+ Santé+ Relations+"
+       }
+      ],
+      "chose": "hiking"
+     },
+     {
+      "age": 12,
+      "id": "school2",
+      "question": "Aller au collège ?",
+      "about": "Vous avez terminé l’école primaire. Pour continuer, il faut payer les frais de scolarité, l’uniforme et le transport.",
+      "fact": "En Kenya, environ 87 % des enfants terminent le collège (UNESCO UIS)",
+      "choices": [
+       {
+        "key": "go",
+        "label": "Continuer à étudier",
+        "note": "Vos chances dépendent des moyens de votre famille et de vos notes"
+       },
+       {
+        "key": "work",
+        "label": "Commencer à travailler pour aider votre famille",
+        "note": "Un petit revenu, la fin de l’école"
+       }
+      ],
+      "chose": "go"
+     },
+     {
+      "age": 14,
+      "id": "school3",
+      "question": "Aller au lycée ?",
+      "about": "Vous avez terminé le collège. Certains de vos amis ont commencé à travailler.",
+      "fact": "En Kenya, environ 65 % des jeunes terminent le lycée (UNESCO UIS)",
+      "choices": [
+       {
+        "key": "go",
+        "label": "Aller au lycée",
+        "note": "Vos chances dépendent de vos moyens et de vos notes"
+       },
+       {
+        "key": "voc_tech",
+        "label": "Aller en école professionnelle, filière mécanique et électricité",
+        "note": "Apprendre un métier, travailler plus tôt"
+       },
+       {
+        "key": "voc_office",
+        "label": "Aller en école professionnelle, filière commerce et informatique",
+        "note": "Apprendre un métier, travailler plus tôt"
+       },
+       {
+        "key": "work",
+        "label": "Commencer à travailler",
+        "note": "Un revenu tout de suite"
+       }
+      ],
+      "chose": "work"
+     },
+     {
+      "age": 15,
+      "id": "reflect",
+      "question": "Une pause · 15 ans",
+      "about": "Cet enfant travaille au lieu d’aller à l’école. Durée de scolarité attendue : 11,5 ans en Kenya.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 15,
+      "id": "job",
+      "question": "Votre premier emploi",
+      "about": "Niveau d’études : collège. Voici les emplois que l’on peut trouver en Kenya (campagne).",
+      "fact": "En Kenya, environ 90 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 48 % travaillent dans l’agriculture",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Paysan (agriculture vivrière)",
+        "note": "2 563 $ US PPP par an · 150 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "o1",
+        "label": "Éleveur",
+        "note": "2 520 $ US PPP par an · 147 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "o2",
+        "label": "Ouvrier agricole",
+        "note": "2 206 $ US PPP par an · 129 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "wait",
+        "label": "Attendre un meilleur emploi",
+        "note": "Une année de plus à chercher"
+       }
+      ],
+      "chose": "o1"
+     },
+     {
+      "age": 19,
+      "id": "drink",
+      "question": "Vous buvez davantage",
+      "about": "Rien ne semble aussi efficace qu’un verre pour oublier ce qui est dur. Le verre d’avant le coucher est devenu, sans que vous le voyiez venir, trois ou quatre verres.",
+      "fact": "Environ 7 % des adultes dans le monde ont un trouble lié à l’usage de l’alcool, et 3,7 % une dépendance à l’alcool (OMS 2024)",
+      "choices": [
+       {
+        "key": "stop",
+        "label": "Boire moins et trouver d’autres façons de tenir",
+        "note": "Marche · entourage · aide"
+       },
+       {
+        "key": "drink",
+        "label": "Tenir grâce à l’alcool",
+        "note": "Plus facile pour l’instant · peut mener à la dépendance"
+       }
+      ],
+      "chose": "drink"
+     },
+     {
+      "age": 23,
+      "id": "partner",
+      "question": "Une proposition d’union",
+      "about": "Rencontre proposée par les aînés de la famille : Josephine Ndungu (femme, 18 ans, sociable). Métier : employée de maison. Josephine doit environ 402 € en prêts étudiants, achats à crédit et autres dettes de ce genre.",
+      "fact": "En Kenya, l’âge moyen des hommes au premier mariage est estimé à environ 26 ans",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Se marier",
+        "note": "Relations↑ Bonheur↑"
+       },
+       {
+        "key": "date",
+        "label": "Prendre le temps de mieux se connaître",
+        "note": "Remettre la décision à plus tard"
+       },
+       {
+        "key": "no",
+        "label": "Refuser",
+        "note": "Peut créer des tensions avec votre famille"
+       }
+      ],
+      "chose": "date"
+     },
+     {
+      "age": 23,
+      "id": "alcquit",
+      "question": "Arrêter de boire ?",
+      "about": "Cela fait 4 ans que l’alcool tient une grande place dans votre vie. Peu à peu, vous voyez ce qu’il vous a fait perdre.",
+      "fact": "Environ un tiers des personnes traitées pour une dépendance à l’alcool n’avaient plus de symptômes un an plus tard (NIAAA) · Aide : en France, Alcool Info Service au 0 980 980 930 (tous les jours de 8 h à 23 h, appel non surtaxé) ; findahelpline.com en recense d’autres",
+      "choices": [
+       {
+        "key": "help",
+        "label": "Se faire aider",
+        "note": "Traitement et groupes d’entraide · environ 197 €"
+       },
+       {
+        "key": "later",
+        "label": "Se dire que ça va, pour l’instant",
+        "note": null
+       }
+      ],
+      "chose": "help"
+     },
+     {
+      "age": 24,
+      "id": "wedtalk",
+      "question": "Projet de mariage",
+      "about": "Cela fait 1 an que vous êtes avec Josephine. Josephine parle de mariage. Josephine doit environ 292 € en prêts étudiants, achats à crédit et autres dettes de ce genre.",
+      "fact": "Aux États-Unis, un peu plus de la moitié des couples fiancés (53 %) se sont fréquentés deux à cinq ans avant leurs fiançailles (The Knot 2024)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Se marier",
+        "note": "Relations↑ Bonheur↑"
+       },
+       {
+        "key": "wait",
+        "label": "Prendre le temps de mieux se connaître",
+        "note": "Sans se presser"
+       },
+       {
+        "key": "part",
+        "label": "Refuser",
+        "note": "Peut créer des tensions avec votre famille"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 25,
+      "id": "kids",
+      "question": "Avoir un enfant ?",
+      "about": "Vous parlez avec votre partenaire d’avoir des enfants. Josephine espère un enfant depuis longtemps.",
+      "fact": "Indice de fécondité en Kenya : 3,21 enfants par femme (ONU, WPP 2024)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Décider de vivre sans enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 25,
+      "id": "petq",
+      "question": "Accueillir un animal ?",
+      "about": "Au refuge, vous avez vu des animaux qui attendent une famille.",
+      "fact": "En Kenya, environ 10 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+      "choices": [
+       {
+        "key": "dog",
+        "label": "Accueillir un chien",
+        "note": "Environ 40 € par an · de 10 à 15 ans ensemble"
+       },
+       {
+        "key": "cat",
+        "label": "Accueillir un chat",
+        "note": "Environ 26 € par an · de 12 à 18 ans ensemble"
+       },
+       {
+        "key": "pk_b",
+        "label": "Adopter un perroquet",
+        "note": "Environ 11 € par an · de 6 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_r",
+        "label": "Adopter un lapin",
+        "note": "Environ 13 € par an · de 8 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_f",
+        "label": "Installer un aquarium",
+        "note": "Environ 11 € par an · de 4 à 9 ans ensemble"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 26,
+      "id": "illness",
+      "question": "Une forte fièvre qui ne tombe pas",
+      "about": "Frissons et forte fièvre alternent, et un mal de tête violent vous cloue au lit. Votre part des frais d’hôpital s’élève à environ 401 € (aux prix français). Vos économies : rien (dette : 638 €).",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Kenya : 23 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "hospital"
+     },
+     {
+      "age": 27,
+      "id": "babycare",
+      "question": "Qui va s’occuper de Wafula ?",
+      "about": "Maintenant que votre partenaire et vous travaillez, il faut décider qui s’occupera de Wafula. Votre partenaire, Josephine, propose de faire une pause de quelques années dans son travail pour s’occuper du bébé.",
+      "fact": "En Kenya, environ 72 % des femmes de 15 à 64 ans sont actives (estimation de l'OIT, 2019)",
+      "choices": [
+       {
+        "key": "me",
+        "label": "Arrêter de travailler et s’occuper soi-même du bébé",
+        "note": "Le revenu s’arrête · Du temps avec votre enfant"
+       },
+       {
+        "key": "partner",
+        "label": "Confier le bébé à votre partenaire, qui fait une pause dans son travail",
+        "note": "Le revenu de votre partenaire s’arrête quelques années"
+       },
+       {
+        "key": "gp",
+        "label": "Confier le bébé à vos parents",
+        "note": "Presque gratuit · Vous comptez sur vos parents"
+       },
+       {
+        "key": "carry",
+        "label": "Emmener le bébé au travail",
+        "note": "Épuisant, mais le bébé reste près de vous"
+       }
+      ],
+      "chose": "partner"
+     },
+     {
+      "age": 27,
+      "id": "alcquit",
+      "question": "Arrêter de boire ?",
+      "about": "Cela fait 8 ans que l’alcool tient une grande place dans votre vie. Peu à peu, vous voyez ce qu’il vous a fait perdre.",
+      "fact": "Environ un tiers des personnes traitées pour une dépendance à l’alcool n’avaient plus de symptômes un an plus tard (NIAAA) · Aide : en France, Alcool Info Service au 0 980 980 930 (tous les jours de 8 h à 23 h, appel non surtaxé) ; findahelpline.com en recense d’autres",
+      "choices": [
+       {
+        "key": "help",
+        "label": "Se faire aider",
+        "note": "Traitement et groupes d’entraide · environ 197 €"
+       },
+       {
+        "key": "later",
+        "label": "Se dire que ça va, pour l’instant",
+        "note": null
+       }
+      ],
+      "chose": "later"
+     },
+     {
+      "age": 30,
+      "id": "reflect",
+      "question": "Une pause · 30 ans",
+      "about": "Le revenu annuel de cette personne la place dans les 13 % les plus modestes à l’échelle mondiale. En Kenya, 32 % de la population utilise Internet et 32 % vit en ville.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 31,
+      "id": "kids",
+      "question": "Avoir un 2e enfant ?",
+      "about": "Vous avez 1 enfant aujourd’hui. Josephine pense plutôt qu’un enfant, c’est assez.",
+      "fact": "Indice de fécondité en Kenya : 3,21 enfants par femme (ONU, WPP 2024)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Ne plus avoir d’enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 32,
+      "id": "quit",
+      "question": "Arrêter de fumer ?",
+      "about": "Vous toussez de plus en plus souvent. Est-il temps d’arrêter de fumer ?",
+      "fact": "En moyenne, les fumeurs perdent plus de 10 ans d’espérance de vie (CDC). Arrêter de fumer avant 40 ans supprime environ 90 % du risque de décès supplémentaire lié au fait de continuer (Jha et al., NEJM 2013) Aux États-Unis, parmi les fumeurs qui ont essayé d’arrêter dans l’année, environ 13 % n’avaient pas repris depuis plus de six mois (CDC 2015)",
+      "choices": [
+       {
+        "key": "try",
+        "label": "Essayer d’arrêter",
+        "note": "Si ça marche, votre santé se rétablit"
+       },
+       {
+        "key": "no",
+        "label": "Continuer à fumer",
+        "note": null
+       }
+      ],
+      "chose": "try"
+     },
+     {
+      "age": 33,
+      "id": "kids",
+      "question": "Avoir un 3e enfant ?",
+      "about": "Vous avez 2 enfants aujourd’hui. Josephine pense plutôt que les enfants que vous avez suffisent.",
+      "fact": "Indice de fécondité en Kenya : 3,21 enfants par femme (ONU, WPP 2024)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Ne plus avoir d’enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 38,
+      "id": "disaster",
+      "question": "La sécheresse a frappé",
+      "about": "Saison après saison, la pluie n’est pas venue, et vous avez perdu près de la moitié du troupeau.",
+      "fact": "La sécheresse de 2022 a tué 2,6 millions de têtes de bétail au Kenya, dont environ 300 000 bovins dans le seul comté de Kajiado (Autorité nationale de gestion de la sécheresse)",
+      "choices": [
+       {
+        "key": "herd",
+        "label": "Repartir avec les bêtes qui restent",
+        "note": "Reconstituer le troupeau · cela prend des années"
+       },
+       {
+        "key": "town",
+        "label": "Vendre ce qui reste et partir pour la ville",
+        "note": "Nairobi · chercher un nouveau travail"
+       }
+      ],
+      "chose": "herd"
+     },
+     {
+      "age": 41,
+      "id": "jobchange",
+      "question": "Une nouvelle offre",
+      "about": "Vous travaillez comme éleveur depuis 26 ans. Une autre offre d’emploi est arrivée.",
+      "fact": "Revenu actuel : 2 686 $ US PPP par an · 157 € par mois aux prix français",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Devenir pêcheur à la place",
+        "note": "3 545 $ US PPP par an · 207 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "stay",
+        "label": "Garder votre emploi actuel",
+        "note": "Continuer à gagner en expérience"
+       }
+      ],
+      "chose": "stay"
+     },
+     {
+      "age": 42,
+      "id": "quit",
+      "question": "Arrêter de fumer ?",
+      "about": "Vous toussez de plus en plus souvent. Est-il temps d’arrêter de fumer ?",
+      "fact": "En moyenne, les fumeurs perdent plus de 10 ans d’espérance de vie (CDC). Arrêter de fumer avant 40 ans supprime environ 90 % du risque de décès supplémentaire lié au fait de continuer (Jha et al., NEJM 2013) Aux États-Unis, parmi les fumeurs qui ont essayé d’arrêter dans l’année, environ 13 % n’avaient pas repris depuis plus de six mois (CDC 2015)",
+      "choices": [
+       {
+        "key": "try",
+        "label": "Essayer d’arrêter",
+        "note": "Si ça marche, votre santé se rétablit"
+       },
+       {
+        "key": "no",
+        "label": "Continuer à fumer",
+        "note": null
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 43,
+      "id": "kids",
+      "question": "Avoir un 3e enfant ?",
+      "about": "Vous avez 2 enfants aujourd’hui. Josephine pense plutôt que les enfants que vous avez suffisent.",
+      "fact": "Indice de fécondité en Kenya : 3,21 enfants par femme (ONU, WPP 2024)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Ne plus avoir d’enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 44,
+      "id": "kidcm",
+      "question": "On parle de marier Namubiru",
+      "about": "Les aînés de la famille disent que Namubiru a déjà 13 ans et qu’il est temps de lui chercher un mari. Une à une, les filles du voisinage qui ont son âge ont été mariées.",
+      "fact": "En Kenya, environ 23 % des femmes se marient avant 18 ans. Rester à l’école est la meilleure protection contre le mariage précoce (UNICEF)",
+      "choices": [
+       {
+        "key": "school",
+        "label": "Leur demander d’attendre qu’elle ait fini l’école",
+        "note": "Les aînés pourraient s’y opposer"
+       },
+       {
+        "key": "later",
+        "label": "En reparler quand elle sera adulte",
+        "note": null
+       }
+      ],
+      "chose": "later"
+     },
+     {
+      "age": 45,
+      "id": "petq",
+      "question": "Accueillir un animal ?",
+      "about": "Depuis des jours, Namubiru réclame un chiot.",
+      "fact": "En Kenya, environ 10 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+      "choices": [
+       {
+        "key": "dog",
+        "label": "Accueillir un chien",
+        "note": "Environ 40 € par an · de 10 à 15 ans ensemble"
+       },
+       {
+        "key": "cat",
+        "label": "Accueillir un chat",
+        "note": "Environ 27 € par an · de 12 à 18 ans ensemble"
+       },
+       {
+        "key": "pk_b",
+        "label": "Adopter un perroquet",
+        "note": "Environ 11 € par an · de 6 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_r",
+        "label": "Adopter un lapin",
+        "note": "Environ 13 € par an · de 8 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_f",
+        "label": "Installer un aquarium",
+        "note": "Environ 11 € par an · de 4 à 9 ans ensemble"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "never",
+        "label": "Ne pas avoir d’animal",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 47,
+      "id": "kidq",
+      "question": "La question de Namubiru",
+      "about": "Namubiru, 16 ans, a refermé son cahier d’exercices et vous a demandé : « Papa, pourquoi on doit étudier ? »",
+      "fact": "Les attentes et les encouragements des parents influencent longtemps la scolarité et le parcours professionnel de l’enfant (Davis-Kean 2005)",
+      "choices": [
+       {
+        "key": "wide",
+        "label": "Pour que plus tard, tu puisses choisir ce que tu veux faire",
+        "note": null
+       },
+       {
+        "key": "job",
+        "label": "Pour entrer dans une bonne université et trouver un bon travail",
+        "note": null
+       },
+       {
+        "key": "free",
+        "label": "Les études ne sont pas le seul chemin. Cherchons ce que tu aimes",
+        "note": null
+       }
+      ],
+      "chose": "free"
+     },
+     {
+      "age": 48,
+      "id": "kids",
+      "question": "Avoir un 3e enfant ?",
+      "about": "Vous avez 2 enfants aujourd’hui. Josephine pense plutôt que les enfants que vous avez suffisent.",
+      "fact": "Indice de fécondité en Kenya : 3,21 enfants par femme (ONU, WPP 2024)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Avoir un enfant",
+        "note": "Bonheur↑ Dépenses pour l’enfant↑"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "stop",
+        "label": "Ne plus avoir d’enfants",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "yes"
+     },
+     {
+      "age": 48,
+      "id": "quit",
+      "question": "Arrêter de fumer ?",
+      "about": "Vous toussez de plus en plus souvent. Est-il temps d’arrêter de fumer ?",
+      "fact": "En moyenne, les fumeurs perdent plus de 10 ans d’espérance de vie (CDC). Arrêter de fumer avant 40 ans supprime environ 90 % du risque de décès supplémentaire lié au fait de continuer (Jha et al., NEJM 2013) Aux États-Unis, parmi les fumeurs qui ont essayé d’arrêter dans l’année, environ 13 % n’avaient pas repris depuis plus de six mois (CDC 2015)",
+      "choices": [
+       {
+        "key": "try",
+        "label": "Essayer d’arrêter",
+        "note": "Si ça marche, votre santé se rétablit"
+       },
+       {
+        "key": "no",
+        "label": "Continuer à fumer",
+        "note": null
+       }
+      ],
+      "chose": "try"
+     },
+     {
+      "age": 49,
+      "id": "illness",
+      "question": "Une toux et une forte fièvre qui ne passent pas",
+      "about": "La toux et la forte fièvre durent depuis des jours, et le moindre effort vous essouffle. Votre part des frais d’hôpital s’élève à environ 401 € (aux prix français). Vos économies : rien (dette : 398 €).",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Kenya : 23 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "hospital"
+     },
+     {
+      "age": 50,
+      "id": "reflect",
+      "question": "Une pause · 50 ans",
+      "about": "Parmi les personnes nées la même année en Kenya, 82 % atteignent l’âge de cinquante ans.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 50,
+      "id": "hobby",
+      "question": "Commencer un nouveau loisir ?",
+      "about": "Vos loisirs actuels : randonnée et promenade",
+      "fact": null,
+      "choices": [
+       {
+        "key": "games",
+        "label": "Jeux vidéo",
+        "note": "Bonheur+ Santé−"
+       },
+       {
+        "key": "screen",
+        "label": "Regarder des séries télévisées",
+        "note": "Bonheur+ Santé−"
+       },
+       {
+        "key": "cooking",
+        "label": "Cuisine",
+        "note": "Bonheur+ Santé+ Relations+"
+       },
+       {
+        "key": "none",
+        "label": "Vos loisirs actuels suffisent",
+        "note": null
+       }
+      ],
+      "chose": "none"
+     },
+     {
+      "age": 51,
+      "id": "mentor",
+      "question": "Les soucis d’une jeune recrue",
+      "about": "Une jeune recrue de votre travail vous confie ses doutes : l’avenir lui semble bouché.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "help",
+        "label": "Prendre le temps d’écouter",
+        "note": null
+       },
+       {
+        "key": "busy",
+        "label": "Prétexter le travail et remettre à plus tard",
+        "note": null
+       }
+      ],
+      "chose": "help"
+     }
+    ]
+   }
+  ],
+  "usage": {
+   "month": "2026-11",
+   "unit": "life units",
+   "used": 343,
+   "quota": 2000,
+   "this_call": 1
+  }
+ },
+ {
+  "meta": {
+   "api": "1in8b-engine",
+   "version": "v1",
+   "status": "beta",
+   "kind": "life",
+   "engine": "0.9.52",
+   "simulated": "simulated lives that follow real statistics: not real people, records, measurements or forecasts",
+   "docs": "https://1in8b.life/en/api/",
+   "terms": "https://1in8b.life/en/api/#terms",
+   "credit": "1in8b Engine (1in8b.life)",
+   "tier": "free"
+  },
+  "query": {
+   "country": null,
+   "sex": null,
+   "year": null,
+   "future": false,
+   "n": 1,
+   "seed": 20261110,
+   "lang": "fr"
+  },
+  "lives": [
+   {
+    "seed": 20261110,
+    "country": "IND",
+    "born_year": 2026,
+    "sex": "M",
+    "name": "Raj Valmiki",
+    "born_in_city": true,
+    "education": "primary",
+    "education_at_25": "primary",
+    "jobs": [
+     {
+      "id": "farmhand",
+      "from": 15,
+      "to": 19
+     },
+     {
+      "id": "electric",
+      "from": 19,
+      "to": 27
+     },
+     {
+      "id": "electric",
+      "from": 28,
+      "to": 31
+     },
+     {
+      "id": "electric",
+      "from": 31,
+      "to": 43
+     },
+     {
+      "id": "farmhand",
+      "from": 44,
+      "to": 55
+     },
+     {
+      "id": "factory",
+      "from": 55,
+      "to": 59
+     },
+     {
+      "id": "delivery",
+      "from": 59,
+      "to": 63
+     }
+    ],
+    "first_partner_age": null,
+    "children": 1,
+    "first_child_age": 26,
+    "siblings": 3,
+    "moves": [],
+    "age_at_death": 81,
+    "cause_of_death": "can",
+    "died_in": "IND",
+    "who": {
+     "faith": "hindu",
+     "group": null,
+     "orientation": "straight",
+     "disability": [],
+     "caste": {
+      "id": "scheduled_caste",
+      "name": "Caste répertoriée (dalit)"
+     }
+    },
+    "family_at_birth": {
+     "parents": "mother_and_father",
+     "mother_age": 26,
+     "father_age": 29,
+     "father_there": true,
+     "older_siblings": 0,
+     "family_fifth": 1
+    },
+    "met": [
+     {
+      "age": 28,
+      "year": 2054,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 38,
+      "year": 2064,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 42,
+      "year": 2068,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 43,
+      "year": 2069,
+      "kind": "storm",
+      "severe": false,
+      "near": true
+     },
+     {
+      "age": 46,
+      "year": 2072,
+      "kind": "flood",
+      "severe": true,
+      "near": true
+     },
+     {
+      "age": 52,
+      "year": 2078,
+      "kind": "storm",
+      "severe": false,
+      "near": true
+     },
+     {
+      "age": 64,
+      "year": 2090,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 69,
+      "year": 2095,
+      "kind": "heatwave",
+      "severe": false,
+      "near": true
+     },
+     {
+      "age": 69,
+      "year": 2095,
+      "kind": "economic_crisis"
+     },
+     {
+      "age": 77,
+      "year": 2103,
+      "kind": "storm",
+      "severe": true,
+      "near": true
+     }
+    ],
+    "decisions": [
+     {
+      "age": 2,
+      "id": "temper",
+      "question": "Deux ans, parmi les autres enfants",
+      "about": "Raj marche maintenant plutôt bien. Là où les enfants du quartier jouent ensemble, que fait l’enfant en premier ? Votre choix fait pencher le tempérament de l’enfant de ce côté ; ces moments s’additionnent, et il se dessine vers cinq ans.",
+      "fact": "Le tempérament naît à la fois de ce que l’on reçoit à la naissance et de ce que l’on vit en grandissant. D’après l’ensemble des études sur les jumeaux, environ 40 % des différences de personnalité s’expliquent par les gènes (Vukasović & Bratko 2015)",
+      "choices": [
+       {
+        "key": "cur",
+        "label": "Observer longuement les grands qui jouent",
+        "note": null
+       },
+       {
+        "key": "act",
+        "label": "Se jeter au milieu des enfants",
+        "note": null
+       },
+       {
+        "key": "warm",
+        "label": "Aller vers un enfant qui pleure",
+        "note": null
+       },
+       {
+        "key": "grit",
+        "label": "Tomber en suivant les grands, se relever et repartir derrière eux",
+        "note": null
+       }
+      ],
+      "chose": "cur"
+     },
+     {
+      "age": 5,
+      "id": "reflect",
+      "question": "Une pause · 5 ans",
+      "about": "En Inde, 3,0 % des enfants n’atteignent pas leur cinquième anniversaire. Cet enfant l’a atteint.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 7,
+      "id": "hobby",
+      "question": "Ce que vous aimez faire",
+      "about": "Que ferez-vous de votre temps libre ?",
+      "fact": null,
+      "choices": [
+       {
+        "key": "sp_cricket",
+        "label": "Cricket",
+        "note": "Bonheur+ Santé+ Relations+"
+       },
+       {
+        "key": "sp_kabaddi",
+        "label": "Kabaddi",
+        "note": "Bonheur+ Santé+ Relations+"
+       },
+       {
+        "key": "dance",
+        "label": "Danse",
+        "note": "Bonheur+ Santé+ Relations+"
+       }
+      ],
+      "chose": "dance"
+     },
+     {
+      "age": 11,
+      "id": "school2",
+      "question": "Aller au collège ?",
+      "about": "Vous avez terminé l’école primaire. Pour continuer, il faut payer les frais de scolarité, l’uniforme et le transport.",
+      "fact": "En Inde, environ 86 % des enfants terminent le collège (UNESCO UIS)",
+      "choices": [
+       {
+        "key": "go",
+        "label": "Continuer à étudier",
+        "note": "Vos chances dépendent des moyens de votre famille et de vos notes"
+       },
+       {
+        "key": "work",
+        "label": "Commencer à travailler pour aider votre famille",
+        "note": "Un petit revenu, la fin de l’école"
+       }
+      ],
+      "chose": "go"
+     },
+     {
+      "age": 15,
+      "id": "reflect",
+      "question": "Une pause · 15 ans",
+      "about": "Cet enfant travaille au lieu d’aller à l’école. Durée de scolarité attendue : 13 ans en Inde.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 15,
+      "id": "job",
+      "question": "Votre premier emploi",
+      "about": "Niveau d’études : école primaire. Voici les emplois que l’on peut trouver en Inde (ville).",
+      "fact": "En Inde, environ 82 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 43 % travaillent dans l’agriculture",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Ouvrier d’usine",
+        "note": "5 680 $ US PPP par an · 331 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "o1",
+        "label": "Ouvrier agricole",
+        "note": "3 655 $ US PPP par an · 213 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "o2",
+        "label": "Cuisinier ou serveur",
+        "note": "4 781 $ US PPP par an · 279 € par mois aux prix français · emploi informel · par votre amie Usha"
+       },
+       {
+        "key": "wait",
+        "label": "Attendre un meilleur emploi",
+        "note": "Une année de plus à chercher"
+       }
+      ],
+      "chose": "o1"
+     },
+     {
+      "age": 16,
+      "id": "speakup",
+      "question": "Moqueries au travail",
+      "about": "Une personne de votre équipe est la cible de moqueries devant tout le monde, à cause de ses origines et de sa façon de parler.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "speak",
+        "label": "Leur dire d’arrêter",
+        "note": "L’ambiance risque de devenir pesante"
+       },
+       {
+        "key": "silent",
+        "label": "Faire semblant de ne rien voir",
+        "note": null
+       }
+      ],
+      "chose": "silent"
+     },
+     {
+      "age": 18,
+      "id": "drink",
+      "question": "Les soirées arrosées se multiplient",
+      "about": "Presque chaque jour après le travail, il y a une nouvelle tournée. Si vous n’y allez pas, vous avez l’impression d’être celui qui reste à l’écart.",
+      "fact": "Environ 7 % des adultes dans le monde ont un trouble lié à l’usage de l’alcool, et 3,7 % une dépendance à l’alcool (OMS 2024)",
+      "choices": [
+       {
+        "key": "stop",
+        "label": "Boire moins et trouver d’autres façons de tenir",
+        "note": "Marche · entourage · aide"
+       },
+       {
+        "key": "drink",
+        "label": "Tenir grâce à l’alcool",
+        "note": "Plus facile pour l’instant · peut mener à la dépendance"
+       }
+      ],
+      "chose": "drink"
+     },
+     {
+      "age": 19,
+      "id": "apprent",
+      "question": "Apprendre un métier ?",
+      "about": "Un artisan réputé du quartier cherche quelqu’un à former en apprentissage. Pendant deux ou trois ans, vous gagneriez peu, mais vous auriez un métier entre les mains.",
+      "fact": "En Afrique et en Asie du Sud, l’apprentissage informel auprès d’un maître artisan est considéré comme de loin la principale voie pour apprendre un métier (OIT 2019)",
+      "choices": [
+       {
+        "key": "artisan",
+        "label": "Apprendre le métier de menuisier ou couturier",
+        "note": "2 à 3 ans d’apprentissage · un métier pour la vie"
+       },
+       {
+        "key": "electric",
+        "label": "Apprendre le métier d’électricien",
+        "note": "2 à 3 ans d’apprentissage · un métier pour la vie"
+       },
+       {
+        "key": "no",
+        "label": "Continuer ce que vous faites",
+        "note": null
+       }
+      ],
+      "chose": "electric"
+     },
+     {
+      "age": 22,
+      "id": "stranger",
+      "question": "Quelqu’un s’effondre dans la rue",
+      "about": "Une personne que vous ne connaissez pas s’est effondrée dans la rue. Tout le monde passe sans s’arrêter.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "help",
+        "label": "L’emmener à l’hôpital",
+        "note": "Cela demande un peu de temps et d’argent"
+       },
+       {
+        "key": "pass",
+        "label": "Se dire que quelqu’un d’autre aidera, et passer son chemin",
+        "note": null
+       }
+      ],
+      "chose": "help"
+     },
+     {
+      "age": 23,
+      "id": "illness",
+      "question": "Une forte fièvre soudaine",
+      "about": "Une forte fièvre s’est déclarée d’un coup, avec des douleurs dans toutes les articulations et derrière les yeux. Des taches rouges sont apparues sur votre peau. Votre part des frais d’hôpital s’élève à environ 1 263 € (aux prix français). Vos économies : 1 084 €.",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "hospital"
+     },
+     {
+      "age": 24,
+      "id": "partner",
+      "question": "Une proposition d’union",
+      "about": "Rencontre proposée par les aînés de la famille : Komal Kamble (femme, 20 ans, drôle). Métier : employée de maison. Komal n’a presque ni économies ni dettes.",
+      "fact": "En Inde, l’âge moyen des hommes au premier mariage est estimé à environ 25 ans",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Se marier",
+        "note": "Relations↑ Bonheur↑"
+       },
+       {
+        "key": "date",
+        "label": "Prendre le temps de mieux se connaître",
+        "note": "Remettre la décision à plus tard"
+       },
+       {
+        "key": "no",
+        "label": "Refuser",
+        "note": "Peut créer des tensions avec votre famille"
+       }
+      ],
+      "chose": "date"
+     },
+     {
+      "age": 24,
+      "id": "buy",
+      "question": "Rouler à moto ?",
+      "about": "Le prix est d’environ 2 778 € (aux prix français). Les trajets pour le travail et les courses deviennent bien plus faciles, mais le risque d’accident augmente aussi. Vos économies ne suffisent pas : il faudrait l’acheter à crédit.",
+      "fact": "Dans le monde, environ 21 % des personnes tuées sur la route circulaient à moto ou sur un autre deux-roues ou trois-roues motorisé (OMS 2023) · Mortalité routière en Inde : environ 15,4 décès pour 100 000 habitants · Un casque sûr et de qualité réduit le risque de mourir dans un accident à moins d’un sixième, et celui de lésion cérébrale jusqu’à 74 % (OMS 2023)",
+      "choices": [
+       {
+        "key": "loan",
+        "label": "Acheter une moto à crédit",
+        "note": "Crédit sur 4 ans · Dette d’environ 2 428 € · Avec intérêts"
+       },
+       {
+        "key": "never",
+        "label": "Ne jamais rouler à moto",
+        "note": "Cette question ne reviendra pas"
+       },
+       {
+        "key": "no",
+        "label": "Y réfléchir plus tard",
+        "note": null
+       }
+      ],
+      "chose": "loan"
+     },
+     {
+      "age": 25,
+      "id": "wedtalk",
+      "question": "Projet de mariage",
+      "about": "Cela fait 1 an que vous êtes avec Komal. Komal parle de mariage. Komal a environ 259 € d’économies.",
+      "fact": "Aux États-Unis, un peu plus de la moitié des couples fiancés (53 %) se sont fréquentés deux à cinq ans avant leurs fiançailles (The Knot 2024)",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Se marier",
+        "note": "Relations↑ Bonheur↑"
+       },
+       {
+        "key": "wait",
+        "label": "Prendre le temps de mieux se connaître",
+        "note": "Sans se presser"
+       },
+       {
+        "key": "part",
+        "label": "Refuser",
+        "note": "Peut créer des tensions avec votre famille"
+       }
+      ],
+      "chose": "wait"
+     },
+     {
+      "age": 26,
+      "id": "datepreg",
+      "question": "Komal est enceinte",
+      "about": "2 ans avec Komal, et un bébé arrive sans que vous l’ayez prévu. Vous en parlez ensemble pour décider quoi faire. Komal a environ 356 € d’économies.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "wed",
+        "label": "Se marier",
+        "note": "Relations↑"
+       },
+       {
+        "key": "apart",
+        "label": "Se séparer, mais verser une pension alimentaire",
+        "note": "L’enfant vit avec sa mère"
+       }
+      ],
+      "chose": "apart"
+     },
+     {
+      "age": 26,
+      "id": "illness",
+      "question": "La toux ne s’arrête pas",
+      "about": "Vous toussez sans arrêt depuis des semaines, vous vous réveillez chaque nuit en sueur, et vous avez perdu du poids. Votre part des frais d’hôpital s’élève à environ 1 263 € (aux prix français). Vos économies : rien (dette : 137 €).",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "hospital"
+     },
+     {
+      "age": 27,
+      "id": "hobby",
+      "question": "Commencer un nouveau loisir ?",
+      "about": "Vos loisirs actuels : danse",
+      "fact": null,
+      "choices": [
+       {
+        "key": "faith",
+        "label": "Rencontres religieuses",
+        "note": "Bonheur+ Relations+"
+       },
+       {
+        "key": "travel",
+        "label": "Voyage",
+        "note": "Bonheur+ Savoir+ Coûte de l’argent"
+       },
+       {
+        "key": "sns",
+        "label": "Smartphone et réseaux sociaux",
+        "note": "Bonheur+ Santé− Relations+"
+       },
+       {
+        "key": "none",
+        "label": "Vos loisirs actuels suffisent",
+        "note": null
+       }
+      ],
+      "chose": "sns"
+     },
+     {
+      "age": 28,
+      "id": "job",
+      "question": "Choisissez un nouvel emploi",
+      "about": "Avant, vous travailliez comme électricien. Niveau d’études : école primaire. Voici les emplois que l’on peut trouver en Inde (ville).",
+      "fact": "En Inde, environ 82 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 43 % travaillent dans l’agriculture",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Électricien",
+        "note": "8 366 $ US PPP par an · 488 € par mois aux prix français · emploi informel · 8 ans d’expérience pris en compte · par un ancien collègue"
+       },
+       {
+        "key": "o1",
+        "label": "Ouvrier agricole",
+        "note": "3 247 $ US PPP par an · 189 € par mois aux prix français · emploi informel · 4 ans d’expérience pris en compte"
+       },
+       {
+        "key": "o2",
+        "label": "Éleveur",
+        "note": "3 441 $ US PPP par an · 201 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "wait",
+        "label": "Attendre un meilleur emploi",
+        "note": "Une année de plus à chercher"
+       }
+      ],
+      "chose": "o0"
+     },
+     {
+      "age": 28,
+      "id": "partner",
+      "question": "Une proposition d’union",
+      "about": "Rencontre proposée par les aînés de la famille : Savitri Kumar (femme, 26 ans, fiable). Métier : ouvrière de la confection. Savitri a environ 700 € d’économies.",
+      "fact": "En Inde, l’âge moyen des hommes au premier mariage est estimé à environ 25 ans",
+      "choices": [
+       {
+        "key": "yes",
+        "label": "Se marier",
+        "note": "Relations↑ Bonheur↑"
+       },
+       {
+        "key": "date",
+        "label": "Prendre le temps de mieux se connaître",
+        "note": "Remettre la décision à plus tard"
+       },
+       {
+        "key": "no",
+        "label": "Refuser",
+        "note": "Peut créer des tensions avec votre famille"
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 30,
+      "id": "reflect",
+      "question": "Une pause · 30 ans",
+      "about": "Le revenu annuel de cette personne la place dans les 45 % les plus modestes à l’échelle mondiale. En Inde, 60 % de la population utilise Internet et 35 % vit en ville.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 30,
+      "id": "illness",
+      "question": "Une fièvre qui ne baisse pas",
+      "about": "Depuis plus d’une semaine, la fièvre ne baisse pas ; vous avez mal au ventre et plus aucune force. Votre part des frais d’hôpital s’élève à environ 1 263 € (aux prix français). Vos économies : rien (dette : 15 €).",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "hospital"
+     },
+     {
+      "age": 31,
+      "id": "kidschool",
+      "question": "L’heure de choisir une école pour Sunita",
+      "about": "L’an prochain, ce sera la première rentrée des classes pour Sunita. L’école publique du quartier ne coûte presque rien ; une école privée coûte environ 233 € par an et par enfant.",
+      "fact": "En Inde, environ 45 % des élèves du primaire vont dans une école privée (Banque mondiale, UNESCO)",
+      "choices": [
+       {
+        "key": "pub",
+        "label": "L’école publique",
+        "note": "Presque pas de frais"
+       },
+       {
+        "key": "priv",
+        "label": "Une école privée",
+        "note": "Environ 233 € par an et par enfant · un peu plus de chances d’aller à l’université"
+       }
+      ],
+      "chose": "pub"
+     },
+     {
+      "age": 31,
+      "id": "petq",
+      "question": "Accueillir un animal ?",
+      "about": "Au refuge, vous avez vu des animaux qui attendent une famille.",
+      "fact": "En Inde, environ 8 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+      "choices": [
+       {
+        "key": "dog",
+        "label": "Accueillir un chien",
+        "note": "Environ 100 € par an · de 10 à 15 ans ensemble"
+       },
+       {
+        "key": "cat",
+        "label": "Accueillir un chat",
+        "note": "Environ 66 € par an · de 12 à 18 ans ensemble"
+       },
+       {
+        "key": "pk_b",
+        "label": "Adopter un perroquet",
+        "note": "Environ 27 € par an · de 6 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_f",
+        "label": "Installer un aquarium",
+        "note": "Environ 27 € par an · de 4 à 9 ans ensemble"
+       },
+       {
+        "key": "pk_r",
+        "label": "Adopter un lapin",
+        "note": "Environ 33 € par an · de 8 à 12 ans ensemble"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 31,
+      "id": "job",
+      "question": "Choisissez un nouvel emploi",
+      "about": "Avant, vous travailliez comme électricien. Niveau d’études : école primaire. Voici les emplois que l’on peut trouver en Inde (ville).",
+      "fact": "En Inde, environ 82 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 43 % travaillent dans l’agriculture",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Électricien",
+        "note": "7 842 $ US PPP par an · 457 € par mois aux prix français · emploi formel (retraite, assurance) · 11 ans d’expérience pris en compte"
+       },
+       {
+        "key": "o1",
+        "label": "Ouvrier agricole",
+        "note": "3 788 $ US PPP par an · 221 € par mois aux prix français · emploi informel · 4 ans d’expérience pris en compte · par votre ami Mahesh"
+       },
+       {
+        "key": "o2",
+        "label": "Agent de sécurité",
+        "note": "4 674 $ US PPP par an · 273 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "wait",
+        "label": "Attendre un meilleur emploi",
+        "note": "Une année de plus à chercher"
+       }
+      ],
+      "chose": "o0"
+     },
+     {
+      "age": 34,
+      "id": "thanks",
+      "question": "Dire merci",
+      "about": "Vous ne vous souvenez plus de la dernière fois où vous avez dit merci à votre mère. Le souvenir des coups reçus enfant revient aussi.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "call",
+        "label": "Le dire ce soir, en face",
+        "note": null
+       },
+       {
+        "key": "ask",
+        "label": "Seulement prendre des nouvelles",
+        "note": null
+       },
+       {
+        "key": "far",
+        "label": "Garder ses distances pour l’instant",
+        "note": null
+       }
+      ],
+      "chose": "far"
+     },
+     {
+      "age": 37,
+      "id": "sm_tidy",
+      "question": "Une maison pleine d’objets",
+      "about": "La maison déborde d’objets gardés au cas où ils serviraient un jour.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "tidy",
+        "label": "Trier ce qui ne sert plus et le donner",
+        "note": null
+       },
+       {
+        "key": "keep",
+        "label": "Ça pourrait toujours servir",
+        "note": null
+       }
+      ],
+      "chose": "tidy"
+     },
+     {
+      "age": 41,
+      "id": "petq",
+      "question": "Accueillir un animal ?",
+      "about": "Les petits nés chez les voisins cherchent une famille.",
+      "fact": "En Inde, environ 8 % des foyers auraient un chien ou un chat (valeur approximative fondée sur les enquêtes APPA, FEDIAF, KB et GfK)",
+      "choices": [
+       {
+        "key": "dog",
+        "label": "Accueillir un chien",
+        "note": "Environ 107 € par an · de 10 à 15 ans ensemble"
+       },
+       {
+        "key": "cat",
+        "label": "Accueillir un chat",
+        "note": "Environ 71 € par an · de 12 à 18 ans ensemble"
+       },
+       {
+        "key": "pk_b",
+        "label": "Adopter un perroquet",
+        "note": "Environ 29 € par an · de 6 à 12 ans ensemble"
+       },
+       {
+        "key": "pk_f",
+        "label": "Installer un aquarium",
+        "note": "Environ 29 € par an · de 4 à 9 ans ensemble"
+       },
+       {
+        "key": "pk_r",
+        "label": "Adopter un lapin",
+        "note": "Environ 36 € par an · de 8 à 12 ans ensemble"
+       },
+       {
+        "key": "no",
+        "label": "Pas maintenant",
+        "note": null
+       },
+       {
+        "key": "never",
+        "label": "Ne pas avoir d’animal",
+        "note": "Cette question ne reviendra pas"
+       }
+      ],
+      "chose": "pk_b"
+     },
+     {
+      "age": 44,
+      "id": "job",
+      "question": "Choisissez un nouvel emploi",
+      "about": "Avant, vous travailliez comme électricien. Niveau d’études : école primaire. Voici les emplois que l’on peut trouver en Inde (ville).",
+      "fact": "En Inde, environ 82 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 43 % travaillent dans l’agriculture",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Électricien",
+        "note": "8 009 $ US PPP par an · 467 € par mois aux prix français · emploi formel (retraite, assurance) · 23 ans d’expérience pris en compte"
+       },
+       {
+        "key": "o1",
+        "label": "Ouvrier agricole",
+        "note": "3 518 $ US PPP par an · 205 € par mois aux prix français · emploi informel · 4 ans d’expérience pris en compte · par un ancien collègue"
+       },
+       {
+        "key": "o2",
+        "label": "Pêcheur",
+        "note": "4 130 $ US PPP par an · 241 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "wait",
+        "label": "Attendre un meilleur emploi",
+        "note": "Une année de plus à chercher"
+       }
+      ],
+      "chose": "o1"
+     },
+     {
+      "age": 45,
+      "id": "invest",
+      "question": "Que faire de vos économies ?",
+      "about": "Vos économies atteignent 3 011 € (aux prix français). Où placer l’argent dont vous n’avez pas besoin tout de suite ? Vous pourrez changer ce choix à tout moment dans « Dépenser et investir ». Les obligations, les actions choisies vous-même et les logements à louer s’y trouvent aussi.",
+      "fact": "Sur le long terme, les rendements réels sont d’environ 1 à 2 % pour l’épargne bancaire, de 5 % par an environ pour les actions et de 3 % environ pour l’immobilier. Les actions des pays émergents fluctuent davantage, d’environ ±22 % d’une année à l’autre (UBS Global Investment Returns Yearbook, indice MSCI Emerging Markets)",
+      "choices": [
+       {
+        "key": "cash",
+        "label": "Placer l’argent sur un compte d’épargne",
+        "note": "1 à 1,5 % par an, inflation déduite · presque sans risque"
+       },
+       {
+        "key": "mix",
+        "label": "Placer l’argent dans un fonds mixte actions-obligations",
+        "note": "Environ 3,5 % par an en moyenne, inflation déduite · variations moyennes"
+       },
+       {
+        "key": "stock",
+        "label": "Investir en actions",
+        "note": "5 % par an en moyenne, inflation déduite · risque de krach"
+       }
+      ],
+      "chose": "cash"
+     },
+     {
+      "age": 46,
+      "id": "disaster",
+      "question": "Catastrophe naturelle : inondation",
+      "about": "Votre maison et tout le quartier ont subi de lourds dégâts.",
+      "fact": "En 2023, les catastrophes naturelles ont fait environ 26,4 millions de déplacés internes dans le monde (IDMC 2024)",
+      "choices": [
+       {
+        "key": "rebuild",
+        "label": "Reconstruire avec vos économies",
+        "note": "Patrimoine↓ Rétablissement rapide"
+       },
+       {
+        "key": "wait",
+        "label": "Attendre l’aide",
+        "note": "Santé·Bonheur↓"
+       }
+      ],
+      "chose": "rebuild"
+     },
+     {
+      "age": 49,
+      "id": "sm_weekend",
+      "question": "Enfin un week-end de libre",
+      "about": "Un week-end sans rien à rattraper. Que faire ?",
+      "fact": null,
+      "choices": [
+       {
+        "key": "friends",
+        "label": "Revoir des amis perdus de vue depuis un moment",
+        "note": null
+       },
+       {
+        "key": "rest",
+        "label": "Se reposer à la maison",
+        "note": null
+       },
+       {
+        "key": "alone",
+        "label": "Partir en solo voir un endroit qui vous faisait envie",
+        "note": null
+       }
+      ],
+      "chose": "rest"
+     },
+     {
+      "age": 50,
+      "id": "reflect",
+      "question": "Une pause · 50 ans",
+      "about": "Parmi les personnes nées la même année en Inde, 90 % atteignent l’âge de cinquante ans.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 50,
+      "id": "adultedu",
+      "question": "Reprendre des études ?",
+      "about": "Vous n’avez pas achevé vos études (collège). Tout en travaillant, vous pourriez suivre des cours du soir ou préparer un examen d’équivalence pour obtenir le diplôme.",
+      "fact": "En Inde, l’Institut national de l’enseignement ouvert (NIOS) permet aux personnes qui travaillent de terminer l’enseignement secondaire",
+      "choices": [
+       {
+        "key": "go",
+        "label": "Essayer l’école du soir",
+        "note": "1 an · environ 186 € · fatigant"
+       },
+       {
+        "key": "no",
+        "label": "Se concentrer sur le travail pour l’instant",
+        "note": null
+       }
+      ],
+      "chose": "no"
+     },
+     {
+      "age": 51,
+      "id": "mentor",
+      "question": "Les soucis d’une jeune recrue",
+      "about": "Une jeune recrue de votre travail vous confie ses doutes : l’avenir lui semble bouché.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "help",
+        "label": "Prendre le temps d’écouter",
+        "note": null
+       },
+       {
+        "key": "busy",
+        "label": "Prétexter le travail et remettre à plus tard",
+        "note": null
+       }
+      ],
+      "chose": "help"
+     },
+     {
+      "age": 52,
+      "id": "kidwed",
+      "question": "Sunita se marie",
+      "about": "Sunita, 26 ans, a amené à la maison la personne de sa vie. Dans ce pays, il est courant que les parents prennent en charge une grande partie des frais du mariage. Il faut aussi réunir une dot d’environ 978 €.",
+      "fact": "Le mariage et l’installation du nouveau foyer coûteront environ 4 661 € (aux prix français). Vos économies : 446 €.",
+      "choices": [
+       {
+        "key": "help",
+        "label": "Participer généreusement aux frais du mariage",
+        "note": "Environ 4 661 €"
+       },
+       {
+        "key": "little",
+        "label": "Donner un peu, selon vos moyens",
+        "note": "Environ 1 165 €"
+       },
+       {
+        "key": "none",
+        "label": "Offrir seulement vos vœux de bonheur",
+        "note": null
+       }
+      ],
+      "chose": "little"
+     },
+     {
+      "age": 52,
+      "id": "jobchange",
+      "question": "Une nouvelle offre",
+      "about": "Vous travaillez comme ouvrier agricole ici depuis 8 ans, et dans ce métier depuis 12 ans en tout. Une autre offre d’emploi est arrivée.",
+      "fact": "Revenu actuel : 3 674 $ US PPP par an · 214 € par mois aux prix français",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Même métier, nouvel employeur",
+        "note": "Ouvrier agricole · 3 893 $ US PPP par an · 227 € par mois aux prix français · emploi informel · 12 ans d’expérience pris en compte · 6 % de plus qu’aujourd’hui"
+       },
+       {
+        "key": "o1",
+        "label": "Devenir éleveur à la place",
+        "note": "4 277 $ US PPP par an · 249 € par mois aux prix français · emploi informel · expérience similaire prise en compte"
+       },
+       {
+        "key": "stay",
+        "label": "Garder votre emploi actuel",
+        "note": "Continuer à gagner en expérience"
+       }
+      ],
+      "chose": "stay"
+     },
+     {
+      "age": 53,
+      "id": "kinback",
+      "question": "Votre plus jeune frère est de retour",
+      "about": "À sa sortie de prison, votre plus jeune frère vous a rendu visite. Sur le pas de la porte, après une longue hésitation, la tête basse : « Pardon. Je veux recommencer. »",
+      "fact": "Les personnes détenues qui recevaient des visites avaient 13 % de risque en moins de récidiver après leur libération (Département des services correctionnels du Minnesota, 2011)",
+      "choices": [
+       {
+        "key": "hug",
+        "label": "Ouvrir les bras",
+        "note": "Redevenir une famille"
+       },
+       {
+        "key": "time",
+        "label": "Dire qu’il vous faut encore du temps",
+        "note": "Le temps que votre cœur s’apaise"
+       }
+      ],
+      "chose": "time"
+     },
+     {
+      "age": 53,
+      "id": "care",
+      "question": "Qui va s’occuper de votre père ?",
+      "about": "Votre père, qui vit avec vous, a désormais du mal à se déplacer.",
+      "fact": "Dans les pays à revenu faible et intermédiaire, l’essentiel des soins aux personnes âgées est assuré par la famille, surtout par les femmes (OMS)",
+      "choices": [
+       {
+        "key": "home",
+        "label": "Vous en occuper vous-même",
+        "note": "Relations↑ Revenu↓"
+       },
+       {
+        "key": "pay",
+        "label": "Engager une aide à domicile",
+        "note": "Des frais"
+       },
+       {
+        "key": "sib",
+        "label": "Demander à vos frères et sœurs",
+        "note": "Relations↓"
+       }
+      ],
+      "chose": "home"
+     },
+     {
+      "age": 55,
+      "id": "jobchange",
+      "question": "Une nouvelle offre",
+      "about": "Vous travaillez comme ouvrier agricole ici depuis 11 ans, et dans ce métier depuis 15 ans en tout. Une autre offre d’emploi est arrivée.",
+      "fact": "Revenu actuel : 3 397 $ US PPP par an · 198 € par mois aux prix français",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Même métier, nouvel employeur",
+        "note": "Ouvrier agricole · 3 831 $ US PPP par an · 223 € par mois aux prix français · emploi informel · 15 ans d’expérience pris en compte · par un ancien collègue · 13 % de plus qu’aujourd’hui"
+       },
+       {
+        "key": "o1",
+        "label": "Devenir ouvrier d’usine à la place",
+        "note": "5 617 $ US PPP par an · 328 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "stay",
+        "label": "Garder votre emploi actuel",
+        "note": "Continuer à gagner en expérience"
+       }
+      ],
+      "chose": "o1"
+     },
+     {
+      "age": 59,
+      "id": "job",
+      "question": "Choisissez un nouvel emploi",
+      "about": "Avant, vous travailliez comme ouvrier d’usine. À cet âge, les emplois sont moins nombreux et moins bien payés. Niveau d’études : école primaire. Voici les emplois que l’on peut trouver en Inde (ville).",
+      "fact": "En Inde, environ 82 % des travailleurs occuperaient un emploi informel (estimation fondée sur les données de l’OIT) · 43 % travaillent dans l’agriculture",
+      "choices": [
+       {
+        "key": "o0",
+        "label": "Ouvrier d’usine",
+        "note": "3 621 $ US PPP par an · 211 € par mois aux prix français · contrat temporaire · 4 ans d’expérience pris en compte · par votre ami Arjun"
+       },
+       {
+        "key": "o1",
+        "label": "Livreur",
+        "note": "3 076 $ US PPP par an · 179 € par mois aux prix français · emploi informel"
+       },
+       {
+        "key": "o2",
+        "label": "Ouvrier agricole",
+        "note": "2 479 $ US PPP par an · 145 € par mois aux prix français · emploi informel · 15 ans d’expérience pris en compte · par un ancien collègue"
+       },
+       {
+        "key": "wait",
+        "label": "Attendre un meilleur emploi",
+        "note": "Une année de plus à chercher"
+       }
+      ],
+      "chose": "o1"
+     },
+     {
+      "age": 60,
+      "id": "retire",
+      "question": "L’heure de la retraite ?",
+      "about": "Si vous prenez votre retraite, vous toucherez une pension de 1 665 $ US PPP par an (97 € par mois aux prix français). Vos enfants devenus adultes pourraient vous envoyer environ 29 € par mois aux prix français. Avec votre pension et ce que vos enfants vous envoient, vous pouvez vous en sortir en faisant attention.",
+      "fact": "Dans le monde, environ 77 % des personnes ayant dépassé l’âge de la retraite perçoivent une pension, mais seulement 23 % environ dans les pays à faible revenu (OIT 2021)",
+      "choices": [
+       {
+        "key": "retire",
+        "label": "Prendre votre retraite",
+        "note": "Temps libre↑ Revenu↓"
+       },
+       {
+        "key": "less",
+        "label": "Passer à temps partiel",
+        "note": "Environ la moitié du salaire · moins dur pour le corps"
+       },
+       {
+        "key": "work",
+        "label": "Continuer à travailler",
+        "note": "Garder votre revenu"
+       }
+      ],
+      "chose": "work"
+     },
+     {
+      "age": 63,
+      "id": "retire",
+      "question": "L’heure de la retraite ?",
+      "about": "Si vous prenez votre retraite, vous toucherez une pension de 1 665 $ US PPP par an (97 € par mois aux prix français). Vos enfants devenus adultes pourraient vous envoyer environ 29 € par mois aux prix français. Avec votre pension et ce que vos enfants vous envoient, vous pouvez vous en sortir en faisant attention.",
+      "fact": "Dans le monde, environ 77 % des personnes ayant dépassé l’âge de la retraite perçoivent une pension, mais seulement 23 % environ dans les pays à faible revenu (OIT 2021)",
+      "choices": [
+       {
+        "key": "retire",
+        "label": "Prendre votre retraite",
+        "note": "Temps libre↑ Revenu↓"
+       },
+       {
+        "key": "less",
+        "label": "Passer à temps partiel",
+        "note": "Environ la moitié du salaire · moins dur pour le corps"
+       },
+       {
+        "key": "work",
+        "label": "Continuer à travailler",
+        "note": "Garder votre revenu"
+       }
+      ],
+      "chose": "retire"
+     },
+     {
+      "age": 65,
+      "id": "drink",
+      "question": "Les soirées arrosées se multiplient",
+      "about": "Presque tous les jours, on boit un verre avec les gens du quartier. Si vous n’y allez pas, vous avez l’impression de ne plus faire partie du groupe.",
+      "fact": "Environ 7 % des adultes dans le monde ont un trouble lié à l’usage de l’alcool, et 3,7 % une dépendance à l’alcool (OMS 2024)",
+      "choices": [
+       {
+        "key": "stop",
+        "label": "Boire moins et trouver d’autres façons de tenir",
+        "note": "Marche · entourage · aide"
+       },
+       {
+        "key": "drink",
+        "label": "Tenir grâce à l’alcool",
+        "note": "Plus facile pour l’instant · peut mener à la dépendance"
+       }
+      ],
+      "chose": "stop"
+     },
+     {
+      "age": 69,
+      "id": "illness",
+      "question": "Une fièvre qui ne baisse pas",
+      "about": "Depuis plus d’une semaine, la fièvre ne baisse pas ; vous avez mal au ventre et plus aucune force. Votre part des frais d’hôpital s’élève à environ 1 263 € (aux prix français). Vos économies : 609 €.",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "cheap"
+     },
+     {
+      "age": 70,
+      "id": "reflect",
+      "question": "Une pause · 70 ans",
+      "about": "Parmi les personnes nées la même année en Inde, seulement 65 % atteignent soixante-dix ans.",
+      "fact": null,
+      "choices": [
+       {
+        "key": "write",
+        "label": "Le noter et continuer à vivre",
+        "note": "Ce que vous écrivez reste dans le récit de cette vie"
+       },
+       {
+        "key": "skip",
+        "label": "Le garder pour soi et continuer à vivre",
+        "note": null
+       }
+      ],
+      "chose": "skip"
+     },
+     {
+      "age": 71,
+      "id": "illness",
+      "question": "Une douleur qui serre le haut du ventre",
+      "about": "Après chaque repas gras, une douleur serrée sous les côtes, à droite, vous empêche de dormir la nuit. Votre part des frais d’hôpital s’élève à environ 1 263 € (aux prix français). Vos économies : 633 €.",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "hospital"
+     },
+     {
+      "age": 72,
+      "id": "diag",
+      "question": "Diagnostic : hypertension",
+      "about": "Il faut prendre un traitement régulièrement et suivre son état de près. Les médicaments restant à votre charge coûtent environ 75 € par an (aux prix français).",
+      "fact": "Dans le monde, environ 1,3 milliard d’adultes de 30 à 79 ans ont de l’hypertension, et près de la moitié d’entre eux l’ignorent (OMS 2023)",
+      "choices": [
+       {
+        "key": "treat",
+        "label": "Suivre le traitement avec régularité",
+        "note": "Santé préservée, mais coûteux"
+       },
+       {
+        "key": "life",
+        "label": "Prendre le traitement, mieux manger et bouger davantage",
+        "note": "Coûteux · Risque ↓"
+       },
+       {
+        "key": "ignore",
+        "label": "Se dire que ça ira, et tenir le coup",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "treat"
+     },
+     {
+      "age": 74,
+      "id": "illness",
+      "question": "Une toux et une forte fièvre qui ne passent pas",
+      "about": "La toux et la forte fièvre durent depuis des jours, et le moindre effort vous essouffle. Votre part des frais d’hôpital s’élève à environ 1 263 € (aux prix français). Vos économies : rien (dette : 691 €).",
+      "fact": "Part des dépenses de santé restant à la charge des patients en Inde : 45 % · Dans le monde, environ 2 milliards de personnes connaissent des difficultés financières à cause de leurs dépenses de santé (OMS/Banque mondiale 2023)",
+      "choices": [
+       {
+        "key": "hospital",
+        "label": "Se faire soigner à l’hôpital",
+        "note": "Quitte à s’endetter"
+       },
+       {
+        "key": "cheap",
+        "label": "Se débrouiller avec la pharmacie et les remèdes traditionnels",
+        "note": "Économique, mais risqué"
+       }
+      ],
+      "chose": "hospital"
+     },
+     {
+      "age": 77,
+      "id": "oldhome",
+      "question": "Où vivre dans vos vieux jours ?",
+      "about": "Votre corps n’est plus ce qu’il était, et tenir la maison sans aide est devenu difficile. Sunita vous propose de vivre ensemble.",
+      "fact": "En Inde, environ 80 % des personnes âgées vivent avec un enfant adulte (DAES de l’ONU, 2017)",
+      "choices": [
+       {
+        "key": "kid",
+        "label": "Vivre avec Sunita",
+        "note": "Relations↑ Dépenses↓"
+       },
+       {
+        "key": "own",
+        "label": "Rester chez vous",
+        "note": "Avec l’aide des voisins et de la famille"
+       }
+      ],
+      "chose": "own"
+     },
+     {
+      "age": 77,
+      "id": "disaster",
+      "question": "Catastrophe naturelle : cyclone",
+      "about": "Votre maison et tout le quartier ont subi de lourds dégâts.",
+      "fact": "En 2023, les catastrophes naturelles ont fait environ 26,4 millions de déplacés internes dans le monde (IDMC 2024)",
+      "choices": [
+       {
+        "key": "rebuild",
+        "label": "Emprunter pour reconstruire",
+        "note": "Patrimoine↓ Rétablissement rapide"
+       },
+       {
+        "key": "wait",
+        "label": "Attendre l’aide",
+        "note": "Santé·Bonheur↓"
+       }
+      ],
+      "chose": "rebuild"
+     }
+    ]
+   }
+  ],
+  "usage": {
+   "month": "2026-11",
+   "unit": "life units",
+   "used": 344,
+   "quota": 2000,
+   "this_call": 1
+  }
+ }
+]

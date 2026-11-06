@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "skills": {
+    "audio-mixing-mastering": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/audio-craft/audio-mixing-mastering/SKILL.md",
+      "computedHash": "1ad04f46da3ec543efbe20987401d79a351652038e37db19eb6ef420c7d77cc7",
+      "installMode": "copy"
+    },
+    "documentary-montage-production": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/content-formats/documentary-montage-production/SKILL.md",
+      "computedHash": "385c5e3be1448285c2f7a3f2bf97e5bec94a25a044a8f86e5123b1c5d4759829",
+      "installMode": "copy"
+    },
+    "editing-montage": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/post-production/editing-montage/SKILL.md",
+      "computedHash": "26b1f59d113b73595c4266ce16987a634ad851964d9ce3ce8b2fedc62fec32c9",
+      "installMode": "copy"
+    },
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-best-practices/SKILL.md",
+      "computedHash": "9a4c0a0f9e3cc4613cbe351bb6be48568eb1cca0b06995aeae9e91292102aa16",
+      "installMode": "copy"
+    },
+    "sound-design-foley": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/audio-craft/sound-design-foley/SKILL.md",
+      "computedHash": "d8df73a2f8226502bb472e3d3ac59cc47a916d828a65b6ed95997223a6cbd441",
+      "installMode": "copy"
+    },
+    "video-design": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/video-design/SKILL.md",
+      "computedHash": "94ca0d94af11df68a6d3832fea4c871109f2659117e8a26ba8391bf4e38098db",
+      "installMode": "copy"
+    },
+    "yt-package": {
+      "source": "jakeschincariol/youtube-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/yt-package/SKILL.md",
+      "computedHash": "dbae2f13da090a62c86a5ede18354c40df6d8bafb82d514a75a3fd37dfb7283a",
+      "installMode": "copy"
+    },
+    "yt-retention": {
+      "source": "jakeschincariol/youtube-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/yt-retention/SKILL.md",
+      "computedHash": "c9707a86bb5fd3f5d9c28967f92f587c0f8d77fe8bb84add4f3bc38f96f88e7c",
+      "installMode": "copy"
+    },
+    "yt-script": {
+      "source": "jakeschincariol/youtube-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/yt-script/SKILL.md",
+      "computedHash": "b062ae430cccaad23eaaa6c61eaa24baf3d8d9d76c054f0a6e42cfe86046c878",
+      "installMode": "copy"
+    }
+  }
+}

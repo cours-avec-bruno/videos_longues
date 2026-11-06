@@ -92,6 +92,56 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Précision de Bruno : on **privilégie l'animation, le motion design et la 3D**. Les photos ne sont qu'un complément.
 - **Reprise prévue le 06/11/2026** : affiner le storyboard et commencer la création des scènes.
 
+## 2026-11-06 · « Quelle aurait dû être ta vie ? » : le spectateur croit jouer
+
+- Décision de Bruno : **le spectateur croit jouer, mais il ne joue pas.** À chaque grande décision, la vidéo affiche les options et leurs pourcentages (« À VOUS ») et laisse le spectateur choisir. En secret, l'opérateur prend **toujours l'option la plus probable**. Il l'avoue à la fin (nouvelle scène **S13 · L'aveu**, procédé N02), avant la France et le déterminisme social.
+- Les scènes S13-S15 deviennent **S14-S16**. Le storyboard compte 16 scènes et 98 plans, pour ≈ 11 min 15.
+- Pour que « le plus probable » soit mesuré et non deviné : l'**API officielle** du site (`/api/v1/live`) donne les probabilités de chaque décision, et une `seed` permet de rejouer la même vie (voir `references/sources.md` de la vidéo). La clé gratuite est à demander par Bruno.
+- Le storyboard reste à arbitrer scène par scène.
+
+## 2026-11-06 · Skills de production vidéo
+
+- Panel établi d'après l'annuaire skills.sh et GitHub, avec le contenu des skills lu : `docs/skills.md`.
+- Le Tier 1 est installé dans le projet (`.claude/skills/`, `skills-lock.json`), donc disponible aussi dans le cloud :
+  - les 13 skills Remotion officielles ;
+  - `yt-script`, `yt-retention`, `yt-edit`, `yt-package` ;
+  - `video-design` ;
+  - 8 skills de production documentaire (montage, son, mixage, musique, étalonnage, typographie, motion graphics).
+- L'ancienne `remotion-best-practices` globale est archivée dans `~/.claude/skills-archive/`.
+- Manque repéré : une skill d'écriture de voix off en français, façon essai narratif. On la créera au moment du script.
+- Tri demandé par Bruno (le dossier doit rester court) : **13 skills gardées** sur 30. Les 12 sous-skills Remotion faisaient doublon avec le routeur. Retirées aussi : `yt-edit`, `music-supervision-scoring`, `color-grading-finishing`, `title-kinetic-typography`, `motion-graphics-direction`.
+- **Règle** (ajoutée à `CLAUDE.md`) : comme pour les procédés, Claude choisit lui-même la skill adaptée à chaque tâche (une principale, deux au maximum) et l'annonce. La table « tâche → skill » est dans `docs/skills.md`.
+
+## 2026-11-06 · La partie est jouée : Khadija Ibrahim
+
+- Une seule partie, seed 20261106, 1in8b Engine 0.9.52, jouée par le connecteur Claude. Les choix ont été faits par la **politique `auto` du moteur**, que la doc définit comme « ce que la plupart des gens choisissent » : c'est exactement notre règle secrète.
+- La vie : Khadija Ibrahim, Algérie rurale, cinquième le plus pauvre. Elle quitte l'école à 11 ans, part à Alger à 16 ans, se marie à 24 ans, a 3 enfants (dont un meurt bébé), traverse des années de dettes et de violences, part en pèlerinage à 80 ans et meurt à 94 ans. À 6 ans, elle voulait être « youtubeuse ». Détail complet : `videos/2026-11-quelle-aurait-du-etre-ta-vie/references/partie.md`.
+- Les 4 autres bébés (Kenya, Guinée, Kenya, Inde) suivent la même politique : même règle, cinq vies très différentes.
+- Le connecteur ne donne pas les options ni leurs probabilités. Le script `shared/outils/1in8b/partie.py` les récupère par l'API HTTP, avec la variante « ambitieuse ». **À lancer par Bruno avec sa clé.**
+- À arbitrer : le recalage des étapes d'âge sur la vraie vie (11 ans au lieu de 15), le traitement des passages sensibles (violences, enfant mort).
+
+## 2026-11-06 · La vie la plus probable, naissance comprise
+
+- Précision de Bruno : « les choix les plus probables » vaut aussi pour la **naissance**. La vie de la vidéo naît donc en Inde (17,6 % des naissances), à la campagne (68 % des bébés indiens simulés), garçon, dans le 3e cinquième (les cinquièmes sont équiprobables). La religion et la caste sont les plus fréquentes, mesurées par le moteur.
+- Version provisoire jouée par le connecteur : **Yash Gupta** (caste tirée par le moteur). La vie définitive sortira du script `shared/outils/1in8b/partie.py`, qui a maintenant les options `--country`, `--sex`, `--place`, `--fifth` et `--mesurer faith,caste`.
+- Khadija (Algérie, tirée au sort) devient une vie de comparaison.
+
+## 2026-11-06 · Vie définitive : Manoj Mohanty
+
+- Le moteur a mesuré la religion et la caste les plus fréquentes pour un garçon indien de la campagne, 3e cinquième : hindoue (47 sur 60) et OBC (28 sur 60).
+- **Découverte** : la politique `auto` tire au sort selon les parts réelles. Elle ne prend pas toujours l'option majoritaire. La vie définitive a donc été jouée pas à pas (`/live`) en prenant à chaque décision l'option la plus fréquente, estimée sur 200 vies nées dans les mêmes conditions. Les scripts sont `parts_decisions.py` et `jouer_plus_probable.py`.
+- L'API ne publie aucune probabilité par option : les pourcentages des encarts « À VOUS » seront des **parts observées**, à présenter comme telles.
+- La variante ambitieuse de la même naissance réussit beaucoup mieux (professeur, 89 ans). L'aveu doit dire « une pente, pas une interdiction ».
+- Environ 800 unités sur 2 000 consommées ce mois-ci.
+
+## 2026-11-06 · Storyboard recalé sur la vie de Manoj
+
+- Les fiches S04, S05 et S07 à S11 suivent maintenant la vie de Manoj. Les cartons d'âge tombent à 0, 5, 11, 15, 24, 26, 60 et 75 ans.
+- Les 6 « À VOUS » : 7 ans (loisirs, une quasi-égalité pour apprendre le jeu), **11 ans (l'école, 97 %, refusée faute d'argent : le pivot)**, 15 ans (premier emploi), 24 ans (tuberculose), 26 ans (mariage), 60 ans (retraite).
+- Nouveaux plants : « ingénieur » (8 ans) → l'aveu ; la carte des naissances qui s'arrête au plus dense (l'Inde) → « pas même son pays » ; l'école refusée → « la seule fois où j'ai choisi comme vous ».
+- L'aveu (S13) est reformulé : « Ce n'est pas une interdiction : c'est une pente. »
+- La durée estimée monte à ≈ 12 min 30, à resserrer au script. À arbitrer : la liaison et l'alcool (garder ou couper), la variante « pour réussir » (à confirmer sur beaucoup de vies avant de la montrer).
+
 ## 2026-11-05 · Branche `main`
 
 - Création de **`main`**, la référence du projet. Avant, la branche par défaut était une branche de session cloud (`claude/wizardly-archimedes-sapbhh`), au nom généré automatiquement.

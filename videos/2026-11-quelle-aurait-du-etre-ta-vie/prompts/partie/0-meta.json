@@ -1,0 +1,22 @@
+{
+ "seed": 20261106,
+ "conditions": {
+  "country": "IND",
+  "sex": "male",
+  "place": "village",
+  "fifth": 3,
+  "faith": "hindu",
+  "caste": "obc"
+ },
+ "engine": "0.9.52",
+ "date": "2026-11-06 13:55",
+ "appels": 61,
+ "usage": {
+  "month": "2026-11",
+  "unit": "life units",
+  "used": 277,
+  "quota": 2000,
+  "this_call": 1
+ },
+ "credit": "1in8b Engine (1in8b.life)"
+}

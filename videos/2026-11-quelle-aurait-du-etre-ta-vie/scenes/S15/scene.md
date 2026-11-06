@@ -1,17 +1,17 @@
-# S15 · Conclusion
+# S15 · Le déterminisme social en France
 
 | | |
 |---|---|
-| **Durée** | ≈ 0:40 |
-| **Fabrication** | Blender + Remotion |
-| **Fonction** | RÉVÉLER |
-| **Procédé principal** | N14 : la question rendue au spectateur |
-| **Procédés secondaires** | M07, S05 |
+| **Durée** | ≈ 1:10 |
+| **Fabrication** | Remotion |
+| **Fonction** | PROUVER |
+| **Procédé principal** | I03 : même forme, même sens qu'en S10 (comparer des trajectoires), cette fois en France |
+| **Procédés secondaires** | I05, N11 |
 | **Statut** | à valider (proposition de storyboard) |
 
 ## Intention
 
-Retour au bureau à l'aube, l'écran propose de nouveau « Naître ». « Et votre chiffre du début, il a bougé ? » Puis : « Quelle aurait dû être ta vie ? » Musique seule.
+Le diplôme selon l'origine sociale (Insee), un graphique qui se construit, la page source. « Une tendance n'est pas un destin. »
 
 ## Script / son
 
@@ -24,12 +24,12 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 
 | Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
 |---|---|---|---|---|---|---|
-| S15-P01 | 8 s | 3D | L'aube revient dans le bureau | Lumière qui monte | M07, I16 | Ambiance, oiseaux |
-| S15-P02 | 6 s | UI | L'écran propose de nouveau « Naître » | Curseur qui clignote | M07 |  |
-| S15-P03 | 10 s | MD | « Et votre chiffre du début ? » : le curseur de 0 à 100 revient, en serif | Curseur | N01 | Voix |
-| S15-P04 | 6 s | 3D | L'opérateur, immobile face à l'écran | Très lent travelling arrière |  |  |
-| S15-P05 | 5 s | MD | « Quelle aurait dû être ta vie ? » en serif | Apparition | N14 | Musique seule |
-| S15-P06 | 5 s | NOIR | Noir, mention « 1 sur 8 milliards · 1in8b.life » | Fondu du texte | S05 | Musique qui s'éteint |
+| S15-P01 | 8 s | MD | « Même ici… » : une carte de France sobre, en serif | Apparition |  | Voix |
+| S15-P02 | 30 s | MD | Graphique : diplôme du supérieur selon l'origine sociale (Insee), construit en un plan | Tracé progressif | I03 | Voix |
+| S15-P03 | 10 s | MD | La page Insee en perspective : seul le passage utile est net | Lent travelling | I05 |  |
+| S15-P04 | 10 s | MD | 100 points : la tendance, et des parcours individuels qui la contredisent | Points qui migrent | N11 | Voix |
+| S15-P05 | 6 s | IMG | Une école en France, en lumière chaude | Lent mouvement | I04 |  |
+| S15-P06 | 6 s | 3D | L'opérateur, dans la pénombre | Fixe |  |  |
 
 ## Cadrage et mise en scène
 

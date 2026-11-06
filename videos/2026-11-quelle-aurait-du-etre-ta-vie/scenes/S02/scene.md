@@ -11,7 +11,9 @@
 
 ## Intention
 
-L'opérateur sans visage, de dos, face à l'écran ; lumière d'aube froide par la fenêtre. Mission annoncée. Puis la consigne au spectateur (chiffre sur 100), affichée en serif.
+L'opérateur sans visage, de dos, face à l'écran ; lumière d'aube froide par la fenêtre. Mission annoncée (« faire vivre quelqu'un, du premier jour au dernier »), puis l'invitation au spectateur : « Vous allez jouer avec moi. À chaque grand choix, choisissez pour lui. » Puis la consigne (chiffre sur 100), affichée en serif.
+
+⚠️ **La règle secrète** (l'opérateur prend toujours l'option la plus probable) n'est **jamais** annoncée ici : elle n'est révélée qu'en S13. L'opérateur ne ment pas pour autant : il ne dit jamais qu'il choisira selon ses préférences.
 
 ## Script / son
 
@@ -28,7 +30,7 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 | S02-P02 | 3 s | 3D | Insert : les mains sur le clavier | Fixe |  | Frappe au clavier |
 | S02-P03 | 4 s | 3D | Insert : l'écran, le titre « 1 SUR 8 MILLIARDS » en monospace | Léger zoom | H02 |  |
 | S02-P04 | 6 s | UI | Compteur : bébés nés depuis l'ouverture de la page (≈ 4 par seconde) | Chiffres qui défilent |  | Tic discret à chaque naissance |
-| S02-P05 | 8 s | 3D | Plan moyen : l'opérateur de profil, son visage dans l'ombre. Voix : la mission | Fixe |  | Voix |
+| S02-P05 | 8 s | 3D | Plan moyen : l'opérateur de profil, son visage dans l'ombre. Voix : la mission, puis « Vous allez jouer avec moi. » | Fixe | N01 | Voix |
 | S02-P06 | 12 s | MD | Consigne au spectateur, en serif : « Sur 100, quelle part de votre vie avez-vous choisie ? » Un curseur de 0 à 100 hésite, puis reste vide | Curseur animé | N01 | La musique s'efface |
 | S02-P07 | 4 s | MD | « Notez-le. » (serif) | Coupe sèche | N01 | Silence bref |
 | S02-P08 | 8 s | 3D | Retour au plan large : la lumière de l'aube monte d'un cran | Fixe, lumière animée | I16 | Ambiance |

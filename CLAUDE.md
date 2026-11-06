@@ -62,6 +62,14 @@ Choisis les techniques en fonction du résultat visuel recherché, et non par ha
 - Archive chaque prompt utilisé, ses paramètres et le résultat retenu dans `videos/<slug>/prompts/`, pour pouvoir régénérer ou décliner un plan.
 - Veille à la cohérence d'un plan à l'autre (personnages, lieux, lumière) : images de référence, fiches personnage, mêmes modèles et réglages.
 
+### Skills : un usage raisonné
+
+Le studio dispose d'une petite sélection de skills (`.claude/skills/`, référence : `docs/skills.md`). Comme pour les procédés, elles se **choisissent** et ne s'empilent pas :
+- **à chaque tâche, choisis toi-même** la skill la plus pertinente (une principale, deux au maximum, parfois aucune) et annonce-la en une ligne ;
+- les skills du studio passent avant les skills externes ;
+- les règles de la chaîne (ce document, l'anti-« look IA », le 16:9 long format) passent avant n'importe quelle skill ;
+- n'installe pas de nouvelle skill sans tri ni accord de Bruno : le dossier doit rester court.
+
 ## 6. Outils et environnement
 
 Les principaux outils du projet sont :
@@ -116,6 +124,7 @@ Les specs techniques (résolution, cadence, codec, niveau sonore) sont dans `doc
 
 ```
 CLAUDE.md                  ce document
+.claude/skills/            les skills du studio (sélection courte, voir docs/skills.md)
 docs/                      fonctionnement général : specs, journal, direction artistique (références, analyses, extractions)
 shared/                    ressources communes à toutes les vidéos
   remotion/                composants, specs et utilitaires Remotion
