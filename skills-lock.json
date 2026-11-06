@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "skills": {
+    "audio-mixing-mastering": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/audio-craft/audio-mixing-mastering/SKILL.md",
+      "computedHash": "1ad04f46da3ec543efbe20987401d79a351652038e37db19eb6ef420c7d77cc7",
+      "installMode": "copy"
+    },
+    "color-grading-finishing": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/post-production/color-grading-finishing/SKILL.md",
+      "computedHash": "4b47248154a816b494354268c81532f8375c5021f8dc05cda8e9386db49fdba5",
+      "installMode": "copy"
+    },
+    "documentary-montage-production": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/content-formats/documentary-montage-production/SKILL.md",
+      "computedHash": "385c5e3be1448285c2f7a3f2bf97e5bec94a25a044a8f86e5123b1c5d4759829",
+      "installMode": "copy"
+    },
+    "editing-montage": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/post-production/editing-montage/SKILL.md",
+      "computedHash": "26b1f59d113b73595c4266ce16987a634ad851964d9ce3ce8b2fedc62fec32c9",
+      "installMode": "copy"
+    },
+    "motion-graphics-direction": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/post-production/motion-graphics-direction/SKILL.md",
+      "computedHash": "bc3452d21526be6c3fd8ba5ef2815e0623a77a5c18550b292005c6c20749c410",
+      "installMode": "copy"
+    },
+    "music-supervision-scoring": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/audio-craft/music-supervision-scoring/SKILL.md",
+      "computedHash": "8e984349f31f06dc962bc1221dfaeabff7141653909174b0488ce1437f68397f",
+      "installMode": "copy"
+    },
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-best-practices/SKILL.md",
+      "computedHash": "9a4c0a0f9e3cc4613cbe351bb6be48568eb1cca0b06995aeae9e91292102aa16",
+      "installMode": "copy"
+    },
+    "remotion-captions": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-captions/SKILL.md",
+      "computedHash": "83e853f96f4f10526c166944f2bdb1752ee28d6bf1ddd9532b899c4d05228c2a",
+      "installMode": "copy"
+    },
+    "remotion-create": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-create/SKILL.md",
+      "computedHash": "83db7daec2165d1e1801e7e279a815baf84da5705302952b6b4af6c6887f9c56",
+      "installMode": "copy"
+    },
+    "remotion-docs": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-docs/SKILL.md",
+      "computedHash": "4ded99e054724106ef15d64051f9b2d6d52d1afb7b31cd48f39e75624036051c",
+      "installMode": "copy"
+    },
+    "remotion-interactivity": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-interactivity/SKILL.md",
+      "computedHash": "f595a3fd64971123a776e77690a723599ca2f48f7f96539835bab352d058066c",
+      "installMode": "copy"
+    },
+    "remotion-license": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-license/SKILL.md",
+      "computedHash": "1a38caa7aa9c6e12956b415ccc0ecd445672ce72a769e29d0cf6557289dad5e7",
+      "installMode": "copy"
+    },
+    "remotion-maps": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-maps/SKILL.md",
+      "computedHash": "cd5c20dc2d35fa5c52bcfa04d1d67b343f1ddc9f5561aa5b2a10884db8f4bcd4",
+      "installMode": "copy"
+    },
+    "remotion-markup": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-markup/SKILL.md",
+      "computedHash": "387d42cfbfe5acd1a2a85c3a2f0fe79b67272bc33ff98edf10c75634e87492c8",
+      "installMode": "copy"
+    },
+    "remotion-multimedia": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-multimedia/SKILL.md",
+      "computedHash": "7ec158220d479a68b11b7fb593c8f0b777c0da44c6bf4a4d45a87abbdc31926d",
+      "installMode": "copy"
+    },
+    "remotion-render": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-render/SKILL.md",
+      "computedHash": "1f82f35a2fd50b597d4f77cf87b0268b0e8047277a123b680e046991070b4126",
+      "installMode": "copy"
+    },
+    "remotion-saas": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-saas/SKILL.md",
+      "computedHash": "4dcc6bb72f2b5eab548640b5188295221796053148ce87defc9e480e7498b916",
+      "installMode": "copy"
+    },
+    "remotion-studio": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-studio/SKILL.md",
+      "computedHash": "d65d0933b789017f33aea95d1f450e4b0873a7102a09e104729862fb1146b775",
+      "installMode": "copy"
+    },
+    "remotion-upgrade": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-upgrade/SKILL.md",
+      "computedHash": "461016a20e42475c18319365c8b1dc50efbb86da31e5d3dddd7b150c493e8ff7",
+      "installMode": "copy"
+    },
+    "sound-design-foley": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/audio-craft/sound-design-foley/SKILL.md",
+      "computedHash": "d8df73a2f8226502bb472e3d3ac59cc47a916d828a65b6ed95997223a6cbd441",
+      "installMode": "copy"
+    },
+    "title-kinetic-typography": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/post-production/title-kinetic-typography/SKILL.md",
+      "computedHash": "062ecc6cb4df6a8d3352cf49524e27c4f912a921d47f988f41d9809c5d80c8da",
+      "installMode": "copy"
+    },
+    "video-design": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/video-design/SKILL.md",
+      "computedHash": "94ca0d94af11df68a6d3832fea4c871109f2659117e8a26ba8391bf4e38098db",
+      "installMode": "copy"
+    },
+    "yt-edit": {
+      "source": "jakeschincariol/youtube-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/yt-edit/SKILL.md",
+      "computedHash": "afcc61238c811edb5be55ab6ad7a5a4344184ff23dd8b177822a15f197ddedfb",
+      "installMode": "copy"
+    },
+    "yt-package": {
+      "source": "jakeschincariol/youtube-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/yt-package/SKILL.md",
+      "computedHash": "dbae2f13da090a62c86a5ede18354c40df6d8bafb82d514a75a3fd37dfb7283a",
+      "installMode": "copy"
+    },
+    "yt-retention": {
+      "source": "jakeschincariol/youtube-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/yt-retention/SKILL.md",
+      "computedHash": "c9707a86bb5fd3f5d9c28967f92f587c0f8d77fe8bb84add4f3bc38f96f88e7c",
+      "installMode": "copy"
+    },
+    "yt-script": {
+      "source": "jakeschincariol/youtube-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/yt-script/SKILL.md",
+      "computedHash": "b062ae430cccaad23eaaa6c61eaa24baf3d8d9d76c054f0a6e42cfe86046c878",
+      "installMode": "copy"
+    }
+  }
+}

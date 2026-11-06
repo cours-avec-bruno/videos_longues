@@ -99,6 +99,17 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Pour que « le plus probable » soit mesuré et non deviné : l'**API officielle** du site (`/api/v1/live`) donne les probabilités de chaque décision, et une `seed` permet de rejouer la même vie (voir `references/sources.md` de la vidéo). La clé gratuite est à demander par Bruno.
 - Le storyboard reste à arbitrer scène par scène.
 
+## 2026-11-06 · Skills de production vidéo
+
+- Panel établi d'après l'annuaire skills.sh et GitHub, avec le contenu des skills lu : `docs/skills-production-video.md`.
+- Le Tier 1 est installé dans le projet (`.claude/skills/`, `skills-lock.json`), donc disponible aussi dans le cloud :
+  - les 13 skills Remotion officielles ;
+  - `yt-script`, `yt-retention`, `yt-edit`, `yt-package` ;
+  - `video-design` ;
+  - 8 skills de production documentaire (montage, son, mixage, musique, étalonnage, typographie, motion graphics).
+- L'ancienne `remotion-best-practices` globale est archivée dans `~/.claude/skills-archive/`.
+- Manque repéré : une skill d'écriture de voix off en français, façon essai narratif. On la créera au moment du script.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

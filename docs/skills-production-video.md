@@ -1,6 +1,6 @@
 # Panel de skills : script, Remotion, production vidéo
 
-Recherche du 06/11/2026. Rien n'est installé : ce document sert à choisir.
+Recherche du 06/11/2026. **Le Tier 1 est installé** dans le projet depuis le 06/11/2026 (voir « Installation » en bas). Le reste du document sert à choisir plus tard.
 
 ## Méthode
 
@@ -122,22 +122,24 @@ Légende : ✅ recommandé · 🟡 utile selon le besoin · ⛔ à éviter.
 - **L'écriture de voix off en français**, façon essai vidéo narratif (réflexion, storytelling, première personne). Tout ce qui existe est anglophone et orienté « créateur de contenu ».
 - **Proposition** : créer notre propre skill `script-voix-off`, nourrie de nos analyses de références (`docs/direction-artistique/`) et de nos règles (sources, nuance, pas de chiffre inventé). On la créera au moment d'écrire le script de la première vidéo, à partir de ce qui marche vraiment.
 
-## Installation proposée
+## Installation (faite le 06/11/2026)
+
+Installées : les 13 skills Remotion, `yt-script`, `yt-retention`, `yt-edit`, `yt-package`, `video-design` et les 8 skills calesthio. Elles sont toutes dans `.claude/skills/`, avec les sources et les empreintes dans `skills-lock.json`.
+
+Ce qui a été fait :
+- les scripts inclus ont été relus : ils lisent des fichiers locaux, et le script de sonie appelle seulement ffmpeg ;
+- l'ancienne `remotion-best-practices` globale a été déplacée dans `~/.claude/skills-archive/`, pas supprimée ;
+- mise à jour : `npx skills update -p`.
 
 Dans le **projet** et non en global : le cloud ne voit que les skills versionnées dans le repo. `--copy` évite les liens symboliques, qui passent mal dans Git sous Windows.
 
 ```bash
-npx skills add remotion-dev/skills -s '*' --copy -y
-npx skills add jakeschincariol/youtube-agent-skill -s yt-script,yt-retention,yt-edit,yt-package --copy -y
-npx skills add calesthio/generative-media-skills -s documentary-montage-production,editing-montage,sound-design-foley,audio-mixing-mastering,music-supervision-scoring,color-grading-finishing,title-kinetic-typography,motion-graphics-direction --copy -y
-npx skills add digitalsamba/claude-code-video-toolkit -s video-design --copy -y
+npx skills add remotion-dev/skills -s '*' -a claude-code --copy -y
+npx skills add jakeschincariol/youtube-agent-skill -s yt-script -s yt-retention -s yt-edit -s yt-package -a claude-code --copy -y
+npx skills add calesthio/generative-media-skills -s documentary-montage-production -s editing-montage -s sound-design-foley -s audio-mixing-mastering -s music-supervision-scoring -s color-grading-finishing -s title-kinetic-typography -s motion-graphics-direction -a claude-code --copy -y
+npx skills add digitalsamba/claude-code-video-toolkit -s video-design -a claude-code --copy -y
 ```
 
-La syntaxe exacte de `-s` pour plusieurs skills (séparateur virgule ou espace) reste à vérifier à l'installation. Lancer d'abord `--list` pour chaque dépôt.
-
-Ensuite :
-- retirer l'ancienne `remotion-best-practices` globale, pour éviter deux versions concurrentes ;
-- relire les scripts inclus avant toute exécution.
 
 ## Sources
 
