@@ -1,6 +1,6 @@
 # Quelle aurait dû être ta vie ?
 
-**Slug** : `2026-11-quelle-aurait-du-etre-ta-vie` · **Statut** : storyboard · **Durée visée** : ≈ 10 min
+**Slug** : `2026-11-quelle-aurait-du-etre-ta-vie` · **Statut** : storyboard · partie jouée (voir [`references/partie.md`](references/partie.md)) · **Durée visée** : ≈ 10 min
 
 ## Pitch
 

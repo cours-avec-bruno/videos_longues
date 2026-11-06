@@ -14,6 +14,17 @@ Procédés choisis avec le [mode d'emploi](../../docs/direction-artistique/proce
 - **La vidéo ne doit jamais être reconnaissable comme faite à l'IA** : aucune mention d'IA à l'écran, et les règles anti-« look IA » ci-dessous s'appliquent à toute la fabrication.
 - **Priorité à l'animation** : on privilégie les moments d'animation, de motion design et de 3D. Les photos restent un **complément**, pas la matière principale. À appliquer en affinant le découpage : quand un plan peut être raconté en motion design ou en 3D plutôt qu'en photo, on choisit l'animation.
 
+## La partie jouée (06/11/2026)
+
+**Khadija Ibrahim**, née en 2026 en Algérie, à la campagne, dans le cinquième le plus pauvre :
+- elle quitte l'école à 11 ans pour travailler ;
+- elle part à Alger à 16 ans et se marie à 24 ans ;
+- elle a 3 enfants, dont un meurt bébé ;
+- elle connaît des années de dettes et de violences à la maison ;
+- elle part en pèlerinage à 80 ans et meurt à 94 ans.
+
+À 6 ans, elle voulait être « youtubeuse ». Tout est dans [`references/partie.md`](references/partie.md) : chaque décision, le contexte, les 4 autres bébés, les comparaisons, les points sensibles et les propositions de recalage des scènes. **À arbitrer par Bruno avant de reprendre les fiches S04 à S13.**
+
 ## Règle du jeu : le spectateur croit jouer, mais il ne joue pas
 
 **L'enjeu de la vidéo** (décisions de Bruno, 06/11/2026) :
@@ -31,7 +42,7 @@ Au second visionnage, tout doit être visible :
 - **S05** : « Je n'ai rien choisi de tout ça. Elle non plus. » La phrase a un double sens, qu'on ne comprend qu'à la fin.
 - **S08** : la main de l'opérateur hésite au-dessus d'une option, puis clique sur une autre, sans commentaire.
 - L'opérateur **ne ment jamais** : il ne dit jamais « je choisis ceci parce que je préfère ». Il dit « je prends celle-là », « on continue ».
-- **S10** : les 4 autres bébés vivent des vies plus dispersées. Le simulateur fait sans doute leurs choix au hasard (hypothèse à vérifier en jouant), mais on ne dit pas encore pourquoi.
+- **S10** : les 4 autres bébés suivent **la même règle** que Khadija (politique `auto`), et pourtant leurs vies n'ont rien à voir. Même règle, cinq départs, cinq vies (voir `references/partie.md`).
 
 ### La mécanique de jeu à l'écran
 
@@ -40,7 +51,7 @@ Un élément d'interface récurrent, **« À VOUS »** : à chaque décision, le
 ### Points de méthode (à trancher avant de jouer)
 
 - **Le point de départ reste tiré au sort** (le pays, le sexe, les moyens de la famille). C'est la loterie de la naissance, le sujet même, et le site ne permet pas de le choisir. La règle ne porte que sur les décisions.
-- **« Le plus probable » doit être mesuré, pas deviné.** L'interface web n'affiche peut-être pas les probabilités de chaque option. En revanche, l'**API officielle du site** (`POST /api/v1/live`) envoie *« chaque décision avec les probabilités que le monde lui donne »*. On peut donc prendre, à chaque étape, l'option qui a réellement la plus forte probabilité, et le prouver dans l'aveu. Voir `references/sources.md`.
+- **« Le plus probable » est défini par le moteur lui-même** : sa politique `auto`, « ce que la plupart des gens choisissent » (le défaut). C'est elle qui a joué la partie du 06/11/2026. Les options et leurs probabilités, décision par décision, viennent du script `shared/outils/1in8b/partie.py`, qui passe par l'API (`/life` avec `decisions=1`, et `/live`).
 - **Le choix le plus probable à chaque étape** ne garantit pas, mathématiquement, la trajectoire la plus probable dans son ensemble. L'aveu dira donc « à chaque carrefour, j'ai pris le chemin le plus fréquenté », et non « la vie la plus probable qui soit ». La formule exacte sera fixée au script.
 - **Les événements subis** (maladies, rencontres, décès) restent tirés au sort par le simulateur.
 - **Reproductibilité** : l'API accepte une `seed` (la même seed et la même version du moteur redonnent la même vie). On archive la seed, la version du moteur et la partie complète dans `prompts/`.
@@ -204,8 +215,5 @@ Règles :
 
 ## À faire avant le script
 
-- **Jouer la partie selon la règle secrète** (voir « Règle du jeu ») : à chaque décision, l'option la plus probable, avec la France comme vrai lieu de naissance. Noter : le pays tiré, la famille, **chaque décision avec les probabilités de toutes les options et l'option retenue**, les questions à 5, 15, 30, 50 et 70 ans, l'acte de décès, l'écran de comparaison, les 4 autres bébés (même pays ou pas ?). C'est la matière de l'interface et du récit.
-  - **Méthode recommandée** : l'API officielle (`/api/v1/live`, qui donne les probabilités de chaque décision), avec une `seed` archivée. La clé gratuite suffit largement (2 000 unités de vie par mois, une vie = 1 unité). C'est Bruno qui la demande, par un e-mail à api@1in8b.life.
-  - **En parallèle**, une partie sur le site web avec la même logique, pour capturer l'interface réelle qu'on recrée dans Remotion. À vérifier : est-ce que le site affiche les probabilités des options ?
-  - Archiver la partie complète (JSON, seed, version du moteur, date) dans `prompts/partie-la-plus-probable/`.
+- ✅ **Partie jouée le 06/11/2026** (seed 20261106, moteur 0.9.52) : voir [`references/partie.md`](references/partie.md). Il reste à lancer `shared/outils/1in8b/partie.py`, avec la clé de Bruno, pour archiver les options et les probabilités de chaque décision, et la variante « ambitieuse ».
 - Sourcer précisément les chiffres de S14 et S15 (`references/sources.md`).

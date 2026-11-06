@@ -112,6 +112,14 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Tri demandé par Bruno (le dossier doit rester court) : **13 skills gardées** sur 30. Les 12 sous-skills Remotion faisaient doublon avec le routeur. Retirées aussi : `yt-edit`, `music-supervision-scoring`, `color-grading-finishing`, `title-kinetic-typography`, `motion-graphics-direction`.
 - **Règle** (ajoutée à `CLAUDE.md`) : comme pour les procédés, Claude choisit lui-même la skill adaptée à chaque tâche (une principale, deux au maximum) et l'annonce. La table « tâche → skill » est dans `docs/skills.md`.
 
+## 2026-11-06 · La partie est jouée : Khadija Ibrahim
+
+- Une seule partie, seed 20261106, 1in8b Engine 0.9.52, jouée par le connecteur Claude. Les choix ont été faits par la **politique `auto` du moteur**, que la doc définit comme « ce que la plupart des gens choisissent » : c'est exactement notre règle secrète.
+- La vie : Khadija Ibrahim, Algérie rurale, cinquième le plus pauvre. Elle quitte l'école à 11 ans, part à Alger à 16 ans, se marie à 24 ans, a 3 enfants (dont un meurt bébé), traverse des années de dettes et de violences, part en pèlerinage à 80 ans et meurt à 94 ans. À 6 ans, elle voulait être « youtubeuse ». Détail complet : `videos/2026-11-quelle-aurait-du-etre-ta-vie/references/partie.md`.
+- Les 4 autres bébés (Kenya, Guinée, Kenya, Inde) suivent la même politique : même règle, cinq vies très différentes.
+- Le connecteur ne donne pas les options ni leurs probabilités. Le script `shared/outils/1in8b/partie.py` les récupère par l'API HTTP, avec la variante « ambitieuse ». **À lancer par Bruno avec sa clé.**
+- À arbitrer : le recalage des étapes d'âge sur la vraie vie (11 ans au lieu de 15), le traitement des passages sensibles (violences, enfant mort).
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

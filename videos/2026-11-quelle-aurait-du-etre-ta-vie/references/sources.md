@@ -26,6 +26,9 @@ Vérifié le 05/11/2026. **[VÉRIFIÉ]** = lu sur la source ; **[À VÉRIFIER]**
 
 Indispensable pour la règle secrète (toujours l'option la plus probable, révélée en S13) :
 
+- **Politique de décision `auto`** : « *what most people choose* » (ce que la plupart des gens choisissent). C'est le défaut quand on ne décide pas soi-même. Il existe aussi `ambitious`. **[VÉRIFIÉ, doc anglaise de l'API, 06/11/2026]** C'est la définition officielle de notre règle secrète.
+- **Le connecteur Claude** (`live_a_life`, `compare_lives`…) ne donne que l'option retenue (« Décision : … ») : ni les autres options, ni leurs probabilités, ni le choix de la politique. Pour cela, il faut l'API HTTP : `/life?decisions=1` (« chaque décision rencontrée, ses options et celle qui a été prise ») et `/live`. **[VÉRIFIÉ]**
+
 - **`POST /api/v1/live`** : « une vie vécue de l'extérieur, un pas à la fois : vous prenez chaque décision ». Et pour les applis : « /live envoie chaque décision avec les probabilités que le monde lui donne ». → On peut donc prendre, à chaque décision, l'option la plus probable, de façon **mesurée et prouvable**. [VÉRIFIÉ sur la page ; format exact des réponses à lire dans la doc anglaise et dans `/api/v1/openapi.json`]
 - **`seed`** : « la même seed et la même version du moteur donnent les mêmes vies ». Pour reproduire une partie, il faut conserver la version du moteur (`meta.engine`) et la date. [VÉRIFIÉ]
 - Sans `country`, le lieu est tiré selon la part des naissances, comme sur le site. Le paramètre `lang` donne le récit et les choix en français. [VÉRIFIÉ]
