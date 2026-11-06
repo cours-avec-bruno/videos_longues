@@ -78,6 +78,20 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Décisions de Bruno : **tout est fabriqué** (Blender, Remotion, couche Higgsfield), rien n'est filmé ; voix off = l'opérateur à la 1re personne ; images de la vie générées.
 - Premier storyboard construit avec la skill `storyboard-procedes` : grammaire (un bureau en huis clos dont la lumière suit l'âge, ambre = l'humain, mono = dans la simulation, serif = hors de la simulation), 15 scènes, 24 procédés, 5 signatures. À arbitrer par Bruno.
 
+## 2026-11-05 · Règle : jamais de « look IA »
+
+- Décision de Bruno : **une vidéo de la chaîne ne doit jamais être reconnaissable comme faite à l'IA**. Pour « Quelle aurait dû être ta vie ? », les illustrations sont de **vraies photos** (banques libres, archives), sans aucune mention d'IA à l'écran.
+- Règles anti-« look IA » posées dans le storyboard :
+  - pas de visage ni de personnage généré ;
+  - mouvements de photo lents, pas de parallaxe ni d'animation par IA ;
+  - un même traitement photo pour toutes les sources ;
+  - une 3D crédible et imparfaite ;
+  - Higgsfield jamais visible tel quel ;
+  - voix humaine, musique composée par un humain.
+- Conséquence sur la question ouverte de la voix off : une **voix humaine** est recommandée.
+- Précision de Bruno : on **privilégie l'animation, le motion design et la 3D**. Les photos ne sont qu'un complément.
+- **Reprise prévue le 06/11/2026** : affiner le storyboard et commencer la création des scènes.
+
 ## 2026-11-05 · Branche `main`
 
 - Création de **`main`**, la référence du projet. Avant, la branche par défaut était une branche de session cloud (`claude/wizardly-archimedes-sapbhh`), au nom généré automatiquement.
@@ -88,5 +102,5 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
-- [ ] Voix off : la voix de Bruno ou une voix générée (ElevenLabs) ?
+- [ ] Voix off : la voix de Bruno ou un comédien ? (Une voix de synthèse est contraire à la règle anti-« look IA ».)
 - [ ] Specs définitives (4K ?) une fois la DA définie.

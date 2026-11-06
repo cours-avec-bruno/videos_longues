@@ -18,6 +18,15 @@ La nuit dans le bureau, l'écran affiche l'acte, l'opérateur immobile. Puis le 
 - **Voix off** : (repris de `script.md`)
 - **Sons / musique** :
 
+## Découpage en plans
+
+Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** vraie photo (banque libre ou archive, voir `../../references/photos.md`), animée dans Remotion · **NOIR**.
+
+| Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
+|---|---|---|---|---|---|---|
+| S12-P01 | 15 s | 3D | Plan large fixe, la nuit : l'écran est la seule source de lumière, aucune voix | Fixe (la lumière de l'écran respire) | M05, I18 | Musique seule |
+| S12-P02 | 5 s | NOIR | Noir : on sort de la simulation | Coupe franche | T03 | Queue de musique |
+
 ## Cadrage et mise en scène
 
 - **Plan(s)** : large, moyen, serré, insert…

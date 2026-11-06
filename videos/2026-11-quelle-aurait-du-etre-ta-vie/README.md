@@ -18,9 +18,9 @@ Un opérateur, seul dans un bureau, lance une simulation de vie (le simulateur *
 
 ## Fabrication
 
-Tout est fabriqué, rien n'est filmé :
+Rien n'est filmé :
 - **Blender** : le bureau et l'opérateur sans visage ;
-- **Remotion** : l'interface du simulateur (recréée d'après une vraie partie, en citant la source), les cartons, les graphiques et le compositing ;
-- **Higgsfield** : couche générée pour les images de la vie simulée (lieux, scènes, portrait).
+- **Remotion** : l'interface du simulateur (recréée d'après une vraie partie, en citant la source), le motion design, les cartons, les graphiques et le compositing ;
+- **vraies photos** d'illustration pour la vie simulée (banques libres, archives), registre dans [`references/photos.md`](references/photos.md).
 
-Les générations Higgsfield attendent une estimation des crédits et la validation de Bruno.
+**Règle absolue : la vidéo ne doit jamais être reconnaissable comme faite à l'IA.** Les règles anti-« look IA » sont dans le storyboard.

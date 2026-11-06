@@ -18,6 +18,21 @@ Payoff du plant de S03. Passage en serif (hors simulation). Distinguer naître s
 - **Voix off** : (repris de `script.md`)
 - **Sons / musique** :
 
+## Découpage en plans
+
+Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** vraie photo (banque libre ou archive, voir `../../references/photos.md`), animée dans Remotion · **NOIR**.
+
+| Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
+|---|---|---|---|---|---|---|
+| S13-P01 | 4 s | MD | « Et nous ? » en serif sur noir | Apparition | H02 | Voix |
+| S13-P02 | 8 s | UI | La comparaison du site, côte à côte : sa vie / la vie qu'on aurait eue en France | Deux colonnes | N05 |  |
+| S13-P03 | 15 s | MD | Le mur de 207 noms de pays, en proportion des naissances. La caméra le traverse, et « France » n'apparaît qu'une fois | Lent travelling, faible profondeur de champ | I11 | Musique tendue |
+| S13-P04 | 1 s | NOIR | Écran vide | — | S01 | Silence total |
+| S13-P05 | 5 s | MD | « 1 sur 207 » en serif | Apparition sèche | I15 |  |
+| S13-P06 | 12 s | MD | Naître sur le territoire ≠ avoir la nationalité : schéma simple en serif | Deux ensembles qui se séparent |  | Voix |
+| S13-P07 | 8 s | MD | Comparaison et source : Inde 1 sur 6 · Nigeria 1 sur 18 · France 1 sur 207 (ONU WPP 2024, via 1in8b.life) | Barres | H01 |  |
+| S13-P08 | 7 s | 3D | Le bureau la nuit, l'écran éteint | Fixe | I18 | Ambiance |
+
 ## Cadrage et mise en scène
 
 - **Plan(s)** : large, moyen, serré, insert…
