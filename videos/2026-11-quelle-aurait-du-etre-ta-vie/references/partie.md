@@ -309,7 +309,14 @@ Tirés avec les seeds suivantes (20261107 à 20261110), avec la même politique 
 5. **Le portrait (I13)** : une vraie photo d'une femme algérienne âgée, libre de droits et dont la licence autorise ce récit. ⚠️ Pexels interdit de montrer une personne identifiable sous un jour négatif : une vie avec des violences et un enfant perdu peut tomber sous cette clause. **À vérifier licence par licence.**
 6. **L'aveu (S13) a sa preuve** : le moteur lui-même définit la politique `auto` comme « ce que la plupart des gens choisissent ». Et si le script le confirme, **la même vie jouée « pour réussir »** (politique `ambitious`) donnera la comparaison promise. **[À COMPLÉTER]**
 
-## Points sensibles (à arbitrer avec Bruno)
+## Points sensibles de la vie de Manoj (à arbitrer avec Bruno)
+
+- **La tuberculose** : elle le touche à 24 ans et tue ses deux frères (32 et 49 ans). On la montre par la frise (deux croix) et une ligne d'interface, sans image de malade.
+- **La liaison** (39-41 ans) et **l'alcool** (18 à 64 ans, toujours repris en main) : une ligne d'interface chacun, sans image. Proposition : garder la liaison en une ligne (c'est la faute pardonnée, et elle humanise), et couper l'alcool, déjà implicite. À trancher.
+- **Les coups de baguette à l'école** (9 ans) : une ligne, en citation du moteur.
+- **Le travail des enfants** (11-14 ans : les bêtes, les champs) : c'est le cœur de S08, à montrer de dos, sans misérabilisme.
+
+## Points sensibles de la vie de Khadija (vie de comparaison, gardés pour mémoire)
 
 La partie contient :
 - **des violences conjugales répétées** (de 31 à 50 ans) ;

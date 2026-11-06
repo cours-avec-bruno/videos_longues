@@ -134,6 +134,14 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - La variante ambitieuse de la même naissance réussit beaucoup mieux (professeur, 89 ans). L'aveu doit dire « une pente, pas une interdiction ».
 - Environ 800 unités sur 2 000 consommées ce mois-ci.
 
+## 2026-11-06 · Storyboard recalé sur la vie de Manoj
+
+- Les fiches S04, S05 et S07 à S11 suivent maintenant la vie de Manoj. Les cartons d'âge tombent à 0, 5, 11, 15, 24, 26, 60 et 75 ans.
+- Les 6 « À VOUS » : 7 ans (loisirs, une quasi-égalité pour apprendre le jeu), **11 ans (l'école, 97 %, refusée faute d'argent : le pivot)**, 15 ans (premier emploi), 24 ans (tuberculose), 26 ans (mariage), 60 ans (retraite).
+- Nouveaux plants : « ingénieur » (8 ans) → l'aveu ; la carte des naissances qui s'arrête au plus dense (l'Inde) → « pas même son pays » ; l'école refusée → « la seule fois où j'ai choisi comme vous ».
+- L'aveu (S13) est reformulé : « Ce n'est pas une interdiction : c'est une pente. »
+- La durée estimée monte à ≈ 12 min 30, à resserrer au script. À arbitrer : la liaison et l'alcool (garder ou couper), la variante « pour réussir » (à confirmer sur beaucoup de vies avant de la montrer).
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

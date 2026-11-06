@@ -11,7 +11,7 @@
 
 ## Intention
 
-L'opérateur sans visage, de dos, face à l'écran ; lumière d'aube froide par la fenêtre. Mission annoncée (« faire vivre quelqu'un, du premier jour au dernier »), puis l'invitation au spectateur : « Vous allez jouer avec moi. À chaque grand choix, choisissez pour elle. » Puis la consigne (chiffre sur 100), affichée en serif.
+L'opérateur sans visage, de dos, face à l'écran ; lumière d'aube froide par la fenêtre. Mission annoncée (« faire vivre quelqu'un, du premier jour au dernier »), puis l'invitation au spectateur : « Vous allez jouer avec moi. À chaque grand choix, choisissez pour lui. » Puis la consigne (chiffre sur 100), affichée en serif.
 
 ⚠️ **La règle secrète** (l'opérateur prend toujours l'option la plus probable) n'est **jamais** annoncée ici : elle n'est révélée qu'en S13. L'opérateur ne ment pas pour autant : il ne dit jamais qu'il choisira selon ses préférences.
 
