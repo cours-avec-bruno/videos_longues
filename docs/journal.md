@@ -158,6 +158,12 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Environ 950 mots dits, soit à peu près 7 min 20 de voix.
 - À décider : garder ou non le mensonge des 39 ans ; la variante ambitieuse (à confirmer sur beaucoup de vies) ; les chiffres de l'Insee (à vérifier) ; la voix.
 
+## 2026-11-07 · Méthode de fabrication de la vidéo
+
+- Décision de Bruno : on suit le storyboard pas à pas. **Chaque scène est générée une par une**, puis retravaillée ensemble avant de passer à la suivante.
+- Quand toutes les scènes existent, on monte une **V1 globale**, qu'on retouche ensuite dans son ensemble.
+- La variante ambitieuse (conclusion, S13) est traitée à la fin.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
