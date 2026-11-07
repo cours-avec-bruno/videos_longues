@@ -12,6 +12,9 @@
 
 ## Intention
 
+**Ajout du 07/11/2026 (Bruno)** : sur « plus de dix-sept pour cent », glitch (T02) puis une carte du monde légèrement courbée (projection Equal Earth, qui respecte les surfaces) où la densité de population s'allume en rouge-ambre, des zones les plus denses aux moins denses (I03 : la carte se construit sur la voix ; I02 : un seul accent, l'humain). La caméra glisse vers l'Inde, le reste du monde s'éteint un peu, le contour de l'Inde se dessine et pulse sur « vit ici ». Source en bas à gauche (H01, crédit CC BY). Données : Kontur Population 2023 ; contrôle : Inde = 17,8 %. Le village reçoit un étalonnage documentaire chaud (I04). Fabrication : `carte.py`.
+
+
 **Révision du 07/11/2026 (Bruno)** : moins de lieux et plus de rythme, avec un effet sur les images d'après une référence de Bruno (bichromie bleu cyan, trame de points, lignes de balayage). Six lieux (Shibuya, tour Eiffel, Christ de Rio, Gizeh, Manhattan, icebergs), un demi-plan chacun environ, coup de zoom à l'entrée, coupes glitchées avec un éclair en négatif bleu et un son numérique. Le cyan, c'est la simulation qui balaie le monde ; en sortant dans l'espace la Terre perd le cyan et retrouve ses couleurs : l'atterrissage, c'est le réel. Effet réutilisable : `shared/outils/image/effets.py`.
 
 

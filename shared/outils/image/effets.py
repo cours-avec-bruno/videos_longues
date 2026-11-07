@@ -129,3 +129,21 @@ def carton_pixel(texte, w=1920, h=1080, police="C:/Windows/Fonts/georgiab.ttf", 
     out[..., 0] *= 0.97                                   # un blanc à peine froid
     out += rng.normal(0, 3.0, out.shape) + 6              # fond pas tout à fait noir, un peu de grain
     return out
+
+
+def etalonnage_doc(img, k=0, chaleur=1.0):
+    """Étalonnage « documentaire » pour unifier des images d'archive ou de banque (procédé I04) :
+    contraste en S doux, saturation un peu baissée, hautes lumières légèrement chaudes, ombres légèrement froides,
+    vignette et grain."""
+    rng = np.random.default_rng(500 + k)
+    x = np.clip(img, 0, 255).astype(np.float32) / 255
+    x = x + 0.12 * (x - 0.5) * (1 - np.abs(2 * x - 1))           # S doux
+    g = x.mean(2, keepdims=True)
+    x = g + (x - g) * 0.82                                        # un peu moins saturé
+    lum = g
+    x[..., 2] += 0.035 * chaleur * lum[..., 0]                    # hautes lumières vers l'ambre
+    x[..., 0] -= 0.03 * chaleur * lum[..., 0]
+    x[..., 0] += 0.025 * (1 - lum[..., 0]) ** 2                   # ombres vers le bleu
+    h, w = img.shape[:2]
+    x = x * 255 * _vignette(h, w)
+    return x + rng.normal(0, 3.0, x.shape)

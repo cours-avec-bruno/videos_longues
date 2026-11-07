@@ -51,12 +51,17 @@ T_ESPACE = T_MONDE + sum(DUREES)
 TERRE = os.path.join(M, "S04", "S04_terre.mp4")
 D_TERRE = 112 / FPS
 T_VILLAGE = T_ESPACE + D_TERRE
-VILLAGE = [("inde/inde_31372348.mp4", 1.0, 1.0, 3.2), ("inde/inde_34732091.mp4", 0.5, 1.0, 4.8)]
-DUREE = T_VILLAGE + sum(v[3] for v in VILLAGE)
+# Bruno (07/11/2026) : sur « plus de dix-sept pour cent », glitch puis la carte du monde des densités (carte.py)
+T_PHRASE = T_VILLAGE + 3.2 + 0.4               # « Pas étonnant : … »
+T_CARTE = T_PHRASE + 1.62                      # « plus de dix-sept pour cent… »
+VILLAGE = [("inde/inde_31372348.mp4", 1.0, 1.0, 3.2), ("inde/inde_34732091.mp4", 0.5, 1.0, T_CARTE - T_VILLAGE - 3.2)]
+CARTE = os.path.join(M, "S04", "S04_carte.mp4")
+D_CARTE = 105 / FPS
+DUREE = T_CARTE + D_CARTE
 N = int(round(DUREE * FPS))
 TR = 0.12                      # durée d'une traversée (de chaque côté de la coupe)
 sys.path.insert(0, os.path.join(ICI, "..", "..", "..", "..", "shared", "outils", "image"))
-from effets import carton_pixel, glitch, negatif, scan_cyan  # noqa: E402
+from effets import carton_pixel, etalonnage_doc, glitch, negatif, scan_cyan  # noqa: E402
 MONDE = range(1, 1 + len(LIEUX))       # indices des plans du monde
 
 
@@ -105,6 +110,8 @@ t = T_VILLAGE
 for f, deb, vit, d in VILLAGE:
     plans.append((t, t + d, lire_extrait(os.path.join(PX, f), deb, vit, d + 0.2), 0.04))
     t += d
+plans.append((T_CARTE, DUREE, lire_extrait(CARTE, 0, 1.0, D_CARTE), 0.0))
+I_TERRE, I_VILLAGE, I_CARTE = 1 + len(LIEUX), 2 + len(LIEUX), len(plans) - 1
 coupes = [p[0] for p in plans[1:]]
 
 
@@ -115,12 +122,12 @@ def image_du_plan(i, tg):
     z = 1 + pousse * p
     flou = 0.0
     # sortie : on fonce dans l'image (sauf la Terre, qui gère sa propre plongée, et la fin)
-    if 0 < i < len(plans) - 1 and fin - tg < TR and i != len(plans) - 3:
+    if i in MONDE and fin - tg < TR:
         u = 1 - (fin - tg) / TR
         z *= 1 + 0.9 * u ** 2
         flou = 0.10 * u
     # entrée : on ressort du flou, en se posant
-    if i > 0 and tg - deb < TR:
+    if (i in MONDE or i in (I_TERRE, I_VILLAGE)) and tg - deb < TR:
         u = (tg - deb) / TR
         z *= 1 + 0.45 * (1 - u) ** 2
         flou = max(flou, 0.08 * (1 - u))
@@ -135,6 +142,8 @@ def image_du_plan(i, tg):
         img = zoom(ims[k], z, flou, cx, cy)
         return scan_cyan(img, int(tg * FPS))
     img = zoom(ims[k], z, flou)
+    if I_VILLAGE <= i < I_CARTE:                     # le village : étalonnage documentaire (I04)
+        img = etalonnage_doc(img, int(tg * FPS))
     if i == 1 + len(LIEUX):                          # la Terre : le cyan s'efface, on revient au réel
         force = np.clip(1 - (tg - deb) / 0.7, 0, 1)
         if force > 0:
@@ -162,13 +171,17 @@ for n in (range(0) if SON_SEUL else range(DECAL, N)):
     coupe_monde = None
     for c_ in coupes:
         j = [p[0] for p in plans].index(c_)
-        if j in MONDE or j == 1 + len(LIEUX):
-            if abs(tg - c_) < 1.5 / FPS:
+        if j in MONDE or j == 1 + len(LIEUX) or j == I_CARTE:
+            if abs(tg - c_) < 2.5 / FPS:
                 coupe_monde = (c_, j)
     if coupe_monde:
         c_, j = coupe_monde
         d_ = round((tg - c_) * FPS)
-        if d_ == -1:
+        if j == I_CARTE:                             # T02 : l'image se décompose, puis la carte
+            img = glitch(img, n, {-2: 0.4, -1: 0.9, 0: 1.0, 1: 0.5}.get(d_, 0.0)) if d_ in (-2, -1, 0, 1) else img
+        elif abs(d_) > 1:
+            pass
+        elif d_ == -1:
             img = glitch(img, n, 1.0)
         elif d_ == 0:
             img = scan_cyan(negatif(img), n)          # négatif, mais qui reste bleu
@@ -281,7 +294,14 @@ poser(fusee * fondu(len(fusee), 0.3, 0.1)[:, None], T_VILLAGE - len(fusee) / SR 
 
 # 5. l'arrivée : le village (enregistré à Amethi, Uttar Pradesh)
 village = stereo("village_amethi.wav", 30.0, Ns) * db(-12)
-env_v = np.clip((ts - T_VILLAGE) / 0.12, 0, 1)
+env_v = np.clip((ts - T_VILLAGE) / 0.12, 0, 1) * np.clip(1 - (ts - T_CARTE) / 0.5, 0, 1)   # le village s'efface sous la carte
+sous_carte = stereo("espace_drone.wav", 60.0, Ns) * (db(-17) * np.clip((ts - T_CARTE) / 0.6, 0, 1))[:, None]
+mix += sous_carte
+gd = lire_audio(os.path.join(SONS, "glitch_donnees.wav"), mono=False).astype(np.float64)
+o_g = int(np.argmax(np.abs(gd).mean(1)))
+seg_g = gd[max(0, o_g - int(0.06 * SR)):o_g + int(0.5 * SR)]
+j_g = int((T_CARTE - 0.06) * SR)
+mix[j_g:j_g + len(seg_g)] += seg_g[:max(0, min(len(seg_g), Ns - j_g))] * fondu(len(seg_g), 0.005, 0.2)[:max(0, min(len(seg_g), Ns - j_g)), None] * db(-9)
 mix += village * env_v[:, None]
 
 # 6. la voix

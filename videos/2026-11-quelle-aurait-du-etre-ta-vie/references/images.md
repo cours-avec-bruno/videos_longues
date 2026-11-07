@@ -30,3 +30,12 @@ Autres candidats téléchargés, non utilisés pour l'instant (dans les mêmes d
 | Fichier | Source | Utilisé |
 |---|---|---|
 | `nasa/terre_24000.jpg` | NASA Blue Marble, « Whole world - land and oceans » 24000 x 12000, via Wikimedia Commons (`File:Whole_world_-_land_and_oceans_12000.jpg`) | S04, la Terre (`scenes/S04/terre.py`) |
+
+## Données
+
+| Fichier | Source | Licence | Utilisé |
+|---|---|---|---|
+| `donnees/kontur_r4.gpkg` | Kontur Population, 1er novembre 2023, hexagones H3 ~22 km (HDX : kontur-population-dataset-22km) | **CC BY 4.0 : crédit obligatoire** (à l'écran en bas à gauche, et en description : « Population : Kontur Population 2023, CC BY 4.0 ») | S04, la carte des densités (`scenes/S04/carte.py`) |
+| `donnees/ne_pays_50m.geojson` | Natural Earth, pays 1:50m | domaine public | S04, contours des pays et de l'Inde |
+
+Vérification faite avec ces données : l'Inde compte 1,43 milliard d'habitants sur 8,03, soit 17,8 % (« plus de dix-sept pour cent » est juste).
