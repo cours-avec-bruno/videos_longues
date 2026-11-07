@@ -8,7 +8,7 @@
 | **Procédé principal** | N05 : le vrai lieu de naissance saisi (la France), « gardez ça en tête », payé en S14 |
 | **Procédés secondaires** | H02 |
 | **Statut** | à valider (proposition de storyboard) |
-| **Production** | un carton « commençons » (V3, avec S04 : `S03_S04_v2.mp4`) |
+| **Production** | validée en V1 (07/11/2026) ; un carton « commençons » (V3, avec S04 : `S03_S04_v2.mp4`) |
 
 ## Intention
 

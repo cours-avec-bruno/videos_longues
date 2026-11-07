@@ -8,7 +8,7 @@
 | **Procédé principal** | T01 : la première apparition du carton d'âge fixe son sens (une étape de la vie simulée) |
 | **Procédés secondaires** | S01, I15 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
-| **Production** | V3 (`S03_S04_v2.mp4`, 18 s avec S03) : six lieux, effet cyan, coupes glitch ; à valider par Bruno |
+| **Production** | validée en V1 (07/11/2026) ; V3 (`S03_S04_v2.mp4`, 18 s avec S03) : six lieux, effet cyan, coupes glitch ; à valider par Bruno |
 
 ## Intention
 

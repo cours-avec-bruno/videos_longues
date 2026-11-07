@@ -8,7 +8,7 @@
 | **Procédé principal** | Plan subjectif d'ouverture : le spectateur est l'opérateur, il marche vers sa chaise |
 | **Procédés secondaires** | — |
 | **Statut** | en construction (07/11/2026) |
-| **Production** | V5 : bouton « nouvelle vie » à l'écran (raccord S02), son à gain fixe (`S01_v5.mp4`) |
+| **Production** | validée en V1 (07/11/2026) ; V5 : bouton « nouvelle vie » à l'écran (raccord S02), son à gain fixe (`S01_v5.mp4`) |
 
 ## Intention
 

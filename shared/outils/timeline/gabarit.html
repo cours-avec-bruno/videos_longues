@@ -87,6 +87,9 @@ footer.wrap { padding-block: 6px 40px; color: var(--muted); font-size: 12px; }
   if (!D) { document.getElementById("row").textContent = "Page à générer avec shared/outils/timeline/generer.py."; return; }
   var S = D.scenes, suivi = D.suivi, ecran = suivi.ecran || {};
   var cur = suivi.en_cours, nxt = suivi.prochaine;
+  // tolère « S03-S04 » ou un identifiant inconnu : on garde la première scène reconnue
+  function connu(x) { if (!x) return null; if (S[x]) return x; var m = String(x).match(/S\d\d/); return m && S[m[0]] ? m[0] : null; }
+  cur = connu(cur); nxt = connu(nxt);
 
   function esc(t) { return String(t == null ? "" : t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function tc(s) { s = Math.round(s); var m = Math.floor(s / 60), r = s % 60; return m + ":" + (r < 10 ? "0" : "") + r; }

@@ -8,7 +8,7 @@
 | **Procédé principal** | N01 : le spectateur note la part de sa vie qu'il pense avoir choisie ; toute la vidéo y répond |
 | **Procédés secondaires** | I18, I16 |
 | **Statut** | repensée le 07/11/2026 pour le nouveau décor, à valider par Bruno |
-| **Production** | V2 (`S02_v2.mp4`, 34 s ; avec S01 : `S01_S02_apercu_v2.mp4`), à valider par Bruno |
+| **Production** | validée en V1 (07/11/2026) ; V2 (`S02_v2.mp4`, 34 s ; avec S01 : `S01_S02_apercu_v2.mp4`), à valider par Bruno |
 
 ## Intention
 
