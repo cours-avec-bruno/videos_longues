@@ -201,6 +201,13 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Images de départ, de milieu et d'arrivée rendues (hors Git, dans `medias/S01/`). Prochaine étape : Higgsfield anime la marche entre le départ et l'arrivée, après devis.
 - Le `.gitignore` exclut désormais `medias/` et les `.blend`, comme le demande la règle « médias hors Git ».
 
+## 2026-11-07 · S01 animée (V1)
+
+- Bruno a choisi d'animer sans remplacer d'abord la chaise et la lampe.
+- Higgsfield, modèle Wan 3.0 (images de début et de fin), 6 s en 1080p, sans audio : 21 crédits (FLUX 3 Video aurait coûté 48). Prompt et identifiants dans `videos/2026-11-quelle-aurait-du-etre-ta-vie/prompts/S01.md`.
+- Le résultat reste fidèle au rendu Blender, sans déformation visible. Converti en 24 i/s. La caméra n'avance presque pas pendant la première seconde et demie.
+- Note technique : l'envoi d'images vers Higgsfield est refusé (erreur Cloudflare 1010) si le client HTTP s'annonce comme Python ; il passe avec un en-tête de client standard.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

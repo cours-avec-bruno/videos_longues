@@ -33,7 +33,7 @@ On part de loin, environ sept mètres, dans le noir, à pas lents, avec un lége
 
 - Scène : `bureau.py` (Blender 5.2, lancé en arrière-plan sur le PC ; tout est construit par le script, matières procédurales, aucun asset téléchargé).
 - Rendus (hors Git) : `../../medias/S01/S01_depart.png`, `S01_milieu.png`, `S01_arrivee.png` ; scène : `../../medias/blender/S01_bureau.blend`.
-- Prochaine étape : Higgsfield anime la marche à partir des images de départ et d'arrivée (devis de crédits à valider par Bruno).
+- Animation : Higgsfield, Wan 3.0, 21 crédits (`../../prompts/S01.md`). V1 : `../../medias/S01/S01_marche_v1.mp4` (6 s, aux specs). Fidèle au rendu Blender ; la caméra ne démarre vraiment qu'après environ 1,5 s.
 
 ## Points à revoir
 
