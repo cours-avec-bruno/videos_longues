@@ -10,7 +10,7 @@ Conventions :
 
 ## Comment cette voix est écrite
 
-⚠️ **Décisions du 07/11/2026, à appliquer scène par scène pendant la construction** : on n'affiche plus les pourcentages, et il n'y a plus d'encart « À VOUS » répété. Le jeu devient implicite, et chaque étape de la vie est amenée par la précédente. Les lignes `ÉCRAN : À VOUS · …` ci-dessous sont donc des repères de travail, pas du texte à l'écran. La phrase de S02 « Vous aurez trois secondes » est à revoir dans le même sens.
+⚠️ **Décisions du 07/11/2026, à appliquer scène par scène pendant la construction** : on n'affiche jamais les pourcentages, même dans l'aveu, et il n'y a plus d'encart « À VOUS » répété. Le jeu devient implicite, et chaque étape de la vie est amenée par la précédente. Les lignes `ÉCRAN : À VOUS · …` ci-dessous sont donc des repères de travail, pas du texte à l'écran. La phrase de S02 « Vous aurez trois secondes » est à revoir dans le même sens.
 
 L'opérateur est un homme assis à côté de nous. Au début, il fait un travail. Il ne commente pas, il n'explique pas, il ne donne pas de leçon. On l'entend s'attacher à Manoj sans jamais le dire.
 
@@ -290,7 +290,7 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 > Je n'ai rien choisi pour lui. À chaque question, j'ai pris la réponse que donnaient le plus souvent deux cents garçons nés comme lui.
 
-[la rafale : tous les encarts « À VOUS », de plus en plus vite ; l'option cliquée est toujours la plus haute]
+[la rafale : toutes les décisions de sa vie, de plus en plus vite, avec l'option prise ; aucun pourcentage à l'écran]
 
 > Sa naissance aussi, je l'ai prise au plus probable. L'Inde, un village, un garçon : chaque fois, ce qui arrive le plus souvent.
 

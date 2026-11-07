@@ -166,7 +166,7 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 
 ## 2026-11-07 · Retours de Bruno sur le storyboard
 
-- On n'affiche pas les pourcentages. Proposition en attente : les montrer une seule fois, dans l'aveu.
+- On n'affiche pas les pourcentages. **Jamais à l'écran, même dans l'aveu** (décision de Bruno) : c'est la voix qui dit la règle.
 - Tout ne se passe pas dans le bureau : c'est l'intro, avec quelques plans de retour. La vie de Manoj a ses lieux.
 - Blender fait les scènes 3D, Higgsfield leur donne vie (pas Remotion). Règle ajoutée à `CLAUDE.md`, section 5.
 - Le jeu est implicite : pas d'« À VOUS » répété, chaque étape est amenée par la précédente.

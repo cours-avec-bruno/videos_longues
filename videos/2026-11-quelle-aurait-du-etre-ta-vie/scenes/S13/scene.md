@@ -34,7 +34,7 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 |---|---|---|---|---|---|---|
 | S13-P01 | 4 s | MD | « Je vous dois un aveu. » en serif, sur noir | Apparition lente | H02 | Voix |
 | S13-P02 | 8 s | 3D | Le bureau la nuit, l'acte de décès encore à l'écran. Voix : « Je n'ai rien choisi pour lui. Pas même son pays. » | Fixe | N02 | Voix, ambiance |
-| S13-P03 | 12 s | UI | La rafale : la carte des naissances (S04), puis tous les encarts « À VOUS » de la partie, de plus en plus vite ; sur chacun, l'option cliquée s'allume, et c'est toujours le pourcentage le plus haut | Coupes de plus en plus rapides, la colonne des pourcentages reste à la même place | M03, N02 | Un clic par écran, qui s'accélère |
+| S13-P03 | 12 s | UI | La rafale : la carte des naissances (S04), puis toutes les décisions de sa vie, de plus en plus vite ; sur chacune, l'option prise s'allume. **Aucun pourcentage à l'écran** (décision de Bruno, 07/11/2026) : c'est la voix qui dit la règle | Coupes de plus en plus rapides | M03, N02 | Un clic par décision, qui s'accélère |
 | S13-P04 | 6 s | MD | « L'Inde, un village, un garçon : chaque fois, ce qui arrive le plus souvent. » | Apparition | N02 | Voix |
 | S13-P05 | 7 s | MD | « La seule fois où j'ai choisi comme vous, à 11 ans, ça n'a pas suffi. » L'encart des 11 ans réapparaît (97 %), puis la ligne « … vous avez dû renoncer » | Fondu de l'encart | N02 | Voix, note tenue |
 | S13-P06 | 5 s | UI | « … vous répondiez toujours : ingénieur. » (la ligne de S07) | Texte tapé | | Silence |
