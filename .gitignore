@@ -25,7 +25,12 @@ out/
 *.exr
 *.psd
 
-# Blender : sauvegardes automatiques
+# Médias des vidéos (vivent sur le PC, hors Git)
+**/medias/*
+!**/medias/.gitkeep
+
+# Blender : fichiers de scène et sauvegardes automatiques
+*.blend
 *.blend1
 *.blend2
 

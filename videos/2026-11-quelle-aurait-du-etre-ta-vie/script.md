@@ -27,9 +27,9 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 ## S01 · Ouverture
 
-ÉCRAN : Cette vie est simulée par 1 sur 8 milliards (1in8b.life) à partir de statistiques réelles.
+[pas de voix ; vue subjective, on marche dans le noir vers le bureau éclairé ; seulement nos pas, qui résonnent dans un grand vide, et le bourdonnement de l'ordinateur qui grandit à mesure qu'on approche]
 
-[pas de voix ; silence, puis l'ambiance du bureau monte : ventilation, une chaise]
+[le crédit « 1 sur 8 milliards · 1in8b.life » va en description, pas à l'écran]
 
 ## S02 · Le bureau, à l'aube
 

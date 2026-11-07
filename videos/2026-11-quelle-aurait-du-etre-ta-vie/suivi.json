@@ -1,7 +1,7 @@
 {
   "titre": "Quelle aurait dû être ta vie ?",
-  "en_cours": null,
-  "prochaine": "S01",
+  "en_cours": "S01",
+  "prochaine": "S02",
   "etapes": [
     {
       "nom": "Concept et sources",
@@ -55,8 +55,8 @@
     "S09"
   ],
   "ecran": {
-    "S01": "Du noir, et une seule phrase : cette vie est simulée par 1 sur 8 milliards, à partir de statistiques réelles.",
-    "S02": "Un bureau à l'aube, en 3D. Un homme de dos devant un écran ; on ne voit jamais son visage. Le compteur des naissances défile. Puis la question, posée au spectateur : sur cent, quelle part de votre vie avez-vous choisie ?",
+    "S01": "Vue subjective : on marche dans le noir vers un bureau seul au milieu d'un immense espace. Une lumière froide tombe d'en haut, l'écran est allumé, un câble part dans le noir. On arrive derrière la chaise vide.",
+    "S02": "L'opérateur (nous) devant l'écran, dans l'îlot de lumière au milieu du noir. Le compteur des naissances défile. Puis la question, posée au spectateur : sur cent, quelle part de votre vie avez-vous choisie ? (À repenser : plus de fenêtre, donc plus d'aube par la fenêtre.)",
     "S03": "L'écran du simulateur, sobre. Le monde d'aujourd'hui, une vie entière. Dans la liste des pays, il écrit : France.",
     "S04": "Le bouton « Naître ». Une seconde de noir. La carte du monde où les naissances s'allument par milliers, puis un seul point reste, en Inde. Inde, un village, un garçon.",
     "S05": "On quitte le bureau. Le village au petit matin, la maison, la fumée du feu de bois, le chemin de l'eau. Le visage de Manoj, encore trop flou pour être reconnu.",

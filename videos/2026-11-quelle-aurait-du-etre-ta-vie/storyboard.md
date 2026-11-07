@@ -111,7 +111,7 @@ Contraintes du concept : pas de twist « simulation dans la simulation » (l'ave
 
 | ID | Partie | Ce qui se passe | Fonction | Procédé principal | Secondaires | Alternative au principal | Durée ≈ | Fabrication |
 |---|---|---|---|---|---|---|---|---|
-| S01 | Ouverture | Carton : « Cette vie est simulée par *1 sur 8 milliards* (1in8b.life) à partir de statistiques réelles. » | ACCROCHER | **H06** : contrat de confiance. Il pose d'emblée que la **vie** est simulée (ce que demande le concept), sans parler des outils de fabrication | — | (aucune : c'est une mention honnête nécessaire) | 0:06 | Remotion |
+| S01 | Ouverture | Vue subjective : on marche dans le noir vers un bureau seul au milieu d'un immense espace, éclairé par une lumière froide tombée d'en haut et par l'écran ; on arrive derrière la chaise vide. Pas de carton : le crédit du site va en description (décisions de Bruno, 07/11/2026) | ACCROCHER | **Plan subjectif** : le spectateur est l'opérateur | — | — | 0:06 | Blender + Higgsfield |
 | S02 | Le bureau, à l'aube | L'opérateur de dos, l'écran allumé, la lumière d'aube. « On m'a confié une mission : faire vivre quelqu'un, du premier jour au dernier. » Puis, au spectateur : « Vous allez jouer avec moi. À chaque grand choix, choisissez pour lui. Mais avant, notez un chiffre : sur 100, quelle part de votre vie avez-vous choisie ? » (La règle secrète n'est **jamais** annoncée.) | ACCROCHER | **N01** : le spectateur s'engage (un chiffre, puis le jeu), et toute la vidéo y répond | I18, I16 | N03 (montrer l'acte de décès flouté : « voilà comment cette vie finira ») | 0:50 | Blender + Remotion |
 | S03 | La mission | L'interface : le monde d'aujourd'hui, le tirage selon les naissances. L'opérateur saisit son vrai lieu de naissance, la France. « Gardez ça en tête, on y reviendra. » | PROMETTRE | **N05** : le plant le plus utile de la vidéo, car le site permet vraiment la comparaison avec sa propre vie | H02 | N03 | 0:35 | Remotion (interface) + Blender |
 | S04 | Naître | Le bouton « Naître », le premier carton **0 AN**, une seconde de silence. Puis la carte des naissances : des points s'allument partout, plus serrés là où naissent le plus de bébés, et c'est **en Inde**, là où ils sont le plus denses, qu'un point reste allumé. **INDE · UN VILLAGE · UN GARÇON**, seuls à l'écran | RÉVÉLER | **T01** : sa première apparition fixe son sens (une étape d'âge) | S01, I15 | I15 en principal (le pays seul, en grand) | 0:20 | Remotion |
@@ -153,7 +153,7 @@ Contraintes du concept : pas de twist « simulation dans la simulation » (l'ave
 | I04 | S05, S07, S09, S11, S15 | La vie en vraies photos, unifiées par un même traitement photo |
 | H01 | S14 | La source des données à l'écran |
 | I03 | S10, S15 | Comparer des trajectoires (dans la simulation, puis en France) |
-| S01 | S04, S11, S14 | Silence avant le pays, la mort, « 1 sur 207 » |
+| S01 | Ouverture | Vue subjective : on marche dans le noir vers un bureau seul au milieu d'un immense espace, éclairé par une lumière froide tombée d'en haut et par l'écran ; on arrive derrière la chaise vide. Pas de carton : le crédit du site va en description (décisions de Bruno, 07/11/2026) | ACCROCHER | **Plan subjectif** : le spectateur est l'opérateur | — | — | 0:06 | Blender + Higgsfield |
 | I15 | S04, S14 | Le lieu ou le chiffre seul à l'écran |
 | N11 | S10, S15 | Probabilité ≠ destin |
 | H02 | partout | Mono = dans la simulation · serif = hors de la simulation |

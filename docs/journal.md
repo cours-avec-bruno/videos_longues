@@ -193,6 +193,14 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - **Voix off : ElevenLabs, voix « Guillaume »**. Cinq voix portent ce nom ; Bruno a retenu « Guillaume - Documentary and Storytelling » (ElevenLabs, identifiant `3HZyQcLKlT0a3RDeXVsP`). Cela remplace la règle « voix humaine » des règles anti-« look IA ».
 - **Son** : recherche libre dans Epidemic Sound (connecté, vérifié), ElevenLabs et en ligne, avec la source et la licence notées.
 
+## 2026-11-07 · S01 en construction : le bureau perdu dans le noir
+
+- Décisions de Bruno : pas de carton de référence (crédit en description) ; vue subjective, on marche vers sa chaise ; **le bureau est seul au milieu d'un immense espace noir, sans fenêtre**, perdu dans l'obscurité.
+- La scène est construite dans Blender par un script versionné (`videos/2026-11-quelle-aurait-du-etre-ta-vie/scenes/S01/bureau.py`), lancé en arrière-plan sur le PC (Blender 5.2, rendu OptiX sur la GTX 1650 Super). Le plugin Higgsfield pour Blender n'était pas connecté.
+- Une lumière froide tombe d'en haut, un peu derrière le bureau : un îlot, avec une brume bornée au cône. L'écran est la seconde source. Le sol brillant étire le reflet de l'écran. Un câble part dans le noir.
+- Images de départ, de milieu et d'arrivée rendues (hors Git, dans `medias/S01/`). Prochaine étape : Higgsfield anime la marche entre le départ et l'arrivée, après devis.
+- Le `.gitignore` exclut désormais `medias/` et les `.blend`, comme le demande la règle « médias hors Git ».
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
