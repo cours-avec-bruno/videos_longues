@@ -142,6 +142,13 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - L'aveu (S13) est reformulé : « Ce n'est pas une interdiction : c'est une pente. »
 - La durée estimée monte à ≈ 12 min 30, à resserrer au script. À arbitrer : la liaison et l'alcool (garder ou couper), la variante « pour réussir » (à confirmer sur beaucoup de vies avant de la montrer).
 
+## 2026-11-05 · Branche `main`
+
+- Création de **`main`**, la référence du projet. Avant, la branche par défaut était une branche de session cloud (`claude/wizardly-archimedes-sapbhh`), au nom généré automatiquement.
+- Le PC fixe travaille directement sur `main`. Chaque session cloud travaille sur sa branche `claude/...` et ouvre une PR vers `main`.
+- Le script d'installation du PC bascule maintenant sur `main`.
+- Reste à faire par Bruno : définir `main` comme branche par défaut dans les réglages GitHub, puis supprimer les anciennes branches `claude/...`.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
