@@ -96,9 +96,9 @@ for fichier, gain, debut in (("bourdonnement_ordinateur.wav", -17, 40.0), ("bour
     b = b * (1 - loin)[:, None] + sourd * loin[:, None]
     mix += b * (db(gain) * (1 - 0.75 * loin))[:, None]
 
-# 2. la chaise : on s'assoit (l'impact du fichier, à 0,24 s, tombe à 2,6 s)
+# 2. la chaise : on s'assoit (l impact du fichier, à 0,24 s, tombe à 3,3 s : on touche l assise vers l image 80)
 chaise = lire_audio(os.path.join(SONS, "chaise_assis.wav"), mono=False).astype(np.float64)
-poser(mix, chaise * fondu(len(chaise), 0.01, 0.2)[:, None], 2.6 - 0.24, db(-7))
+poser(mix, chaise * fondu(len(chaise), 0.01, 0.2)[:, None], 3.3 - 0.24, db(-7))   # on touche l assise vers l image 80
 
 # 3. les tics du compteur : un par naissance affichée, pendant le gros plan (temps de l'interface = 25 + (T - 15))
 tic_src = lire_audio(os.path.join(SONS, "tic_doux.wav"), mono=False).astype(np.float64)
@@ -150,7 +150,7 @@ mix += piste_voix[:, None] * db(VOIX_DB)
 
 # légère entrée et sortie, pour les raccords avec S01 et S03
 mix *= fondu(N, 0.05, 0.3)[:, None]
-wav = os.path.join(S02, "S02_son_v1.wav")
+wav = os.path.join(S02, "S02_son_v2.wav")
 # même gain général qu'en S01 (le décor sonore garde son niveau à la coupe) ; c'est la voix qui donne la sonie de la scène
 GAIN_S01 = float(open(os.path.join(M, "S01", "gain_mix.txt")).read())
 print("sonie avant / gain :", ecrire_normalise(mix, wav, gain_db=GAIN_S01))
@@ -166,7 +166,7 @@ for nom, d in PLANS:
 open(liste, "w").write("".join(f"file '{os.path.basename(p)}'\n" for p in tmp))
 image = os.path.join(S02, "tmp_image.mp4")
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", liste, "-c", "copy", image], check=True)
-final = os.path.join(S02, "S02_v1.mp4")
+final = os.path.join(S02, "S02_v2.mp4")
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", image, "-i", wav, "-map", "0:v", "-map", "1:a", "-c:v", "copy",
                 "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-shortest", "-movflags", "+faststart", final], check=True)
 for p in tmp + [liste, image]:

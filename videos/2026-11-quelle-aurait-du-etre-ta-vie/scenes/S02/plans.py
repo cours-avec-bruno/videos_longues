@@ -40,6 +40,7 @@ ap.add_argument("--largeur", type=int, default=1920)
 ap.add_argument("--hauteur", type=int, default=1080)
 ap.add_argument("--images", default="1-144", help="pour p01_anim : plage d'images à rendre, ex. 1-144")
 ap.add_argument("--refaire", action="store_true", help="pour p01_anim : rerendre les images déjà faites")
+ap.add_argument("--rapide", action="store_true", help="pour p01_anim : données persistantes + processeur en renfort")
 A = ap.parse_args(argv)
 rad = math.radians
 
@@ -235,6 +236,16 @@ if A.plans.strip() == "p01_anim":
     dossier = os.path.join(SORTIE, "p01_anim")
     os.makedirs(dossier, exist_ok=True)
     debut, fin = (int(x) for x in A.images.split("-"))
+    if A.rapide:
+        # rendu plus rapide, même image : la scène reste en mémoire d'une image à l'autre, et le processeur aide la carte
+        sc.render.use_persistent_data = True
+        try:
+            pref = bpy.context.preferences.addons["cycles"].preferences
+            for d in pref.devices:
+                d.use = d.type in ("OPTIX", "CPU")
+            print("[S02] périphériques :", [d.name for d in pref.devices if d.use])
+        except Exception as e:
+            print("[S02] processeur non ajouté :", e)
     for f in range(debut, fin + 1):
         chemin = os.path.join(dossier, f"f{f:03d}.png")
         if os.path.exists(chemin) and not A.refaire:
