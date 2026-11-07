@@ -3,14 +3,38 @@
   "en_cours": null,
   "prochaine": "S01",
   "etapes": [
-    {"nom": "Concept et sources", "etat": "fait"},
-    {"nom": "Partie jouée (Manoj)", "etat": "fait"},
-    {"nom": "Storyboard", "etat": "fait"},
-    {"nom": "Script v1", "etat": "fait"},
-    {"nom": "Construction des scènes", "etat": "en cours"},
-    {"nom": "V1 globale (Remotion)", "etat": "à faire"},
-    {"nom": "Finition (Premiere Pro)", "etat": "à faire"},
-    {"nom": "Export et publication", "etat": "à faire"}
+    {
+      "nom": "Concept et sources",
+      "etat": "fait"
+    },
+    {
+      "nom": "Partie jouée (Manoj)",
+      "etat": "fait"
+    },
+    {
+      "nom": "Storyboard",
+      "etat": "fait"
+    },
+    {
+      "nom": "Script v1",
+      "etat": "fait"
+    },
+    {
+      "nom": "Construction des scènes",
+      "etat": "en cours"
+    },
+    {
+      "nom": "V1 globale (Remotion)",
+      "etat": "à faire"
+    },
+    {
+      "nom": "Finition (Premiere Pro)",
+      "etat": "à faire"
+    },
+    {
+      "nom": "Export et publication",
+      "etat": "à faire"
+    }
   ],
   "a_appliquer": [
     "Pas de pourcentages à l'écran, jamais",
@@ -25,5 +49,29 @@
     "Chiffres de l'Insee à vérifier (S15)",
     "La voix : Bruno ou un comédien"
   ],
-  "interludes_S06_apres": ["S05", "S07", "S08", "S09"]
+  "interludes_S06_apres": [
+    "S05",
+    "S07",
+    "S08",
+    "S09"
+  ],
+  "ecran": {
+    "S01": "Du noir, et une seule phrase : cette vie est simulée par 1 sur 8 milliards, à partir de statistiques réelles.",
+    "S02": "Un bureau à l'aube, en 3D. Un homme de dos devant un écran ; on ne voit jamais son visage. Le compteur des naissances défile. Puis la question, posée au spectateur : sur cent, quelle part de votre vie avez-vous choisie ?",
+    "S03": "L'écran du simulateur, sobre. Le monde d'aujourd'hui, une vie entière. Dans la liste des pays, il écrit : France.",
+    "S04": "Le bouton « Naître ». Une seconde de noir. La carte du monde où les naissances s'allument par milliers, puis un seul point reste, en Inde. Inde, un village, un garçon.",
+    "S05": "On quitte le bureau. Le village au petit matin, la maison, la fumée du feu de bois, le chemin de l'eau. Le visage de Manoj, encore trop flou pour être reconnu.",
+    "S06": "Les années qui passent en quelques secondes, entre deux étapes de sa vie.",
+    "S07": "L'enfance : l'école que ses parents paient cher, la main qui ne se lève plus, les grands-parents. Un mot reste à l'écran : ingénieur.",
+    "S08": "Onze ans. Le choix de l'école, posé sans le dire. Puis une ligne qui tombe. Les bêtes, les champs, et l'école qu'on voit de loin.",
+    "S09": "La mer et les bateaux, la toux et l'hôpital, Preeti, les enfants, la maison qu'ils construisent, une petite scène de théâtre et ses applaudissements. Plusieurs moments en 3D.",
+    "S10": "Cinq vies dessinées côte à côte : Manoj, et quatre autres bébés nés la même année ailleurs dans le monde.",
+    "S11": "Son petit-fils entre à l'université. La maison de sa fille. Soixante-quinze ans. Son visage, enfin net.",
+    "S12": "Retour au bureau, la nuit. Rien ne bouge pendant quinze secondes. Puis le noir.",
+    "S13": "L'aveu. D'abord du noir, puis toutes les décisions de sa vie qui défilent de plus en plus vite. Le mot « ingénieur ». Le mot « université ».",
+    "S14": "Retour à nous. Un mur de pays où « France » n'apparaît qu'une fois. 1 sur 207.",
+    "S15": "En France aussi, on ne part pas du même endroit : les chances de faire des études selon le milieu. Des points qui suivent la tendance, et d'autres qui la contredisent.",
+    "S16": "L'aube revient dans le bureau. Le chiffre du début. Puis, seule à l'écran : « Quelle aurait dû être ta vie ? »"
+  },
+  "note": "Un guide, pas un plan figé : le détail se décide à la construction, et chaque scène peut changer en route."
 }
