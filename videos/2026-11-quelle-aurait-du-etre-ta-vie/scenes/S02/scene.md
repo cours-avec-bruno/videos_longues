@@ -8,7 +8,7 @@
 | **Procédé principal** | N01 : le spectateur note la part de sa vie qu'il pense avoir choisie ; toute la vidéo y répond |
 | **Procédés secondaires** | I18, I16 |
 | **Statut** | repensée le 07/11/2026 pour le nouveau décor, à valider par Bruno |
-| **Production** | V1 avec voix et son (`S02_v1.mp4`, 34 s), à valider par Bruno |
+| **Production** | V2 en cours : « on s'assoit » refait dans Blender, navigation à l'écran, nouvelle dernière phrase |
 
 ## Intention
 
@@ -33,8 +33,8 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 
 | Plan | Durée | Matière | Contenu | Animation / mouvement | Son |
 |---|---|---|---|---|---|
-| S02-P01 | 6 s | 3D | Vue subjective : on tire la chaise et on s'assoit. L'écran grandit et se stabilise devant nous | La caméra descend et avance, puis se pose | Roulettes, assise, tissu |
-| S02-P02 | 8 s | 3D | Face à l'écran : les vies simulées, la ligne en cours qui avance. Voix : « On m'a confié quelqu'un… » | Très lent travelling avant | Ronflement de l'ordinateur, voix |
+| S02-P01 | 6 s | 3D | Vue subjective : on jette un œil à la chaise en la tirant, on se décale, elle glisse sous nous, on s'assoit et on roule jusqu'au bureau (animé dans Blender) | La caméra descend et avance, puis se pose | Roulettes, assise, tissu |
+| S02-P02 | 9 s | 3D | Face à l'écran, on s'en approche : l'opérateur parcourt les vies (une fiche s'ouvre à chaque survol), puis clique sur « nouvelle vie » : une ligne vide et une fiche sans visage. Voix : « On m'a confié quelqu'un… Je ne sais pas encore qui ce sera. » | Très lent travelling avant | Ronflement de l'ordinateur, voix |
 | S02-P03 | 7 s | 3D | Gros plan sur le compteur des vies simulées qui défile. Voix : « …quatre par seconde. Il sera l'un d'eux. » | Fixe, mise au point sur le compteur | Un tic discret par naissance |
 | S02-P04 | 4 s | 3D | Notre main allume la lampe de bureau : la lumière chaude s'ajoute à la lumière froide | Fixe | Clic de l'interrupteur |
 | S02-P05 | 8 s | 3D | Plan large, du noir : l'îlot de lumière, la chaise désormais occupée par une silhouette de dos. Voix : « Vous allez m'aider… » | Fixe, très lent recul | Voix, la pièce |

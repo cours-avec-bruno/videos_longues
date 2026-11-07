@@ -38,6 +38,8 @@ ap.add_argument("--plans", default="p01_fin,p04_eteinte,p04_allumee,p05")
 ap.add_argument("--echantillons", type=int, default=128)
 ap.add_argument("--largeur", type=int, default=1920)
 ap.add_argument("--hauteur", type=int, default=1080)
+ap.add_argument("--images", default="1-144", help="pour p01_anim : plage d'images à rendre, ex. 1-144")
+ap.add_argument("--refaire", action="store_true", help="pour p01_anim : rerendre les images déjà faites")
 A = ap.parse_args(argv)
 rad = math.radians
 
@@ -187,6 +189,63 @@ sc.cycles.samples = A.echantillons
 sc.render.resolution_x, sc.render.resolution_y = A.largeur, A.hauteur
 os.makedirs(SORTIE, exist_ok=True)
 bpy.ops.wm.save_as_mainfile(filepath=BLEND)
+def animer_assis():
+    """P01 « on s'assoit », animé entièrement dans Blender (Higgsfield faisait traverser la chaise).
+
+    On tire la chaise vers soi en jetant un œil dessus, on se décale à côté, la chaise glisse sous soi,
+    on s'assoit, puis on roule jusqu'au bureau. Fin = cadrage de p01_fin (raccord avec P02).
+    La caméra vise un repère animé (contrainte), un léger bruit imite la tenue à la main.
+    """
+    CH = O["PRP_chaise"]
+    visee = bpy.data.objects.new("CAM_visee_assis", None); C_CAM.objects.link(visee)
+    for c in list(cam.constraints):
+        cam.constraints.remove(c)
+    ct = cam.constraints.new("TRACK_TO"); ct.target = visee; ct.track_axis = "TRACK_NEGATIVE_Z"; ct.up_axis = "UP_Y"
+    cam.data.lens = 30; cam.data.dof.aperture_fstop = 2.8; cam.data.dof.focus_object = visee
+    cles_cam = [(1, (0.18, BY - 1.85, 1.58)), (26, (0.40, BY - 1.78, 1.60)), (54, (0.33, BY - 1.20, 1.55)),
+                (80, (0.21, BY - 1.10, 1.24)), (92, (0.21, BY - 1.10, 1.18)), (144, (0.12, BY - 0.80, 1.18))]
+    cles_visee = [(1, (0.06, BY + 0.05, 0.74)), (26, (0.07, BY - 0.95, 0.70)), (54, (0.10, BY + 0.10, 0.95)),
+                  (80, (0.09, BY + 0.10, 1.00)), (144, (0.08, BY + 0.10, 1.03))]
+    cles_chaise = [(1, (0.12, BY - 0.85), -14), (26, (0.07, BY - 1.12), -26), (54, (0.09, BY - 1.15), -18),
+                   (78, (0.21, BY - 1.02), -4), (92, (0.21, BY - 1.02), -4), (144, (0.12, BY - 0.70), 0)]
+    for f, p in cles_cam:
+        cam.location = p; cam.keyframe_insert("location", frame=f)
+    for f, p in cles_visee:
+        visee.location = p; visee.keyframe_insert("location", frame=f)
+    for f, (x, y), r in cles_chaise:
+        CH.location = (x, y, 0); CH.rotation_euler = (0, 0, rad(r))
+        CH.keyframe_insert("location", frame=f); CH.keyframe_insert("rotation_euler", frame=f)
+    # tenue à la main : un bruit lent et faible sur la caméra et la visée
+    def courbes(ob):
+        act = ob.animation_data.action
+        try:
+            return list(act.fcurves)
+        except AttributeError:          # Blender 5 : actions en couches
+            return [fc for ly in act.layers for st in ly.strips for cb in st.channelbags for fc in cb.fcurves]
+
+    for ob, force in ((cam, 0.004), (visee, 0.012)):
+        for fc in courbes(ob):
+            m = fc.modifiers.new("NOISE"); m.scale = 28; m.strength = force; m.phase = hash(fc.data_path + str(fc.array_index)) % 100
+    sc.frame_start, sc.frame_end = 1, 144
+
+
+if A.plans.strip() == "p01_anim":
+    ecran("ancien"); lampe(False); silhouette(False)
+    animer_assis()
+    dossier = os.path.join(SORTIE, "p01_anim")
+    os.makedirs(dossier, exist_ok=True)
+    debut, fin = (int(x) for x in A.images.split("-"))
+    for f in range(debut, fin + 1):
+        chemin = os.path.join(dossier, f"f{f:03d}.png")
+        if os.path.exists(chemin) and not A.refaire:
+            continue
+        sc.frame_set(f)
+        sc.render.filepath = chemin
+        bpy.ops.render.render(write_still=True)
+        print("[S02] image", f)
+    bpy.ops.wm.save_as_mainfile(filepath=BLEND.replace(".blend", "_assis.blend"))
+    sys.exit(0)
+
 for nom in [x.strip() for x in A.plans.split(",") if x.strip()]:
     pos, vise, focale, f, net, mode, allumee, sil = PLANS[nom]
     cam.location = pos; cam.rotation_euler = viser(pos, vise)

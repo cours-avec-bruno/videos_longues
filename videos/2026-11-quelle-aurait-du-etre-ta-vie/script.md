@@ -43,7 +43,7 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 [un temps]
 
-> Vous allez m'aider. Chaque fois que la vie lui posera une question, je vous la poserai aussi. Vous aurez trois secondes.
+> Vous allez m'aider. Chaque fois que la vie lui posera une question, je vous la poserai aussi. Vous allez m'accompagner dans cette aventure.
 
 [retiré le 07/11/2026, décision de Bruno : la question au spectateur (« Sur cent, quelle part de votre vie avez-vous choisie ? », « Notez-le. »), à l'écran comme dans la voix]
 

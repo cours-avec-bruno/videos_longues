@@ -17,6 +17,7 @@ Usage (sur le PC) :
 Dépend de numpy, opencv-python-headless, pillow, ffmpeg.
 """
 import argparse
+import math
 import os
 import subprocess
 
@@ -37,6 +38,7 @@ def arguments():
     ap.add_argument("--portraits", default="", help="dossier des deux portraits robots (portrait_1.png, portrait_2.png)")
     ap.add_argument("--t0", type=float, default=0.0, help="temps de l'interface au début du plan (s) : continuité entre plans")
     ap.add_argument("--duree-vie", type=float, default=0.0, help="durée (s) pendant laquelle la vie en cours se dessine ; 0 = durée du plan")
+    ap.add_argument("--scenario", default=None, help="interactions de l'opérateur à l'écran (ex. s02)")
     ap.add_argument("--couleurs-s01", action="store_true", help="garde les couleurs de S01 (continuité entre plans)")
     ap.add_argument("--image", type=float, default=None, help="exporte seulement l'interface au temps donné (PNG), aux couleurs de S01")
     return ap.parse_args()
@@ -202,8 +204,9 @@ def teinte(base, f):
 class Interface:
     """Les couleurs sont prises sur l'écran d'origine, pour garder la même lumière dans la pièce."""
 
-    def __init__(self, fond, clair, graine=12):
+    def __init__(self, fond, clair, graine=12, scenario=None):
         self.fond, self.clair = fond, clair
+        self.scenario = scenario
         self.f_titre = police("segoeuisl.ttf", 22)
         self.f_petit = police("consola.ttf", 17)
         self.f_mini = police("consola.ttf", 14)
@@ -313,34 +316,125 @@ class Interface:
             (f'{int(v["mort"])} ans', self.f_mini, 0.6)], vif=False)
         return im
 
+    # ------------------------------------------------------------ l'opérateur utilise le logiciel (S02)
+    # temps de l'interface (s) : 0 = début de S01. S02-P02 couvre 16 à 25.
+    T_CLIC = 22.5          # clic sur « nouvelle vie »
+    BOUTON = (470, 18, 690, 58)
+    PARCOURS = [           # (temps, x, y) du pointeur, en pixels de l'interface
+        (16.0, 1060, 820), (16.7, 760, 290), (18.1, 790, 292), (18.7, 830, 478), (20.0, 860, 480),
+        (20.5, 640, 619), (21.4, 655, 622), (22.2, 575, 40), (22.5, 578, 41), (23.2, 420, 905), (25.5, 450, 900)]
+    SURVOLS = [(16.7, 18.4, 2), (18.7, 20.3, 6), (20.5, 21.6, 9)]   # (début, fin, ligne survolée)
+
+    def _pointeur(self, t):
+        P = self.PARCOURS
+        if t <= P[0][0]:
+            return P[0][1:]
+        for (t0, x0, y0), (t1, x1, y1) in zip(P, P[1:]):
+            if t0 <= t <= t1:
+                u = (t - t0) / (t1 - t0); u = u * u * (3 - 2 * u)
+                return x0 + (x1 - x0) * u, y0 + (y1 - y0) * u
+        return P[-1][1:]
+
+    def _dessiner_pointeur(self, d, x, y, appuye=False):
+        k = 1.15
+        pts = [(0, 0), (0, 22), (5.5, 17), (9.5, 26), (13, 24.5), (9, 16), (16, 16)]
+        poly = [((x + px * k) * SS, (y + py * k) * SS) for px, py in pts]
+        d.polygon(poly, fill=teinte(self.clair, 1.25 if not appuye else 1.05), outline=teinte(self.fond, 0.4))
+
+    def _infobulle(self, d, x, y, v, opacite):
+        enfants = sum(1 for c_, _ in v["ev"] if c_ == "n")
+        marie = any(c_ == "m" for c_, _ in v["ev"])
+        lignes = [v["pays"] + "  ·  " + str(int(v["mort"])) + " ans",
+                  ("école · " if v["fin"] > 0 else "") + "travail" + (" · mariage" if marie else ""),
+                  (str(enfants) + " enfant" + ("s" if enfants > 1 else "")) if enfants else "pas d" + chr(39) + "enfant"]
+        w, h = 300, 92
+        x0, y0 = x + 24, y - h - 10
+        d.rectangle([x0 * SS, y0 * SS, (x0 + w) * SS, (y0 + h) * SS], fill=teinte(self.fond, 0.62),
+                    outline=teinte(self.clair, 0.45 * opacite + 0.1))
+        for j, txt in enumerate(lignes):
+            d.text(((x0 + 14) * SS, (y0 + 10 + 25 * j) * SS), txt, font=self.f_mini if j else self.f_petit,
+                   fill=teinte(self.clair, (0.95 if j == 0 else 0.7) * opacite + 0.05))
+
+    def _fiche_attente(self, d, y):
+        """Fiche vide : la prochaine vie n'a encore ni visage ni pays."""
+        x = self.CX * SS
+        d.rectangle([x - 20 * SS, y - 20 * SS, (UW - 40) * SS, y + 410 * SS], fill=teinte(self.fond, 1.22))
+        X0, Y0 = x + 55 * SS, y
+        d.rectangle([X0, Y0, X0 + 250 * SS, Y0 + 320 * SS], fill=teinte(self.fond, 0.85), outline=teinte(self.clair, 0.45), width=2 * SS)
+        gris = teinte(self.fond, 1.6)
+        cx = X0 + 125 * SS
+        d.ellipse([cx - 58 * SS, Y0 + 62 * SS, cx + 58 * SS, Y0 + 192 * SS], fill=gris)
+        d.pieslice([cx - 118 * SS, Y0 + 205 * SS, cx + 118 * SS, Y0 + 420 * SS], 180, 360, fill=gris)
+        d.rectangle([X0, Y0 + 320 * SS, X0 + 250 * SS, Y0 + 330 * SS], fill=teinte(self.fond, 1.22))
+        d.text((cx - 16 * SS, Y0 + 92 * SS), "?", font=police("segoeuisl.ttf", 54), fill=teinte(self.clair, 0.85))
+        for j, (txt, f, k) in enumerate([("en attente", self.f_petit, 0.95), ("naissance  —", self.f_mini, 0.6), ("pays  —", self.f_mini, 0.6)]):
+            d.text((X0, Y0 + (334 + 24 * j) * SS), txt, font=f, fill=teinte(self.clair, k))
+
     def image(self, t, duree):
         im = self.statique.copy()
         d = ImageDraw.Draw(im)
         c = self.clair
+        s02 = self.scenario == "s02"
         # compteur des vies simulées : au rythme des naissances dans le monde
         n = 1284093 + int(t * 4.3)
         txt = f"vies simulées  {n:,}".replace(",", " ")
         tw = d.textlength(txt, font=self.f_petit)
         d.text(((UW - 60) * SS - tw, 26 * SS), txt, font=self.f_petit, fill=teinte(c, 0.9))
-        # la vie en cours se dessine
+        if s02:   # le bouton « nouvelle vie », dans le bandeau
+            bx0, by0, bx1, by1 = self.BOUTON
+            presse = self.T_CLIC <= t < self.T_CLIC + 0.22
+            survol = 21.9 <= t < self.T_CLIC + 0.6
+            d.rectangle([bx0 * SS, by0 * SS, bx1 * SS, by1 * SS],
+                        fill=teinte(self.fond, 1.5 if presse else (1.15 if survol else 0.85)),
+                        outline=teinte(c, 0.7 if survol else 0.4), width=2 * SS)
+            d.text(((bx0 + 22) * SS, (by0 + 8) * SS), "+  nouvelle vie", font=self.f_petit, fill=teinte(c, 1.0 if survol else 0.75))
+            # lignes survolées par le pointeur
+            for d0, d1, li in self.SURVOLS:
+                if d0 <= t <= d1:
+                    yl = (self.Y0 + li * self.PAS) * SS
+                    d.rectangle([40 * SS, yl - 20 * SS, (self.CX - 50) * SS, yl + 20 * SS], fill=teinte(self.fond, 1.14))
+                    self._vie(d, yl, self.vies[li], 200, teinte(c, 1.0), 3)
+        nouvelle = s02 and t >= self.T_CLIC
         v = self.vies[-1]
         i = self.NB - 1
         y = (self.Y0 + i * self.PAS + 10) * SS
         d.rectangle([40 * SS, y - 22 * SS, (self.CX - 50) * SS, y + 22 * SS], fill=teinte(self.fond, 1.18))
-        p = min(1.0, max(0.0, (t - 0.4) / (duree - 1.6)))
-        p = p * p * (3 - 2 * p) * 0.6 + p * 0.4
-        age = v["mort"] * p
-        self._vie(d, y, v, age, teinte(c, 1.0), 3, etiquette=False)
-        d.text((60 * SS, y - 9 * SS), f"en cours  {n + 1:,}".replace(",", " "), font=self.f_mini, fill=teinte(c, 0.95))
-        xc = self.x(age)
-        if p < 1:
-            r = 7 * SS
-            d.ellipse([xc - r, y - r, xc + r, y + r], fill=teinte(c, 1.1))
-        # fiche 2 : la vie en cours, son âge avance avec la ligne
-        self._fiche(d, im, 540 * SS, self.portraits[1], [
-            (f'{v["pays"]}  ·  femme', self.f_petit, 1.0),
-            (f'en cours  {n + 1:,}'.replace(",", " "), self.f_mini, 0.75),
-            (f'{int(age)} ans' if p < 1 else f'{int(v["mort"])} ans', self.f_mini, 0.75)], vif=True)
+        if not nouvelle:
+            # la vie en cours se dessine
+            p = min(1.0, max(0.0, (t - 0.4) / (duree - 1.6)))
+            p = p * p * (3 - 2 * p) * 0.6 + p * 0.4
+            age = v["mort"] * p
+            self._vie(d, y, v, age, teinte(c, 1.0), 3, etiquette=False)
+            d.text((60 * SS, y - 9 * SS), f"en cours  {n + 1:,}".replace(",", " "), font=self.f_mini, fill=teinte(c, 0.95))
+            xc = self.x(age)
+            if p < 1:
+                r = 7 * SS
+                d.ellipse([xc - r, y - r, xc + r, y + r], fill=teinte(c, 1.1))
+            # fiche 2 : la vie en cours, son âge avance avec la ligne
+            self._fiche(d, im, 540 * SS, self.portraits[1], [
+                (f'{v["pays"]}  ·  femme', self.f_petit, 1.0),
+                (f'en cours  {n + 1:,}'.replace(",", " "), self.f_mini, 0.75),
+                (f'{int(age)} ans' if p < 1 else f'{int(v["mort"])} ans', self.f_mini, 0.75)], vif=True)
+        else:
+            # nouvelle vie : une ligne vide, un point de naissance qui attend, une fiche sans visage
+            tn = t - self.T_CLIC
+            apparition = min(1.0, tn / 0.35)
+            d.text((60 * SS, y - 9 * SS), "en attente", font=self.f_mini, fill=teinte(c, 0.95 * apparition))
+            x0 = self.x(0)
+            pulse = 0.5 + 0.5 * math.sin(tn * 2 * math.pi / 1.4)
+            r = (6 + 4 * pulse) * SS
+            d.ellipse([x0 - r, y - r, x0 + r, y + r], outline=teinte(c, (0.6 + 0.5 * pulse) * apparition), width=2 * SS)
+            for k in range(10):   # le chemin à venir, en pointillés
+                xa = self.x(4 + k * 9.5)
+                d.line([(xa, y), (xa + 18 * SS, y)], fill=teinte(c, 0.35 * apparition), width=1 * SS)
+            self._fiche_attente(d, 540 * SS)
+        # infobulles et pointeur par-dessus tout
+        if s02 and 16.0 <= t <= 25.5:
+            px, py = self._pointeur(t)
+            for d0, d1, li in self.SURVOLS:
+                if d0 + 0.25 <= t <= d1:
+                    self._infobulle(d, px, py, self.vies[li], min(1.0, (t - d0 - 0.25) / 0.2))
+            self._dessiner_pointeur(d, px, py, appuye=self.T_CLIC <= t < self.T_CLIC + 0.22)
         return im
 
 
@@ -350,7 +444,7 @@ def principal():
     if A.portraits:
         PORTRAITS = [f"{A.portraits}/portrait_1.png", f"{A.portraits}/portrait_2.png"]
     if A.image is not None:
-        ui = Interface(FOND_DEFAUT, CLAIR_DEFAUT)
+        ui = Interface(FOND_DEFAUT, CLAIR_DEFAUT, scenario=A.scenario)
         ui.image(A.image, A.duree_vie or 10.0).resize((UW, UH), Image.LANCZOS).save(A.sortie)
         print("écrit :", A.sortie)
         return
@@ -391,7 +485,7 @@ def principal():
             if A.couleurs_s01:
                 fond, clair = FOND_DEFAUT, CLAIR_DEFAUT
             print("couleurs : fond", fond, "clair", clair)
-            ui = Interface(fond, clair)
+            ui = Interface(fond, clair, scenario=A.scenario)
         img = ui.image(A.t0 + k / FPS, A.duree_vie or duree)
         q = dalles[k]
         if q is None:                                   # écran hors champ : l'image passe telle quelle

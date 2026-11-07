@@ -14,6 +14,8 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `epidemic/chaise_assis.wav` | Objects, Furniture, Office Chair, Padded, Person Sit Down | `898f8779-8bc5-4efe-9802-4489aeb33a2f` | S02 | on s'assoit |
 | `epidemic/interrupteur_lampe.wav` | Mechanical, Switch, Lamp, On, Off 01 | `e1a8159b-c679-48f9-a24e-00c390560b88` | S02 | le clic de la lampe (premier clic seulement) |
 | `epidemic/tic_doux.wav` | Clocks, Tick, Simple, Clicky, Soft, Loop 02 | `0bfb4ddb-4807-4059-a3e9-3383d383c015` | S02 | un tic par naissance, sur le compteur |
+| `epidemic/souris_clics.wav` | Computers, Keyboard & Mouse, Mouse, Logitech M90, Left Click, Various Single | `a74993f6-b48c-4d7f-9929-9c516dbaf25a` | S02 | le clic sur « nouvelle vie » |
+| `epidemic/souris_tapis.wav` | Computers, Keyboard & Mouse, Mouse, Macbook Pro, Mouse Pad, Movement | `23551ef8-34d7-40a5-94ac-08dcc1ac54d3` | S02 | la souris qui glisse quand le pointeur bouge |
 
 ## Voix (ElevenLabs, voix « Guillaume - Documentary and Storytelling », `3HZyQcLKlT0a3RDeXVsP`)
 
@@ -21,8 +23,10 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 |---|---|---|---|---|
 | `voix/S02_prise1.mp3` | S02 | eleven_v3 | `LjXYiNQti90bGIWgWhZL` (flux `U7OowaqbCt44sRCdzHlG`) | **oui** (choix de Bruno) |
 | `voix/S02_prise2.mp3` | S02 | eleven_v3 | `AJYrlHKo6A5MqkjFnKZw` | non |
+| `voix/S02_aventure_prise1.mp3` | S02 (dernière phrase) | eleven_v3 | `4BD3sDzImlooElDfaLpB` | **oui** : « Vous allez m'accompagner dans cette aventure. », générée avec la phrase précédente pour garder l'intonation |
+| `voix/S02_aventure_prise2.mp3` | S02 (dernière phrase) | eleven_v3 | `pqn9DxmUP9pbR0GSYiTX` | non |
 
-Coût : 646 crédits ElevenLabs pour les deux prises. Licence : voix de la bibliothèque ElevenLabs, usage commercial couvert par l'abonnement.
+Coût : 646 crédits ElevenLabs pour les deux prises, puis 238 pour la nouvelle dernière phrase. Licence : voix de la bibliothèque ElevenLabs, usage commercial couvert par l'abonnement.
 
 ## Niveaux
 

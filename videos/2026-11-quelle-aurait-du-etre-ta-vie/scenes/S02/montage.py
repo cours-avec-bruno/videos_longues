@@ -26,21 +26,25 @@ M = os.path.join(ICI, "..", "..", "medias")
 S02 = os.path.join(M, "S02")
 SONS = os.path.join(M, "sons", "epidemic")
 VOIX = os.path.join(M, "voix", "S02_prise1.mp3")   # prise 1, choisie par Bruno
+VOIX_FIN = os.path.join(M, "voix", "S02_aventure_prise1.mp3")   # dernière phrase, générée dans son contexte
 
 PLANS = [("S02_p01.mp4", 6), ("S02_p02.mp4", 9), ("S02_p03_compteur.mp4", 7), ("S02_p04.mp4", 4), ("S02_p05.mp4", 8)]
 DEBUTS = np.cumsum([0] + [d for _, d in PLANS])[:-1]   # 0, 6, 15, 22, 26
 DUREE = sum(d for _, d in PLANS)
 # phrases : (début et fin dans la prise, mesurés par détection des silences et vérifiés par transcription), position
-PHRASES = [
-    ((0.00, 1.23), 6.3),    # On m'a confié quelqu'un.
-    ((1.93, 5.66), 8.6),    # Je dois le faire vivre, du premier jour jusqu'au dernier.
-    ((6.60, 8.18), 13.0),   # Je ne sais pas encore qui ce sera.
-    ((9.12, 12.47), 15.8),  # Pendant qu'on parle, il en naît à peu près quatre par seconde.
-    ((13.19, 14.15), 20.0), # Il sera l'un d'eux.
-    ((14.93, 15.75), 24.2), # Vous allez m'aider.
-    ((16.33, 20.63), 26.8), # Chaque fois que la vie lui posera une question, je vous la poserai aussi.
-    ((21.23, 23.04), 32.0), # Vous aurez trois secondes.
+PHRASES = [            # (fichier, (début, fin) dans la prise, position dans la scène)
+    (VOIX, (0.00, 1.23), 6.3),     # On m'a confié quelqu'un.
+    (VOIX, (1.93, 5.66), 8.6),     # Je dois le faire vivre, du premier jour jusqu'au dernier.
+    (VOIX, (6.60, 8.18), 13.0),    # Je ne sais pas encore qui ce sera.
+    (VOIX, (9.12, 12.47), 15.8),   # Pendant qu'on parle, il en naît à peu près quatre par seconde.
+    (VOIX, (13.19, 14.15), 20.0),  # Il sera l'un d'eux.
+    (VOIX, (14.93, 15.75), 24.2),  # Vous allez m'aider.
+    (VOIX, (16.33, 20.63), 26.6),  # Chaque fois que la vie lui posera une question, je vous la poserai aussi.
+    (VOIX_FIN, (4.36, 6.64), 31.6),  # Vous allez m'accompagner dans cette aventure. (remplace « Vous aurez trois secondes. »)
 ]
+# l'opérateur utilise le logiciel pendant P02 (temps de la scène) : déplacements de la souris et le clic « nouvelle vie »
+SOURIS_MOUVEMENTS = [(6.0, 6.7), (8.1, 8.7), (10.0, 10.5), (11.4, 12.2), (12.55, 13.2)]
+SOURIS_CLIC = 12.5
 VOIX_DB = float(os.environ.get("VOIX_DB", "-3.5"))   # niveau de la voix dans le mixage
 N = int(DUREE * SR)
 t = np.arange(N) / SR
@@ -116,11 +120,28 @@ lampe = lire_audio(os.path.join(SONS, "interrupteur_lampe.wav"), mono=False).ast
 lampe = lampe[int(0.12 * SR):int(0.45 * SR)] * fondu(int(0.33 * SR), 0.003, 0.08)[:, None]
 poser(mix, lampe, DEBUTS[3] + 1.6 - 0.05, db(-4))
 
+# 4 bis. la souris : frottements sur le tapis quand le pointeur bouge, un clic sur « nouvelle vie »
+tapis = lire_audio(os.path.join(SONS, "souris_tapis.wav"), mono=False).astype(np.float64)
+ons_t = detecter_pas(os.path.join(SONS, "souris_tapis.wav"), seuil_db=-30, ecart_min=0.6)
+for k, (d0, d1) in enumerate(SOURIS_MOUVEMENTS):
+    o = ons_t[(k * 3) % len(ons_t)]
+    n_ = int((d1 - d0) * SR)
+    seg = tapis[int(o * SR):int(o * SR) + n_]
+    seg = np.pad(seg, ((0, n_ - len(seg)), (0, 0))) * fondu(n_, 0.08, 0.15)[:, None]
+    poser(mix, seg, d0, db(-14))
+clics = lire_audio(os.path.join(SONS, "souris_clics.wav"), mono=False).astype(np.float64)
+ons_c = detecter_pas(os.path.join(SONS, "souris_clics.wav"), seuil_db=-25, ecart_min=0.3)
+o = ons_c[len(ons_c) // 2]
+clic = clics[int((o - 0.005) * SR):int((o + 0.18) * SR)]
+poser(mix, clic * fondu(len(clic), 0.002, 0.06)[:, None], SOURIS_CLIC - 0.005, db(-8))
+
 # 5. la voix, phrase par phrase ; l'ambiance s'efface un peu sous la voix
-voix = lire_audio(VOIX, mono=True).astype(np.float64)
+prises = {}
 piste_voix = np.zeros(N)
-for (a, b), pos in PHRASES:
-    seg = voix[int(a * SR):int(b * SR)]
+for fichier, (a, b), pos in PHRASES:
+    if fichier not in prises:
+        prises[fichier] = lire_audio(fichier, mono=True).astype(np.float64)
+    seg = prises[fichier][int(a * SR):int(b * SR)]
     seg = seg * fondu(len(seg), 0.01, 0.06)
     poser(piste_voix, seg, pos)
 env_voix = np.convolve(np.abs(piste_voix) > 1e-3, np.ones(int(0.3 * SR)) / int(0.3 * SR), mode="same")
