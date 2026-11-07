@@ -370,11 +370,83 @@ class Interface:
         for j, (txt, f, k) in enumerate([("en attente", self.f_petit, 0.95), ("naissance  —", self.f_mini, 0.6), ("pays  —", self.f_mini, 0.6)]):
             d.text((X0, Y0 + (334 + 24 * j) * SS), txt, font=f, fill=teinte(self.clair, k))
 
+    # ------------------------------------------------------------ S03 : la fenêtre « nouvelle vie » (temps S03 = t - 44)
+    T03 = 44.0
+    PARCOURS_S03 = [(0.0, 420, 905), (0.35, 440, 908), (1.4, 714, 256), (1.6, 714, 256), (3.3, 714, 376), (3.6, 714, 376),
+                    (6.0, 760, 470), (8.9, 905, 603), (9.4, 905, 603), (12.6, 930, 640), (13.6, 1150, 772), (16.0, 1158, 776)]
+    CLICS_S03 = [0.4, 1.5, 3.5, 9.4]
+    FRAPPES_S03 = [10.7, 10.9, 11.08, 11.25, 11.42, 11.6]
+    ENTREE_S03 = 12.5
+
+    def _pointeur_s03(self, tau):
+        P = self.PARCOURS_S03
+        for (t0, x0, y0), (t1, x1, y1) in zip(P, P[1:]):
+            if t0 <= tau <= t1:
+                u = (tau - t0) / (t1 - t0); u = u * u * (3 - 2 * u)
+                return x0 + (x1 - x0) * u, y0 + (y1 - y0) * u
+        return P[-1][1:] if tau > P[-1][0] else P[0][1:]
+
+    def _fenetre_s03(self, im, d, tau):
+        c, f = self.clair, self.fond
+        if tau < self.CLICS_S03[0]:
+            return
+        ap = min(1.0, (tau - self.CLICS_S03[0]) / 0.25)
+        voile = Image.new("RGB", im.size, teinte(f, 0.5))
+        im.paste(Image.blend(im, voile, 0.55 * ap))
+        d = ImageDraw.Draw(im)
+        X0, Y0, X1, Y1 = 430, 150, 1300, 840
+        d.rectangle([X0 * SS, Y0 * SS, X1 * SS, Y1 * SS], fill=teinte(f, 1.25), outline=teinte(c, 0.5), width=2 * SS)
+        d.text(((X0 + 40) * SS, (Y0 + 28) * SS), "Nouvelle vie", font=self.f_titre, fill=teinte(c, 0.95))
+        d.line([((X0 + 40) * SS, (Y0 + 72) * SS), ((X1 - 40) * SS, (Y0 + 72) * SS)], fill=teinte(c, 0.3), width=SS)
+
+        def radio(x, y, txt, choisi):
+            r = 11 * SS
+            d.ellipse([x * SS - r, y * SS - r, x * SS + r, y * SS + r], outline=teinte(c, 0.8), width=2 * SS)
+            if choisi:
+                r2 = 6 * SS
+                d.ellipse([x * SS - r2, y * SS - r2, x * SS + r2, y * SS + r2], fill=teinte(c, 1.1))
+            d.text(((x + 24) * SS, (y - 11) * SS), txt, font=self.f_petit, fill=teinte(c, 1.0 if choisi else 0.65))
+
+        d.text(((X0 + 40) * SS, 250 * SS), "Le monde", font=self.f_petit, fill=teinte(c, 0.75))
+        radio(712, 262, "le monde d" + chr(39) + "aujourd" + chr(39) + "hui", tau >= self.CLICS_S03[1])
+        radio(712, 302, "le monde de 1950", False)
+        d.text(((X0 + 40) * SS, 370 * SS), "Durée", font=self.f_petit, fill=teinte(c, 0.75))
+        radio(712, 382, "une vie entière", tau >= self.CLICS_S03[2])
+        radio(712, 422, "jusqu" + chr(39) + "à 18 ans", False)
+        d.text(((X0 + 40) * SS, 480 * SS), "Lieu de naissance", font=self.f_petit, fill=teinte(c, 0.75))
+        d.text((700 * SS, 480 * SS), "tiré au sort, comme les naissances", font=self.f_petit, fill=teinte(c, 0.6))
+        d.text((700 * SS, 506 * SS), "dans le monde réel", font=self.f_petit, fill=teinte(c, 0.6))
+        d.text(((X0 + 40) * SS, 585 * SS), "Et vous,", font=self.f_petit, fill=teinte(c, 0.75))
+        d.text(((X0 + 40) * SS, 610 * SS), "où êtes-vous né ?", font=self.f_petit, fill=teinte(c, 0.75))
+        d.text(((X0 + 40) * SS, 640 * SS), "pour comparer à la fin", font=self.f_mini, fill=teinte(c, 0.5))
+        actif = tau >= self.CLICS_S03[3]
+        d.rectangle([700 * SS, 580 * SS, 1240 * SS, 630 * SS], fill=teinte(f, 0.8),
+                    outline=teinte(c, 0.85 if actif else 0.4), width=2 * SS)
+        n = sum(1 for x in self.FRAPPES_S03 if tau >= x)
+        texte = "France"[:n]
+        d.text((716 * SS, 591 * SS), texte, font=self.f_petit, fill=teinte(c, 1.05))
+        if actif and tau < self.ENTREE_S03 and int(tau * 2.2) % 2 == 0:   # curseur de saisie qui clignote
+            xc = 716 * SS + d.textlength(texte, font=self.f_petit) + 3 * SS
+            d.line([(xc, 588 * SS), (xc, 622 * SS)], fill=teinte(c, 1.0), width=2 * SS)
+        if n == 6 and tau < self.ENTREE_S03 + 0.15:                        # la suggestion
+            d.rectangle([700 * SS, 632 * SS, 1240 * SS, 676 * SS], fill=teinte(f, 1.5), outline=teinte(c, 0.5), width=SS)
+            d.text((716 * SS, 641 * SS), "France", font=self.f_petit, fill=teinte(c, 1.1))
+        if tau >= self.ENTREE_S03:
+            d.text((1205 * SS, 590 * SS), "✓", font=police("seguisym.ttf", 22), fill=teinte(c, 1.1))
+        survol = tau >= 13.5
+        d.rectangle([1060 * SS, 742 * SS, 1240 * SS, 800 * SS], fill=teinte(f, 1.7 if survol else 1.35),
+                    outline=teinte(c, 0.95 if survol else 0.6), width=2 * SS)
+        tw = d.textlength("Naître", font=self.f_titre)
+        d.text(((1150 * SS) - tw / 2, 755 * SS), "Naître", font=self.f_titre, fill=teinte(c, 1.1 if survol else 0.85))
+        px, py = self._pointeur_s03(tau)
+        appuye = any(x <= tau < x + 0.2 for x in self.CLICS_S03)
+        self._dessiner_pointeur(d, px, py, appuye)
+
     def image(self, t, duree):
         im = self.statique.copy()
         d = ImageDraw.Draw(im)
         c = self.clair
-        s02 = self.scenario == "s02"
+        s02 = self.scenario in ("s02", "s03")
         # compteur des vies simulées : au rythme des naissances dans le monde
         n = 1284093 + int(t * 4.3)
         txt = f"vies simulées  {n:,}".replace(",", " ")
@@ -389,7 +461,7 @@ class Interface:
                         outline=teinte(c, 0.7 if survol else 0.4), width=2 * SS)
             d.text(((bx0 + 22) * SS, (by0 + 8) * SS), "+  nouvelle vie", font=self.f_petit, fill=teinte(c, 1.0 if survol else 0.75))
             # lignes survolées par le pointeur
-            for d0, d1, li in self.SURVOLS:
+            for d0, d1, li in (self.SURVOLS if self.scenario == "s02" else []):
                 if d0 <= t <= d1:
                     yl = (self.Y0 + li * self.PAS) * SS
                     d.rectangle([40 * SS, yl - 20 * SS, (self.CX - 50) * SS, yl + 20 * SS], fill=teinte(self.fond, 1.14))
@@ -429,12 +501,18 @@ class Interface:
                 d.line([(xa, y), (xa + 18 * SS, y)], fill=teinte(c, 0.35 * apparition), width=1 * SS)
             self._fiche_attente(d, 540 * SS)
         # infobulles et pointeur par-dessus tout
-        if s02 and 16.0 <= t <= 25.5:
+        if self.scenario == "s02" and 16.0 <= t <= 25.5:
             px, py = self._pointeur(t)
             for d0, d1, li in self.SURVOLS:
                 if d0 + 0.25 <= t <= d1:
                     self._infobulle(d, px, py, self.vies[li], min(1.0, (t - d0 - 0.25) / 0.2))
             self._dessiner_pointeur(d, px, py, appuye=self.T_CLIC <= t < self.T_CLIC + 0.22)
+        if self.scenario == "s03":
+            tau = t - self.T03
+            if tau < self.CLICS_S03[0]:
+                px, py = self._pointeur_s03(tau)
+                self._dessiner_pointeur(d, px, py)
+            self._fenetre_s03(im, d, tau)
         return im
 
 
