@@ -54,7 +54,8 @@ T_VILLAGE = T_ESPACE + D_TERRE
 # Bruno (07/11/2026) : sur « plus de dix-sept pour cent », glitch puis la carte du monde des densités (carte.py)
 T_PHRASE = T_VILLAGE + 3.2 + 0.4               # « Pas étonnant : … »
 T_CARTE = T_PHRASE + 1.62                      # « plus de dix-sept pour cent… »
-VILLAGE = [("inde/inde_31372348.mp4", 1.0, 1.0, 3.2), ("inde/inde_34732091.mp4", 0.5, 1.0, T_CARTE - T_VILLAGE - 3.2)]
+# Bruno (08/11/2026) : le village de Manoj est au bord de la mer (village de pêcheurs, vu du ciel puis la plage)
+VILLAGE = [("s05/35356378.mp4", 2.0, 1.0, 3.2), ("s05/19598363.mp4", 0.6, 1.0, T_CARTE - T_VILLAGE - 3.2)]
 CARTE = os.path.join(M, "S04", "S04_carte.mp4")
 D_CARTE = 105 / FPS
 DUREE = T_CARTE + D_CARTE
@@ -292,8 +293,8 @@ mix += drone * (db(-9) * monte)[:, None]
 fusee = lire_audio(os.path.join(SONS, "whoosh_fusee.wav"), mono=False).astype(np.float64)
 poser(fusee * fondu(len(fusee), 0.3, 0.1)[:, None], T_VILLAGE - len(fusee) / SR + 0.05, db(-6))     # la plongée finale
 
-# 5. l'arrivée : le village (enregistré à Amethi, Uttar Pradesh)
-village = stereo("village_amethi.wav", 30.0, Ns) * db(-12)
+# 5. l'arrivée : le village de pêcheurs (les vagues, et la vie du village enregistrée à Amethi, plus bas)
+village = stereo("vagues_plage.wav", 20.0, Ns) * db(-11) + stereo("village_amethi.wav", 30.0, Ns) * db(-17)
 env_v = np.clip((ts - T_VILLAGE) / 0.12, 0, 1) * np.clip(1 - (ts - T_CARTE) / 0.5, 0, 1)   # le village s'efface sous la carte
 sous_carte = stereo("espace_drone.wav", 60.0, Ns) * (db(-17) * np.clip((ts - T_CARTE) / 0.6, 0, 1))[:, None]
 mix += sous_carte

@@ -252,3 +252,10 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Retouches (Bruno) : souffle coupé après « aventure » (S02) ; mini-flash blanc avec un souffle d'air et un léger impact avant « commençons ». Les raccords entre scènes vivent maintenant dans `videos/2026-11-quelle-aurait-du-etre-ta-vie/assemblage.py` (sortie : `medias/S01_a_S04_apercu.mp4`).
 - S04 (Bruno) : sur « plus de dix-sept pour cent », glitch puis carte du monde des densités (Kontur Population 2023, CC BY ; Natural Earth), projection Equal Earth légèrement courbée, l'humain en rouge-ambre, l'Inde qui se dessine et pulse sur « vit ici » ; Inde = 17,8 % dans les données. Procédés des références : T02, I03, I02, H01, I04 (étalonnage documentaire du village, outil `etalonnage_doc`).
 - Carte des densités (S04) validée par Bruno.
+
+### 08/11/2026 · S05, le village de Manoj
+
+- S05 construite (`scenes/S05/montage.py`, V1 37 s) : carton « manoj » en pixels lumineux, le village de pêcheurs au bord de la mer (vraies vidéos Pexels, étalonnage documentaire), la fiche de naissance tapée ligne à ligne, la maison, le feu de bois et la fumée, le chemin de l'eau, la case « OBC » qui se coche seule, le visage en très gros blocs chauds, puis l'opérateur seul. Voix : `S05_prise1`, **verrouillée** par Bruno. Musique discrète (Epidemic, Bhimpalasi), à confirmer à l'oreille.
+- Les jauges prévues en S05-P04 (espérance de vie, revenu) ne sont pas montées : chiffres à l'écran, et la voix suffit.
+- Le village de S04 passe au bord de la mer (vu du ciel, puis des pêcheurs qui poussent une barque), avec les vagues sous le village.
+- Raccord S04 → S05 dans `assemblage.py` : coupe nette de la carte au carton « manoj », un bref éclat de glitch. Sortie : `medias/S01_a_S05_apercu.mp4`.

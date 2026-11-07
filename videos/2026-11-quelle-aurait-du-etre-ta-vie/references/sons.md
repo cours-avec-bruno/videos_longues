@@ -25,6 +25,16 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `epidemic/glitch_radio.wav` | User Interface, Glitch, Radio Interference, Burst | `c9d4c2d5-0d84-4c48-bdd0-71e304d77991` | S04 | coupes du monde |
 | `epidemic/glitch_donnees.wav` | User Interface, Glitch, Glitch Data Processing 06 | `ce8c2f91-5e6c-483e-a5de-58b3d3ae18b3` | S04 | coupes du monde |
 | `epidemic/glitch_teleport.wav` | Scifi, Computer, Digital Fragment, Teleport Burst | `9c6850d3-9697-4347-93be-d21f76711eef` | S04 | sortie vers l'espace |
+| `epidemic/vagues_plage.wav` | Ambience, Seaside, Bournemouth, Beach, Grasshoppers, Waves | `ee1b7f27-d937-4061-af0a-1251020f323a` | S04, S05 | le village de pêcheurs (les vagues) |
+| `epidemic/feu_bois.wav` | Fire, Burning, Wood Stove, Crackling | `8917723b-c304-49c4-a61a-bb333411d894` | S05 | la cuisine au feu de bois |
+| `epidemic/toux_enfant.wav` | Human, Cough, Boy, 3 Years Old, Coughing 01 | `724d74c5-afad-40ac-bdf7-1a4eeb1b199b` | S05 | la toux sous la fumée |
+
+## Musique (Epidemic Sound, morceaux : outil `DownloadRecording`)
+
+| Fichier local | Morceau | Identifiant | Scène | Statut |
+|---|---|---|---|---|
+| `musique/bhimpalasi.wav` | Bhimpalasi | `03dd2103-01c1-4064-b67f-90dddb1c9f83` | S05 | en place dans la V1 (discrète, entre avec le village) ; à confirmer à l'oreille par Bruno |
+| `musique/remembering.wav` | Remembering (piano seul) | `c82493b3-51c0-4935-8ff6-120e8396dd5d` | — | alternative, non utilisée |
 
 ## Voix (ElevenLabs, voix « Guillaume - Documentary and Storytelling », `3HZyQcLKlT0a3RDeXVsP`)
 
@@ -38,6 +48,8 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `voix/S03_prise1.mp3` | S03 (réglages) | eleven_v3 | `dIxgGPpYRJi2AoEbTmTn` | non (l'écran des réglages est retiré) |
 | `voix/S04_prise2.mp3` | S03-S04 | eleven_v3 | `iq4iwSrsMNJTCGRN9CpH` | non (voix trop aiguë par rapport à S02, remarqué par Bruno) |
 | `voix/S04b_prise1.mp3` | S03-S04 (« Commençons… », l'arrivée), générée dans la continuité du texte de S02 | eleven_v3 | `zjedtRiTbwo6WtG2YC0O` | **oui, verrouillée par Bruno (07/11/2026)** |
+| `voix/S05_prise1.mp3` | S05 (« Il s'appelle Manoj… Lui non plus. »), générée dans la continuité du texte de S04 | eleven_v3 | `XntBYWMHYLRVcPdo15Ve` | **oui, verrouillée par Bruno (08/11/2026)** |
+| `voix/S05_prise2.mp3`, `voix/S05_prise3.mp3` | S05 | eleven_v3 | `ttLXr52z1yn99oPluQI1`, `qqOXidmYg0b09aTAgciM` | non |
 
 Toutes les prises sont ramenées au même niveau de voix au montage.
 

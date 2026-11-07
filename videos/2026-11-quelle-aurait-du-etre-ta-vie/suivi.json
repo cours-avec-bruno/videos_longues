@@ -1,7 +1,7 @@
 {
   "titre": "Quelle aurait dû être ta vie ?",
-  "en_cours": "",
-  "prochaine": "S05",
+  "en_cours": "S05",
+  "prochaine": "S06",
   "etapes": [
     {
       "nom": "Concept et sources",
@@ -48,8 +48,8 @@
     "Variante ambitieuse dans l'aveu (S13), à la fin du travail",
     "Chiffres de l'Insee à vérifier (S15)",
     "S16 : « le chiffre du début » n'existe plus (question retirée de S02) ; à repenser",
-    "S05 : « Il s'appelle Manoj » arrive maintenant au début de S05",
-    "S14 : la saisie de la France n'est plus montrée (S03 réduite) ; le rappel est à repenser"
+    "S14 : la saisie de la France n'est plus montrée (S03 réduite) ; le rappel est à repenser",
+    "S05 : la musique, à l'oreille (Bhimpalasi en place, Remembering en réserve)"
   ],
   "interludes_S06_apres": [
     "S05",
@@ -61,8 +61,8 @@
     "S01": "Vue subjective : on marche lentement, dix pas, dans le noir vers un bureau seul au milieu d'un immense espace. Sur l'écran allumé, des timelines de vies simulées, une vie qui se dessine, et deux portraits robots. On arrive derrière la chaise vide. On entend nos pas résonner et le ronflement de l'ordinateur qui grandit.",
     "S02": "On s'assoit face à l'écran. On le voit parcourir les vies simulées, puis cliquer sur « nouvelle vie » : une ligne vide, une fiche sans visage. Le compteur des vies défile, un tic à chaque naissance. Une lampe s'allume. Plan large depuis le noir : quelqu'un, seul, de dos, dans l'îlot de lumière.",
     "S03": "Coupe nette sur le noir : « commençons », en lettres de gros pixels qui brillent.",
-    "S04": "Clic sur « Naître », on plonge dans l'écran. Douze lieux du monde défilent, on les traverse. On sort dans l'espace : la Terre tourne jusqu'à l'Inde, la plongée. Un village du nord de l'Inde vu du ciel, puis une ruelle.",
-    "S05": "On quitte le bureau. Le village au petit matin, la maison, la fumée du feu de bois, le chemin de l'eau. Le visage de Manoj, encore trop flou pour être reconnu.",
+    "S04": "Six lieux du monde traversés vite, en bleu « écran de surveillance ». On sort dans l'espace : la Terre tourne jusqu'à l'Inde, la plongée. Un village de pêcheurs au bord de la mer vu du ciel, puis des pêcheurs qui poussent une barque. Glitch : la carte du monde des densités, l'Inde qui s'allume.",
+    "S05": "« manoj » en pixels lumineux. Les filets sur la plage, puis la fiche de naissance qui se tape à l'écran. Les enfants du village, les marmites sur le feu de bois, la fumée, l'eau qu'on puise. Le dossier d'école : la case « OBC » se coche toute seule. Son visage, en très gros blocs chauds. Retour au bureau : l'opérateur seul.",
     "S06": "Les années qui passent en quelques secondes, entre deux étapes de sa vie.",
     "S07": "L'enfance : l'école que ses parents paient cher, la main qui ne se lève plus, les grands-parents. Un mot reste à l'écran : ingénieur.",
     "S08": "Onze ans. Le choix de l'école, posé sans le dire. Puis une ligne qui tombe. Les bêtes, les champs, et l'école qu'on voit de loin.",

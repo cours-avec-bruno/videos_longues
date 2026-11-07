@@ -20,8 +20,16 @@ Le crédit en description reste une bonne pratique (« Vidéos : Pexels » et le
 | `sahara_37523973.mp4` | Sahara, caravane | 37523973 | S03-S04 |
 | `islande_29477448.mp4` | Islande, icebergs (drone) | 29477448 | S03-S04 |
 | `amazonie_35969886.mp4` | Amazonie, fleuve (drone) | 35969886 | S03-S04 |
-| `inde/inde_31372348.mp4` | Village du nord de l'Inde, vu du ciel | 31372348 | S04, l'arrivée |
-| `inde/inde_34732091.mp4` | Ruelle d'un village indien | 34732091 | S04 |
+| `inde/inde_31372348.mp4` | (remplacé) | 31372348 | non : le village de Manoj est passé au bord de la mer |
+| `inde/inde_34732091.mp4` | (remplacé) | 34732091 | non |
+| `s05/35356378.mp4` | Village de pêcheurs au bord de la mer, vu du ciel (Inde du Sud) | 35356378 | S04, l'arrivée |
+| `s05/19598363.mp4` | Pêcheurs qui poussent une barque sur la plage | 19598363 | S04 |
+| `s05/4440945.mp4` | Pêcheurs et filets sur la plage, contre-jour | 4440945 | S05 |
+| `s05/31700496.mp4` | Des enfants qui jouent devant une maison du village | 31700496 | S05 |
+| `s05/856779.mp4` | Les marmites sur le feu de bois | 856779 | S05 |
+| `s05/4113114.mp4` | Le feu de bois de près, la fumée | 4113114 | S05 |
+| `s05/38994414.mp4` | Une femme puise l'eau au fond d'un trou | 38994414 | S05 |
+| `portraits/manoj_16067431.jpg` | Portrait (Pexels, photo 16067431), affiché en très gros pixels : jamais reconnaissable | 16067431 | S05, le visage de Manoj |
 
 Autres candidats téléchargés, non utilisés pour l'instant (dans les mêmes dossiers) : d'autres vues de ces lieux, et des villages indiens (champs, femmes portant l'eau, cour avec vaches), utiles pour S05.
 

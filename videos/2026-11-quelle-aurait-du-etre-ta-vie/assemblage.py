@@ -3,9 +3,10 @@
   S01 -> S02 : fondu d'un quart de seconde (image et son) ; le cadrage de départ de S02 est déjà raccordé.
   S02 -> S03 : un mini-flash blanc (deux images qui montent, puis il s'éteint sur le carton « commençons »),
                avec un souffle d'air qui monte jusqu'à la coupe et un léger impact au moment du flash.
+  S04 -> S05 : coupe nette de la carte au carton « manoj », marquée par un bref éclat de glitch.
 Les raccords vivent ici, pas dans les scènes : chaque scène reste montable seule.
 
-Usage : python assemblage.py   ->  medias/S01_a_S04_apercu.mp4
+Usage : python assemblage.py   ->  medias/S01_a_S05_apercu.mp4
 """
 import os
 import subprocess
@@ -22,10 +23,11 @@ SCENES = [  # (vidéo, son)
     (os.path.join(M, "S01", "S01_v7.mp4"), os.path.join(M, "S01", "S01_son_v4.wav")),
     (os.path.join(M, "S02", "S02_v2.mp4"), os.path.join(M, "S02", "S02_son_v2.wav")),
     (os.path.join(M, "S04", "S03_S04_v2.mp4"), os.path.join(M, "S04", "S03_S04_son.wav")),
+    (os.path.join(M, "S05", "S05_v1.mp4"), os.path.join(M, "S05", "S05_son.wav")),
 ]
 FONDU_12 = 0.25           # S01 -> S02
 FLASH_AV, FLASH_AP = 0.08, 0.16   # S02 -> S03 : montée du flash avant la coupe, extinction après
-SORTIE = os.path.join(M, "S01_a_S04_apercu.mp4")
+SORTIE = os.path.join(M, "S01_a_S05_apercu.mp4")
 
 
 def duree(f):
@@ -33,8 +35,9 @@ def duree(f):
                                 capture_output=True, text=True, check=True).stdout)
 
 
-d1, d2, d3 = (duree(v) for v, _ in SCENES)
+d1, d2, d3, d4 = (duree(v) for v, _ in SCENES)
 coupe_23 = d1 - FONDU_12 + d2
+coupe_45 = coupe_23 + d3
 
 # ---------------------------------------------------------------- image
 filtre = (
@@ -42,17 +45,20 @@ filtre = (
     f"[1:v]fade=t=out:st={d2 - FLASH_AV:.3f}:d={FLASH_AV}:color=white[b];"
     f"[2:v]fade=t=in:st=0:d={FLASH_AP}:color=white[c];"
     f"[a][b]xfade=transition=fade:duration={FONDU_12}:offset={d1 - FONDU_12:.3f}[ab];"
-    f"[ab][c]concat=n=2:v=1:a=0[v]"
+    f"[3:v]setpts=PTS-STARTPTS[d];"
+    f"[ab][c][d]concat=n=3:v=1:a=0[v]"
 )
 image = os.path.join(M, "tmp_assemblage_image.mp4")
 subprocess.run(["ffmpeg", "-v", "error", "-y"] + sum([["-i", v] for v, _ in SCENES], []) +
                ["-filter_complex", filtre, "-map", "[v]", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p", image], check=True)
 
 # ---------------------------------------------------------------- son
-a1, a2, a3 = (lire_audio(s, mono=False).astype(np.float64) for _, s in SCENES)
+a1, a2, a3, a4 = (lire_audio(s, mono=False).astype(np.float64) for _, s in SCENES)
+n3 = int(round(d3 * SR))         # le son de S03-S04 calé exactement sur la durée de son image
+a3 = np.pad(a3, ((0, max(0, n3 - len(a3))), (0, 0)))[:n3]
 n_f = int(FONDU_12 * SR)
 g = np.linspace(0, 1, n_f)[:, None]
-son = np.concatenate([a1[:-n_f], a1[-n_f:] * (1 - g) + a2[:n_f] * g, a2[n_f:], a3])
+son = np.concatenate([a1[:-n_f], a1[-n_f:] * (1 - g) + a2[:n_f] * g, a2[n_f:], a3, a4])
 
 
 def db(x):
@@ -78,6 +84,14 @@ imp *= np.linspace(1, 0, len(imp))[:, None] ** 2
 j = int(coupe_23 * SR) - int(0.01 * SR)
 son[j:j + len(imp)] += imp * db(-16)
 
+# S04 -> S05 : un bref éclat de glitch sur la coupe nette vers « manoj »
+gr = lire_audio(os.path.join(M, "sons", "epidemic", "glitch_radio.wav"), mono=False).astype(np.float64)
+p3 = int(np.argmax(np.abs(gr).mean(1)))
+ec = gr[max(0, p3 - int(0.02 * SR)):p3 + int(0.25 * SR)].copy()
+ec *= np.linspace(1, 0, len(ec))[:, None] ** 2
+j = int(coupe_45 * SR) - int(0.02 * SR)
+son[j:j + len(ec)] += ec * db(-14)
+
 wav = os.path.join(M, "tmp_assemblage_son.wav")
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-",
                 "-af", "alimiter=limit=0.84:attack=2:release=60:level=disabled", "-c:a", "pcm_s24le", wav],
@@ -85,4 +99,4 @@ subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ar", str(SR), "-
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", image, "-i", wav, "-map", "0:v", "-map", "1:a", "-c:v", "copy",
                 "-c:a", "aac", "-b:a", "320k", "-shortest", "-movflags", "+faststart", SORTIE], check=True)
 os.remove(image); os.remove(wav)
-print("écrit :", SORTIE, round(d1 + d2 + d3 - FONDU_12, 2), "s ; flash à", round(coupe_23, 2), "s")
+print("écrit :", SORTIE, round(d1 + d2 + d3 + d4 - FONDU_12, 2), "s ; flash à", round(coupe_23, 2), "s ; S05 à", round(coupe_45, 2), "s")

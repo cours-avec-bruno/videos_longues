@@ -3,12 +3,12 @@
 | | |
 |---|---|
 | **Durée** | ≈ 0:40 |
-| **Fabrication** | Photos + Remotion |
+| **Fabrication** | Vraies vidéos (Pexels) + interface et mosaïque en Python (`montage.py`) |
 | **Fonction** | INCARNER |
 | **Procédé principal** | I13 : le portrait en très gros pixels (la personne n'existe presque pas encore), un cran de netteté à chaque étape |
 | **Procédés secondaires** | I04 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
-| **Production** | à faire |
+| **Production** | V1 montée le 08/11/2026 (`medias/S05/S05_v1.mp4`, 37 s), à valider par Bruno |
 
 ## Intention
 
@@ -19,7 +19,8 @@ Vraies photos d'un village côtier indien, unifiées (grain photo, ton chaud), s
 ## Script / son
 
 - **Voix off** : voir `../../script.md`, section S05 (version 1 du 07/11/2026, relue avec humanizer)
-- **Sons / musique** :
+- **Voix** : `S05_prise1`, verrouillée par Bruno.
+- **Sons / musique** : les vagues et le village sous les vraies images, le feu de bois, une toux d'enfant sous la fumée, une frappe douce par lettre sur la fiche, un clic quand la case se coche. Musique discrète (Bhimpalasi) qui entre avec le village et s'efface sur le bureau. Sources : `../../references/sons.md`.
 
 ## Découpage en plans
 
@@ -47,6 +48,17 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 
 ## Fabrication
 
-Notes techniques : fichiers sources, prompts (`../../prompts/`), réglages, rendus.
+`montage.py` (≈ 7 min 30 de rendu ; `SON_SEUL=1` pour ne refaire que le son). Ce qui a été construit, et ce qui a changé par rapport au découpage ci-dessus :
+
+1. carton « manoj » en gros pixels lumineux (même procédé que « commençons ») ;
+2. le village au bord de la mer (vraies vidéos, étalonnage documentaire), coupé par la fiche de naissance qui se tape ligne à ligne, à l'écran du simulateur ;
+3. la maison, le feu de bois, la fumée, le chemin de l'eau, sur la voix ;
+4. le formulaire : la case « OBC » se coche toute seule, la caméra se rapproche ;
+5. le visage de Manoj en très gros blocs chauds (la seule couleur chaude de l'interface), qui apparaissent un à un ;
+6. retour au bureau, l'opérateur seul : « Je n'ai rien choisi de tout ça. Lui non plus. »
+
+Les jauges de S05-P04 (espérance de vie, revenu) ne sont pas montées : elles alourdissaient la scène et auraient demandé des chiffres à l'écran. La voix porte l'essentiel.
 
 ## Points à revoir
+
+- Le choix de la musique, à l'oreille (Bhimpalasi en place, Remembering en réserve).

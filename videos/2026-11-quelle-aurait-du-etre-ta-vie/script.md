@@ -75,6 +75,8 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 ## S05 · Les conditions de départ
 
+> Il s'appelle Manoj.
+
 > Avant lui, il y a déjà quatre enfants dans la maison.
 
 > On cuisine au feu de bois. Quand la fumée remplit la cuisine, ça lui pique les yeux, et il tousse. L'eau, il faut aller la chercher, plus loin les mois où il ne pleut pas.
