@@ -173,6 +173,13 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Plus de moments en 3D.
 - Tout cela s'appliquera au cas par cas, scène par scène, pendant la construction. Le storyboard et le script portent l'avertissement en tête.
 
+## 2026-11-07 · Logiciel de montage : Premiere Pro pour la finition
+
+- Remotion reste la colonne vertébrale jusqu'à la V1 : chaque scène est du code versionné, qu'on retravaille ensemble, et l'assemblage V1 se fait dans Remotion.
+- Pour la finition (rythme à l'oreille, mixage, étalonnage), on passe à **Adobe Premiere Pro**, avec l'essai gratuit de 7 jours de Bruno. Claude peut y agir par les outils Premiere du plugin Higgsfield (à tester quand Premiere sera installé).
+- **L'essai ne dure que 7 jours** : on ne le démarre qu'une fois la V1 prête, avec les rendus des scènes exportés en haute qualité, pour en tirer le maximum.
+- Écartés : DaVinci Resolve (excellent, mais sans connecteur pour Claude), Palmier Pro (macOS uniquement, version 0.6).
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
