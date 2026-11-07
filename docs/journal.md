@@ -233,3 +233,6 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Images clés dans Blender (`scenes/S02/plans.py`, à partir de la scène de S01). Plans sans génération : travelling vers l'écran, gros plan du compteur (`compteur.py`), la lampe, la question (Remotion, `S02-Question`).
 - `scenes/S01/ecran.py` devient réutilisable (`--t0` pour la continuité du compteur, `--image` pour exporter l'interface).
 - Higgsfield (validé par Bruno, 49 crédits) : « on s'assoit » et « la silhouette de dos » (Wan 3.0).
+- Bruno retire la question au spectateur (« quelle part de votre vie avez-vous choisie ? ») et valide les images de S02. Conséquence : S16 reprenait « le chiffre du début », à repenser.
+- Voix de S02 : ElevenLabs, deux prises ; Bruno retient la prise 1. Son monté par `scenes/S02/montage.py` → `medias/S02/S02_v1.mp4` (34 s).
+- Correction du son : le filtre loudnorm (une passe) agissait comme un gain automatique et écrasait les nuances. Remplacé par un gain fixe + limiteur (`shared/outils/son/pas.py`, `ecrire_normalise`) ; toutes les scènes partagent le même gain général, pour que le décor sonore garde son niveau aux raccords. Son de S01 refait (`S01_son_v3.wav`, remis sur `S01_v4.mp4`).

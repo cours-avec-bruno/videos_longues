@@ -80,3 +80,35 @@ def temps_des_pas(video, largeur=320, hauteur=180):
             if not instants or (k / fps - instants[-1]) > 0.45:
                 instants.append(k / fps)
     return instants, fps, bal.tolist()
+
+
+def ecrire_normalise(mix, chemin, lufs=None, tp=-1.5, sr=SR, gain_db=None):
+    """Écrit un mixage stéréo (float, N x 2) en WAV 24 bits, normalisé à `lufs` par un gain FIXE.
+
+    (Le filtre loudnorm de ffmpeg, en une passe, agit comme un gain automatique : il remonte les passages calmes et
+    écrase les nuances. Ici on mesure, on applique un seul gain, puis un limiteur ne touche que les crêtes.)
+    """
+    import json
+    import re
+    brut = mix.astype(np.float32).tobytes()
+    mesure = subprocess.run(["ffmpeg", "-hide_banner", "-f", "f32le", "-ar", str(sr), "-ac", "2", "-i", "-",
+                             "-af", "ebur128=peak=true", "-f", "null", "-"], input=brut, capture_output=True).stderr.decode("utf-8", "ignore")
+    i_mesure = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", mesure)[-1])
+    gain = gain_db if gain_db is not None else lufs - i_mesure   # gain imposé : même échelle d'une scène à l'autre
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ar", str(sr), "-ac", "2", "-i", "-",
+                    "-af", f"volume={gain:.2f}dB,alimiter=limit={10 ** (tp / 20):.4f}:attack=2:release=60:level=disabled",
+                    "-ar", str(sr), "-c:a", "pcm_s24le", chemin], input=brut, check=True)
+    return i_mesure, gain
+
+
+def boucle(a, n, fondu_s=0.5, sr=SR):
+    """Allonge un son d'ambiance (N x 2) à n échantillons en le bouclant avec un fondu enchaîné."""
+    if len(a) >= n:
+        return a[:n]
+    f = int(fondu_s * sr)
+    out = a.copy()
+    while len(out) < n:
+        g = np.linspace(0, 1, f)[:, None]
+        jonction = out[-f:] * (1 - g) + a[:f] * g
+        out = np.concatenate([out[:-f], jonction, a[f:]])
+    return out[:n]

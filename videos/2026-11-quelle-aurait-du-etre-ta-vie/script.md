@@ -45,15 +45,7 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 > Vous allez m'aider. Chaque fois que la vie lui posera une question, je vous la poserai aussi. Vous aurez trois secondes.
 
-[la musique s'efface ; plus que la pièce]
-
-> Avant de commencer, une question pour vous seul. Sur cent, quelle part de votre vie pensez-vous avoir choisie ?
-
-ÉCRAN : Sur 100, quelle part de votre vie avez-vous choisie ? [le curseur hésite, puis reste vide]
-
-ÉCRAN : Notez-le.
-
-[silence bref ; la lumière de l'aube monte d'un cran]
+[retiré le 07/11/2026, décision de Bruno : la question au spectateur (« Sur cent, quelle part de votre vie avez-vous choisie ? », « Notez-le. »), à l'écran comme dans la voix]
 
 ## S03 · La mission
 

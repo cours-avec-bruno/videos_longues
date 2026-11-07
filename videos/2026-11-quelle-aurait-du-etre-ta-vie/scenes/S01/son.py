@@ -19,7 +19,7 @@ import numpy as np
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(ICI, "..", "..", "..", "..", "shared", "outils", "son"))
-from pas import SR, detecter_pas, lire_audio, temps_des_pas  # noqa: E402
+from pas import SR, detecter_pas, ecrire_normalise, lire_audio, temps_des_pas  # noqa: E402
 
 SONS = os.path.join(ICI, "..", "..", "medias", "sons", "epidemic")
 
@@ -138,10 +138,9 @@ for c in range(2):
 mix += mouillé * db(-14)
 
 # sortie : on vise un début de vidéo calme (≈ -26 LUFS), crête vraie sous -1 dBTP ; mesure ensuite avec ffmpeg
-crete = np.abs(mix).max()
-mix *= db(-3) / crete if crete > db(-3) else 1.0
 os.makedirs(os.path.dirname(os.path.abspath(A.sortie)), exist_ok=True)
-subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-",
-                "-af", "loudnorm=I=-26:TP=-1.5:LRA=11", "-ar", str(SR), "-c:a", "pcm_s24le", A.sortie],
-               input=mix.astype(np.float32).tobytes(), check=True)
+i_av, gain = ecrire_normalise(mix, A.sortie, -26.0)
+print("sonie avant / gain :", i_av, gain)
+# le gain général est réutilisé par les scènes suivantes, pour garder le même niveau de décor sonore
+open(os.path.join(os.path.dirname(os.path.abspath(A.sortie)), "gain_mix.txt"), "w").write(f"{gain:.3f}")
 print("écrit :", A.sortie)

@@ -8,13 +8,13 @@
 | **Procédé principal** | N01 : le spectateur note la part de sa vie qu'il pense avoir choisie ; toute la vidéo y répond |
 | **Procédés secondaires** | I18, I16 |
 | **Statut** | repensée le 07/11/2026 pour le nouveau décor, à valider par Bruno |
-| **Production** | images V1 faites (aperçu muet `S02_apercu_v1.mp4`, 49 s) ; reste la voix (Guillaume) et le son |
+| **Production** | V1 avec voix et son (`S02_v1.mp4`, 34 s), à valider par Bruno |
 
 ## Intention
 
 **Repensée le 07/11/2026** : le décor n'a plus de fenêtre (bureau seul dans le noir), donc plus d'aube. S02 enchaîne directement sur la fin de S01 : on est derrière la chaise, on s'assoit. On reste en vue subjective : le spectateur est à la place de l'opérateur. L'écran est celui de S01 (les vies simulées, les deux portraits robots, le compteur), ce qui relie la voix (« il en naît à peu près quatre par seconde ») à ce qu'on voit. À la place de l'aube qui monte : la lampe de bureau qu'on allume, un clic, le travail commence.
 
-La question au spectateur s'affiche **sans chiffre** (règle : pas de pourcentage à l'écran) : « Quelle part de votre vie avez-vous choisie ? », avec un curseur qui va de « rien » à « tout », hésite, puis reste vide.
+**La question au spectateur est retirée** (décision de Bruno, 07/11/2026), à l'écran comme dans la voix : la scène se termine sur la silhouette seule dans le noir.
 
 Ancienne intention (storyboard) :
 
@@ -38,8 +38,6 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 | S02-P03 | 7 s | 3D | Gros plan sur le compteur des vies simulées qui défile. Voix : « …quatre par seconde. Il sera l'un d'eux. » | Fixe, mise au point sur le compteur | Un tic discret par naissance |
 | S02-P04 | 4 s | 3D | Notre main allume la lampe de bureau : la lumière chaude s'ajoute à la lumière froide | Fixe | Clic de l'interrupteur |
 | S02-P05 | 8 s | 3D | Plan large, du noir : l'îlot de lumière, la chaise désormais occupée par une silhouette de dos. Voix : « Vous allez m'aider… » | Fixe, très lent recul | Voix, la pièce |
-| S02-P06 | 12 s | MD | Sur fond noir, en serif : « Quelle part de votre vie avez-vous choisie ? » Un curseur de « rien » à « tout » hésite, puis reste vide | Curseur animé | La pièce seulement |
-| S02-P07 | 4 s | MD | « Notez-le. » | Coupe sèche | Silence bref |
 
 ## Cadrage et mise en scène
 
@@ -56,8 +54,8 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 
 - Images clés : `plans.py` (Blender, ouvre la scène de S01 ; ajoute la lampe qui s'allume, la silhouette assise de dos, une caméra par plan). Silhouette : choix de Bruno (07/11/2026).
 - L'écran : même interface que S01 (`../S01/ecran.py`, réutilisable avec `--t0` pour la continuité du compteur, `--image` pour exporter l'image posée sur la dalle dans Blender).
-- P03 : `compteur.py`. P06-P07 : `Question.tsx` (Remotion, composition `S02-Question`).
+- P03 : `compteur.py`.
 - P01 et P05 : Higgsfield (prompts et devis dans `../../prompts/S02.md`).
-- La voix dit encore « sur cent » ; l'écran n'affiche aucun chiffre (curseur de « rien » à « tout »).
+- Montage et son : `montage.py` (voix prise 1 de Guillaume, découpée phrase par phrase et posée sur les plans ; la chaise, un tic par naissance sur le compteur, le clic de la lampe, la pièce qui s'éloigne dans le plan large). Plans : P01 6 s, P02 9 s, P03 7 s, P04 4 s, P05 8 s. Même gain général qu'en S01 : le raccord S01 → S02 est au même niveau.
 
 ## Points à revoir
