@@ -40,7 +40,7 @@ PHRASES = [            # (fichier, (début, fin) dans la prise, position dans la
     (VOIX, (13.19, 14.15), 20.0),  # Il sera l'un d'eux.
     (VOIX, (14.93, 15.75), 24.2),  # Vous allez m'aider.
     (VOIX, (16.33, 20.63), 26.6),  # Chaque fois que la vie lui posera une question, je vous la poserai aussi.
-    (VOIX_FIN, (4.36, 6.64), 31.6),  # Vous allez m'accompagner dans cette aventure. (remplace « Vous aurez trois secondes. »)
+    (VOIX_FIN, (4.36, 6.36), 31.6),  # Vous allez m'accompagner dans cette aventure. (souffle final coupé, demande de Bruno)
 ]
 # l'opérateur utilise le logiciel pendant P02 (temps de la scène) : déplacements de la souris et le clic « nouvelle vie »
 SOURIS_MOUVEMENTS = [(6.0, 6.7), (8.1, 8.7), (10.0, 10.5), (11.4, 12.2), (12.55, 13.2)]
