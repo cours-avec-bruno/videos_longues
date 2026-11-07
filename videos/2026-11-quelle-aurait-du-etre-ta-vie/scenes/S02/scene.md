@@ -1,16 +1,22 @@
-# S02 · Le bureau, à l'aube
+# S02 · On s'assoit
 
 | | |
 |---|---|
 | **Durée** | ≈ 0:50 |
-| **Fabrication** | Blender + Remotion |
+| **Fabrication** | Blender (plans 3D, l'écran texturé avec l'interface de S01) + Higgsfield (mouvement) + Remotion (la question) |
 | **Fonction** | ACCROCHER |
 | **Procédé principal** | N01 : le spectateur note la part de sa vie qu'il pense avoir choisie ; toute la vidéo y répond |
 | **Procédés secondaires** | I18, I16 |
-| **Statut** | à valider (proposition de storyboard) |
+| **Statut** | repensée le 07/11/2026 pour le nouveau décor, à valider par Bruno |
 | **Production** | à faire |
 
 ## Intention
+
+**Repensée le 07/11/2026** : le décor n'a plus de fenêtre (bureau seul dans le noir), donc plus d'aube. S02 enchaîne directement sur la fin de S01 : on est derrière la chaise, on s'assoit. On reste en vue subjective : le spectateur est à la place de l'opérateur. L'écran est celui de S01 (les vies simulées, les deux portraits robots, le compteur), ce qui relie la voix (« il en naît à peu près quatre par seconde ») à ce qu'on voit. À la place de l'aube qui monte : la lampe de bureau qu'on allume, un clic, le travail commence.
+
+La question au spectateur s'affiche **sans chiffre** (règle : pas de pourcentage à l'écran) : « Quelle part de votre vie avez-vous choisie ? », avec un curseur qui va de « rien » à « tout », hésite, puis reste vide.
+
+Ancienne intention (storyboard) :
 
 L'opérateur sans visage, de dos, face à l'écran ; lumière d'aube froide par la fenêtre. Mission annoncée (« faire vivre quelqu'un, du premier jour au dernier »), puis l'invitation au spectateur : « Vous allez jouer avec moi. À chaque grand choix, choisissez pour lui. » Puis la consigne (chiffre sur 100), affichée en serif.
 
@@ -25,16 +31,15 @@ L'opérateur sans visage, de dos, face à l'écran ; lumière d'aube froide par 
 
 Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion, monospace) · **MD** motion design / animation Remotion · **IMG** vraie photo (banque libre ou archive, voir `../../references/photos.md`), animée dans Remotion · **NOIR**.
 
-| Plan | Durée | Matière | Contenu | Animation / mouvement | Procédé | Son |
-|---|---|---|---|---|---|---|
-| S02-P01 | 5 s | 3D | Plan large du bureau à l'aube : fenêtre, l'opérateur de dos, l'écran allumé | Travelling avant très lent | I18, I16 | Ambiance de bureau, ventilation |
-| S02-P02 | 3 s | 3D | Insert : les mains sur le clavier | Fixe |  | Frappe au clavier |
-| S02-P03 | 4 s | 3D | Insert : l'écran, le titre « 1 SUR 8 MILLIARDS » en monospace | Léger zoom | H02 |  |
-| S02-P04 | 6 s | UI | Compteur : bébés nés depuis l'ouverture de la page (≈ 4 par seconde) | Chiffres qui défilent |  | Tic discret à chaque naissance |
-| S02-P05 | 8 s | 3D | Plan moyen : l'opérateur de profil, son visage dans l'ombre. Voix : la mission, puis « Vous allez jouer avec moi. » | Fixe | N01 | Voix |
-| S02-P06 | 12 s | MD | Consigne au spectateur, en serif : « Sur 100, quelle part de votre vie avez-vous choisie ? » Un curseur de 0 à 100 hésite, puis reste vide | Curseur animé | N01 | La musique s'efface |
-| S02-P07 | 4 s | MD | « Notez-le. » (serif) | Coupe sèche | N01 | Silence bref |
-| S02-P08 | 8 s | 3D | Retour au plan large : la lumière de l'aube monte d'un cran | Fixe, lumière animée | I16 | Ambiance |
+| Plan | Durée | Matière | Contenu | Animation / mouvement | Son |
+|---|---|---|---|---|---|
+| S02-P01 | 6 s | 3D | Vue subjective : on tire la chaise et on s'assoit. L'écran grandit et se stabilise devant nous | La caméra descend et avance, puis se pose | Roulettes, assise, tissu |
+| S02-P02 | 8 s | 3D | Face à l'écran : les vies simulées, la ligne en cours qui avance. Voix : « On m'a confié quelqu'un… » | Très lent travelling avant | Ronflement de l'ordinateur, voix |
+| S02-P03 | 7 s | 3D | Gros plan sur le compteur des vies simulées qui défile. Voix : « …quatre par seconde. Il sera l'un d'eux. » | Fixe, mise au point sur le compteur | Un tic discret par naissance |
+| S02-P04 | 4 s | 3D | Notre main allume la lampe de bureau : la lumière chaude s'ajoute à la lumière froide | Fixe | Clic de l'interrupteur |
+| S02-P05 | 8 s | 3D | Plan large, du noir : l'îlot de lumière, la chaise désormais occupée par une silhouette de dos. Voix : « Vous allez m'aider… » | Fixe, très lent recul | Voix, la pièce |
+| S02-P06 | 12 s | MD | Sur fond noir, en serif : « Quelle part de votre vie avez-vous choisie ? » Un curseur de « rien » à « tout » hésite, puis reste vide | Curseur animé | La pièce seulement |
+| S02-P07 | 4 s | MD | « Notez-le. » | Coupe sèche | Silence bref |
 
 ## Cadrage et mise en scène
 
