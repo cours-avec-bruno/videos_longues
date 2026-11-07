@@ -28,7 +28,7 @@ SONS = os.path.join(M, "sons", "epidemic")
 VOIX = os.path.join(M, "voix", "S02_prise1.mp3")   # prise 1, choisie par Bruno
 VOIX_FIN = os.path.join(M, "voix", "S02_aventure_prise1.mp3")   # dernière phrase, générée dans son contexte
 
-PLANS = [("S02_p01.mp4", 6), ("S02_p02.mp4", 9), ("S02_p03_compteur.mp4", 7), ("S02_p04.mp4", 4), ("S02_p05.mp4", 8)]
+PLANS = [("S02_p01_sans_tasse.mp4", 6), ("S02_p02.mp4", 9), ("S02_p03_compteur.mp4", 7), ("S02_p04_recadre.mp4", 4), ("S02_p05.mp4", 8)]
 DEBUTS = np.cumsum([0] + [d for _, d in PLANS])[:-1]   # 0, 6, 15, 22, 26
 DUREE = sum(d for _, d in PLANS)
 # phrases : (début et fin dans la prise, mesurés par détection des silences et vérifiés par transcription), position

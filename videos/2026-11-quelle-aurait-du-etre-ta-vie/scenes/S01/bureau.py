@@ -289,7 +289,7 @@ me_ec.materials.append(M["ecran"])
 dalle = lier(bpy.data.objects.new("PRP_ecran_dalle", me_ec), "PRP")
 dalle.location = (EX, EY - 0.0235, BZ + 0.355)
 
-# clavier, souris, carnet, stylo, tasse, chemises, lampe éteinte, câble
+# clavier, souris, carnet, stylo, chemises (plus de tasse), lampe éteinte, câble
 cl = boite("PRP_clavier", (0.44, 0.14, 0.022), (0.02, BY - 0.18, BZ + 0.025), M["plastique"], rot=(rad(3), 0, rad(-2)), biseau=0.003)
 for r in range(5):
     for c in range(15):
@@ -298,8 +298,8 @@ boite("PRP_souris", (0.06, 0.1, 0.03), (0.33, BY - 0.17, BZ + 0.03), M["plastiqu
 boite("PRP_tapis_souris", (0.24, 0.2, 0.003), (0.33, BY - 0.16, BZ + 0.0155), M["tissu"])
 boite("PRP_carnet", (0.15, 0.21, 0.012), (-0.45, BY - 0.12, BZ + 0.02), M["carton"], rot=(0, 0, rad(12)), biseau=0.002)
 cylindre("PRP_stylo", 0.004, 0.14, (-0.37, BY - 0.15, BZ + 0.028), M["plastique"], rot=(0, rad(90), rad(40)))
-cylindre("PRP_tasse", 0.042, 0.095, (-0.62, BY + 0.05, BZ + 0.062), M["ceramique"])
-cylindre("PRP_tasse_fond_cafe", 0.038, 0.002, (-0.62, BY + 0.05, BZ + 0.09), M["plastique"])
+# retiré à la demande de Bruno (07/11/2026) : # cylindre("PRP_tasse", 0.042, 0.095, (-0.62, BY + 0.05, BZ + 0.062), M["ceramique"])
+# retiré à la demande de Bruno (07/11/2026) : # cylindre("PRP_tasse_fond_cafe", 0.038, 0.002, (-0.62, BY + 0.05, BZ + 0.09), M["plastique"])
 for i in range(4):
     boite(f"PRP_chemise_{i}", (0.24, 0.32, 0.008), (-0.58, BY + 0.2, BZ + 0.02 + i * 0.009), M["carton"] if i % 2 else M["papier"],
           rot=(0, 0, rad(-4 + i * 3)))
