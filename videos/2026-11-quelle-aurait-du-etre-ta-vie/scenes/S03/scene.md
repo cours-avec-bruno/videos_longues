@@ -3,14 +3,18 @@
 | | |
 |---|---|
 | **Durée** | ≈ 0:35 |
-| **Fabrication** | Remotion + Blender |
+| **Fabrication** | L'écran de S02 (image fixe du bureau) et l'interface (`../S01/ecran.py --scenario s03`) ; monté avec S04 (`../S04/montage.py`) |
 | **Fonction** | PROMETTRE |
 | **Procédé principal** | N05 : le vrai lieu de naissance saisi (la France), « gardez ça en tête », payé en S14 |
 | **Procédés secondaires** | H02 |
 | **Statut** | à valider (proposition de storyboard) |
-| **Production** | à faire |
+| **Production** | V1 faite avec S04 (`S03_S04_v1.mp4`), à valider par Bruno |
 
 ## Intention
+
+**Refaite le 07/11/2026** : on reste sur l'écran, dans la suite de S02. La fenêtre « Nouvelle vie » s'ouvre : il coche « le monde d'aujourd'hui », « une vie entière » ; une ligne dit que le lieu de naissance est tiré au sort comme les naissances dans le monde réel (sans chiffre) ; il tape « France » dans « Et vous, où êtes-vous né ? ». Le pointeur se pose sur « Naître » : « Commençons. » L'histogramme en pourcentages et l'insert de la main sont abandonnés (règle : pas de pourcentage à l'écran ; pas de nouveau rendu).
+
+Ancienne intention :
 
 Interface recréée (monospace) : le monde d'aujourd'hui, le tirage selon les naissances, la durée. Saisie du vrai lieu de naissance.
 

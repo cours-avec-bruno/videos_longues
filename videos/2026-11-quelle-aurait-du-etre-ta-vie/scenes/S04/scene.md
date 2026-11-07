@@ -3,14 +3,20 @@
 | | |
 |---|---|
 | **Durée** | ≈ 0:20 |
-| **Fabrication** | Remotion |
+| **Fabrication** | Extraits réels (Pexels) + la Terre calculée d'après la NASA (`terre.py`) ; montage et son : `montage.py` |
 | **Fonction** | RÉVÉLER |
 | **Procédé principal** | T01 : la première apparition du carton d'âge fixe son sens (une étape de la vie simulée) |
 | **Procédés secondaires** | S01, I15 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
-| **Production** | à faire |
+| **Production** | V1 faite (`S03_S04_v1.mp4`, 37 s avec S03), à valider par Bruno |
 
 ## Intention
+
+**Réécrite par Bruno le 07/11/2026.** Clic sur « Naître » : on plonge dans l'écran. « On peut atterrir n'importe où » : douze lieux du monde défilent vite (Tokyo, Paris, Rio, New York, Gizeh, Venise, la savane, Shanghai, Sydney, le Sahara, l'Islande, l'Amazonie), reliés par des traversées (on fonce dans l'image, on ressort dans la suivante), le rythme s'accélère et un grondement monte. On sort dans l'espace : la Terre tourne de l'Afrique à l'Asie, puis la plongée sur l'Inde (on reconnaît le sous-continent et l'Himalaya). Coupe sur un village du nord de l'Inde vu du ciel : « C'est ici que nous sommes arrivés. » Puis une ruelle du village : « Pas étonnant : plus de dix-sept pour cent de la population mondiale vit ici. » (dit, jamais écrit). Le son du village est un vrai enregistrement d'Amethi, en Uttar Pradesh.
+
+Le carton « 0 AN », la carte des naissances et « INDE · UN VILLAGE · UN GARÇON » sont abandonnés au profit de ce voyage. « Il s'appelle Manoj » passe en S05.
+
+Ancienne intention :
 
 Bouton « Naître », carton 0 AN, une seconde de silence. Puis la carte des naissances du monde : des points s'allument partout, environ 4 par seconde, plus serrés là où naissent le plus de bébés. Un seul point reste allumé, **en Inde, là où ils sont le plus denses**. Ce n'est pas un hasard, mais on ne le dit pas (indice pour l'aveu de S13). Puis **INDE · UN VILLAGE · UN GARÇON**, seuls à l'écran.
 

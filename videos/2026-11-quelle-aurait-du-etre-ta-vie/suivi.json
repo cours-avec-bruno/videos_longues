@@ -1,7 +1,7 @@
 {
   "titre": "Quelle aurait dû être ta vie ?",
-  "en_cours": "S02",
-  "prochaine": "S03",
+  "en_cours": "S03-S04",
+  "prochaine": "S05",
   "etapes": [
     {
       "nom": "Concept et sources",
@@ -47,7 +47,8 @@
     "Garder ou couper le mensonge des 39 ans (S09)",
     "Variante ambitieuse dans l'aveu (S13), à la fin du travail",
     "Chiffres de l'Insee à vérifier (S15)",
-    "S16 : « le chiffre du début » n'existe plus (question retirée de S02) ; à repenser"
+    "S16 : « le chiffre du début » n'existe plus (question retirée de S02) ; à repenser",
+    "S05 : « Il s'appelle Manoj » arrive maintenant au début de S05"
   ],
   "interludes_S06_apres": [
     "S05",
@@ -58,8 +59,8 @@
   "ecran": {
     "S01": "Vue subjective : on marche lentement, dix pas, dans le noir vers un bureau seul au milieu d'un immense espace. Sur l'écran allumé, des timelines de vies simulées, une vie qui se dessine, et deux portraits robots. On arrive derrière la chaise vide. On entend nos pas résonner et le ronflement de l'ordinateur qui grandit.",
     "S02": "On s'assoit face à l'écran. On le voit parcourir les vies simulées, puis cliquer sur « nouvelle vie » : une ligne vide, une fiche sans visage. Le compteur des vies défile, un tic à chaque naissance. Une lampe s'allume. Plan large depuis le noir : quelqu'un, seul, de dos, dans l'îlot de lumière.",
-    "S03": "L'écran du simulateur, sobre. Le monde d'aujourd'hui, une vie entière. Dans la liste des pays, il écrit : France.",
-    "S04": "Le bouton « Naître ». Une seconde de noir. La carte du monde où les naissances s'allument par milliers, puis un seul point reste, en Inde. Inde, un village, un garçon.",
+    "S03": "La fenêtre « Nouvelle vie » : le monde d'aujourd'hui, une vie entière, le lieu de naissance tiré au sort comme les vraies naissances. Il tape « France ». Le pointeur se pose sur « Naître ».",
+    "S04": "Clic sur « Naître », on plonge dans l'écran. Douze lieux du monde défilent, on les traverse. On sort dans l'espace : la Terre tourne jusqu'à l'Inde, la plongée. Un village du nord de l'Inde vu du ciel, puis une ruelle.",
     "S05": "On quitte le bureau. Le village au petit matin, la maison, la fumée du feu de bois, le chemin de l'eau. Le visage de Manoj, encore trop flou pour être reconnu.",
     "S06": "Les années qui passent en quelques secondes, entre deux étapes de sa vie.",
     "S07": "L'enfance : l'école que ses parents paient cher, la main qui ne se lève plus, les grands-parents. Un mot reste à l'écran : ingénieur.",

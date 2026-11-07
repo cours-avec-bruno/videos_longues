@@ -16,6 +16,12 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `epidemic/tic_doux.wav` | Clocks, Tick, Simple, Clicky, Soft, Loop 02 | `0bfb4ddb-4807-4059-a3e9-3383d383c015` | S02 | un tic par naissance, sur le compteur |
 | `epidemic/souris_clics.wav` | Computers, Keyboard & Mouse, Mouse, Logitech M90, Left Click, Various Single | `a74993f6-b48c-4d7f-9929-9c516dbaf25a` | S02 | le clic sur « nouvelle vie » |
 | `epidemic/souris_tapis.wav` | Computers, Keyboard & Mouse, Mouse, Macbook Pro, Mouse Pad, Movement | `23551ef8-34d7-40a5-94ac-08dcc1ac54d3` | S02 | la souris qui glisse quand le pointeur bouge |
+| `epidemic/clavier_lent.wav` | Computers, Keyboard & Mouse, Keyboard, Dell, Typing, Slow | `687247da-0746-4243-a9ec-508f74dcda04` | S03 | les touches de « France » |
+| `epidemic/whoosh_zoom.wav` | Swooshes, Whoosh, Fast, Close, Airy, Zoom 01 | `ef3da4c3-b32a-4d99-a58a-8c167e50c4f9` | S04 | plongée dans l'écran, traversées |
+| `epidemic/whoosh_air.wav` | Swooshes, Whoosh, Classic, Airy, Cinematic | `5ee53a73-e569-4517-8f13-7e36a47b15e6` | S04 | traversées |
+| `epidemic/whoosh_fusee.wav` | Swooshes, Whoosh, Noise, Rockety Texture, Cinematic 02 | `ef48d50d-47fe-491f-a853-7c1cb24af800` | S04 | la plongée sur l'Inde |
+| `epidemic/espace_drone.wav` | Designed, Drone, Dark Space, Sub Rumble | `454a607b-ba1d-4cc9-8242-846271b8f035` | S04 | le grondement qui monte jusqu'à l'espace |
+| `epidemic/village_amethi.wav` | Ambience, Town, Village, Morning, Washing Utensils, Birds Crows Walla, Bicycle Passing, Amethi, Uttar Pradesh, India 02 | `28a00d2f-20fd-4e42-9350-c8cbfeca2ac1` | S04 | l'arrivée au village |
 
 ## Voix (ElevenLabs, voix « Guillaume - Documentary and Storytelling », `3HZyQcLKlT0a3RDeXVsP`)
 
@@ -25,6 +31,11 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `voix/S02_prise2.mp3` | S02 | eleven_v3 | `AJYrlHKo6A5MqkjFnKZw` | non |
 | `voix/S02_aventure_prise1.mp3` | S02 (dernière phrase) | eleven_v3 | `4BD3sDzImlooElDfaLpB` | **oui** : « Vous allez m'accompagner dans cette aventure. », générée avec la phrase précédente pour garder l'intonation |
 | `voix/S02_aventure_prise2.mp3` | S02 (dernière phrase) | eleven_v3 | `pqn9DxmUP9pbR0GSYiTX` | non |
+
+| `voix/S03_prise1.mp3` | S03 | eleven_v3 | `dIxgGPpYRJi2AoEbTmTn` | **oui** |
+| `voix/S04_prise2.mp3` | S03-S04 (« Commençons… », l'arrivée) | eleven_v3 | `iq4iwSrsMNJTCGRN9CpH` | **oui** (vérifiée par transcription) |
+
+Toutes les prises sont ramenées au même niveau de voix au montage.
 
 Coût : 646 crédits ElevenLabs pour les deux prises, puis 238 pour la nouvelle dernière phrase. Licence : voix de la bibliothèque ElevenLabs, usage commercial couvert par l'abonnement.
 

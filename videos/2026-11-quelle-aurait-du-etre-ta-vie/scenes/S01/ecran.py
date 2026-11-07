@@ -375,6 +375,7 @@ class Interface:
     PARCOURS_S03 = [(0.0, 420, 905), (0.35, 440, 908), (1.4, 714, 256), (1.6, 714, 256), (3.3, 714, 376), (3.6, 714, 376),
                     (6.0, 760, 470), (8.9, 905, 603), (9.4, 905, 603), (12.6, 930, 640), (13.6, 1150, 772), (16.0, 1158, 776)]
     CLICS_S03 = [0.4, 1.5, 3.5, 9.4]
+    CLIC_NAITRE = 14.6
     FRAPPES_S03 = [10.7, 10.9, 11.08, 11.25, 11.42, 11.6]
     ENTREE_S03 = 12.5
 
@@ -434,12 +435,13 @@ class Interface:
         if tau >= self.ENTREE_S03:
             d.text((1205 * SS, 590 * SS), "✓", font=police("seguisym.ttf", 22), fill=teinte(c, 1.1))
         survol = tau >= 13.5
-        d.rectangle([1060 * SS, 742 * SS, 1240 * SS, 800 * SS], fill=teinte(f, 1.7 if survol else 1.35),
+        presse = self.CLIC_NAITRE <= tau < self.CLIC_NAITRE + 0.25
+        d.rectangle([1060 * SS, 742 * SS, 1240 * SS, 800 * SS], fill=teinte(f, 2.4 if presse else (1.7 if survol else 1.35)),
                     outline=teinte(c, 0.95 if survol else 0.6), width=2 * SS)
         tw = d.textlength("Naître", font=self.f_titre)
         d.text(((1150 * SS) - tw / 2, 755 * SS), "Naître", font=self.f_titre, fill=teinte(c, 1.1 if survol else 0.85))
         px, py = self._pointeur_s03(tau)
-        appuye = any(x <= tau < x + 0.2 for x in self.CLICS_S03)
+        appuye = any(x <= tau < x + 0.2 for x in self.CLICS_S03 + [self.CLIC_NAITRE])
         self._dessiner_pointeur(d, px, py, appuye)
 
     def image(self, t, duree):

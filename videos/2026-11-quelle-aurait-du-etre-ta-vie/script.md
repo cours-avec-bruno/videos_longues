@@ -49,27 +49,31 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 ## S03 · La mission
 
-[clics de souris, rien d'autre]
+[clics de souris ; la fenêtre « Nouvelle vie » s'ouvre]
 
 > Le monde d'aujourd'hui. Une vie entière.
 
 > Le site demande aussi où je suis né, pour comparer à la fin. J'écris : France.
 
-## S04 · Naître
+[on tape F-R-A-N-C-E ; le pointeur se pose sur « Naître »]
 
-[clic sur « Naître » ; la musique s'arrête]
+> Commençons.
 
-ÉCRAN : 0 AN
+## S04 · Naître (version écrite par Bruno, 07/11/2026)
 
-[une seconde de silence total]
+[clic sur « Naître » ; on plonge dans l'écran ; douze lieux du monde défilent, on les traverse]
 
-[la carte : les points s'allument partout, plus serrés en certains endroits ; un seul reste]
+> On peut atterrir n'importe où.
 
-ÉCRAN : INDE · UN VILLAGE · UN GARÇON
+[on sort dans l'espace ; la Terre tourne jusqu'à l'Inde ; la plongée ; un village du nord de l'Inde, vu du ciel]
 
-[un temps]
+> C'est ici que nous sommes arrivés.
 
-> Il s'appelle Manoj.
+[une ruelle du village]
+
+> Pas étonnant : plus de dix-sept pour cent de la population mondiale vit ici.
+
+(Le chiffre est dit, jamais écrit à l'écran. « Il s'appelle Manoj » passe en S05.)
 
 ## S05 · Les conditions de départ
 
