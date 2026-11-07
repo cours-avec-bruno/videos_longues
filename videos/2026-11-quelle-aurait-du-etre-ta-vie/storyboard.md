@@ -8,7 +8,13 @@ Procédés choisis avec le [mode d'emploi](../../docs/direction-artistique/proce
 ## Décisions déjà prises par Bruno
 
 - **La règle du jeu (06/11/2026)** : le spectateur croit jouer, mais l'opérateur prend en secret **toujours le choix le plus probable**. On ne le révèle qu'à la fin (S13), avant la réflexion sur la France et le déterminisme social. Voir la section « Règle du jeu » ci-dessous.
-- **Rien n'est filmé** : Blender pour le bureau et l'opérateur, Remotion pour l'interface, le motion design et le montage.
+- **Décisions du 07/11/2026** (elles priment sur le reste de ce document, qui sera ajusté scène par scène pendant la construction) :
+  - **on n'affiche pas les pourcentages** pendant la vie ;
+  - **tout ne se passe pas dans le bureau** : c'est le lieu de l'intro, avec quelques plans de retour ensuite. La vie de Manoj a ses propres lieux ;
+  - **Blender fabrique les scènes 3D, Higgsfield leur donne vie** (et non Remotion) ;
+  - **la mécanique de jeu est implicite** : pas d'encart « À VOUS » répété. Chaque étape de la vie est amenée par la précédente ;
+  - **plus de moments en 3D** : ils apportent vraiment quelque chose. À décider au cas par cas, à la construction.
+- **Rien n'est filmé** : Blender pour les scènes 3D (le bureau, l'opérateur, les lieux de la vie), animées par Higgsfield ; Remotion pour l'interface, le motion design, le compositing et le montage.
 - **Voix off** : l'opérateur, à la première personne.
 - **Images de la vie** : de **vraies photos** d'illustration (banques libres de droits, archives), retravaillées dans Remotion.
 - **La vidéo ne doit jamais être reconnaissable comme faite à l'IA** : aucune mention d'IA à l'écran, et les règles anti-« look IA » ci-dessous s'appliquent à toute la fabrication.
@@ -49,17 +55,19 @@ Pourquoi ce n'est pas le twist que le concept exclut : il ne s'agit pas d'une «
 ### Les indices laissés en route (pour que l'aveu soit loyal)
 
 Au second visionnage, tout doit être visible :
-- **Les pourcentages sont toujours à l'écran**, et l'option cliquée est toujours la plus haute. Personne n'y prête attention, parce que tout le monde regarde le contenu des options.
+- ~~Les pourcentages sont toujours à l'écran~~ : abandonné le 07/11/2026, on n'affiche pas les pourcentages. **Proposition** : ils n'apparaissent qu'une fois, dans l'aveu (S13), quand l'opérateur montre enfin ce qu'il voyait et que le spectateur ne voyait pas. À arbitrer par Bruno.
 - **S04** : sur la carte des naissances, le point qui reste allumé est là où les points sont le plus serrés. Ce n'est pas un hasard : c'est le pays le plus probable.
 - **S05** : « Je n'ai rien choisi de tout ça. Lui non plus. » La phrase a un double sens, qu'on ne comprend qu'à la fin.
-- **S08** : à 11 ans, l'opérateur clique sans hésiter, parce que l'option la plus probable est aussi celle que le spectateur veut (97 %). C'est la seule fois.
-- **S09** : aux quasi-égalités (le premier emploi : pêcheur 33 %, éleveur 32 %), la main de l'opérateur hésite au-dessus d'une option, puis clique sur celle qui a un point de plus, sans commentaire.
+- **S08** : à 11 ans, l'opérateur choisit sans hésiter, parce que l'option la plus probable est aussi celle que le spectateur veut. C'est la seule fois.
+- **S09** : aux quasi-égalités (le premier emploi, où la mer et les bêtes sont à un point l'une de l'autre), la main de l'opérateur hésite, puis choisit, sans commentaire.
 - L'opérateur **ne ment jamais** : il ne dit jamais « je choisis ceci parce que je préfère ». Il dit « je prends celle-là », « on continue ».
 - **S10** : les vies des 4 autres bébés n'ont rien à voir avec celle de Manoj. On ne dit pas encore pourquoi (leurs choix ont été tirés au sort par le moteur, les siens non).
 
 ### La mécanique de jeu à l'écran
 
-Un élément d'interface récurrent, **« À VOUS »** : à chaque décision, les options et leurs pourcentages restent figés 3 à 4 secondes, avec un compte à rebours discret, le temps que le spectateur choisisse dans sa tête. Puis le clic de l'opérateur. Même forme, même sens à chaque fois : « c'est votre tour ». Il apparaît aux grandes décisions seulement, pas à chaque année, pour ne pas lasser : **7 ans** (les loisirs, S07), **11 ans** (l'école, S08), **15 ans** (le premier emploi), **24 ans** (la tuberculose), **26 ans** (le mariage) et **60 ans** (la retraite), ces quatre-là en S09. Les pourcentages affichés sont les **parts observées sur 200 vies simulées nées dans les mêmes conditions** : on le dit une fois, en petit, dès le premier encart.
+**Nouvelle règle (07/11/2026)** : le jeu est **implicite**. Pas d'encart répété, pas de pourcentage, pas de « À VOUS ». La question naît de la vie elle-même : chaque étape est amenée par la précédente (un objet, un son, un geste, une phrase qui ouvre la suivante), et le spectateur se demande ce qu'il ferait sans qu'on le lui demande. La façon de le faire sera trouvée scène par scène.
+
+~~Ancienne version, gardée pour mémoire~~ : un élément d'interface récurrent, **« À VOUS »** : à chaque décision, les options et leurs pourcentages restent figés 3 à 4 secondes, avec un compte à rebours discret, le temps que le spectateur choisisse dans sa tête. Puis le clic de l'opérateur. Même forme, même sens à chaque fois : « c'est votre tour ». Il apparaît aux grandes décisions seulement, pas à chaque année, pour ne pas lasser : **7 ans** (les loisirs, S07), **11 ans** (l'école, S08), **15 ans** (le premier emploi), **24 ans** (la tuberculose), **26 ans** (le mariage) et **60 ans** (la retraite), ces quatre-là en S09. Les pourcentages affichés sont les **parts observées sur 200 vies simulées nées dans les mêmes conditions** : on le dit une fois, en petit, dès le premier encart.
 
 ### Points de méthode (tranchés le 06/11/2026)
 
@@ -78,7 +86,7 @@ Un élément d'interface récurrent, **« À VOUS »** : à chaque décision, le
 | Animation des photos | Mouvements **lents et sobres** (Ken Burns, léger recadrage). Pas de parallaxe 2.5D exagérée ni d'animation de photo par IA : les déformations trahissent tout de suite |
 | Traitement | Un même traitement « photo » pour toutes les sources (I04) : grain argentique fin, ton chaud, léger vignettage. **Pas** de lignes de balayage ni d'aberration chromatique sur ces images |
 | 3D Blender | Textures réelles (Poly Haven, CC0), imperfections (poussière, usure, câbles), optique crédible (focale 35-50 mm, profondeur de champ, flou de mouvement), grain identique aux photos. Rien de « trop parfait » ni de trop symétrique |
-| Higgsfield | Jamais d'image générée à l'écran telle quelle. Usage réservé, si besoin, à des références de travail ou à des éléments invisibles (texture de fond, recherche de lumière) |
+| Higgsfield | **Il anime les scènes 3D rendues dans Blender** (décision du 07/11/2026) : on part toujours d'une image Blender, jamais d'une image générée à partir de rien. Vigilance sur les déformations (mains, visages, objets qui changent d'une image à l'autre) : on garde des mouvements courts et sobres, et on rejette tout plan qui trahit l'IA. Pas de personnage ni de visage générés |
 | Voix | Une **voix humaine** (Bruno ou un comédien), pas de voix de synthèse. Recommandation : à confirmer (voir la question ouverte du journal) |
 | Musique | Composée par un humain : bibliothèque sous licence ou compositeur. Pas de musique générée |
 | Design | Typographies et mises en page choisies, pas de gabarits génériques. Les données et le texte à l'écran sont toujours exacts et sourcés |
@@ -89,13 +97,13 @@ Contraintes du concept : pas de twist « simulation dans la simulation » (l'ave
 
 | Élément | Choix | Procédés |
 |---|---|---|
-| Lieu principal | **Le bureau** : huis clos sobre, froid, presque administratif. C'est le seul lieu de la vidéo ; pas d'objet-concept concurrent | (pas de N04 ni de N07) |
-| Matières d'image (3) | **3D Blender** = le cadre (le bureau, l'opérateur) · **Remotion** = la machine et les données (interface, cartons, graphiques) · **vraies photos** = la vie humaine simulée | I04 |
+| Lieux | **Le bureau** (sobre, froid, presque administratif) est le lieu de l'**intro**, avec quelques plans de retour ensuite (la respiration, l'aveu, l'aube finale). **La vie de Manoj a ses lieux** : le village, la mer, la maison, la scène de théâtre, en 3D et en photos (décision du 07/11/2026) | (pas de N04 ni de N07) |
+| Matières d'image (3) | **3D** (Blender, animée par Higgsfield) = le bureau et l'opérateur, et des moments de la vie de Manoj · **Remotion** = la machine et les données (interface, graphiques) · **vraies photos** = des compléments de la vie | I04 |
 | Couleur d'accent | **Ambre chaud**, réservé à **l'humain** : la vie simulée, l'âge, le portrait. Tout le reste est froid (gris-bleu, blanc d'écran). C'est le contraste voulu par le concept : un cadre froid face à une vie humaine | — |
 | Palette par chapitre | Huis clos, donc **une lumière qui évolue** : la lumière du bureau suit l'âge de la vie simulée. Aube à la naissance, plein jour à l'âge adulte, crépuscule dans la vieillesse, nuit à la mort, puis **aube de nouveau** au bouclage | I16, I18 |
 | Registres typographiques (2) | **Monospace = dans la simulation** (interface, cartons d'âge, données du simulateur) · **Serif = hors de la simulation** (le monde réel, la France, la narration à l'écran, le titre) | H02 |
-| Transition signature | **Le carton d'âge** (T01, version sobre : sans glitch, une barre et un âge). Il signifie toujours « la vie simulée avance d'une étape ». Les âges des cartons sont ceux de la vie de Manoj : 0, 5, 11, 15, 24, 26, 60 et 75 ans. Une seule autre transition : le **noir** (T03), qui signifie toujours « on sort de la simulation » | T01, T03 |
-| Plants → payoffs | (1) Le spectateur note un chiffre (S02) → on le lui redemande (S16) · (2) L'opérateur saisit son vrai lieu de naissance, la France (S03) → la comparaison avec lui-même (S14) · (3) Le portrait en mosaïque (S05) → net à la mort (S11) : **une seule vraie photo**, pixelisée dès le départ ; on ne découvre qui était cette personne qu'à la fin · (4) Le bureau à l'aube (S02) → l'aube de nouveau (S16) · (5) **Les pourcentages et l'encart « À VOUS »** à chaque grande décision (S07-S09) → l'aveu : l'option cliquée était toujours la plus haute (S13), puis « À VOUS » revient une dernière fois sur la question finale (S16) · (6) **« Ingénieur »** : son rêve à 8 ans (S07) → repris dans l'aveu (S13) · (7) **La carte des naissances** : le point reste là où ils sont le plus denses (S04) → « pas même son pays » (S13) · (8) **L'école à 11 ans** : le bon choix, refusé (S08) → « la seule fois où j'ai choisi comme vous » (S13) | N01, N05, I13, M07, N02 |
+| Transition signature | ⚠️ À revoir (07/11/2026) : **chaque étape de la vie est amenée par la précédente**, ce qui demande des enchaînements organiques (un raccord de geste, d'objet ou de son) plutôt qu'un carton qui coupe. Le carton d'âge pourrait devenir une simple indication discrète, ou disparaître. À décider scène par scène. Version précédente : **le carton d'âge** (T01, version sobre : sans glitch, une barre et un âge). Il signifie toujours « la vie simulée avance d'une étape ». Les âges des cartons sont ceux de la vie de Manoj : 0, 5, 11, 15, 24, 26, 60 et 75 ans. Une seule autre transition : le **noir** (T03), qui signifie toujours « on sort de la simulation » | T01, T03 |
+| Plants → payoffs | (1) Le spectateur note un chiffre (S02) → on le lui redemande (S16) · (2) L'opérateur saisit son vrai lieu de naissance, la France (S03) → la comparaison avec lui-même (S14) · (3) Le portrait en mosaïque (S05) → net à la mort (S11) : **une seule vraie photo**, pixelisée dès le départ ; on ne découvre qui était cette personne qu'à la fin · (4) Le bureau à l'aube (S02) → l'aube de nouveau (S16) · (5) **Les décisions de la vie, posées sans le dire** (S07-S09) → l'aveu : l'opérateur révèle qu'il a toujours pris l'option la plus fréquente (S13), et la question finale revient au spectateur (S16) · (6) **« Ingénieur »** : son rêve à 8 ans (S07) → repris dans l'aveu (S13) · (7) **La carte des naissances** : le point reste là où ils sont le plus denses (S04) → « pas même son pays » (S13) · (8) **L'école à 11 ans** : le bon choix, refusé (S08) → « la seule fois où j'ai choisi comme vous » (S13) | N01, N05, I13, M07, N02 |
 | Son | Clavier et ambiance du bureau au début · musique discrète pendant la simulation · **3 silences d'une seconde** (le pays, la mort, « 1 sur 207 ») · une respiration après la mort · fin musicale | S01, M05, S05, S02 |
 | **Signatures (5)** | **T01** cartons d'âge · **I13** le visage qui se précise · **I16 + I18** la lumière du bureau qui suit la vie · **M04** les années qui défilent · **N05** le vrai lieu de naissance | |
 

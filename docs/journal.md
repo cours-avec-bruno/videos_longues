@@ -164,6 +164,15 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Quand toutes les scènes existent, on monte une **V1 globale**, qu'on retouche ensuite dans son ensemble.
 - La variante ambitieuse (conclusion, S13) est traitée à la fin.
 
+## 2026-11-07 · Retours de Bruno sur le storyboard
+
+- On n'affiche pas les pourcentages. Proposition en attente : les montrer une seule fois, dans l'aveu.
+- Tout ne se passe pas dans le bureau : c'est l'intro, avec quelques plans de retour. La vie de Manoj a ses lieux.
+- Blender fait les scènes 3D, Higgsfield leur donne vie (pas Remotion). Règle ajoutée à `CLAUDE.md`, section 5.
+- Le jeu est implicite : pas d'« À VOUS » répété, chaque étape est amenée par la précédente.
+- Plus de moments en 3D.
+- Tout cela s'appliquera au cas par cas, scène par scène, pendant la construction. Le storyboard et le script portent l'avertissement en tête.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

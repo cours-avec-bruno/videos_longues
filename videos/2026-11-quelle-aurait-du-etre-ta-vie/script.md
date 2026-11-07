@@ -10,6 +10,8 @@ Conventions :
 
 ## Comment cette voix est écrite
 
+⚠️ **Décisions du 07/11/2026, à appliquer scène par scène pendant la construction** : on n'affiche plus les pourcentages, et il n'y a plus d'encart « À VOUS » répété. Le jeu devient implicite, et chaque étape de la vie est amenée par la précédente. Les lignes `ÉCRAN : À VOUS · …` ci-dessous sont donc des repères de travail, pas du texte à l'écran. La phrase de S02 « Vous aurez trois secondes » est à revoir dans le même sens.
+
 L'opérateur est un homme assis à côté de nous. Au début, il fait un travail. Il ne commente pas, il n'explique pas, il ne donne pas de leçon. On l'entend s'attacher à Manoj sans jamais le dire.
 
 **Le spectateur prend la place de Manoj.** À chaque « À VOUS », la voix passe à la deuxième personne (« Vous avez onze ans »), comme le simulateur. Pendant trois secondes, c'est le spectateur qui a onze ans, quinze ans, soixante ans. La question qu'il se pose ne lui est presque jamais posée en clair. Elle vient d'un fait placé juste avant le compte à rebours : ce que coûte l'hôpital, ce que l'école n'a pas eu le temps de donner, la dette qui reste. Deux fois seulement, une vraie question lui est adressée, à lui et pas à Manoj (11 ans, 60 ans). Elle porte sur sa propre vie.

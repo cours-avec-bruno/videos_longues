@@ -51,6 +51,7 @@ Chaque scène peut avoir sa propre méthode de fabrication, indiquée dans sa fi
 - **Blender** : modélisation 3D, environnements, objets, simulations, éclairage, matériaux et mouvements de caméra.
 - **Higgsfield et outils génératifs** : création de plans, d'images et de séquences vidéo à partir de prompts et de références.
 - **Approche hybride** : combinaison de plusieurs outils, par exemple Blender pour créer un plan 3D puis Remotion pour ajouter des éléments graphiques.
+- **Par défaut pour la 3D** (décision de Bruno, 07/11/2026) : Blender fabrique la scène, Higgsfield lui donne vie (image vers vidéo), à partir des rendus Blender. Remotion n'anime pas la 3D : il sert à l'interface, au motion design, au compositing et au montage.
 
 Quand je te demande de construire une scène, prends en charge sa réalisation de manière autonome dans le cadre défini.
 
