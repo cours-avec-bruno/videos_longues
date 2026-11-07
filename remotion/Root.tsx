@@ -3,6 +3,7 @@ import {Composition, Folder} from 'remotion';
 import {SPECS, sec} from '../shared/remotion/specs';
 import {TestPipeline} from '../shared/remotion/TestPipeline';
 import {BibliothequeProcedes} from '../shared/remotion/BibliothequeProcedes';
+import {Compositions as QuelleAuraitDuEtreTaVie} from '../videos/2026-11-quelle-aurait-du-etre-ta-vie/remotion/compositions';
 
 /**
  * Point d'entrée Remotion du studio.
@@ -27,6 +28,7 @@ export const RemotionRoot: React.FC = () => {
           {...SPECS}
         />
       </Folder>
+      <QuelleAuraitDuEtreTaVie />
     </>
   );
 };

@@ -8,7 +8,7 @@
 | **Procédé principal** | N01 : le spectateur note la part de sa vie qu'il pense avoir choisie ; toute la vidéo y répond |
 | **Procédés secondaires** | I18, I16 |
 | **Statut** | repensée le 07/11/2026 pour le nouveau décor, à valider par Bruno |
-| **Production** | à faire |
+| **Production** | en cours : images clés, P02, P03, P04 et la question faits ; P01 et P05 attendent la génération (49 crédits, à valider) |
 
 ## Intention
 
@@ -54,6 +54,10 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 
 ## Fabrication
 
-Notes techniques : fichiers sources, prompts (`../../prompts/`), réglages, rendus.
+- Images clés : `plans.py` (Blender, ouvre la scène de S01 ; ajoute la lampe qui s'allume, la silhouette assise de dos, une caméra par plan). Silhouette : choix de Bruno (07/11/2026).
+- L'écran : même interface que S01 (`../S01/ecran.py`, réutilisable avec `--t0` pour la continuité du compteur, `--image` pour exporter l'image posée sur la dalle dans Blender).
+- P03 : `compteur.py`. P06-P07 : `Question.tsx` (Remotion, composition `S02-Question`).
+- P01 et P05 : Higgsfield (prompts et devis dans `../../prompts/S02.md`).
+- La voix dit encore « sur cent » ; l'écran n'affiche aucun chiffre (curseur de « rien » à « tout »).
 
 ## Points à revoir

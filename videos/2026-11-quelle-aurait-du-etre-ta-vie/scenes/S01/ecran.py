@@ -17,20 +17,29 @@ Usage (sur le PC) :
 Dépend de numpy, opencv-python-headless, pillow, ffmpeg.
 """
 import argparse
+import os
 import subprocess
 
 import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-ap = argparse.ArgumentParser()
-ap.add_argument("--video", required=True)
-ap.add_argument("--sortie", required=True)
-ap.add_argument("--controle", default="", help="dossier où écrire quelques images de contrôle")
-ap.add_argument("--portraits", default="../../medias/S01/portraits",
-                help="dossier des deux portraits robots (portrait_1.png : vie terminée, portrait_2.png : vie en cours)")
-A = ap.parse_args()
-PORTRAITS = [f"{A.portraits}/portrait_1.png", f"{A.portraits}/portrait_2.png"]
+ICI = os.path.dirname(os.path.abspath(__file__))
+PORTRAITS = [os.path.join(ICI, "..", "..", "medias", "S01", "portraits", f"portrait_{i}.png") for i in (1, 2)]
+FOND_DEFAUT, CLAIR_DEFAUT = (38, 47, 60), (167, 176, 188)   # relevés sur l'écran de S01
+
+
+def arguments():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--video", help="vidéo dont on remplace l'écran")
+    ap.add_argument("--sortie", help="vidéo (ou image PNG avec --image)")
+    ap.add_argument("--controle", default="", help="dossier où écrire quelques images de contrôle")
+    ap.add_argument("--portraits", default="", help="dossier des deux portraits robots (portrait_1.png, portrait_2.png)")
+    ap.add_argument("--t0", type=float, default=0.0, help="temps de l'interface au début du plan (s) : continuité entre plans")
+    ap.add_argument("--duree-vie", type=float, default=0.0, help="durée (s) pendant laquelle la vie en cours se dessine ; 0 = durée du plan")
+    ap.add_argument("--image", type=float, default=None, help="exporte seulement l'interface au temps donné (PNG), aux couleurs de S01")
+    return ap.parse_args()
+
 
 W, H = 1920, 1080
 FPS = 24
@@ -270,6 +279,14 @@ class Interface:
 
 # ---------------------------------------------------------------- 3. incrustation
 def principal():
+    global PORTRAITS
+    if A.portraits:
+        PORTRAITS = [f"{A.portraits}/portrait_1.png", f"{A.portraits}/portrait_2.png"]
+    if A.image is not None:
+        ui = Interface(FOND_DEFAUT, CLAIR_DEFAUT)
+        ui.image(A.image, A.duree_vie or 10.0).resize((UW, UH), Image.LANCZOS).save(A.sortie)
+        print("écrit :", A.sortie)
+        return
     G = lire_gris(A.video)
     N = len(G)
     duree = N / FPS
@@ -304,10 +321,10 @@ def principal():
             fond = tuple(int(x) for x in fond_bgr[::-1]); clair = tuple(int(x) for x in clair_bgr[::-1])
             print("couleurs relevées : fond", fond, "clair", clair)
             ui = Interface(fond, clair)
-        img = ui.image(k / FPS, duree)
+        img = ui.image(A.t0 + k / FPS, A.duree_vie or duree)
         q = dalles[k]
         larg = np.hypot(*(q[1] - q[0]))
-        cible = int(min(UW, max(160, larg * 1.6)))
+        cible = int(min(UW * SS, max(160, larg * 1.6)))
         src = np.asarray(img.resize((cible, int(cible * UH / UW)), Image.LANCZOS))[:, :, ::-1].astype(np.float32)
         sh, sw = src.shape[:2]
         M = cv2.getPerspectiveTransform(np.float32([[0, 0], [sw, 0], [sw, sh], [0, sh]]), q.astype(np.float32))
@@ -324,11 +341,13 @@ def principal():
         sortie = f * (1 - a) + proj * a + 0.12 * halo * (1 - a)
         sortie += rng.normal(0, 1.2, sortie.shape).astype(np.float32) * a
         ecr.stdin.write(np.clip(sortie, 0, 255).astype(np.uint8).tobytes())
-        if A.controle and k in (0, 60, 120, 180, 239):
+        if A.controle and k in (0, 60, 120, 180, 239, N - 1):
             cv2.imwrite(f"{A.controle}/ecran_{k:03d}.png", np.clip(sortie, 0, 255).astype(np.uint8))
-            img.save(f"{A.controle}/interface.png") if k == 239 else None
+            img.save(f"{A.controle}/interface.png") if k == N - 1 else None
     ecr.stdin.close(); ecr.wait(); lec.wait()
     print("écrit :", A.sortie)
 
 
-principal()
+if __name__ == "__main__":
+    A = arguments()
+    principal()
