@@ -8,6 +8,7 @@
 | **Procédé principal** | N15 : la réaction spontanée de l'opérateur rend humain le moment où le bon choix ne suffit pas |
 | **Procédés secondaires** | T01, I13 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
+| **Production** | à faire |
 
 ## Intention
 

@@ -8,6 +8,7 @@
 | **Procédé principal** | M03 : de courtes grappes d'images sur les événements, entre les quatre « À VOUS » |
 | **Procédés secondaires** | T01, I13 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
+| **Production** | à faire |
 
 ## Intention
 

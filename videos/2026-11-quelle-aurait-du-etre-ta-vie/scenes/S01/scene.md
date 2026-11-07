@@ -8,6 +8,7 @@
 | **Procédé principal** | H06 : contrat de confiance qui distingue d'emblée le simulé (vie, images) du réel |
 | **Procédés secondaires** | — |
 | **Statut** | à valider (proposition de storyboard) |
+| **Production** | à faire |
 
 ## Intention
 

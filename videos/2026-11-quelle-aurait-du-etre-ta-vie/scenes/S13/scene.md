@@ -8,6 +8,7 @@
 | **Procédé principal** | N02 : le comportement du spectateur pendant la vidéo (jouer, croire choisir) devient la réponse |
 | **Procédés secondaires** | M03 (la rafale des écrans de décision), H02 |
 | **Statut** | à valider (ajoutée le 06/11/2026, après la décision de Bruno sur la règle secrète) |
+| **Production** | à faire |
 
 ## Intention
 

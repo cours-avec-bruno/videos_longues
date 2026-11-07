@@ -8,6 +8,7 @@
 | **Procédé principal** | I03 : même forme, même sens qu'en S10 (comparer des trajectoires), cette fois en France |
 | **Procédés secondaires** | I05, N11 |
 | **Statut** | à valider (proposition de storyboard) |
+| **Production** | à faire |
 
 ## Intention
 

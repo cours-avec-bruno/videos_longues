@@ -8,6 +8,7 @@
 | **Procédé principal** | T01 : la première apparition du carton d'âge fixe son sens (une étape de la vie simulée) |
 | **Procédés secondaires** | S01, I15 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
+| **Production** | à faire |
 
 ## Intention
 

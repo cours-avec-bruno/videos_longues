@@ -180,6 +180,13 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - **L'essai ne dure que 7 jours** : on ne le démarre qu'une fois la V1 prête, avec les rendus des scènes exportés en haute qualité, pour en tirer le maximum.
 - Écartés : DaVinci Resolve (excellent, mais sans connecteur pour Claude), Palmier Pro (macOS uniquement, version 0.6).
 
+## 2026-11-07 · Timeline de suivi
+
+- Demande de Bruno : une timeline horizontale pour voir chaque scène, le script et tout ce qui est prévu, et savoir ce qui est en cours.
+- Outil : `shared/outils/timeline/generer.py` (gabarit `gabarit.html`). La page est générée à partir du storyboard, des fiches, du script et de `suivi.json`. Elle montre l'avancement global, la scène en cours, les durées, la répartition des matières, les points à appliquer et à décider, et une timeline à pistes (scènes, plans, voix, son) à l'échelle du temps. Un clic sur une scène affiche ses plans et sa voix off.
+- Chaque fiche a maintenant une ligne **Production** : à faire, en cours, à retravailler, validée.
+- Page publiée (privée) : https://claude.ai/artifact/EnQAHrMvEwDgaZ6moaq4Hh. Elle est republiée au même lien après chaque étape.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

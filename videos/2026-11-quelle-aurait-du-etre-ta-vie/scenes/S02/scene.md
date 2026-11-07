@@ -8,6 +8,7 @@
 | **Procédé principal** | N01 : le spectateur note la part de sa vie qu'il pense avoir choisie ; toute la vidéo y répond |
 | **Procédés secondaires** | I18, I16 |
 | **Statut** | à valider (proposition de storyboard) |
+| **Production** | à faire |
 
 ## Intention
 

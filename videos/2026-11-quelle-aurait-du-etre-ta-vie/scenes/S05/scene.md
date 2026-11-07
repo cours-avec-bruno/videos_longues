@@ -8,6 +8,7 @@
 | **Procédé principal** | I13 : le portrait en très gros pixels (la personne n'existe presque pas encore), un cran de netteté à chaque étape |
 | **Procédés secondaires** | I04 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
+| **Production** | à faire |
 
 ## Intention
 

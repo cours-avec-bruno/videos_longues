@@ -8,6 +8,7 @@
 | **Procédé principal** | I04 : la vie en vraies photos, unifiées en une matière chaude qui tranche avec le bureau froid |
 | **Procédés secondaires** | T01 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
+| **Production** | à faire |
 
 ## Intention
 

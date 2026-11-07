@@ -39,6 +39,8 @@ Le travail s'organise généralement autour des étapes suivantes. Elles constit
 
 Ces étapes peuvent se préciser progressivement. Aide-moi à structurer les idées, signale les incohérences et suggère des améliorations au fil du processus. Ne transforme pas ce workflow en procédure rigide : certaines scènes nécessiteront une préparation approfondie, d'autres pourront être réalisées directement.
 
+**Suivi visuel** : chaque vidéo a une **timeline de suivi** (`videos/<slug>/suivi/timeline.html`), générée par `shared/outils/timeline/generer.py` à partir du storyboard, des fiches, du script et de `videos/<slug>/suivi.json`, puis publiée en page web (Artifact) pour Bruno. Après chaque étape (une scène commencée, retravaillée ou validée, un arbitrage), mets à jour la ligne **Production** de la fiche et `suivi.json` (scène en cours, prochaine, points à appliquer et à décider), régénère la page et republie-la au même lien.
+
 Chaque scène a sa **fiche scène** (`videos/<slug>/scenes/<id>/scene.md`, modèle dans `videos/_modele/`). Elle regroupe en un seul endroit l'intention, le script, le cadrage, le procédé, le mode de fabrication et le statut. C'est la référence quand on construit ou reprend une scène.
 
 **Procédés** : le studio dispose d'un catalogue de procédés validés par Bruno (`docs/direction-artistique/procedes/`). Au storyboard (skill `storyboard-procedes`), on fixe d'abord la **grammaire** de la vidéo. Ensuite, chaque scène reçoit une **fonction**, puis un **procédé principal mûrement choisi et justifié** : je propose les 2 ou 3 plus pertinents (couche 1 d'abord), et Bruno arbitre. Ils sont tous bons, mais leur usage doit rester **cohérent et raisonné** : une fonction par scène, 3 à 5 signatures par vidéo, une même forme garde le même sens, pas d'empilement. L'abondance ne doit jamais devenir une source de confusion.
@@ -131,7 +133,7 @@ shared/                    ressources communes à toutes les vidéos
   remotion/                composants, specs et utilitaires Remotion
   blender/                 scripts Python, modèles et scènes types
   assets/                  polices, musiques, effets sonores, textures
-  outils/                  outils du studio (ex. analyser-reference)
+  outils/                  outils du studio (ex. analyser-reference, timeline de suivi)
 videos/
   _modele/                 gabarit à copier pour démarrer une vidéo
   <slug>/                  une vidéo (ex. 2026-11-pourquoi-on-procrastine)

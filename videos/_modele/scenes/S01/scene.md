@@ -8,6 +8,7 @@
 | **Procédé principal** | un identifiant du catalogue (`docs/direction-artistique/procedes/catalogue.md`), et **pourquoi** en une phrase |
 | **Procédés secondaires** | 2 au maximum |
 | **Statut** | à faire · en cours · à valider · validée |
+| **Production** | à faire · en cours · à retravailler · validée |
 
 ## Intention
 

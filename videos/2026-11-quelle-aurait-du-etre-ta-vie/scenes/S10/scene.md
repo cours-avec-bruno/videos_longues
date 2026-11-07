@@ -8,6 +8,7 @@
 | **Procédé principal** | I03 : un seul plan où les 5 trajectoires (les 4 autres bébés nés à la même seconde) se construisent ensemble sur la même frise d'âge |
 | **Procédés secondaires** | N11 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
+| **Production** | à faire |
 
 ## Intention
 

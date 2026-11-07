@@ -8,6 +8,7 @@
 | **Procédé principal** | M05 : 15 s sans voix pour laisser décanter, comme le demande le concept |
 | **Procédés secondaires** | T03 |
 | **Statut** | à valider (proposition de storyboard) |
+| **Production** | à faire |
 
 ## Intention
 

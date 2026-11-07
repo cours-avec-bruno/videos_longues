@@ -8,6 +8,7 @@
 | **Procédé principal** | I13 (payoff) : le portrait est enfin net, car on ne connaît vraiment quelqu'un qu'à la fin |
 | **Procédés secondaires** | T01, S01 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
+| **Production** | à faire |
 
 ## Intention
 

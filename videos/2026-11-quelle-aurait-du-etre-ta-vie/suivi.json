@@ -1,0 +1,29 @@
+{
+  "titre": "Quelle aurait dû être ta vie ?",
+  "en_cours": null,
+  "prochaine": "S01",
+  "etapes": [
+    {"nom": "Concept et sources", "etat": "fait"},
+    {"nom": "Partie jouée (Manoj)", "etat": "fait"},
+    {"nom": "Storyboard", "etat": "fait"},
+    {"nom": "Script v1", "etat": "fait"},
+    {"nom": "Construction des scènes", "etat": "en cours"},
+    {"nom": "V1 globale (Remotion)", "etat": "à faire"},
+    {"nom": "Finition (Premiere Pro)", "etat": "à faire"},
+    {"nom": "Export et publication", "etat": "à faire"}
+  ],
+  "a_appliquer": [
+    "Pas de pourcentages à l'écran, jamais",
+    "Pas d'encart « À VOUS » : le jeu est implicite, chaque étape est amenée par la précédente",
+    "Le bureau est l'intro, avec quelques retours ; la vie de Manoj a ses lieux",
+    "Blender fait la 3D, Higgsfield l'anime ; plus de moments en 3D",
+    "Cartons d'âge à revoir au cas par cas"
+  ],
+  "a_decider": [
+    "Garder ou couper le mensonge des 39 ans (S09)",
+    "Variante ambitieuse dans l'aveu (S13), à la fin du travail",
+    "Chiffres de l'Insee à vérifier (S15)",
+    "La voix : Bruno ou un comédien"
+  ],
+  "interludes_S06_apres": ["S05", "S07", "S08", "S09"]
+}

@@ -8,6 +8,7 @@
 | **Procédé principal** | N05 : le vrai lieu de naissance saisi (la France), « gardez ça en tête », payé en S14 |
 | **Procédés secondaires** | H02 |
 | **Statut** | à valider (proposition de storyboard) |
+| **Production** | à faire |
 
 ## Intention
 

@@ -8,6 +8,7 @@
 | **Procédé principal** | I11 : un mur de 207 noms de pays tirés au sort, où la France n'apparaît qu'une fois ; « 1 sur 207 » devient visible |
 | **Procédés secondaires** | S01, I15 |
 | **Statut** | à valider (proposition de storyboard) |
+| **Production** | à faire |
 
 ## Intention
 
