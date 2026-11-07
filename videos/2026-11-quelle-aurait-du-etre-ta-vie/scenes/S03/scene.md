@@ -8,9 +8,12 @@
 | **Procédé principal** | N05 : le vrai lieu de naissance saisi (la France), « gardez ça en tête », payé en S14 |
 | **Procédés secondaires** | H02 |
 | **Statut** | à valider (proposition de storyboard) |
-| **Production** | V1 faite avec S04 (`S03_S04_v1.mp4`), à valider par Bruno |
+| **Production** | réduite à « Commençons » et au clic sur « Naître » (V2, avec S04 : `S03_S04_v2.mp4`) |
 
 ## Intention
+
+**Bruno (07/11/2026) : l'écran des réglages est retiré.** On va directement à « Commençons » : la fenêtre « Nouvelle vie » est déjà remplie (on y lit encore « France »), le pointeur se pose sur « Naître », clic, on plonge. Conséquence : la saisie de la France n'est plus montrée ; le rappel prévu en S14 est à repenser.
+
 
 **Refaite le 07/11/2026** : on reste sur l'écran, dans la suite de S02. La fenêtre « Nouvelle vie » s'ouvre : il coche « le monde d'aujourd'hui », « une vie entière » ; une ligne dit que le lieu de naissance est tiré au sort comme les naissances dans le monde réel (sans chiffre) ; il tape « France » dans « Et vous, où êtes-vous né ? ». Le pointeur se pose sur « Naître » : « Commençons. » L'histogramme en pourcentages et l'insert de la main sont abandonnés (règle : pas de pourcentage à l'écran ; pas de nouveau rendu).
 

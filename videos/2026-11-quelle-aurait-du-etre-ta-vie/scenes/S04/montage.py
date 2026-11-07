@@ -31,8 +31,10 @@ SONS = os.path.join(M, "sons", "epidemic")
 W, H, FPS = 1920, 1080, 24
 
 # ---------------------------------------------------------------- le déroulé (temps en secondes)
-T_CLIC = 14.6                  # clic sur « Naître »
-T_MONDE = 15.2                 # premier lieu
+# Bruno (07/11/2026) : on retire l'écran des réglages, on va directement à « Commençons ».
+T0 = 13.0                      # on reprend l'écran de S03 à 13 s : le pointeur arrive sur « Naître »
+T_CLIC = 14.6 - T0             # clic sur « Naître »
+T_MONDE = 15.2 - T0            # premier lieu
 LIEUX = [                      # (fichier, début dans la source, vitesse) : de jour, de nuit, près, loin
     ("tokyo_6574285.mp4", 6.0, 1.0),
     ("paris_34558256.mp4", 4.0, 1.6),
@@ -89,7 +91,7 @@ def zoom(img, z, flou=0.0):
 # ---------------------------------------------------------------- les plans, chacun avec son début et sa fin
 plans = []      # (début, fin, images, poussée)  ; la poussée = zoom lent continu pendant le plan
 DECAL = int(T_CLIC * FPS) - 4          # avant la plongée, l'écran passe tel quel (lu en flux, sans tout charger)
-ecran = lire_extrait(os.path.join(M, "S03", "S03_image.mp4"), DECAL / FPS, 1.0, T_MONDE - DECAL / FPS + 0.1)
+ecran = lire_extrait(os.path.join(M, "S03", "S03_image.mp4"), T0 + DECAL / FPS, 1.0, T_MONDE - DECAL / FPS + 0.1)
 plans.append((0.0, T_MONDE, ecran, 0.0))
 t = T_MONDE
 for (f, deb, vit), d in zip(LIEUX, DUREES):
@@ -133,7 +135,7 @@ ecr = None if SON_SEUL else subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f
                         os.path.join(M, "S04", "S03_S04_image.mp4")], stdin=subprocess.PIPE)
 rng = np.random.default_rng(9)
 if not SON_SEUL:
-  flux = subprocess.Popen(["ffmpeg", "-v", "error", "-i", os.path.join(M, "S03", "S03_image.mp4"), "-frames:v", str(DECAL),
+  flux = subprocess.Popen(["ffmpeg", "-v", "error", "-ss", str(T0), "-i", os.path.join(M, "S03", "S03_image.mp4"), "-frames:v", str(DECAL),
                          "-f", "rawvideo", "-pix_fmt", "bgr24", "-"], stdout=subprocess.PIPE)
   for n in range(DECAL):
     ecr.stdin.write(flux.stdout.read(W * H * 3))
@@ -197,18 +199,18 @@ mix += pièce * env_piece[:, None]
 # 2. la souris et le clavier pendant les réglages (temps de la fenêtre = temps de la scène)
 clics = lire_audio(os.path.join(SONS, "souris_clics.wav"), mono=False).astype(np.float64)
 ons_c = detecter_pas(os.path.join(SONS, "souris_clics.wav"), seuil_db=-25, ecart_min=0.3)
-for j_, tc in enumerate([0.4, 1.5, 3.5, 9.4, T_CLIC]):
+for j_, tc in enumerate([T_CLIC]):
     o = ons_c[(j_ * 5 + 3) % len(ons_c)]
     s_ = clics[int((o - 0.005) * SR):int((o + 0.18) * SR)]
     poser(s_ * fondu(len(s_), 0.002, 0.06)[:, None], tc - 0.005, db(-8 if tc != T_CLIC else -5))
 tapis = lire_audio(os.path.join(SONS, "souris_tapis.wav"), mono=False).astype(np.float64)
-for j_, (d0, d1) in enumerate([(0.0, 0.35), (0.6, 1.4), (1.8, 3.3), (4.0, 8.9), (12.6, 13.6)]):
+for j_, (d0, d1) in enumerate([(0.0, 13.6 - T0)]):
     n_ = int((d1 - d0) * SR); o = 1.0 + j_ * 1.7
     s_ = tapis[int(o * SR):int(o * SR) + n_]
     poser(np.pad(s_, ((0, n_ - len(s_)), (0, 0))) * fondu(n_, 0.08, 0.15)[:, None], d0, db(-16))
 clav = lire_audio(os.path.join(SONS, "clavier_lent.wav"), mono=False).astype(np.float64)
 ons_k = detecter_pas(os.path.join(SONS, "clavier_lent.wav"), seuil_db=-22, ecart_min=0.15)
-for j_, tk in enumerate([10.7, 10.9, 11.08, 11.25, 11.42, 11.6, 12.5]):
+for j_, tk in enumerate([]):
     o = ons_k[(j_ * 4 + 2) % len(ons_k)]
     s_ = clav[int((o - 0.005) * SR):int((o + 0.12) * SR)]
     poser(s_ * fondu(len(s_), 0.002, 0.04)[:, None], tk - 0.005, db(-9 if j_ < 6 else -6))
@@ -243,15 +245,11 @@ mix += village * env_v[:, None]
 # 6. la voix
 VOIX_DB = -3.5
 phrases = [
-    ("S03_prise1.mp3", (0.00, 1.31), 1.6),      # Le monde d'aujourd'hui.
-    ("S03_prise1.mp3", (1.59, 3.10), 3.6),      # Une vie entière.
-    ("S03_prise1.mp3", (3.77, 7.22), 6.0),      # Le site demande aussi où je suis né, pour comparer à la fin.
-    ("S03_prise1.mp3", (7.54, 8.27), 10.0),     # J'écris :
-    ("S03_prise1.mp3", (8.54, 9.45), 11.0),     # France.
-    ("S04_prise2.mp3", (0.00, 0.66), 13.85),    # Commençons.
-    ("S04_prise2.mp3", (1.02, 3.24), T_MONDE + 0.2),   # On peut atterrir n'importe où.
-    ("S04_prise2.mp3", (3.45, 4.88), T_VILLAGE + 0.5),  # C'est ici que nous sommes arrivés.
-    ("S04_prise2.mp3", (5.28, 9.44), T_VILLAGE + VILLAGE[0][3] + 0.4),  # Pas étonnant : plus de dix-sept pour cent...
+    # prise retenue et verrouillée par Bruno (S04b_prise1), générée dans la continuité du texte de S02
+    ("S04b_prise1.mp3", (6.64, 7.77), 0.35),                 # Commençons.
+    ("S04b_prise1.mp3", (8.31, 9.94), T_MONDE + 0.2),        # On peut atterrir n'importe où.
+    ("S04b_prise1.mp3", (10.62, 12.09), T_VILLAGE + 0.5),    # C'est ici que nous sommes arrivés.
+    ("S04b_prise1.mp3", (12.20, 16.96), T_VILLAGE + VILLAGE[0][3] + 0.4),  # Pas étonnant : plus de dix-sept pour cent...
 ]
 voix = np.zeros(Ns); cache = {}
 for f_, (a, b), pos in phrases:
@@ -271,7 +269,7 @@ mix *= fondu(Ns, 0.05, 0.4)[:, None]
 GAIN = float(open(os.path.join(M, "S01", "gain_mix.txt")).read())
 wav = os.path.join(M, "S04", "S03_S04_son.wav")
 print("sonie avant / gain :", ecrire_normalise(mix, wav, gain_db=GAIN))
-final = os.path.join(M, "S04", "S03_S04_v1.mp4")
+final = os.path.join(M, "S04", "S03_S04_v2.mp4")
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", os.path.join(M, "S04", "S03_S04_image.mp4"), "-i", wav, "-map", "0:v",
                 "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-shortest",
                 "-movflags", "+faststart", final], check=True)

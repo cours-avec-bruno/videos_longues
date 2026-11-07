@@ -49,15 +49,11 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 ## S03 · La mission
 
-[clics de souris ; la fenêtre « Nouvelle vie » s'ouvre]
-
-> Le monde d'aujourd'hui. Une vie entière.
-
-> Le site demande aussi où je suis né, pour comparer à la fin. J'écris : France.
-
-[on tape F-R-A-N-C-E ; le pointeur se pose sur « Naître »]
+[la fenêtre « Nouvelle vie » est déjà remplie ; le pointeur se pose sur « Naître »]
 
 > Commençons.
+
+(Retiré le 07/11/2026, décision de Bruno : « Le monde d'aujourd'hui. Une vie entière. Le site demande aussi où je suis né, pour comparer à la fin. J'écris : France. »)
 
 ## S04 · Naître (version écrite par Bruno, 07/11/2026)
 

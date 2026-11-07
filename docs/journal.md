@@ -246,3 +246,4 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Son : traversées, grondement jusqu'à l'espace, vrai enregistrement d'un village d'Uttar Pradesh. Toutes les prises de voix ramenées au même niveau.
 - Abandonnés : le carton « 0 AN », la carte des naissances, « INDE · UN VILLAGE · UN GARÇON » ; « Il s'appelle Manoj » passe en S05.
 - Livré : `medias/S04/S03_S04_v1.mp4` (37 s) ; S01 à S04 à la suite : `medias/S01_a_S04_apercu.mp4` (1 min 21).
+- Retours de Bruno sur S03-S04 : l'écran des réglages est retiré (on va directement à « Commençons ») ; la voix de S04 sonnait différente (plus aiguë, mesurée à 112 Hz contre 92 Hz en S02) → phrases regénérées dans la continuité du texte de S02, prise choisie et **verrouillée** par Bruno ; raccord S01 → S02 rendu fluide (même cadrage au début de « on s'assoit », fondu d'un quart de seconde, plus de retombée du son en fin de S01). Livré : `medias/S01_a_S04_apercu_v2.mp4` (1 min 08).

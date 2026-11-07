@@ -72,7 +72,7 @@ def fondu(n, entree=0.0, sortie=0.0):
 
 # 1. ambiance du grand hall
 amb = stereo(os.path.join(SONS, "ambiance_grand_hall.wav"), 40.0, N)
-amb *= db(-13) * fondu(N, 1.5, 0.4)[:, None]
+amb *= db(-13) * fondu(N, 1.5, 0.0)[:, None]
 mix += amb
 
 # 2. bourdonnements : ils montent et s'éclaircissent à l'approche (lointain = sourd, proche = net)
@@ -81,7 +81,7 @@ for fichier, gain, debut in (("bourdonnement_ordinateur.wav", -17, 30.0), ("bour
     b = stereo(os.path.join(SONS, fichier), debut, N)
     sourd = passe_bas(b, 500.0)
     b = sourd * (1 - proche)[:, None] + b * proche[:, None]
-    b *= (db(gain) * (0.12 + 0.88 * proche) * fondu(N, 0.8, 0.3))[:, None]
+    b *= (db(gain) * (0.12 + 0.88 * proche) * fondu(N, 0.8, 0.0))[:, None]
     mix += b
 
 # 3. les pas

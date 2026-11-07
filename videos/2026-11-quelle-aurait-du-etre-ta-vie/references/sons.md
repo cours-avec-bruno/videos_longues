@@ -32,8 +32,9 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `voix/S02_aventure_prise1.mp3` | S02 (dernière phrase) | eleven_v3 | `4BD3sDzImlooElDfaLpB` | **oui** : « Vous allez m'accompagner dans cette aventure. », générée avec la phrase précédente pour garder l'intonation |
 | `voix/S02_aventure_prise2.mp3` | S02 (dernière phrase) | eleven_v3 | `pqn9DxmUP9pbR0GSYiTX` | non |
 
-| `voix/S03_prise1.mp3` | S03 | eleven_v3 | `dIxgGPpYRJi2AoEbTmTn` | **oui** |
-| `voix/S04_prise2.mp3` | S03-S04 (« Commençons… », l'arrivée) | eleven_v3 | `iq4iwSrsMNJTCGRN9CpH` | **oui** (vérifiée par transcription) |
+| `voix/S03_prise1.mp3` | S03 (réglages) | eleven_v3 | `dIxgGPpYRJi2AoEbTmTn` | non (l'écran des réglages est retiré) |
+| `voix/S04_prise2.mp3` | S03-S04 | eleven_v3 | `iq4iwSrsMNJTCGRN9CpH` | non (voix trop aiguë par rapport à S02, remarqué par Bruno) |
+| `voix/S04b_prise1.mp3` | S03-S04 (« Commençons… », l'arrivée), générée dans la continuité du texte de S02 | eleven_v3 | `zjedtRiTbwo6WtG2YC0O` | **oui, verrouillée par Bruno (07/11/2026)** |
 
 Toutes les prises sont ramenées au même niveau de voix au montage.
 
