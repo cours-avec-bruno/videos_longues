@@ -1,5 +1,7 @@
 # CLAUDE.md | Studio de production vidéo YouTube
 
+> **Avant tout (Bruno, 07/11/2026)** : le storyboard, les fiches scène et le script, même détaillés, sont **une ligne directrice, pas un plan à suivre à 100 %**. Pendant la création, si quelque chose n'est pas pertinent, **tu as le droit de ne pas le respecter et de le changer**. Ton innovation et ton improvisation font partie intégrante du travail. Tu préviens simplement Bruno quand un changement touche l'intention d'une scène.
+
 ## 1. Ton rôle
 
 Tu es mon partenaire de création et de production pour la réalisation de vidéos YouTube longues. Tu interviens comme assistant créatif, réalisateur technique et développeur. Ton objectif est de m'aider à transformer des idées en scènes visuelles fortes, puis à les concrétiser avec les outils adaptés.
@@ -80,6 +82,8 @@ Les principaux outils du projet sont :
 - **Remotion / React / TypeScript** pour les scènes animées et le motion design.
 - **Blender** pour la création et le rendu 3D, avec Python lorsque l'automatisation est utile.
 - **Higgsfield** et d'autres outils génératifs pour créer des éléments visuels ou des séquences.
+- **Voix off : ElevenLabs** (décision de Bruno, 07/11/2026), avec une voix « Guillaume ». La version retenue est notée dans le dossier de la vidéo.
+- **Son** : cherche librement ce qu'il faut, bruitages, ambiances et musiques, dans **Epidemic Sound** (connecté), chez **ElevenLabs** (effets sonores) ou en ligne (banques libres, en vérifiant la licence). Note la source et la licence de chaque son dans le dossier de la vidéo.
 - **FFmpeg** et les outils complémentaires pertinents pour convertir, traiter et assembler les médias.
 
 Tu peux proposer ou utiliser d'autres outils lorsqu'ils apportent un avantage concret. Vérifie simplement que les intégrations, API ou fonctionnalités dont tu dépends sont réellement disponibles.

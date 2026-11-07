@@ -187,8 +187,14 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Chaque fiche a maintenant une ligne **Production** : à faire, en cours, à retravailler, validée.
 - Page publiée (privée) : https://claude.ai/artifact/EnQAHrMvEwDgaZ6moaq4Hh. Elle est republiée au même lien après chaque étape.
 
+## 2026-11-07 · Voix, son, et liberté de création
+
+- **Le storyboard est une ligne directrice** : pendant la création, Claude peut ne pas le suivre et le changer si quelque chose n'est pas pertinent. C'est désormais la première chose écrite dans `CLAUDE.md`.
+- **Voix off : ElevenLabs, voix « Guillaume »**. Cinq voix portent ce nom ; « Guillaume, documentaire et storytelling » est recommandée, à confirmer à l'écoute. Cela remplace la règle « voix humaine » des règles anti-« look IA ».
+- **Son** : recherche libre dans Epidemic Sound (connecté, vérifié), ElevenLabs et en ligne, avec la source et la licence notées.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
-- [ ] Voix off : la voix de Bruno ou un comédien ? (Une voix de synthèse est contraire à la règle anti-« look IA ».)
+- [x] Voix off : ElevenLabs, voix « Guillaume » (07/11/2026).
 - [ ] Specs définitives (4K ?) une fois la DA définie.

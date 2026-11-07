@@ -46,8 +46,7 @@
   "a_decider": [
     "Garder ou couper le mensonge des 39 ans (S09)",
     "Variante ambitieuse dans l'aveu (S13), à la fin du travail",
-    "Chiffres de l'Insee à vérifier (S15)",
-    "La voix : Bruno ou un comédien"
+    "Chiffres de l'Insee à vérifier (S15)"
   ],
   "interludes_S06_apres": [
     "S05",
@@ -73,5 +72,5 @@
     "S15": "En France aussi, on ne part pas du même endroit : les chances de faire des études selon le milieu. Des points qui suivent la tendance, et d'autres qui la contredisent.",
     "S16": "L'aube revient dans le bureau. Le chiffre du début. Puis, seule à l'écran : « Quelle aurait dû être ta vie ? »"
   },
-  "note": "Un guide, pas un plan figé : le détail se décide à la construction, et chaque scène peut changer en route."
+  "note": "Un guide, pas un plan figé : si quelque chose n'est pas pertinent à la construction, je le change. Le détail se décide scène par scène."
 }
