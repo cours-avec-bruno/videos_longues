@@ -15,7 +15,7 @@ Interface recréée (monospace) : le monde d'aujourd'hui, le tirage selon les na
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S03 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans

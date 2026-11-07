@@ -149,6 +149,15 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Le script d'installation du PC bascule maintenant sur `main`.
 - Reste à faire par Bruno : définir `main` comme branche par défaut dans les réglages GitHub, puis supprimer les anciennes branches `claude/...`.
 
+## 2026-11-07 · Script v1 : « Quelle aurait dû être ta vie ? »
+
+- Le script complet de la voix off est écrit (`videos/2026-11-quelle-aurait-du-etre-ta-vie/script.md`), sur la vraie partie, puis relu avec la skill **humanizer** (installée dans le projet à la demande de Bruno) et vérifié fait par fait.
+- Le spectateur prend la place de Manoj : à chaque « À VOUS », la voix passe en « vous avez onze ans ». La question naît d'un fait placé avant le compte à rebours. Deux fois seulement (11 et 60 ans), une vraie question est posée au spectateur sur sa propre vie.
+- L'aveu abandonne « ce n'est pas une interdiction, c'est une pente » : c'est le tic n° 1 de l'écriture d'IA, et la phrase sous-entendait un fait faux. À la place, une observation tirée de la partie : en 75 ans, la question de l'université ne lui a jamais été posée, et le mot n'apparaît qu'une fois, pour son petit-fils.
+- Nouveau calcul : en comptant la religion et la caste, la naissance la plus probable ne concerne qu'environ 1 bébé sur 200, presque la même chance que de naître en France (1 sur 207). C'est le rapprochement de S14.
+- Environ 950 mots dits, soit à peu près 7 min 20 de voix.
+- À décider : garder ou non le mensonge des 39 ans ; la variante ambitieuse (à confirmer sur beaucoup de vies) ; les chiffres de l'Insee (à vérifier) ; la voix.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?

@@ -17,7 +17,7 @@ Faits : l'Inde représente 17,6 % des naissances (1 sur 6) ; 68 % des bébés in
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S04 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans

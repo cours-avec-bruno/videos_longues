@@ -17,7 +17,7 @@ Vraies photos d'un village côtier indien, unifiées (grain photo, ton chaud), s
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S05 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans

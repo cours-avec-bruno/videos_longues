@@ -1,6 +1,6 @@
 # Skills du studio
 
-Treize skills au total, dans `.claude/skills/` (versionnées, donc visibles aussi dans le cloud). Les skills externes ont leur source et leur empreinte dans `skills-lock.json` ; pour les mettre à jour : `npx skills update -p`.
+Quatorze skills au total, dans `.claude/skills/` (versionnées, donc visibles aussi dans le cloud). Les skills externes ont leur source et leur empreinte dans `skills-lock.json` ; pour les mettre à jour : `npx skills update -p`.
 
 ## Règle d'usage
 
@@ -19,6 +19,7 @@ Comme pour les procédés : **une skill se choisit, elle ne s'empile pas.**
 | Analyser une vidéo de référence | `retro-ingenierie-video` | — | Avec l'outil `analyser-reference` |
 | Storyboard, choix des procédés | `storyboard-procedes` | — | Toujours, dès qu'on touche au storyboard |
 | Écrire le script, l'accroche | `yt-script` | `documentary-montage-production` (faits, sources, nuance) | Pensée pour des créateurs face caméra et en anglais : on garde la méthode (accroche notée, une idée par temps, `[À L'ÉCRAN]`), on écrit dans la voix de la chaîne |
+| Rendre un texte humain (voix off, description, carton) | `humanizer` | `documentary-montage-production` (pour vérifier que rien n'a été inventé) | Écrite pour l'anglais : on applique ses patterns au français (« ce n'est pas X, c'est Y », phrases-chutes, maximes, séries de trois, tirets cadratins). Chaque phrase doit apporter un fait ou une réaction |
 | Vérifier les faits, les sources, la loyauté d'un plan | `documentary-montage-production` | — | Séparer fait, interprétation, illustration et thèse ; c'est le complément de `references/sources.md` |
 | Rythme, découpage, raccords, montage | `editing-montage` | — | Chaque plan a une fonction ; on coupe quand l'information est passée |
 | Coder une scène Remotion | `remotion-best-practices` | `motion-design-premium` (séquences premium) | Le routeur officiel charge lui-même la bonne sous-partie (markup, rendu, sous-titres, cartes…) |
@@ -40,6 +41,7 @@ Comme pour les procédés : **une skill se choisit, elle ne s'empile pas.**
 | `yt-script`, `yt-package`, `yt-retention` | [jakeschincariol/youtube-agent-skill](https://github.com/jakeschincariol/youtube-agent-skill) (MIT, 4 750 ★) | Les seules skills YouTube solides trouvées. Petits scripts Python relus |
 | `documentary-montage-production`, `editing-montage`, `sound-design-foley`, `audio-mixing-mastering` | [calesthio/generative-media-skills](https://github.com/calesthio/generative-media-skills) (MIT) | Le contenu le plus dense et le mieux sourcé |
 | `video-design` | [digitalsamba/claude-code-video-toolkit](https://github.com/digitalsamba/claude-code-video-toolkit) (MIT) | Des règles chiffrées de design vidéo, proches de notre grammaire |
+| `humanizer` | [blader/humanizer](https://github.com/blader/humanizer) (MIT, 65 000 ★) | Demandée par Bruno le 07/11/2026 pour le script. Un seul fichier (`SKILL.md`) ; les fichiers de maintenance du dépôt ont été retirés |
 
 ## Historique du tri
 

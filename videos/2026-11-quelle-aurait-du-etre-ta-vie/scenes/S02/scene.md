@@ -17,7 +17,7 @@ L'opérateur sans visage, de dos, face à l'écran ; lumière d'aube froide par 
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S02 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans

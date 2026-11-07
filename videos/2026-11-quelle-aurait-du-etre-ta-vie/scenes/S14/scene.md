@@ -15,7 +15,7 @@ Payoff du plant de S03. Passage en serif (hors simulation). Distinguer naître s
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S14 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans
@@ -28,7 +28,7 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 | S14-P02 | 8 s | UI | La comparaison côte à côte : un homme né aujourd'hui en Inde / en France (simulations du moteur, 15 vies chacun, ordres de grandeur) : études supérieures à 40 ans 29 % / 60 % · dans les 10 % les plus riches du monde 7 % / 40 % · âge médian au décès 78 / 82 ans | Deux colonnes | N05 |  |
 | S14-P03 | 15 s | MD | Le mur de 207 noms de pays, en proportion des naissances. La caméra le traverse, et « France » n'apparaît qu'une fois | Lent travelling, faible profondeur de champ | I11 | Musique tendue |
 | S14-P04 | 1 s | NOIR | Écran vide | — | S01 | Silence total |
-| S14-P05 | 5 s | MD | « 1 sur 207 » en serif | Apparition sèche | I15 |  |
+| S14-P05 | 5 s | MD | « 1 sur 207 » en serif ; juste avant, la voix a dit que la naissance de Manoj, comptée en entier, était d'environ 1 sur 200 | Apparition sèche | I15 |  |
 | S14-P06 | 12 s | MD | Naître sur le territoire ≠ avoir la nationalité : schéma simple en serif | Deux ensembles qui se séparent |  | Voix |
 | S14-P07 | 8 s | MD | Comparaison et source : **Inde 1 sur 6 (lui)** · Nigeria 1 sur 18 · France 1 sur 207 (vous) (ONU WPP 2024, via 1in8b.life) | Barres, la barre de l'Inde garde l'ambre de Manoj | H01 |  |
 | S14-P08 | 7 s | 3D | Le bureau la nuit, l'écran éteint | Fixe | I18 | Ambiance |

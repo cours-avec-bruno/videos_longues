@@ -22,7 +22,7 @@ Premier encart « À VOUS », à 7 ans (ce qu'il aime faire) : **rencontres reli
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S07 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans

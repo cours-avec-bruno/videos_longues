@@ -15,7 +15,7 @@ Le diplôme selon l'origine sociale (Insee), un graphique qui se construit, la p
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S15 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans

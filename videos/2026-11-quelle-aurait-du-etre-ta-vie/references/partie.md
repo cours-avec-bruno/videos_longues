@@ -12,7 +12,7 @@ Légende : **[MOTEUR]** = donné par le moteur (récit, chiffres, citations) · 
 | **Les décisions** | L'option que prend la majorité dans la même situation | **Décidée par nous, pas à pas** : à chaque décision, l'option la plus fréquente parmi 200 vies nées dans les mêmes conditions. La politique `auto` du moteur ne convient pas, parce qu'elle tire au sort selon les parts (voir plus bas) |
 | **Les événements** | Impossible à choisir | Les maladies, les rencontres et la mort sont tirées au sort par le moteur. On situe chacun d'eux par rapport aux médianes de vies simulées |
 
-**[CALCUL]** Inde × campagne × garçon × 3e cinquième ≈ 17,6 % × 68 % × 52 % × 20 % ≈ **1,2 % des naissances**, soit environ 1 sur 80. C'est peu, mais aucune autre combinaison n'est plus fréquente. C'est le paradoxe à dire dans la vidéo : même la vie la plus probable est rare.
+**[CALCUL]** Inde × campagne × garçon × 3e cinquième ≈ 17,6 % × 68 % × 52 % × 20 % ≈ 1,2 % des naissances. En ajoutant la religion (hindoue, 78 %) et la caste (OBC, 47 %), mesurées par le moteur sur 60 bébés, on arrive à **environ 0,46 %, soit à peu près 1 sur 200** (ordre de grandeur : les deux dernières parts ont une marge d'environ ±6 points). Aucune autre combinaison n'est plus fréquente, et pourtant elle est à peu près aussi rare que de naître en France (1 sur 207). C'est le rapprochement de S14.
 
 ## Comment la vie définitive a été jouée
 

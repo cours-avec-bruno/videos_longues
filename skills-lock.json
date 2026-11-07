@@ -22,6 +22,13 @@
       "computedHash": "26b1f59d113b73595c4266ce16987a634ad851964d9ce3ce8b2fedc62fec32c9",
       "installMode": "copy"
     },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "1e67c3a4a675bd0c961b1fd8ebb718174f9a61a547d9bedad2ade5eb99cce831",
+      "installMode": "copy"
+    },
     "remotion-best-practices": {
       "source": "remotion-dev/skills",
       "sourceType": "github",

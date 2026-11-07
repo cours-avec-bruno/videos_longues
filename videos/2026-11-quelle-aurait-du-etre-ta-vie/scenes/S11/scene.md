@@ -17,7 +17,7 @@ Puis le dernier carton, **75 ANS**, une seconde de silence, l'acte de décès (p
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S11 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans

@@ -22,7 +22,7 @@ On montre les écarts et les ressemblances, puis la nuance : « une trajectoire 
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S10 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans
@@ -36,7 +36,7 @@ Matières : **3D** Blender · **UI** interface du simulateur recréée (Remotion
 | S10-P03 | 8 s | MD | Mise en évidence : Manoj et Raj, même pays, castes et cinquièmes différents, s'arrêtent tous deux au primaire | Surlignage, atténuation du reste | I03 |  |
 | S10-P04 | 6 s | 3D | L'opérateur recule | Fixe |  |  |
 | S10-P05 | 10 s | UI | Citation du site : « Deux bébés nés au même endroit la même année vivent pourtant des vies différentes » | Texte qui s'imprime | N11 | Voix |
-| S10-P06 | 8 s | MD | « Probable » ≠ « destin » | Les deux mots s'écartent | N11 |  |
+| S10-P06 | 8 s | MD | L'âge de la mort de chacun, côte à côte : 51 · 64 · 66 · 75 · 81 (celui de Manoj en ambre) | Les chiffres se posent un à un | N11 |  |
 | S10-P07 | 7 s | 3D | Le bureau, nuit tombante | Fixe | I16 | Ambiance |
 
 ## Cadrage et mise en scène

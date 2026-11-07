@@ -29,7 +29,7 @@ La liaison des 39-41 ans (« les mensonges se sont accumulés », le pardon de P
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S09 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans

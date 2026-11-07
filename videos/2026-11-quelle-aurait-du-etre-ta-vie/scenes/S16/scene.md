@@ -15,7 +15,7 @@ Retour au bureau à l'aube, l'écran propose de nouveau « Naître ». « Et vot
 
 ## Script / son
 
-- **Voix off** : (repris de `script.md`)
+- **Voix off** : voir `../../script.md`, section S16 (version 1 du 07/11/2026, relue avec humanizer)
 - **Sons / musique** :
 
 ## Découpage en plans
