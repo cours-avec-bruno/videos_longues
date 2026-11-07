@@ -32,9 +32,10 @@ W, H, FPS = 1920, 1080, 24
 
 # ---------------------------------------------------------------- le déroulé (temps en secondes)
 # Bruno (07/11/2026) : on retire l'écran des réglages, on va directement à « Commençons ».
-T0 = 13.0                      # on reprend l'écran de S03 à 13 s : le pointeur arrive sur « Naître »
-T_CLIC = 14.6 - T0             # clic sur « Naître »
-T_MONDE = 15.2 - T0            # premier lieu
+# Bruno (07/11/2026, suite) : plus de clic sur « Naître » ; coupe nette depuis S02 sur un carton « commençons »
+# (lettres à empattements en gros pixels, lueur blanche sur noir), puis coupe directe sur les villes.
+T_CLIC = 999.0                 # (plus de clic ni de plongée dans l'écran)
+T_MONDE = 1.35                 # le carton dure le temps du mot
 # Bruno (07/11/2026) : moins de lieux, plus dynamique, un effet « écran de surveillance » bleu cyan sur les images.
 # (fichier, début dans la source, vitesse, recadrage : zoom, centre x, centre y)
 LIEUX = [
@@ -55,7 +56,7 @@ DUREE = T_VILLAGE + sum(v[3] for v in VILLAGE)
 N = int(round(DUREE * FPS))
 TR = 0.12                      # durée d'une traversée (de chaque côté de la coupe)
 sys.path.insert(0, os.path.join(ICI, "..", "..", "..", "..", "shared", "outils", "image"))
-from effets import glitch, negatif, scan_cyan  # noqa: E402
+from effets import carton_pixel, glitch, negatif, scan_cyan  # noqa: E402
 MONDE = range(1, 1 + len(LIEUX))       # indices des plans du monde
 
 
@@ -90,9 +91,10 @@ def zoom(img, z, flou=0.0, cx=0.5, cy=0.5):
 
 # ---------------------------------------------------------------- les plans, chacun avec son début et sa fin
 plans = []      # (début, fin, images, poussée)  ; la poussée = zoom lent continu pendant le plan
-DECAL = int(T_CLIC * FPS) - 4          # avant la plongée, l'écran passe tel quel (lu en flux, sans tout charger)
-ecran = lire_extrait(os.path.join(M, "S03", "S03_image.mp4"), T0 + DECAL / FPS, 1.0, T_MONDE - DECAL / FPS + 0.1)
-plans.append((0.0, T_MONDE, ecran, 0.0))
+DECAL = 0
+carton = np.stack([np.clip(carton_pixel("commençons", k=k), 0, 255).astype(np.uint8)
+                   for k in range(int(T_MONDE * FPS) + 2)])
+plans.append((0.0, T_MONDE, carton, 0.0))
 t = T_MONDE
 for (f, deb, vit, zc, cx, cy), d in zip(LIEUX, DUREES):
     plans.append((t, t + d, lire_extrait(os.path.join(PX, f), deb, vit, d + 0.3), 0.08))
@@ -113,7 +115,7 @@ def image_du_plan(i, tg):
     z = 1 + pousse * p
     flou = 0.0
     # sortie : on fonce dans l'image (sauf la Terre, qui gère sa propre plongée, et la fin)
-    if i < len(plans) - 1 and fin - tg < TR and i != len(plans) - 3:
+    if 0 < i < len(plans) - 1 and fin - tg < TR and i != len(plans) - 3:
         u = 1 - (fin - tg) / TR
         z *= 1 + 0.9 * u ** 2
         flou = 0.10 * u
@@ -145,7 +147,7 @@ ecr = None if SON_SEUL else subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f
                         "-i", "-", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p",
                         os.path.join(M, "S04", "S03_S04_image.mp4")], stdin=subprocess.PIPE)
 rng = np.random.default_rng(9)
-if not SON_SEUL:
+if not SON_SEUL and DECAL:
   flux = subprocess.Popen(["ffmpeg", "-v", "error", "-ss", str(T0), "-i", os.path.join(M, "S03", "S03_image.mp4"), "-frames:v", str(DECAL),
                          "-f", "rawvideo", "-pix_fmt", "bgr24", "-"], stdout=subprocess.PIPE)
   for n in range(DECAL):
@@ -160,7 +162,7 @@ for n in (range(0) if SON_SEUL else range(DECAL, N)):
     coupe_monde = None
     for c_ in coupes:
         j = [p[0] for p in plans].index(c_)
-        if j in MONDE and j > 1 or j == 1 + len(LIEUX):
+        if j in MONDE or j == 1 + len(LIEUX):
             if abs(tg - c_) < 1.5 / FPS:
                 coupe_monde = (c_, j)
     if coupe_monde:
@@ -222,18 +224,18 @@ def stereo(nom, debut, n):
 pièce = stereo("ambiance_grand_hall.wav", 90.0, Ns) * db(-13)
 pièce += stereo("bourdonnement_ordinateur.wav", 80.0, Ns) * db(-17)
 pièce += stereo("bourdonnement_lumiere.wav", 2.0, Ns) * db(-23)
-env_piece = np.clip((T_CLIC + 0.5 - ts) / 0.5, 0, 1)
+env_piece = np.zeros_like(ts)          # coupe nette depuis S02 : le carton est sur le noir
 mix += pièce * env_piece[:, None]
 
 # 2. la souris et le clavier pendant les réglages (temps de la fenêtre = temps de la scène)
 clics = lire_audio(os.path.join(SONS, "souris_clics.wav"), mono=False).astype(np.float64)
 ons_c = detecter_pas(os.path.join(SONS, "souris_clics.wav"), seuil_db=-25, ecart_min=0.3)
-for j_, tc in enumerate([T_CLIC]):
+for j_, tc in enumerate([]):
     o = ons_c[(j_ * 5 + 3) % len(ons_c)]
     s_ = clics[int((o - 0.005) * SR):int((o + 0.18) * SR)]
     poser(s_ * fondu(len(s_), 0.002, 0.06)[:, None], tc - 0.005, db(-8 if tc != T_CLIC else -5))
 tapis = lire_audio(os.path.join(SONS, "souris_tapis.wav"), mono=False).astype(np.float64)
-for j_, (d0, d1) in enumerate([(0.0, 13.6 - T0)]):
+for j_, (d0, d1) in enumerate([]):
     n_ = int((d1 - d0) * SR); o = 1.0 + j_ * 1.7
     s_ = tapis[int(o * SR):int(o * SR) + n_]
     poser(np.pad(s_, ((0, n_ - len(s_)), (0, 0))) * fondu(n_, 0.08, 0.15)[:, None], d0, db(-16))
@@ -248,7 +250,7 @@ for j_, tk in enumerate([]):
 whooshs = [lire_audio(os.path.join(SONS, n_), mono=False).astype(np.float64)
            for n_ in ("whoosh_air.wav", "whoosh_zoom.wav")]
 crete = lambda a: int(np.argmax(np.abs(a).mean(1)))
-poser(whooshs[1] * fondu(len(whooshs[1]), 0.01, 0.4)[:, None], T_MONDE - crete(whooshs[1]) / SR, db(-4))   # la plongée dans l'écran
+# (plus de plongée dans l'écran)
 for j_, c_ in enumerate(coupes[1:len(LIEUX)]):
     w_ = whooshs[j_ % 2]
     # légère variation de hauteur : on rééchantillonne
@@ -260,7 +262,7 @@ for j_, c_ in enumerate(coupes[1:len(LIEUX)]):
 # 3 bis. les coupes numériques du monde : un éclat de glitch à chaque coupe, et un plus large en sortant vers l'espace
 glitchs = [lire_audio(os.path.join(SONS, n_), mono=False).astype(np.float64)
            for n_ in ("glitch_radio.wav", "glitch_donnees.wav", "glitch_teleport.wav")]
-for j_, c_ in enumerate(coupes[1:len(LIEUX) + 1]):
+for j_, c_ in enumerate(coupes[0:len(LIEUX) + 1]):
     g_ = glitchs[j_ % 3] if c_ != coupes[len(LIEUX)] else glitchs[2]
     o_ = crete(g_)
     seg = g_[max(0, o_ - int(0.03 * SR)):o_ + int(0.35 * SR)]
@@ -286,7 +288,7 @@ mix += village * env_v[:, None]
 VOIX_DB = -3.5
 phrases = [
     # prise retenue et verrouillée par Bruno (S04b_prise1), générée dans la continuité du texte de S02
-    ("S04b_prise1.mp3", (6.64, 7.77), 0.35),                 # Commençons.
+    ("S04b_prise1.mp3", (6.64, 7.77), 0.08),                 # Commençons.
     ("S04b_prise1.mp3", (8.31, 9.94), T_MONDE + 0.2),        # On peut atterrir n'importe où.
     ("S04b_prise1.mp3", (10.62, 12.09), T_VILLAGE + 0.5),    # C'est ici que nous sommes arrivés.
     ("S04b_prise1.mp3", (12.20, 16.96), T_VILLAGE + VILLAGE[0][3] + 0.4),  # Pas étonnant : plus de dix-sept pour cent...

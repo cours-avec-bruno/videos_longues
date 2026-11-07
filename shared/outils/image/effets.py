@@ -98,3 +98,34 @@ def glitch(img, k=0, force=1.0):
 
 def negatif(img):
     return 255 - np.clip(img, 0, 255)
+
+
+def carton_pixel(texte, w=1920, h=1080, police="C:/Windows/Fonts/georgiab.ttf", hauteur_px=17, echelle=9,
+                 lueur=1.0, k=0, rng=None):
+    """Texte blanc « en gros pixels » avec une lueur douce, sur fond noir (style donné par Bruno, 07/11/2026).
+
+    Le texte est dessiné tout petit (hauteur_px), sans lissage, dans une police à empattements, puis agrandi pixel par
+    pixel (echelle) : on obtient des lettres à empattements faites de gros carrés, qu'on fait ensuite briller.
+    """
+    from PIL import Image, ImageDraw, ImageFont
+    rng = rng or np.random.default_rng(k)
+    f = ImageFont.truetype(police, hauteur_px)
+    x0, y0, x1, y1 = ImageDraw.Draw(Image.new("L", (1, 1))).textbbox((0, 0), texte, font=f)
+    petit = Image.new("L", (x1 - x0 + 4, y1 - y0 + 4), 0)
+    d = ImageDraw.Draw(petit)
+    d.fontmode = "1"                                      # pas d'anticrénelage : de vrais pixels
+    d.text((2 - x0, 2 - y0), texte, font=f, fill=255)
+    a = np.asarray(petit, np.float32)
+    a = np.kron(a, np.ones((echelle, echelle), np.float32))
+    hh, ww = a.shape
+    toile = np.zeros((h, w), np.float32)
+    oy, ox = (h - hh) // 2, (w - ww) // 2
+    toile[oy:oy + hh, ox:ox + ww] = a
+    # léger flou horizontal (écran), puis lueur large
+    net = cv2.GaussianBlur(toile, (0, 0), sigmaX=1.6, sigmaY=0.8)
+    halo = cv2.GaussianBlur(toile, (0, 0), 18) * 0.55 + cv2.GaussianBlur(toile, (0, 0), 6) * 0.45
+    img = np.clip(net * 0.95 + halo * 0.9 * lueur, 0, 255)
+    out = np.repeat(img[..., None], 3, axis=2)
+    out[..., 0] *= 0.97                                   # un blanc à peine froid
+    out += rng.normal(0, 3.0, out.shape) + 6              # fond pas tout à fait noir, un peu de grain
+    return out

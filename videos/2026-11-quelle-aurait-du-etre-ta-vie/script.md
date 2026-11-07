@@ -49,7 +49,9 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 ## S03 · La mission
 
-[la fenêtre « Nouvelle vie » est déjà remplie ; le pointeur se pose sur « Naître »]
+[coupe nette sur le noir]
+
+ÉCRAN : commençons (lettres en gros pixels, lueur blanche)
 
 > Commençons.
 

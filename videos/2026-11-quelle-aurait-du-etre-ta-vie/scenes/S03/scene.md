@@ -8,9 +8,12 @@
 | **Procédé principal** | N05 : le vrai lieu de naissance saisi (la France), « gardez ça en tête », payé en S14 |
 | **Procédés secondaires** | H02 |
 | **Statut** | à valider (proposition de storyboard) |
-| **Production** | réduite à « Commençons » et au clic sur « Naître » (V2, avec S04 : `S03_S04_v2.mp4`) |
+| **Production** | un carton « commençons » (V3, avec S04 : `S03_S04_v2.mp4`) |
 
 ## Intention
+
+**Bruno (07/11/2026, suite) : plus d'écran ni de clic.** Coupe nette depuis le plan large de S02 sur un carton noir : « commençons », en lettres à empattements faites de gros pixels, avec une lueur blanche (style donné par Bruno ; `carton_pixel` dans `shared/outils/image/effets.py`), pendant que la voix dit le mot. Puis coupe glitchée directe sur les villes.
+
 
 **Bruno (07/11/2026) : l'écran des réglages est retiré.** On va directement à « Commençons » : la fenêtre « Nouvelle vie » est déjà remplie (on y lit encore « France »), le pointeur se pose sur « Naître », clic, on plonge. Conséquence : la saisie de la France n'est plus montrée ; le rappel prévu en S14 est à repenser.
 
