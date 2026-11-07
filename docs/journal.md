@@ -190,11 +190,11 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 ## 2026-11-07 · Voix, son, et liberté de création
 
 - **Le storyboard est une ligne directrice** : pendant la création, Claude peut ne pas le suivre et le changer si quelque chose n'est pas pertinent. C'est désormais la première chose écrite dans `CLAUDE.md`.
-- **Voix off : ElevenLabs, voix « Guillaume »**. Cinq voix portent ce nom ; « Guillaume, documentaire et storytelling » est recommandée, à confirmer à l'écoute. Cela remplace la règle « voix humaine » des règles anti-« look IA ».
+- **Voix off : ElevenLabs, voix « Guillaume »**. Cinq voix portent ce nom ; Bruno a retenu « Guillaume - Documentary and Storytelling » (ElevenLabs, identifiant `3HZyQcLKlT0a3RDeXVsP`). Cela remplace la règle « voix humaine » des règles anti-« look IA ».
 - **Son** : recherche libre dans Epidemic Sound (connecté, vérifié), ElevenLabs et en ligne, avec la source et la licence notées.
 
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
-- [x] Voix off : ElevenLabs, voix « Guillaume » (07/11/2026).
+- [x] Voix off : ElevenLabs, voix « Guillaume - Documentary and Storytelling » (ElevenLabs, identifiant `3HZyQcLKlT0a3RDeXVsP`) (07/11/2026).
 - [ ] Specs définitives (4K ?) une fois la DA définie.
