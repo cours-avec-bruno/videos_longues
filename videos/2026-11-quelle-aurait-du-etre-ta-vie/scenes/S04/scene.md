@@ -8,9 +8,12 @@
 | **Procédé principal** | T01 : la première apparition du carton d'âge fixe son sens (une étape de la vie simulée) |
 | **Procédés secondaires** | S01, I15 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
-| **Production** | V2 (`S03_S04_v2.mp4`, 24 s avec S03) : voix verrouillée, à valider par Bruno |
+| **Production** | V3 (`S03_S04_v2.mp4`, 18 s avec S03) : six lieux, effet cyan, coupes glitch ; à valider par Bruno |
 
 ## Intention
+
+**Révision du 07/11/2026 (Bruno)** : moins de lieux et plus de rythme, avec un effet sur les images d'après une référence de Bruno (bichromie bleu cyan, trame de points, lignes de balayage). Six lieux (Shibuya, tour Eiffel, Christ de Rio, Gizeh, Manhattan, icebergs), un demi-plan chacun environ, coup de zoom à l'entrée, coupes glitchées avec un éclair en négatif bleu et un son numérique. Le cyan, c'est la simulation qui balaie le monde ; en sortant dans l'espace la Terre perd le cyan et retrouve ses couleurs : l'atterrissage, c'est le réel. Effet réutilisable : `shared/outils/image/effets.py`.
+
 
 **Réécrite par Bruno le 07/11/2026.** Clic sur « Naître » : on plonge dans l'écran. « On peut atterrir n'importe où » : douze lieux du monde défilent vite (Tokyo, Paris, Rio, New York, Gizeh, Venise, la savane, Shanghai, Sydney, le Sahara, l'Islande, l'Amazonie), reliés par des traversées (on fonce dans l'image, on ressort dans la suivante), le rythme s'accélère et un grondement monte. On sort dans l'espace : la Terre tourne de l'Afrique à l'Asie, puis la plongée sur l'Inde (on reconnaît le sous-continent et l'Himalaya). Coupe sur un village du nord de l'Inde vu du ciel : « C'est ici que nous sommes arrivés. » Puis une ruelle du village : « Pas étonnant : plus de dix-sept pour cent de la population mondiale vit ici. » (dit, jamais écrit). Le son du village est un vrai enregistrement d'Amethi, en Uttar Pradesh.
 

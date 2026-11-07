@@ -35,21 +35,17 @@ W, H, FPS = 1920, 1080, 24
 T0 = 13.0                      # on reprend l'écran de S03 à 13 s : le pointeur arrive sur « Naître »
 T_CLIC = 14.6 - T0             # clic sur « Naître »
 T_MONDE = 15.2 - T0            # premier lieu
-LIEUX = [                      # (fichier, début dans la source, vitesse) : de jour, de nuit, près, loin
-    ("tokyo_6574285.mp4", 6.0, 1.0),
-    ("paris_34558256.mp4", 4.0, 1.6),
-    ("rio_16023860.mp4", 3.0, 1.6),
-    ("newyork_5565202.mp4", 30.0, 1.6),
-    ("caire_10717893.mp4", 20.0, 1.8),
-    ("venise_36328559.mp4", 4.0, 1.5),
-    ("kenya_7499056.mp4", 6.0, 1.5),
-    ("shanghai_33009782.mp4", 5.0, 1.5),
-    ("sydney_36924503.mp4", 4.0, 1.6),
-    ("sahara_37523973.mp4", 1.0, 1.4),
-    ("islande_29477448.mp4", 8.0, 1.8),
-    ("amazonie_35969886.mp4", 12.0, 1.8),
+# Bruno (07/11/2026) : moins de lieux, plus dynamique, un effet « écran de surveillance » bleu cyan sur les images.
+# (fichier, début dans la source, vitesse, recadrage : zoom, centre x, centre y)
+LIEUX = [
+    ("tokyo_6574285.mp4", 6.0, 1.3, 1.0, 0.5, 0.5),
+    ("paris_34558256.mp4", 4.0, 2.0, 1.75, 0.495, 0.33),     # recadré sur la tour Eiffel
+    ("rio_16023860.mp4", 3.0, 2.0, 1.0, 0.5, 0.5),
+    ("caire_10717893.mp4", 20.0, 2.2, 1.15, 0.45, 0.55),
+    ("newyork_5565202.mp4", 30.0, 2.0, 1.25, 0.5, 0.55),
+    ("islande_29477448.mp4", 8.0, 2.2, 1.0, 0.5, 0.5),
 ]
-DUREES = list(np.linspace(0.95, 0.55, len(LIEUX)))     # le rythme s'accélère
+DUREES = [0.75, 0.6, 0.55, 0.5, 0.5, 0.6]
 T_ESPACE = T_MONDE + sum(DUREES)
 TERRE = os.path.join(M, "S04", "S04_terre.mp4")
 D_TERRE = 112 / FPS
@@ -57,7 +53,11 @@ T_VILLAGE = T_ESPACE + D_TERRE
 VILLAGE = [("inde/inde_31372348.mp4", 1.0, 1.0, 3.2), ("inde/inde_34732091.mp4", 0.5, 1.0, 4.8)]
 DUREE = T_VILLAGE + sum(v[3] for v in VILLAGE)
 N = int(round(DUREE * FPS))
-TR = 0.20                      # durée d'une traversée (de chaque côté de la coupe)
+TR = 0.12                      # durée d'une traversée (de chaque côté de la coupe)
+sys.path.insert(0, os.path.join(ICI, "..", "..", "..", "..", "shared", "outils", "image"))
+from effets import glitch, negatif, scan_cyan  # noqa: E402
+MONDE = range(1, 1 + len(LIEUX))       # indices des plans du monde
+
 
 
 def lire_extrait(chemin, debut, vitesse, duree):
@@ -72,18 +72,18 @@ def lire_extrait(chemin, debut, vitesse, duree):
     return im
 
 
-def zoom(img, z, flou=0.0):
-    """Agrandit autour du centre ; `flou` ajoute un flou radial (plusieurs copies de plus en plus grandes)."""
+def zoom(img, z, flou=0.0, cx=0.5, cy=0.5):
+    """Agrandit autour de (cx, cy) ; `flou` ajoute un flou radial (plusieurs copies de plus en plus grandes)."""
     if z <= 1.0001 and flou <= 0:
         return img.astype(np.float32)
-    M_ = cv2.getRotationMatrix2D((W / 2, H / 2), 0, z)
+    M_ = cv2.getRotationMatrix2D((W * cx, H * cy), 0, z)
     base = cv2.warpAffine(img, M_, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT).astype(np.float32)
     if flou <= 0:
         return base
     acc = base.copy()
     k = 6
     for j in range(1, k + 1):
-        Mj = cv2.getRotationMatrix2D((W / 2, H / 2), 0, z * (1 + flou * j / k))
+        Mj = cv2.getRotationMatrix2D((W * cx, H * cy), 0, z * (1 + flou * j / k))
         acc += cv2.warpAffine(img, Mj, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
     return acc / (k + 1)
 
@@ -94,8 +94,8 @@ DECAL = int(T_CLIC * FPS) - 4          # avant la plongée, l'écran passe tel q
 ecran = lire_extrait(os.path.join(M, "S03", "S03_image.mp4"), T0 + DECAL / FPS, 1.0, T_MONDE - DECAL / FPS + 0.1)
 plans.append((0.0, T_MONDE, ecran, 0.0))
 t = T_MONDE
-for (f, deb, vit), d in zip(LIEUX, DUREES):
-    plans.append((t, t + d, lire_extrait(os.path.join(PX, f), deb, vit, d + 0.3), 0.10))
+for (f, deb, vit, zc, cx, cy), d in zip(LIEUX, DUREES):
+    plans.append((t, t + d, lire_extrait(os.path.join(PX, f), deb, vit, d + 0.3), 0.08))
     t += d
 terre = lire_extrait(TERRE, 0, 1.0, D_TERRE)
 plans.append((T_ESPACE, T_VILLAGE, terre, 0.0))
@@ -126,7 +126,18 @@ def image_du_plan(i, tg):
         u = min(1, (tg - T_CLIC) / (T_MONDE - T_CLIC))
         z = 1 + 2.2 * u ** 2.2
         flou = 0.12 * u ** 1.5
-    return zoom(ims[k], z, flou)
+    if i in MONDE:
+        _, _, _, zc, cx, cy = LIEUX[i - 1]
+        u = min(1, (tg - deb) / 0.18)
+        z *= zc * (1 + 0.22 * (1 - u) ** 3)          # coup de zoom à l'entrée, puis on se pose
+        img = zoom(ims[k], z, flou, cx, cy)
+        return scan_cyan(img, int(tg * FPS))
+    img = zoom(ims[k], z, flou)
+    if i == 1 + len(LIEUX):                          # la Terre : le cyan s'efface, on revient au réel
+        force = np.clip(1 - (tg - deb) / 0.7, 0, 1)
+        if force > 0:
+            img = scan_cyan(img, int(tg * FPS), force=float(force))
+    return img
 
 
 SON_SEUL = os.environ.get("SON_SEUL") == "1"   # SON_SEUL=1 : ne refait que le son
@@ -145,7 +156,25 @@ for n in (range(0) if SON_SEUL else range(DECAL, N)):
     i = max(j for j, p in enumerate(plans) if p[0] <= tg + 1e-6)
     img = image_du_plan(i, tg)
     # fondu court autour de chaque coupe (deux images de part et d'autre), avec un éclair de lumière
+    # coupes dans le monde : image glitchée, éclair en négatif, image glitchée (pas de fondu)
+    coupe_monde = None
     for c_ in coupes:
+        j = [p[0] for p in plans].index(c_)
+        if j in MONDE and j > 1 or j == 1 + len(LIEUX):
+            if abs(tg - c_) < 1.5 / FPS:
+                coupe_monde = (c_, j)
+    if coupe_monde:
+        c_, j = coupe_monde
+        d_ = round((tg - c_) * FPS)
+        if d_ == -1:
+            img = glitch(img, n, 1.0)
+        elif d_ == 0:
+            img = scan_cyan(negatif(img), n)          # négatif, mais qui reste bleu
+        elif d_ == 1:
+            img = glitch(img, n, 0.6)
+    for c_ in ([] if coupe_monde else coupes):
+        if [p[0] for p in plans].index(c_) in MONDE and [p[0] for p in plans].index(c_) > 1:
+            continue
         if abs(tg - c_) < 2.5 / FPS:
             j = [p[0] for p in plans].index(c_)
             autre = image_du_plan(j - 1 if tg >= c_ else j, tg)
@@ -227,6 +256,17 @@ for j_, c_ in enumerate(coupes[1:len(LIEUX)]):
     idx = np.arange(0, len(w_) - 1, f_)
     w2 = np.stack([np.interp(idx, np.arange(len(w_)), w_[:, c]) for c in range(2)], 1)
     poser(w2 * fondu(len(w2), 0.01, 0.3)[:, None], c_ - crete(w2) / SR, db(-12 - 0.3 * j_))
+
+# 3 bis. les coupes numériques du monde : un éclat de glitch à chaque coupe, et un plus large en sortant vers l'espace
+glitchs = [lire_audio(os.path.join(SONS, n_), mono=False).astype(np.float64)
+           for n_ in ("glitch_radio.wav", "glitch_donnees.wav", "glitch_teleport.wav")]
+for j_, c_ in enumerate(coupes[1:len(LIEUX) + 1]):
+    g_ = glitchs[j_ % 3] if c_ != coupes[len(LIEUX)] else glitchs[2]
+    o_ = crete(g_)
+    seg = g_[max(0, o_ - int(0.03 * SR)):o_ + int(0.35 * SR)]
+    if c_ == coupes[len(LIEUX)]:
+        seg = g_[max(0, o_ - int(0.05 * SR)):]
+    poser(seg * fondu(len(seg), 0.003, 0.12)[:, None], c_ - 0.03, db(-10 if c_ != coupes[len(LIEUX)] else -7))
 
 # 4. un grondement grave qui monte pendant le monde, culmine dans l'espace, se coupe à l'arrivée
 drone = stereo("espace_drone.wav", 10.0, Ns)

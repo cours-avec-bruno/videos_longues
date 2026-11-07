@@ -22,6 +22,9 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `epidemic/whoosh_fusee.wav` | Swooshes, Whoosh, Noise, Rockety Texture, Cinematic 02 | `ef48d50d-47fe-491f-a853-7c1cb24af800` | S04 | la plongée sur l'Inde |
 | `epidemic/espace_drone.wav` | Designed, Drone, Dark Space, Sub Rumble | `454a607b-ba1d-4cc9-8242-846271b8f035` | S04 | le grondement qui monte jusqu'à l'espace |
 | `epidemic/village_amethi.wav` | Ambience, Town, Village, Morning, Washing Utensils, Birds Crows Walla, Bicycle Passing, Amethi, Uttar Pradesh, India 02 | `28a00d2f-20fd-4e42-9350-c8cbfeca2ac1` | S04 | l'arrivée au village |
+| `epidemic/glitch_radio.wav` | User Interface, Glitch, Radio Interference, Burst | `c9d4c2d5-0d84-4c48-bdd0-71e304d77991` | S04 | coupes du monde |
+| `epidemic/glitch_donnees.wav` | User Interface, Glitch, Glitch Data Processing 06 | `ce8c2f91-5e6c-483e-a5de-58b3d3ae18b3` | S04 | coupes du monde |
+| `epidemic/glitch_teleport.wav` | Scifi, Computer, Digital Fragment, Teleport Burst | `9c6850d3-9697-4347-93be-d21f76711eef` | S04 | sortie vers l'espace |
 
 ## Voix (ElevenLabs, voix « Guillaume - Documentary and Storytelling », `3HZyQcLKlT0a3RDeXVsP`)
 
