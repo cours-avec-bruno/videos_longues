@@ -8,7 +8,7 @@
 | **Procédé principal** | N01 : le spectateur note la part de sa vie qu'il pense avoir choisie ; toute la vidéo y répond |
 | **Procédés secondaires** | I18, I16 |
 | **Statut** | repensée le 07/11/2026 pour le nouveau décor, à valider par Bruno |
-| **Production** | en cours : images clés, P02, P03, P04 et la question faits ; P01 et P05 attendent la génération (49 crédits, à valider) |
+| **Production** | images V1 faites (aperçu muet `S02_apercu_v1.mp4`, 49 s) ; reste la voix (Guillaume) et le son |
 
 ## Intention
 

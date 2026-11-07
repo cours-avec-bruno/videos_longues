@@ -226,3 +226,10 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Demande de Bruno : sur l'ordinateur, des timelines de vies simulées, discrètes mais reconnaissables, puis deux portraits robots.
 - Incrustation suivie image par image dans la marche existante (`scenes/S01/ecran.py`), sans nouvelle génération vidéo. Portraits robots générés par Higgsfield (GPT Image 2.6, 0,5 crédit en tout).
 - Livré : `medias/S01/S01_v4.mp4`. On passe à la S02, à la demande de Bruno.
+
+## 2026-11-07 · S02 en construction : on s'assoit
+
+- S02 repensée pour le décor sans fenêtre : on s'assoit en vue subjective, l'écran de S01 (vies simulées, portraits robots, compteur), la lampe de bureau qu'on allume, un plan large avec une silhouette de dos (choix de Bruno), puis la question sur fond noir, sans chiffre (curseur de « rien » à « tout »).
+- Images clés dans Blender (`scenes/S02/plans.py`, à partir de la scène de S01). Plans sans génération : travelling vers l'écran, gros plan du compteur (`compteur.py`), la lampe, la question (Remotion, `S02-Question`).
+- `scenes/S01/ecran.py` devient réutilisable (`--t0` pour la continuité du compteur, `--image` pour exporter l'interface).
+- Higgsfield (validé par Bruno, 49 crédits) : « on s'assoit » et « la silhouette de dos » (Wan 3.0).

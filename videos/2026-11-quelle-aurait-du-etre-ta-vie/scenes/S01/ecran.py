@@ -37,6 +37,7 @@ def arguments():
     ap.add_argument("--portraits", default="", help="dossier des deux portraits robots (portrait_1.png, portrait_2.png)")
     ap.add_argument("--t0", type=float, default=0.0, help="temps de l'interface au début du plan (s) : continuité entre plans")
     ap.add_argument("--duree-vie", type=float, default=0.0, help="durée (s) pendant laquelle la vie en cours se dessine ; 0 = durée du plan")
+    ap.add_argument("--couleurs-s01", action="store_true", help="garde les couleurs de S01 (continuité entre plans)")
     ap.add_argument("--image", type=float, default=None, help="exporte seulement l'interface au temps donné (PNG), aux couleurs de S01")
     return ap.parse_args()
 
@@ -90,8 +91,26 @@ def lisse(v, f=13, p=2):
     return o
 
 
+def bords_coupe_haut(sub, rapport, frac=0.15):
+    """La fenêtre sort par le haut de l'image : bas, gauche et droite mesurés, haut déduit du rapport l/h."""
+    cols = np.where(sub.any(0))[0]; rows = np.where(sub.any(1))[0]
+    cA, cB, rB = cols[0], cols[-1], rows[-1]
+    xs = np.arange(int(cA + frac * (cB - cA)), int(cB - frac * (cB - cA)) + 1)
+    ys = np.arange(max(0, rB - int(0.8 * (rB - rows[0]))), rB - int(0.1 * (rB - rows[0])) + 1)
+    bot = [sub.shape[0] - sub[::-1, c].argmax() - 0.5 for c in xs]
+    lef = [sub[r, :].argmax() - 0.5 for r in ys if sub[r].any()]
+    rig = [sub.shape[1] - sub[r, ::-1].argmax() - 0.5 for r in ys if sub[r].any()]
+    ys2 = [r for r in ys if sub[r].any()]
+    hB, vL, vR = droite(xs, bot), droite(ys2, lef), droite(ys2, rig)
+    bl, br = np.array(inter(hB, vL)), np.array(inter(hB, vR))
+    h = np.linalg.norm(br - bl) / rapport
+    n = np.array([hB[0], -1.0]); n /= np.linalg.norm(n)           # normale vers le haut de l'image
+    return np.array([bl + n * h, br + n * h, br, bl])
+
+
 def suivre(G):
-    prev, win = None, []
+    """Renvoie, pour chaque image, les 4 coins de la fenêtre claire, ou None quand l'écran est hors champ."""
+    prev, rapport, win = None, None, []
     for k in range(len(G) - 1, -1, -1):               # à rebours : la fin, où l'écran est grand, sert d'amorce
         g = cv2.GaussianBlur(G[k], (3, 3), 0).astype(np.float32)
         if prev is None:
@@ -100,19 +119,67 @@ def suivre(G):
             c = prev.mean(0); s = np.ptp(prev[:, 0]) * 1.2 + 20
             y0, y1 = max(0, int(c[1] - s)), min(H, int(c[1] + s))
             x0, x1 = max(0, int(c[0] - s)), min(W, int(c[0] + s))
+        q = None
         r = g[y0:y1, x0:x1]
-        m = (r > 0.6 * np.percentile(r, 99.5)).astype(np.uint8)
-        ksz = max(3, int(0.25 * (np.ptp(prev[:, 1]) if prev is not None else 20)) | 1)
-        m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, np.ones((ksz, 3), np.uint8))
-        n, lab, st, _ = cv2.connectedComponentsWithStats(m)
-        best = max(range(1, n), key=lambda i: st[i, 4])
-        q = bords(lab == best) + [x0, y0]
-        win.append(q); prev = q
-    win = np.array(win[::-1])
-    for j in range(4):
-        for d in range(2):
-            win[:, j, d] = lisse(win[:, j, d])
-    return win
+        if r.size and np.percentile(r, 99.5) > 60:
+            m = (r > 0.6 * np.percentile(r, 99.5)).astype(np.uint8)
+            ksz = max(3, int(0.25 * (np.ptp(prev[:, 1]) if prev is not None else 20)) | 1)
+            m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, np.ones((ksz, 3), np.uint8))
+            n, lab, st, cen = cv2.connectedComponentsWithStats(m)
+            if n > 1:
+                best = max(range(1, n), key=lambda i: st[i, 4])
+                bx, by, bw, bh, ba = st[best]
+                haut = by + y0 <= 1
+                plausible = ba > 150 and bh > 4
+                if prev is not None:   # continuité : pas de saut vers un autre objet clair
+                    plausible &= np.hypot(*(cen[best] + [x0, y0] - prev.mean(0))) < 0.6 * np.ptp(prev[:, 0]) + 30
+                if plausible and not haut and 1.35 < bw / bh < 2.4:
+                    q = bords(lab == best) + [x0, y0]
+                    rapport = np.ptp(q[:, 0]) / np.ptp(q[:, 1])
+                elif plausible and haut and rapport and bh > 12:
+                    q = bords_coupe_haut(lab == best, rapport) + [x0, y0]
+        win.append(q)
+        prev = q if q is not None else None
+    win = win[::-1]
+    # lissage par tronçons continus
+    ok = np.array([w is not None for w in win])
+    A_ = np.array([w if w is not None else np.zeros((4, 2)) for w in win], float)
+    k = 0
+    while k < len(win):
+        if not ok[k]:
+            k += 1; continue
+        f = k
+        while f < len(win) and ok[f]:
+            f += 1
+        if f - k >= 3:
+            for j in range(4):
+                for d in range(2):
+                    A_[k:f, j, d] = lisse(A_[k:f, j, d])
+        k = f
+    # dans les trous (écran sorti du champ), on prolonge le mouvement depuis les bords du trou, sur 14 images au plus :
+    # la fenêtre d'origine encore visible en bord d'image est ainsi recouverte elle aussi
+    res = [A_[i] if ok[i] else None for i in range(len(win))]
+    idx = np.where(ok)[0]
+    for i in range(len(win)):
+        if ok[i] or not len(idx):
+            continue
+        avant = idx[idx < i]; apres = idx[idx > i]
+        cands = []
+        if len(avant) and i - avant[-1] <= 14:
+            cands.append((i - avant[-1], avant[-6:]))
+        if len(apres) and apres[0] - i <= 14:
+            cands.append((apres[0] - i, apres[:6]))
+        if not cands:
+            continue
+        _, pts = min(cands, key=lambda c: c[0])
+        if len(pts) < 3:
+            continue
+        q = np.zeros((4, 2))
+        for j in range(4):
+            for d in range(2):
+                q[j, d] = np.polyval(np.polyfit(pts, A_[pts, j, d], 1), i)
+        res[i] = q
+    return res
 
 
 # ---------------------------------------------------------------- 2. l'interface
@@ -292,8 +359,10 @@ def principal():
     duree = N / FPS
     win = suivre(G)
     U = np.float32([[0, 0], [1, 0], [1, 1], [0, 1]])
-    dalles = np.array([cv2.perspectiveTransform(DALLE[None], cv2.getPerspectiveTransform(U, w.astype(np.float32)))[0]
-                       for w in win])
+    dalles = [cv2.perspectiveTransform(DALLE[None], cv2.getPerspectiveTransform(U, w.astype(np.float32)))[0]
+              if w is not None else None for w in win]
+    print("écran hors champ sur", sum(d is None for d in dalles), "images sur", N)
+    derniere = max(i for i, w in enumerate(win) if w is not None)
 
     lec = subprocess.Popen(["ffmpeg", "-v", "error", "-i", A.video, "-f", "rawvideo", "-pix_fmt", "bgr24", "-"],
                            stdout=subprocess.PIPE)
@@ -306,7 +375,7 @@ def principal():
         f = np.frombuffer(lec.stdout.read(W * H * 3), np.uint8).reshape(H, W, 3).astype(np.float32)
         if ui is None:
             # couleurs relevées sur l'écran d'origine, à la dernière image (la plus nette)
-            fen = cv2.getPerspectiveTransform(U, win[-1].astype(np.float32))
+            fen = cv2.getPerspectiveTransform(U, win[derniere].astype(np.float32))
             fin =subprocess.run(["ffmpeg", "-v", "error", "-sseof", "-0.05", "-i", A.video, "-frames:v", "1",
                                   "-f", "rawvideo", "-pix_fmt", "bgr24", "-"], capture_output=True, check=True).stdout
             fin = np.frombuffer(fin, np.uint8).reshape(H, W, 3).astype(np.float32)
@@ -319,10 +388,15 @@ def principal():
             fen_px = moy(0.05, 0.95, 0.05, 0.95)
             clair_bgr = np.percentile(fen_px, 90, axis=0)
             fond = tuple(int(x) for x in fond_bgr[::-1]); clair = tuple(int(x) for x in clair_bgr[::-1])
-            print("couleurs relevées : fond", fond, "clair", clair)
+            if A.couleurs_s01:
+                fond, clair = FOND_DEFAUT, CLAIR_DEFAUT
+            print("couleurs : fond", fond, "clair", clair)
             ui = Interface(fond, clair)
         img = ui.image(A.t0 + k / FPS, A.duree_vie or duree)
         q = dalles[k]
+        if q is None:                                   # écran hors champ : l'image passe telle quelle
+            ecr.stdin.write(np.clip(f, 0, 255).astype(np.uint8).tobytes())
+            continue
         larg = np.hypot(*(q[1] - q[0]))
         cible = int(min(UW * SS, max(160, larg * 1.6)))
         src = np.asarray(img.resize((cible, int(cible * UH / UW)), Image.LANCZOS))[:, :, ::-1].astype(np.float32)
