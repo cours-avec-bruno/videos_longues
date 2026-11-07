@@ -27,7 +27,10 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--video", required=True)
 ap.add_argument("--sortie", required=True)
 ap.add_argument("--controle", default="", help="dossier où écrire quelques images de contrôle")
+ap.add_argument("--portraits", default="../../medias/S01/portraits",
+                help="dossier des deux portraits robots (portrait_1.png : vie terminée, portrait_2.png : vie en cours)")
 A = ap.parse_args()
+PORTRAITS = [f"{A.portraits}/portrait_1.png", f"{A.portraits}/portrait_2.png"]
 
 W, H = 1920, 1080
 FPS = 24
@@ -128,7 +131,8 @@ class Interface:
         self.f_titre = police("segoeuisl.ttf", 22)
         self.f_petit = police("consola.ttf", 17)
         self.f_mini = police("consola.ttf", 14)
-        self.X0, self.X1 = 250, 1640           # âge 0 et âge 100
+        self.X0, self.X1 = 250, 1180           # âge 0 et âge 100 (à droite : la colonne des fiches)
+        self.CX = 1290                         # colonne des deux fiches avec portrait robot
         self.Y0, self.PAS = 196, 47            # première ligne, écart entre lignes
         self.NB = 16                           # 15 vies terminées + la vie en cours
         rng = np.random.default_rng(graine)
@@ -152,7 +156,29 @@ class Interface:
             ev = [(c, a) for c, a in ev if a < mort]
             self.vies.append(dict(pays=pays[i % len(pays)], mort=mort, fin=min(fin_etudes, mort), ev=ev,
                                   num=1284093 - (self.NB - 1 - i) * int(rng.integers(1, 4))))
+        self.vies[-1]["pays"] = "NGA"          # la vie en cours : celle de la jeune femme du portrait 2
+        self.portraits = [self._portrait(p) for p in PORTRAITS]
         self.statique = self._statique()
+
+    def _portrait(self, chemin):
+        """Portrait robot passé aux couleurs de l'écran : gris → du fond sombre au clair de l'interface."""
+        g = Image.open(chemin).convert("L")
+        w, h = 250 * SS, 320 * SS
+        r = max(w / g.width, h / g.height)
+        g = g.resize((int(g.width * r), int(g.height * r)), Image.LANCZOS)
+        g = g.crop(((g.width - w) // 2, 0, (g.width - w) // 2 + w, h))
+        a = np.asarray(g, np.float32)[:, :, None] / 255.0
+        bas, haut = np.array(teinte(self.fond, 0.75), np.float32), np.array(teinte(self.clair, 0.92), np.float32)
+        return Image.fromarray((bas + (haut - bas) * a ** 1.15).astype(np.uint8))
+
+    def _fiche(self, d, im, y, portrait, lignes, vif):
+        x = self.CX * SS
+        cadre = teinte(self.fond, 1.22 if vif else 1.1)
+        d.rectangle([x - 20 * SS, y - 20 * SS, (UW - 40) * SS, y + 410 * SS], fill=cadre)
+        im.paste(portrait, (x + 55 * SS, y))
+        d.rectangle([x + 55 * SS, y, x + 305 * SS, y + 320 * SS], outline=teinte(self.clair, 0.55), width=2 * SS)
+        for j, (txt, f, k) in enumerate(lignes):
+            d.text((x + 55 * SS, y + (334 + 24 * j) * SS), txt, font=f, fill=teinte(self.clair, k))
 
     def x(self, age):
         return (self.X0 + (self.X1 - self.X0) * age / 100.0) * SS
@@ -202,7 +228,13 @@ class Interface:
         d.text((60 * SS, yl), "école   travail   mariage   enfant", font=self.f_mini, fill=teinte(c, 0.5))
         for i, v in enumerate(self.vies[:-1]):
             y = (self.Y0 + i * self.PAS) * SS
-            self._vie(d, y, v, 200, teinte(c, 0.62), 2)
+            self._vie(d, y, v, 200, teinte(c, 0.78 if i == 0 else 0.62), 2)
+        # fiche 1 : une vie terminée (la première ligne), avec son portrait robot
+        v = self.vies[0]
+        self._fiche(d, im, 110 * SS, self.portraits[0], [
+            (f'{v["pays"]}  ·  homme', self.f_petit, 0.9),
+            (f'vie {v["num"]:,}'.replace(",", " "), self.f_mini, 0.6),
+            (f'{int(v["mort"])} ans', self.f_mini, 0.6)], vif=False)
         return im
 
     def image(self, t, duree):
@@ -218,7 +250,7 @@ class Interface:
         v = self.vies[-1]
         i = self.NB - 1
         y = (self.Y0 + i * self.PAS + 10) * SS
-        d.rectangle([40 * SS, y - 22 * SS, (UW - 40) * SS, y + 22 * SS], fill=teinte(self.fond, 1.18))
+        d.rectangle([40 * SS, y - 22 * SS, (self.CX - 50) * SS, y + 22 * SS], fill=teinte(self.fond, 1.18))
         p = min(1.0, max(0.0, (t - 0.4) / (duree - 1.6)))
         p = p * p * (3 - 2 * p) * 0.6 + p * 0.4
         age = v["mort"] * p
@@ -228,6 +260,11 @@ class Interface:
         if p < 1:
             r = 7 * SS
             d.ellipse([xc - r, y - r, xc + r, y + r], fill=teinte(c, 1.1))
+        # fiche 2 : la vie en cours, son âge avance avec la ligne
+        self._fiche(d, im, 540 * SS, self.portraits[1], [
+            (f'{v["pays"]}  ·  femme', self.f_petit, 1.0),
+            (f'en cours  {n + 1:,}'.replace(",", " "), self.f_mini, 0.75),
+            (f'{int(age)} ans' if p < 1 else f'{int(v["mort"])} ans', self.f_mini, 0.75)], vif=True)
         return im
 
 

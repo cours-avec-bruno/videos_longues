@@ -220,3 +220,9 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Marche régénérée sur 10 s (Wan 3.0, 35 crédits). Le modèle ne produit pas de balancement de tête : ajouté en post-production, calé sur une cadence d'un pas toutes les 0,95 s.
 - Son construit par script (`scenes/S01/son.py`, outil partagé `shared/outils/son/pas.py`) à partir de sons Epidemic Sound (registre `references/sons.md`) : nos pas, l'air d'un grand hall, le ronflement de l'ordinateur et de la lampe qui montent à l'approche, une réverbération synthétique. Pas de musique.
 - Livré : `medias/S01/S01_v2.mp4` (hors Git). À écouter au casque par Bruno : le son n'est vérifié que par mesures.
+
+## 2026-11-07 · S01 : l'écran montre des vies simulées
+
+- Demande de Bruno : sur l'ordinateur, des timelines de vies simulées, discrètes mais reconnaissables, puis deux portraits robots.
+- Incrustation suivie image par image dans la marche existante (`scenes/S01/ecran.py`), sans nouvelle génération vidéo. Portraits robots générés par Higgsfield (GPT Image 2.6, 0,5 crédit en tout).
+- Livré : `medias/S01/S01_v4.mp4`. On passe à la S02, à la demande de Bruno.
