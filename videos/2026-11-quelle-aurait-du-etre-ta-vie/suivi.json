@@ -51,8 +51,8 @@
     "S16 : « le chiffre du début » n'existe plus (question retirée de S02) ; à repenser",
     "S14 : la saisie de la France n'est plus montrée (S03 réduite) ; le rappel est à repenser",
     "S05 : la musique, à l'oreille (Bhimpalasi en place, Remembering en réserve)",
-    "Crédits ElevenLabs épuisés (110 restants) : recharger pour la narration de S07 (rêve, « timide », « dix ans ») et le dialogue des deux simulateurs (voix à choisir)",
-    "S08 : à réécrire, le choix de l'école est passé dans la salle des simulateurs (S07)"
+    "S08 : à réécrire, le choix de l'école est passé dans la salle des simulateurs (S07)",
+    "S07 : les voix des deux simulateurs (Nori, Sara), à valider à l'oreille"
   ],
   "interludes_S06_apres": [
     "S05",

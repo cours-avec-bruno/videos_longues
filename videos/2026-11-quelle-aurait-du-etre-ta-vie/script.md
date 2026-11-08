@@ -103,7 +103,7 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 ## S07 · L'enfance, puis la salle des simulateurs
 
-Version 2 (retours de Bruno, 08/11/2026) : narration en prise 1, plus de choix à 7 ans ni de coups de baguette ; le premier choix se fait dans la salle des simulateurs. Les répliques marquées (à générer) n'ont pas encore de voix (crédits ElevenLabs épuisés) : sous-titres provisoires dans le montage.
+Version 2 (retours de Bruno, 08/11/2026) : narration en prise 1, plus de choix à 7 ans ni de coups de baguette ; le premier choix se fait dans la salle des simulateurs. Voix : Guillaume (prise 1), le simulateur (Nori), la simulatrice (Sara).
 
 [5 ans : une cloche, la cour d'école ; le tableau de l'inscription, puis des billets qu'on compte]
 
@@ -113,17 +113,17 @@ Version 2 (retours de Bruno, 08/11/2026) : narration en prise 1, plus de choix �
 
 ÉCRAN : ingénieur [en grand, sur le dessin d'un pont qui se trace ; silence]
 
-> Un rêve plutôt ambitieux. Sur deux cents vies nées comme lui, deux seulement font des études d'ingénieur. (à régénérer dans la continuité de la prise 1)
+> Un rêve plutôt ambitieux. Sur deux cents vies nées comme lui, deux seulement font des études d'ingénieur.
 
 [200 petites silhouettes, une par vie simulée dans les mêmes conditions ; 198 s'éteignent, deux restent allumées, en rouge. Source : `prompts/partie/6-parts-decisions.json`, Ingénierie 2 fois sur 200 vies]
 
-> À l'école, il est plutôt timide. Souvent au fond de la classe, à écouter. (à générer)
+> À l'école, il est plutôt timide. Souvent au fond de la classe, à écouter.
 
 [la classe : il est au dernier rang, il écoute]
 
 > La même année, la famille s'endette.
 
-> À dix ans, le premier gros évènement de sa vie arrive. (à générer)
+> À dix ans, le premier gros évènement de sa vie arrive.
 
 [le fleuve, les fleurs de souci ; le piano]
 
@@ -131,7 +131,7 @@ Version 2 (retours de Bruno, 08/11/2026) : narration en prise 1, plus de choix �
 
 [les funérailles, puis une lampe sur l'eau. On recule : c'était un écran, dans une salle sombre pleine d'écrans où passent des instants de sa vie. Deux simulateurs, costumes sombres, peau pâle, devant la console]
 
-LUI (à générer) : Tiens, regarde. C'est lui, Manoj. Je lui ai laissé la vie douce, jusqu'à maintenant.
+LUI : Tiens, regarde. C'est lui, Manoj. Je lui ai laissé la vie douce, jusqu'à maintenant.
 
 LUI : Il vient de perdre son grand-père.
 

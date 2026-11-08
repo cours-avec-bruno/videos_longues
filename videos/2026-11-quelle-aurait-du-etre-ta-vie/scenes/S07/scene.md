@@ -8,7 +8,7 @@
 | **Procédé principal** | I07 : les tableaux de la simulation (mannequins sans visage, Manoj en rouge), qui alternent avec de vraies images unifiées (I04) |
 | **Procédés secondaires** | T01 |
 | **Statut** | construite le 08/11/2026 à la demande de Bruno : « un mix de motion design, 3D, images d'illustration, montage dynamique qui transmet des émotions » |
-| **Production** | V2 le 08/11/2026 (`medias/S07/S07_v2.mp4`) : narration en prise 1, sans la baguette ni le choix à 7 ans, avec la salle des simulateurs et le premier choix. Voix manquantes (crédits ElevenLabs) : sous-titres provisoires |
+| **Production** | V2 le 08/11/2026 (`medias/S07/S07_v2.mp4`) : narration en prise 1, sans la baguette ni le choix à 7 ans, avec la salle des simulateurs et le premier choix. Voix complètes (Guillaume en prise 1, Nori, Sara) |
 
 ## Intention
 
@@ -56,7 +56,7 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 
 - `tableaux.py` (Blender, Eevee ; module partagé `shared/blender/plateau.py`) : l'école, les grands à 8 ans, la classe (Manoj au dernier rang, qui écoute), la dette (image fixe), les funérailles. Les plans du choix à 7 ans et de la baguette restent dans le script mais ne sont plus montés.
 - `salle.py` (Blender, Eevee) : la salle de surveillance, d'après l'image de référence de Bruno (bleu nuit, reflets, chrome) : un mur d'écrans où passent des instants de la vie de Manoj (`medias/S07/ecrans/`), un grand écran central, la console, deux simulateurs (costumes sombres, peau pâle). Quatre plans : `revele` (on recule depuis l'écran), `large`, `epaule` (par-dessus l'épaule, l'écran du choix), `regard` (elle se tourne vers nous). Pour chaque image : les coins de l'écran central (`coins.json`) et son masque (`masque/`), pour y incruster au montage ce qu'il montre.
-- `montage.py` : le déroulé, la fenêtre d'interface (`shared/outils/image/fenetre.py`), « ingénieur » et les 200 vies, l'écran central de la salle (la lampe, les funérailles, la classe, puis le choix : deux cartes, un trait de compte à rebours, le clic), les sous-titres provisoires des répliques à générer, le son (la salle : souffle des machines, bourdonnement des écrans, une tension grave).
+- `montage.py` : le déroulé, la fenêtre d'interface (`shared/outils/image/fenetre.py`), « ingénieur » et les 200 vies, l'écran central de la salle (la lampe, les funérailles, la classe, puis le choix : deux cartes, un trait de compte à rebours, le clic), le son (la salle : souffle des machines, bourdonnement des écrans, une tension grave).
 
 Grammaire : la simulation passe dans la fenêtre de l'interface ; les vraies images et le deuil sortent en plein écran ; la salle est le hors-champ de la simulation, ceux qui la regardent. Arc : fierté, rêve, timidité, inquiétude, deuil, puis le recul : on découvre qu'on le regardait.
 
@@ -64,5 +64,5 @@ Changement d'intention (demandé par Bruno, 08/11/2026) : le premier choix n'est
 
 ## Points à revoir
 
-- Générer les voix : narration (le rêve dans la continuité de la prise 1, « timide », « dix ans ») et le dialogue des deux simulateurs (voix à choisir, à valider par Bruno).
+- Voix des simulateurs (Nori, Sara) à valider à l'oreille.
 - S08 à réécrire en conséquence.

@@ -68,7 +68,7 @@ T_EPAULE = 57.60
 T_REGARD = 63.60
 T_CLIC_P = 69.00         # retour par-dessus l'épaule : le clic
 T_NOIR = 71.00
-DUREE = 74.60
+DUREE = 75.40
 T_CHOIX = T_EPAULE + 1.0             # le choix s'affiche sur l'écran central
 T_DECOMPTE = (65.8, 68.8)            # trois secondes : le spectateur choisit
 T_CLIC = 69.80
@@ -81,22 +81,36 @@ PHRASES = [  # ((début, fin) dans la prise, position dans la scène)
     ((30.03, 32.22), 27.4),     # La même année, la famille s'endette.
     ((35.76, 37.84), 33.6),     # Il regarde longtemps les adultes pleurer.
 ]
-# provisoire : la phrase du rêve, générée à part (sera régénérée dans la continuité de la prise 1)
-VOIX_REVE = os.path.join(M, "voix", "S07_reve_prise1_p0.90.mp3")
-PHRASES_REVE = [((2.40, 3.96), T_ING + 2.0), ((4.58, 6.53), T_ING + 3.9), ((6.85, 8.80), T_ING + 6.05)]
-# à générer : (qui, texte, début, durée estimée)
-VOIX_A_VENIR = [
-    ("narration", "À l'école, il est plutôt timide. Souvent au fond de la classe, à écouter.", 21.9, 4.4),
-    ("narration", "À dix ans, le premier gros évènement de sa vie arrive.", 29.9, 3.0),
-    ("lui", "Tiens, regarde. C'est lui, Manoj. Je lui ai laissé la vie douce, jusqu'à maintenant.", 44.2, 4.6),
-    ("lui", "Il vient de perdre son grand-père.", 49.1, 2.0),
-    ("elle", "Je pense que c'est le moment de reprendre les rênes.", 51.8, 2.8),
-    ("lui", "L'an prochain, il finit l'école primaire. Ses parents sont endettés.", 55.2, 3.6),
-    ("elle", "Alors ? Il continue l'école… ou il va travailler pour les aider ?", 59.2, 3.8),
-    ("elle", "À toi de voir.", 64.4, 1.2),
-    ("lui", "L'école.", 69.1, 0.8),
-    ("elle", "Bon choix. Reste à savoir s'ils pourront payer.", 71.3, 2.9),
+# les phrases nouvelles (08/11/2026), générées dans la continuité de « À huit ans… » : prise 1 (règle de Bruno pour Guillaume)
+VOIX_B = os.path.join(M, "voix", "S07b_prise1.mp3")
+PHRASES_B = [
+    ((5.46, 6.62), T_ING + 2.0),     # Un rêve plutôt ambitieux.
+    ((7.48, 9.00), T_ING + 3.9),     # Sur deux cents vies nées comme lui,
+    ((9.38, 11.28), T_ING + 6.05),   # deux seulement font des études d'ingénieur.
+    ((12.00, 13.72), 21.9),          # À l'école, il est plutôt timide.
+    ((14.10, 15.96), 24.0),          # Souvent au fond de la classe, à écouter.
+    ((19.08, 21.74), 29.9),          # À dix ans, le premier gros évènement de sa vie arrive.
 ]
+# les deux simulateurs (dans la salle : un peu de pièce autour de leur voix)
+VOIX_LUI = os.path.join(M, "voix", "S07_lui_prise1.mp3")      # Nori, eleven_v3
+PHRASES_LUI = [
+    ((0.10, 2.06), 44.2),     # Tiens, regarde. C'est lui, Manoj.
+    ((2.74, 5.08), 46.6),     # Je lui ai laissé la vie douce, jusqu'à maintenant.
+    ((5.86, 7.46), 49.6),     # Il vient de perdre son grand-père.
+    ((7.94, 11.46), 55.3),    # L'an prochain, il finit l'école primaire. Ses parents sont endettés.
+    ((11.98, 12.42), 69.1),   # L'école.
+]
+VOIX_ELLE = os.path.join(M, "voix", "S07_elle_prise2.mp3")    # Sara, eleven_v3
+PHRASES_ELLE = [
+    ((0.06, 2.78), 52.0),     # Je pense que c'est le moment de reprendre les rênes.
+    ((4.34, 4.62), 59.4),     # Alors ?
+    ((5.82, 6.78), 60.0),     # Il continue l'école…
+    ((7.72, 9.50), 61.2),     # … ou il va travailler pour les aider ?
+    ((10.40, 10.98), 64.4),   # À toi de voir.
+    ((11.68, 12.12), 71.3),   # Bon choix.
+    ((13.14, 15.20), 72.0),   # Reste à savoir s'ils pourront payer.
+]
+VOIX_A_VENIR = []         # toutes les phrases ont leur voix
 
 # ---------------------------------------------------------------- le déroulé : (début, fin, genre, source, plein, entrée)
 PLANS = [
@@ -561,15 +575,24 @@ clics = lire("souris_clics.wav")
 o_c = crete(clics[int(5 * SR):int(8 * SR)]) + int(5 * SR)
 poser(clics[o_c - 200:o_c + int(0.15 * SR)], T_CLIC, db(-6))
 
-# les voix : la narration (prise 1), le rêve (provisoire)
+# les voix : la narration (prise 1 et phrases nouvelles), puis les deux simulateurs, dans la salle
+rng = np.random.default_rng(7)
+tr = np.arange(int(0.35 * SR)) / SR
+piece = rng.normal(0, 1, len(tr)) * np.exp(-tr / 0.09)       # une petite pièce, sèche et proche
+piece[0] = 0
+piece *= 0.22 / np.sqrt((piece ** 2).sum())
 voix = np.zeros(Ns)
-for fichier, phrases in ((VOIX, PHRASES), (VOIX_REVE, PHRASES_REVE)):
+for fichier, phrases, salle_ in ((VOIX, PHRASES, False), (VOIX_B, PHRASES_B, False),
+                                 (VOIX_LUI, PHRASES_LUI, True), (VOIX_ELLE, PHRASES_ELLE, True)):
     a_ = lire_audio(fichier, mono=True).astype(np.float64)
     actif = np.abs(a_) > 0.01
     a_ *= db(-17.2 - 20 * np.log10(np.sqrt((a_[actif] ** 2).mean())))
     for (a, b), pos in phrases:
         s_ = a_[int(a * SR):int(b * SR)]
         s_ = s_ * fondu(len(s_), 0.01, 0.06)
+        if salle_:
+            s_ = np.concatenate([s_, np.zeros(len(piece))])
+            s_ = s_ + np.convolve(s_, piece)[:len(s_)]
         j = int(pos * SR)
         f_ = min(Ns, j + len(s_))
         voix[j:f_] += s_[:f_ - j]
