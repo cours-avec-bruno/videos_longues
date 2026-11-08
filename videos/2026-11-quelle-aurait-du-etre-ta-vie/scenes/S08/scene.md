@@ -2,13 +2,13 @@
 
 | | |
 |---|---|
-| **Durée** | ≈ 0:50 |
+| **Durée** | 46,4 s |
 | **Fabrication** | Blender (`salle.py` de S07, `tableaux.py`) + vraies images + motion design et montage Python (`montage.py`) |
 | **Fonction** | INCARNER |
 | **Procédé principal** | N15 : la réaction spontanée de l'opérateur rend humain le moment où le bon choix ne suffit pas |
 | **Procédés secondaires** | T01, I13 |
 | **Statut** | déroulé validé par Bruno le 08/11/2026 (« un vrai travail de motion design cohérent, intégrations réfléchies, transitions, couleurs, inspiré des références ») |
-| **Production** | en construction (08/11/2026) |
+| **Production** | V1 le 08/11/2026 (`medias/S08/S08_v1.mp4`), à valider ; aperçu `medias/S01_a_S08_apercu.mp4` |
 
 ## Intention
 
@@ -59,6 +59,9 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 
 ## Fabrication
 
-Notes techniques : fichiers sources, prompts (`../../prompts/`), réglages, rendus.
+- `tableaux.py` (Blender, Eevee) : `portail` (les enfants entrent, le portail se referme ; la lumière chaude est de l'autre côté, lui dans la pénombre froide) et `betes` (soleil rasant, ses chèvres, les enfants qui passent avec leur cartable ; il se retourne).
+- `../S07/salle.py`, plans `s08_ecran`, `s08_recul` (il se recule : neuf poses intermédiaires, une par image), `s08_sara` ; sorties dans `medias/S08/salle/` avec les coins de l'écran et son masque.
+- `montage.py` : l'écran (la carte rouge se replie en curseur et écrit la ligne), les traversées d'écran (homographie : les coins de l'écran vont jusqu'à la fenêtre, ou jusqu'au plein écran), la grille des 200 vies (vague d'allumage qui part de lui ; une vingtaine s'éteignent), la fin (la rouge et vous), le son.
+- Vraie image : `pexels/s08/14275268.mp4`. Sons : voir `references/sons.md`, section S08.
 
 ## Points à revoir

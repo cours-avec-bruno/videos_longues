@@ -1,7 +1,7 @@
 {
   "titre": "Quelle aurait dû être ta vie ?",
-  "en_cours": "S07",
-  "prochaine": "S08",
+  "en_cours": "S08",
+  "prochaine": "S09",
   "etapes": [
     {
       "nom": "Concept et sources",
@@ -51,7 +51,6 @@
     "S16 : « le chiffre du début » n'existe plus (question retirée de S02) ; à repenser",
     "S14 : la saisie de la France n'est plus montrée (S03 réduite) ; le rappel est à repenser",
     "S05 : la musique, à l'oreille (Bhimpalasi en place, Remembering en réserve)",
-    "S08 : à réécrire, le choix de l'école est passé dans la salle des simulateurs (S07)",
     "S07 : les voix des deux simulateurs (Nori, Sara), à valider à l'oreille"
   ],
   "interludes_S06_apres": [
