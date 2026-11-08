@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Durée** | 52,8 s |
+| **Durée** | 58,5 s |
 | **Fabrication** | Blender (`tableaux.py`) + vraies vidéos (Pexels) + motion design et montage Python (`montage.py`) |
 | **Fonction** | INCARNER |
 | **Procédé principal** | I07 : les tableaux de la simulation (mannequins sans visage, Manoj en rouge), qui alternent avec de vraies images unifiées (I04) |
@@ -55,7 +55,7 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 ## Fabrication
 
 - `tableaux.py` (Blender, Eevee ; module partagé `shared/blender/plateau.py`) : l'école, les trois vignettes du choix (prière, danse, cricket, images fixes), les grands à 8 ans, la baguette (le bras du maître s'abat à l'image 68), la classe (les mains se lèvent une à une, pas la sienne), la dette (image fixe), les funérailles.
-- `montage.py` : le déroulé, la fenêtre d'interface et le passage au plein écran (`shared/outils/image/fenetre.py`), le choix en motion design (le curseur hésite, un trait de compte à rebours, le clic, la carte qui s'agrandit), « ingénieur » sur le dessin d'un pont, l'éclair et la secousse du coup, la voix (`S07_prise2`), le son.
+- `montage.py` : le déroulé, la fenêtre d'interface et le passage au plein écran (`shared/outils/image/fenetre.py`), le choix en motion design (le curseur hésite, un trait de compte à rebours, le clic, la carte qui s'agrandit), « ingénieur » sur le dessin d'un pont, puis le rêve mis en chiffres (200 silhouettes, une par vie simulée née comme lui ; deux seulement font des études d'ingénieur, elles restent allumées en rouge), l'éclair et la secousse du coup, la voix (`S07_prise2`), le son.
 
 Grammaire : la simulation passe dans la fenêtre de l'interface ; les vraies images, le coup et le deuil sortent en plein écran. Arc : fierté, jeu, rêve, honte, inquiétude, deuil ; le piano (« Remembering ») n'entre qu'au deuil.
 

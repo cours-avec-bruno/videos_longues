@@ -53,13 +53,21 @@ PHRASES = {  # nom : ((début, fin) dans la prise, position dans la scène)
     "question": ((9.70, 13.05), 7.0),    # Vous avez sept ans. Qu'est-ce que vous aimez faire de votre temps libre ?
     "prends": ((14.07, 15.00), 13.4),    # Je prends celle-là.
     "huit": ((15.57, 21.10), 17.2),      # À huit ans, quand les grands lui demandent ce qu'il veut faire plus tard, il répond toujours la même chose.
-    "neuf": ((21.81, 26.90), 26.5),      # À neuf ans, il bavarde en classe, et le maître lui donne des coups de baguette sur la paume.
-    "main": ((27.62, 29.80), 33.1),      # Après ça, il ne lève plus la main.
-    "dette": ((30.82, 33.07), 36.7),     # La même année, la famille s'endette.
-    "dix": ((33.53, 35.70), 39.9),       # À dix ans, son grand-père meurt.
-    "pleurer": ((36.43, 38.77), 43.4),   # Il regarde longtemps les adultes pleurer.
+    "neuf": ((21.81, 26.90), 32.2),      # À neuf ans, il bavarde en classe, et le maître lui donne des coups de baguette sur la paume.
+    "main": ((27.62, 29.80), 38.8),      # Après ça, il ne lève plus la main.
+    "dette": ((30.82, 33.07), 42.4),     # La même année, la famille s'endette.
+    "dix": ((33.53, 35.70), 45.6),       # À dix ans, son grand-père meurt.
+    "pleurer": ((36.43, 38.77), 49.1),   # Il regarde longtemps les adultes pleurer.
 }
-T_FRAPPE = 31.25                         # la baguette s'abat (sur « …la paume »)
+# Bruno (08/11/2026) : après « ingénieur », dire que c'est un rêve ambitieux. Le chiffre vient de la simulation :
+# sur les 200 vies nées dans les mêmes conditions (prompts/partie/6-parts-decisions.json), 2 font des études d'ingénieur.
+# Une seule prise possible (crédits ElevenLabs épuisés), un peu aiguë : baissée (rubberband 0.90, timbre préservé).
+VOIX_REVE = os.path.join(M, "voix", "S07_reve_prise1_p0.90.mp3")
+PHRASES_REVE = [((2.40, 3.96), 25.3),    # Un rêve plutôt ambitieux.
+                ((4.58, 6.53), 27.2),    # Sur deux cents vies nées comme lui,
+                ((6.85, 8.80), 29.35)]   # deux seulement font des études d'ingénieur.
+T_ETEINT = 29.6                          # « deux seulement » : les autres s'éteignent
+T_FRAPPE = 36.95                         # la baguette s'abat (sur « …la paume »)
 T_CLIC = 14.15                           # « Je prends celle-là. » : le clic
 
 # ---------------------------------------------------------------- le déroulé : (début, fin, genre, source, plein, entrée)
@@ -73,20 +81,20 @@ PLANS = [
     (6.40, 14.85, "choix", None, 0, "morph"),
     (14.85, 16.90, "reel", ("28887495.mp4", 2.0, 1.0, 0.5), 1, "morph"),
     (16.90, 23.30, "d3", ("huit_ans", 0.0), 0, "morph"),
-    (23.30, 26.40, "ingenieur", None, 1, "coupe"),
-    (26.40, 28.40, "reel", ("16868495.mp4", 2.0, 1.0, 0.5), 1, "coupe"),
-    (28.40, 32.80, "d3", ("baguette", 0.0), 1, "coupe"),
-    (32.80, 36.40, "d3", ("classe", 0.0), 0, "morph"),
-    (36.40, 37.40, "reel", ("18070270.mp4", 10.0, 1.0, 0.5), 1, "morph"),
-    (37.40, 39.60, "fixe", ("dette",), 0, "morph"),
-    (39.60, 42.70, "reel", ("20143634.mp4", 3.0, 0.8, 0.5), 1, "morph"),
-    (42.70, 49.70, "d3", ("funerailles", 0.0), 1, "fondu"),
-    (49.70, 52.80, "reel", ("34630320.mp4", 1.0, 0.8, 0.45), 1, "fondu"),
+    (23.30, 32.10, "ingenieur", None, 1, "coupe"),
+    (32.10, 34.10, "reel", ("16868495.mp4", 2.0, 1.0, 0.5), 1, "coupe"),
+    (34.10, 38.50, "d3", ("baguette", 0.0), 1, "coupe"),
+    (38.50, 42.10, "d3", ("classe", 0.0), 0, "morph"),
+    (42.10, 43.10, "reel", ("18070270.mp4", 10.0, 1.0, 0.5), 1, "morph"),
+    (43.10, 45.30, "fixe", ("dette",), 0, "morph"),
+    (45.30, 48.40, "reel", ("20143634.mp4", 3.0, 0.8, 0.5), 1, "morph"),
+    (48.40, 55.40, "d3", ("funerailles", 0.0), 1, "fondu"),
+    (55.40, 58.50, "reel", ("34630320.mp4", 1.0, 0.8, 0.45), 1, "fondu"),
 ]
 DUREE = PLANS[-1][1]
 N = int(round(DUREE * FPS))
 T_MORPH = 0.42
-AGES = [("5 ans", 0.15, 1.70), ("7 ans", 6.7, 14.2), ("8 ans", 17.3, 22.9), ("9 ans", 26.5, 28.3), ("10 ans", 39.8, 42.5)]
+AGES = [("5 ans", 0.15, 1.70), ("7 ans", 6.7, 14.2), ("8 ans", 17.3, 22.9), ("9 ans", 32.2, 34.0), ("10 ans", 45.5, 48.2)]
 
 # ---------------------------------------------------------------- lecture des sources
 _videos, _d3 = {}, {}
@@ -290,32 +298,77 @@ def plan_pont():
 PONT = plan_pont()
 
 
+# les 200 vies nées comme lui : 20 x 10 petites silhouettes ; deux feront des études d'ingénieur
+COLS_V, LIGNES_V = 20, 10
+PAS_X, PAS_Y = 62, 57
+GX0 = (W - (COLS_V - 1) * PAS_X) // 2
+GY0 = 360
+ELUS = {(5, 2), (14, 7)}                 # (colonne, rangée) des deux vies allumées
+ROUGE = (214, 72, 46)
+
+
+def silhouette(d, x, y, col, s=1.0):
+    r = 6 * s
+    d.ellipse([x - r, y - 17 * s - r, x + r, y - 17 * s + r], fill=col)
+    d.rounded_rectangle([x - 9 * s, y - 9 * s, x + 9 * s, y + 13 * s], radius=int(7 * s), fill=col)
+
+
 def ecran_ingenieur(t):
     tl = t - 23.30
     c = Image.new("RGB", (W, H), (9, 9, 10))
     d = ImageDraw.Draw(c)
+    # le pont se dessine, puis s'efface quand les vies arrivent
     p = np.clip(tl / 2.3, 0, 1)
-    nseg = len(PONT) * p
-    for k, ((xa, ya), (xb, yb)) in enumerate(PONT):
-        q = np.clip(nseg - k, 0, 1)
-        if q <= 0:
-            break
-        d.line([(xa, ya), (xa + (xb - xa) * q, ya + (yb - ya) * q)], fill=(62, 58, 54), width=2)
-    largeur = d.textlength(MOT, font=F_ING)
-    x = (W - largeur) / 2
+    fade_pont = 1 - lisse((tl - 1.9) / 0.6)
+    if fade_pont > 0:
+        nseg = len(PONT) * p
+        col_p = tuple(int(9 + (v - 9) * fade_pont) for v in (62, 58, 54))
+        for k, ((xa, ya), (xb, yb)) in enumerate(PONT):
+            q = np.clip(nseg - k, 0, 1)
+            if q <= 0:
+                break
+            d.line([(xa, ya), (xa + (xb - xa) * q, ya + (yb - ya) * q)], fill=col_p, width=2)
+    # les 200 vies apparaissent en vague, puis 198 s'éteignent ; deux deviennent rouges
+    e_on = 0.0
+    for r in range(LIGNES_V):
+        for k in range(COLS_V):
+            a = lisse((tl - 2.25 - 0.045 * (r + k)) / 0.35)
+            if a <= 0:
+                continue
+            if (k, r) in ELUS:
+                v = lisse((t - (T_ETEINT + 0.25)) / 0.4)
+                base = (120, 114, 106)
+                col = tuple(int((b + (ro - b) * v) * a) for b, ro in zip(base, ROUGE))
+                e_on = v
+            else:
+                eteint = lisse((t - T_ETEINT - 0.012 * ((k * 7 + r * 13) % 23)) / 0.45)
+                g = 120 - 82 * eteint
+                col = (int(g * a), int(g * 0.95 * a), int(g * 0.88 * a))
+            silhouette(d, GX0 + k * PAS_X, GY0 + r * PAS_Y, col, 1.15)
+    f = np.asarray(c).astype(np.float32)[:, :, ::-1]
+    # le mot, qui monte et rapetisse quand les vies apparaissent
+    m = lisse((tl - 1.75) / 0.8)
     calque = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     dc = ImageDraw.Draw(calque)
+    largeur = dc.textlength(MOT, font=F_ING)
+    x = (W - largeur) / 2
     for i, ch in enumerate(MOT):
         a = lisse((tl - 0.35 - 0.09 * i) / 0.25)
         if a > 0:
             dc.text((x, 330 + 14 * (1 - a)), ch, font=F_ING, fill=(*CREME, int(255 * a)))
-        x += d.textlength(ch, font=F_ING)
-    f = np.asarray(c).astype(np.float32)[:, :, ::-1]
+        x += dc.textlength(ch, font=F_ING)
     a = np.asarray(calque).astype(np.float32)
+    if m > 0:
+        M_ = cv2.getRotationMatrix2D((W / 2, 430), 0, 1 - 0.42 * m)
+        M_[1, 2] -= 250 * m
+        a = cv2.warpAffine(a, M_, (W, H), flags=cv2.INTER_LINEAR)
     al = a[..., 3:4] / 255
     f = f * (1 - al) + a[..., :3][..., ::-1] * al
-    f = f + 0.35 * cv2.GaussianBlur(np.clip(f - 100, 0, 255), (0, 0), 14)
-    f *= 1 - lisse((tl - 2.85) / 0.25)             # s'éteint juste avant la coupe
+    # le halo : le mot ; et une lueur rouge autour des deux vies allumées
+    halo = cv2.GaussianBlur(np.clip(f - 90, 0, 255), (0, 0), 14)
+    rouge = np.clip(f[..., 2:3] - f[..., 1:2] - 60, 0, 255)
+    f = f + 0.35 * halo + 0.9 * e_on * cv2.GaussianBlur(rouge * np.float32([0.25, 0.4, 1.0]), (0, 0), 10)
+    f *= 1 - lisse((tl - 8.55) / 0.25)             # s'éteint juste avant la coupe
     return f
 
 
@@ -387,7 +440,7 @@ def image(n):
 SON_SEUL = os.environ.get("SON_SEUL") == "1"
 if not SON_SEUL:
     if "--test" in sys.argv:
-        for t in (0.5, 3.0, 5.5, 8.0, 11.0, 14.5, 18.0, 24.6, 27.0, 31.25, 34.5, 38.5, 41.0, 46.0, 51.0):
+        for t in (24.6, 26.0, 27.5, 29.0, 30.2, 31.5):
             cv2.imwrite(os.path.join(sys.argv[-1], f"s07_{t:05.2f}.png"), np.clip(image(int(t * FPS)), 0, 255).astype(np.uint8))
         sys.exit()
     ecr = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(FPS),
@@ -483,9 +536,19 @@ tn = np.arange(int(3.0 * SR)) / SR
 note = (np.sin(2 * np.pi * 220 * tn) + 0.5 * np.sin(2 * np.pi * 329.6 * tn) + 0.25 * np.sin(2 * np.pi * 440 * tn))
 note *= np.minimum(1, tn / 0.4) * np.exp(-tn / 1.6) * 0.18
 poser(np.stack([note, note], 1), 23.55, 1.0)
-mix += stereo("ambiance_grand_hall.wav", 30.0) * (db(-30) * env(23.3, 26.4, 0.2, 0.1))[:, None]
+mix += stereo("ambiance_grand_hall.wav", 30.0) * (db(-28) * env(23.3, 32.1, 0.2, 0.1))[:, None]
+# les vies apparaissent : un frémissement de petits tics ; elles s'éteignent : un souffle grave ; deux notes claires
+for r in range(10):
+    poser(un_tic, 25.55 + 0.09 * r, db(-31))
+tw = np.arange(int(1.2 * SR)) / SR
+souffle = np.sin(2 * np.pi * (110 * tw - 25 * tw * tw)) * np.exp(-tw / 0.5) * 0.1
+poser(np.stack([souffle, souffle], 1), T_ETEINT, 1.0)
+for k_, f0 in enumerate((659.3, 880.0)):
+    tc = np.arange(int(1.6 * SR)) / SR
+    cl = np.sin(2 * np.pi * f0 * tc) * np.exp(-tc / 0.5) * 0.05 * np.minimum(1, tc / 0.01)
+    poser(np.stack([cl, cl], 1), T_ETEINT + 0.3 + 0.12 * k_, 1.0)
 # 9 ans : la classe, puis le silence avant le coup, le coup, et le sifflement dans les oreilles
-mix += stereo("classe_inde.wav", 60.0) * (db(-16) * env(26.4, T_FRAPPE - 0.9, 0.05, 1.2))[:, None]
+mix += stereo("classe_inde.wav", 60.0) * (db(-16) * env(32.1, T_FRAPPE - 0.9, 0.05, 1.2))[:, None]
 poser(extrait("baguette_air.wav", 0.25, 0.1, 0.05, 0.05), T_FRAPPE - 0.25, db(-10))
 poser(extrait("claque.wav", 0.003, 0.5, 0.001, 0.3), T_FRAPPE - 0.003, db(-3))
 tb = np.arange(int(0.5 * SR)) / SR
@@ -494,14 +557,14 @@ poser(np.stack([coup, coup], 1), T_FRAPPE, 1.0)
 ts_ = np.arange(int(2.2 * SR)) / SR
 sif = np.sin(2 * np.pi * 3400 * ts_) * np.exp(-ts_ / 0.8) * 0.02
 poser(np.stack([sif, sif], 1), T_FRAPPE + 0.05, 1.0)
-mix += stereo("classe_inde.wav", 95.0) * (db(-27) * env(32.9, 36.4, 0.6, 0.3))[:, None]
+mix += stereo("classe_inde.wav", 95.0) * (db(-27) * env(38.6, 42.1, 0.6, 0.3))[:, None]
 # la dette : les billets, la nuit
-mix += stereo("grillons_nuit.wav", 80.0) * (db(-23) * env(36.4, 39.7, 0.4, 0.5))[:, None]
-poser(bil[int(6 * SR):int(7.2 * SR)] * fondu(int(1.2 * SR), 0.05, 0.6)[:, None], 36.45, db(-17))
+mix += stereo("grillons_nuit.wav", 80.0) * (db(-23) * env(42.1, 45.4, 0.4, 0.5))[:, None]
+poser(bil[int(6 * SR):int(7.2 * SR)] * fondu(int(1.2 * SR), 0.05, 0.6)[:, None], 42.15, db(-17))
 # 10 ans : le fleuve, le soir ; la musique (piano) entre et porte le deuil jusqu'au bout
-mix += stereo("soir_rural.wav", 20.0) * (db(-19) * env(39.6, DUREE, 0.4, 2.0))[:, None]
+mix += stereo("soir_rural.wav", 20.0) * (db(-19) * env(45.3, DUREE, 0.4, 2.0))[:, None]
 mus = stereo("remembering.wav", 0.0, os.path.join(M, "musique"))
-mix += mus * (db(-15) * env(39.3, DUREE + 0.3, 1.2, 2.5))[:, None]
+mix += mus * (db(-15) * env(45.0, DUREE + 0.3, 1.2, 2.5))[:, None]
 
 # la voix (prise 2), au niveau des autres scènes
 a_ = lire_audio(VOIX, mono=True).astype(np.float64)
@@ -510,6 +573,15 @@ a_ *= db(-17.2 - 20 * np.log10(np.sqrt((a_[actif] ** 2).mean())))
 voix = np.zeros(Ns)
 for (a, b), pos in PHRASES.values():
     s_ = a_[int(a * SR):int(b * SR)]
+    s_ = s_ * fondu(len(s_), 0.01, 0.06)
+    j = int(pos * SR)
+    f_ = min(Ns, j + len(s_))
+    voix[j:f_] += s_[:f_ - j]
+b_ = lire_audio(VOIX_REVE, mono=True).astype(np.float64)
+actif = np.abs(b_) > 0.01
+b_ *= db(-17.2 - 20 * np.log10(np.sqrt((b_[actif] ** 2).mean())))
+for (a, b), pos in PHRASES_REVE:
+    s_ = b_[int(a * SR):int(b * SR)]
     s_ = s_ * fondu(len(s_), 0.01, 0.06)
     j = int(pos * SR)
     f_ = min(Ns, j + len(s_))

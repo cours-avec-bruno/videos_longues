@@ -121,6 +121,10 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 ÉCRAN : ingénieur [en grand, sur le dessin d'un pont qui se trace ; silence]
 
+> Un rêve plutôt ambitieux. Sur deux cents vies nées comme lui, deux seulement font des études d'ingénieur.
+
+[200 petites silhouettes, une par vie simulée dans les mêmes conditions ; 198 s'éteignent, deux restent allumées, en rouge. Source : la simulation, `prompts/partie/6-parts-decisions.json` (choix « Que voulez-vous étudier ? » : Ingénierie, 2 fois sur 200 vies)]
+
 > À neuf ans, il bavarde en classe, et le maître lui donne des coups de baguette sur la paume. Après ça, il ne lève plus la main.
 
 [le coup : un éclair ; puis la classe où tous lèvent la main, sauf lui]

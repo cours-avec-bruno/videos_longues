@@ -68,6 +68,7 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `voix/S06_prise1.mp3`, `voix/S06_prise2.mp3` | S06 | eleven_v3 | `qzFaE9O28BJ2nF3gaIiJ`, `CGKx5GmbicikpqAxZBxF` | non (102 et 97 Hz) |
 | `voix/S07_prise2.mp3` | S07 (« Ses parents l'inscrivent… les adultes pleurer. »), générée dans la continuité de la fin de S06 | eleven_v3 | `pCrRWzmEJgEbvjo9GAIJ` | **oui, choisie par mesure** (95 Hz, timbre le plus proche) ; à confirmer à l'oreille |
 | `voix/S07_prise1.mp3` | S07 | eleven_v3 | `suwECNO6GF7wJENaxscv` | non (la 3e prise a échoué : quota ElevenLabs épuisé, 250 crédits restants le 08/11/2026) |
+| `voix/S07_reve_prise1.mp3` → `S07_reve_prise1_p0.90.mp3` | S07 (« Un rêve plutôt ambitieux… études d'ingénieur. »), dans la continuité de la phrase précédente | eleven_v3 | `ESEA2fha7E4zdARwtTxq` | **oui, seule prise possible** (140 crédits ; il en reste 110) ; trop aiguë (111 Hz) : baissée avec ffmpeg rubberband (pitch 0.90, formants préservés) → 106 Hz ; à régénérer quand les crédits seront rechargés |
 
 Toutes les prises sont ramenées au même niveau de voix au montage.
 
