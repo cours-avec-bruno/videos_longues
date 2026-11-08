@@ -3,13 +3,14 @@
 Déroulé (temps de la scène) :
    0,0  noir, « manoj » en gros pixels lumineux (comme « commençons ») ; « Il s'appelle Manoj. »
    2,4  l'aube au village de pêcheurs : on tire les filets, en contre-jour ; la musique entre, à peine
-   5,6  sa fiche de naissance (look de la simulation, bleu cyan) : les lignes s'écrivent ; « Avant lui… »
+   5,6  sa fiche de naissance (fiche.py : HUD cyan, nom, champs tapés, les aînés en pictos) ; « Avant lui… »
   11,0  des enfants devant une maison
   13,8  la cuisine sombre, le feu de bois, la fumée ; « On cuisine au feu de bois. Quand la fumée… »
   17,8  le feu de près ; « …ça lui pique les yeux, et il tousse. » (toux)
   20,6  une femme puise l'eau dans un lit de rivière à sec ; « L'eau, il faut aller la chercher… »
   25,6  le dossier d'inscription à l'école : la case « OBC » se coche toute seule
-  29,4  son portrait, en très gros pixels, en couleurs chaudes (l'humain) ; la même photo sera nette à sa mort (S11)
+  29,4  retour sur la fiche : son portrait remplit le cadre en gros pixels ambrés (l'humain), la caméra s'approche ;
+        jauge de netteté au premier cran : la même photo sera nette à sa mort (S11)
   32,6  l'opérateur seul dans le noir : « Je n'ai rien choisi de tout ça. Lui non plus. »
 Images réelles : Pexels (étalonnage documentaire). Portrait : Pexels 16067431. Voix : prise 1, choisie par Bruno.
 
@@ -82,9 +83,6 @@ def police(nom, t):
 
 
 F_MONO = police("consola.ttf", 46)
-F_MONO_P = police("consola.ttf", 28)
-F_TITRE = police("segoeuisl.ttf", 34)
-FOND = (16, 22, 30)
 
 
 def lisse(p):
@@ -92,61 +90,10 @@ def lisse(p):
     return p * p * (3 - 2 * p)
 
 
-# ---------------------------------------------------------------- le portrait (même photo qu'en S11)
-photo = Image.open(os.path.join(M, "pexels", "portraits", "manoj_16067431.jpg")).convert("RGB")
-pw, ph = photo.size
-cote = int(pw * 0.80)
-x0p, y0p = int(pw * 0.12), int(ph * 0.05)
-visage = photo.crop((x0p, y0p, x0p + cote, y0p + cote))
-CASES = 11                                       # « très gros pixels » : 11 cases de large (premier cran)
-mosa = visage.resize((CASES, CASES), Image.BOX)
-
-
-def portrait(taille, apparition=1.0, k=0):
-    """Mosaïque du visage ; les cases s'allument dans un ordre aléatoire selon `apparition`."""
-    a = np.asarray(mosa, np.float32)[:, :, ::-1].copy()
-    rng = np.random.default_rng(11)
-    ordre = rng.permutation(CASES * CASES).reshape(CASES, CASES) / (CASES * CASES)
-    vis = np.clip((apparition * 1.15 - ordre) / 0.15, 0, 1)[..., None]
-    a = a * vis + np.array([30, 24, 20], np.float32) * (1 - vis)
-    big = cv2.resize(a, (taille, taille), interpolation=cv2.INTER_NEAREST)
-    # de minces joints entre les cases, comme une mosaïque
-    pas = taille / CASES
-    for i in range(1, CASES):
-        p = int(round(i * pas))
-        big[:, p - 1:p + 1] *= 0.55
-        big[p - 1:p + 1, :] *= 0.55
-    return big
-
-
 # ---------------------------------------------------------------- les écrans de la simulation
-LIGNES_FICHE = [("garçon", 0.4), ("Inde · un village de pêcheurs", 1.0), ("hindou", 1.9), ("revenus : ceux du milieu", 2.5),
-                ("avant lui : 2 sœurs, 2 frères", 3.2)]
-
-
-def ecran_fiche(tl):
-    im = Image.new("RGB", (W, H), FOND)
-    d = ImageDraw.Draw(im)
-    f_l = police("consola.ttf", 60)
-    d.text((170, 150), "VIE N° 1 284 177  ·  naissance", font=police("consola.ttf", 34), fill=(120, 150, 170))
-    d.line([(170, 208), (W - 170, 208)], fill=(60, 80, 95), width=2)
-    # emplacement du portrait : vide pour l'instant (sombre, pour ne pas attirer l'œil)
-    x0, y0, x1, y1 = 170, 290, 640, 870
-    d.rectangle([x0, y0, x1, y1], outline=(90, 115, 130), width=3)
-    d.ellipse([305, 400, 505, 620], fill=(30, 38, 46))
-    d.pieslice([215, 650, 595, 1010], 180, 360, fill=(30, 38, 46))
-    d.rectangle([x0 + 3, y1, x1 - 3, y1 + 200], fill=FOND)
-    d.text((372, 450), "?", font=police("segoeuisl.ttf", 100), fill=(95, 120, 135))
-    y = 330
-    for texte, t0 in LIGNES_FICHE:
-        n = int(max(0, (tl - t0) * 26))
-        if n > 0:
-            d.text((740, y), texte[:n], font=f_l, fill=(225, 240, 245))
-            if n < len(texte) and int(tl * 3) % 2 == 0:
-                xc = 740 + d.textlength(texte[:n], font=f_l) + 6
-                d.rectangle([xc, y + 8, xc + 28, y + 66], fill=(225, 240, 245))
-        y += 108
-    return np.asarray(im)[:, :, ::-1].astype(np.float32)
+# la fiche de naissance et le portrait vivent dans fiche.py (refaits le 08/11/2026 d'après les références)
+from fiche import CHAMPS, CPS, LIGNES_M, NOM, fiche  # noqa: E402
+T_PORTRAIT = 1.3          # durée du balayage qui remplit le cadre du portrait
 
 
 def ecran_formulaire(tl):
@@ -176,16 +123,6 @@ def ecran_formulaire(tl):
     return cv2.warpAffine(img, Mz, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
 
 
-def ecran_portrait(tl):
-    img = np.full((H, W, 3), 6, np.float32)
-    taille = int(760 + 60 * lisse(tl / 3.2))
-    p = portrait(taille, apparition=lisse(tl / 1.1))
-    y0, x0 = (H - taille) // 2, (W - taille) // 2
-    img[y0:y0 + taille, x0:x0 + taille] = p
-    halo = cv2.GaussianBlur(img, (0, 0), 40) * 0.35
-    return img + halo
-
-
 # ---------------------------------------------------------------- fabrication des images
 videos = {}
 for deb, fin, genre, src in PLANS:
@@ -212,11 +149,12 @@ def image(tg):
                 f = cv2.warpAffine(f, cv2.getRotationMatrix2D((W / 2, H / 2), 0, z), (W, H), borderMode=cv2.BORDER_REFLECT)
                 return etalonnage_doc(f, k)
             if genre == "fiche":
-                return scan_cyan(ecran_fiche(tl), k, force=0.55)
+                return fiche(tl, 0.0, 0.0, k)
             if genre == "formulaire":
                 return scan_cyan(ecran_formulaire(tl), k, force=0.75)
             if genre == "portrait":
-                return ecran_portrait(tl)
+                # retour sur la fiche, complète : le visage remplit le cadre, la caméra s'en approche
+                return fiche(20.0 + tl, lisse(tl / T_PORTRAIT), lisse((tl - 0.4) / 2.8), k)
             if genre == "bureau":
                 return bureau[min(k, len(bureau) - 1)].astype(np.float32)
     return np.zeros((H, W, 3), np.float32)
@@ -291,9 +229,13 @@ poser(toux * fondu(len(toux), 0.01, 0.3)[:, None], 19.75, db(-12))
 tic = lire_audio(os.path.join(SONS, "tic_doux.wav"), mono=False).astype(np.float64)
 o_t = int(np.argmax(np.abs(tic[:SR]).mean(1)))
 un_tic = tic[max(0, o_t - 100):o_t + int(0.06 * SR)] * fondu(o_t + int(0.06 * SR) - max(0, o_t - 100), 0.002, 0.03)[:, None]
-for texte, t0 in LIGNES_FICHE:
-    for i in range(len(texte)):
-        poser(un_tic, 5.6 + t0 + i / 26, db(-27))
+for i in range(len(NOM)):                       # le nom
+    poser(un_tic, 5.6 + 0.35 + i / 22, db(-26))
+for _, val, t0 in CHAMPS:                       # les champs
+    for i in range(len(val)):
+        poser(un_tic, 5.6 + t0 + i / CPS, db(-27))
+for r in range(LIGNES_M):                       # le portrait : une rangée de cases, un tic
+    poser(un_tic, 29.4 + T_PORTRAIT * (r / LIGNES_M) / 1.25, db(-29))
 clics = lire_audio(os.path.join(SONS, "souris_clics.wav"), mono=False).astype(np.float64)
 o_c = int(np.argmax(np.abs(clics[int(5 * SR):int(8 * SR)]).mean(1))) + int(5 * SR)
 poser(clics[o_c - 200:o_c + int(0.15 * SR)], 25.6 + 1.6, db(-6))

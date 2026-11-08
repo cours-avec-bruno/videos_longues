@@ -51,10 +51,10 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 `montage.py` (≈ 7 min 30 de rendu ; `SON_SEUL=1` pour ne refaire que le son). Ce qui a été construit, et ce qui a changé par rapport au découpage ci-dessus :
 
 1. carton « manoj » en gros pixels lumineux (même procédé que « commençons ») ;
-2. le village au bord de la mer (vraies vidéos, étalonnage documentaire), coupé par la fiche de naissance qui se tape ligne à ligne, à l'écran du simulateur ;
+2. le village au bord de la mer (vraies vidéos, étalonnage documentaire), coupé par la fiche de naissance du simulateur (`fiche.py`, refaite le 08/11 d'après les réf. 01 et 03) : nom en grand, champs étiquetés qui se tapent, les quatre aînés en pictos pixel art puis lui en ambre, cadre du portrait en attente ;
 3. la maison, le feu de bois, la fumée, le chemin de l'eau, sur la voix ;
 4. le formulaire : la case « OBC » se coche toute seule, la caméra se rapproche ;
-5. le visage de Manoj en très gros blocs chauds (la seule couleur chaude de l'interface), qui apparaissent un à un ;
+5. retour sur la fiche : le visage de Manoj remplit le cadre du portrait en gros pixels ambrés (15 × 20 cases, cadrage photo d'identité sur fond noir pour qu'on lise une tête et des épaules), la caméra s'approche ; la jauge « netteté » s'allume au premier de ses 7 crans ;
 6. retour au bureau, l'opérateur seul : « Je n'ai rien choisi de tout ça. Lui non plus. »
 
 Les jauges de S05-P04 (espérance de vie, revenu) ne sont pas montées : elles alourdissaient la scène et auraient demandé des chiffres à l'écran. La voix porte l'essentiel.
