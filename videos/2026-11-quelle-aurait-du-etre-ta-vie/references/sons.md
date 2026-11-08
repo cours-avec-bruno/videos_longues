@@ -28,6 +28,11 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `epidemic/vagues_plage.wav` | Ambience, Seaside, Bournemouth, Beach, Grasshoppers, Waves | `ee1b7f27-d937-4061-af0a-1251020f323a` | S04, S05 | le village de pêcheurs (les vagues) |
 | `epidemic/feu_bois.wav` | Fire, Burning, Wood Stove, Crackling | `8917723b-c304-49c4-a61a-bb333411d894` | S05 | la cuisine au feu de bois |
 | `epidemic/toux_enfant.wav` | Human, Cough, Boy, 3 Years Old, Coughing 01 | `724d74c5-afad-40ac-bdf7-1a4eeb1b199b` | S05 | la toux sous la fumée |
+| `epidemic/bebe_babil.wav` | Voices, Baby, Babble, Talking, Laugh | `2fc81270-2364-4259-bfa8-6785e5ebf777` | S06 | 1 an |
+| `epidemic/boue_main.wav` | Liquid & Mud, Bubbles, Foam, Squeeze, Squelch, Hand | `cdce484b-7551-4a95-9df5-ca249a09709e` | S06 | 2 ans, les mains dans la boue |
+| `epidemic/grillons_nuit.wav` | Ambience, Insect, Crickets, Clean, Night, Amethi, Uttar Pradesh, India 01 | `eca67907-2d37-47f6-a23d-e5e7a38a54d0` | S06 | 3 ans, la nuit |
+| `epidemic/enfants_soir.wav` | Ambience, Residential, Kids Gossiping, Birds Chirping, Evening, Society Compound, India | `48a93009-aae0-457e-9cad-3de24a241931` | S06 | 5 ans |
+| `epidemic/projecteur.wav` | Mechanical, Switch, Light Switch, On, Large, Empty Warehouse, Reverberant 01 | `202b9eb7-1024-4ea6-9e66-da367dfac414` | S06 | chaque tableau qui s'allume |
 
 ## Musique (Epidemic Sound, morceaux : outil `DownloadRecording`)
 

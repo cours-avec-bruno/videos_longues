@@ -9,8 +9,8 @@ Déroulé (temps de la scène) :
   17,8  le feu de près ; « …ça lui pique les yeux, et il tousse. » (toux)
   20,6  une femme puise l'eau dans un lit de rivière à sec ; « L'eau, il faut aller la chercher… »
   25,6  le dossier d'inscription à l'école : la case « OBC » se coche toute seule
-  29,4  retour sur la fiche : son portrait remplit le cadre en gros pixels ambrés (l'humain), la caméra s'approche ;
-        jauge de netteté au premier cran : la même photo sera nette à sa mort (S11)
+  29,4  son portrait seul, au centre : il se révèle en gros pixels ambrés (l'humain) ; sous lui, 7 crans de netteté,
+        le premier s'allume : la même photo sera nette à sa mort (S11)
   32,6  l'opérateur seul dans le noir : « Je n'ai rien choisi de tout ça. Lui non plus. »
 Images réelles : Pexels (étalonnage documentaire). Portrait : Pexels 16067431. Voix : prise 1, choisie par Bruno.
 
@@ -92,7 +92,7 @@ def lisse(p):
 
 # ---------------------------------------------------------------- les écrans de la simulation
 # la fiche de naissance et le portrait vivent dans fiche.py (refaits le 08/11/2026 d'après les références)
-from fiche import CHAMPS, CPS, LIGNES_M, NOM, fiche  # noqa: E402
+from fiche import CHAMPS, CPS, LIGNES_M, NOM, fiche, portrait_seul  # noqa: E402
 T_PORTRAIT = 1.3          # durée du balayage qui remplit le cadre du portrait
 
 
@@ -153,8 +153,8 @@ def image(tg):
             if genre == "formulaire":
                 return scan_cyan(ecran_formulaire(tl), k, force=0.75)
             if genre == "portrait":
-                # retour sur la fiche, complète : le visage remplit le cadre, la caméra s'en approche
-                return fiche(20.0 + tl, lisse(tl / T_PORTRAIT), lisse((tl - 0.4) / 2.8), k)
+                # Bruno (08/11) : pas toute la fiche, seulement la révélation du portrait, au centre
+                return portrait_seul(tl, k)
             if genre == "bureau":
                 return bureau[min(k, len(bureau) - 1)].astype(np.float32)
     return np.zeros((H, W, 3), np.float32)

@@ -161,9 +161,9 @@ def panneau_portrait(w, h, cran):
 MOSA = mosaique_cran(1)               # RGB, LIGNES_M x COLS
 
 
-def _dessine_portrait(img, p, k):
-    """Le visage remplit le cadre de haut en bas, case par case (RGB uint8 en place)."""
-    x0, y0, x1, y1 = CADRE
+def _dessine_portrait(img, p, k, cadre=CADRE):
+    """Le visage remplit le cadre de haut en bas, case par case (RGB en place)."""
+    x0, y0, x1, y1 = cadre
     cw, ch = (x1 - x0) / COLS, (y1 - y0) / LIGNES_M
     rng = np.random.default_rng(5)
     retard = rng.random((LIGNES_M, COLS)) * 0.18
@@ -346,6 +346,72 @@ def post(img, k):
     rng = np.random.default_rng(900 + k)
     img += rng.normal(0, 3.2, img.shape).astype(np.float32)
     img *= 1 + 0.012 * np.sin(k * 2.1)               # un scintillement d'écran, à peine
+    return img
+
+
+# ---------------------------------------------------------------- le portrait seul (S05, à la demande de Bruno)
+GRIS_CHAUD = (120, 112, 104)
+
+
+def portrait_seul(tl, k=0, duree=3.2):
+    """Le portrait se révèle seul, au centre, sur le noir : pas de fiche autour.
+    Un cadre discret, la ligne de balayage ambre, une lente approche, et sous lui les 7 crans de netteté."""
+    im = Image.new("RGB", (W, H), (8, 8, 9))
+    d = ImageDraw.Draw(im)
+    ph_ = 780
+    pw_ = int(ph_ * 3 / 4)
+    x0, y0 = (W - pw_) // 2, (H - ph_) // 2 - 30
+    cadre = (x0, y0, x0 + pw_, y0 + ph_)
+    d.rectangle([x0, y0, x0 + pw_, y0 + ph_], fill=(13, 12, 12))
+    coins(d, x0 - 14, y0 - 14, x0 + pw_ + 14, y0 + ph_ + 14, 30, GRIS_CHAUD, 2)
+    p = lisse(tl / 1.3)
+    # les 7 crans : le premier s'allume quand le visage est complet
+    xg = W // 2 - (7 * 26) // 2
+    for i in range(7):
+        on = i == 0 and p > 0.92
+        d.rectangle([xg + i * 26, y0 + ph_ + 40, xg + i * 26 + 14, y0 + ph_ + 54], outline=AMBRE if on else (70, 66, 62),
+                    width=2, fill=AMBRE if on else None)
+    a = np.asarray(im).astype(np.float32)
+    _dessine_portrait(a, p, k, cadre)
+    img = np.clip(a, 0, 255)[:, :, ::-1].copy()
+    z = 1 + 0.06 * lisse(tl / duree)                     # une lente approche
+    Mz = cv2.getRotationMatrix2D((W / 2, H / 2 - 30), 0, z)
+    img = cv2.warpAffine(img, Mz, (W, H), flags=cv2.INTER_LINEAR, borderValue=(9, 8, 8))
+    halo = cv2.GaussianBlur(np.clip(img - 90, 0, 255), (0, 0), 14)
+    img = img + 0.45 * halo
+    img = img * VIG
+    img += np.random.default_rng(900 + k).normal(0, 3.0, img.shape).astype(np.float32)
+    return img
+
+
+def portrait_cran(tl, c0, c1, k=0, duree=2.4, t_div=(0.35, 1.45)):
+    """Même cadre que portrait_seul : le visage, déjà là au cran c0, se redivise jusqu'au cran c1 (S06).
+    Le cran gagné s'allume sous le portrait."""
+    im = Image.new("RGB", (W, H), (8, 8, 9))
+    d = ImageDraw.Draw(im)
+    ph_ = 780
+    pw_ = int(ph_ * 3 / 4)
+    x0, y0 = (W - pw_) // 2, (H - ph_) // 2 - 30
+    d.rectangle([x0, y0, x0 + pw_, y0 + ph_], fill=(13, 12, 12))
+    coins(d, x0 - 14, y0 - 14, x0 + pw_ + 14, y0 + ph_ + 14, 30, GRIS_CHAUD, 2)
+    p = lisse((tl - t_div[0]) / (t_div[1] - t_div[0]))
+    xg = W // 2 - (7 * 26) // 2
+    for i in range(7):
+        on = i < c0 or (i < c1 and p >= 1)
+        neuf = i == c1 - 1 and p >= 1 and (tl - t_div[1]) < 0.45 and int((tl - t_div[1]) * 10) % 2 == 0
+        col = (255, 236, 200) if neuf else AMBRE
+        d.rectangle([xg + i * 26, y0 + ph_ + 40, xg + i * 26 + 14, y0 + ph_ + 54], outline=col if on else (70, 66, 62),
+                    width=2, fill=col if on else None)
+    a = np.asarray(im).astype(np.float32)
+    a[y0:y0 + ph_, x0:x0 + pw_] = panneau_portrait(pw_, ph_, c0 + (c1 - c0) * p)
+    img = np.clip(a, 0, 255)[:, :, ::-1].copy()
+    z = 1.03 + 0.05 * lisse(tl / duree)
+    Mz = cv2.getRotationMatrix2D((W / 2, H / 2 - 30), 0, z)
+    img = cv2.warpAffine(img, Mz, (W, H), flags=cv2.INTER_LINEAR, borderValue=(9, 8, 8))
+    halo = cv2.GaussianBlur(np.clip(img - 90, 0, 255), (0, 0), 14)
+    img = img + 0.45 * halo
+    img = img * VIG
+    img += np.random.default_rng(900 + k).normal(0, 3.0, img.shape).astype(np.float32)
     return img
 
 
