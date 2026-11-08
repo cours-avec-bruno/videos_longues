@@ -8,7 +8,7 @@
 | **Procédé principal** | I07 : figurines sans visage sur un plateau (les années comme de petits tableaux de théâtre) |
 | **Procédés secondaires** | M04 (une année, un tableau), I18 (une lumière par tableau), I13 (le portrait gagne un cran) |
 | **Statut** | refaite en 3D (08/11/2026), avec la voix, transitions lentes, sans le portrait final ; présentée dans une fenêtre d'interface (capture de référence de Bruno) |
-| **Production** | passage 1 (0 → 5 ans) monté le 08/11/2026 (`medias/S06/S06a_v1.mp4`), à valider ; passages 2 à 4 à faire |
+| **Production** | passage 1 (0 → 5 ans) validé en V1 par Bruno (08/11/2026, `medias/S06/S06a_v1.mp4`) ; passages 2 à 4 à faire (avec S07 à S09) |
 
 ## Intention
 
