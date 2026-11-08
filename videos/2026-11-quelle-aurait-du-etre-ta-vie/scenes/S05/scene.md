@@ -8,7 +8,7 @@
 | **Procédé principal** | I13 : le portrait en très gros pixels (la personne n'existe presque pas encore), un cran de netteté à chaque étape |
 | **Procédés secondaires** | I04 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
-| **Production** | V1 montée le 08/11/2026 (`medias/S05/S05_v1.mp4`, 37 s), à valider par Bruno |
+| **Production** | validée en V1 (08/11/2026) ; `medias/S05/S05_v1.mp4`, 37 s ; fiche de naissance et portrait refaits puis validés par Bruno ; reste la musique à confirmer à l'oreille |
 
 ## Intention
 

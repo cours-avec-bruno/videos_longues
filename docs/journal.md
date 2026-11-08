@@ -260,3 +260,4 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Le village de S04 passe au bord de la mer (vu du ciel, puis des pêcheurs qui poussent une barque), avec les vagues sous le village.
 - Raccord S04 → S05 dans `assemblage.py` : coupe nette de la carte au carton « manoj », un bref éclat de glitch. Sortie : `medias/S01_a_S05_apercu.mp4`.
 - Fiche de naissance de S05 refaite (Bruno) d'après les références : HUD inspiré des fiches profil de la réf. 01 (étiquettes en capitales, données en monospace, coins de viseur), pictos pixel art et accent unique de la réf. 03 ; le portrait n'est plus un plan à part : il remplit le cadre de la fiche, en cadrage photo d'identité sur fond noir (on lit enfin un visage), avec une jauge de netteté à 7 crans qui annonce qu'il deviendra net.
+- Nouvelle fiche de naissance et portrait de S05 validés par Bruno ; S05 validée en V1 (la musique reste à confirmer à l'oreille). Prochaine : S06.
