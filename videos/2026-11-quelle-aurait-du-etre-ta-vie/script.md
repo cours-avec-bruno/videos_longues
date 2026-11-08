@@ -155,43 +155,35 @@ LUI : Il faut qu'il continue l'école. Ses frères et sœurs n'ont pas eu cette 
 
 ELLE : Bon choix. Reste à savoir s'ils pourront payer.
 
-## S08 · Onze ans
+## S08 · Le bon choix ne suffit pas (11 à 14 ans)
 
-ÉCRAN : 11 ANS
+Version 2 (08/11/2026) : le choix est fait dans la salle (fin de S07) ; S08 en montre la conséquence.
 
-> Il a fini l'école primaire.
-
-[un temps]
-
-> Vous avez onze ans. Continuer l'école, ou commencer à travailler pour aider la famille ?
-
-ÉCRAN : À VOUS · Continuer à étudier 97 % · Commencer à travailler pour aider votre famille 3 %
-
-[trois secondes]
-
-> Là, je n'hésite pas.
-
-[clic immédiat ; la ligne s'imprime lentement]
+[la salle ; sur l'écran central, la carte « Continuer l'école » se replie en un curseur rouge qui écrit :]
 
 ÉCRAN : Votre famille n'a pas pu payer les frais de scolarité ; vous avez dû renoncer à poursuivre vos études.
 
-[un long silence ; l'opérateur recule dans sa chaise]
+[un silence ; il se recule dans sa chaise]
 
-> Même ça.
+LUI : … Même ça.
 
-[à voix plus basse]
+[on entre dans l'écran : les enfants passent le portail de l'école, qui se referme ; lui reste dehors. 11 ans]
 
-> Il passe ses journées avec les bêtes. À quatorze ans, le simulateur écrit :
+> Il passe ses journées avec les bêtes.
 
-ÉCRAN : Vous enviiez vos amis qui allaient à l'école.
+[14 ans : des enfants passent avec leur cartable ; il se retourne et les suit des yeux]
 
-[un temps ; puis, directement au spectateur, sans appuyer]
+> À quatorze ans, il envie ses amis qui vont à l'école.
 
-> Et vous, à onze ans, qui payait pour que vous restiez à l'école ?
+[on ressort de l'écran : elle, de profil]
 
-[la phrase du site s'imprime ; pas de voix dessus]
+ELLE : Les choix changent les probabilités. Ils ne décident jamais du résultat.
 
-ÉCRAN : Les choix changent les probabilités mais ne décident jamais du résultat.
+[on plonge dans les données : 200 vies nées comme lui ; presque toutes choisissent l'école ; une vingtaine s'éteignent, dont la sienne. Source : `prompts/partie/6-parts-decisions.json`]
+
+[il reste la silhouette rouge ; à côté d'elle, une silhouette crème apparaît : vous]
+
+> Et vous, à onze ans… qui payait pour que vous restiez à l'école ?
 
 ## S09 · La vie adulte
 

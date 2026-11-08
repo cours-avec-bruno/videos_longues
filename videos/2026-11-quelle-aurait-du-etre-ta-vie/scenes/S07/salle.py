@@ -17,6 +17,11 @@ Plans :
   epaule   8,0 s  par-dessus l'épaule : l'écran central, où le choix s'affiche
   regard   7,0 s  la seconde s'est tournée vers nous (vers le spectateur)
 
+Plans de S08 (sorties dans medias/S08/salle) :
+  s08_ecran  7,5 s  par-dessus leurs épaules, lente poussée vers l'écran central (la ligne « …n'a pas pu payer… »)
+  s08_recul  4,5 s  de côté : il se recule dans sa chaise (« … Même ça. »), un mouvement continu (versions intermédiaires)
+  s08_sara   4,0 s  elle, de trois quarts dos, devant l'écran (« Les choix changent les probabilités. »)
+
 Lancer : "C:/Program Files/Blender Foundation/Blender 5.2/blender.exe" -b -P salle.py -- [--test] [--plans large,epaule]
 """
 import argparse
@@ -157,6 +162,13 @@ L.data.size = 4.0
 L.data.color = (0.65, 0.78, 1.0)
 L.rotation_euler = (rad(90), 0, 0)
 P.projecteur("haut_salle", (-1.0, -1.5, 3.8), (0, 1.2, 0.8), 120, (0.6, 0.72, 1.0), 36, flou=0.6)
+# S08 : la lueur de l'écran central sur leurs visages (seulement dans les plans de S08)
+bpy.ops.object.light_add(type="AREA", location=(0, 2.7, 1.45))
+LUEUR = bpy.context.object
+LUEUR.data.energy = 38
+LUEUR.data.size = 2.0
+LUEUR.data.color = (0.7, 0.82, 1.0)
+LUEUR.rotation_euler = (rad(-90), 0, 0)
 P.projecteur("contre_salle", (2.8, 3.0, 3.0), (0, 1.0, 1.0), 260, (0.5, 0.75, 1.0), 30)
 
 
@@ -232,14 +244,33 @@ ch2 = chaise("chaise_2", S2_POS, 0)
 s2_a = simulateur("simulateur_2", ASSIS_BUREAU, (S2_POS[0], S2_POS[1] - 0.05, 0), 180)
 ch2b = chaise("chaise_2_tournee", S2_POS, 150)
 s2_b = simulateur("simulateur_2_tournee", TOURNEE, (S2_POS[0] + 0.03, S2_POS[1] + 0.02, 0), 180 + 150)
+# S08 : il se recule dans sa chaise ; des versions intermédiaires, une par image, pour un mouvement continu
+RECULE = dict(ASSIS_BUREAU, torse=(-18, 0, 0), taille=(-8, 0, 0), cou=(10, 0, 0), epaule_g=(-24, 0, 8), coude_g=(-62, 0, 0),
+              epaule_d=(-24, 0, -8), coude_d=(-62, 0, 0))
+N_RECUL = 9
+
+
+def melange(a, b, q):
+    out = {}
+    for k in set(a) | set(b):
+        va, vb = a.get(k, (0, 0, 0)), b.get(k, (0, 0, 0))
+        out[k] = tuple(x + (y - x) * q for x, y in zip(va, vb))
+    return out
+
+
+RECUL = [s1_a] + [simulateur(f"simulateur_1_recul_{k}", melange(ASSIS_BUREAU, RECULE, (k / N_RECUL) ** 1), (S1_POS[0], S1_POS[1] - 0.05, 0), 180)
+                  for k in range(1, N_RECUL + 1)]
 VERSIONS = {  # quels objets sont visibles dans quel plan
     "revele": [s1_a, s2_a, ch2], "large": [s1_b, s2_a, ch2], "epaule": [s1_a, s2_a, ch2], "regard": [s1_a, s2_b, ch2b],
+    "s08_ecran": [s1_a, s2_a, ch2], "s08_recul": [s1_a, s2_a, ch2], "s08_sara": [RECUL[-1], s2_a, ch2],
 }
-TOUTES = [s1_a, s1_b, s2_a, s2_b, ch2, ch2b]
+TOUTES = [s1_a, s1_b, s2_a, s2_b, ch2, ch2b] + RECUL[1:]
+T_RECUL = (1.15, 2.05)           # le mouvement (s), dans le plan s08_recul
 
 
 def montrer(objets):
     for o in TOUTES:
+        o.animation_data_clear()
         vis = o in objets
         o.hide_render = not vis
         for c in o.children:
@@ -253,6 +284,9 @@ PLANS = {
     "large":    ((-1.9, -1.7, 1.7),       (-0.7, -2.0, 1.55),    (0.0, 2.6, 1.25),     (0.1, 2.8, 1.3),   30, 10.0),
     "epaule":   ((-1.05, 0.35, 1.62),     (-0.8, 0.75, 1.55),    (0.05, 3.42, 1.42),   (0.05, 3.42, 1.42), 35, 8.0),
     "regard":   ((1.75, -0.75, 1.3),      (1.45, -0.35, 1.25),   (0.66, 1.05, 1.12),   (0.66, 1.05, 1.15), 45, 7.0),
+    "s08_ecran": ((0.05, -0.55, 1.74),    (0.02, 0.45, 1.62),    (0.0, 3.42, 1.40),    (0.0, 3.42, 1.42), 32, 7.5),
+    "s08_recul": ((-2.05, 2.25, 1.26),    (-1.95, 2.1, 1.22),    (-0.6, 0.95, 1.02),   (-0.62, 0.9, 1.0), 42, 4.5),
+    "s08_sara":  ((2.35, 0.9, 1.3),       (2.2, 0.95, 1.28),     (0.75, 1.55, 1.18),   (0.7, 1.65, 1.2),  32, 4.0),
 }
 
 
@@ -281,7 +315,7 @@ def preparer(nom):
     n = int(round(duree * FPS))
     sc.frame_start, sc.frame_end = 1, n
     for f in range(1, n + 1):
-        q = ease((f - 1) / max(1, n - 1)) if nom == "revele" else (f - 1) / max(1, n - 1)
+        q = ease((f - 1) / max(1, n - 1)) if nom in ("revele", "s08_ecran") else (f - 1) / max(1, n - 1)
         pos = Vector(p0).lerp(Vector(p1), q)
         vis = Vector(v0).lerp(Vector(v1), q)
         cam.location = pos
@@ -291,6 +325,17 @@ def preparer(nom):
         cam.keyframe_insert("rotation_euler", frame=f)
         foc.keyframe_insert("location", frame=f)
     montrer(VERSIONS[nom])
+    LUEUR.hide_render = not nom.startswith("s08")
+    if nom == "s08_recul":             # une version par image pendant le mouvement (ease, sans à-coup)
+        for f in range(1, n + 1):
+            t = (f - 1) / FPS
+            k = round(ease((t - T_RECUL[0]) / (T_RECUL[1] - T_RECUL[0])) * N_RECUL)
+            for i, o in enumerate(RECUL):
+                o.hide_render = i != k
+                o.keyframe_insert("hide_render", frame=f)
+                for c in o.children:
+                    c.hide_render = i != k
+                    c.keyframe_insert("hide_render", frame=f)
     return n
 
 
@@ -331,7 +376,7 @@ for nom in noms:
             sc.render.filepath = os.path.join(TEST, f"{nom}_{f:03d}.png")
             bpy.ops.render.render(write_still=True)
         continue
-    d = os.path.join(SORTIE, nom)
+    d = os.path.join(SORTIE if not nom.startswith("s08") else os.path.join(VIDEO, "medias", "S08", "salle"), nom)
     os.makedirs(d, exist_ok=True)
     os.makedirs(os.path.join(d, "masque"), exist_ok=True)
     coins = {}

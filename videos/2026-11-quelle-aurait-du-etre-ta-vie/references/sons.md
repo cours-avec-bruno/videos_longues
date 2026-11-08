@@ -84,3 +84,18 @@ Coût : 646 crédits ElevenLabs pour les deux prises, puis 238 pour la nouvelle 
 Toutes les scènes partagent le même gain général (`medias/S01/gain_mix.txt`, écrit par `scenes/S01/son.py`) : le décor sonore garde son niveau d'une scène à l'autre, et seule la voix fait monter la sonie. S01 : -26 LUFS (aucune voix). S02 : -15 LUFS. La sonie finale (-14 LUFS) se règle au mastering.
 
 La réverbération de S01 est synthétique (calculée dans `scenes/S01/son.py`) : pas de source externe.
+
+### S08 (08/11/2026)
+
+| Fichier | Usage | Source | Licence |
+|---|---|---|---|
+| `sons/epidemic/portail_fer.wav` | le portail de l'école se referme | Epidemic Sound, « Doors, Gate, Metal Gate, Exterior, Close » (2b48dbc0-380a-41c0-85a0-cb51cefae858) | abonnement Epidemic |
+| `sons/epidemic/chevres_cloches.wav` | les chèvres et leurs cloches | Epidemic Sound, « Animals, Farm, Goats, Enclosure, Bleat, Bellowing, Eating, Bells, Mexico » (4075970a-3961-4764-b93c-a14db008975a) | abonnement Epidemic |
+| `sons/epidemic/cour_ecole.wav` | la cour derrière le portail ; les enfants qui passent au loin | Epidemic Sound, « Crowds, Children, Few, Schoolyard, Playing 01 » (516505ac-562a-4149-8053-2670f38b0515) | abonnement Epidemic |
+| `sons/epidemic/vent_herbe_seche.wav` | le vent sur le chemin | Epidemic Sound, « Wind, General, Garrigue Hill, Light Wind Gusts, Close To Ground, Dry Grass… » (22209eab-0b30-4aad-9732-b35e3b6693bf) | abonnement Epidemic |
+| `voix/S08_prise1.mp3` | Guillaume : « Il passe ses journées… », « À quatorze ans… », « Et vous, à onze ans… » (dans la continuité de S07) | ElevenLabs eleven_v3, flow `F6J6zhmmL1GbdhIx6Npr`, `7FhblfMccZGzzwb0AxqH` | prise 1 |
+| `voix/S08_lui_prise1.mp3` | Nori : « … Même ça. » | ElevenLabs eleven_v3, `LtXJKrjoExD0HkGZCIag` | prise 1 |
+| `voix/S08_elle_prise1.mp3` | Sara : « Les choix changent les probabilités. Ils ne décident jamais du résultat. » | ElevenLabs eleven_v3, `DxNmnvK6oRXFGNULbMKC` | prise 1 |
+
+Vraie image : `pexels/s08/14275268.mp4` (Pexels, licence Pexels), un garçon et ses chèvres sur un chemin de terre ; on garde le début, où il est loin.
+
