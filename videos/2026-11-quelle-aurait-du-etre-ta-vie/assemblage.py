@@ -26,7 +26,7 @@ SCENES = [  # (vidéo, son)
     (os.path.join(M, "S04", "S03_S04_v2.mp4"), os.path.join(M, "S04", "S03_S04_son.wav")),
     (os.path.join(M, "S05", "S05_v1.mp4"), os.path.join(M, "S05", "S05_son.wav")),
     (os.path.join(M, "S06", "S06a_v1.mp4"), os.path.join(M, "S06", "S06a_son.wav")),
-    (os.path.join(M, "S07", "S07_v1.mp4"), os.path.join(M, "S07", "S07_son.wav")),
+    (os.path.join(M, "S07", "S07_v2.mp4"), os.path.join(M, "S07", "S07_son.wav")),
 ]
 FONDU_12 = 0.25           # S01 -> S02
 FLASH_AV, FLASH_AP = 0.08, 0.16   # S02 -> S03 : montée du flash avant la coupe, extinction après

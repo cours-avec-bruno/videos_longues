@@ -302,7 +302,7 @@ def ecran_choix(t):
     d = ImageDraw.Draw(im)
     a = lisse((t - T_CHOIX) / 0.6)
     col = lambda c, k=1.0: tuple(int(v * a * k) for v in c)  # noqa: E731
-    d.text((140, 110), "MANOJ  ·  11 ANS  ·  PREMIER CHOIX", font=F_UI_E, fill=col((130, 140, 150)))
+    d.text((140, 110), "MANOJ  ·  10 ANS  ·  PREMIER CHOIX", font=F_UI_E, fill=col((130, 140, 150)))
     d.line([(140, 165), (W - 140, 165)], fill=col((60, 66, 74)), width=2)
     choisi = t >= T_CLIC
     for i, txt in enumerate(OPTIONS):
