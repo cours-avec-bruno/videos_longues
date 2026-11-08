@@ -270,3 +270,9 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - S06 reprise (Bruno) : plus de portrait à la fin ; la voix décrit chaque année (prise 3, choisie par mesure) ; transitions lentes ; les tableaux sont regardés sur l'écran de l'opérateur (on part du bureau, on s'approche de l'écran, on ressort à la fin) ; lampe allumée par continuité avec S02 (`S02_p06_bureau.png`). Durée : 36,6 s.
 - S06 (Bruno) : plutôt qu'un moniteur en 3D, les tableaux passent dans une fenêtre d'interface de PC (sa capture de référence) : petits bords ronds, marge sombre autour, léger quadrillage de pixels ; la fenêtre s'ouvre et se referme. 34,6 s.
 - S06, passage 1 (0 → 5 ans), validé par Bruno. Prochaine : S07.
+
+### 08/11/2026 · S07, l'enfance
+
+- Construite d'après la demande de Bruno (« un mix de motion design, 3D, images d'illustration, montage dynamique qui transmet des émotions ») : tableaux 3D (`scenes/S07/tableaux.py`, avec le nouveau module partagé `shared/blender/plateau.py`), vraies images Pexels, le choix à 7 ans en motion design (trois vignettes, un curseur qui hésite, pas de pourcentages), « ingénieur » sur le dessin d'un pont, l'éclair du coup de baguette, la classe où tous lèvent la main sauf lui, le deuil au piano. La fenêtre d'interface devient un outil partagé (`shared/outils/image/fenetre.py`), avec le passage fluide fenêtre / plein écran. 52,8 s, -14,6 LUFS.
+- Voix : prise 2 (choisie par mesure). **Quota ElevenLabs presque épuisé** : la 3e prise a échoué, 250 crédits restants.
+- Aperçu : `medias/S01_a_S07_apercu.mp4` (3 min 07).

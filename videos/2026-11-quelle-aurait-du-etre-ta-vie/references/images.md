@@ -35,6 +35,15 @@ Le crédit en description reste une bonne pratique (« Vidéos : Pexels » et le
 | `s06/40379978.mp4` | Une grand-mère et un garçon | 40379978 | non (S06 refaite en 3D) |
 | `s06/36100216.mp4` | Des rotis sur un feu de bois | 36100216 | non (S06 refaite en 3D) |
 | `s06/3978429.mp4` | Des enfants qui jouent dans un champ, soleil bas | 3978429 | non (S06 refaite en 3D) |
+| `s07/35724453.mp4` | Écoliers en uniforme qui arrivent à l'école | 35724453 | S07, 5 ans |
+| `s07/15957335.mp4` | Rassemblement d'élèves en uniforme (Assam) | 15957335 | S07 |
+| `s07/4112783.mp4` | Billets de roupies sur une table | 4112783 | S07, « ça leur coûte cher » |
+| `s07/28887495.mp4` | Une foule qui chante et frappe des mains (dévotion) | 28887495 | S07, la prière |
+| `s07/16868495.mp4` | Un garçon en chemise rouge à son pupitre | 16868495 | S07, 9 ans |
+| `s07/18070270.mp4` | Gros plan d'un billet de 500 roupies | 18070270 | S07, la dette |
+| `s07/20143634.mp4` | Des fleurs de souci au bord du fleuve (ghât) | 20143634 | S07, 10 ans |
+| `s07/34630320.mp4` | Une lampe à huile (diya) près de l'eau | 34630320 | S07, la fin |
+| `s07/36088025.mp4`, `s07/35622767.mp4` | Cricket de rue ; barque au crépuscule | 36088025, 35622767 | non utilisées |
 
 Autres candidats téléchargés, non utilisés pour l'instant (dans les mêmes dossiers) : d'autres vues de ces lieux, et des villages indiens (champs, femmes portant l'eau, cour avec vaches), utiles pour S05.
 

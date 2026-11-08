@@ -2,13 +2,13 @@
 
 | | |
 |---|---|
-| **Durée** | ≈ 0:45 |
-| **Fabrication** | Photos + Remotion |
+| **Durée** | 52,8 s |
+| **Fabrication** | Blender (`tableaux.py`) + vraies vidéos (Pexels) + motion design et montage Python (`montage.py`) |
 | **Fonction** | INCARNER |
-| **Procédé principal** | I04 : la vie en vraies photos, unifiées en une matière chaude qui tranche avec le bureau froid |
+| **Procédé principal** | I07 : les tableaux de la simulation (mannequins sans visage, Manoj en rouge), qui alternent avec de vraies images unifiées (I04) |
 | **Procédés secondaires** | T01 |
-| **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
-| **Production** | à faire |
+| **Statut** | construite le 08/11/2026 à la demande de Bruno : « un mix de motion design, 3D, images d'illustration, montage dynamique qui transmet des émotions » |
+| **Production** | V1 montée le 08/11/2026 (`medias/S07/S07_v1.mp4`), à valider |
 
 ## Intention
 
@@ -54,6 +54,11 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 
 ## Fabrication
 
-Notes techniques : fichiers sources, prompts (`../../prompts/`), réglages, rendus.
+- `tableaux.py` (Blender, Eevee ; module partagé `shared/blender/plateau.py`) : l'école, les trois vignettes du choix (prière, danse, cricket, images fixes), les grands à 8 ans, la baguette (le bras du maître s'abat à l'image 68), la classe (les mains se lèvent une à une, pas la sienne), la dette (image fixe), les funérailles.
+- `montage.py` : le déroulé, la fenêtre d'interface et le passage au plein écran (`shared/outils/image/fenetre.py`), le choix en motion design (le curseur hésite, un trait de compte à rebours, le clic, la carte qui s'agrandit), « ingénieur » sur le dessin d'un pont, l'éclair et la secousse du coup, la voix (`S07_prise2`), le son.
+
+Grammaire : la simulation passe dans la fenêtre de l'interface ; les vraies images, le coup et le deuil sortent en plein écran. Arc : fierté, jeu, rêve, honte, inquiétude, deuil ; le piano (« Remembering ») n'entre qu'au deuil.
+
+Changement d'intention (signalé à Bruno) : plus d'encart « À VOUS » ni de pourcentages ; le choix à 7 ans est posé par la voix, avec trois vignettes et un curseur qui hésite.
 
 ## Points à revoir

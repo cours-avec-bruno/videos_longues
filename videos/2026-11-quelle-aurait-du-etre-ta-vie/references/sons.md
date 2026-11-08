@@ -33,13 +33,22 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `epidemic/grillons_nuit.wav` | Ambience, Insect, Crickets, Clean, Night, Amethi, Uttar Pradesh, India 01 | `eca67907-2d37-47f6-a23d-e5e7a38a54d0` | S06 | 3 ans, la nuit |
 | `epidemic/enfants_soir.wav` | Ambience, Residential, Kids Gossiping, Birds Chirping, Evening, Society Compound, India | `48a93009-aae0-457e-9cad-3de24a241931` | S06 | 5 ans |
 | `epidemic/projecteur.wav` | Mechanical, Switch, Light Switch, On, Large, Empty Warehouse, Reverberant 01 | `202b9eb7-1024-4ea6-9e66-da367dfac414` | S06 | chaque tableau qui s'allume |
+| `epidemic/cloche_ecole.wav` | Bells, Handbell, Hand Bell, Government School | `85e9eb1b-0ffa-44eb-a654-e3c85d0041f3` | S07 | 5 ans |
+| `epidemic/claque.wav` | Weapons, Whip, Bull Whip, Crack, Close Distance, Smack x4 | `3460dc40-c018-4b10-9e74-b8cf1a998bfc` | S07 | le coup de baguette |
+| `epidemic/baguette_air.wav` | Swooshes, Swish, Cane, Whip, Swish Through Air | `4dcd97a3-ce5c-4949-ab2e-52cf23fc5002` | S07 | la baguette qui fend l'air |
+| `epidemic/billets_compter.wav` | Paper, Handle, Money, Notes, Count For Hand | `6608109b-7aff-41f3-9421-2e5999cdd5d8` | S07 | les billets, la dette |
+| `epidemic/bhajan.wav` | Ambience, Religious, Women Singing Religious Prayers, Bhajan Kirtan, Temple Bells, Rhythmic Clapping, Voices, India | `09e3f1b4-c9b7-46be-9585-b0b19b026a9f` | S07 | la prière |
+| `epidemic/dholak_rue.wav` | Ambience, Religious, Bhajan Kirtan Prayers, Roadside Temple, Playing Dholak Manjeera, Distant Traffic, India 01 | `c7010f07-260f-4bce-965a-0f559c897279` | S07 | la danse (aperçu au survol) |
+| `epidemic/classe_inde.wav` | Ambience, School, In Classroom, Government School, Tamil Language, Tamil Nadu, India 02 | `6f817e25-42cb-495b-927e-07b892e73b78` | S07 | la cour, la classe |
+| `epidemic/soir_rural.wav` | Ambience, Rural, Evening, Crickets, Bikes, Children, Amethi, Uttar Pradesh, India 02 | `cb571b17-550c-4adc-b123-6f1333937ee7` | S07 | le fleuve, le soir |
+| `epidemic/cricket_batte.wav` | Sports, Field, Cricket, Batting, Leather Ball, Bounce On Bat, Hit, Impact | `5930a2a1-4225-40b8-8966-7ac3d6ede3e3` | S07 | le cricket (aperçu au survol) |
 
 ## Musique (Epidemic Sound, morceaux : outil `DownloadRecording`)
 
 | Fichier local | Morceau | Identifiant | Scène | Statut |
 |---|---|---|---|---|
 | `musique/bhimpalasi.wav` | Bhimpalasi | `03dd2103-01c1-4064-b67f-90dddb1c9f83` | S05 | en place dans la V1 (discrète, entre avec le village) ; à confirmer à l'oreille par Bruno |
-| `musique/remembering.wav` | Remembering (piano seul) | `c82493b3-51c0-4935-8ff6-120e8396dd5d` | — | alternative, non utilisée |
+| `musique/remembering.wav` | Remembering (piano seul) | `c82493b3-51c0-4935-8ff6-120e8396dd5d` | S07 | le deuil (10 ans) |
 
 ## Voix (ElevenLabs, voix « Guillaume - Documentary and Storytelling », `3HZyQcLKlT0a3RDeXVsP`)
 
@@ -57,6 +66,8 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `voix/S05_prise2.mp3`, `voix/S05_prise3.mp3` | S05 | eleven_v3 | `ttLXr52z1yn99oPluQI1`, `qqOXidmYg0b09aTAgciM` | non |
 | `voix/S06_prise3.mp3` | S06, passage 1 (« À un an… jusqu'au coucher du soleil. »), générée dans la continuité de la fin de S05 | eleven_v3 | `wQAkaNJHu1b4Xpdo3oV2` | **oui, choisie par mesure** (90 Hz, la plus proche de S02 et S05) ; à confirmer à l'oreille par Bruno |
 | `voix/S06_prise1.mp3`, `voix/S06_prise2.mp3` | S06 | eleven_v3 | `qzFaE9O28BJ2nF3gaIiJ`, `CGKx5GmbicikpqAxZBxF` | non (102 et 97 Hz) |
+| `voix/S07_prise2.mp3` | S07 (« Ses parents l'inscrivent… les adultes pleurer. »), générée dans la continuité de la fin de S06 | eleven_v3 | `pCrRWzmEJgEbvjo9GAIJ` | **oui, choisie par mesure** (95 Hz, timbre le plus proche) ; à confirmer à l'oreille |
+| `voix/S07_prise1.mp3` | S07 | eleven_v3 | `suwECNO6GF7wJENaxscv` | non (la 3e prise a échoué : quota ElevenLabs épuisé, 250 crédits restants le 08/11/2026) |
 
 Toutes les prises sont ramenées au même niveau de voix au montage.
 

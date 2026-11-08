@@ -103,32 +103,33 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 ## S07 · L'enfance
 
-ÉCRAN : 5 ANS
+[5 ans : une cloche, la cour d'école ; le tableau de l'inscription, puis des billets qu'on compte]
 
 > Ses parents l'inscrivent dans une école privée. Ça leur coûte cher.
 
-[premier encart « À VOUS »]
+[7 ans : trois vignettes dans la fenêtre de l'interface, la prière, la danse, le cricket ; pas de pourcentages, pas d'encart]
 
-> Première question. Vous avez sept ans. Qu'est-ce que vous aimez faire de votre temps libre ?
+> Vous avez sept ans. Qu'est-ce que vous aimez faire de votre temps libre ?
 
-ÉCRAN : À VOUS · Rencontres religieuses 34 % · Danse 33 % · Cricket 33 %
-ÉCRAN (en petit) : part des vies simulées nées dans les mêmes conditions
-
-[trois secondes de compte à rebours ; on entend le tic]
+[le curseur hésite trois secondes ; on entend chaque possibilité]
 
 > Je prends celle-là.
 
-[clic : les rencontres religieuses]
+[clic : la prière s'agrandit ; une vraie foule qui chante]
 
 > À huit ans, quand les grands lui demandent ce qu'il veut faire plus tard, il répond toujours la même chose.
 
-ÉCRAN : … vous répondiez toujours : ingénieur.
+ÉCRAN : ingénieur [en grand, sur le dessin d'un pont qui se trace ; silence]
 
-[silence ; on laisse le mot]
+> À neuf ans, il bavarde en classe, et le maître lui donne des coups de baguette sur la paume. Après ça, il ne lève plus la main.
 
-> À neuf ans, il bavarde en classe, et le maître lui donne des coups de baguette sur la paume. Après ça, il ne lève plus la main. La même année, la famille s'endette.
+[le coup : un éclair ; puis la classe où tous lèvent la main, sauf lui]
+
+> La même année, la famille s'endette.
 
 > À dix ans, son grand-père meurt. Il regarde longtemps les adultes pleurer.
+
+[le fleuve, les fleurs de souci ; le piano]
 
 ## S08 · Onze ans
 
