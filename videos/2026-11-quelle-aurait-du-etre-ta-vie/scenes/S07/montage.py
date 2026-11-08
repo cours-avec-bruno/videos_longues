@@ -67,11 +67,11 @@ T_LARGE = 47.60
 T_EPAULE = 57.60
 T_REGARD = 63.60
 T_CLIC_P = 69.00         # retour par-dessus l'épaule : le clic
-T_NOIR = 71.00
-DUREE = 75.40
+T_NOIR = 73.60
+DUREE = 77.60
 T_CHOIX = T_EPAULE + 1.0             # le choix s'affiche sur l'écran central
 T_DECOMPTE = (65.8, 68.8)            # trois secondes : le spectateur choisit
-T_CLIC = 69.80
+T_CLIC = 70.60
 
 # ---------------------------------------------------------------- les voix
 VOIX = os.path.join(M, "voix", "S07_prise1.mp3")          # la prise 1 (Bruno)
@@ -79,17 +79,25 @@ PHRASES = [  # ((début, fin) dans la prise, position dans la scène)
     ((5.00, 8.47), 2.0),        # Ses parents l'inscrivent dans une école privée. Ça leur coûte cher.
     ((15.38, 20.27), 6.7),      # À huit ans, quand les grands lui demandent ce qu'il veut faire plus tard, il répond toujours la même chose.
     ((30.03, 32.22), 27.4),     # La même année, la famille s'endette.
-    ((35.76, 37.84), 33.6),     # Il regarde longtemps les adultes pleurer.
+    ((35.76, 37.84), 35.4),     # Il regarde longtemps les adultes pleurer.
 ]
-# les phrases nouvelles (08/11/2026), générées dans la continuité de « À huit ans… » : prise 1 (règle de Bruno pour Guillaume)
+# le rêve : la version d'hier, telle quelle (choix de Bruno, 08/11/2026)
+VOIX_REVE = os.path.join(M, "voix", "S07_reve_prise1.mp3")
+PHRASES_REVE = [
+    ((2.40, 3.96), T_ING + 2.0),     # Un rêve plutôt ambitieux.
+    ((4.58, 6.53), T_ING + 3.9),     # Sur deux cents vies nées comme lui,
+    ((6.85, 8.80), T_ING + 6.05),    # deux seulement font des études d'ingénieur.
+]
+# « timide » : génération du 08/11 dans la continuité, prise 1
 VOIX_B = os.path.join(M, "voix", "S07b_prise1.mp3")
 PHRASES_B = [
-    ((5.46, 6.62), T_ING + 2.0),     # Un rêve plutôt ambitieux.
-    ((7.48, 9.00), T_ING + 3.9),     # Sur deux cents vies nées comme lui,
-    ((9.38, 11.28), T_ING + 6.05),   # deux seulement font des études d'ingénieur.
     ((12.00, 13.72), 21.9),          # À l'école, il est plutôt timide.
     ((14.10, 15.96), 24.0),          # Souvent au fond de la classe, à écouter.
-    ((19.08, 21.74), 29.9),          # À dix ans, le premier gros évènement de sa vie arrive.
+]
+# « dix ans » et « Il perd son grand-père » : une seule génération, prise 1
+VOIX_C = os.path.join(M, "voix", "S07c_prise1.mp3")
+PHRASES_C = [
+    ((2.36, 7.28), 29.9),            # À dix ans, le premier gros évènement de sa vie arrive. Il perd son grand-père.
 ]
 # les deux simulateurs (dans la salle : un peu de pièce autour de leur voix)
 VOIX_LUI = os.path.join(M, "voix", "S07_lui_prise1.mp3")      # Nori, eleven_v3
@@ -97,8 +105,12 @@ PHRASES_LUI = [
     ((0.10, 2.06), 44.2),     # Tiens, regarde. C'est lui, Manoj.
     ((2.74, 5.08), 46.6),     # Je lui ai laissé la vie douce, jusqu'à maintenant.
     ((5.86, 7.46), 49.6),     # Il vient de perdre son grand-père.
-    ((7.94, 11.46), 55.3),    # L'an prochain, il finit l'école primaire. Ses parents sont endettés.
-    ((11.98, 12.42), 69.1),   # L'école.
+]
+VOIX_LUI2 = os.path.join(M, "voix", "S07_lui2_prise1.mp3")    # Nori, dans la continuité
+PHRASES_LUI2 = [
+    ((0.12, 3.67), 55.3),     # L'an prochain, il finit l'école primaire. Ses parents sont endettés.
+    ((4.05, 5.46), 69.0),     # Il faut qu'il continue l'école.
+    ((5.81, 7.92), 71.1),     # Ses frères et sœurs n'ont pas eu cette chance.
 ]
 VOIX_ELLE = os.path.join(M, "voix", "S07_elle_prise2.mp3")    # Sara, eleven_v3
 PHRASES_ELLE = [
@@ -107,8 +119,8 @@ PHRASES_ELLE = [
     ((5.82, 6.78), 60.0),     # Il continue l'école…
     ((7.72, 9.50), 61.2),     # … ou il va travailler pour les aider ?
     ((10.40, 10.98), 64.4),   # À toi de voir.
-    ((11.68, 12.12), 71.3),   # Bon choix.
-    ((13.14, 15.20), 72.0),   # Reste à savoir s'ils pourront payer.
+    ((11.68, 12.12), 73.9),   # Bon choix.
+    ((13.14, 15.20), 74.6),   # Reste à savoir s'ils pourront payer.
 ]
 VOIX_A_VENIR = []         # toutes les phrases ont leur voix
 
@@ -130,7 +142,7 @@ PLANS = [
     (T_LARGE, T_EPAULE, "salle", ("large", 0.0), 1, "coupe"),
     (T_EPAULE, T_REGARD, "salle", ("epaule", 0.0), 1, "coupe"),
     (T_REGARD, T_CLIC_P, "salle", ("regard", 0.0), 1, "coupe"),
-    (T_CLIC_P, T_NOIR, "salle", ("epaule", 6.0), 1, "coupe"),
+    (T_CLIC_P, T_NOIR, "salle", ("epaule", 3.0), 1, "coupe"),
     (T_NOIR, DUREE, "noir", None, 1, "coupe"),
 ]
 N = int(round(DUREE * FPS))
@@ -578,12 +590,13 @@ poser(clics[o_c - 200:o_c + int(0.15 * SR)], T_CLIC, db(-6))
 # les voix : la narration (prise 1 et phrases nouvelles), puis les deux simulateurs, dans la salle
 rng = np.random.default_rng(7)
 tr = np.arange(int(0.35 * SR)) / SR
-piece = rng.normal(0, 1, len(tr)) * np.exp(-tr / 0.09)       # une petite pièce, sèche et proche
+piece = rng.normal(0, 1, len(tr)) * np.exp(-tr / 0.05)       # une petite pièce, sèche et proche
 piece[0] = 0
-piece *= 0.22 / np.sqrt((piece ** 2).sum())
+piece *= 0.08 / np.sqrt((piece ** 2).sum())
 voix = np.zeros(Ns)
-for fichier, phrases, salle_ in ((VOIX, PHRASES, False), (VOIX_B, PHRASES_B, False),
-                                 (VOIX_LUI, PHRASES_LUI, True), (VOIX_ELLE, PHRASES_ELLE, True)):
+for fichier, phrases, salle_ in ((VOIX, PHRASES, False), (VOIX_REVE, PHRASES_REVE, False), (VOIX_B, PHRASES_B, False),
+                                 (VOIX_C, PHRASES_C, False), (VOIX_LUI, PHRASES_LUI, True), (VOIX_LUI2, PHRASES_LUI2, True),
+                                 (VOIX_ELLE, PHRASES_ELLE, True)):
     a_ = lire_audio(fichier, mono=True).astype(np.float64)
     actif = np.abs(a_) > 0.01
     a_ *= db(-17.2 - 20 * np.log10(np.sqrt((a_[actif] ** 2).mean())))

@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Durée** | 74,6 s |
+| **Durée** | 77,6 s |
 | **Fabrication** | Blender (`tableaux.py`, `salle.py`) + vraies vidéos (Pexels) + motion design et montage Python (`montage.py`) |
 | **Fonction** | INCARNER |
 | **Procédé principal** | I07 : les tableaux de la simulation (mannequins sans visage, Manoj en rouge), qui alternent avec de vraies images unifiées (I04) |

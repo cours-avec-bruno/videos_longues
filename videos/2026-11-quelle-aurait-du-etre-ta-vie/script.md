@@ -125,6 +125,8 @@ Version 2 (retours de Bruno, 08/11/2026) : narration en prise 1, plus de choix �
 
 > À dix ans, le premier gros évènement de sa vie arrive.
 
+> Il perd son grand-père.
+
 [le fleuve, les fleurs de souci ; le piano]
 
 > Il regarde longtemps les adultes pleurer.
@@ -147,7 +149,7 @@ ELLE : À toi de voir.
 
 [l'écran central : « Continuer l'école » / « Travailler pour aider sa famille » ; trois tics]
 
-LUI : L'école.
+LUI : Il faut qu'il continue l'école. Ses frères et sœurs n'ont pas eu cette chance.
 
 [clic]
 
