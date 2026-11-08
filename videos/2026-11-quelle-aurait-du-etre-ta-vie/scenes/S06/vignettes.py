@@ -43,19 +43,10 @@ TEST = os.path.join(VIDEO, "medias", "S06", "3d_test")
 os.makedirs(SORTIE, exist_ok=True)
 os.makedirs(TEST, exist_ok=True)
 
-# ---------------------------------------------------------------- temps (doit rester identique dans passage.py)
-FPS = 24
-DEBUT = 0.3          # noir avant la première scène
-TENUE = 2.15         # temps passé devant chaque scène
-TRAJET = 0.5         # passage d'une scène à l'autre, dans le noir
-N_SCENES = 5
+# ---------------------------------------------------------------- temps (partagés avec passage.py)
+sys.path.append(ICI)
+from temps_s06 import DEBUT, DUREE, FPS, N, N_SCENES, TENUES, TRAJET, arrivee  # noqa: E402
 ECART = 8.0          # distance entre deux scènes (m)
-DUREE = DEBUT + N_SCENES * TENUE + (N_SCENES - 1) * TRAJET
-N = int(round(DUREE * FPS))
-
-
-def arrivee(i):
-    return DEBUT + i * (TENUE + TRAJET)
 
 
 # ---------------------------------------------------------------- scène vide
@@ -342,12 +333,12 @@ def ease(p):
 
 
 def niveau(i, t):
-    """Allumage de la scène i au temps t : monte à l'arrivée, s'éteint en repartant."""
+    """Allumage de la scène i au temps t : monte à l'arrivée, s'éteint lentement en repartant."""
     a = arrivee(i)
-    monte = ease((t - (a - 0.15)) / 0.45)
+    monte = ease((t - (a - 0.25)) / 0.75)
     if i == N_SCENES - 1:
         return monte
-    descend = 1 - ease((t - (a + TENUE - 0.1)) / 0.3)
+    descend = 1 - ease((t - (a + TENUES[i] - 0.15)) / 0.65)
     return monte * descend
 
 
@@ -369,27 +360,28 @@ cam.data.dof.focus_object = foc
 
 
 def pose_camera(t):
-    """Position et visée de la caméra au temps t."""
+    """Position et visée de la caméra au temps t : une lente dérive devant chaque tableau,
+    puis un passage fluide (accéléré, puis freiné) vers le suivant."""
+    def devant(i, p):
+        pos = Vector((i * ECART, 0, 0)) + Vector(RECUL[i]) + Vector((0.6 * p, 0.45 * p, -0.06 * p))
+        vis = Vector((i * ECART, 0, 0)) + Vector(VISE[i]) + Vector((0.22 * p, 0, 0))
+        return pos, vis
+
     for i in range(N_SCENES):
         a = arrivee(i)
-        fin = a + TENUE
+        fin = a + TENUES[i]
         if t < fin or i == N_SCENES - 1:
-            # devant la scène i : une lente dérive vers la droite et un léger rapprochement
-            p = (t - (a - TRAJET if i else 0)) / (TENUE + (TRAJET if i else a))
-            p = max(0.0, min(1.0, p))
-            r = Vector(RECUL[i])
-            pos = Vector((i * ECART, 0, 0)) + r + Vector((0.55 * p, 0.35 * p, -0.05 * p))
-            vis = Vector((i * ECART, 0, 0)) + Vector(VISE[i]) + Vector((0.2 * p, 0, 0))
-            return pos, vis
+            d0 = a - (TRAJET / 2 if i else a)
+            p = (t - d0) / (fin + TRAJET / 2 - d0)
+            return devant(i, max(0.0, min(1.0, p)))
         if t < fin + TRAJET:
-            # le passage : on file vers la scène suivante, dans le noir (accéléré puis freiné)
-            q = ease((t - fin) / TRAJET)
-            p0, v0 = pose_camera(fin - 1e-4)
-            r1 = Vector(RECUL[i + 1])
-            p1 = Vector(((i + 1) * ECART, 0, 0)) + r1
-            v1 = Vector(((i + 1) * ECART, 0, 0)) + Vector(VISE[i + 1])
-            return p0.lerp(p1, q), v0.lerp(v1, q)
-    return pose_camera(DUREE)
+            q = (t - fin) / TRAJET
+            q = q * q * q * (q * (q * 6 - 15) + 10)          # très doux aux deux bouts
+            p0, v0 = devant(i, (fin - (a - (TRAJET / 2 if i else a))) / (fin + TRAJET / 2 - (a - (TRAJET / 2 if i else a))))
+            p1, v1 = devant(i + 1, 0.0)
+            pos = p0.lerp(p1, q) + Vector((0, -0.35 * math.sin(math.pi * q), 0.18 * math.sin(math.pi * q)))
+            return pos, v0.lerp(v1, q)
+    return devant(N_SCENES - 1, 1.0)
 
 
 for f in range(1, N + 1):
@@ -420,7 +412,7 @@ print(f"[S06] {N} images, {DUREE:.2f} s")
 # ---------------------------------------------------------------- rendu
 if A.test:
     for i in range(N_SCENES):
-        f = int(round((arrivee(i) + TENUE * 0.6) * FPS)) + 1
+        f = int(round((arrivee(i) + 2.0) * FPS)) + 1
         sc.frame_set(f)
         sc.render.filepath = os.path.join(TEST, f"scene_{i + 1}.png")
         bpy.ops.render.render(write_still=True)

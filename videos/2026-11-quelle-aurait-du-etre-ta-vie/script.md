@@ -89,7 +89,17 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 ## S06 · Les années qui passent (interlude, quatre fois)
 
-[pas de voix ; une pulsation, une année par seconde, la lumière qui tourne sur le mur du bureau]
+[sur l'écran de l'opérateur, de petits tableaux en 3D ; la voix décrit chaque année (passage 1, 08/11/2026)]
+
+> À un an, il dit son premier mot. Maman.
+
+> À deux ans, il rentre le soir couvert de boue.
+
+> Sa grand-mère lui raconte des histoires d'autrefois.
+
+> Il y a le dal et les rotis de sa mère. Un goût qu'il n'oubliera sans doute jamais.
+
+> Et il court avec les enfants du quartier, jusqu'au coucher du soleil.
 
 ## S07 · L'enfance
 

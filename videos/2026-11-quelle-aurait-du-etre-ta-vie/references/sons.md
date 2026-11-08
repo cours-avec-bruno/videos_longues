@@ -55,6 +55,8 @@ Licence Epidemic Sound : abonnement de Bruno (usage sur YouTube couvert par l'ab
 | `voix/S04b_prise1.mp3` | S03-S04 (« Commençons… », l'arrivée), générée dans la continuité du texte de S02 | eleven_v3 | `zjedtRiTbwo6WtG2YC0O` | **oui, verrouillée par Bruno (07/11/2026)** |
 | `voix/S05_prise1.mp3` | S05 (« Il s'appelle Manoj… Lui non plus. »), générée dans la continuité du texte de S04 | eleven_v3 | `XntBYWMHYLRVcPdo15Ve` | **oui, verrouillée par Bruno (08/11/2026)** |
 | `voix/S05_prise2.mp3`, `voix/S05_prise3.mp3` | S05 | eleven_v3 | `ttLXr52z1yn99oPluQI1`, `qqOXidmYg0b09aTAgciM` | non |
+| `voix/S06_prise3.mp3` | S06, passage 1 (« À un an… jusqu'au coucher du soleil. »), générée dans la continuité de la fin de S05 | eleven_v3 | `wQAkaNJHu1b4Xpdo3oV2` | **oui, choisie par mesure** (90 Hz, la plus proche de S02 et S05) ; à confirmer à l'oreille par Bruno |
+| `voix/S06_prise1.mp3`, `voix/S06_prise2.mp3` | S06 | eleven_v3 | `qzFaE9O28BJ2nF3gaIiJ`, `CGKx5GmbicikpqAxZBxF` | non (102 et 97 Hz) |
 
 Toutes les prises sont ramenées au même niveau de voix au montage.
 

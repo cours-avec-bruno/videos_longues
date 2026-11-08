@@ -13,6 +13,7 @@ Plans rendus (hors Git, dans medias/S02/) :
   p04_eteinte   la lampe de bureau, éteinte
   p04_allumee   la même, allumée
   p05           plan large depuis le noir : l'îlot de lumière, la silhouette de dos
+  p06_bureau    S06 : comme p01_fin, lampe allumée (l'écran y est remplacé par les années de Manoj)
 
 Lancer sur le PC :
   "C:/Program Files/Blender Foundation/Blender 5.2/blender.exe" -b -P plans.py -- --plans p01_fin,p02,p04_eteinte,p04_allumee,p05
@@ -175,6 +176,8 @@ PLANS = {
     "p02": ((0.11, BY - 0.38, 1.17), (0.08, BY + 0.12, 1.08), 30, 2.8, ECRAN_C, "ancien", False, False),
     "p04_eteinte": ((-0.02, BY - 0.80, 1.16), (-0.42, BY + 0.12, 0.93), 35, 2.8, (-0.38, BY + 0.2, 0.95), "interface", False, False),
     "p04_allumee": ((-0.02, BY - 0.80, 1.16), (-0.42, BY + 0.12, 0.93), 35, 2.8, (-0.38, BY + 0.2, 0.95), "interface", True, False),
+    # S06 : le même regard qu'en p01_fin, lampe allumée (continuité avec la fin de S02) ; l'écran est remplacé au montage
+    "p06_bureau": ((0.12, BY - 0.80, 1.18), (0.08, BY + 0.1, 1.03), 30, 2.8, ECRAN_C, "ancien", True, False),
     "p05": ((-1.7, BY - 5.6, 2.05), (0.05, BY - 0.25, 0.95), 50, 4.0, (0.1, BY - 0.8, 1.1), "interface", True, True),
 }
 
