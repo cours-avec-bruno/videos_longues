@@ -33,6 +33,7 @@ argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 ap = argparse.ArgumentParser()
 ap.add_argument("--test", action="store_true")
 ap.add_argument("--plans", default="")
+ap.add_argument("--refaire", action="store_true")
 A = ap.parse_args(argv)
 rad = math.radians
 FPS = 24
@@ -83,6 +84,8 @@ PAUME = pose(BRAS_BAS, cou=(22, 0, 0), epaule_d=(-82, 0, 0), coude_d=(-6, 0, 0))
 PAUME_RETIREE = pose(BRAS_BAS, cou=(28, 0, 0), taille=(8, 0, 0), epaule_d=(-30, 0, 0), coude_d=(-100, 0, 0))
 ELEVE_BAS = pose(ASSIS, cou=(4, 0, 0), epaule_g=(-50, 0, 0), coude_g=(-60, 0, 0), epaule_d=(-50, 0, 0), coude_d=(-60, 0, 0))
 ELEVE_HAUT = pose(ASSIS, cou=(-6, 0, 0), epaule_g=(-50, 0, 0), coude_g=(-60, 0, 0), epaule_d=(-172, 6, 0), coude_d=(-8, 0, 0))
+ELEVE_ECOUTE = pose(ASSIS, cou=(-4, 0, 0), torse=(4, 0, 0), epaule_g=(-50, 0, 0), coude_g=(-60, 0, 0), epaule_d=(-50, 0, 0),
+                    coude_d=(-60, 0, 0))
 MANOJ_BAISSE = pose(ASSIS, cou=(30, 0, 0), torse=(10, 0, 0), epaule_g=(-50, 0, 0), coude_g=(-70, 0, 0), epaule_d=(-50, 0, 0),
                     coude_d=(-70, 0, 0))
 PARENT_SOUCI = pose(TAILLEUR, cou=(28, 0, 0), taille=(14, 0, 0), epaule_g=(-50, 0, -15), coude_g=(-70, 0, 0),
@@ -216,13 +219,13 @@ P.boite("tableau_classe", (2.4, 0.06, 1.0), (x, 2.0, H + 1.4), M["tableau_noir"]
 import random as _r  # noqa: E402
 _r.seed(3)
 places = [(x + dx, dy) for dy in (-0.9, -0.1, 0.7) for dx in (-1.2, -0.4, 0.4, 1.2)]
-MANOJ_PLACE = 1                      # deuxième de la première rangée
+MANOJ_PLACE = 0                      # Bruno (08/11) : timide, au fond de la classe, à écouter (dernier rang, côté)
 for k, (px, py) in enumerate(places):
     P.boite(f"pupitre_{k}", (0.5, 0.32, 0.05), (px, py + 0.32, H + 0.52), M["bois"], biseau=0.008)
     P.boite(f"pupitre_pied_{k}", (0.46, 0.04, 0.5), (px, py + 0.46, H + 0.25), M["bois"])
     P.boite(f"banc_{k}", (0.42, 0.22, 0.04), (px, py - 0.02, H + 0.3), M["bois"])
     if k == MANOJ_PLACE:
-        P.perso("manoj_classe", MANOJ_BAISSE, 0.62, True, M["rouge"], (px, py, H + 0.06), 180)
+        P.perso("manoj_classe", ELEVE_ECOUTE, 0.62, True, M["rouge"], (px, py, H + 0.06), 180)
         continue
     bascule = int((0.45 + _r.uniform(0, 1.3)) * FPS)
     for etat, po in (("a", ELEVE_BAS), ("b", ELEVE_HAUT)):
@@ -290,7 +293,7 @@ PLANS = {
     "choix_cricket": ((3 * ESP + 0.2, -3.6, 1.1), None, (0.0, 0.0, 0.45), None, 40, 0),
     "huit_ans":     ((4 * ESP + 1.0, -3.4, 1.7), (4 * ESP + 0.3, -2.8, 1.35), (0.0, 0.3, 0.5), (0.0, 0.2, 0.55), 38, 6.4),
     "baguette":     ((5 * ESP + 0.1, -5.0, 1.5), (5 * ESP + 0.15, -4.2, 1.3), (0.15, 0.0, 1.3), (0.1, 0.0, 1.05), 38, 4.4),
-    "classe":       ((6 * ESP - 0.2, -4.4, 2.0), (6 * ESP - 0.4, -3.8, 1.6), (0.0, 0.3, 0.6), (-0.35, -0.6, 0.6), 36, 3.6),
+    "classe":       ((6 * ESP + 1.3, 1.75, 1.85), (6 * ESP + 0.9, 1.45, 1.6), (-0.3, -0.4, 0.55), (-0.85, -0.8, 0.5), 32, 4.6),
     "dette":        ((7 * ESP + 0.0, -2.4, 1.05), None, (0.0, 0.1, 0.35), None, 42, 0),
     "funerailles":  ((8 * ESP - 2.6, -3.6, 1.35), (8 * ESP - 2.0, -3.0, 1.15), (0.1, 0.3, 0.45), (-0.4, -0.2, 0.55), 38, 7.0),
 }
@@ -356,7 +359,7 @@ for nom in noms:
     os.makedirs(d, exist_ok=True)
     for f in range(1, n + 1):
         chemin = os.path.join(d, f"{f:04d}.png")
-        if os.path.exists(chemin):
+        if os.path.exists(chemin) and not A.refaire:
             continue
         sc.frame_set(f)
         sc.render.filepath = chemin

@@ -1,14 +1,14 @@
-# S07 · 5 ans · l'enfance
+# S07 · 5 à 10 ans · l'enfance, puis la salle des simulateurs
 
 | | |
 |---|---|
-| **Durée** | 58,5 s |
-| **Fabrication** | Blender (`tableaux.py`) + vraies vidéos (Pexels) + motion design et montage Python (`montage.py`) |
+| **Durée** | 74,6 s |
+| **Fabrication** | Blender (`tableaux.py`, `salle.py`) + vraies vidéos (Pexels) + motion design et montage Python (`montage.py`) |
 | **Fonction** | INCARNER |
 | **Procédé principal** | I07 : les tableaux de la simulation (mannequins sans visage, Manoj en rouge), qui alternent avec de vraies images unifiées (I04) |
 | **Procédés secondaires** | T01 |
 | **Statut** | construite le 08/11/2026 à la demande de Bruno : « un mix de motion design, 3D, images d'illustration, montage dynamique qui transmet des émotions » |
-| **Production** | V1 montée le 08/11/2026 (`medias/S07/S07_v1.mp4`), à valider |
+| **Production** | V2 le 08/11/2026 (`medias/S07/S07_v2.mp4`) : narration en prise 1, sans la baguette ni le choix à 7 ans, avec la salle des simulateurs et le premier choix. Voix manquantes (crédits ElevenLabs) : sous-titres provisoires |
 
 ## Intention
 
@@ -54,11 +54,15 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 
 ## Fabrication
 
-- `tableaux.py` (Blender, Eevee ; module partagé `shared/blender/plateau.py`) : l'école, les trois vignettes du choix (prière, danse, cricket, images fixes), les grands à 8 ans, la baguette (le bras du maître s'abat à l'image 68), la classe (les mains se lèvent une à une, pas la sienne), la dette (image fixe), les funérailles.
-- `montage.py` : le déroulé, la fenêtre d'interface et le passage au plein écran (`shared/outils/image/fenetre.py`), le choix en motion design (le curseur hésite, un trait de compte à rebours, le clic, la carte qui s'agrandit), « ingénieur » sur le dessin d'un pont, puis le rêve mis en chiffres (200 silhouettes, une par vie simulée née comme lui ; deux seulement font des études d'ingénieur, elles restent allumées en rouge), l'éclair et la secousse du coup, la voix (`S07_prise2`), le son.
+- `tableaux.py` (Blender, Eevee ; module partagé `shared/blender/plateau.py`) : l'école, les grands à 8 ans, la classe (Manoj au dernier rang, qui écoute), la dette (image fixe), les funérailles. Les plans du choix à 7 ans et de la baguette restent dans le script mais ne sont plus montés.
+- `salle.py` (Blender, Eevee) : la salle de surveillance, d'après l'image de référence de Bruno (bleu nuit, reflets, chrome) : un mur d'écrans où passent des instants de la vie de Manoj (`medias/S07/ecrans/`), un grand écran central, la console, deux simulateurs (costumes sombres, peau pâle). Quatre plans : `revele` (on recule depuis l'écran), `large`, `epaule` (par-dessus l'épaule, l'écran du choix), `regard` (elle se tourne vers nous). Pour chaque image : les coins de l'écran central (`coins.json`) et son masque (`masque/`), pour y incruster au montage ce qu'il montre.
+- `montage.py` : le déroulé, la fenêtre d'interface (`shared/outils/image/fenetre.py`), « ingénieur » et les 200 vies, l'écran central de la salle (la lampe, les funérailles, la classe, puis le choix : deux cartes, un trait de compte à rebours, le clic), les sous-titres provisoires des répliques à générer, le son (la salle : souffle des machines, bourdonnement des écrans, une tension grave).
 
-Grammaire : la simulation passe dans la fenêtre de l'interface ; les vraies images, le coup et le deuil sortent en plein écran. Arc : fierté, jeu, rêve, honte, inquiétude, deuil ; le piano (« Remembering ») n'entre qu'au deuil.
+Grammaire : la simulation passe dans la fenêtre de l'interface ; les vraies images et le deuil sortent en plein écran ; la salle est le hors-champ de la simulation, ceux qui la regardent. Arc : fierté, rêve, timidité, inquiétude, deuil, puis le recul : on découvre qu'on le regardait.
 
-Changement d'intention (signalé à Bruno) : plus d'encart « À VOUS » ni de pourcentages ; le choix à 7 ans est posé par la voix, avec trois vignettes et un curseur qui hésite.
+Changement d'intention (demandé par Bruno, 08/11/2026) : le premier choix n'est plus un jeu à 7 ans mais l'école ou le travail à 10-11 ans, posé par les simulateurs. Il remplace l'encart de S08 ; S08 devient la conséquence (la famille peut-elle payer ?).
 
 ## Points à revoir
+
+- Générer les voix : narration (le rêve dans la continuité de la prise 1, « timide », « dix ans ») et le dialogue des deux simulateurs (voix à choisir, à valider par Bruno).
+- S08 à réécrire en conséquence.

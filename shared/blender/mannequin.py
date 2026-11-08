@@ -81,7 +81,8 @@ def materiau(nom, couleur, rugosite=0.55, brillance=0.35):
     return m
 
 
-def mannequin(nom, pose, echelle=1.0, enfant=False, mat=None, facettes=0.09, collection=None, au_sol=True):
+def mannequin(nom, pose, echelle=1.0, enfant=False, mat=None, facettes=0.09, collection=None, au_sol=True, lisse=False):
+    """lisse=True : pas de facettes (peau lissée, ombrage doux), pour des personnages « réels » (les simulateurs de S07)."""
     """Crée le personnage posé ; renvoie l'objet. Avec au_sol, le point le plus bas touche z = 0."""
     pts = positions(pose, enfant)
     if au_sol:
@@ -111,14 +112,17 @@ def mannequin(nom, pose, echelle=1.0, enfant=False, mat=None, facettes=0.09, col
     me.skin_vertices[0].data[0].use_root = True
     sub = ob.modifiers.new("lisse", "SUBSURF")
     sub.levels = sub.render_levels = 2
-    dec = ob.modifiers.new("facettes", "DECIMATE")
-    dec.ratio = facettes
-    dec.use_collapse_triangulate = True
+    if not lisse:
+        dec = ob.modifiers.new("facettes", "DECIMATE")
+        dec.ratio = facettes
+        dec.use_collapse_triangulate = True
+    else:
+        sk.use_smooth_shade = True
     ob.scale = (echelle,) * 3
     if mat:
         ob.data.materials.append(mat)
     for p in ob.data.polygons:
-        p.use_smooth = False
+        p.use_smooth = lisse
     return ob
 
 

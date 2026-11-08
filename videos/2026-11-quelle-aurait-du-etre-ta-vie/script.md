@@ -101,39 +101,57 @@ Règles tirées de la skill humanizer, adaptées au français parlé :
 
 > Et il court avec les enfants du quartier, jusqu'au coucher du soleil.
 
-## S07 · L'enfance
+## S07 · L'enfance, puis la salle des simulateurs
+
+Version 2 (retours de Bruno, 08/11/2026) : narration en prise 1, plus de choix à 7 ans ni de coups de baguette ; le premier choix se fait dans la salle des simulateurs. Les répliques marquées (à générer) n'ont pas encore de voix (crédits ElevenLabs épuisés) : sous-titres provisoires dans le montage.
 
 [5 ans : une cloche, la cour d'école ; le tableau de l'inscription, puis des billets qu'on compte]
 
 > Ses parents l'inscrivent dans une école privée. Ça leur coûte cher.
 
-[7 ans : trois vignettes dans la fenêtre de l'interface, la prière, la danse, le cricket ; pas de pourcentages, pas d'encart]
-
-> Vous avez sept ans. Qu'est-ce que vous aimez faire de votre temps libre ?
-
-[le curseur hésite trois secondes ; on entend chaque possibilité]
-
-> Je prends celle-là.
-
-[clic : la prière s'agrandit ; une vraie foule qui chante]
-
 > À huit ans, quand les grands lui demandent ce qu'il veut faire plus tard, il répond toujours la même chose.
 
 ÉCRAN : ingénieur [en grand, sur le dessin d'un pont qui se trace ; silence]
 
-> Un rêve plutôt ambitieux. Sur deux cents vies nées comme lui, deux seulement font des études d'ingénieur.
+> Un rêve plutôt ambitieux. Sur deux cents vies nées comme lui, deux seulement font des études d'ingénieur. (à régénérer dans la continuité de la prise 1)
 
-[200 petites silhouettes, une par vie simulée dans les mêmes conditions ; 198 s'éteignent, deux restent allumées, en rouge. Source : la simulation, `prompts/partie/6-parts-decisions.json` (choix « Que voulez-vous étudier ? » : Ingénierie, 2 fois sur 200 vies)]
+[200 petites silhouettes, une par vie simulée dans les mêmes conditions ; 198 s'éteignent, deux restent allumées, en rouge. Source : `prompts/partie/6-parts-decisions.json`, Ingénierie 2 fois sur 200 vies]
 
-> À neuf ans, il bavarde en classe, et le maître lui donne des coups de baguette sur la paume. Après ça, il ne lève plus la main.
+> À l'école, il est plutôt timide. Souvent au fond de la classe, à écouter. (à générer)
 
-[le coup : un éclair ; puis la classe où tous lèvent la main, sauf lui]
+[la classe : il est au dernier rang, il écoute]
 
 > La même année, la famille s'endette.
 
-> À dix ans, son grand-père meurt. Il regarde longtemps les adultes pleurer.
+> À dix ans, le premier gros évènement de sa vie arrive. (à générer)
 
 [le fleuve, les fleurs de souci ; le piano]
+
+> Il regarde longtemps les adultes pleurer.
+
+[les funérailles, puis une lampe sur l'eau. On recule : c'était un écran, dans une salle sombre pleine d'écrans où passent des instants de sa vie. Deux simulateurs, costumes sombres, peau pâle, devant la console]
+
+LUI (à générer) : Tiens, regarde. C'est lui, Manoj. Je lui ai laissé la vie douce, jusqu'à maintenant.
+
+LUI : Il vient de perdre son grand-père.
+
+ELLE : Je pense que c'est le moment de reprendre les rênes.
+
+LUI : L'an prochain, il finit l'école primaire. Ses parents sont endettés.
+
+ELLE : Alors ? Il continue l'école… ou il va travailler pour les aider ?
+
+[elle se tourne vers la caméra]
+
+ELLE : À toi de voir.
+
+[l'écran central : « Continuer l'école » / « Travailler pour aider sa famille » ; trois tics]
+
+LUI : L'école.
+
+[clic]
+
+ELLE : Bon choix. Reste à savoir s'ils pourront payer.
 
 ## S08 · Onze ans
 
