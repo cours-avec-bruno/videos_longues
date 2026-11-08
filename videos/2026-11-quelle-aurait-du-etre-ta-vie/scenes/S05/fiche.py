@@ -78,7 +78,7 @@ CADRE = (140, 196, 560, 756)          # emplacement du portrait, format photo d'
 COLS, LIGNES_M = 15, 20               # premier cran de netteté : on lit une tête et des épaules, pas une personne
 
 
-def _mosaique():
+def _toile():
     photo = np.asarray(Image.open(os.path.join(M, "pexels", "portraits", "manoj_16067431.jpg")).convert("RGB"),
                        np.float32) / 255
     ph, pw = photo.shape[:2]
@@ -96,7 +96,14 @@ def _mosaique():
     x0, y0 = (CW - w) // 2, int(CH * 0.18)
     hh = min(h, CH - y0)
     toile[y0:y0 + hh, x0:x0 + w] = im[:hh]
-    petit = cv2.resize(toile, (COLS, LIGNES_M), interpolation=cv2.INTER_AREA)
+    return toile
+
+
+TOILE = _toile()
+
+
+def _mosaique(cols, rows):
+    petit = cv2.resize(TOILE, (cols, rows), interpolation=cv2.INTER_AREA)
     # l'humain en ambre : bichromie chaude, un peu de couleur d'origine
     lum = petit @ np.array([0.30, 0.55, 0.15], np.float32)
     lum = np.clip(lum / max(1e-3, np.percentile(lum, 97)), 0, 1) ** 1.3
@@ -107,7 +114,51 @@ def _mosaique():
     return np.clip(rgb, 0, 255)
 
 
-MOSA = _mosaique()                    # RGB, LIGNES_M x COLS
+# les crans de netteté : un de plus à chaque passage des années (S06) ; le 7e, la photo nette, à sa mort (S11)
+CRANS = [(15, 20), (21, 28), (30, 40), (42, 56), (60, 80), (96, 128)]
+_MOSAIQUES = {}
+
+
+def mosaique_cran(cran):
+    """Mosaïque (RGB, rangées x colonnes) du cran 1 à 6."""
+    if cran not in _MOSAIQUES:
+        _MOSAIQUES[cran] = _mosaique(*CRANS[cran - 1])
+    return _MOSAIQUES[cran]
+
+
+def _agrandie(cran, w, h):
+    m = mosaique_cran(cran)
+    rows, cols = m.shape[:2]
+    big = cv2.resize(m.astype(np.float32), (w, h), interpolation=cv2.INTER_NEAREST)
+    # de minces joints entre les cases, de plus en plus discrets quand les cases rapetissent
+    joint = 0.45 + 0.08 * cran
+    for i in range(1, cols):
+        x = int(round(i * w / cols))
+        big[:, x - 1:x] *= joint
+    for i in range(1, rows):
+        y = int(round(i * h / rows))
+        big[y - 1:y, :] *= joint
+    return big
+
+
+def panneau_portrait(w, h, cran):
+    """Le portrait (RGB float) au cran `cran` (réel) : entre deux crans, chaque grosse case se redivise à son tour."""
+    c0 = max(1, min(6, int(np.floor(cran))))
+    a = float(cran - c0)
+    im0 = _agrandie(c0, w, h)
+    if a <= 0 or c0 >= 6:
+        return im0
+    im1 = _agrandie(c0 + 1, w, h)
+    cols, rows = CRANS[c0 - 1]
+    rng = np.random.default_rng(40 + c0)
+    seuil = rng.random((rows, cols)) * 0.75
+    v = np.clip((a - seuil) / 0.25, 0, 1)
+    v = cv2.resize(v.astype(np.float32), (w, h), interpolation=cv2.INTER_NEAREST)[..., None]
+    eclat = 4 * v * (1 - v)                 # la case s'éclaire au moment où elle se redivise
+    return im0 * (1 - v) + im1 * v * (1 + 0.6 * eclat)
+
+
+MOSA = mosaique_cran(1)               # RGB, LIGNES_M x COLS
 
 
 def _dessine_portrait(img, p, k):
@@ -281,7 +332,11 @@ def fiche(tl, portrait=0.0, zoom=0.0, k=0):
         ty = (cy + (H / 2 - cy) * zoom) - s * cy
         Mz = np.float32([[s, 0, tx], [0, s, ty]])
         img = cv2.warpAffine(img, Mz, (W, H), flags=cv2.INTER_LINEAR, borderValue=FOND[::-1])
-    # halo des éléments clairs, lignes de balayage, léger décalage des couleurs, vignette, grain
+    return post(img, k)
+
+
+def post(img, k):
+    """Le grain d'écran du simulateur (BGR float) : halo, lignes de balayage, décalage des couleurs, vignette, grain."""
     halo = cv2.GaussianBlur(np.clip(img - 90, 0, 255), (0, 0), 9)
     img = img + 0.55 * halo + 0.25 * cv2.GaussianBlur(img, (0, 0), 28)
     img = img * LIGNES

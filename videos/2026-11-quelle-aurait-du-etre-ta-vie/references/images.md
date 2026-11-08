@@ -30,6 +30,11 @@ Le crédit en description reste une bonne pratique (« Vidéos : Pexels » et le
 | `s05/4113114.mp4` | Le feu de bois de près, la fumée | 4113114 | S05 |
 | `s05/38994414.mp4` | Une femme puise l'eau au fond d'un trou | 38994414 | S05 |
 | `portraits/manoj_16067431.jpg` | Portrait (Pexels, photo 16067431), affiché en très gros pixels : jamais reconnaissable | 16067431 | S05, le visage de Manoj |
+| `s06/16270511.mp4` | Un bébé tenu dans des mains (vertical) | 16270511 | S06, 1 an |
+| `s06/5451849.mp4` | Trois garçons qui jouent avec la terre (noir et blanc, Bangladesh) | 5451849 | S06, 2 ans |
+| `s06/40379978.mp4` | Une grand-mère et un garçon | 40379978 | S06, 3 ans |
+| `s06/36100216.mp4` | Des rotis sur un feu de bois | 36100216 | S06, 4 ans |
+| `s06/3978429.mp4` | Des enfants qui jouent dans un champ, soleil bas | 3978429 | S06, 5 ans |
 
 Autres candidats téléchargés, non utilisés pour l'instant (dans les mêmes dossiers) : d'autres vues de ces lieux, et des villages indiens (champs, femmes portant l'eau, cour avec vaches), utiles pour S05.
 

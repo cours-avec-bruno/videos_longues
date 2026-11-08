@@ -1,7 +1,7 @@
 {
   "titre": "Quelle aurait dû être ta vie ?",
-  "en_cours": "",
-  "prochaine": "S06",
+  "en_cours": "S06",
+  "prochaine": "S07",
   "etapes": [
     {
       "nom": "Concept et sources",
@@ -63,7 +63,7 @@
     "S03": "Coupe nette sur le noir : « commençons », en lettres de gros pixels qui brillent.",
     "S04": "Six lieux du monde traversés vite, en bleu « écran de surveillance ». On sort dans l'espace : la Terre tourne jusqu'à l'Inde, la plongée. Un village de pêcheurs au bord de la mer vu du ciel, puis des pêcheurs qui poussent une barque. Glitch : la carte du monde des densités, l'Inde qui s'allume.",
     "S05": "« manoj » en pixels lumineux. Les filets sur la plage, puis sa fiche de naissance qui s'écrit : son nom, d'où il vient, ses quatre aînés, et lui. Les enfants du village, les marmites sur le feu de bois, la fumée, l'eau qu'on puise. Le dossier d'école : la case « OBC » se coche toute seule. Retour sur sa fiche : son visage remplit le cadre, en gros pixels ambrés, encore impossible à reconnaître. Retour au bureau : l'opérateur seul.",
-    "S06": "Les années qui passent en quelques secondes, entre deux étapes de sa vie.",
+    "S06": "Sans voix. L'écran du simulateur : l'âge de Manoj avance d'un an à chaque pulsation ; pour chaque année, une ligne de son journal (son premier mot, la boue, les histoires de sa grand-mère, le dal de sa mère, les jeux jusqu'au coucher du soleil) et, à côté, une vraie image. Puis son portrait revient, un peu plus net. Revient quatre fois.",
     "S07": "L'enfance : l'école que ses parents paient cher, la main qui ne se lève plus, les grands-parents. Un mot reste à l'écran : ingénieur.",
     "S08": "Onze ans. Le choix de l'école, posé sans le dire. Puis une ligne qui tombe. Les bêtes, les champs, et l'école qu'on voit de loin.",
     "S09": "La mer et les bateaux, la toux et l'hôpital, Preeti, les enfants, la maison qu'ils construisent, une petite scène de théâtre et ses applaudissements. Plusieurs moments en 3D.",

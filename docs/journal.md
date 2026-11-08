@@ -261,3 +261,8 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Raccord S04 → S05 dans `assemblage.py` : coupe nette de la carte au carton « manoj », un bref éclat de glitch. Sortie : `medias/S01_a_S05_apercu.mp4`.
 - Fiche de naissance de S05 refaite (Bruno) d'après les références : HUD inspiré des fiches profil de la réf. 01 (étiquettes en capitales, données en monospace, coins de viseur), pictos pixel art et accent unique de la réf. 03 ; le portrait n'est plus un plan à part : il remplit le cadre de la fiche, en cadrage photo d'identité sur fond noir (on lit enfin un visage), avec une jauge de netteté à 7 crans qui annonce qu'il deviendra net.
 - Nouvelle fiche de naissance et portrait de S05 validés par Bruno ; S05 validée en V1 (la musique reste à confirmer à l'oreille). Prochaine : S06.
+
+### 08/11/2026 · S06, le journal des années
+
+- Piste choisie par Bruno : « le journal des années ». Écran du simulateur (même interface que la fiche), compteur d'âge en grand qui avance à chaque pulsation, une ligne du vrai journal de la simulation par année, une vraie vidéo à côté (Pexels), et le portrait qui gagne un cran de netteté à chaque passage (7 crans, net à sa mort). Outil : `scenes/S06/journal.py` (les quatre passages y seront décrits) ; le portrait par crans vit dans `scenes/S05/fiche.py`.
+- Passage 1 (0 → 5 ans) monté : `medias/S06/S06a_v1.mp4` (12,8 s, -22 LUFS : plus bas qu'une scène parlée). Aperçu : `medias/S01_a_S06a_apercu.mp4`.
