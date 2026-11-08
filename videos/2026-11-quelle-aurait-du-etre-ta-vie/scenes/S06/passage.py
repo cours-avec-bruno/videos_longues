@@ -1,15 +1,14 @@
-"""S06 · passage 1 (0 -> 5 ans) : les années de Manoj, regardées sur l'écran de l'opérateur.
+"""S06 · passage 1 (0 -> 5 ans) : les années de Manoj, regardées dans une fenêtre de l'interface de l'opérateur.
 
-Retours de Bruno (08/11/2026) : la voix décrit les scènes ; transitions plus lentes ; on doit avoir l'impression
-de les regarder depuis l'ordinateur du protagoniste ; plus de portrait à la fin.
+Retours de Bruno (08/11/2026) : la voix décrit les scènes ; transitions plus lentes ; on regarde depuis l'ordinateur
+du protagoniste, mais comme une interface de PC (sa capture de référence) : une fenêtre aux petits bords ronds qui ne
+prend pas tout l'écran, un léger quadrillage de pixels ; plus de portrait à la fin.
 
 Déroulé :
-  - on est assis au bureau (le regard de S02, lampe allumée : medias/S02/S02_p06_bureau.png) ; l'écran est noir ;
-  - le premier tableau s'allume sur l'écran, et l'on s'approche lentement jusqu'à ce qu'il remplisse presque le cadre
-    (le bord du moniteur reste visible : on regarde toujours son écran) ;
-  - les cinq tableaux (vignettes.py) passent, chacun sur sa phrase (voix S06_prise3) ; l'âge s'inscrit sur l'écran ;
-  - à la fin, on recule : le bureau revient, le coucher de soleil reste à l'écran.
-Le son des tableaux est celui de l'ordinateur : étouffé quand on est loin, plein quand on est dedans. Sous tout, la pièce.
+  - le noir, puis la fenêtre s'ouvre (elle grandit un peu en apparaissant) ;
+  - les cinq tableaux (vignettes.py) passent dedans, chacun sur sa phrase (voix S06_prise3) ; l'âge s'y inscrit ;
+  - à la fin, sur le coucher de soleil, la fenêtre se referme.
+Le son des tableaux sort de l'ordinateur (un peu étouffé quand la fenêtre s'ouvre ou se ferme) ; dessous, la pièce.
 
 Usage : python passage.py     ->  medias/S06/S06a_v1.mp4      (SON_SEUL=1 : ne refait que le son ; --test <dossier>)
 """
@@ -34,34 +33,7 @@ SONS = os.path.join(M, "sons", "epidemic")
 OUT = os.path.join(M, "S06")
 W, H = 1920, 1080
 
-# ---------------------------------------------------------------- le bureau et son écran
-BUREAU_F = os.path.join(M, "S02", "S02_p06_bureau.png")
-if not os.path.exists(BUREAU_F):
-    BUREAU_F = os.path.join(M, "S02", "S02_p01_fin.png")
-BUREAU = cv2.imread(BUREAU_F).astype(np.float32)
-# les coins de la dalle (mesurés sur l'image : même caméra que p01_fin)
-QUAD = np.float32([[424, 114], [1511, 112], [1479, 719], [436, 709]])
-SRC = np.float32([[0, 0], [W, 0], [W, H], [0, H]])
-H0 = cv2.getPerspectiveTransform(SRC, QUAD)
-masque_dalle = np.zeros((H, W), np.uint8)
-cv2.fillConvexPoly(masque_dalle, QUAD.astype(np.int32), 1)
-base = np.median(BUREAU[masque_dalle > 0], axis=0)
-diff = np.abs(BUREAU - base).max(2)
-fenetre = np.zeros((H, W), np.uint8)
-fenetre[222:598, 638:1292] = 1                                  # l'ancienne fenêtre claire de S02, remplacée
-postit = ((diff > 14) & (masque_dalle > 0) & (fenetre == 0)).astype(np.uint8)
-postit = cv2.morphologyEx(postit, cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
-postit = cv2.erode(cv2.dilate(postit, np.ones((9, 9), np.uint8)), np.ones((5, 5), np.uint8))
-bord = cv2.erode(masque_dalle, np.ones((7, 7), np.uint8))
-postit = postit * bord
-POSTIT = np.zeros((H, W), np.float32)          # (les post-it de S02 sont retirés : l'image couvre tout l'écran)
-# la lumière de l'écran retombe sur le bureau, la lampe, le pied (une tache douce sous et autour de la dalle)
 yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
-DEBORD = np.exp(-(((xx - 960) / 760) ** 2 + ((yy - 820) / 260) ** 2)) * (yy > 712)
-DEBORD += 0.35 * np.exp(-(((xx - 960) / 700) ** 2 + ((yy - 410) / 420) ** 2)) * (1 - masque_dalle)
-DEBORD = DEBORD.astype(np.float32)
-C_ECRAN = QUAD.mean(0)                                          # centre de la dalle
-S_MAX = 1.5                                                     # on reste devant son écran : le bord du moniteur se voit
 
 
 def lisse(p):
@@ -74,26 +46,32 @@ def doux(p):
     return p * p * p * (p * (p * 6 - 15) + 10)
 
 
-T_FIN = DUREE - SORTIE                                          # début du recul
+FIN = DUREE - 2.0                 # le montage s'arrête un peu avant la fin du rendu 3D (le recul n'existe plus)
+N_M = int(round(FIN * FPS))
+T_FIN = FIN - 1.0                 # la fenêtre commence à se refermer
+
+# ---------------------------------------------------------------- la fenêtre de l'interface
+FW, FH = 1680, 945                # elle ne prend pas tout l'écran
+RAYON = 16                        # de petits bords ronds
+FOND = np.float32([13, 12, 12])
 
 
-def approche(t):
-    """0 : assis au bureau ; 1 : l'écran remplit presque le cadre."""
-    entree = doux((t - 0.5) / 4.2)
-    sortie = 1 - doux((t - (T_FIN + 0.2)) / (SORTIE - 0.6))
-    return entree * sortie
+def masque_arrondi(w, h, r, k=4):
+    m = Image.new("L", (w * k, h * k), 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, w * k - 1, h * k - 1], radius=r * k, fill=255)
+    return np.asarray(m.resize((w, h), Image.LANCZOS)).astype(np.float32) / 255
 
 
-def camera(t):
-    e = approche(t)
-    s = 1 + (S_MAX - 1) * e
-    # un très léger flottement de la tête, plus discret quand on est près de l'écran
-    fx = (2.5 * np.sin(0.63 * t) + 1.2 * np.sin(1.7 * t + 1)) * (1 - 0.6 * e)
-    fy = (1.8 * np.sin(0.51 * t + 2) + 0.9 * np.sin(1.3 * t)) * (1 - 0.6 * e)
-    cx, cy = C_ECRAN
-    tx = (cx + (W / 2 - cx) * e) - s * cx + fx
-    ty = (cy + (H / 2 - cy) * e) - s * cy + fy
-    return np.float32([[s, 0, tx], [0, s, ty], [0, 0, 1]]), e
+MASQUE = masque_arrondi(FW, FH, RAYON)
+LISERE = np.clip(MASQUE - cv2.erode(MASQUE, np.ones((5, 5), np.uint8)), 0, 1)     # un fin liseré, à peine plus clair
+gy, gx = np.mgrid[0:FH, 0:FW]
+QUADRILLAGE = (1 - 0.13 * ((gx % 4) == 0) - 0.13 * ((gy % 4) == 0)).astype(np.float32)[..., None]   # le léger quadrillage
+VIG_F = (1 - 0.12 * (((gx - FW / 2) / (FW / 2)) ** 2 + ((gy - FH / 2) / (FH / 2)) ** 2)).astype(np.float32)[..., None]
+
+
+def ouverture(t):
+    """0 : fenêtre fermée ; 1 : ouverte."""
+    return doux((t - 0.2) / 0.8) * (1 - doux((t - T_FIN) / 0.9))
 
 
 # ---------------------------------------------------------------- l'âge, inscrit sur l'écran
@@ -115,7 +93,7 @@ CALQUES = [calque_age(i) for i in range(N_SCENES)]
 def opacite_age(i, t):
     a = arrivee(i)
     entree = lisse((t - (a + 0.3)) / 0.6)
-    fin = (a + TENUES[i] - 0.5) if i < N_SCENES - 1 else (T_FIN - 0.2)
+    fin = (a + TENUES[i] - 0.5) if i < N_SCENES - 1 else (T_FIN - 0.4)
     return entree * (1 - lisse((t - fin) / 0.5))
 
 
@@ -134,54 +112,47 @@ def contenu(n, t):
     return f
 
 
-# un reflet très doux sur la vitre de l'écran (en diagonale), dans le repère de l'image affichée
-REFLET = (0.035 * np.clip(1 - np.abs((xx / W - yy / H * 0.6) - 0.25) / 0.35, 0, 1)).astype(np.float32)[..., None] * 255
-VIG_ECRAN = (1 - 0.18 * (((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2)).astype(np.float32)[..., None]
-
-
 def image(n):
     t = n / FPS
-    A, e = camera(t)
-    c = contenu(n, t)
-    c = c * 0.93 * VIG_ECRAN + 5 + REFLET                       # un écran : noir pas tout à fait noir, un reflet
-    # le bureau, de plus en plus flou à mesure qu'on regarde l'écran
-    fond = BUREAU.copy()
-    lum = cv2.resize(c, (8, 4), interpolation=cv2.INTER_AREA).mean((0, 1))
-    fond += DEBORD[..., None] * lum[None, None, :] * 0.55
-    fond = cv2.warpAffine(fond, A[:2], (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
-    if e > 0.02:
-        fond = cv2.GaussianBlur(fond, (0, 0), 0.5 + 3.5 * e)
-    Hc = A @ H0
-    ecr = cv2.warpPerspective(c, Hc, (W, H), flags=cv2.INTER_LINEAR)
-    m = cv2.warpPerspective(np.ones((H, W), np.float32), Hc, (W, H), flags=cv2.INTER_LINEAR)
-    pi = cv2.warpAffine(POSTIT, A[:2], (W, H), flags=cv2.INTER_LINEAR)
-    m = m * (1 - pi)
-    out = fond * (1 - m[..., None]) + ecr * m[..., None]
+    o = ouverture(t)
+    out = np.empty((H, W, 3), np.float32)
+    out[:] = FOND
+    if o > 0.001:
+        c = cv2.resize(contenu(n, t), (FW, FH), interpolation=cv2.INTER_AREA)
+        c = c * QUADRILLAGE * VIG_F
+        li = 0.6 * LISERE[..., None]
+        fen = c * (1 - li) + np.float32([58, 56, 56]) * li
+        # la fenêtre apparaît en grandissant un peu, et disparaît de même
+        s_ = 0.95 + 0.05 * o
+        w_, h_ = int(round(FW * s_)), int(round(FH * s_))
+        fen = cv2.resize(fen, (w_, h_), interpolation=cv2.INTER_AREA)
+        m = cv2.resize(MASQUE, (w_, h_), interpolation=cv2.INTER_AREA)[..., None] * o
+        x0, y0 = (W - w_) // 2, (H - h_) // 2
+        zone = out[y0:y0 + h_, x0:x0 + w_]
+        out[y0:y0 + h_, x0:x0 + w_] = zone * (1 - m) + fen * m
     rng = np.random.default_rng(n)
-    out += rng.normal(0, 2.2, out.shape).astype(np.float32)
-    # entrée depuis le noir (raccord avec la fin de S05) et petite respiration de fin
-    out *= lisse(t / 0.35)
+    out += rng.normal(0, 1.8, out.shape).astype(np.float32)
     return out
 
 
 SON_SEUL = os.environ.get("SON_SEUL") == "1"
 if not SON_SEUL:
     if "--test" in sys.argv:
-        for t in (0.2, 1.6, 3.0, arrivee(0) + 3.5, arrivee(2) + 2.0, T_FIN + 1.0, DUREE - 0.1):
-            n = min(N - 1, int(t * FPS))
+        for t in (0.6, 3.0, arrivee(2) + 2.0, T_FIN + 0.5):
+            n = min(N_M - 1, int(t * FPS))
             cv2.imwrite(os.path.join(sys.argv[-1], f"s06_{t:05.2f}.png"), np.clip(image(n), 0, 255).astype(np.uint8))
         sys.exit()
     ecr_ = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(FPS),
                              "-i", "-", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p",
                              os.path.join(OUT, "S06a_image.mp4")], stdin=subprocess.PIPE)
-    for n in range(N):
+    for n in range(N_M):
         ecr_.stdin.write(np.clip(image(n), 0, 255).astype(np.uint8).tobytes())
     ecr_.stdin.close()
     ecr_.wait()
-    print("image :", round(DUREE, 2), "s")
+    print("image :", round(FIN, 2), "s")
 
 # ---------------------------------------------------------------- le son
-Ns = int(DUREE * SR)
+Ns = int(FIN * SR)
 ts = np.arange(Ns) / SR
 ecran_son = np.zeros((Ns, 2))          # ce qui sort de l'ordinateur
 piece = np.zeros((Ns, 2))              # la pièce
@@ -250,22 +221,22 @@ ambiances = [("bebe_babil.wav", 21.0, -19), ("village_amethi.wav", 50.0, -21), (
              ("feu_bois.wav", 25.0, -13), ("enfants_soir.wav", 40.0, -15)]
 for i, (nom, deb, g) in enumerate(ambiances):
     a = arrivee(i)
-    t1 = a + TENUES[i] + 0.3 if i < N_SCENES - 1 else DUREE + 1
+    t1 = a + TENUES[i] + 0.3 if i < N_SCENES - 1 else FIN + 0.2
     ecran_son += stereo(nom, deb, Ns) * (db(g) * env(a - 0.2, t1, 0.6, 0.7))[:, None]
 boue = lire("boue_main.wav")
 for k, dt in enumerate((1.0, 2.6)):
     poser(ecran_son, boue * fondu(len(boue), 0.005, 0.2)[:, None], arrivee(1) + dt, db(-16 - 3 * k))
-# le son de l'ordinateur : étouffé quand on est loin de l'écran, plein quand on est dedans
-e_t = np.array([approche(t) for t in np.arange(0, DUREE + 1 / FPS, 1 / FPS)])
+# le son de l'ordinateur : un peu étouffé quand la fenêtre s'ouvre ou se ferme
+e_t = np.array([ouverture(t) for t in np.arange(0, FIN + 1 / FPS, 1 / FPS)])
 e_s = np.interp(ts, np.arange(len(e_t)) / FPS, e_t)[:, None]
 loin = passe_bas(ecran_son, 1800) * db(-4)
 ecran_son = loin * (1 - e_s) + ecran_son * e_s
-# la pièce, comme à la fin de S05 (un peu plus basse quand on est dans l'écran)
+# la pièce, comme à la fin de S05 (un peu plus basse quand la fenêtre est ouverte)
 piece += stereo("ambiance_grand_hall.wav", 140.0, Ns) * db(-12) + stereo("bourdonnement_ordinateur.wav", 120.0, Ns) * db(-21)
 piece *= (1 - 0.45 * e_s)
 # la musique de S05 revient, très discrète
 mus = stereo("bhimpalasi.wav", 95.0, Ns, os.path.join(M, "musique"))
-mix = ecran_son + piece + mus * (db(-23) * env(1.0, DUREE + 0.5, 2.5, 1.0))[:, None]
+mix = ecran_son + piece + mus * (db(-23) * env(1.0, FIN + 0.2, 2.5, 1.2))[:, None]
 
 # la voix (prise 3, au niveau des autres scènes), chaque phrase sur son tableau
 a_ = lire_audio(os.path.join(M, "voix", VOIX), mono=True).astype(np.float64)
