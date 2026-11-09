@@ -43,7 +43,9 @@
     "Blender fait la 3D, Higgsfield l'anime ; plus de moments en 3D",
     "Cartons d'âge à revoir au cas par cas",
     "Pas de look « interface » pour raconter la vie : de la 3D simple (mannequins sans visage, Manoj en rouge), un peu sombre, avec des reflets",
-    "Ne pas suivre le storyboard à la lettre : un mélange de motion design, de 3D Blender, d'emprunts aux références et d'improvisation, avec les écarts notés dans chaque fiche"
+    "Ne pas suivre le storyboard à la lettre : un mélange de motion design, de 3D Blender, d'emprunts aux références et d'improvisation, avec les écarts notés dans chaque fiche",
+    "3D : Blender construit, Higgsfield embellit (restylage dans la DA des références : laque, chrome, cyan) puis anime ; écrans incrustés au montage",
+    "Pas de texte ni de HUD qui fasse « IA » ; motion design sobre"
   ],
   "a_decider": [
     "Garder ou couper le mensonge des 39 ans (S09)",
@@ -52,7 +54,7 @@
     "S16 : « le chiffre du début » n'existe plus (question retirée de S02) ; à repenser",
     "S14 : la saisie de la France n'est plus montrée (S03 réduite) ; le rappel est à repenser",
     "S05 : la musique, à l'oreille (Bhimpalasi en place, Remembering en réserve)",
-    "S07 : les voix des deux simulateurs (Nori, Sara), à valider à l'oreille"
+    "S06 : ses tableaux sont encore dans l'ancien rendu Blender ; les passer dans la nouvelle DA (Higgsfield) ?"
   ],
   "interludes_S06_apres": [
     "S05",

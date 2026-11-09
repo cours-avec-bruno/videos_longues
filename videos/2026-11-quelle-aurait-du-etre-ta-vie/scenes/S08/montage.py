@@ -371,7 +371,7 @@ import hf  # noqa: E402
 
 HF = os.path.join(M, "S08", "higgsfield")
 HF_SALLE = {  # plan : (vidéo Kling, durée à l'écran, image Blender qui a servi de départ, poussée finale)
-    "s08_ecran": ("salle_ecran.mp4", T_RECUL, "depart/s08_00.00.png", 1.12),
+    "s08_ecran": ("salle_ecran.mp4", T_RECUL, "depart/s08_00.00.png", 1.32),
     "s08_recul": ("salle_recul.mp4", T_ENTRE - T_RECUL, None, 1.0),
     "s08_sara": ("salle_sara.mp4", T_PLONGE + D_PLONGE - T_SORT, "depart/sara.png", 1.0),
 }

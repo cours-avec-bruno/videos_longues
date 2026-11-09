@@ -166,7 +166,21 @@ def lire_extrait(nom, debut, vitesse, duree, cy=0.5):
     return im
 
 
+T3D_HF = {"ecole": 3.6, "huit_ans": 6.6, "classe": 4.8, "funerailles": 7.2}   # durée à l'écran des tableaux Higgsfield
+
+
 def image_3d(plan, k):
+    """Le tableau : sa version embellie par Higgsfield (Bruno, 09/11/2026) si elle existe, sinon le rendu Blender."""
+    hfd = os.path.join(M, "S07", "higgsfield")
+    if plan in T3D_HF and os.path.exists(os.path.join(hfd, f"t_{plan}.mp4")):
+        import hf as _hf
+        dur = T3D_HF[plan]
+        return _hf.image(os.path.join(hfd, f"t_{plan}.mp4"), dur, min(k / FPS, dur - 0.05))
+    if plan == "dette" and os.path.exists(os.path.join(hfd, "t_dette.png")):
+        if "dette" not in _d3:
+            _d3["dette_hf"] = cv2.resize(cv2.imread(os.path.join(hfd, "t_dette.png")), (W, H), interpolation=cv2.INTER_AREA).astype(np.float32)
+            _d3["dette"] = True
+        return _d3["dette_hf"].copy()
     d = os.path.join(D3, plan)
     if plan not in _d3:
         _d3[plan] = sorted(f for f in os.listdir(d) if f.endswith(".png"))
@@ -657,6 +671,8 @@ clics = lire("souris_clics.wav")
 o_c = crete(clics[int(5 * SR):int(8 * SR)]) + int(5 * SR)
 poser(clics[o_c - 200:o_c + int(0.15 * SR)], T_CLIC, db(-6))
 
+# un silence d'une seconde avant « À toi de voir » (réf. 03 : le silence devant la phrase-clé)
+mix *= (1 - 0.85 * np.clip(1 - np.abs(ts - 63.9) / 0.75, 0, 1) ** 0.7)[:, None]
 # les voix : la narration (prise 1 et phrases nouvelles), puis les deux simulateurs, dans la salle
 rng = np.random.default_rng(7)
 tr = np.arange(int(0.35 * SR)) / SR
