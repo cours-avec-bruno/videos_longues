@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Durée** | ≈ s |
-| **Fabrication** | Remotion · Blender · Génératif (Higgsfield) · Hybride (préciser) |
+| **Fabrication** | Le mélange prévu : motion design (Remotion), Blender, emprunts aux références, génératif (Higgsfield). Il peut évoluer à la construction. |
 | **Fonction** | ACCROCHER · PROMETTRE · EXPLIQUER · PROUVER · RESSENTIR · RESPIRER · TRANSITIONNER · RELIER · RÉVÉLER · HABILLER · INCARNER |
 | **Procédé principal** | un identifiant du catalogue (`docs/direction-artistique/procedes/catalogue.md`), et **pourquoi** en une phrase |
 | **Procédés secondaires** | 2 au maximum |
@@ -33,5 +33,9 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 ## Fabrication
 
 Notes techniques : fichiers sources, prompts (`../../prompts/`), réglages, rendus.
+
+## Écarts au storyboard
+
+Ce qui a changé à la construction par rapport au storyboard (plans, procédé, outil, idée improvisée, emprunt à une référence) et pourquoi, en une ou deux lignes par écart. Le storyboard donne une direction, il ne se suit pas à la lettre (`CLAUDE.md`, section 5).
 
 ## Points à revoir

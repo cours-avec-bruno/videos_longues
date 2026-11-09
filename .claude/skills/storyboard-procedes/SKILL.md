@@ -13,6 +13,10 @@ Références obligatoires, à lire avant de proposer quoi que ce soit :
 
 Tous les procédés du catalogue sont validés. **Le travail consiste à choisir, pas à empiler.** Une scène = une fonction = un procédé principal justifié. La cohérence prime toujours sur la quantité.
 
+Le storyboard donne une **direction**, pas un plan d'exécution : à la construction, on garde l'intention et on peut changer la forme (voir `CLAUDE.md`, section 5, « Construire : un mélange »). Donc :
+- prévoir sur l'ensemble de la vidéo un **mélange** de motion design, de 3D Blender et d'emprunts aux références, sans longues séries de scènes dans un seul régime ;
+- ne pas sur-spécifier plan par plan : fixer la fonction, l'intention et le procédé principal, et laisser de la place à l'improvisation.
+
 ## Étapes
 
 1. **Comprendre la vidéo** : sujet, thèse, chute, durée visée, à partir du script, des notes ou de la discussion avec Bruno.
