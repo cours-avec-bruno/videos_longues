@@ -308,3 +308,8 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - 13 lieux construits dans Blender, embellis par Higgsfield ; Seedance 2.0 pour 2 plans (720p, 22,5 crédits / 5 s ; 1080p coûte 60). Le théâtre est refusé par la modération de Seedance : image fixe animée.
 - Invention : le fil rouge de la dette, sous toute la suite. Mensonge de 39 ans gardé.
 - Aperçu S01 à S09 : 6 min 12.
+
+## 09/11/2026 (soir) · retours de Bruno sur S07-S08
+- Nouveau module partagé `shared/outils/image/explication.py` : motion design d'explication (étiquettes et sous-titres en lettres pixel, vignettes d'illustration), d'après une vidéo de référence de Bruno.
+- S07 : raison de la dette, choix en plein écran avec les risques de chaque option, incrustation stabilisée, voix sèches. S08 : annonce expliquée, sans « Même ça », « chèvres », scène des probabilités refaite.
+- À noter : en lettres pixel sans lissage, les glyphes débordent de la mesure de PIL ; on dessine large puis on recadre sur l'encre.

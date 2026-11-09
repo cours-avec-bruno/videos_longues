@@ -62,6 +62,10 @@ Grammaire : la simulation passe dans la fenêtre de l'interface ; les vraies ima
 
 Changement d'intention (demandé par Bruno, 08/11/2026) : le premier choix n'est plus un jeu à 7 ans mais l'école ou le travail à 10-11 ans, posé par les simulateurs. Il remplace l'encart de S08 ; S08 devient la conséquence (la famille peut-elle payer ?).
 
+## Écarts au storyboard
+
+- Retours de Bruno (09/11, soir) : la dette a sa raison (« pour continuer à payer l'école ») ; le recul de l'écran se fait sur une image fixe de la salle (l'incrustation suivie dérapait), sans dédoublement ; voix de la salle sans réverbération ; le choix passe en plein écran, chaque option présentée avec ce qu'elle apporte et ce qu'elle risque (étiquettes pixel, illustrations), d'après une vidéo de référence de Bruno. +4,8 s.
+
 ## Points à revoir
 
 - Voix des simulateurs (Nori, Sara) à valider à l'oreille.

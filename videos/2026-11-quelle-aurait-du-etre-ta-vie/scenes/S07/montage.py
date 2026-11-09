@@ -30,6 +30,7 @@ sys.path.insert(0, os.path.join(RACINE, "shared", "outils", "image"))
 from pas import SR, boucle, ecrire_normalise, lire_audio  # noqa: E402
 from effets import etalonnage_doc  # noqa: E402
 from fenetre import fenetre  # noqa: E402
+import explication as X  # noqa: E402
 
 M = os.path.join(ICI, "..", "..", "medias")
 PX = os.path.join(M, "pexels", "s07")
@@ -59,27 +60,30 @@ T_ETEINT = T_ING + 6.3
 T_CLASSE = 21.60
 T_BILLET = 26.20
 T_DETTE = 27.20
-T_FLEUVE = 29.40
-T_FUN = 32.50
-T_DIYA = 39.50
-T_REVELE = 41.60         # on recule : c'était un écran
-T_LARGE = 47.60
-T_EPAULE = 57.60
-T_REGARD = 63.60
-T_CLIC_P = 69.00         # retour par-dessus l'épaule : le clic
-T_NOIR = 73.60
-DUREE = 73.60            # Bruno (09/11) : plus d'écran noir ; S08 reprend sur l'écran, avec « Bon choix… »
+# Bruno (09/11, retours) : la raison de la dette (+0,8 s), et le choix présenté en plein écran avec ses risques (+4 s)
+T_FLEUVE = 30.20
+T_FUN = 33.30
+T_DIYA = 40.30
+T_REVELE = 42.40         # on recule : c'était un écran
+T_LARGE = 48.40
+T_EPAULE = 58.40
+T_PLEIN = 60.50          # on entre dans l'écran : le choix en plein écran
+T_C1, T_C2 = 61.30, 65.00            # « Il continue l'école… » / « … ou il va travailler ? » : les risques de chacun
+T_REGARD = 68.40         # elle se tourne vers nous : « À toi de voir. »
+T_PLEIN2 = 70.20         # retour au plein écran : le compte à rebours
+T_CLIC_P = 73.80         # retour par-dessus l'épaule : le clic
+T_NOIR = 78.40
+DUREE = 78.40            # Bruno (09/11) : plus d'écran noir ; S08 reprend sur l'écran, avec « Bon choix… »
 T_CHOIX = T_EPAULE + 1.0             # le choix s'affiche sur l'écran central
-T_DECOMPTE = (65.8, 68.8)            # trois secondes : le spectateur choisit
-T_CLIC = 70.60
+T_DECOMPTE = (70.6, 73.6)            # trois secondes : le spectateur choisit
+T_CLIC = 75.40
 
 # ---------------------------------------------------------------- les voix
 VOIX = os.path.join(M, "voix", "S07_prise1.mp3")          # la prise 1 (Bruno)
 PHRASES = [  # ((début, fin) dans la prise, position dans la scène)
     ((5.00, 8.47), 2.0),        # Ses parents l'inscrivent dans une école privée. Ça leur coûte cher.
     ((15.38, 20.27), 6.7),      # À huit ans, quand les grands lui demandent ce qu'il veut faire plus tard, il répond toujours la même chose.
-    ((30.03, 32.22), 27.4),     # La même année, la famille s'endette.
-    ((35.76, 37.84), 35.4),     # Il regarde longtemps les adultes pleurer.
+    ((35.76, 37.84), 36.2),     # Il regarde longtemps les adultes pleurer.
 ]
 # le rêve : la version d'hier, telle quelle (choix de Bruno, 08/11/2026)
 VOIX_REVE = os.path.join(M, "voix", "S07_reve_prise1.mp3")
@@ -95,30 +99,35 @@ PHRASES_B = [
     ((14.10, 15.96), 24.0),          # Souvent au fond de la classe, à écouter.
 ]
 # « dix ans » et « Il perd son grand-père » : une seule génération, prise 1
+# la raison de la dette (Bruno, 09/11) : génération du 09/11 dans la continuité, prise 1
+VOIX_D = os.path.join(M, "voix", "S07d_prise1.mp3")
+PHRASES_D = [
+    ((4.13, 8.13), 26.1),            # La même année, pour continuer à payer l'école, la famille s'endette.
+]
 VOIX_C = os.path.join(M, "voix", "S07c_prise1.mp3")
 PHRASES_C = [
-    ((2.36, 7.28), 29.9),            # À dix ans, le premier gros évènement de sa vie arrive. Il perd son grand-père.
+    ((2.36, 7.28), 30.7),            # À dix ans, le premier gros évènement de sa vie arrive. Il perd son grand-père.
 ]
 # les deux simulateurs (dans la salle : un peu de pièce autour de leur voix)
 VOIX_LUI = os.path.join(M, "voix", "S07_lui_prise1.mp3")      # Nori, eleven_v3
 PHRASES_LUI = [
-    ((0.10, 2.06), 44.2),     # Tiens, regarde. C'est lui, Manoj.
-    ((2.74, 5.08), 46.6),     # Je lui ai laissé la vie douce, jusqu'à maintenant.
-    ((5.86, 7.46), 49.6),     # Il vient de perdre son grand-père.
+    ((0.10, 2.06), 45.0),     # Tiens, regarde. C'est lui, Manoj.
+    ((2.74, 5.08), 47.4),     # Je lui ai laissé la vie douce, jusqu'à maintenant.
+    ((5.86, 7.46), 50.4),     # Il vient de perdre son grand-père.
 ]
 VOIX_LUI2 = os.path.join(M, "voix", "S07_lui2_prise1.mp3")    # Nori, dans la continuité
 PHRASES_LUI2 = [
-    ((0.12, 3.67), 55.3),     # L'an prochain, il finit l'école primaire. Ses parents sont endettés.
-    ((4.05, 5.46), 69.0),     # Il faut qu'il continue l'école.
-    ((5.81, 7.92), 71.1),     # Ses frères et sœurs n'ont pas eu cette chance.
+    ((0.12, 3.67), 56.1),     # L'an prochain, il finit l'école primaire. Ses parents sont endettés.
+    ((4.05, 5.46), 73.8),     # Il faut qu'il continue l'école.
+    ((5.81, 7.92), 75.9),     # Ses frères et sœurs n'ont pas eu cette chance.
 ]
 VOIX_ELLE = os.path.join(M, "voix", "S07_elle_prise2.mp3")    # Sara, eleven_v3
 PHRASES_ELLE = [
-    ((0.06, 2.78), 52.0),     # Je pense que c'est le moment de reprendre les rênes.
-    ((4.34, 4.62), 59.4),     # Alors ?
-    ((5.82, 6.78), 60.0),     # Il continue l'école…
-    ((7.72, 9.50), 61.2),     # … ou il va travailler pour les aider ?
-    ((10.40, 10.98), 64.4),   # À toi de voir.
+    ((0.06, 2.78), 52.8),     # Je pense que c'est le moment de reprendre les rênes.
+    ((4.34, 4.62), 60.2),     # Alors ?
+    ((5.82, 6.78), T_C1),     # Il continue l'école…
+    ((7.72, 9.50), T_C2),     # … ou il va travailler pour les aider ?
+    ((10.40, 10.98), 69.2),   # À toi de voir.
 ]
 VOIX_A_VENIR = []         # toutes les phrases ont leur voix
 
@@ -139,7 +148,9 @@ PLANS = [
     (T_REVELE, T_LARGE, "salle", ("revele", 0.0), 1, "coupe"),
     (T_LARGE, T_EPAULE, "salle", ("large", 0.0), 1, "coupe"),
     (T_EPAULE, T_REGARD, "salle", ("epaule", 0.0), 1, "coupe"),
-    (T_REGARD, T_CLIC_P, "salle", ("regard", 0.0), 1, "coupe"),
+    (T_PLEIN, T_REGARD, "choix", None, 1, "coupe"),
+    (T_REGARD, T_PLEIN2, "salle", ("regard", 0.0), 1, "coupe"),
+    (T_PLEIN2, T_CLIC_P, "choix", None, 1, "coupe"),
     (T_CLIC_P, DUREE, "salle", ("epaule", 3.0), 1, "coupe"),
 ]
 N = int(round(DUREE * FPS))
@@ -333,35 +344,58 @@ F_UI_E = ImageFont.truetype(FONTS + "bahnschrift.ttf", 30)
 OPTIONS = ["Continuer l'école", "Travailler pour aider sa famille"]
 
 
+L1 = [("apprendre, un diplôme", "+"), ("un meilleur métier, plus tard", "+"),
+      ("les frais, chaque année", "-"), ("la dette qui grossit", "-")]
+L2 = [("un revenu tout de suite", "+"), ("aider à rembourser", "+"),
+      ("l'école, finie pour de bon", "-"), ("les champs, les bêtes, la mer", "-")]
+CARTES = [(250, 210, 910, 440), (1010, 210, 1670, 440)]
+_ill = {}
+
+
+def illustration(nom):
+    if nom not in _ill:
+        p = {"classe": os.path.join(M, "S07", "higgsfield", "t_classe.png"),
+             "betes": os.path.join(M, "S08", "higgsfield", "betes_restyle.png")}[nom]
+        _ill[nom] = cv2.imread(p)
+    return _ill[nom]
+
+
 def ecran_choix(t):
-    """Le premier choix, sur l'écran de la salle : deux cartes, un compte à rebours, le clic."""
-    im = Image.new("RGB", (W, H), (12, 14, 18))
-    d = ImageDraw.Draw(im)
+    """Le premier choix (Bruno, 09/11) : en plein écran, chaque option présentée avec ce qu'elle apporte et ce qu'elle
+    risque (étiquettes pixel, illustrations qui surgissent), puis le compte à rebours et le clic."""
+    f = X.fond(t, rng_k=int(t * FPS))
     a = lisse((t - T_CHOIX) / 0.6)
-    col = lambda c, k=1.0: tuple(int(v * a * k) for v in c)  # noqa: E731
-    d.text((140, 110), "MANOJ  ·  10 ANS  ·  PREMIER CHOIX", font=F_UI_E, fill=col((130, 140, 150)))
-    d.line([(140, 165), (W - 140, 165)], fill=col((60, 66, 74)), width=2)
+    f = X.poser(f, X.pixel("MANOJ · 10 ANS · PREMIER CHOIX", 9, 3, (150, 158, 168)), W / 2, 120, a)
     choisi = t >= T_CLIC
-    for i, txt in enumerate(OPTIONS):
-        x0, y0, x1, y1 = 160 + i * 820, 330, 160 + i * 820 + 780, 690
-        sel = choisi and i == 0
-        fond = (214, 72, 46) if sel else (22, 26, 32)
-        k = 1.0 if (not choisi or sel) else 0.45
-        d.rounded_rectangle([x0, y0, x1, y1], radius=24, fill=col(fond, k), outline=col(CREME, 0.8 * k), width=3)
-        tw = d.textlength(txt, font=F_UI_T)
-        if tw > 700:
-            mots = txt.split(" ")
-            l1, l2 = " ".join(mots[:2]), " ".join(mots[2:])
-            for j, l_ in enumerate((l1, l2)):
-                d.text(((x0 + x1) / 2 - d.textlength(l_, font=F_UI_T) / 2, 440 + j * 80), l_, font=F_UI_T, fill=col(CREME, k))
-        else:
-            d.text(((x0 + x1) / 2 - tw / 2, 475), txt, font=F_UI_T, fill=col(CREME, k))
+    phase = 0 if t < T_C1 else 1 if t < T_C2 else 2 if t < T_PLEIN2 else 3
+    for i, (rect, txt) in enumerate(zip(CARTES, ("Continuer" + chr(10) + "l'école", "Travailler pour" + chr(10) + "aider sa famille"))):
+        actif = 1.0 if phase in (0, 3) or phase == i + 1 else 0.3
+        if choisi:
+            actif = 1.0 if i == 0 else 0.3
+        f = X.carte(f, txt, rect, choisie=(choisi and i == 0), actif=actif, opac=a)
+    # les étiquettes, sous chaque carte
+    for i, (L, t0) in enumerate(((L1, T_C1), (L2, T_C2))):
+        cx = (CARTES[i][0] + CARTES[i][2]) / 2
+        vis = 1.0 if phase in (i + 1, 3) else 0.25 if t > t0 else 0.0
+        if choisi and i == 1:
+            vis = 0.25
+        for j, (txt, sg) in enumerate(L):
+            q = (t - (t0 + 0.35 + 0.42 * j)) / 0.35
+            if q > 0 and vis > 0:
+                g = f.copy()
+                g = X.etiquette(g, txt, cx, 530 + j * 92, q, sg, taille=11, echelle=3)
+                f = f * (1 - vis) + g * vis
+    # l'illustration de l'option qu'on présente, de l'autre côté
+    if phase == 1:
+        f = X.vignette(f, illustration("classe"), 1340, 700, 520, (t - (T_C1 + 0.2)) / 0.4 - 6 * lisse((t - (T_C2 - 0.3)) / 0.3), 2.5)
+    if phase == 2 and t < T_REGARD + 1.5:
+        f = X.vignette(f, illustration("betes"), 580, 700, 520, (t - (T_C2 + 0.2)) / 0.4, -2.5)
     # le compte à rebours : un trait qui se vide
     if T_DECOMPTE[0] - 0.2 <= t < T_CLIC + 0.3:
         p = 1 - np.clip((t - T_DECOMPTE[0]) / (T_DECOMPTE[1] - T_DECOMPTE[0]), 0, 1)
-        d.line([(160, 790), (W - 160, 790)], fill=(60, 64, 70), width=6)
-        d.line([(160, 790), (160 + (W - 320) * p, 790)], fill=CREME, width=6)
-    return np.asarray(im).astype(np.float32)[:, :, ::-1]
+        cv2.line(f, (250, 960), (1670, 960), (70, 64, 60), 6)
+        cv2.line(f, (250, 960), (int(250 + 1420 * p), 960), (216, 230, 238), 6)
+    return f
 
 
 def contenu_ecran(t):
@@ -375,14 +409,14 @@ def contenu_ecran(t):
         return f
     if t < T_CHOIX:
         f = image_3d("funerailles", int((t - T_REVELE) * FPS) % 160)
-        if t > 54.5:                # « l'an prochain, il finit l'école » : la classe
+        if t > 55.3:                # « l'an prochain, il finit l'école » : la classe
             q = lisse((t - 54.5) / 0.8)
-            f = f * (1 - q) + image_3d("classe", int((t - 54.5) * FPS) % 100) * q
+            f = f * (1 - q) + image_3d("classe", int((t - 55.3) * FPS) % 100) * q
         return f
     f = ecran_choix(t)
     if t < T_CHOIX + 0.6:
         q = lisse((t - T_CHOIX) / 0.6)
-        f = image_3d("classe", int((t - 54.5) * FPS) % 100) * (1 - q) + f * q
+        f = image_3d("classe", int((t - 55.3) * FPS) % 100) * (1 - q) + f * q
     return f
 
 
@@ -409,12 +443,15 @@ def plan_salle(plan, k, t):
         tl = k / FPS
         _, mb, cb = salle(plan, kb)
         co0 = hf.report(os.path.join(HF7, ref), chemin, cb, os.path.join(HF7, vid + ".coins.json"))
-        suivi = hf.suivre(chemin, dur, co0, os.path.join(HF7, vid + ".suivi.json"))
+        suivi = lisser(hf.suivre(chemin, dur, co0, os.path.join(HF7, vid + ".suivi.json")))
         img = hf.image(chemin, dur, tl)
         co = suivi[max(0, min(int(tl * FPS), len(suivi) - 1))].copy()
-        if plan == "revele":            # on recule depuis l'écran : la poussée inverse, faite au montage
+        if plan == "revele":            # on recule depuis l'écran : une image fixe de la salle (Bruno, 09/11 : l'incrustation
+            img = hf.image(chemin, dur, 0.0)  # suivie dérapait), la poussée inverse faite au montage
             q = 1 - doux(tl / dur)
-            return hf_traverser(img, co, c, q)
+            return hf_traverser(img, co0, c, q)
+        if plan == "epaule" and T_PLEIN - 0.7 <= t < T_PLEIN:     # on entre dans l'écran : le choix en plein écran
+            return hf_traverser(img, co, c, doux((t - (T_PLEIN - 0.7)) / 0.7))
         m = cv2.warpPerspective(mb, cv2.getPerspectiveTransform(cb, co), (W, H))
     else:
         img, m, co = salle(plan, k)
@@ -428,6 +465,15 @@ def plan_salle(plan, k, t):
     return out
 
 
+def lisser(s, sigma=6.0):
+    """Lissage temporel fort du suivi (Bruno, 09/11 : des à-coups dans l'incrustation)."""
+    s = np.asarray(s, np.float32)
+    k = np.exp(-0.5 * (np.arange(-18, 19) / sigma) ** 2)
+    k /= k.sum()
+    p = np.pad(s, ((18, 18), (0, 0), (0, 0)), mode="edge")
+    return np.stack([np.stack([np.convolve(p[:, i, j], k, "valid") for j in range(2)], -1) for i in range(s.shape[1])], 1).astype(np.float32)
+
+
 def hf_traverser(img, coins, contenu, q):
     """L'écran grandit jusqu'à remplir le cadre (q = 1) : toute l'image de la salle suit la même homographie."""
     quad = coins + (PLEIN_ - coins) * q
@@ -439,12 +485,6 @@ def hf_traverser(img, coins, contenu, q):
     cv2.fillConvexPoly(mk, np.round(quad * 4).astype(np.int32), 1.0, lineType=cv2.LINE_AA, shift=2)
     mk = cv2.GaussianBlur(mk, (0, 0), 0.7)[..., None]
     out = salle_ * (1 - mk) + e * mk
-    v = math.sin(math.pi * q)
-    if v > 0.4:                          # au plus fort du passage, le signal se dédouble un instant
-        d_ = int(round(5 * (v - 0.4) / 0.6))
-        if d_:
-            out[..., 2] = np.roll(out[..., 2], d_, axis=1)
-            out[..., 0] = np.roll(out[..., 0], -d_, axis=1)
     return out + 0.18 * (1 - q) * cv2.GaussianBlur(e * mk, (0, 0), 22)
 
 
@@ -520,6 +560,8 @@ def contenu(i, t):
         f = cv2.warpAffine(f, cv2.getRotationMatrix2D((W / 2, H * 0.55), 0, z), (W, H), borderMode=cv2.BORDER_REFLECT)
     elif genre == "ingenieur":
         f = ecran_ingenieur(t)
+    elif genre == "choix":
+        f = ecran_choix(t)
     elif genre == "salle":
         plan, decal = src
         f = plan_salle(plan, k + int(decal * FPS), t)
@@ -549,6 +591,10 @@ def image(n):
     if genre == "d3" and src[0] == "classe":
         ouv = doux((t - t0) / 0.45)
     f = fenetre(c, ouv, pl)
+    if 26.9 <= t < T_FLEUVE:                     # « pour continuer à payer l'école, la famille s'endette »
+        f = X.etiquette(f, "les frais d'école", W / 2 - 230, 930, (t - 27.0) / 0.35)
+        f = X.etiquette(f, "une dette", W / 2 + 250, 930, (t - 29.2) / 0.35, "-")
+        f *= 1 - lisse((t - (T_FLEUVE - 0.2)) / 0.2) * 0.0
     f = sous_titres(f, t)
     f = onde_dialogue(f, n)
     f *= lisse(t / 0.12)
@@ -672,16 +718,16 @@ o_c = crete(clics[int(5 * SR):int(8 * SR)]) + int(5 * SR)
 poser(clics[o_c - 200:o_c + int(0.15 * SR)], T_CLIC, db(-6))
 
 # un silence d'une seconde avant « À toi de voir » (réf. 03 : le silence devant la phrase-clé)
-mix *= (1 - 0.85 * np.clip(1 - np.abs(ts - 63.9) / 0.75, 0, 1) ** 0.7)[:, None]
+mix *= (1 - 0.85 * np.clip(1 - np.abs(ts - 68.7) / 0.75, 0, 1) ** 0.7)[:, None]
 # les voix : la narration (prise 1 et phrases nouvelles), puis les deux simulateurs, dans la salle
 rng = np.random.default_rng(7)
 tr = np.arange(int(0.35 * SR)) / SR
 piece = rng.normal(0, 1, len(tr)) * np.exp(-tr / 0.05)       # une petite pièce, sèche et proche
 piece[0] = 0
-piece *= 0.08 / np.sqrt((piece ** 2).sum())
+piece *= 0.0      # Bruno (09/11) : plus de réverbération sur les voix de la salle
 voix = np.zeros(Ns)
 for fichier, phrases, salle_ in ((VOIX, PHRASES, False), (VOIX_REVE, PHRASES_REVE, False), (VOIX_B, PHRASES_B, False),
-                                 (VOIX_C, PHRASES_C, False), (VOIX_LUI, PHRASES_LUI, True), (VOIX_LUI2, PHRASES_LUI2, True),
+                                 (VOIX_C, PHRASES_C, False), (VOIX_D, PHRASES_D, False), (VOIX_LUI, PHRASES_LUI, True), (VOIX_LUI2, PHRASES_LUI2, True),
                                  (VOIX_ELLE, PHRASES_ELLE, True)):
     a_ = lire_audio(fichier, mono=True).astype(np.float64)
     actif = np.abs(a_) > 0.01

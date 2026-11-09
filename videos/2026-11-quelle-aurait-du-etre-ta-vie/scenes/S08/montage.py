@@ -27,6 +27,7 @@ sys.path.insert(0, os.path.join(RACINE, "shared", "outils", "image"))
 from pas import SR, boucle, ecrire_normalise, lire_audio  # noqa: E402
 from effets import etalonnage_doc  # noqa: E402
 from fenetre import FH, FOND, FW, fenetre  # noqa: E402
+import explication as X  # noqa: E402
 
 M = os.path.join(ICI, "..", "..", "medias")
 SALLE = os.path.join(M, "S08", "salle")
@@ -63,31 +64,39 @@ def expo_inout(p):
     return 2 ** (20 * p - 10) / 2 if p < 0.5 else (2 - 2 ** (-20 * p + 10)) / 2
 
 
-# ---------------------------------------------------------------- le déroulé
-T_RECUL = 10.3            # plan de côté : il se recule
-T_ENTRE = 14.8           # on entre dans l'écran (0,9 s) -> la fenêtre : le portail
+# ---------------------------------------------------------------- le déroulé (refait le 09/11 sur les retours de Bruno)
+# l'écran du choix passe en plein écran ; l'annonce dit pourquoi et ce que ça change ; plus de « Même ça » ;
+# « les chèvres » au lieu de « les bêtes » (mal prononcé) ; les 200 vies expliquées pas à pas.
+T_A = 3.3                # on entre dans l'écran de la salle : l'annonce en plein écran
+D_A = 0.8
+T_POURQUOI = 9.0         # « Mais les frais d'école s'ajoutent à la dette… »
+T_RECUL = 10.3           # (durée de référence de la vidéo de la salle)
+T_ENTRE = 12.9           # « À onze ans, pour lui, l'école s'arrête » : on entre dans la fenêtre, le portail
 D_ENTRE = 0.9
-T_CHEVRES = 20.6         # plein écran : le garçon et ses chèvres
-T_BETES = 24.6           # la fenêtre : 14 ans
-T_SORT = 31.2            # on ressort de la fenêtre -> la salle, elle de profil
-D_SORT = 0.9
-T_PLONGE = 34.8          # on entre dans l'écran, en plein écran : les données
+T_CHEVRES = 18.7         # « Il passe ses journées à garder les chèvres. »
+T_BETES = 22.6           # la fenêtre : 14 ans
+T_SORT = 28.6            # (fin des bêtes)
+T_PLONGE = 28.6          # on plonge dans les données, en plein écran
 D_PLONGE = 0.8
-T_SEUL = 40.4            # les autres vies s'effacent ; la rouge reste ; vous apparaissez
-T_NOIR = 48.4
-DUREE = 49.2
+T_SEUL = 44.3            # les autres vies s'effacent ; la rouge reste ; vous apparaissez
+T_NOIR = 50.0
+DUREE = 50.8
 T_MORPH = 0.42
 
-# les voix : (fichier, [((début, fin) dans la prise, position)], dans la salle ?)
 V = os.path.join(M, "voix")
 VOIX = [
     (os.path.join(V, "S07_elle_prise2.mp3"), [((11.68, 12.12), 0.3), ((13.14, 15.20), 0.95)], True),  # Bon choix. Reste à savoir…
-    (os.path.join(V, "S08_lui_prise1.mp3"), [((4.57, 5.44), 12.75)], True),                       # … Même ça.                        # … Même ça.
-    (os.path.join(V, "S08_prise1.mp3"), [((5.32, 6.83), 21.15),                                  # Il passe ses journées avec les bêtes.
-                                         ((8.15, 11.09), 25.8),                                  # À quatorze ans, il envie ses amis qui vont à l'école.
-                                         ((12.22, 15.44), 43.6)], False),                        # Et vous, à onze ans… qui payait…
-    (os.path.join(V, "S08_elle_prise1.mp3"), [((3.99, 6.24), 32.25),                             # Les choix changent les probabilités.
-                                              ((7.08, 9.62), 37.0)], True),                      # Ils ne décident jamais du résultat.
+    (os.path.join(V, "S07d_prise1.mp3"), [((8.80, 12.08), T_POURQUOI),                     # Mais les frais d'école s'ajoutent…
+                                         ((12.86, 15.56), 13.2),                           # À onze ans, pour lui, l'école s'arrête.
+                                         ((15.97, 18.32), 19.1),                           # Il passe ses journées à garder les chèvres.
+                                         ((19.18, 21.16), 29.8),                           # Sur deux cents enfants nés comme lui,
+                                         ((21.57, 23.26), 32.1),                           # presque tous choisissent l'école.
+                                         ((24.05, 25.46), 34.6),                           # Une vingtaine n'y vont pas quand même.
+                                         ((25.92, 26.72), 36.6)], False),                  # Il en fait partie.
+    (os.path.join(V, "S08_prise1.mp3"), [((8.15, 11.09), 23.3),                            # À quatorze ans, il envie ses amis…
+                                         ((12.22, 15.44), 46.0)], False),                  # Et vous, à onze ans… qui payait…
+    (os.path.join(V, "S08_elle_prise1.mp3"), [((3.99, 6.24), 38.4),                         # Les choix changent les probabilités.
+                                              ((7.08, 9.62), 41.3)], True),                 # Ils ne décident jamais du résultat.
 ]
 N = int(round(DUREE * FPS))
 
@@ -135,7 +144,7 @@ F_UI_T = ImageFont.truetype(FONTS + "georgia.ttf", 64)
 F_UI_E = ImageFont.truetype(FONTS + "bahnschrift.ttf", 30)
 F_LIGNE = ImageFont.truetype(FONTS + "georgiai.ttf", 66)
 LIGNES = ["Votre famille n'a pas pu payer", "les frais de scolarité ; vous avez dû", "renoncer à poursuivre vos études."]
-O_ECRAN = 2.8            # Sara parle d'abord (« Bon choix… ») ; la carte se replie ensuite
+O_ECRAN = 3.4            # Sara parle d'abord (« Bon choix… ») ; on entre dans l'écran ; la carte se replie ensuite
 T_TAPE = (1.45 + O_ECRAN, 5.0 + O_ECRAN)
 CARTE = (160, 330, 940, 690)                       # la carte « Continuer l'école », comme à la fin de S07
 NB_CAR = sum(len(l) for l in LIGNES)
@@ -146,7 +155,7 @@ def ecran_ligne(t):
     tl = t - O_ECRAN
     im = Image.new("RGB", (W, H), (12, 14, 18))
     d = ImageDraw.Draw(im)
-    d.text((140, 110), "MANOJ  ·  10 ANS  ·  PREMIER CHOIX", font=F_UI_E, fill=(130, 140, 150))
+    d.text((140, 110), "MANOJ  ·  11 ANS", font=F_UI_E, fill=(130, 140, 150))
     d.line([(140, 165), (W - 140, 165)], fill=(60, 66, 74), width=2)
     # la carte non choisie (déjà éteinte à la fin de S07) se fond dans le fond de l'écran
     a_autre = 1 - lisse(tl / 0.55)
@@ -204,9 +213,9 @@ _rng.shuffle(_cases)
 JAMAIS = set(_cases[:19])                 # ne rencontrent jamais ce choix (mortes jeunes, ou pas d'école du tout)
 TRAVAIL = set(_cases[19:24])              # choisissent de travailler
 ECHEC = set(_cases[24:43]) | {MANOJ}      # choisissent l'école… et n'y vont pas (une vingtaine, dont lui)
-T_GRILLE = 33.4           # elles apparaissent sur l'écran de la salle
-T_ALLUME = 35.7           # celles qui choisissent l'école s'allument (une vague qui part de lui)
-T_ETEINT = 38.15          # « … jamais du résultat » : une vingtaine s'éteignent, lui aussi
+T_GRILLE = 29.6           # « Sur deux cents enfants nés comme lui »
+T_ALLUME = 32.2           # « presque tous choisissent l'école » (une vague qui part de lui)
+T_ETEINT = 34.7           # « Une vingtaine n'y vont pas quand même » (lui à 36,6 : « Il en fait partie »)
 
 
 def silhouette(d, x, y, col, s=1.0):
@@ -237,11 +246,11 @@ def donnees(t):
                 col = (30, 29, 28)
             elif (c, r) not in TRAVAIL:
                 on = lisse((t - T_ALLUME - 0.045 * dist) / 0.3)
-                cible = ROUGE if (c, r) == MANOJ else (150, 144, 134)
+                cible = ROUGE if (c, r) == MANOJ else (214, 204, 186)
                 col = _melange(base, cible, on)
                 if (c, r) in ECHEC:
                     k = sorted(ECHEC).index((c, r))
-                    off = lisse((t - T_ETEINT - (0.9 if (c, r) == MANOJ else 0.035 * k)) / 0.45)
+                    off = lisse((t - T_ETEINT - (1.9 if (c, r) == MANOJ else 0.035 * k)) / 0.45)
                     eteint = (96, 40, 30) if (c, r) == MANOJ else (40, 38, 36)
                     col = _melange(col, eteint, off)
                 if (c, r) == MANOJ:
@@ -259,7 +268,7 @@ def donnees(t):
         xm, ym, sm = W / 2 - 210, H / 2 + 60, 1.15 + (6.5 - 1.15) * mv
         x, y = x0 + (xm - x0) * mv, y0 + (ym - y0) * mv
         if (MANOJ in ECHEC) and t > T_ETEINT:
-            col_m = _melange(ROUGE, (96, 40, 30), lisse((t - T_ETEINT - 0.9) / 0.45))
+            col_m = _melange(ROUGE, (96, 40, 30), lisse((t - T_ETEINT - 1.9) / 0.45))
         else:
             col_m = _melange((54, 52, 50), ROUGE, rouge_on)
         app_m = lisse((t - T_GRILLE - 0.03 * (MANOJ[0] + MANOJ[1])) / 0.4)
@@ -453,23 +462,61 @@ def onde_dialogue(f, n):
     return f * (1 - al) + o[..., :3].astype(np.float32) * al
 
 
+_DETTE = cv2.imread(os.path.join(M, "S07", "higgsfield", "t_dette.png"))
+_FOND_ECRAN = np.float32([18, 14, 12])
+
+
+def annonce(t):
+    """L'annonce, en plein écran (Bruno, 09/11) : la carte rouge se replie et écrit la ligne ; puis le pourquoi."""
+    e = ecran_ligne(t)                                   # la carte qui se replie et la ligne tapée (sur fond uni)
+    f = X.fond(t, rng_k=int(t * FPS))
+    m = (np.abs(e - _FOND_ECRAN).sum(2) > 24).astype(np.float32)
+    m = cv2.GaussianBlur(m, (0, 0), 1.0)[..., None]
+    f = f * (1 - m) + e * m
+    if t >= T_POURQUOI:                                  # le pourquoi : deux charges, et la famille qui ne suit plus
+        f = X.etiquette(f, "les frais d'école, chaque année", 560, 760, (t - (T_POURQUOI + 0.4)) / 0.35, "-", 11, 3)
+        f = X.etiquette(f, "la dette, depuis ses neuf ans", 560, 850, (t - (T_POURQUOI + 1.3)) / 0.35, "-", 11, 3)
+        f = X.etiquette(f, "la famille ne peut plus suivre", 560, 940, (t - (T_POURQUOI + 2.5)) / 0.35, "", 11, 3)
+        f = X.vignette(f, _DETTE, 1430, 830, 500, (t - (T_POURQUOI + 0.8)) / 0.4, 2.5)
+    return f
+
+
+def etiquettes_donnees(f, t):
+    gx = GX0 + MANOJ[0] * PAS_X
+    gy = GY0 + MANOJ[1] * PAS_Y
+    s_ = 1 - lisse((t - (T_SEUL - 0.2)) / 0.5)
+    if s_ <= 0:
+        return f
+    g = f.copy()
+    g = X.etiquette(g, "200 enfants nés comme lui", W / 2, 105, (t - (T_GRILLE + 0.3)) / 0.35)
+    g = X.etiquette(g, "choisissent l'école", W / 2 - 330, 985, (t - (T_ALLUME + 0.1)) / 0.35, "+")
+    g = X.etiquette(g, "n'y vont pas quand même", W / 2 + 300, 985, (t - (T_ETEINT + 0.1)) / 0.35, "-")
+    g = X.etiquette(g, "Manoj", gx, gy - 72, (t - 36.6) / 0.3, "-", 10, 3)
+    if t > 38.2:                                         # Sara parle : les étiquettes du bas laissent la place aux siennes
+        k = 1 - lisse((t - 38.2) / 0.3)
+        g = f.copy() * (1 - k) + g * k if k < 1 else g
+        g = X.etiquette(g, "200 enfants nés comme lui", W / 2, 105, 1.0)
+    return f * (1 - s_) + g * s_
+
+
 def image(n):
     t = n / FPS
-    if t < T_RECUL:                                                     # P01 : la ligne s'écrit sur l'écran
+    if t < T_A:                                                         # la salle : « Bon choix. Reste à savoir… »
         img, m, co = salle2("s08_ecran", t)
-        f = dans_l_ecran(img, m, co, ecran_ligne(t))
-    elif t < T_ENTRE:                                                   # P02 : il se recule (« … Même ça. »)
-        img, m, co = salle2("s08_recul", t - T_RECUL)
-        f = img
-    elif t < T_ENTRE + D_ENTRE:                                         # P03a : on entre dans l'écran -> la fenêtre
+        f = dans_l_ecran(img, m, co, annonce(t))
+    elif t < T_A + D_A:                                                 # on entre dans l'écran
+        q = doux((t - T_A) / D_A)
+        img, m, co = salle2("s08_ecran", T_A)
+        f = traverser(img, co, PLEIN, annonce(t), q)
+    elif t < T_ENTRE:                                                   # l'annonce, le pourquoi
+        f = annonce(t)
+    elif t < T_ENTRE + D_ENTRE:                                         # « À onze ans… l'école s'arrête » : la fenêtre
         q = doux((t - T_ENTRE) / D_ENTRE)
-        img, m, co = salle2("s08_ecran", T_RECUL)
-        c = ecran_ligne(T_RECUL) * (1 - lisse((t - T_ENTRE) / 0.35)) + portail(t) * lisse((t - T_ENTRE) / 0.35)
-        f = traverser(img, co, RECT_FENETRE, c, q)
-        f = f * (1 - lisse((q - 0.7) / 0.3)) + fenetre(ajouter_age(c, t)) * lisse((q - 0.7) / 0.3)
-    elif t < T_CHEVRES:                                                 # P03 : le portail
+        c = annonce(t) * (1 - lisse((t - T_ENTRE) / 0.35)) + portail(t) * lisse((t - T_ENTRE) / 0.35)
+        f = fenetre(ajouter_age(c, t), 1.0, 1 - q)
+    elif t < T_CHEVRES:                                                 # le portail
         f = fenetre(ajouter_age(portail(t), t))
-    elif t < T_BETES:                                                   # P04 : les chèvres, plein écran
+    elif t < T_BETES:                                                   # les chèvres, plein écran
         dt = t - T_CHEVRES
         c = chevres(t)
         pl = 1.0
@@ -478,7 +525,7 @@ def image(n):
             pl = q
             c = ajouter_age(portail(t), t) * (1 - lisse(dt / (T_MORPH * 0.6))) + c * lisse(dt / (T_MORPH * 0.6))
         f = fenetre(c, 1.0, pl)
-    elif t < T_SORT:                                                    # P05 : 14 ans, dans la fenêtre
+    elif t < T_PLONGE:                                                  # 14 ans, dans la fenêtre
         dt = t - T_BETES
         c = ajouter_age(betes(t), t)
         pl = 0.0
@@ -487,21 +534,13 @@ def image(n):
             pl = 1 - q
             c = chevres(t) * (1 - lisse(dt / (T_MORPH * 0.6))) + c * lisse(dt / (T_MORPH * 0.6))
         f = fenetre(c)
-    elif t < T_PLONGE:                                                  # P06 : on ressort ; elle, de profil
-        img, m, co = salle2("s08_sara", t - T_SORT)
-        c = contenu_sara(t)
-        if t < T_SORT + D_SORT:
-            q = doux((t - T_SORT) / D_SORT)
-            f = traverser(img, co, RECT_FENETRE, ajouter_age(c, t), 1 - q)
-            f = f * (1 - lisse((0.3 - q) / 0.3)) + fenetre(ajouter_age(betes(t), t)) * lisse((0.3 - q) / 0.3)
-        else:
-            f = dans_l_ecran(img, m, co, c)
-    elif t < T_PLONGE + D_PLONGE:                                       # P07a : on plonge dans les données
+    elif t < T_PLONGE + D_PLONGE:                                       # on plonge dans les données
         q = doux((t - T_PLONGE) / D_PLONGE)
-        img, m, co = salle2("s08_sara", t - T_SORT)
-        f = traverser(img, co, PLEIN, donnees(t), q, assombrir=False)
-    else:                                                               # P07-P08 : les données ; la rouge, et vous
-        f = donnees(t)
+        f = fenetre(betes(t)) * (1 - q) + donnees(t) * q
+    else:                                                               # les données expliquées ; Sara ; la rouge, et vous
+        f = etiquettes_donnees(donnees(t), t)
+        f = X.sous_titre(f, "les choix changent les probabilités", t - 38.4, 2.6, 985, 12, 4)
+        f = X.sous_titre(f, "ils ne décident jamais du résultat", t - 41.3, 2.8, 985, 12, 4)
     f = onde_dialogue(f, n)
     f *= 1 - lisse((t - T_NOIR) / 0.12)
     f += np.random.default_rng(n).normal(0, 1.8, f.shape).astype(np.float32)
@@ -572,7 +611,7 @@ def crete(a):
 
 
 # la salle : souffle des machines, bourdonnement des écrans, une tension grave (comme la fin de S07)
-salle_env = np.clip(env(0, T_ENTRE + 0.4, 0.3, 0.6) + env(T_SORT - 0.2, T_PLONGE + 0.5, 0.5, 0.8), 0, 1)
+salle_env = env(0, T_A + D_A + 0.4, 0.3, 0.8)
 mix += stereo("ambiance_grand_hall.wav", 140.0) * (db(-15) * salle_env)[:, None]
 mix += stereo("bourdonnement_ordinateur.wav", 60.0) * (db(-13) * salle_env)[:, None]
 mix += stereo("espace_drone.wav", 45.0) * (db(-25) * env(0, T_PLONGE + 1.0, 1.0, 1.5))[:, None]
@@ -584,7 +623,7 @@ poser(cl[int(2 * SR):int(2 * SR) + int((T_TAPE[1] - T_TAPE[0]) * SR)] * fondu(in
 ch = lire("chaise_assis.wav")
 o_ch = crete(ch)
 poser(ch[max(0, o_ch - int(0.35 * SR)):o_ch + int(0.9 * SR)] * fondu(int(1.25 * SR), 0.05, 0.4)[:o_ch + int(0.9 * SR) - max(0, o_ch - int(0.35 * SR)), None],
-      T_RECUL + 1.0, db(-15))
+      -10.0, db(-15))      # (plus de recul : retiré avec « Même ça », Bruno 09/11)
 # P03 : on entre dans l'écran (un souffle) ; la cour, derrière le portail ; le portail claque, la cour s'étouffe
 wz = lire("whoosh_zoom.wav")
 o_w = crete(wz)
@@ -603,7 +642,7 @@ mix += stereo("vent_herbe_seche.wav", 30.0) * (db(-20) * env(T_CHEVRES - 0.1, T_
 mix += stereo("chevres_cloches.wav", 12.0) * (db(-19) * env(T_CHEVRES - 0.1, T_SORT + 0.2, 0.3, 0.6))[:, None]
 mix += stereo("cour_ecole.wav", 70.0) * (db(-31) * env(T_BETES + 0.6, T_SORT, 1.2, 0.8))[:, None]
 # P06 : on ressort (un souffle inversé) ; P07 : on plonge
-poser(wz[max(0, o_w - int(0.6 * SR)):o_w + int(0.5 * SR)][::-1], T_SORT - 0.1, db(-21))
+poser(wz[max(0, o_w - int(0.6 * SR)):o_w + int(0.5 * SR)], T_A + D_A * 0.55 - 0.6, db(-19))      # on entre dans l'écran
 poser(wz[max(0, o_w - int(0.6 * SR)):o_w + int(0.5 * SR)], T_PLONGE + D_PLONGE * 0.55 - 0.6, db(-18))
 # les données : un frémissement de petits tics quand les vies s'allument ; un souffle grave quand elles s'éteignent
 tic = lire("tic_doux.wav")
@@ -621,14 +660,14 @@ note *= np.minimum(1, tn / 1.5) * np.minimum(1, (tn[-1] - tn) / 0.6) * 0.045
 poser(np.stack([note, note * 0.97], 1), T_SEUL, 1.0)
 
 # un vrai silence d'une seconde avant les phrases-clés (réf. 03 : le silence devant la révélation)
-for t_cle in (32.25, 43.6):
+for t_cle in (38.4, 46.0):
     mix *= (1 - 0.85 * np.clip(1 - np.abs(ts - (t_cle - 0.5)) / 0.75, 0, 1) ** 0.7)[:, None]
 # les voix ; celles de la salle avec un peu de pièce (peu d'écho : retour de Bruno sur S07)
 rng = np.random.default_rng(7)
 tr = np.arange(int(0.35 * SR)) / SR
 piece = rng.normal(0, 1, len(tr)) * np.exp(-tr / 0.05)
 piece[0] = 0
-piece *= 0.08 / np.sqrt((piece ** 2).sum())
+piece *= 0.0      # Bruno (09/11) : plus de réverbération sur les voix de la salle
 voix = np.zeros(Ns)
 for fichier, phrases, salle_ in VOIX:
     a_ = lire_audio(fichier, mono=True).astype(np.float64)

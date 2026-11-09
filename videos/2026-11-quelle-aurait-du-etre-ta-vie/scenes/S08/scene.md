@@ -64,4 +64,8 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 - `montage.py` : l'écran (la carte rouge se replie en curseur et écrit la ligne), les traversées d'écran (homographie : les coins de l'écran vont jusqu'à la fenêtre, ou jusqu'au plein écran), la grille des 200 vies (vague d'allumage qui part de lui ; une vingtaine s'éteignent), la fin (la rouge et vous), le son.
 - Vraie image : `pexels/s08/14275268.mp4`. Sons : voir `references/sons.md`, section S08.
 
+## Écarts au storyboard
+
+- Retours de Bruno (09/11, soir) : l'annonce en plein écran, avec le pourquoi (frais d'école + dette) et une illustration ; « Même ça » supprimé ; « les bêtes » devient « les chèvres » (mal prononcé) ; la scène des probabilités refaite : Guillaume explique les 200 vies pas à pas (choisissent l'école / n'y vont pas quand même / il en fait partie), puis Sara conclut, en sous-titres pixel.
+
 ## Points à revoir

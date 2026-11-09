@@ -108,3 +108,5 @@ Vraie image : `pexels/s08/14275268.mp4` (Pexels, licence Pexels), un garçon et 
 | `sons/epidemic/applaudissements_salle.wav`, `applaudissements_grands.wav` | le théâtre | Epidemic Sound (`2040c856-…`, `731986bd-…`) | abonnement Epidemic Sound |
 | `sons/epidemic/toux_homme.wav` | 24 ans | Epidemic Sound (`3020c887-…`) | abonnement Epidemic Sound |
 | `sons/epidemic/barque_bois_vagues.wav` | la barque, la nuit | Epidemic Sound (`a7483cc6-…`) | abonnement Epidemic Sound |
+
+| `voix/S07d_prise1.mp3` | Guillaume : la raison de la dette (S07), le pourquoi, « les chèvres » et les 200 vies (S08) ; prise 1, dans la continuité | ElevenLabs eleven_v3, `hN6UZQYmfSk7q1y7iqUP` | abonnement ElevenLabs |

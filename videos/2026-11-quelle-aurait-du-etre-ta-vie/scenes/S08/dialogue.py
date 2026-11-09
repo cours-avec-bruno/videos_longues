@@ -64,12 +64,8 @@ for n in range(n1):
     qui = next((parle[m] for m in range(n, max(0, n - 6), -1) if parle[m]), None)
     im = {"lui": None, "elle": None, "parle": qui, "niveau": round(float(niveau[qui][n]) if qui else 0.0, 3)}
     if qui:
-        if t < T_RECUL:
+        if t < T_A:                       # seule Sara parle dans la salle (au début) ; ensuite elle est hors champ
             im[qui] = tete("s08_ecran", qui, t)
-        elif t < T_ENTRE:
-            im[qui] = tete("s08_recul", qui, t - T_RECUL)
-        elif T_SORT <= t < T_PLONGE:
-            im[qui] = tete("s08_sara", qui, t - T_SORT)
     images.append(im)
 json.dump({"fps": FPS, "debut": 0, "images": images}, open(os.path.join(SORTIE, "s08.json"), "w"))
 print("écrit :", len(images), "images")
