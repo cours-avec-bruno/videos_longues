@@ -8,7 +8,7 @@
   S07 -> S08 : coupe nette ; S07 finit au noir sur « Reste à savoir s'ils pourront payer », S08 rouvre sur l'écran de la salle.
 Les raccords vivent ici, pas dans les scènes : chaque scène reste montable seule.
 
-Usage : python assemblage.py   ->  medias/S01_a_S08_apercu.mp4
+Usage : python assemblage.py   ->  medias/S01_a_S09_apercu.mp4
 """
 import os
 import subprocess
@@ -29,10 +29,11 @@ SCENES = [  # (vidéo, son)
     (os.path.join(M, "S06", "S06a_v1.mp4"), os.path.join(M, "S06", "S06a_son.wav")),
     (os.path.join(M, "S07", "S07_v2.mp4"), os.path.join(M, "S07", "S07_son.wav")),
     (os.path.join(M, "S08", "S08_v1.mp4"), os.path.join(M, "S08", "S08_son.wav")),
+    (os.path.join(M, "S09", "S09_v1.mp4"), os.path.join(M, "S09", "S09_son.wav")),
 ]
 FONDU_12 = 0.25           # S01 -> S02
 FLASH_AV, FLASH_AP = 0.08, 0.16   # S02 -> S03 : montée du flash avant la coupe, extinction après
-SORTIE = os.path.join(M, "S01_a_S08_apercu.mp4")
+SORTIE = os.path.join(M, "S01_a_S09_apercu.mp4")
 
 
 def duree(f):
@@ -40,7 +41,7 @@ def duree(f):
                                 capture_output=True, text=True, check=True).stdout)
 
 
-d1, d2, d3, d4, d5, d6, d7 = (duree(v) for v, _ in SCENES)
+d1, d2, d3, d4, d5, d6, d7, d8 = (duree(v) for v, _ in SCENES)
 coupe_23 = d1 - FONDU_12 + d2
 coupe_45 = coupe_23 + d3
 
@@ -54,14 +55,15 @@ filtre = (
     f"[4:v]setpts=PTS-STARTPTS[e];"
     f"[5:v]setpts=PTS-STARTPTS[g];"
     f"[6:v]setpts=PTS-STARTPTS[h];"
-    f"[ab][c][d][e][g][h]concat=n=6:v=1:a=0[v]"
+    f"[7:v]setpts=PTS-STARTPTS[i];"
+    f"[ab][c][d][e][g][h][i]concat=n=7:v=1:a=0[v]"
 )
 image = os.path.join(M, "tmp_assemblage_image.mp4")
 subprocess.run(["ffmpeg", "-v", "error", "-y"] + sum([["-i", v] for v, _ in SCENES], []) +
                ["-filter_complex", filtre, "-map", "[v]", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p", image], check=True)
 
 # ---------------------------------------------------------------- son
-a1, a2, a3, a4, a5, a6, a7 = (lire_audio(s, mono=False).astype(np.float64) for _, s in SCENES)
+a1, a2, a3, a4, a5, a6, a7, a8 = (lire_audio(s, mono=False).astype(np.float64) for _, s in SCENES)
 n3 = int(round(d3 * SR))         # le son de S03-S04 calé exactement sur la durée de son image
 a3 = np.pad(a3, ((0, max(0, n3 - len(a3))), (0, 0)))[:n3]
 n4 = int(round(d4 * SR))         # idem pour S05
@@ -72,7 +74,9 @@ n_f = int(FONDU_12 * SR)
 g = np.linspace(0, 1, n_f)[:, None]
 n6 = int(round(d6 * SR))         # idem pour S07
 a6 = np.pad(a6, ((0, max(0, n6 - len(a6))), (0, 0)))[:n6]
-son = np.concatenate([a1[:-n_f], a1[-n_f:] * (1 - g) + a2[:n_f] * g, a2[n_f:], a3, a4, a5, a6, a7])
+n7 = int(round(d7 * SR))         # idem pour S08
+a7 = np.pad(a7, ((0, max(0, n7 - len(a7))), (0, 0)))[:n7]
+son = np.concatenate([a1[:-n_f], a1[-n_f:] * (1 - g) + a2[:n_f] * g, a2[n_f:], a3, a4, a5, a6, a7, a8])
 
 
 def db(x):
@@ -113,4 +117,4 @@ subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ar", str(SR), "-
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", image, "-i", wav, "-map", "0:v", "-map", "1:a", "-c:v", "copy",
                 "-c:a", "aac", "-b:a", "320k", "-shortest", "-movflags", "+faststart", SORTIE], check=True)
 os.remove(image); os.remove(wav)
-print("écrit :", SORTIE, round(d1 + d2 + d3 + d4 + d5 + d6 + d7 - FONDU_12, 2), "s ; flash à", round(coupe_23, 2), "s ; S05 à", round(coupe_45, 2), "s")
+print("écrit :", SORTIE, round(d1 + d2 + d3 + d4 + d5 + d6 + d7 + d8 - FONDU_12, 2), "s ; flash à", round(coupe_23, 2), "s ; S05 à", round(coupe_45, 2), "s")

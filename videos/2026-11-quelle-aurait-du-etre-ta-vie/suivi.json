@@ -1,7 +1,7 @@
 {
   "titre": "Quelle aurait dû être ta vie ?",
-  "en_cours": "S08",
-  "prochaine": "S09",
+  "en_cours": "S09",
+  "prochaine": "S10",
   "etapes": [
     {
       "nom": "Concept et sources",
@@ -48,7 +48,6 @@
     "Pas de texte ni de HUD qui fasse « IA » ; motion design sobre"
   ],
   "a_decider": [
-    "Garder ou couper le mensonge des 39 ans (S09)",
     "Variante ambitieuse dans l'aveu (S13), à la fin du travail",
     "Chiffres de l'Insee à vérifier (S15)",
     "S16 : « le chiffre du début » n'existe plus (question retirée de S02) ; à repenser",

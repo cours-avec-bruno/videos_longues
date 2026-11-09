@@ -302,3 +302,9 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Dialogue : une onde de quelques barres crème accrochée à la tête de celui qui parle, vivante avec sa voix (composition Remotion `Dialogue`, données `scenes/S07/dialogue.py`, `scenes/S08/dialogue.py`). Volontairement sans texte ni HUD, pour ne pas faire « IA ».
 - Perfectionnement d'après les références : silence d'une seconde avant les phrases-clés (réf. 03), cloche de l'école à l'entrée du portail, léger dédoublement du signal au plus fort des traversées d'écran (réf. 02, 04).
 - Crédits Higgsfield : environ 200 sur la journée (≈ 970 → ≈ 770).
+
+## 09/11/2026 · S09 (la vie adulte)
+- Montage volontairement nerveux (demande de Bruno) : l'âge claque au centre puis file dans le coin, coups de fouet sur les mots, cartes de choix avec curseur qui hésite et traversée de la carte choisie, grappes coupées au tempo, musique coupée net.
+- 13 lieux construits dans Blender, embellis par Higgsfield ; Seedance 2.0 pour 2 plans (720p, 22,5 crédits / 5 s ; 1080p coûte 60). Le théâtre est refusé par la modération de Seedance : image fixe animée.
+- Invention : le fil rouge de la dette, sous toute la suite. Mensonge de 39 ans gardé.
+- Aperçu S01 à S09 : 6 min 12.

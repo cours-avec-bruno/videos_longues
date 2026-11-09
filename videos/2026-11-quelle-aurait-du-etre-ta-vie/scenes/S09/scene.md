@@ -2,13 +2,13 @@
 
 | | |
 |---|---|
-| **Durée** | ≈ 1:26 |
-| **Fabrication** | Photos + Remotion |
+| **Durée** | ≈ 1:55 (V1) |
+| **Fabrication** | Blender → Higgsfield (13 lieux restylés) + Seedance 2.0 (2 plans) + montage Python (motion design, son) |
 | **Fonction** | RESSENTIR |
 | **Procédé principal** | M03 : de courtes grappes d'images sur les événements, entre les quatre « À VOUS » |
 | **Procédés secondaires** | T01, I13 |
 | **Statut** | à valider (recalée sur la vie de Manoj, 06/11/2026) |
-| **Production** | à faire |
+| **Production** | V1 montée le 09/11/2026 (`medias/S09/S09_v1.mp4`), à faire voir à Bruno |
 
 ## Intention
 
@@ -69,5 +69,14 @@ Images, liens, timecodes (déposer les fichiers dans `../../references/`).
 ## Fabrication
 
 Notes techniques : fichiers sources, prompts (`../../prompts/`), réglages, rendus.
+
+## Écarts au storyboard
+
+- Montage beaucoup plus nerveux, à la demande de Bruno (09/11) : l'âge claque au centre puis file dans le coin ; coups de fouet sur « la mer, les bêtes, la terre » ; le curseur rouge hésite entre les cartes, clic, on traverse la carte choisie ; grappes coupées sur le tempo ; la musique coupe net (toux, mensonge, 60 ans).
+- Plus de pourcentages ni de « À VOUS » : les choix sont des cartes, comme en S07.
+- Invention : un fil rouge apparaît sur « il s'endette » et reste sous toute la suite ; il palpite à 60 ans (« vous devez encore de l'argent »).
+- Les frères s'effacent de l'image (32, puis 49). Le souvenir d'Usha reprend la classe de S07, désaturée.
+- Mensonge de 39 ans gardé (Bruno, 09/11).
+- Théâtre : Seedance a refusé le plan deux fois (modération) ; image fixe montée en sauts sur les applaudissements.
 
 ## Points à revoir

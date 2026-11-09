@@ -99,3 +99,12 @@ La réverbération de S01 est synthétique (calculée dans `scenes/S01/son.py`) 
 
 Vraie image : `pexels/s08/14275268.mp4` (Pexels, licence Pexels), un garçon et ses chèvres sur un chemin de terre ; on garde le début, où il est loin.
 
+
+### S09
+| Fichier | Usage | Source | Licence |
+|---|---|---|---|
+| `voix/S09_prise1.mp3` | Guillaume, toute la scène (prise 1, dans la continuité de S08) | ElevenLabs eleven_v3, `pWOSJ0IqOJQKkr4tUvBw` | abonnement ElevenLabs |
+| `musique/suhana.wav` | la mer, le mariage et la grappe, le théâtre | Epidemic Sound, « Suhana », Aashray Harishankar (`4b9e201f-f862-4758-abaf-ccd5a15cc92e`) | abonnement Epidemic Sound |
+| `sons/epidemic/applaudissements_salle.wav`, `applaudissements_grands.wav` | le théâtre | Epidemic Sound (`2040c856-…`, `731986bd-…`) | abonnement Epidemic Sound |
+| `sons/epidemic/toux_homme.wav` | 24 ans | Epidemic Sound (`3020c887-…`) | abonnement Epidemic Sound |
+| `sons/epidemic/barque_bois_vagues.wav` | la barque, la nuit | Epidemic Sound (`a7483cc6-…`) | abonnement Epidemic Sound |
