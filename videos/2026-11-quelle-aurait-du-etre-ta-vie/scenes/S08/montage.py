@@ -352,6 +352,12 @@ def traverser(img, coins, cible, contenu, q, assombrir=True):
     out = salle_ * (1 - mk) + e * mk
     # un léger flou de mouvement radial pendant la traversée (vitesse max au milieu)
     v = math.sin(math.pi * q)
+    if v > 0.4:                          # au plus fort du passage, le signal se dédouble un instant (réf. 02, 04)
+        d_ = int(round(5 * (v - 0.4) / 0.6))
+        if d_:
+            out = out.copy()
+            out[..., 2] = np.roll(out[..., 2], d_, axis=1)
+            out[..., 0] = np.roll(out[..., 0], -d_, axis=1)
     if v > 0.15:
         z = 1 + 0.025 * v
         out = 0.5 * out + 0.5 * cv2.warpAffine(out, cv2.getRotationMatrix2D((float(quad[:, 0].mean()), float(quad[:, 1].mean())), 0, z),
@@ -360,11 +366,54 @@ def traverser(img, coins, cible, contenu, q, assombrir=True):
 
 
 # ---------------------------------------------------------------- les plans
+# ---------------------------------------------------------------- les plans embellis par Higgsfield (Bruno, 09/11/2026)
+import hf  # noqa: E402
+
+HF = os.path.join(M, "S08", "higgsfield")
+HF_SALLE = {  # plan : (vidéo Kling, durée à l'écran, image Blender qui a servi de départ, poussée finale)
+    "s08_ecran": ("salle_ecran.mp4", T_RECUL, "depart/s08_00.00.png", 1.12),
+    "s08_recul": ("salle_recul.mp4", T_ENTRE - T_RECUL, None, 1.0),
+    "s08_sara": ("salle_sara.mp4", T_PLONGE + D_PLONGE - T_SORT, "depart/sara.png", 1.0),
+}
+
+
+def salle2(plan, tl):
+    """Le plan de la salle au temps local tl : la vidéo Higgsfield si elle existe (écran reporté par homographie), sinon Blender."""
+    v = HF_SALLE.get(plan)
+    if not v or not os.path.exists(os.path.join(HF, v[0])):
+        return salle(plan, tl * FPS * (7.5 / T_RECUL if plan == "s08_ecran" else 1))
+    vid, dur, ref, zf = v
+    chemin = os.path.join(HF, vid)
+    img = hf.image(chemin, dur, tl)
+    co = None
+    if ref:
+        co0 = hf.report(os.path.join(HF, ref), chemin, salle(plan, 0)[2], os.path.join(HF, vid + ".coins.json"))
+        suivi = hf.suivre(chemin, dur, co0, os.path.join(HF, vid + ".suivi.json"))
+        co = suivi[max(0, min(int(tl * FPS), len(suivi) - 1))].copy()
+        if zf != 1:                      # la lente poussée vers l'écran, faite au montage (caméra fixe chez Kling)
+            z = 1 + (zf - 1) * doux(tl / dur)
+            Ma = cv2.getRotationMatrix2D((float(co[:, 0].mean()), float(co[:, 1].mean())), 0, z)
+            img = cv2.warpAffine(img, Ma, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+            co = (np.hstack([co, np.ones((4, 1), np.float32)]) @ Ma.T).astype(np.float32)
+    m = np.zeros((H, W), np.float32)
+    if co is not None:
+        cv2.fillConvexPoly(m, np.round(co * 4).astype(np.int32), 1.0, lineType=cv2.LINE_AA, shift=2)
+    else:
+        co = np.float32([[0, 0], [1, 0], [1, 1], [0, 1]])
+    return img, m, co
+
+
 def portail(t):
+    v = os.path.join(HF, "portail_kling.mp4")
+    if os.path.exists(v):
+        return hf.image(v, T_CHEVRES - T_ENTRE, t - T_ENTRE)
     return image_3d("portail", (t - T_ENTRE) * FPS)
 
 
 def betes(t):
+    v = os.path.join(HF, "betes_kling.mp4")
+    if os.path.exists(v):
+        return hf.image(v, 7.0, t - T_BETES)
     return image_3d("betes", (t - T_BETES) * FPS)
 
 
@@ -389,17 +438,32 @@ def contenu_sara(t):
     return b * (1 - q) + donnees(t) * q
 
 
+DIALOGUE = os.path.join(M, "S08", "dialogue")
+
+
+def onde_dialogue(f, n):
+    """L'onde de celui qui parle (Remotion, remotion/Dialogue.tsx ; données : dialogue.py)."""
+    c = os.path.join(DIALOGUE, f"element-{n:04d}.png")
+    if not os.path.exists(c):
+        return f
+    o = cv2.imread(c, cv2.IMREAD_UNCHANGED)
+    if o is None or o.shape[2] < 4 or not o[..., 3].any():
+        return f
+    al = o[..., 3:4].astype(np.float32) / 255
+    return f * (1 - al) + o[..., :3].astype(np.float32) * al
+
+
 def image(n):
     t = n / FPS
     if t < T_RECUL:                                                     # P01 : la ligne s'écrit sur l'écran
-        img, m, co = salle("s08_ecran", t * FPS * 7.5 / T_RECUL)     # la poussée, ralentie sur toute la durée
+        img, m, co = salle2("s08_ecran", t)
         f = dans_l_ecran(img, m, co, ecran_ligne(t))
     elif t < T_ENTRE:                                                   # P02 : il se recule (« … Même ça. »)
-        img, m, co = salle("s08_recul", (t - T_RECUL) * FPS)
+        img, m, co = salle2("s08_recul", t - T_RECUL)
         f = img
     elif t < T_ENTRE + D_ENTRE:                                         # P03a : on entre dans l'écran -> la fenêtre
         q = doux((t - T_ENTRE) / D_ENTRE)
-        img, m, co = salle("s08_ecran", 10_000)
+        img, m, co = salle2("s08_ecran", T_RECUL)
         c = ecran_ligne(T_RECUL) * (1 - lisse((t - T_ENTRE) / 0.35)) + portail(t) * lisse((t - T_ENTRE) / 0.35)
         f = traverser(img, co, RECT_FENETRE, c, q)
         f = f * (1 - lisse((q - 0.7) / 0.3)) + fenetre(ajouter_age(c, t)) * lisse((q - 0.7) / 0.3)
@@ -424,7 +488,7 @@ def image(n):
             c = chevres(t) * (1 - lisse(dt / (T_MORPH * 0.6))) + c * lisse(dt / (T_MORPH * 0.6))
         f = fenetre(c)
     elif t < T_PLONGE:                                                  # P06 : on ressort ; elle, de profil
-        img, m, co = salle("s08_sara", (t - T_SORT) * FPS)
+        img, m, co = salle2("s08_sara", t - T_SORT)
         c = contenu_sara(t)
         if t < T_SORT + D_SORT:
             q = doux((t - T_SORT) / D_SORT)
@@ -434,10 +498,11 @@ def image(n):
             f = dans_l_ecran(img, m, co, c)
     elif t < T_PLONGE + D_PLONGE:                                       # P07a : on plonge dans les données
         q = doux((t - T_PLONGE) / D_PLONGE)
-        img, m, co = salle("s08_sara", (t - T_SORT) * FPS)
+        img, m, co = salle2("s08_sara", t - T_SORT)
         f = traverser(img, co, PLEIN, donnees(t), q, assombrir=False)
     else:                                                               # P07-P08 : les données ; la rouge, et vous
         f = donnees(t)
+    f = onde_dialogue(f, n)
     f *= 1 - lisse((t - T_NOIR) / 0.12)
     f += np.random.default_rng(n).normal(0, 1.8, f.shape).astype(np.float32)
     return f
@@ -531,6 +596,8 @@ mix += cour * (db(-21) * cour_env)[:, None]
 pf = lire("portail_fer.wav")
 o_p = crete(pf)
 poser(pf[max(0, o_p - int(1.1 * SR)):o_p + int(1.2 * SR)], ferme - 1.1, db(-11))
+# la cloche de l'école sonne quand les enfants passent le portail (elle commence juste avant d'entrer dans l'écran)
+poser(lire("cloche_ecole.wav")[:int(3.2 * SR)] * fondu(int(3.2 * SR), 0.01, 1.4)[:, None], T_ENTRE - 0.25, db(-17))
 # P04-P05 : le vent dans l'herbe sèche, les chèvres et leurs cloches ; les enfants passent au loin
 mix += stereo("vent_herbe_seche.wav", 30.0) * (db(-20) * env(T_CHEVRES - 0.1, T_SORT + 0.4, 0.3, 0.6))[:, None]
 mix += stereo("chevres_cloches.wav", 12.0) * (db(-19) * env(T_CHEVRES - 0.1, T_SORT + 0.2, 0.3, 0.6))[:, None]
@@ -553,6 +620,9 @@ note = (np.sin(2 * np.pi * 110 * tn) + 0.45 * np.sin(2 * np.pi * 164.8 * tn) + 0
 note *= np.minimum(1, tn / 1.5) * np.minimum(1, (tn[-1] - tn) / 0.6) * 0.045
 poser(np.stack([note, note * 0.97], 1), T_SEUL, 1.0)
 
+# un vrai silence d'une seconde avant les phrases-clés (réf. 03 : le silence devant la révélation)
+for t_cle in (32.25, 43.6):
+    mix *= (1 - 0.85 * np.clip(1 - np.abs(ts - (t_cle - 0.5)) / 0.75, 0, 1) ** 0.7)[:, None]
 # les voix ; celles de la salle avec un peu de pièce (peu d'écho : retour de Bruno sur S07)
 rng = np.random.default_rng(7)
 tr = np.arange(int(0.35 * SR)) / SR

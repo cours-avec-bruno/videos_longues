@@ -372,10 +372,39 @@ def contenu_ecran(t):
     return f
 
 
+# ---------------------------------------------------------------- la salle embellie par Higgsfield (Bruno, 09/11/2026)
+sys.path.insert(0, os.path.join(ICI, "..", "S08"))
+import hf  # noqa: E402
+
+HF7 = os.path.join(M, "S07", "higgsfield")
+HF_S07 = {  # plan : (vidéo Kling, durée du plan, image Blender de départ, image Blender correspondante)
+    "revele": ("revele.mp4", 6.0, "depart/revele.png", 143),
+    "large": ("large.mp4", 10.0, "depart/large.png", 0),
+    "epaule": ("epaule.mp4", 8.0, "depart/epaule.png", 0),
+    "regard": ("regard.mp4", 6.0, "depart/regard.png", 0),
+}
+PLEIN_ = np.float32([[0, 0], [W, 0], [W, H], [0, H]])
+
+
 def plan_salle(plan, k, t):
-    img, m, coins = salle(plan, k)
+    v = HF_S07.get(plan)
     c = contenu_ecran(t)
-    Hm = cv2.getPerspectiveTransform(np.float32([[0, 0], [W, 0], [W, H], [0, H]]), coins)
+    if v and os.path.exists(os.path.join(HF7, v[0])):
+        vid, dur, ref, kb = v
+        chemin = os.path.join(HF7, vid)
+        tl = k / FPS
+        _, mb, cb = salle(plan, kb)
+        co0 = hf.report(os.path.join(HF7, ref), chemin, cb, os.path.join(HF7, vid + ".coins.json"))
+        suivi = hf.suivre(chemin, dur, co0, os.path.join(HF7, vid + ".suivi.json"))
+        img = hf.image(chemin, dur, tl)
+        co = suivi[max(0, min(int(tl * FPS), len(suivi) - 1))].copy()
+        if plan == "revele":            # on recule depuis l'écran : la poussée inverse, faite au montage
+            q = 1 - doux(tl / dur)
+            return hf_traverser(img, co, c, q)
+        m = cv2.warpPerspective(mb, cv2.getPerspectiveTransform(cb, co), (W, H))
+    else:
+        img, m, co = salle(plan, k)
+    Hm = cv2.getPerspectiveTransform(PLEIN_, co)
     e = cv2.warpPerspective(c, Hm, (W, H), flags=cv2.INTER_LINEAR)
     m = cv2.GaussianBlur(m, (0, 0), 0.8)[..., None]
     # l'écran émet : un peu plus lumineux qu'une image, et il bave légèrement dans la pénombre
@@ -383,6 +412,26 @@ def plan_salle(plan, k, t):
     out = img * (1 - m) + e * m
     out += 0.18 * cv2.GaussianBlur(e * m, (0, 0), 22)
     return out
+
+
+def hf_traverser(img, coins, contenu, q):
+    """L'écran grandit jusqu'à remplir le cadre (q = 1) : toute l'image de la salle suit la même homographie."""
+    quad = coins + (PLEIN_ - coins) * q
+    Hr = cv2.getPerspectiveTransform(coins, quad)
+    salle_ = cv2.warpPerspective(img, Hr, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
+    e = cv2.warpPerspective(contenu, cv2.getPerspectiveTransform(PLEIN_, quad), (W, H), flags=cv2.INTER_LINEAR)
+    e = e * 1.05 + 6
+    mk = np.zeros((H, W), np.float32)
+    cv2.fillConvexPoly(mk, np.round(quad * 4).astype(np.int32), 1.0, lineType=cv2.LINE_AA, shift=2)
+    mk = cv2.GaussianBlur(mk, (0, 0), 0.7)[..., None]
+    out = salle_ * (1 - mk) + e * mk
+    v = math.sin(math.pi * q)
+    if v > 0.4:                          # au plus fort du passage, le signal se dédouble un instant
+        d_ = int(round(5 * (v - 0.4) / 0.6))
+        if d_:
+            out[..., 2] = np.roll(out[..., 2], d_, axis=1)
+            out[..., 0] = np.roll(out[..., 0], -d_, axis=1)
+    return out + 0.18 * (1 - q) * cv2.GaussianBlur(e * mk, (0, 0), 22)
 
 
 # ---------------------------------------------------------------- les sous-titres provisoires (voix à venir)

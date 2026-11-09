@@ -11,6 +11,7 @@ import json
 import os
 import sys
 
+import cv2
 import numpy as np
 
 ICI = os.path.dirname(os.path.abspath(__file__))
@@ -52,6 +53,23 @@ def tetes(plan, k):
     if plan not in _tetes:
         _tetes[plan] = json.load(open(os.path.join(SALLE, plan, "tetes.json")))
     d = _tetes[plan]
+    v = HF_S07.get(plan)
+    if v and os.path.exists(os.path.join(HF7, v[0])) and plan != "revele":
+        # plan Higgsfield (caméra fixe) : les têtes de l'image Blender de départ, reportées dans la vidéo, puis suivies
+        vid, dur, ref, kb = v
+        chemin = os.path.join(HF7, vid)
+        t0 = d.get(str(kb + 1), {})
+        cb = salle(plan, kb)[2]
+        co0 = hf.report(os.path.join(HF7, ref), chemin, cb, os.path.join(HF7, vid + ".coins.json"))
+        suivi = hf.suivre(chemin, dur, co0, os.path.join(HF7, vid + ".suivi.json"))
+        cok = suivi[max(0, min(int(k), len(suivi) - 1))]
+        out = {}
+        for qui, p_ in t0.items():
+            if p_:
+                Hb = cv2.getPerspectiveTransform(cb, cok)
+                x, y = cv2.perspectiveTransform(np.float32([[p_[:2]]]), Hb)[0, 0]
+                out[qui] = [round(float(x), 1), round(float(y), 1), p_[2]]
+        return out
     return d.get(str(max(1, min(int(k) + 1, len(d)))), {})
 
 
