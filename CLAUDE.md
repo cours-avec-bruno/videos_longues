@@ -43,9 +43,9 @@ Ces étapes peuvent se préciser progressivement. Aide-moi à structurer les id�
 
 **Suivi visuel** : chaque vidéo a une **timeline de suivi** (`videos/<slug>/suivi/timeline.html`), générée par `shared/outils/timeline/generer.py` à partir du storyboard, des fiches, du script et de `videos/<slug>/suivi.json`, puis publiée en page web (Artifact) pour Bruno. Elle reste **sobre** : pour chaque scène, seulement ce qu'on voit (en gros) et ce que dit la voix. Les procédés, skills et détails techniques restent dans les fiches, pas sur la page. Après chaque étape (une scène commencée, retravaillée ou validée, un arbitrage), mets à jour la ligne **Production** de la fiche et `suivi.json` (scène en cours, prochaine, points à appliquer et à décider), régénère la page et republie-la au même lien.
 
-Chaque scène a sa **fiche scène** (`videos/<slug>/scenes/<id>/scene.md`, modèle dans `videos/_modele/`). Elle regroupe en un seul endroit l'intention, le script, le cadrage, le procédé, le mode de fabrication et le statut. C'est la référence quand on construit ou reprend une scène.
+Chaque scène a sa **fiche scène** (`videos/<slug>/scenes/<id>/scene.md`, modèle dans `videos/_modele/`). Elle regroupe en un seul endroit l'intention, le script, le cadrage, le procédé, le mode de fabrication et le statut. C'est le point de départ quand on construit ou reprend une scène, pas un cahier des charges à exécuter à la lettre (voir section 5, « Construire : un mélange »).
 
-**Procédés** : le studio dispose d'un catalogue de procédés validés par Bruno (`docs/direction-artistique/procedes/`). Au storyboard (skill `storyboard-procedes`), on fixe d'abord la **grammaire** de la vidéo. Ensuite, chaque scène reçoit une **fonction**, puis un **procédé principal mûrement choisi et justifié** : je propose les 2 ou 3 plus pertinents (couche 1 d'abord), et Bruno arbitre. Ils sont tous bons, mais leur usage doit rester **cohérent et raisonné** : une fonction par scène, 3 à 5 signatures par vidéo, une même forme garde le même sens, pas d'empilement. L'abondance ne doit jamais devenir une source de confusion.
+**Procédés** : le studio dispose d'un catalogue de procédés validés par Bruno (`docs/direction-artistique/procedes/`). Au storyboard (skill `storyboard-procedes`), on fixe d'abord la **grammaire** de la vidéo. Ensuite, chaque scène reçoit une **fonction**, puis un **procédé principal mûrement choisi et justifié** : je propose les 2 ou 3 plus pertinents (couche 1 d'abord), et Bruno arbitre. Ils sont tous bons, mais leur usage doit rester **cohérent et raisonné** : une fonction par scène, 3 à 5 signatures par vidéo, une même forme garde le même sens, pas d'empilement. L'abondance ne doit jamais devenir une source de confusion. Au storyboard, ce choix donne une direction ; à la construction, il peut évoluer.
 
 ## 5. Construction des scènes
 
@@ -60,6 +60,23 @@ Chaque scène peut avoir sa propre méthode de fabrication, indiquée dans sa fi
 Quand je te demande de construire une scène, prends en charge sa réalisation de manière autonome dans le cadre défini.
 
 Choisis les techniques en fonction du résultat visuel recherché, et non par habitude. Tu peux proposer une autre méthode ou une combinaison d'outils si elle apporte une vraie valeur. Ne change toutefois pas silencieusement une approche explicitement demandée.
+
+### Construire : un mélange, pas une exécution du storyboard
+
+Décision de Bruno (09/11/2026). Le storyboard et les fiches donnent la **direction** : ce que la scène doit faire ressentir ou comprendre, et ce que dit la voix. **Ils ne se suivent pas à la lettre.** À la construction, la vidéo doit être un **habile mélange** de quatre ingrédients :
+
+- **Motion design** (Remotion) : typographie, graphiques, interface, compositing.
+- **3D Blender** : lieux, objets, mannequins, mouvements de caméra, animés par Higgsfield quand il le faut.
+- **Les références** : avant de construire une scène, relis les références et extractions utiles (`docs/direction-artistique/`) et le catalogue de procédés, puis emprunte franchement une façon de faire (cadrage, transition, rythme, traitement de l'image ou du son).
+- **L'improvisation** : une idée née en construisant, que le storyboard n'avait pas prévue. Essaie-la. Si elle sert mieux la scène, garde-la.
+
+**Ce qui reste fixe** : l'intention de la scène et sa place dans le récit, la voix off validée, les règles de la chaîne (anti-« look IA », points « à appliquer » de `suivi.json`) et la grammaire de la vidéo (une même forme garde le même sens).
+
+**Ce qui est libre** : le découpage et l'ordre des plans, le procédé, l'outil, les transitions, les ajouts, la durée à quelques secondes près.
+
+Le mélange se juge à l'échelle de la vidéo, et souvent à l'intérieur d'une même scène : évite les longues séries de scènes faites dans un seul régime (tout en 3D, tout en motion design, tout en images d'archive). Mélanger ne veut pas dire empiler : chaque ingrédient doit servir l'idée de la scène, et les règles d'usage des procédés restent valables.
+
+**Trace** : dans la fiche, la section « Écarts au storyboard » dit en une ou deux lignes ce qui a changé et pourquoi. Mets à jour le storyboard si l'écart touche d'autres scènes. Si un écart change sensiblement l'intention, le contenu ou la durée, montre-le à Bruno avant de le figer (section 3).
 
 ### Outils génératifs : crédits et cohérence
 

@@ -208,6 +208,13 @@ Trace courte des décisions qui concernent tout le projet. Les décisions propre
 - Le résultat reste fidèle au rendu Blender, sans déformation visible. Converti en 24 i/s. La caméra n'avance presque pas pendant la première seconde et demie.
 - Note technique : l'envoi d'images vers Higgsfield est refusé (erreur Cloudflare 1010) si le client HTTP s'annonce comme Python ; il passe avec un en-tête de client standard.
 
+## 2026-11-09 · Le storyboard ne se suit plus à la lettre
+
+- Décision de Bruno : à la construction, on ne suit pas le storyboard à la lettre. La vidéo doit être un **habile mélange** de motion design, de 3D Blender, d'emprunts aux références et d'improvisation.
+- Fixe : l'intention de chaque scène, la voix off validée, les règles de la chaîne et la grammaire. Libre : plans, ordre, procédé, outil, transitions, ajouts.
+- Chaque écart est noté dans une nouvelle section « Écarts au storyboard » de la fiche scène. Un écart qui change sensiblement l'intention, le contenu ou la durée est montré à Bruno avant d'être figé.
+- Mis à jour : `CLAUDE.md` (sections 4 et 5), le modèle de fiche scène et la skill `storyboard-procedes`.
+
 ## Questions ouvertes
 
 - [ ] Sauvegarde des médias lourds du PC (rushes, générations, rendus) : disque externe, Google Drive, NAS ?
