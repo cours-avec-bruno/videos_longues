@@ -68,7 +68,7 @@ T_EPAULE = 57.60
 T_REGARD = 63.60
 T_CLIC_P = 69.00         # retour par-dessus l'épaule : le clic
 T_NOIR = 73.60
-DUREE = 77.60
+DUREE = 73.60            # Bruno (09/11) : plus d'écran noir ; S08 reprend sur l'écran, avec « Bon choix… »
 T_CHOIX = T_EPAULE + 1.0             # le choix s'affiche sur l'écran central
 T_DECOMPTE = (65.8, 68.8)            # trois secondes : le spectateur choisit
 T_CLIC = 70.60
@@ -119,8 +119,6 @@ PHRASES_ELLE = [
     ((5.82, 6.78), 60.0),     # Il continue l'école…
     ((7.72, 9.50), 61.2),     # … ou il va travailler pour les aider ?
     ((10.40, 10.98), 64.4),   # À toi de voir.
-    ((11.68, 12.12), 73.9),   # Bon choix.
-    ((13.14, 15.20), 74.6),   # Reste à savoir s'ils pourront payer.
 ]
 VOIX_A_VENIR = []         # toutes les phrases ont leur voix
 
@@ -142,8 +140,7 @@ PLANS = [
     (T_LARGE, T_EPAULE, "salle", ("large", 0.0), 1, "coupe"),
     (T_EPAULE, T_REGARD, "salle", ("epaule", 0.0), 1, "coupe"),
     (T_REGARD, T_CLIC_P, "salle", ("regard", 0.0), 1, "coupe"),
-    (T_CLIC_P, T_NOIR, "salle", ("epaule", 3.0), 1, "coupe"),
-    (T_NOIR, DUREE, "noir", None, 1, "coupe"),
+    (T_CLIC_P, DUREE, "salle", ("epaule", 3.0), 1, "coupe"),
 ]
 N = int(round(DUREE * FPS))
 T_MORPH = 0.42
@@ -412,6 +409,29 @@ def sous_titres(f, t):
     return f
 
 
+# ---------------------------------------------------------------- l'onde du dialogue (Remotion : remotion/Dialogue.tsx, dialogue.py)
+DIALOGUE = os.path.join(M, "S07", "dialogue")
+_dial = json.load(open(os.path.join(RACINE, "public", "dialogue", "s07.json"))) if os.path.exists(
+    os.path.join(RACINE, "public", "dialogue", "s07.json")) else None
+
+
+def onde_dialogue(f, n):
+    if not _dial or not os.path.isdir(DIALOGUE):
+        return f
+    k = n - _dial["debut"]
+    if not 0 <= k < len(_dial["images"]):
+        return f
+    fs = sorted(x for x in os.listdir(DIALOGUE) if x.endswith(".png")) if not hasattr(onde_dialogue, "fs") else onde_dialogue.fs
+    onde_dialogue.fs = fs
+    if k >= len(fs):
+        return f
+    o = cv2.imread(os.path.join(DIALOGUE, fs[k]), cv2.IMREAD_UNCHANGED)
+    if o is None or o.shape[2] < 4:
+        return f
+    al = o[..., 3:4].astype(np.float32) / 255
+    return f * (1 - al) + o[..., :3].astype(np.float32) * al
+
+
 # ---------------------------------------------------------------- le contenu d'un plan au temps t
 def contenu(i, t):
     t0, t1, genre, src, plein, entree = PLANS[i]
@@ -467,7 +487,8 @@ def image(n):
         ouv = doux((t - t0) / 0.45)
     f = fenetre(c, ouv, pl)
     f = sous_titres(f, t)
-    f *= lisse(t / 0.12) * (1 - lisse((t - (DUREE - 1.0)) / 0.9))
+    f = onde_dialogue(f, n)
+    f *= lisse(t / 0.12)
     f += np.random.default_rng(n).normal(0, 1.8, f.shape).astype(np.float32)
     return f
 
@@ -612,7 +633,7 @@ for fichier, phrases, salle_ in ((VOIX, PHRASES, False), (VOIX_REVE, PHRASES_REV
 env_voix = np.convolve(np.abs(voix) > 1e-3, np.ones(int(0.3 * SR)) / int(0.3 * SR), mode="same")
 mix *= (1 - 0.4 * np.clip(env_voix * 3, 0, 1))[:, None]
 mix += voix[:, None] * db(-3.5)
-mix *= fondu(Ns, 0.03, 1.0)[:, None]
+mix *= fondu(Ns, 0.03, 0.08)[:, None]
 
 GAIN = float(open(os.path.join(M, "S01", "gain_mix.txt")).read())
 wav = os.path.join(OUT, "S07_son.wav")

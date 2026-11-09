@@ -64,29 +64,30 @@ def expo_inout(p):
 
 
 # ---------------------------------------------------------------- le déroulé
-T_RECUL = 7.5            # plan de côté : il se recule
-T_ENTRE = 12.0           # on entre dans l'écran (0,9 s) -> la fenêtre : le portail
+T_RECUL = 10.3            # plan de côté : il se recule
+T_ENTRE = 14.8           # on entre dans l'écran (0,9 s) -> la fenêtre : le portail
 D_ENTRE = 0.9
-T_CHEVRES = 17.8         # plein écran : le garçon et ses chèvres
-T_BETES = 21.8           # la fenêtre : 14 ans
-T_SORT = 28.4            # on ressort de la fenêtre -> la salle, elle de profil
+T_CHEVRES = 20.6         # plein écran : le garçon et ses chèvres
+T_BETES = 24.6           # la fenêtre : 14 ans
+T_SORT = 31.2            # on ressort de la fenêtre -> la salle, elle de profil
 D_SORT = 0.9
-T_PLONGE = 32.0          # on entre dans l'écran, en plein écran : les données
+T_PLONGE = 34.8          # on entre dans l'écran, en plein écran : les données
 D_PLONGE = 0.8
-T_SEUL = 37.6            # les autres vies s'effacent ; la rouge reste ; vous apparaissez
-T_NOIR = 45.6
-DUREE = 46.4
+T_SEUL = 40.4            # les autres vies s'effacent ; la rouge reste ; vous apparaissez
+T_NOIR = 48.4
+DUREE = 49.2
 T_MORPH = 0.42
 
 # les voix : (fichier, [((début, fin) dans la prise, position)], dans la salle ?)
 V = os.path.join(M, "voix")
 VOIX = [
-    (os.path.join(V, "S08_lui_prise1.mp3"), [((4.57, 5.44), 9.95)], True),                        # … Même ça.
-    (os.path.join(V, "S08_prise1.mp3"), [((5.32, 6.83), 18.35),                                  # Il passe ses journées avec les bêtes.
-                                         ((8.15, 11.09), 23.0),                                  # À quatorze ans, il envie ses amis qui vont à l'école.
-                                         ((12.22, 15.44), 40.8)], False),                        # Et vous, à onze ans… qui payait…
-    (os.path.join(V, "S08_elle_prise1.mp3"), [((3.99, 6.24), 29.45),                             # Les choix changent les probabilités.
-                                              ((7.08, 9.62), 34.2)], True),                      # Ils ne décident jamais du résultat.
+    (os.path.join(V, "S07_elle_prise2.mp3"), [((11.68, 12.12), 0.3), ((13.14, 15.20), 0.95)], True),  # Bon choix. Reste à savoir…
+    (os.path.join(V, "S08_lui_prise1.mp3"), [((4.57, 5.44), 12.75)], True),                       # … Même ça.                        # … Même ça.
+    (os.path.join(V, "S08_prise1.mp3"), [((5.32, 6.83), 21.15),                                  # Il passe ses journées avec les bêtes.
+                                         ((8.15, 11.09), 25.8),                                  # À quatorze ans, il envie ses amis qui vont à l'école.
+                                         ((12.22, 15.44), 43.6)], False),                        # Et vous, à onze ans… qui payait…
+    (os.path.join(V, "S08_elle_prise1.mp3"), [((3.99, 6.24), 32.25),                             # Les choix changent les probabilités.
+                                              ((7.08, 9.62), 37.0)], True),                      # Ils ne décident jamais du résultat.
 ]
 N = int(round(DUREE * FPS))
 
@@ -134,19 +135,21 @@ F_UI_T = ImageFont.truetype(FONTS + "georgia.ttf", 64)
 F_UI_E = ImageFont.truetype(FONTS + "bahnschrift.ttf", 30)
 F_LIGNE = ImageFont.truetype(FONTS + "georgiai.ttf", 66)
 LIGNES = ["Votre famille n'a pas pu payer", "les frais de scolarité ; vous avez dû", "renoncer à poursuivre vos études."]
-T_TAPE = (1.45, 5.0)
+O_ECRAN = 2.8            # Sara parle d'abord (« Bon choix… ») ; la carte se replie ensuite
+T_TAPE = (1.45 + O_ECRAN, 5.0 + O_ECRAN)
 CARTE = (160, 330, 940, 690)                       # la carte « Continuer l'école », comme à la fin de S07
 NB_CAR = sum(len(l) for l in LIGNES)
 
 
 def ecran_ligne(t):
-    """t : temps local du plan (0 = début de S08)."""
+    """t : temps de la scène ; la carte reste telle qu'à la fin de S07 pendant la réplique de Sara."""
+    tl = t - O_ECRAN
     im = Image.new("RGB", (W, H), (12, 14, 18))
     d = ImageDraw.Draw(im)
     d.text((140, 110), "MANOJ  ·  10 ANS  ·  PREMIER CHOIX", font=F_UI_E, fill=(130, 140, 150))
     d.line([(140, 165), (W - 140, 165)], fill=(60, 66, 74), width=2)
     # la carte non choisie (déjà éteinte à la fin de S07) se fond dans le fond de l'écran
-    a_autre = 1 - lisse(t / 0.55)
+    a_autre = 1 - lisse(tl / 0.55)
     if a_autre > 0:
         fond = (12, 14, 18)
         k = 0.45
@@ -157,7 +160,7 @@ def ecran_ligne(t):
             d.text((1370 - d.textlength(l_, font=F_UI_T) / 2, 440 + j * 80), l_, font=F_UI_T,
                    fill=_melange(fond, tuple(int(v * k) for v in CREME), a_autre))
     # la carte choisie se replie en un curseur rouge, à l'endroit où la ligne va s'écrire
-    q = expo_inout((t - 0.45) / 0.85)
+    q = expo_inout((tl - 0.45) / 0.85)
     x_tape, y_tape = 160, 400
     cur = (x_tape, y_tape + 6, x_tape + 6, y_tape + 72)
     r = [CARTE[i] + (cur[i] - CARTE[i]) * q for i in range(4)]
@@ -201,9 +204,9 @@ _rng.shuffle(_cases)
 JAMAIS = set(_cases[:19])                 # ne rencontrent jamais ce choix (mortes jeunes, ou pas d'école du tout)
 TRAVAIL = set(_cases[19:24])              # choisissent de travailler
 ECHEC = set(_cases[24:43]) | {MANOJ}      # choisissent l'école… et n'y vont pas (une vingtaine, dont lui)
-T_GRILLE = 30.6           # elles apparaissent sur l'écran de la salle
-T_ALLUME = 32.9           # celles qui choisissent l'école s'allument (une vague qui part de lui)
-T_ETEINT = 35.35          # « … jamais du résultat » : une vingtaine s'éteignent, lui aussi
+T_GRILLE = 33.4           # elles apparaissent sur l'écran de la salle
+T_ALLUME = 35.7           # celles qui choisissent l'école s'allument (une vague qui part de lui)
+T_ETEINT = 38.15          # « … jamais du résultat » : une vingtaine s'éteignent, lui aussi
 
 
 def silhouette(d, x, y, col, s=1.0):
@@ -389,7 +392,7 @@ def contenu_sara(t):
 def image(n):
     t = n / FPS
     if t < T_RECUL:                                                     # P01 : la ligne s'écrit sur l'écran
-        img, m, co = salle("s08_ecran", t * FPS)
+        img, m, co = salle("s08_ecran", t * FPS * 7.5 / T_RECUL)     # la poussée, ralentie sur toute la durée
         f = dans_l_ecran(img, m, co, ecran_ligne(t))
     elif t < T_ENTRE:                                                   # P02 : il se recule (« … Même ça. »)
         img, m, co = salle("s08_recul", (t - T_RECUL) * FPS)
@@ -435,7 +438,7 @@ def image(n):
         f = traverser(img, co, PLEIN, donnees(t), q, assombrir=False)
     else:                                                               # P07-P08 : les données ; la rouge, et vous
         f = donnees(t)
-    f *= lisse(t / 0.15) * (1 - lisse((t - T_NOIR) / 0.12))
+    f *= 1 - lisse((t - T_NOIR) / 0.12)
     f += np.random.default_rng(n).normal(0, 1.8, f.shape).astype(np.float32)
     return f
 
@@ -573,7 +576,7 @@ for fichier, phrases, salle_ in VOIX:
 env_voix = np.convolve(np.abs(voix) > 1e-3, np.ones(int(0.3 * SR)) / int(0.3 * SR), mode="same")
 mix *= (1 - 0.4 * np.clip(env_voix * 3, 0, 1))[:, None]
 mix += voix[:, None] * db(-3.5)
-mix *= fondu(Ns, 0.05, 0.6)[:, None]
+mix *= fondu(Ns, 0.02, 0.6)[:, None]
 
 GAIN = float(open(os.path.join(M, "S01", "gain_mix.txt")).read())
 wav = os.path.join(OUT, "S08_son.wav")

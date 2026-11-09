@@ -132,55 +132,106 @@ def chevre(nom, pos, angle, ech=1.0, broute=True):
     return piv
 
 
-# ---------------------------------------------------------------- 11 ans : le portail de l'école
+# ---------------------------------------------------------------- les matières (DA de Bruno, 09/11/2026 : laque, reflets)
+def laque(nom, couleur, rugosite=0.1, vernis=0.03):
+    """Une matière laquée : couleur franche, vernis brillant par-dessus (les reflets nets des références)."""
+    m = P.materiau(nom, couleur, rugosite, 0.6)
+    b = m.node_tree.nodes.get("Principled BSDF")
+    for k, v in (("Coat Weight", 1.0), ("Coat Roughness", vernis), ("Specular IOR Level", 0.6)):
+        if k in b.inputs:
+            b.inputs[k].default_value = v
+    return m
+
+
+ROUGE_LAQUE = laque("manoj_laque", (0.62, 0.05, 0.025), 0.16)
+UNIFORME = laque("uniforme", (0.42, 0.58, 0.78), 0.35, 0.12)          # les écoliers : chemise bleu clair
+ADULTE = laque("adulte_satin", (0.55, 0.52, 0.49), 0.38, 0.2)
+
+
+def texte(nom, corps, pos, taille, mat, rot=(90, 0, 0), police="C:/Windows/Fonts/georgiab.ttf"):
+    bpy.ops.object.text_add(location=pos, rotation=tuple(rad(v) for v in rot))
+    t = bpy.context.object
+    t.name = nom
+    t.data.body = corps
+    t.data.font = bpy.data.fonts.load(police)
+    t.data.size = taille
+    t.data.extrude = 0.008
+    t.data.align_x = "CENTER"
+    t.data.align_y = "CENTER"
+    t.data.materials.append(mat)
+    return t
+
+
+# ---------------------------------------------------------------- 11 ans : l'école (Bruno : « on ne comprend pas la scène avec les barreaux »)
+# Une école de village qui se lit tout de suite : un bâtiment peint, une arche avec l'enseigne « ÉCOLE », un drapeau,
+# une cloche, des enfants en uniforme et cartable ; un petit portail bas en lattes vertes (pas une grille).
+# Manoj, sans cartable, est dehors avec son père ; les autres entrent ; le petit portail se referme.
 x = 0 * ESP
-P.estrade("portail", (x, 0), 2.8, M["terre_seche"])
-# le mur d'enceinte, percé d'une ouverture ; derrière, la cour éclairée et le bâtiment de l'école
-for s in (-1, 1):
-    P.boite(f"mur_portail_{s}", (2.0, 0.22, 1.25), (x + s * 1.55, 0.9, H + 0.625), M["chaux"], biseau=0.02)
-    P.boite(f"pilier_{s}", (0.24, 0.3, 1.5), (x + s * 0.62, 0.9, H + 0.75), M["chaux"], biseau=0.02)
-    P.boite(f"chapeau_{s}", (0.3, 0.36, 0.06), (x + s * 0.62, 0.9, H + 1.53), M["chaux"], biseau=0.01)
-P.boite("ecole_batiment", (3.6, 1.0, 1.6), (x, 2.7, H + 0.8), M["chaux"], biseau=0.02)
-P.boite("ecole_toit", (3.8, 1.2, 0.08), (x, 2.7, H + 1.64), M["fonte"])
-for k in range(4):
-    P.boite(f"ecole_fenetre_{k}", (0.36, 0.04, 0.5), (x - 1.2 + 0.8 * k, 2.19, H + 0.95),
-            P.emission(f"fen_{k}", (1.0, 0.78, 0.5), 3.5)[0])
-P.boite("ecole_enseigne", (1.4, 0.04, 0.28), (x, 2.18, H + 1.42), P.materiau("enseigne_s08", (0.08, 0.16, 0.30), 0.6, 0.3))
-# le portail : deux battants de barreaux, chacun pivote autour de son gond
+P.estrade("portail", (x, 0), 3.0, M["terre_seche"])
+OCRE = P.materiau("mur_ocre", (0.72, 0.5, 0.26), 0.7, 0.3)
+BLEU_PEINT = laque("bleu_peint", (0.06, 0.18, 0.42), 0.4, 0.2)
+CREME_MUR = P.materiau("mur_creme", (0.82, 0.76, 0.62), 0.65, 0.3)
+VERT_PORTAIL = laque("vert_portail", (0.08, 0.32, 0.18), 0.3, 0.1)
+JAUNE = P.emission("lettres_jaunes", (1.0, 0.82, 0.25), 2.2)[0]
+# le mur d'enceinte (bas, peint), avec un bandeau bleu
+for s_ in (-1, 1):
+    P.boite(f"mur_{s_}", (2.2, 0.2, 0.95), (x + s_ * 1.85, 0.9, H + 0.475), OCRE, biseau=0.02)
+    P.boite(f"bandeau_{s_}", (2.2, 0.21, 0.12), (x + s_ * 1.85, 0.9, H + 0.84), BLEU_PEINT)
+    P.boite(f"pilier_{s_}", (0.26, 0.3, 1.95), (x + s_ * 0.75, 0.9, H + 0.975), OCRE, biseau=0.02)
+# l'arche : une plaque bleue, l'enseigne « ÉCOLE » en lettres jaunes
+P.boite("arche", (1.8, 0.28, 0.42), (x, 0.9, H + 2.05), BLEU_PEINT, biseau=0.02)
+texte("enseigne", "ÉCOLE", (x, 0.75, H + 2.05), 0.3, JAUNE)
+# derrière : le bâtiment (crème, portes bleues, fenêtres chaudes), le drapeau, la cloche
+P.boite("batiment", (4.2, 1.1, 1.7), (x, 2.9, H + 0.85), CREME_MUR, biseau=0.02)
+P.boite("batiment_toit", (4.4, 1.3, 0.1), (x, 2.9, H + 1.75), BLEU_PEINT)
+for k in range(5):
+    P.boite(f"porte_{k}", (0.42, 0.04, 0.95), (x - 1.6 + 0.8 * k, 2.34, H + 0.48), BLEU_PEINT)
+    P.boite(f"fenetre_{k}", (0.3, 0.04, 0.3), (x - 1.6 + 0.8 * k, 2.34, H + 1.25), P.emission(f"fen_{k}", (1.0, 0.8, 0.5), 2.5)[0])
+P.cylindre("mat_drapeau", 0.02, 2.8, (x + 1.3, 1.8, H + 1.4), M["inox"], sommets=12)
+for k, c in enumerate(((1.0, 0.45, 0.1), (0.95, 0.95, 0.92), (0.1, 0.45, 0.15))):
+    P.boite(f"drapeau_{k}", (0.6, 0.012, 0.13), (x + 1.62, 1.8, H + 2.6 - 0.13 * k), P.materiau(f"drap_{k}", c, 0.6, 0.2))
+P.cylindre("cloche_support", 0.015, 0.5, (x - 1.4, 1.9, H + 1.05), M["bois"], sommets=8)
+P.cylindre("cloche", 0.07, 0.1, (x - 1.4, 1.9, H + 1.25), M["laiton"], sommets=20)
+# le petit portail : deux battants de lattes vertes, bas (0,9 m), qui pivotent sur leurs gonds
 BATTANTS = []
-for s in (-1, 1):
-    gond = bpy.data.objects.new(f"gond_{s}", None)
+for s_ in (-1, 1):
+    gond = bpy.data.objects.new(f"gond_{s_}", None)
     sc.collection.objects.link(gond)
-    gond.location = (x + s * 0.5, 0.9, H)
-    for k in range(6):
-        b = P.cylindre(f"barreau_{s}_{k}", 0.012, 1.2, (-s * (0.06 + 0.075 * k), 0, 0.62), M["fonte"], sommets=8)
-        b.parent = gond
-    for zz in (0.12, 0.62, 1.12):
-        t = P.boite(f"traverse_{s}_{zz}", (0.46, 0.025, 0.025), (-s * 0.25, 0, zz), M["fonte"])
-        t.parent = gond
-    BATTANTS.append((gond, s))
-FERME = 3.3          # le portail se referme entre 3,3 s et 4,5 s
+    gond.location = (x + s_ * 0.62, 0.9, H)
+    for k in range(5):
+        b_ = P.boite(f"latte_{s_}_{k}", (0.08, 0.03, 0.82), (-s_ * (0.07 + 0.115 * k), 0, 0.46), VERT_PORTAIL, biseau=0.01)
+        b_.parent = gond
+    for zz in (0.2, 0.75):
+        t_ = P.boite(f"traverse_{s_}_{zz}", (0.6, 0.035, 0.06), (-s_ * 0.31, -0.02, zz), VERT_PORTAIL)
+        t_.parent = gond
+    BATTANTS.append((gond, s_))
+FERME = 3.4          # le petit portail se referme entre 3,4 s et 4,5 s
 
 
 def anim_portail(f):
     t = (f - 1) / FPS
-    q = ease((t - FERME) / 1.2)
-    for g, s in BATTANTS:
-        g.rotation_euler.z = rad(s * -88 * (1 - q))           # ouvert vers la cour, puis fermé
+    q = ease((t - FERME) / 1.1)
+    for g, s_ in BATTANTS:
+        g.rotation_euler.z = rad(s_ * -85 * (1 - q))
         g.keyframe_insert("rotation_euler", frame=f)
 
 
 PAR_PLAN["portail"].append(anim_portail)
-# les enfants qui entrent (de dos, vers la cour)
-for k, (dx, y0, t0) in enumerate(((-0.1, -0.9, 0.0), (0.3, -1.3, 0.25), (0.05, -1.8, 0.5), (0.4, -2.2, 0.75), (-0.05, -2.6, 0.95))):
-    marcheur("portail", f"eleve_p{k}", 0.6 + 0.03 * (k % 2), M["argile"], (x + dx, y0, H), (x - 0.9 + 0.45 * k, 1.75 + 0.12 * (k % 2), H), t0, t0 + 2.3, 180)
-# lui : à l'écart, de trois quarts dos, face au portail
-P.perso("manoj_portail", DEHORS, 0.66, True, M["rouge"], (x - 1.3, -1.0, H), 160)
-# la lumière : chaude dans la cour (de l'autre côté), froide et basse sur lui
-P.projecteur("cour_soleil", (x + 1.5, 4.5, 4.0), (x, 1.4, 0.2), 3400, (1.0, 0.68, 0.36), 46, flou=0.4)
-P.projecteur("cour_face", (x - 0.5, 0.2, 3.6), (x, 2.4, 0.8), 600, (1.0, 0.82, 0.6), 40)
-P.projecteur("froid_manoj", (x - 3.0, -3.0, 2.6), (x - 1.3, -1.0, 0.5), 160, (0.55, 0.68, 1.0), 26, flou=0.6)
-P.projecteur("contre_portail", (x + 2.6, -2.0, 2.4), (x, 0.9, 0.8), 140, (0.6, 0.72, 1.0), 40)
+# les écoliers, en uniforme, cartable au dos, qui entrent
+for k, (dx, y0, t0) in enumerate(((0.05, -0.7, 0.0), (0.35, -1.1, 0.25), (0.15, -1.6, 0.5), (0.45, -2.0, 0.75), (0.2, -2.4, 0.95))):
+    marcheur("portail", f"eleve_p{k}", 0.6 + 0.03 * (k % 2), UNIFORME, (x + dx, y0, H),
+             (x - 0.9 + 0.45 * k, 1.85 + 0.12 * (k % 2), H), t0, t0 + 2.3, 180)
+# lui, sans cartable, dehors, à côté de son père (qui baisse la tête)
+P.perso("manoj_portail", DEHORS, 0.66, True, ROUGE_LAQUE, (x - 1.55, -0.7, H), 160)
+PERE = pose(BRAS_BAS, cou=(26, 0, 0), taille=(6, 0, 0))
+P.perso("pere_portail", PERE, 1.0, False, ADULTE, (x - 2.05, -0.55, H), 150)
+# la lumière : un soleil chaud du matin sur l'école ; eux, devant, dans l'ombre froide du mur
+P.projecteur("cour_soleil", (x + 2.5, 5.0, 4.5), (x, 1.6, 0.3), 3800, (1.0, 0.72, 0.42), 50, flou=0.35)
+P.projecteur("facade", (x - 1.0, 0.0, 4.2), (x, 2.4, 1.0), 900, (1.0, 0.85, 0.65), 44)
+P.projecteur("chemin_ecole", (x + 0.8, -3.5, 3.6), (x + 0.2, -0.6, 0.4), 1400, (1.0, 0.86, 0.66), 34, flou=0.45)
+P.projecteur("arche_lum", (x + 0.3, -1.5, 3.4), (x, 0.9, 2.05), 300, (1.0, 0.88, 0.7), 18, flou=0.5)
+P.projecteur("froid_eux", (x - 3.2, -3.2, 2.4), (x - 1.8, -0.7, 0.6), 240, (0.45, 0.7, 1.0), 26, flou=0.6)
+P.projecteur("contre_cyan", (x - 2.6, 1.6, 2.2), (x - 1.8, -0.6, 0.8), 380, (0.35, 0.85, 1.0), 30, flou=0.3)
 
 # ---------------------------------------------------------------- 14 ans : les bêtes, et ceux qui vont à l'école
 x = 1 * ESP
@@ -189,8 +240,8 @@ P.boite("chemin", (6.0, 0.7, 0.01), (x, 1.15, H + 0.005), M["terre"])
 for k in range(9):                                  # quelques touffes d'herbe sèche et pierres, pour la lumière rasante
     P.sphere(f"pierre_{k}", 0.04 + 0.02 * (k % 3), (x - 2.2 + 0.55 * k, -1.2 + 0.4 * ((k * 7) % 5) / 4, H + 0.02), M["glaise"],
              echelle=(1.3, 1, 0.6), sub=1)
-manoj_b = P.perso("manoj_betes", GARDE, 0.7, True, M["rouge"], (x - 0.35, -0.35, H), 15)
-manoj_c = P.perso("manoj_betes_regarde", REGARDE, 0.7, True, M["rouge"], (x - 0.35, -0.35, H), 15)
+manoj_b = P.perso("manoj_betes", GARDE, 0.7, True, ROUGE_LAQUE, (x - 0.35, -0.35, H), 15)
+manoj_c = P.perso("manoj_betes_regarde", REGARDE, 0.7, True, ROUGE_LAQUE, (x - 0.35, -0.35, H), 15)
 baton = P.cylindre("baton", 0.012, 1.0, (x - 0.12, -0.5, H + 0.45), M["bambou"], rot=(0, 12, 0), sommets=6)
 CHEVRES = [chevre("chevre_0", (x + 0.45, -0.75, H), -30), chevre("chevre_1", (x - 1.05, -0.95, H), 40, 0.9),
            chevre("chevre_2", (x + 0.9, 0.05, H), 160, 1.05, broute=False), chevre("chevre_3", (x - 0.75, 0.25, H), 200, 0.85)]
@@ -213,7 +264,7 @@ def anim_manoj(f):
 
 PAR_PLAN["betes"].append(anim_manoj)
 for k, (y_, t0, dx) in enumerate(((1.05, 0.6, 0.0), (1.3, 0.9, -0.5), (1.1, 1.5, -1.1))):
-    marcheur("betes", f"eleve_b{k}", 0.64, M["argile"], (x - 3.2 + dx, y_, H), (x + 3.4 + dx, y_, H), t0, t0 + 6.2, 90)
+    marcheur("betes", f"eleve_b{k}", 0.64, UNIFORME, (x - 3.2 + dx, y_, H), (x + 3.4 + dx, y_, H), t0, t0 + 6.2, 90)
 # le soleil rasant de fin de journée (les ombres longues viennent vers nous), et un ciel froid en contre
 P.projecteur("soleil_bas", (x + 4.5, 3.5, 1.2), (x - 0.5, -0.5, 0.2), 3800, (1.0, 0.66, 0.36), 34, flou=0.25)
 P.projecteur("ciel_betes", (x - 3.0, -2.5, 3.6), (x, 0, 0.3), 180, (0.55, 0.68, 1.0), 50, flou=0.6)
@@ -222,7 +273,7 @@ P.projecteur("chemin_lum", (x + 1.0, -2.6, 3.0), (x, 1.15, 0.4), 260, (1.0, 0.8,
 # ---------------------------------------------------------------- les plans
 PLANS = {
     #  nom       : (caméra début,             caméra fin,                 visée début,          visée fin,            focale, durée)
-    "portail":   ((-2.3, -4.7, 1.0),           (-1.85, -4.0, 0.9),         (-0.25, 0.9, 0.62),  (-0.1, 1.1, 0.6),    40, 5.8),
+    "portail":   ((-0.9, -5.4, 1.2),           (-0.75, -4.7, 1.1),         (-0.45, 0.6, 1.0),   (-0.4, 0.8, 0.95),   35, 5.8),
     "betes":     ((-0.6, -4.2, 1.05),          (0.5, -3.85, 0.95),          (-0.1, 0.1, 0.45),    (0.25, 0.3, 0.5),    40, 6.6),
 }
 BASE = {"portail": 0.0, "betes": ESP}

@@ -46,6 +46,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--test", action="store_true")
 ap.add_argument("--plans", default="")
 ap.add_argument("--refaire", action="store_true", help="réécrire les images déjà rendues")
+ap.add_argument("--tetes", action="store_true", help="n'exporter que la position des têtes (tetes.json), sans rendu")
 A = ap.parse_args(argv)
 rad = math.radians
 FPS = 24
@@ -366,6 +367,22 @@ def rendre_masque(chemin):
     sc.render.engine = eng
 
 
+def tetes_ecran():
+    """Où sont les têtes des deux simulateurs à l'image (pour le motion design du dialogue) : centre et rayon en pixels."""
+    rx, ry = sc.render.resolution_x, sc.render.resolution_y
+    out = {}
+    for cle, prefixe in (("lui", "simulateur_1"), ("elle", "simulateur_2")):
+        for o in bpy.data.objects:
+            if o.name.startswith(prefixe) and o.name.endswith("_cheveux") and not o.hide_render:
+                c = o.matrix_world.translation - Vector((0, 0, 0.06))
+                v = world_to_camera_view(sc, cam, c)
+                v2 = world_to_camera_view(sc, cam, c + Vector((0, 0, 0.13)))
+                if v.z > 0 and -0.2 < v.x < 1.2 and -0.2 < v.y < 1.2:
+                    out[cle] = [round(v.x * rx, 1), round((1 - v.y) * ry, 1), round(abs(v2.y - v.y) * ry, 1)]
+                break
+    return out
+
+
 bpy.ops.wm.save_as_mainfile(filepath=os.path.join(VIDEO, "medias", "blender", "S07_salle.blend"))
 noms = [p.strip() for p in A.plans.split(",") if p.strip()] or list(PLANS)
 for nom in noms:
@@ -377,6 +394,15 @@ for nom in noms:
             bpy.ops.render.render(write_still=True)
         continue
     d = os.path.join(SORTIE if not nom.startswith("s08") else os.path.join(VIDEO, "medias", "S08", "salle"), nom)
+    if A.tetes:
+        os.makedirs(d, exist_ok=True)
+        tt = {}
+        for f in range(1, n + 1):
+            sc.frame_set(f)
+            tt[f] = tetes_ecran()
+        json.dump(tt, open(os.path.join(d, "tetes.json"), "w"))
+        print(f"[salle] {nom} : têtes exportées")
+        continue
     os.makedirs(d, exist_ok=True)
     os.makedirs(os.path.join(d, "masque"), exist_ok=True)
     coins = {}
