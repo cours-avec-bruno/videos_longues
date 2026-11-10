@@ -33,3 +33,16 @@ Chaque vidéo est un **mélange bien balancé** de trois matières :
 
 Chaque élément est **construit séparément**, puis tous sont **assemblés** au montage. Éviter les longues séries dans une
 seule matière : on alterne selon ce que chaque moment doit faire comprendre ou ressentir.
+
+## Direction artistique (d'après la réf. « Le diable s'habille en Yoda »)
+
+- **Personnages** : mannequins 3D sans visage, en laque brillante ; le personnage principal en rouge, les autres en argent, noir ou satin.
+- **Lumière** : de théâtre, dure, sur fonds quasi noirs ; un liseré rouge ou cyan découpe les silhouettes ; fort vignettage.
+- **Palette** : noirs bleutés, cyan (froid, système), rouge (l'humain, le danger), quelques accents chauds ; le reste désaturé.
+- **Graphisme** : étiquettes en cartouches qui nomment les acteurs et les enjeux ; typo linéale grasse en capitales, ou pixel pour les explications ; un peu de grain et de lueur, sans effet « IA ».
+- **Décors** : des lieux réels simplifiés, mêlés à des scènes symboliques (tableaux, objets géants).
+
+## Rythme et écriture
+
+- La vidéo doit être **fluide** : pas de temps mort ni d'écran noir gratuit, des transitions motivées, la voix et l'image qui s'enchaînent sans à-coup.
+- Le **script** s'écrit puis se relit avec la skill **/humanizer** (`.claude/skills/humanizer`) : une langue naturelle, sans tics d'écriture IA.

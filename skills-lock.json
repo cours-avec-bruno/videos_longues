@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "video-edit-longform": {
+      "source": "imtamiliniyan/claude-video-skills",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/video-edit-longform/SKILL.md",
+      "computedHash": "6eba8c6c6364886070b742f51119cf2aa02e3d6d6062479d5b427ba30df9a0fc"
+    }
+  }
+}
