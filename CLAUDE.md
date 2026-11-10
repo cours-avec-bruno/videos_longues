@@ -46,3 +46,10 @@ seule matière : on alterne selon ce que chaque moment doit faire comprendre ou 
 
 - La vidéo doit être **fluide** : pas de temps mort ni d'écran noir gratuit, des transitions motivées, la voix et l'image qui s'enchaînent sans à-coup.
 - Le **script** s'écrit puis se relit avec la skill **/humanizer** (`.claude/skills/humanizer`) : une langue naturelle, sans tics d'écriture IA.
+
+## Découpage en scènes (repris de l'ancien workflow)
+
+- Chaque vidéo est découpée en **scènes** (S01, S02…) dans `videos/<slug>/storyboard.md` ; la voix de chaque scène est dans `script.md`.
+- Chaque scène a sa **fiche** : `videos/<slug>/scenes/<id>/scene.md` (intention, voix, plans, fabrication, statut, écarts), avec ses fichiers sources dans le même dossier.
+- On **génère scène par scène** avec Bruno : une scène construite, montrée, corrigée, validée, puis la suivante. Les scènes sont ensuite assemblées.
+- Le découpage existant de « Quelle aurait dû être ta vie ? » (S01 à S16) est conservé tel quel.
