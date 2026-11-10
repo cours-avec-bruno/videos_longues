@@ -152,9 +152,7 @@ export const Repasse: React.FC = () => {
       <Etalonnage />
       <Eclair tc={T_S07} />
 
-      {/* ouverture : le titre, posé comme une question au spectateur, pendant la marche dans le noir */}
-      <Question t0={1.6} t1={8.9} kicker="UNE VIE, TIRÉE AU SORT" avant={['Quelle', 'aurait', 'dû', 'être']} cle="ta vie" apres={['?']}
-        y={0.7} taille={96} />
+      {/* (le titre d'ouverture sur la scène du bureau a été retiré : Bruno, 10/11/2026) */}
 
       {/* la salle des simulateurs : on nomme les deux acteurs à leur première réplique */}
       <Cartouche t0={T_S07 + 45.0} t1={T_S07 + 49.4} titre="LE SIMULATEUR" sous="IL A FAIT VIVRE MANOJ" x={0.05} y={0.76} />
@@ -168,9 +166,7 @@ export const Repasse: React.FC = () => {
       <Sequence from={Math.round((T_S07 - 0.55) * fps)}>
         <Audio src={staticFile('repasse/souffle.wav')} volume={0.45} />
       </Sequence>
-      <Sequence from={Math.round(2.6 * fps)}>
-        <Audio src={staticFile('repasse/coup.wav')} volume={0.5} />
-      </Sequence>
+
     </AbsoluteFill>
   );
 };
