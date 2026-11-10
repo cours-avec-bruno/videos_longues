@@ -1,0 +1,95 @@
+{
+ "segments": [
+  {
+   "id": 1,
+   "scene": "S10",
+   "caption": "Manoj n'est pas le seul. La même année, le simulateur a tiré au sort quatre autres naissances, parmi toutes celles du monde.",
+   "vo": "Manoj n'est pas le seul. La même année, le simulateur a tiré au sort quatre autres naissances, parmi toutes celles du monde.",
+   "gap_after": 0.6
+  },
+  {
+   "id": 2,
+   "scene": "S10",
+   "caption": "Purity est née au Kenya.",
+   "vo": "Purity est née au Kenya.",
+   "gap_after": 0.25
+  },
+  {
+   "id": 3,
+   "scene": "S10",
+   "caption": "Elle va jusqu'au bout du lycée.",
+   "vo": "Elle va jusqu'au bout du lycée.",
+   "gap_after": 0.6
+  },
+  {
+   "id": 4,
+   "scene": "S10",
+   "caption": "Son cœur s'arrête à soixante-six ans.",
+   "vo": "Son cœur s'arrête à soixante-six ans.",
+   "gap_after": 0.9
+  },
+  {
+   "id": 5,
+   "scene": "S10",
+   "caption": "Fama est née en Guinée. Elle ne va jamais à l'école.",
+   "vo": "Fama est née en Guinée. Elle ne va jamais à l'école.",
+   "gap_after": 0.6
+  },
+  {
+   "id": 6,
+   "scene": "S10",
+   "caption": "Elle meurt à soixante-quatre ans.",
+   "vo": "Elle meurt à soixante-quatre ans.",
+   "gap_after": 0.9
+  },
+  {
+   "id": 7,
+   "scene": "S10",
+   "caption": "Andrew, au Kenya lui aussi, garde des troupeaux toute sa vie,",
+   "vo": "Andrew, au Kenya lui aussi, garde des troupeaux toute sa vie,",
+   "gap_after": 0.4
+  },
+  {
+   "id": 8,
+   "scene": "S10",
+   "caption": "Il meurt à cinquante et un ans.",
+   "vo": "Il meurt à cinquante et un ans.",
+   "gap_after": 0.9
+  },
+  {
+   "id": 9,
+   "scene": "S10",
+   "caption": "Et puis il y a Raj, indien, comme Manoj.",
+   "vo": "Et puis il y a Raj, indien, comme Manoj.",
+   "gap_after": 0.3
+  },
+  {
+   "id": 10,
+   "scene": "S10",
+   "caption": "Mais Raj est dalit, et sa famille compte parmi les plus pauvres du pays.",
+   "vo": "Mais Raj est dalit, et sa famille compte parmi les plus pauvres du pays.",
+   "gap_after": 0.3
+  },
+  {
+   "id": 11,
+   "scene": "S10",
+   "caption": "Lui aussi s'arrête après le primaire.",
+   "vo": "Lui aussi s'arrête après le primaire.",
+   "gap_after": 0.6
+  },
+  {
+   "id": 12,
+   "scene": "S10",
+   "caption": "Il vivra jusqu'à quatre-vingt-un ans.",
+   "vo": "Il vivra jusqu'à quatre-vingt-un ans.",
+   "gap_after": 1.0
+  },
+  {
+   "id": 13,
+   "scene": "S10",
+   "caption": "Aucun d'eux n'a choisi l'endroit où il allait naître.",
+   "vo": "Aucun d'eux n'a choisi l'endroit où il allait naître.",
+   "gap_after": 0.0
+  }
+ ]
+}

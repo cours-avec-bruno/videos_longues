@@ -1,0 +1,124 @@
+{
+ "maps": [
+  {
+   "name": "monde",
+   "source": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json",
+   "object": "countries",
+   "projection": {
+    "type": "equirect",
+    "lon0": 40,
+    "lat0": 10
+   },
+   "keep": [
+    "Kenya",
+    "Guinea",
+    "India",
+    "Ethiopia",
+    "Somalia",
+    "Tanzania",
+    "Uganda",
+    "Sudan",
+    "S. Sudan",
+    "Mali",
+    "Senegal",
+    "Sierra Leone",
+    "Liberia",
+    "Côte d'Ivoire",
+    "Burkina Faso",
+    "Ghana",
+    "Nigeria",
+    "Niger",
+    "Chad",
+    "Central African Rep.",
+    "Cameroon",
+    "Dem. Rep. Congo",
+    "Congo",
+    "Gabon",
+    "Angola",
+    "Zambia",
+    "Mozambique",
+    "Malawi",
+    "Rwanda",
+    "Burundi",
+    "Eritrea",
+    "Djibouti",
+    "Yemen",
+    "Oman",
+    "Saudi Arabia",
+    "Egypt",
+    "Libya",
+    "Algeria",
+    "Mauritania",
+    "Morocco",
+    "Pakistan",
+    "Nepal",
+    "Bangladesh",
+    "Sri Lanka",
+    "Myanmar",
+    "China",
+    "Afghanistan",
+    "Iran",
+    "Iraq",
+    "United Arab Emirates",
+    "Togo",
+    "Benin",
+    "Guinea-Bissau",
+    "Gambia",
+    "Namibia",
+    "Botswana",
+    "Zimbabwe",
+    "South Africa",
+    "Madagascar",
+    "Tunisia",
+    "Jordan",
+    "Syria",
+    "Israel",
+    "Kuwait",
+    "Qatar",
+    "Bhutan",
+    "W. Sahara",
+    "Eq. Guinea",
+    "Lesotho",
+    "eSwatini",
+    "Turkmenistan",
+    "Uzbekistan",
+    "Tajikistan",
+    "Kyrgyzstan",
+    "Kazakhstan",
+    "Mongolia",
+    "Thailand",
+    "Laos",
+    "Cambodia",
+    "Vietnam"
+   ],
+   "frame": [
+    -20,
+    -12,
+    95,
+    30
+   ],
+   "places": {
+    "Inde": [
+     19.8,
+     85.8
+    ],
+    "Inde2": [
+     26.8,
+     80.9
+    ],
+    "Kenya": [
+     -0.1,
+     34.7
+    ],
+    "Kenya2": [
+     2.0,
+     37.5
+    ],
+    "Guinee": [
+     10.5,
+     -10.5
+    ]
+   }
+  }
+ ]
+}

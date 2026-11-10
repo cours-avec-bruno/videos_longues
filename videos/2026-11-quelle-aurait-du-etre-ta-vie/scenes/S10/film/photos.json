@@ -1,0 +1,36 @@
+{
+ "grade": "natural",
+ "photos": [
+  {
+   "id": "PURITY",
+   "what": "purity",
+   "kind": "color",
+   "file": "purity.jpg"
+  },
+  {
+   "id": "FAMA",
+   "what": "fama",
+   "kind": "color",
+   "file": "fama.jpg"
+  },
+  {
+   "id": "ANDREW",
+   "what": "andrew",
+   "kind": "color",
+   "file": "andrew.jpg"
+  },
+  {
+   "id": "MANOJ",
+   "what": "manoj",
+   "kind": "color",
+   "file": "manoj.jpg"
+  },
+  {
+   "id": "RAJ",
+   "what": "raj",
+   "kind": "color",
+   "file": "raj.jpg"
+  }
+ ],
+ "recreations": []
+}

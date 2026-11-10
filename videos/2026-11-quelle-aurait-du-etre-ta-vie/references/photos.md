@@ -28,3 +28,9 @@ La partie est jouée (voir `partie.md`) : la vie de **Manoj Mohanty**, dans un v
 | Wikimedia Commons | Variable (CC0, CC-BY, CC-BY-SA, domaine public) | **Lire la licence de chaque fichier** ; CC-BY et CC-BY-SA imposent l'attribution |
 
 Licences à relire au moment du choix : elles évoluent.
+
+| S10 | `medias/S10/photos/purity.jpg` | Fisherman at dusk on Lake Victoria.jpg | https://upload.wikimedia.org/wikipedia/commons/7/7d/Fisherman_at_dusk_on_Lake_Victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | <a href="//commons.wikimedia.org/w/index.php?title=User:Africraigs&amp;action=edit&amp;redlink=1" class="new" title="Use | CC BY-SA 4.0 | oui |
+| S10 | `medias/S10/photos/fama.jpg` | ASC Leiden - Coutinho Collection - B 38 - Life in the Liberated Areas, Guinea-Bissau - Woman cooking - 1974.tif | https://upload.wikimedia.org/wikipedia/commons/f/f8/ASC_Leiden_-_Coutinho_Collection_-_B_38_-_Life_in_the_Liberated_Areas%2C_Guinea-Bissau_-_Woman_cooking_-_1974.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | Roel Coutinho</b | CC BY-SA 4.0 | oui |
+| S10 | `medias/S10/photos/andrew.jpg` | Maasai Ngorongoro.jpg | https://upload.wikimedia.org/wikipedia/commons/f/f4/Maasai_Ngorongoro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | Nicor | CC BY-SA 3.0 | oui |
+| S10 | `medias/S10/photos/manoj.jpg` | Cleaning their nets (5363527205).jpg | https://upload.wikimedia.org/wikipedia/commons/a/af/Cleaning_their_nets_%285363527205%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | Ankur Panchbudhe from Pune | CC BY-SA 2.0 | oui |
+| S10 | `medias/pexels/inde_37664921.mp4` | Ouvrier agricole, village indien (vidéo) | https://www.pexels.com/video/37664921/ | Pexels | Licence Pexels | non |

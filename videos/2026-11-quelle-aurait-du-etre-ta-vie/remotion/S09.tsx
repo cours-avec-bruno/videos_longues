@@ -270,7 +270,7 @@ export const S09: React.FC = () => {
           <Audio src={staticFile('s09/voix.mp3')} startFrom={Math.round(a * fps)} endAt={Math.round(b * fps)} volume={1} />
         </Sequence>
       ))}
-      <Audio src={staticFile('s09/musique.wav')} volume={vol} />
+      {/* plus de musique de fond (Bruno, 10/11) : la voix, les ambiances et les SFX suffisent */}
       {/* les SFX (Epidemic Sound), discrets : un souffle sur chaque grand changement de lieu, un clic doux par carte,
           un coup grave sur les moments qui pèsent, une montée d'air vers le mariage et vers les applaudissements */}
       {SFX.map(([f, t0, v], i) => (
