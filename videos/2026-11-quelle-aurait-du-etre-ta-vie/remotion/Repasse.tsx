@@ -60,7 +60,7 @@ const Mot: React.FC<{t: number; t0: number; children: React.ReactNode; style?: R
 };
 
 /** Une question au spectateur, en serif : la ligne posée, le mot-clé en rouge italique, souligné et auréolé. */
-const Question: React.FC<{t0: number; t1: number; kicker?: string; avant: string[]; cle: string; apres?: string[]; y: number; taille: number}> =
+export const Question: React.FC<{t0: number; t1: number; kicker?: string; avant: string[]; cle: string; apres?: string[]; y: number; taille: number}> =
   ({t0, t1, kicker, avant, cle, apres = [], y, taille}) => {
     const t = useT();
     if (t < t0 - 0.1 || t > t1 + 0.1) return null;

@@ -3,6 +3,7 @@ import {Composition, Folder} from 'remotion';
 import {SPECS} from '../../../shared/remotion/specs';
 import {Dialogue} from './Dialogue';
 import {Repasse} from './Repasse';
+import {S09} from './S09';
 
 /**
  * Compositions Remotion de cette vidéo.
@@ -15,6 +16,7 @@ export const Compositions: React.FC = () => {
       <Composition id="Dialogue-S07" component={Dialogue} durationInFrames={864} defaultProps={{scene: 's07'}} {...SPECS} />
       {/* repasse de montage de l'aperçu S01→S08, 0 → 4:22 (Bruno, 10/11/2026) */}
       <Composition id="Repasse-01" component={Repasse} durationInFrames={6288} {...SPECS} />
+      <Composition id="S09" component={S09} durationInFrames={134 * 24} {...SPECS} />
       <Composition id="Dialogue-S08" component={Dialogue} durationInFrames={1219} defaultProps={{scene: 's08'}} {...SPECS} />
     </Folder>
   );
