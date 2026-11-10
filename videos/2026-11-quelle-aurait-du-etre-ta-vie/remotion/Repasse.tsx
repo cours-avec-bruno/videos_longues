@@ -1,4 +1,5 @@
 import React from 'react';
+import {Annonce, Choix, Ingenieur, Probas} from './Explications';
 import {AbsoluteFill, Audio, interpolate, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig, Easing} from 'remotion';
 
 /**
@@ -121,6 +122,15 @@ const Eclair: React.FC<{tc: number}> = ({tc}) => {
   return <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 50%, rgba(235,246,250,1) 0%, rgba(120,210,230,0.9) 60%, rgba(20,60,70,0.8) 100%)', opacity: a}} />;
 };
 
+/** Un passage refait en Remotion, en plein écran par-dessus le montage, avec un fondu d'entrée et de sortie. */
+const Plein: React.FC<{a: number; b: number; e?: number; s?: number; children: React.ReactNode}> = ({a, b, e = 0.25, s = 0.2, children}) => {
+  const t = useT();
+  const {fps} = useVideoConfig();
+  if (t < a || t > b) return null;
+  const o = interpolate(t, [a, a + e, b - s, b], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  return <AbsoluteFill style={{opacity: o}}>{children}</AbsoluteFill>;
+};
+
 export const Repasse: React.FC = () => {
   const t = useT();
   const {fps} = useVideoConfig();
@@ -131,6 +141,14 @@ export const Repasse: React.FC = () => {
       <AbsoluteFill style={{transform: `scale(${pousse})`, filter: 'contrast(1.06) saturate(1.04) brightness(0.99)'}}>
         <OffthreadVideo src={staticFile('repasse/apercu.mp4')} />
       </AbsoluteFill>
+      {/* les passages d'explication refaits en Remotion (Bruno, 10/11/2026) */}
+      <Plein a={T_S07 + 12.8} b={T_S07 + 21.6} e={0.15} s={0.1}><Ingenieur t0={T_S07 + 12.8} /></Plein>
+      <Plein a={T_S07 + 60.5} b={T_S07 + 68.4} e={0.35}><Choix tC1={T_S07 + 61.3} tC2={T_S07 + 65.0} tDecompte={[T_S07 + 70.6, T_S07 + 73.6]} /></Plein>
+      <Plein a={T_S07 + 70.2} b={T_S07 + 73.8} e={0.2}><Choix tC1={T_S07 + 61.3} tC2={T_S07 + 65.0} tDecompte={[T_S07 + 70.6, T_S07 + 73.6]} /></Plein>
+      <Plein a={T_S08 + 4.1} b={T_S08 + 13.3} e={0.3} s={0.4}><Annonce tTape={[T_S08 + 4.85, T_S08 + 8.4]} tPourquoi={T_S08 + 9.0} tFin={T_S08 + 13.3} /></Plein>
+      <Plein a={T_S08 + 28.9} b={262} e={0.5} s={0.01}>
+        <Probas tGrille={T_S08 + 29.6} tChoix={T_S08 + 32.1} tEchec={T_S08 + 34.6} tLui={T_S08 + 36.6} tSara1={T_S08 + 38.4} tSara2={T_S08 + 41.3} tVous={T_S08 + 44.3} />
+      </Plein>
       <Etalonnage />
       <Eclair tc={T_S07} />
 

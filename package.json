@@ -12,11 +12,13 @@
   },
   "dependencies": {
     "@remotion/cli": "4.0.540",
+    "p5": "^1.11.3",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "remotion": "4.0.540"
   },
   "devDependencies": {
+    "@types/p5": "^1.7.6",
     "@types/react": "19.3.0",
     "typescript": "5.9.3"
   },

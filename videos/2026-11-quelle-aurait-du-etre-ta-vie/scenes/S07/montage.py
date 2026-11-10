@@ -449,7 +449,9 @@ def plan_salle(plan, k, t):
         if plan == "revele":            # on recule depuis l'écran : une image fixe de la salle (Bruno, 09/11 : l'incrustation
             img = hf.image(chemin, dur, 0.0)  # suivie dérapait), la poussée inverse faite au montage
             q = 1 - doux(tl / dur)
-            return hf_traverser(img, co0, c, q)
+            # Bruno (10/11) : l'écran passait devant la tête du simulateur -> on garde le masque d'occultation de Blender
+            masque = cv2.warpPerspective(mb, cv2.getPerspectiveTransform(cb, co0), (W, H))
+            return hf_traverser(img, co0, c, q, masque)
         if plan == "epaule" and T_PLEIN - 0.7 <= t < T_PLEIN:     # on entre dans l'écran : le choix en plein écran
             return hf_traverser(img, co, c, doux((t - (T_PLEIN - 0.7)) / 0.7))
         m = cv2.warpPerspective(mb, cv2.getPerspectiveTransform(cb, co), (W, H))
@@ -474,7 +476,7 @@ def lisser(s, sigma=6.0):
     return np.stack([np.stack([np.convolve(p[:, i, j], k, "valid") for j in range(2)], -1) for i in range(s.shape[1])], 1).astype(np.float32)
 
 
-def hf_traverser(img, coins, contenu, q):
+def hf_traverser(img, coins, contenu, q, masque=None):
     """L'écran grandit jusqu'à remplir le cadre (q = 1) : toute l'image de la salle suit la même homographie."""
     quad = coins + (PLEIN_ - coins) * q
     Hr = cv2.getPerspectiveTransform(coins, quad)
@@ -483,6 +485,10 @@ def hf_traverser(img, coins, contenu, q):
     e = e * 1.05 + 6
     mk = np.zeros((H, W), np.float32)
     cv2.fillConvexPoly(mk, np.round(quad * 4).astype(np.int32), 1.0, lineType=cv2.LINE_AA, shift=2)
+    if masque is not None:              # ce qui est devant l'écran (têtes, dossiers) reste devant
+        occ = cv2.warpPerspective(masque, Hr, (W, H))
+        k = lisse((q - 0.8) / 0.2)       # l'occultation tient jusqu'à ce que l'écran remplisse presque le cadre
+        mk = mk * np.clip(occ * (1 - k) + k, 0, 1)
     mk = cv2.GaussianBlur(mk, (0, 0), 0.7)[..., None]
     out = salle_ * (1 - mk) + e * mk
     return out + 0.18 * (1 - q) * cv2.GaussianBlur(e * mk, (0, 0), 22)
