@@ -16,3 +16,20 @@ ici on l'applique au **16:9, 1920 × 1080**). Principes repris :
 - tout est fonction du numéro d'image ; données précalculées une fois ;
 - images de contrôle (`npx remotion still`) regardées avant le rendu complet ;
 - rendu par segments, en parallèle, contrôles automatiques (durée vidéo = durée audio, sonie).
+
+## Illustration 3D : Blender + Higgsfield
+
+Pour illustrer certaines scènes : **Blender** construit la base (composition, mannequins sans visage, lumière), puis
+**Higgsfield** l'embellit (restylage d'image dans la DA) et, si le plan doit bouger, l'anime (image vers vidéo). Une
+image fixe bien montée suffit souvent : on n'anime que ce qui en a besoin. Prompts, identifiants et coûts archivés dans
+`videos/<slug>/prompts/` ; estimation des crédits et accord de Bruno avant une série de générations.
+
+## Le mélange
+
+Chaque vidéo est un **mélange bien balancé** de trois matières :
+- des **scènes d'illustration 3D** (Blender + Higgsfield) ;
+- des **animations Remotion** (motion design, typographie, graphiques) ;
+- des **images d'illustration** (photos, archives, images générées).
+
+Chaque élément est **construit séparément**, puis tous sont **assemblés** au montage. Éviter les longues séries dans une
+seule matière : on alterne selon ce que chaque moment doit faire comprendre ou ressentir.
