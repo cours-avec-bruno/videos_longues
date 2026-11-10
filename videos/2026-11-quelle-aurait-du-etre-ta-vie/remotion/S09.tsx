@@ -214,6 +214,17 @@ const Cartouche: React.FC<{a: number; b: number; titre: string; x: number; y: nu
   );
 };
 
+// [fichier, début (s), volume] : le souffle culmine ~1,1 s après son début ; la montée d'air culmine à sa fin (9,9 s)
+const SFX: [string, number, number][] = [
+  ...[4.4, 14.6, 33.0, 55.0, 66.0, 83.6, 102.6, 118.6, 130.4].map((t): [string, number, number] => ['whoosh_doux', t - 1.0, 0.22]),
+  ...[7.8, 8.7, 9.6, 38.8, 40.0].map((t): [string, number, number] => ['clic_doux', t, 0.3]),
+  ['clic_doux', 14.0, 0.45], ['clic_doux', 46.6, 0.45],
+  ['boom_bas', 14.05, 0.18], ['boom_bas', 46.65, 0.18],
+  ['boom_bas', 52.2, 0.28], ['boom_bas', 59.7, 0.2], ['boom_bas', 62.0, 0.2], ['boom_bas', 120.6, 0.22], ['boom_bas', 126.0, 0.26],
+  ['whoosh_inverse', 90.6 - 3.8, 0.2],
+  ['riser_aerien', 69.8 - 9.6, 0.12], ['riser_aerien', 111.6 - 9.6, 0.14],
+];
+
 export const S09: React.FC = () => {
   const t = useT();
   const {fps} = useVideoConfig();
@@ -224,7 +235,7 @@ export const S09: React.FC = () => {
   const vol = (f: number) => {
     const s = f / fps;
     return interpolate(s, [0, 3, 33.0, 34.0, 64.5, 69.0, 71.0, 89.8, 91.0, 99.0, 102.0, 111.0, 114.0, 118.6, 119.4, 128, 134],
-      [0, 0.16, 0.16, 0.04, 0.04, 0.12, 0.22, 0.2, 0.0, 0.0, 0.14, 0.18, 0.08, 0.06, 0.03, 0.03, 0], cl);
+      [0, 0.16, 0.16, 0.04, 0.04, 0.12, 0.22, 0.2, 0.0, 0.0, 0.14, 0.18, 0.08, 0.06, 0.03, 0.03, 0], cl) * 0.45;   // Bruno : musique plus basse
   };
   return (
     <AbsoluteFill style={{background: '#05070a'}}>
@@ -260,6 +271,13 @@ export const S09: React.FC = () => {
         </Sequence>
       ))}
       <Audio src={staticFile('s09/musique.wav')} volume={vol} />
+      {/* les SFX (Epidemic Sound), discrets : un souffle sur chaque grand changement de lieu, un clic doux par carte,
+          un coup grave sur les moments qui pèsent, une montée d'air vers le mariage et vers les applaudissements */}
+      {SFX.map(([f, t0, v], i) => (
+        <Sequence key={`sfx${i}`} from={Math.max(0, Math.round(t0 * fps))}>
+          <Audio src={staticFile(`s09/sfx/${f}.wav`)} volume={v} />
+        </Sequence>
+      ))}
       <Sequence from={Math.round(14.8 * fps)} durationInFrames={Math.round(19 * fps)}>
         <Audio src={staticFile('s09/vagues_plage.wav')} volume={(f) => interpolate(f / fps, [0, 1.5, 17, 19], [0, 0.22, 0.22, 0], cl)} />
       </Sequence>

@@ -110,3 +110,13 @@ Vraie image : `pexels/s08/14275268.mp4` (Pexels, licence Pexels), un garçon et 
 | `sons/epidemic/barque_bois_vagues.wav` | la barque, la nuit | Epidemic Sound (`a7483cc6-…`) | abonnement Epidemic Sound |
 
 | `voix/S07d_prise1.mp3` | Guillaume : la raison de la dette (S07), le pourquoi, « les chèvres » et les 200 vies (S08) ; prise 1, dans la continuité | ElevenLabs eleven_v3, `hN6UZQYmfSk7q1y7iqUP` | abonnement ElevenLabs |
+
+### S09 (refaite le 10/11/2026)
+| Fichier | Usage | Source | Licence |
+|---|---|---|---|
+| `voix/S09b_prise1.mp3` | Guillaume, nouveau script de S09 (prise 1, dans la continuité de S08) | ElevenLabs eleven_v3, `d9kEpxGDFoYP4wx1zygK` | abonnement ElevenLabs |
+| `sons/epidemic/whoosh_doux.wav` | souffle sur les changements de lieu | Epidemic Sound `f040a2a4-…` (Swooshes, Whoosh, Softs) | abonnement Epidemic Sound |
+| `sons/epidemic/clic_doux.wav` | cartes de choix | Epidemic Sound `46216b97-…` (UI Click, Confirm, Dull) | abonnement Epidemic Sound |
+| `sons/epidemic/boom_bas.wav` | coups graves (dette, frères, question) | Epidemic Sound `240e5b47-…` (Cinematic Hit, Low Boom) | abonnement Epidemic Sound |
+| `sons/epidemic/riser_aerien.wav` | montée vers le mariage et le théâtre | Epidemic Sound `3d2957df-…` (Riser, Airy) | abonnement Epidemic Sound |
+| `sons/epidemic/whoosh_inverse.wav` | entrée dans le mensonge | Epidemic Sound `2b961372-…` (Washed Reversed) | abonnement Epidemic Sound |
