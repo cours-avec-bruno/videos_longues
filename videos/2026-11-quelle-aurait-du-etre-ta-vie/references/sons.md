@@ -120,3 +120,4 @@ Vraie image : `pexels/s08/14275268.mp4` (Pexels, licence Pexels), un garçon et 
 | `sons/epidemic/boom_bas.wav` | coups graves (dette, frères, question) | Epidemic Sound `240e5b47-…` (Cinematic Hit, Low Boom) | abonnement Epidemic Sound |
 | `sons/epidemic/riser_aerien.wav` | montée vers le mariage et le théâtre | Epidemic Sound `3d2957df-…` (Riser, Airy) | abonnement Epidemic Sound |
 | `sons/epidemic/whoosh_inverse.wav` | entrée dans le mensonge | Epidemic Sound `2b961372-…` (Washed Reversed) | abonnement Epidemic Sound |
+| `voix/S10_prise1.mp3` | Guillaume, S10 (prise 1, dans la continuité de S09) | ElevenLabs eleven_v3, `Aw03kivvpvPBOHbyIJhj` | abonnement ElevenLabs |
